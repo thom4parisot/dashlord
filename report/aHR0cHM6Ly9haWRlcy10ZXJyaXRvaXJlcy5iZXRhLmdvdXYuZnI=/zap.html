@@ -81,7 +81,7 @@ ZAP Scanning Report
         <p>
 </p>
         <h3 class="left-header">Summary of Alerts</h3>
-        <h3 class="time-stamp">Generated on Fri, 23 Apr 2021 00:22:51</h3>
+        <h3 class="time-stamp">Generated on Sat, 24 Apr 2021 00:24:06</h3>
         <table width="45%" class="summary">
             <tr bgcolor="#666666">
                 <th width="45%" height="24">Risk 
@@ -89,13 +89,13 @@ ZAP Scanning Report
       of Alerts</th>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#high">High</a></td><td align="center">0</td>
+                <td><a href="#high">High</a></td><td align="center">1</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#medium">Medium</a></td><td align="center">3</td>
+                <td><a href="#medium">Medium</a></td><td align="center">4</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#low">Low</a></td><td align="center">8</td>
+                <td><a href="#low">Low</a></td><td align="center">9</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td><a href="#info">Informational</a></td><td align="center">6</td>
@@ -108,10 +108,16 @@ ZAP Scanning Report
                 <th width="60%" height="24">Name</th><th width="20%" align="center">Risk Level</th><th width="20%" align="center">Number of Instances</th>
             </tr>
             <tr bgcolor="#e8e8e8">
+                <td>PII Disclosure</td><td align="center">High</td><td align="center">4</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
                 <td>Content Security Policy (CSP) Header Not Set</td><td align="center">Medium</td><td align="center">11</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Reverse Tabnabbing</td><td align="center">Medium</td><td align="center">12</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Sub Resource Integrity Attribute Missing</td><td align="center">Medium</td><td align="center">11</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>X-Frame-Options Header Not Set</td><td align="center">Medium</td><td align="center">11</td>
@@ -121,6 +127,9 @@ ZAP Scanning Report
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Cookie No HttpOnly Flag</td><td align="center">Low</td><td align="center">12</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Cross-Domain JavaScript Source File Inclusion</td><td align="center">Low</td><td align="center">11</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Dangerous JS Functions</td><td align="center">Low</td><td align="center">3</td>
@@ -147,7 +156,7 @@ ZAP Scanning Report
                 <td>Information Disclosure - Suspicious Comments</td><td align="center">Informational</td><td align="center">3</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Modern Web Application</td><td align="center">Informational</td><td align="center">12</td>
+                <td>Modern Web Application</td><td align="center">Informational</td><td align="center">11</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Non-Storable Content</td><td align="center">Informational</td><td align="center">2</td>
@@ -156,11 +165,121 @@ ZAP Scanning Report
                 <td>Storable and Cacheable Content</td><td align="center">Informational</td><td align="center">9</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Timestamp Disclosure - Unix</td><td align="center">Informational</td><td align="center">10</td>
+                <td>Timestamp Disclosure - Unix</td><td align="center">Informational</td><td align="center">11</td>
             </tr>
         </table>
         <div class="spacer-lg"></div>
         <h3>Alert Detail</h3>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-high">
+                <th width="20%"><a name="high"></a>High (High)</th><th width="80%">PII Disclosure</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>The response contains Personally Identifiable Information, such as CC number, SSN and similar sensitive data.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/0a5e-restaurer-des-sites-ou-creer-des-infrastructu/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">561498894287</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/7506-moderniser-sa-bibliotheque/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">561498894287</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/81e2-favoriser-lacces-a-des-aliments-frais-locaux-/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">561498894287</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/893e-renforcer-le-programme-dhumanisation-des-stru/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">561498894287</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">4</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p></p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Other information</td><td width="80%"><p>Credit Card Type detected: Maestro</p><p>Bank Identification Number: 561498</p><p>Brand: MAESTRO</p><p>Category: </p><p>Issuer: </p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p></p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">359</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
         <div class="spacer"></div>
         <table width="100%" class="results">
               
@@ -369,25 +488,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://www.eau-grandsudouest.fr/" target="_blank"&gt;
-                    
-                        
-                        &lt;img src="https://aides-territoires-prod.s3.fr-par.scw.cloud/aides-territoires-prod/backers/agence-de-leau-adour-garonne_logo.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Credential=SCWJ1T6VQNR6Z83FSYEB%2F20210423%2Ffr-par%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20210423T002041Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-SignedHeaders=host&amp;amp;X-Amz-Signature=9bb46ed51c45becae60e6fda75a3c22705d98c32bd940fd706ef0db6feec1686" alt="Logo : Agence de l&amp;#x27;eau Adour-Garonne "&gt;
-                        
-                    &lt;/a&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/plateforme-aides-territoires/</td>
             </tr>
               
@@ -413,6 +513,25 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://twitter.com/aidesterr" title="Retrouvez Aides territoires sur Twitter" target="_blank" rel="noopener"&gt;&lt;img src="/static/img/logo_twitter.svg" alt="logo twitter"&gt;&lt;/a&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://www.fff.fr/" target="_blank"&gt;
+                    
+                        
+                        &lt;img src="https://aides-territoires-prod.s3.fr-par.scw.cloud/aides-territoires-prod/backers/federation-francaise-de-football_logo.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Credential=SCWJ1T6VQNR6Z83FSYEB%2F20210424%2Ffr-par%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20210424T002155Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-SignedHeaders=host&amp;amp;X-Amz-Signature=190b454b8339a9039f97a7726818775aeaec26eb03995887093ce580565a69db" alt="Logo : F&eacute;d&eacute;ration Fran&ccedil;aise de Football "&gt;
+                        
+                    &lt;/a&gt;</td>
             </tr>
               
   
@@ -446,7 +565,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -454,10 +573,10 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://www.agencebio.org/" target="_blank"&gt;
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://www.labanquepostale.fr/" target="_blank"&gt;
                     
                         
-                        &lt;img src="https://aides-territoires-prod.s3.fr-par.scw.cloud/aides-territoires-prod/backers/agence-bio_logo.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Credential=SCWJ1T6VQNR6Z83FSYEB%2F20210423%2Ffr-par%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20210423T002044Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-SignedHeaders=host&amp;amp;X-Amz-Signature=67a6ec39a069439b57703d46c6b9d80ceb577f8495cb88ab95018d06151d3147" alt="Logo : Agence BIO "&gt;
+                        &lt;img src="https://aides-territoires-prod.s3.fr-par.scw.cloud/aides-territoires-prod/backers/la-banque-postale_logo.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Credential=SCWJ1T6VQNR6Z83FSYEB%2F20210424%2Ffr-par%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20210424T002152Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-SignedHeaders=host&amp;amp;X-Amz-Signature=1668c28dd9193a959267e8c93b885b9f5029214b15e3c4b2df43bb1a82c51df7" alt="Logo : La Banque Postale "&gt;
                         
                     &lt;/a&gt;</td>
             </tr>
@@ -473,10 +592,10 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://www.ademe.fr/" target="_blank"&gt;
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://ofb.gouv.fr/" target="_blank"&gt;
                     
                         
-                        &lt;img src="https://aides-territoires-prod.s3.fr-par.scw.cloud/aides-territoires-prod/backers/ademe_logo.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Credential=SCWJ1T6VQNR6Z83FSYEB%2F20210423%2Ffr-par%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20210423T002045Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-SignedHeaders=host&amp;amp;X-Amz-Signature=b82b97a97465554c29800d0530d7e1c55323aee9c33f10e7e67d4b486d983c2a" alt="Logo : ADEME "&gt;
+                        &lt;img src="https://aides-territoires-prod.s3.fr-par.scw.cloud/aides-territoires-prod/backers/office-francais-pour-la-biodiversite-ofb_logo.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Credential=SCWJ1T6VQNR6Z83FSYEB%2F20210424%2Ffr-par%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20210424T002156Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-SignedHeaders=host&amp;amp;X-Amz-Signature=dbf8d289dd9b16a0aac9f0f3c601ba17a659fc2f4a260b6a4d30de5006913671" alt="Logo : Office fran&ccedil;ais de la biodiversit&eacute; (OFB) "&gt;
                         
                     &lt;/a&gt;</td>
             </tr>
@@ -535,6 +654,207 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%">Reference</td><td width="80%"><p>https://owasp.org/www-community/attacks/Reverse_Tabnabbing</p><p>https://dev.to/ben/the-targetblank-vulnerability-by-example</p><p>https://mathiasbynens.github.io/rel-noopener/</p><p>https://medium.com/@jitbit/target-blank-the-most-underestimated-vulnerability-ever-96e328301f4c</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-medium">
+                <th width="20%"><a name="medium"></a>Medium (High)</th><th width="80%">Sub Resource Integrity Attribute Missing</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content. </p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/porteurs-aides/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/comptes/inscription/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/data/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/contact/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/plateforme-aides-territoires/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/robots.txt/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides-collectivit%C3%A9s/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/comptes/connexion/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/recherche/formulaire/audience/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">11</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Provide a valid integrity attribute to the tag.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://developer.mozilla.org/en/docs/Web/Security/Subresource_Integrity</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">16</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">15</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -766,7 +1086,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/2e27-moderniser-les-librairies-aide-a-la-modernisa/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/9f6e-etre-accompagne-dans-le-tourisme-associatif-e/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -780,35 +1100,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/8961-copie-10h22-renforcer-le-programme-dhumanisat/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form id="copy-to-clipboard-form"&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/63c2-recenser-et-evaluer-les-ouvrages-dart-des-pet/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form id="copy-to-clipboard-form"&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/e285-norrr-appel-a-projet-pour-financer-des-equipe/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/0110-copie-06h18-financer-les-actions-de-renovatio/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -836,7 +1128,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/9d50-copie-12h10-etudier-la-faisabilite-dun-projet/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/d247-obtenir-un-investissement-pour-financer-ou-re/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -850,7 +1142,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/1185-favoriser-et-developper-les-iniatiatives-perm/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/7285-developper-vos-investissements-et-renforcer-v/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -864,7 +1156,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/8740-reemploiet-reemploi-reutilisation-aide-aux-et/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/a320-obtenir-un-investissement-pour-accelerer-le-d/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -878,7 +1170,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/2410-eitcentre-accompagnement-de-demarches-decolog/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/54ca-obtenir-un-investissement-afin-de-lever-de-la/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -892,7 +1184,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/c131-parcours-de-cybersecurite/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/65f7-copie-06h06-financer-les-actions-de-renovatio/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -906,7 +1198,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/5442-deployer-les-micro-folies-en-ile-de-france/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/f552-obtenir-un-accompagnement-dans-la-modernisati/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -920,7 +1212,35 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/c216-rrr-reemploi-reparation-reutilisation-/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/906c-copie-06h34-financer-les-actions-de-renovatio/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form id="copy-to-clipboard-form"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/6f56-accelerer-la-digitalisation-de-votre-organism/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form id="copy-to-clipboard-form"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/b58f-obtenir-un-pret-bonifie-fsh-pour-soutenir-le-/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -988,7 +1308,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/e285-norrr-appel-a-projet-pour-financer-des-equipe/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/d247-obtenir-un-investissement-pour-financer-ou-re/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1006,61 +1326,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/9d50-copie-12h10-etudier-la-faisabilite-dun-projet/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">csrftoken</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Set-Cookie: csrftoken</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/2e27-moderniser-les-librairies-aide-a-la-modernisa/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">csrftoken</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Set-Cookie: csrftoken</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/8961-copie-10h22-renforcer-le-programme-dhumanisat/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">csrftoken</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Set-Cookie: csrftoken</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/5442-deployer-les-micro-folies-en-ile-de-france/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/0110-copie-06h18-financer-les-actions-de-renovatio/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1114,7 +1380,43 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/c216-rrr-reemploi-reparation-reutilisation-/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/6f56-accelerer-la-digitalisation-de-votre-organism/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">csrftoken</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Set-Cookie: csrftoken</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/54ca-obtenir-un-investissement-afin-de-lever-de-la/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">csrftoken</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Set-Cookie: csrftoken</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/a320-obtenir-un-investissement-pour-accelerer-le-d/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1150,7 +1452,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/c131-parcours-de-cybersecurite/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/7285-developper-vos-investissements-et-renforcer-v/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1168,7 +1470,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/8740-reemploiet-reemploi-reutilisation-aide-aux-et/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/65f7-copie-06h06-financer-les-actions-de-renovatio/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1186,7 +1488,25 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/1185-favoriser-et-developper-les-iniatiatives-perm/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/906c-copie-06h34-financer-les-actions-de-renovatio/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">csrftoken</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Set-Cookie: csrftoken</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/f552-obtenir-un-accompagnement-dans-la-modernisati/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1235,6 +1555,251 @@ ZAP Scanning Report
   
   
             <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Cross-Domain JavaScript Source File Inclusion</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>The page includes one or more script files from a third-party domain.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides-collectivit%C3%A9s/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://stats.data.gouv.fr/piwik.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/comptes/inscription/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://stats.data.gouv.fr/piwik.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/comptes/connexion/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://stats.data.gouv.fr/piwik.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://stats.data.gouv.fr/piwik.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/porteurs-aides/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://stats.data.gouv.fr/piwik.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://stats.data.gouv.fr/piwik.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/recherche/formulaire/audience/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://stats.data.gouv.fr/piwik.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/data/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://stats.data.gouv.fr/piwik.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/contact/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://stats.data.gouv.fr/piwik.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/plateforme-aides-territoires/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://stats.data.gouv.fr/piwik.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/robots.txt/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://stats.data.gouv.fr/piwik.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://stats.data.gouv.fr/piwik.js" async defer&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">11</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p></p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">829</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">15</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
                 <a name="low"></a><th width="20%">Low (Low)</th><th width="80%">Dangerous JS Functions</th>
             </tr>
               
@@ -1265,7 +1830,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/CACHE/js/output.8a6e3aa6c87c.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/CACHE/js/output.e594d37f92b6.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1961,20 +2526,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/img/logo_AT_courbes.svg</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/favicons/favicon.svg</td>
             </tr>
               
@@ -2017,20 +2568,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/CACHE/js/output.8a6e3aa6c87c.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/favicons/favicon.png</td>
             </tr>
               
@@ -2059,7 +2596,35 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/js/analytics/hotjar_tag.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/img/logo_AT_titre.svg</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/CACHE/css/output.6bb0c4bca661.css</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2087,7 +2652,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/CACHE/css/output.b74d336c2ebc.css</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/img/marianne.svg</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2101,7 +2666,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/img/marianne.svg</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/CACHE/js/output.e594d37f92b6.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2183,6 +2748,20 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/contact/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">33U2rMO7v13Ytws4Iv15KGEc46e9gh6T5L9ItR9KSXRSVOFX0cdZaExekgTkW5W2</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides-collectivit%C3%A9s/</td>
             </tr>
               
@@ -2253,20 +2832,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/comptes/connexion/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">K6DO2Ujr0ecR7DzcMsNG6huldEestDQKG3uPMnKhm3LzxUWaTqjEznlzf5PAMAEf</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/plateforme-aides-territoires/</td>
             </tr>
               
@@ -2281,7 +2846,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/comptes/inscription/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/comptes/connexion/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2289,21 +2854,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">U8k3gwvqIsouWYaOmzvjEEXAV51OiEPoxf4zdxoNxNuZjlhRNqUUB9pbS96E9k8f</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/contact/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">U8k3gwvqIsouWYaOmzvjEEXAV51OiEPoxf4zdxoNxNuZjlhRNqUUB9pbS96E9k8f</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">x4jMvdCZjM5GEevxxUGmcfJ3aAsDVaaInlOwnojEHLzVSD3qh4gbHhaj9YDeLiab</td>
             </tr>
               
   
@@ -2318,6 +2869,20 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">com/serve/MUIEANv2FVIgFOCSUcH4G40Mz7-gNNDCYBU1BnExyPfqcBds83BFiunc-uCZL1sFeaqWrXMAu2qntWXa4I6Y9qxHK1t4nx7YJPV8-Cua2dHbMC1S9To3Cfcwff-ykr-IYRJc41mCX_pNA-sKvmpFmd0wPBtgwyCt_tMXuib9LeVuocWRIilgr6OzhmumAAtJCQqEw1bk06F9dNsn</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/comptes/inscription/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">33U2rMO7v13Ytws4Iv15KGEc46e9gh6T5L9ItR9KSXRSVOFX0cdZaExekgTkW5W2</td>
             </tr>
               
   
@@ -2345,7 +2910,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>~�ۮ��q�-�]}&#847881;׬�7��+h������z�~q調���-</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>�u6�&ucirc;�]ط\x000b8"�y(a\x001c㧽�\x001e��H�\x001fJItRT�W��YhL^�\x0004�[��</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
@@ -2391,7 +2956,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/CACHE/js/output.8a6e3aa6c87c.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/CACHE/js/output.e594d37f92b6.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2405,21 +2970,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/CACHE/js/output.8a6e3aa6c87c.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">username</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/CACHE/js/output.8a6e3aa6c87c.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/CACHE/js/output.e594d37f92b6.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2428,6 +2979,20 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">select</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/CACHE/js/output.e594d37f92b6.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">username</td>
             </tr>
               
   
@@ -2487,7 +3052,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/c131-parcours-de-cybersecurite/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/plateforme-aides-territoires/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2495,15 +3060,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a id="share-btn" href="#" class="js" data-toggle="modal" data-target="#share-modal"&gt;
-                Partager cette aide
-            &lt;/a&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;&lt;img src="https://stats.data.gouv.fr/piwik.php?idsite=62&amp;idgoal=" style="border:0;" alt="" /&gt;&lt;/noscript&gt;</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/c216-rrr-reemploi-reparation-reutilisation-/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/robots.txt/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2511,15 +3074,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a id="share-btn" href="#" class="js" data-toggle="modal" data-target="#share-modal"&gt;
-                Partager cette aide
-            &lt;/a&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;&lt;img src="https://stats.data.gouv.fr/piwik.php?idsite=62&amp;idgoal=" style="border:0;" alt="" /&gt;&lt;/noscript&gt;</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/CACHE/js/output.8a6e3aa6c87c.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/data/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2527,13 +3088,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a id='"+expando+"'&gt;&lt;/a&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;&lt;img src="https://stats.data.gouv.fr/piwik.php?idsite=62&amp;idgoal=" style="border:0;" alt="" /&gt;&lt;/noscript&gt;</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/5442-deployer-les-micro-folies-en-ile-de-france/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2541,15 +3102,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a id="share-btn" href="#" class="js" data-toggle="modal" data-target="#share-modal"&gt;
-                Partager cette aide
-            &lt;/a&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;&lt;img src="https://stats.data.gouv.fr/piwik.php?idsite=62&amp;idgoal=" style="border:0;" alt="" /&gt;&lt;/noscript&gt;</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/9d50-copie-12h10-etudier-la-faisabilite-dun-projet/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/comptes/inscription/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2557,15 +3116,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a id="share-btn" href="#" class="js" data-toggle="modal" data-target="#share-modal"&gt;
-                Partager cette aide
-            &lt;/a&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;&lt;img src="https://stats.data.gouv.fr/piwik.php?idsite=62&amp;idgoal=" style="border:0;" alt="" /&gt;&lt;/noscript&gt;</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/2e27-moderniser-les-librairies-aide-a-la-modernisa/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/comptes/connexion/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2573,15 +3130,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a id="share-btn" href="#" class="js" data-toggle="modal" data-target="#share-modal"&gt;
-                Partager cette aide
-            &lt;/a&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;&lt;img src="https://stats.data.gouv.fr/piwik.php?idsite=62&amp;idgoal=" style="border:0;" alt="" /&gt;&lt;/noscript&gt;</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/e285-norrr-appel-a-projet-pour-financer-des-equipe/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2589,15 +3144,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a id="share-btn" href="#" class="js" data-toggle="modal" data-target="#share-modal"&gt;
-                Partager cette aide
-            &lt;/a&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;&lt;img src="https://stats.data.gouv.fr/piwik.php?idsite=62&amp;idgoal=" style="border:0;" alt="" /&gt;&lt;/noscript&gt;</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/8740-reemploiet-reemploi-reutilisation-aide-aux-et/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/porteurs-aides/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2605,15 +3158,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a id="share-btn" href="#" class="js" data-toggle="modal" data-target="#share-modal"&gt;
-                Partager cette aide
-            &lt;/a&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;&lt;img src="https://stats.data.gouv.fr/piwik.php?idsite=62&amp;idgoal=" style="border:0;" alt="" /&gt;&lt;/noscript&gt;</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/63c2-recenser-et-evaluer-les-ouvrages-dart-des-pet/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/contact/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2621,15 +3172,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a id="share-btn" href="#" class="js" data-toggle="modal" data-target="#share-modal"&gt;
-                Partager cette aide
-            &lt;/a&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;&lt;img src="https://stats.data.gouv.fr/piwik.php?idsite=62&amp;idgoal=" style="border:0;" alt="" /&gt;&lt;/noscript&gt;</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/img/logo_RP.svg</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides-collectivit%C3%A9s/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2637,13 +3186,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script/&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;&lt;img src="https://stats.data.gouv.fr/piwik.php?idsite=62&amp;idgoal=" style="border:0;" alt="" /&gt;&lt;/noscript&gt;</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/1185-favoriser-et-developper-les-iniatiatives-perm/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/recherche/formulaire/audience/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2651,31 +3200,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a id="share-btn" href="#" class="js" data-toggle="modal" data-target="#share-modal"&gt;
-                Partager cette aide
-            &lt;/a&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;&lt;img src="https://stats.data.gouv.fr/piwik.php?idsite=62&amp;idgoal=" style="border:0;" alt="" /&gt;&lt;/noscript&gt;</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/8961-copie-10h22-renforcer-le-programme-dhumanisat/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a id="share-btn" href="#" class="js" data-toggle="modal" data-target="#share-modal"&gt;
-                Partager cette aide
-            &lt;/a&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">12</td>
+                <td width="20%">Instances</td><td width="80%">11</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2683,7 +3214,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>A noScript tag has been found, which is an indication that the application works differently with JavaScript enabled compared to when it is not.</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
@@ -2940,20 +3471,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/c216-rrr-reemploi-reparation-reutilisation-/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">31449600</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/comptes/inscription/</td>
             </tr>
               
@@ -2968,7 +3485,21 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/CACHE/css/output.b74d336c2ebc.css</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/img/home_steps_2.svg</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">90570640</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/CACHE/css/output.6bb0c4bca661.css</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2977,20 +3508,6 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">23009688</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/c216-rrr-reemploi-reparation-reutilisation-/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">76207326</td>
             </tr>
               
   
@@ -3010,7 +3527,35 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/5442-deployer-les-micro-folies-en-ile-de-france/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/0110-copie-06h18-financer-les-actions-de-renovatio/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">31449600</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/906c-copie-06h34-financer-les-actions-de-renovatio/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">31449600</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/65f7-copie-06h06-financer-les-actions-de-renovatio/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -3038,7 +3583,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/e285-norrr-appel-a-projet-pour-financer-des-equipe/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/7285-developper-vos-investissements-et-renforcer-v/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -3052,7 +3597,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/2e27-moderniser-les-librairies-aide-a-la-modernisa/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/6f56-accelerer-la-digitalisation-de-votre-organism/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -3066,7 +3611,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/e285-norrr-appel-a-projet-pour-financer-des-equipe/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/img/home_aides.svg</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -3074,13 +3619,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">20210419</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">02615070</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">10</td>
+                <td width="20%">Instances</td><td width="80%">11</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
