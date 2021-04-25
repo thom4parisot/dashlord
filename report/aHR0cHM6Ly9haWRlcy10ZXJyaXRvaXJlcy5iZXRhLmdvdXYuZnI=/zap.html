@@ -81,7 +81,7 @@ ZAP Scanning Report
         <p>
 </p>
         <h3 class="left-header">Summary of Alerts</h3>
-        <h3 class="time-stamp">Generated on Sat, 24 Apr 2021 00:24:06</h3>
+        <h3 class="time-stamp">Generated on Sun, 25 Apr 2021 00:23:45</h3>
         <table width="45%" class="summary">
             <tr bgcolor="#666666">
                 <th width="45%" height="24">Risk 
@@ -89,7 +89,7 @@ ZAP Scanning Report
       of Alerts</th>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#high">High</a></td><td align="center">1</td>
+                <td><a href="#high">High</a></td><td align="center">0</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td><a href="#medium">Medium</a></td><td align="center">4</td>
@@ -98,7 +98,7 @@ ZAP Scanning Report
                 <td><a href="#low">Low</a></td><td align="center">9</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#info">Informational</a></td><td align="center">6</td>
+                <td><a href="#info">Informational</a></td><td align="center">7</td>
             </tr>
         </table>
         <div class="spacer-lg"></div>
@@ -106,9 +106,6 @@ ZAP Scanning Report
         <table width="75%" class="alerts">
             <tr bgcolor="#666666">
                 <th width="60%" height="24">Name</th><th width="20%" align="center">Risk Level</th><th width="20%" align="center">Number of Instances</th>
-            </tr>
-            <tr bgcolor="#e8e8e8">
-                <td>PII Disclosure</td><td align="center">High</td><td align="center">4</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Content Security Policy (CSP) Header Not Set</td><td align="center">Medium</td><td align="center">11</td>
@@ -167,119 +164,12 @@ ZAP Scanning Report
             <tr bgcolor="#e8e8e8">
                 <td>Timestamp Disclosure - Unix</td><td align="center">Informational</td><td align="center">11</td>
             </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>User Controllable HTML Element Attribute (Potential XSS)</td><td align="center">Informational</td><td align="center">1</td>
+            </tr>
         </table>
         <div class="spacer-lg"></div>
         <h3>Alert Detail</h3>
-        <div class="spacer"></div>
-        <table width="100%" class="results">
-              
-  
-  
-  
-            <tr height="24" class="risk-high">
-                <th width="20%"><a name="high"></a>High (High)</th><th width="80%">PII Disclosure</th>
-            </tr>
-              
-  
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>The response contains Personally Identifiable Information, such as CC number, SSN and similar sensitive data.</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/0a5e-restaurer-des-sites-ou-creer-des-infrastructu/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">561498894287</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/7506-moderniser-sa-bibliotheque/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">561498894287</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/81e2-favoriser-lacces-a-des-aliments-frais-locaux-/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">561498894287</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/893e-renforcer-le-programme-dhumanisation-des-stru/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">561498894287</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">4</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p></p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>Credit Card Type detected: Maestro</p><p>Bank Identification Number: 561498</p><p>Brand: MAESTRO</p><p>Category: </p><p>Issuer: </p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p></p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">359</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">WASC Id</td><td width="80%">13</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Source ID</td><td width="80%">3</td>
-            </tr>
-            
-        </table>
         <div class="spacer"></div>
         <table width="100%" class="results">
               
@@ -474,6 +364,25 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://www.labanquepostale.fr/" target="_blank"&gt;
+                    
+                        
+                        &lt;img src="https://aides-territoires-prod.s3.fr-par.scw.cloud/aides-territoires-prod/backers/la-banque-postale_logo.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Credential=SCWJ1T6VQNR6Z83FSYEB%2F20210425%2Ffr-par%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20210425T002139Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-SignedHeaders=host&amp;amp;X-Amz-Signature=b9054d40fc337b5f135f0b7c05abb2566729c53f7794b38dddd8720f879a0bf4" alt="Logo : La Banque Postale "&gt;
+                        
+                    &lt;/a&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/comptes/inscription/</td>
             </tr>
               
@@ -504,6 +413,25 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://www.agencebio.org/" target="_blank"&gt;
+                    
+                        
+                        &lt;img src="https://aides-territoires-prod.s3.fr-par.scw.cloud/aides-territoires-prod/backers/agence-bio_logo.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Credential=SCWJ1T6VQNR6Z83FSYEB%2F20210425%2Ffr-par%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20210425T002135Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-SignedHeaders=host&amp;amp;X-Amz-Signature=5c80658c141718006622ea5279d988de9f3327f88ef9ee6d2f6a19ae2b7b8145" alt="Logo : Agence BIO "&gt;
+                        
+                    &lt;/a&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/contact/</td>
             </tr>
               
@@ -513,25 +441,6 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://twitter.com/aidesterr" title="Retrouvez Aides territoires sur Twitter" target="_blank" rel="noopener"&gt;&lt;img src="/static/img/logo_twitter.svg" alt="logo twitter"&gt;&lt;/a&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://www.fff.fr/" target="_blank"&gt;
-                    
-                        
-                        &lt;img src="https://aides-territoires-prod.s3.fr-par.scw.cloud/aides-territoires-prod/backers/federation-francaise-de-football_logo.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Credential=SCWJ1T6VQNR6Z83FSYEB%2F20210424%2Ffr-par%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20210424T002155Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-SignedHeaders=host&amp;amp;X-Amz-Signature=190b454b8339a9039f97a7726818775aeaec26eb03995887093ce580565a69db" alt="Logo : F&eacute;d&eacute;ration Fran&ccedil;aise de Football "&gt;
-                        
-                    &lt;/a&gt;</td>
             </tr>
               
   
@@ -565,7 +474,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -573,29 +482,10 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://www.labanquepostale.fr/" target="_blank"&gt;
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://www.banquedesterritoires.fr/" target="_blank"&gt;
                     
                         
-                        &lt;img src="https://aides-territoires-prod.s3.fr-par.scw.cloud/aides-territoires-prod/backers/la-banque-postale_logo.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Credential=SCWJ1T6VQNR6Z83FSYEB%2F20210424%2Ffr-par%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20210424T002152Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-SignedHeaders=host&amp;amp;X-Amz-Signature=1668c28dd9193a959267e8c93b885b9f5029214b15e3c4b2df43bb1a82c51df7" alt="Logo : La Banque Postale "&gt;
-                        
-                    &lt;/a&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://ofb.gouv.fr/" target="_blank"&gt;
-                    
-                        
-                        &lt;img src="https://aides-territoires-prod.s3.fr-par.scw.cloud/aides-territoires-prod/backers/office-francais-pour-la-biodiversite-ofb_logo.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Credential=SCWJ1T6VQNR6Z83FSYEB%2F20210424%2Ffr-par%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20210424T002156Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-SignedHeaders=host&amp;amp;X-Amz-Signature=dbf8d289dd9b16a0aac9f0f3c601ba17a659fc2f4a260b6a4d30de5006913671" alt="Logo : Office fran&ccedil;ais de la biodiversit&eacute; (OFB) "&gt;
+                        &lt;img src="https://aides-territoires-prod.s3.fr-par.scw.cloud/aides-territoires-prod/backers/banque-des-territoires_logo.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Credential=SCWJ1T6VQNR6Z83FSYEB%2F20210425%2Ffr-par%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20210425T002138Z&amp;amp;X-Amz-Expires=3600&amp;amp;X-Amz-SignedHeaders=host&amp;amp;X-Amz-Signature=c467a9029d0a4138973c36b336abf6d875a97f4b714882a03a2b9a87c44aa3ad" alt="Logo : Banque des Territoires "&gt;
                         
                     &lt;/a&gt;</td>
             </tr>
@@ -2624,20 +2514,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/CACHE/css/output.6bb0c4bca661.css</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/favicons/favicon-32x32.png</td>
             </tr>
               
@@ -2667,6 +2543,20 @@ ZAP Scanning Report
   
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/CACHE/js/output.e594d37f92b6.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/CACHE/css/output.d391a993bbee.css</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2748,20 +2638,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/contact/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">33U2rMO7v13Ytws4Iv15KGEc46e9gh6T5L9ItR9KSXRSVOFX0cdZaExekgTkW5W2</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides-collectivit%C3%A9s/</td>
             </tr>
               
@@ -2832,6 +2708,20 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/contact/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">G5ETaocFZRGqOiWoe9xNDvfDiExGPNCkCCnajzuQHsyCl4n3aUjTjaiMTWapqWi8</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/plateforme-aides-territoires/</td>
             </tr>
               
@@ -2841,20 +2731,6 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">fr/broadcast/3105-Aides-Territoires-la-plateforme-qui-permet-aux-territoires-de-trouver-des-aides-pour-financer-et-accompagner-leurs-projets-locaux</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/comptes/connexion/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">x4jMvdCZjM5GEevxxUGmcfJ3aAsDVaaInlOwnojEHLzVSD3qh4gbHhaj9YDeLiab</td>
             </tr>
               
   
@@ -2882,7 +2758,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">33U2rMO7v13Ytws4Iv15KGEc46e9gh6T5L9ItR9KSXRSVOFX0cdZaExekgTkW5W2</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">G5ETaocFZRGqOiWoe9xNDvfDiExGPNCkCCnajzuQHsyCl4n3aUjTjaiMTWapqWi8</td>
             </tr>
               
   
@@ -2902,6 +2778,20 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/comptes/connexion/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">IpYnzaEbDwFNlQXvhjmNXMEKJSgndMWupYDN6AUqApUHtTLWnCOzjJKDAsh8vRve</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%">Instances</td><td width="80%">11</td>
             </tr>
               
@@ -2910,7 +2800,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>�u6�&ucirc;�]ط\x000b8"�y(a\x001c㧽�\x001e��H�\x001fJItRT�W��YhL^�\x0004�[��</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>~�ۮ��q�-�]}&#847881;׬�7��+h������z�~q調���-</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
@@ -3485,34 +3375,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/img/home_steps_2.svg</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">90570640</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/CACHE/css/output.6bb0c4bca661.css</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">23009688</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/comptes/connexion/</td>
             </tr>
               
@@ -3583,6 +3445,34 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/CACHE/css/output.d391a993bbee.css</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">23009688</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/robots.txt</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">91435942</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/aides/7285-developper-vos-investissements-et-renforcer-v/</td>
             </tr>
               
@@ -3611,7 +3501,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/img/home_aides.svg</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/static/img/home_steps_2.svg</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -3619,7 +3509,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">02615070</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">28504299</td>
             </tr>
               
   
@@ -3649,6 +3539,74 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-info">
+                <th width="20%"><a name="info"></a>Informational (Low)</th><th width="80%">User Controllable HTML Element Attribute (Potential XSS)</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://aides-territoires.beta.gouv.fr/comptes/inscription/?next=/aides/publications/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">next</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">1</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Validate all input and sanitize output it before writing to any HTML attributes.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Other information</td><td width="80%"><p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p><p></p><p>https://aides-territoires.beta.gouv.fr/comptes/inscription/?next=/aides/publications/</p><p></p><p>appears to include user input in: </p><p></p><p>a(n) [a] tag [href] attribute </p><p></p><p>The user input found was:</p><p>next=/aides/publications/</p><p></p><p>The user-controlled value was:</p><p>/aides/publications/</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">20</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">20</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
