@@ -81,7 +81,7 @@ ZAP Scanning Report
         <p>
 </p>
         <h3 class="left-header">Summary of Alerts</h3>
-        <h3 class="time-stamp">Generated on Mon, 3 May 2021 01:43:03</h3>
+        <h3 class="time-stamp">Generated on Tue, 4 May 2021 01:38:06</h3>
         <table width="45%" class="summary">
             <tr bgcolor="#666666">
                 <th width="45%" height="24">Risk 
@@ -92,13 +92,13 @@ ZAP Scanning Report
                 <td><a href="#high">High</a></td><td align="center">0</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#medium">Medium</a></td><td align="center">3</td>
+                <td><a href="#medium">Medium</a></td><td align="center">2</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#low">Low</a></td><td align="center">4</td>
+                <td><a href="#low">Low</a></td><td align="center">5</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#info">Informational</a></td><td align="center">4</td>
+                <td><a href="#info">Informational</a></td><td align="center">5</td>
             </tr>
         </table>
         <div class="spacer-lg"></div>
@@ -111,13 +111,13 @@ ZAP Scanning Report
                 <td>CSP: Wildcard Directive</td><td align="center">Medium</td><td align="center">1</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Reverse Tabnabbing</td><td align="center">Medium</td><td align="center">1</td>
+                <td>Sub Resource Integrity Attribute Missing</td><td align="center">Medium</td><td align="center">64</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Sub Resource Integrity Attribute Missing</td><td align="center">Medium</td><td align="center">8</td>
+                <td>Absence of Anti-CSRF Tokens</td><td align="center">Low</td><td align="center">1</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Cross-Domain JavaScript Source File Inclusion</td><td align="center">Low</td><td align="center">2</td>
+                <td>Cross-Domain JavaScript Source File Inclusion</td><td align="center">Low</td><td align="center">24</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Feature Policy Header Not Set</td><td align="center">Low</td><td align="center">1</td>
@@ -133,6 +133,9 @@ ZAP Scanning Report
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Information Disclosure - Suspicious Comments</td><td align="center">Informational</td><td align="center">1</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Modern Web Application</td><td align="center">Informational</td><td align="center">1</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Non-Storable Content</td><td align="center">Informational</td><td align="center">1</td>
@@ -215,59 +218,6 @@ ZAP Scanning Report
   
   
             <tr height="24" class="risk-medium">
-                <th width="20%"><a name="medium"></a>Medium (Medium)</th><th width="80%">Reverse Tabnabbing</th>
-            </tr>
-              
-  
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>At least one link on this page is vulnerable to Reverse tabnabbing as it uses a target attribute without using both of the "noopener" and "noreferrer" keywords in the "rel" attribute, which allows the target page to take control of this page.</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a title="Rejoignez-nous sur LinkedIn" target="_blank" href="https://www.linkedin.com/company/la-plateforme-de-l-inclusion/"&gt;LinkedIn&lt;/a&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">1</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p>Do not use a target attribute, or if you have to then also add the attribute: rel="noopener noreferrer".</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p>https://owasp.org/www-community/attacks/Reverse_Tabnabbing</p><p>https://dev.to/ben/the-targetblank-vulnerability-by-example</p><p>https://mathiasbynens.github.io/rel-noopener/</p><p>https://medium.com/@jitbit/target-blank-the-most-underestimated-vulnerability-ever-96e328301f4c</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Source ID</td><td width="80%">3</td>
-            </tr>
-            
-        </table>
-        <div class="spacer"></div>
-        <table width="100%" class="results">
-              
-  
-  
-  
-            <tr height="24" class="risk-medium">
                 <th width="20%"><a name="medium"></a>Medium (High)</th><th width="80%">Sub Resource Integrity Attribute Missing</th>
             </tr>
               
@@ -292,7 +242,21 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;link href="https://dub2.discourse-cdn.com/standard20/stylesheets/desktop_theme_7_14ec777436524dcfc7e44def26c82f6e36e782f3.css?__ws=communaute.inclusion.beta.gouv.fr" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="7"/&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;link href="https://dub2.discourse-cdn.com/standard20/stylesheets/poll_desktop_ef1ec8ba2f4f1d6c8ca5b4bf7d4f1bc477e92bcc.css?__ws=communaute.inclusion.beta.gouv.fr" media="all" rel="stylesheet" data-target="poll_desktop" data-theme-id="7"/&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;link href="https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-akismet_ef1ec8ba2f4f1d6c8ca5b4bf7d4f1bc477e92bcc.css?__ws=communaute.inclusion.beta.gouv.fr" media="all" rel="stylesheet" data-target="discourse-akismet" data-theme-id="7"/&gt;</td>
             </tr>
               
   
@@ -320,6 +284,104 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;link href="https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-details_ef1ec8ba2f4f1d6c8ca5b4bf7d4f1bc477e92bcc.css?__ws=communaute.inclusion.beta.gouv.fr" media="all" rel="stylesheet" data-target="discourse-details" data-theme-id="7"/&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;link href="https://dub2.discourse-cdn.com/standard20/stylesheets/hosted-site_ef1ec8ba2f4f1d6c8ca5b4bf7d4f1bc477e92bcc.css?__ws=communaute.inclusion.beta.gouv.fr" media="all" rel="stylesheet" data-target="hosted-site" data-theme-id="7"/&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;link href="https://dub2.discourse-cdn.com/standard20/stylesheets/color_definitions_basis__59c104bff3067115caffa5cb3e45c1618f01ca09.css?__ws=communaute.inclusion.beta.gouv.fr" media="all" rel="stylesheet" class="light-scheme"/&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;link rel="preload" href="https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-solved-dc00da4822520709deefcacf657c6d7866b2f0d68d330ed750e9a825cd32a489.gz.js" as="script"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src='https://dub2.discourse-cdn.com/standard20/theme-javascripts/aa1221247ae1476ef6b48caf371c381de80a624f.js?__ws=communaute.inclusion.beta.gouv.fr'&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;link href="https://dub2.discourse-cdn.com/standard20/stylesheets/poll_ef1ec8ba2f4f1d6c8ca5b4bf7d4f1bc477e92bcc.css?__ws=communaute.inclusion.beta.gouv.fr" media="all" rel="stylesheet" data-target="poll" data-theme-id="7"/&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-presence-0a92be3ac4a066b4744ba97a0c38d27114fdec4290c447abafdfb70de8f6ef16.gz.js"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;link rel="apple-touch-icon" type="image/png" href="https://aws1.discourse-cdn.com/standard20/uploads/communauteinclusion/optimized/1X/a07679729a1e853552e36066838c0f0a9ed767f1_2_180x180.svg"&gt;</td>
             </tr>
               
@@ -334,7 +396,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;link href="https://dub2.discourse-cdn.com/standard20/stylesheets/desktop_ef1ec8ba2f4f1d6c8ca5b4bf7d4f1bc477e92bcc.css?__ws=communaute.inclusion.beta.gouv.fr" media="all" rel="stylesheet" data-target="desktop" data-theme-id="7"/&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/pretty-text-bundle-0651e2a797c3ce2e7029301b15f1e2d11ab1286bea425eaf70aac53d80e226ee.gz.js"&gt;&lt;/script&gt;</td>
             </tr>
               
   
@@ -348,7 +410,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://dub2.discourse-cdn.com/standard20/theme-javascripts/723ec67d0fa7134fc9afd3ff6fcbb434351336bc.js?__ws=communaute.inclusion.beta.gouv.fr"&gt;&lt;/script&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-solved-dc00da4822520709deefcacf657c6d7866b2f0d68d330ed750e9a825cd32a489.gz.js"&gt;&lt;/script&gt;</td>
             </tr>
               
   
@@ -362,7 +424,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;link rel="icon" type="image/png" href="https://aws1.discourse-cdn.com/standard20/uploads/communauteinclusion/optimized/1X/a07679729a1e853552e36066838c0f0a9ed767f1_2_32x32.svg"&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;link rel="preload" href="https://aws1.discourse-cdn.com/standard20/assets/ember_jquery-36a23101c869ab0dc53fc908de69adb785731593573d32bdeef416acc1076ef4.gz.js" as="script"&gt;</td>
             </tr>
               
   
@@ -396,7 +458,63 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">8</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/vendor-cbd6e0773a348bdfe5771d26f9eb195929c0b36a2c09bdca0b903edd080428bc.gz.js"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-adplugin-0bff5aef941ef485e2b97bce2a912a0c87109cbda32d947cd507826c146d0714.gz.js"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;link rel="preload" href="https://aws1.discourse-cdn.com/standard20/assets/browser-update-eec13eb6f8386f18f10b5dd6ebb7a3598d28421bb796e539b91a7e4a4c5d4c08.gz.js" as="script"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;link href="https://dub2.discourse-cdn.com/standard20/stylesheets/desktop_theme_7_14ec777436524dcfc7e44def26c82f6e36e782f3.css?__ws=communaute.inclusion.beta.gouv.fr" media="all" rel="stylesheet" data-target="desktop_theme" data-theme-id="7"/&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">64</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -413,6 +531,74 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%">WASC Id</td><td width="80%">15</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Absence of Anti-CSRF Tokens</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>No Anti-CSRF tokens were found in a HTML submission form.</p><p>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</p><p></p><p>CSRF attacks are effective in a number of situations, including:</p><p>    * The victim has an active session on the target site.</p><p>    * The victim is authenticated via HTTP auth on the target site.</p><p>    * The victim is on the same local network as the target site.</p><p></p><p>CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form id='hidden-login-form' method="post" action="/login" style="display: none;"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">1</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Phase: Architecture and Design</p><p>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</p><p>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</p><p></p><p>Phase: Implementation</p><p>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</p><p></p><p>Phase: Architecture and Design</p><p>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Use the ESAPI Session Management control.</p><p>This control includes a component for CSRF.</p><p></p><p>Do not use the GET method for any request that triggers a state change.</p><p></p><p>Phase: Implementation</p><p>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Other information</td><td width="80%"><p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF] was found in the following HTML form: [Form 1: "signin_username" "signin_password" "redirect" "signin-button" ].</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>http://cwe.mitre.org/data/definitions/352.html</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">352</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">9</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -451,11 +637,83 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">https://dub2.discourse-cdn.com/standard20/theme-javascripts/0828be4560e695619a7505baa86c3068cf1c6bcb.js?__ws=communaute.inclusion.beta.gouv.fr</td>
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-details-61554ea83ad59329c2d5c9f0390a0498f3e3665deb58d32dc608aeca24fa0bb9.gz.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://dub2.discourse-cdn.com/standard20/theme-javascripts/0828be4560e695619a7505baa86c3068cf1c6bcb.js?__ws=communaute.inclusion.beta.gouv.fr"&gt;&lt;/script&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-details-61554ea83ad59329c2d5c9f0390a0498f3e3665deb58d32dc608aeca24fa0bb9.gz.js"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-local-dates-b8e812a3c2ed851751fb9abfee22441fe153c9380d6898942c1f81a54d9f5c62.gz.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-local-dates-b8e812a3c2ed851751fb9abfee22441fe153c9380d6898942c1f81a54d9f5c62.gz.js"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://aws1.discourse-cdn.com/standard20/assets/ember_jquery-36a23101c869ab0dc53fc908de69adb785731593573d32bdeef416acc1076ef4.gz.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/ember_jquery-36a23101c869ab0dc53fc908de69adb785731593573d32bdeef416acc1076ef4.gz.js"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-presence-0a92be3ac4a066b4744ba97a0c38d27114fdec4290c447abafdfb70de8f6ef16.gz.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-presence-0a92be3ac4a066b4744ba97a0c38d27114fdec4290c447abafdfb70de8f6ef16.gz.js"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-cakeday-6b4871faf837d73a5ec654a9ee4089be45edeb5010b52553e23ea8a780e2eaeb.gz.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-cakeday-6b4871faf837d73a5ec654a9ee4089be45edeb5010b52553e23ea8a780e2eaeb.gz.js"&gt;&lt;/script&gt;</td>
             </tr>
               
   
@@ -479,7 +737,259 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">2</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/lazy-yt-9db193c8caacf2e3b3a24ed4c63699ad497c210f668f467d95380efd00982345.gz.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/plugins/lazy-yt-9db193c8caacf2e3b3a24ed4c63699ad497c210f668f467d95380efd00982345.gz.js"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-spoiler-alert-305835b7744ac91b71b49f93e6ecf8e63d83932ec3ac7034d94d00b2ab2e0c0c.gz.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-spoiler-alert-305835b7744ac91b71b49f93e6ecf8e63d83932ec3ac7034d94d00b2ab2e0c0c.gz.js"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://dub2.discourse-cdn.com/standard20/theme-javascripts/2e9eeaa58f7ec858c8a49ab5ddb6e528dfb644b0.js?__ws=communaute.inclusion.beta.gouv.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src='https://dub2.discourse-cdn.com/standard20/theme-javascripts/2e9eeaa58f7ec858c8a49ab5ddb6e528dfb644b0.js?__ws=communaute.inclusion.beta.gouv.fr'&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://aws1.discourse-cdn.com/standard20/assets/pretty-text-bundle-0651e2a797c3ce2e7029301b15f1e2d11ab1286bea425eaf70aac53d80e226ee.gz.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/pretty-text-bundle-0651e2a797c3ce2e7029301b15f1e2d11ab1286bea425eaf70aac53d80e226ee.gz.js"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-narrative-bot-0b1e40d099d739cee23bbad45c2fb5eac1dcaaba028fdc9fa21b9e32930ec40b.gz.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-narrative-bot-0b1e40d099d739cee23bbad45c2fb5eac1dcaaba028fdc9fa21b9e32930ec40b.gz.js"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://aws1.discourse-cdn.com/standard20/assets/application-e1a4249d12d6a6c2fb6913955d73ab7f3e40263e6da68cdfcef761017dc62496.gz.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/application-e1a4249d12d6a6c2fb6913955d73ab7f3e40263e6da68cdfcef761017dc62496.gz.js"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/poll-e9110bb0161e8a87490e27db5e31389fdb4aa144aba5f65c4bbacfebb4b05bb8.gz.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/plugins/poll-e9110bb0161e8a87490e27db5e31389fdb4aa144aba5f65c4bbacfebb4b05bb8.gz.js"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-solved-dc00da4822520709deefcacf657c6d7866b2f0d68d330ed750e9a825cd32a489.gz.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-solved-dc00da4822520709deefcacf657c6d7866b2f0d68d330ed750e9a825cd32a489.gz.js"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://dub2.discourse-cdn.com/standard20/theme-javascripts/0828be4560e695619a7505baa86c3068cf1c6bcb.js?__ws=communaute.inclusion.beta.gouv.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://dub2.discourse-cdn.com/standard20/theme-javascripts/0828be4560e695619a7505baa86c3068cf1c6bcb.js?__ws=communaute.inclusion.beta.gouv.fr"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/hosted-site-2a2e849cd71b65b45bc932ac1a48cc33152f3c1e125f669ecb819d3a8a8119f7.gz.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/plugins/hosted-site-2a2e849cd71b65b45bc932ac1a48cc33152f3c1e125f669ecb819d3a8a8119f7.gz.js"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-akismet-8080466a78f5b1b8ac194835ce193c1929f891647b9d2597de92a2ad29d72021.gz.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-akismet-8080466a78f5b1b8ac194835ce193c1929f891647b9d2597de92a2ad29d72021.gz.js"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://aws1.discourse-cdn.com/standard20/assets/locales/fr-78fcc8ab9f69f2951babaa4cee76897bbbd3bf63778c6b493cec27ce39a6848d.gz.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/locales/fr-78fcc8ab9f69f2951babaa4cee76897bbbd3bf63778c6b493cec27ce39a6848d.gz.js"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://aws1.discourse-cdn.com/standard20/assets/start-discourse-efa4e5abfbd1b50b5152ffbe64d5dcea9f7c33f766dcc6387e2711f0f2112148.gz.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://aws1.discourse-cdn.com/standard20/assets/start-discourse-efa4e5abfbd1b50b5152ffbe64d5dcea9f7c33f766dcc6387e2711f0f2112148.gz.js"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://dub2.discourse-cdn.com/standard20/theme-javascripts/aa1221247ae1476ef6b48caf371c381de80a624f.js?__ws=communaute.inclusion.beta.gouv.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src='https://dub2.discourse-cdn.com/standard20/theme-javascripts/aa1221247ae1476ef6b48caf371c381de80a624f.js?__ws=communaute.inclusion.beta.gouv.fr'&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">24</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -841,6 +1351,344 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-info">
+                <th width="20%"><a name="info"></a>Informational (Medium)</th><th width="80%">Modern Web Application</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://communaute.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript data-path="/"&gt;
+      
+  &lt;header class="d-header"&gt;
+    &lt;div class="wrap"&gt;
+      &lt;div class="contents clearfix"&gt;
+        &lt;div class="title"&gt;
+          &lt;a href="/"&gt;
+              &lt;img src="https://aws1.discourse-cdn.com/standard20/uploads/communauteinclusion/original/1X/6117f6e747c39c92550d81af891ffb2960858d81.svg" alt="Forum de l&amp;#39;inclusion" id="site-logo"&gt;
+          &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="panel clearfix"&gt;
+            &lt;span class='header-buttons'&gt;
+                &lt;a href="/signup" class='btn btn-primary btn-small sign-up-button'&gt;S&amp;#39;inscrire&lt;/a&gt;
+              &lt;a href="/login" class='btn btn-primary btn-small login-button btn-icon-text'&gt;&lt;svg class="fa d-icon svg-icon svg-node" aria-hidden="true"&gt;&lt;svg id="user" viewBox="0 0 448 512"&gt;
+    &lt;path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/&gt;
+  &lt;/svg&gt;&lt;/svg&gt;
+Connexion&lt;/a&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+      &lt;div id="main-outlet" class="wrap" role="main"&gt;
+        &lt;!-- preload-content: --&gt;
+        &lt;div itemscope itemtype='http://schema.org/ItemList'&gt;
+  &lt;meta itemprop='itemListOrder' content='http://schema.org/ItemListOrderDescending'&gt;
+  &lt;table class='category-list'&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th class='category'&gt;Cat&eacute;gorie&lt;/th&gt;
+        &lt;th class='topics'&gt;Sujets&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td class='category' style='border-color: #231F20;'&gt;
+            &lt;div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'&gt;
+              &lt;meta itemprop='position' content='0'&gt;
+              &lt;meta itemprop='url' content='/c/actualites/81'&gt;
+              &lt;h3&gt;
+                &lt;a href='/c/actualites/81'&gt;
+                  &lt;span itemprop='name'&gt;Actualit&eacute;s&lt;/span&gt;
+                &lt;/a&gt;
+              &lt;/h3&gt;
+              &lt;div itemprop='description'&gt;D&eacute;couvrez toute l&rsquo;actualit&eacute; des acteurs de l&rsquo;inclusion (Evolutions des services de la plateforme, nouveaut&eacute;s, astuces&hellip;)&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td class='topics'&gt;
+            &lt;div title='6 Sujets'&gt;6&lt;/div&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class='category' style='border-color: #00B1FF;'&gt;
+            &lt;div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'&gt;
+              &lt;meta itemprop='position' content='1'&gt;
+              &lt;meta itemprop='url' content='/c/se-retrouver-par-communaute-d-acteurs/45'&gt;
+              &lt;h3&gt;
+                &lt;a href='/c/se-retrouver-par-communaute-d-acteurs/45'&gt;
+                  &lt;span itemprop='name'&gt;Echanges par communaut&eacute; d&rsquo;acteurs&lt;/span&gt;
+                &lt;/a&gt;
+              &lt;/h3&gt;
+              &lt;div itemprop='description'&gt;&lt;strong&gt;Echangez avec des collaborateurs d&rsquo;une m&ecirc;me organisation sur tout le territoire.&lt;/strong&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td class='topics'&gt;
+            &lt;div title='0 Sujets'&gt;0&lt;/div&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class='category' style='border-color: #808281;'&gt;
+            &lt;div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'&gt;
+              &lt;meta itemprop='position' content='2'&gt;
+              &lt;meta itemprop='url' content='/c/suggestions-devolutions/84'&gt;
+              &lt;h3&gt;
+                &lt;a href='/c/suggestions-devolutions/84'&gt;
+                  &lt;span itemprop='name'&gt;Suggestions d&amp;#39;&eacute;volutions&lt;/span&gt;
+                &lt;/a&gt;
+              &lt;/h3&gt;
+              &lt;div itemprop='description'&gt;Partagez vos id&eacute;es et votez pour votre am&eacute;lioration pr&eacute;f&eacute;r&eacute;e !&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td class='topics'&gt;
+            &lt;div title='3 Sujets'&gt;3&lt;/div&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class='category' style='border-color: #3AB54A;'&gt;
+            &lt;div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'&gt;
+              &lt;meta itemprop='position' content='3'&gt;
+              &lt;meta itemprop='url' content='/c/spie/49'&gt;
+              &lt;h3&gt;
+                &lt;a href='/c/spie/49'&gt;
+                  &lt;span itemprop='name'&gt;SPIE&lt;/span&gt;
+                &lt;/a&gt;
+              &lt;/h3&gt;
+              &lt;div itemprop='description'&gt;SPIE = Service Public de l&rsquo;Insertion et de l&rsquo;Emploi.&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td class='topics'&gt;
+            &lt;div title='4 Sujets'&gt;4&lt;/div&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class='category' style='border-color: #026ADC;'&gt;
+            &lt;div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'&gt;
+              &lt;meta itemprop='position' content='4'&gt;
+              &lt;meta itemprop='url' content='/c/plateforme-de-linclusion/2'&gt;
+              &lt;h3&gt;
+                &lt;a href='/c/plateforme-de-linclusion/2'&gt;
+                  &lt;span itemprop='name'&gt;Les emplois de l&amp;#39;inclusion &amp;amp; vous&lt;/span&gt;
+                &lt;/a&gt;
+              &lt;/h3&gt;
+              &lt;div itemprop='description'&gt;Fonctionnement, actualit&eacute;s et retours utilisateurs&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td class='topics'&gt;
+            &lt;div title='115 Sujets'&gt;115&lt;/div&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class='category' style='border-color: #F25154;'&gt;
+            &lt;div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'&gt;
+              &lt;meta itemprop='position' content='5'&gt;
+              &lt;meta itemprop='url' content='/c/le-marche-de-linclusion-vous/53'&gt;
+              &lt;h3&gt;
+                &lt;a href='/c/le-marche-de-linclusion-vous/53'&gt;
+                  &lt;span itemprop='name'&gt;Le march&eacute; de l&amp;#39;inclusion &amp;amp; vous&lt;/span&gt;
+                &lt;/a&gt;
+              &lt;/h3&gt;
+              &lt;div itemprop='description'&gt;Mise en visibilit&eacute; des offres commerciales des Entreprises Sociales Inclusives (ou Employeurs Solidaires)&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td class='topics'&gt;
+            &lt;div title='0 Sujets'&gt;0&lt;/div&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class='category' style='border-color: #FBA900;'&gt;
+            &lt;div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'&gt;
+              &lt;meta itemprop='position' content='6'&gt;
+              &lt;meta itemprop='url' content='/c/se-retrouver-par-territoire/31'&gt;
+              &lt;h3&gt;
+                &lt;a href='/c/se-retrouver-par-territoire/31'&gt;
+                  &lt;span itemprop='name'&gt;Espaces d&amp;#39;&eacute;changes par territoire&lt;/span&gt;
+                &lt;/a&gt;
+              &lt;/h3&gt;
+              &lt;div itemprop='description'&gt;&lt;strong&gt;Entraide, bonnes pratiques, actualit&eacute;s, &eacute;v&eacute;nements.&lt;/strong&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td class='topics'&gt;
+            &lt;div title='3 Sujets'&gt;3&lt;/div&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class='category' style='border-color: #13634D;'&gt;
+            &lt;div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'&gt;
+              &lt;meta itemprop='position' content='7'&gt;
+              &lt;meta itemprop='url' content='/c/formation/48'&gt;
+              &lt;h3&gt;
+                &lt;a href='/c/formation/48'&gt;
+                  &lt;span itemprop='name'&gt;Formation&lt;/span&gt;
+                &lt;/a&gt;
+              &lt;/h3&gt;
+              &lt;div itemprop='description'&gt;Pour les acteurs de l&rsquo;inclusion et leurs publics.&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td class='topics'&gt;
+            &lt;div title='8 Sujets'&gt;8&lt;/div&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class='category' style='border-color: #FE7BCF;'&gt;
+            &lt;div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'&gt;
+              &lt;meta itemprop='position' content='8'&gt;
+              &lt;meta itemprop='url' content='/c/ressourcerie/46'&gt;
+              &lt;h3&gt;
+                &lt;a href='/c/ressourcerie/46'&gt;
+                  &lt;span itemprop='name'&gt;Ressourcerie&lt;/span&gt;
+                &lt;/a&gt;
+              &lt;/h3&gt;
+              &lt;div itemprop='description'&gt;&lt;strong&gt;Tous les outils et services publics num&eacute;riques partag&eacute;s par la communaut&eacute; de l&rsquo;inclusion.&lt;/strong&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td class='topics'&gt;
+            &lt;div title='6 Sujets'&gt;6&lt;/div&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class='category' style='border-color: #673AB7;'&gt;
+            &lt;div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'&gt;
+              &lt;meta itemprop='position' content='9'&gt;
+              &lt;meta itemprop='url' content='/c/accompagnement-des-beneficiaires/60'&gt;
+              &lt;h3&gt;
+                &lt;a href='/c/accompagnement-des-beneficiaires/60'&gt;
+                  &lt;span itemprop='name'&gt;Accompagnement des b&eacute;n&eacute;ficiaires&lt;/span&gt;
+                &lt;/a&gt;
+              &lt;/h3&gt;
+              &lt;div itemprop='description'&gt;Entraide, Bonnes pratiques, Discussions pour l&rsquo;accompagnement de vos publics.&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td class='topics'&gt;
+            &lt;div title='12 Sujets'&gt;12&lt;/div&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class='category' style='border-color: #B3B5B4;'&gt;
+            &lt;div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'&gt;
+              &lt;meta itemprop='position' content='10'&gt;
+              &lt;meta itemprop='url' content='/c/covid19-informations-crise-sanitaire/14'&gt;
+              &lt;h3&gt;
+                &lt;a href='/c/covid19-informations-crise-sanitaire/14'&gt;
+                  &lt;span itemprop='name'&gt;COVID19 - Informations officielles&lt;/span&gt;
+                &lt;/a&gt;
+              &lt;/h3&gt;
+              &lt;div itemprop='description'&gt;&lt;strong&gt;Webinaires, aides aux entreprises, sites officiels.&lt;/strong&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td class='topics'&gt;
+            &lt;div title='4 Sujets'&gt;4&lt;/div&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class='category' style='border-color: #FFD800;'&gt;
+            &lt;div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'&gt;
+              &lt;meta itemprop='position' content='11'&gt;
+              &lt;meta itemprop='url' content='/c/espace-juridique/47'&gt;
+              &lt;h3&gt;
+                &lt;a href='/c/espace-juridique/47'&gt;
+                  &lt;span itemprop='name'&gt;Espace juridique&lt;/span&gt;
+                &lt;/a&gt;
+              &lt;/h3&gt;
+              &lt;div itemprop='description'&gt;&lt;strong&gt;Questions et informations r&eacute;glementaires (contrat de travail, &eacute;ligibilit&eacute;, d&eacute;crets).&lt;/strong&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td class='topics'&gt;
+            &lt;div title='29 Sujets'&gt;29&lt;/div&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td class='category' style='border-color: #E0CDA9;'&gt;
+            &lt;div itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'&gt;
+              &lt;meta itemprop='position' content='12'&gt;
+              &lt;meta itemprop='url' content='/c/non-categorise/1'&gt;
+              &lt;h3&gt;
+                &lt;a href='/c/non-categorise/1'&gt;
+                  &lt;span itemprop='name'&gt;Sans cat&eacute;gorie&lt;/span&gt;
+                &lt;/a&gt;
+              &lt;/h3&gt;
+              &lt;div itemprop='description'&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/td&gt;
+          &lt;td class='topics'&gt;
+            &lt;div title='58 Sujets'&gt;58&lt;/div&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+
+
+
+        &lt;!-- :preload-content --&gt;
+        &lt;footer class="noscript-footer-nav"&gt;
+          &lt;nav itemscope itemtype='http://schema.org/SiteNavigationElement'&gt;
+            &lt;a href='/'&gt;Accueil&lt;/a&gt;
+            &lt;a href="/categories"&gt;Cat&eacute;gories&lt;/a&gt;
+            &lt;a href="/guidelines"&gt;FAQ/Charte&lt;/a&gt;
+            &lt;a href="/tos"&gt;Conditions g&eacute;n&eacute;rales d&amp;#39;utilisation&lt;/a&gt;
+            &lt;a href="/privacy"&gt;Politique de confidentialit&eacute;&lt;/a&gt;
+          &lt;/nav&gt;
+        &lt;/footer&gt;
+      &lt;/div&gt;
+
+      &lt;footer id='noscript-footer'&gt;
+        <p>Propuls&eacute; par &lt;a href="https://www.discourse.org"&gt;Discourse&lt;/a&gt;, le rendu est meilleur quand JavaScript est activ&eacute;.</p>
+      &lt;/footer&gt;
+    &lt;/noscript&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">1</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>This is an informational alert and so no changes are required.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Other information</td><td width="80%"><p>A noScript tag has been found, which is an indication that the application works differently with JavaScript enabled compared to when it is not.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p></p></td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
