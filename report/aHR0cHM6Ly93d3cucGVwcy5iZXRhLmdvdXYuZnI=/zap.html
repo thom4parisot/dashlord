@@ -81,7 +81,7 @@ ZAP Scanning Report
         <p>
 </p>
         <h3 class="left-header">Summary of Alerts</h3>
-        <h3 class="time-stamp">Generated on Fri, 7 May 2021 03:15:34</h3>
+        <h3 class="time-stamp">Generated on Sat, 8 May 2021 04:24:51</h3>
         <table width="45%" class="summary">
             <tr bgcolor="#666666">
                 <th width="45%" height="24">Risk 
@@ -95,7 +95,7 @@ ZAP Scanning Report
                 <td><a href="#medium">Medium</a></td><td align="center">3</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#low">Low</a></td><td align="center">8</td>
+                <td><a href="#low">Low</a></td><td align="center">7</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td><a href="#info">Informational</a></td><td align="center">6</td>
@@ -115,9 +115,6 @@ ZAP Scanning Report
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Sub Resource Integrity Attribute Missing</td><td align="center">Medium</td><td align="center">8</td>
-            </tr>
-            <tr bgcolor="#e8e8e8">
-                <td>Application Error Disclosure</td><td align="center">Low</td><td align="center">1</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Cookie No HttpOnly Flag</td><td align="center">Low</td><td align="center">11</td>
@@ -548,67 +545,6 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%">WASC Id</td><td width="80%">15</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Source ID</td><td width="80%">3</td>
-            </tr>
-            
-        </table>
-        <div class="spacer"></div>
-        <table width="100%" class="results">
-              
-  
-  
-  
-            <tr height="24" class="risk-low">
-                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Application Error Disclosure</th>
-            </tr>
-              
-  
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>This page contains an error/warning message that may disclose sensitive information like the location of the file that produced the unhandled exception. This information can be used to launch further attacks against the web application. The alert could be a false positive if the error message is found inside a documentation page.</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr/login/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">POST</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">HTTP/1.1 500 Internal Server Error</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">1</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p>Review the source code of this page. Implement custom error pages. Consider implementing a mechanism to provide a unique error reference/identifier to the client (browser) while logging the details on the server side and not exposing them to the user.</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p></p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">200</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">WASC Id</td><td width="80%">13</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1883,6 +1819,20 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">lPQ1I4hPLZjdo1JjnGjL7N0n29QSakmbNfpPC7H9eEIccsuKg4eDMdGaGuK5iHG5</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr/static/js/app.94665aa1.js</td>
             </tr>
               
@@ -1892,6 +1842,20 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">fr/sites/default/files/AB042750</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">lPQ1I4hPLZjdo1JjnGjL7N0n29QSakmbNfpPC7H9eEIccsuKg4eDMdGaGuK5iHG5</td>
             </tr>
               
   
@@ -1933,21 +1897,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">TYUVT40uSdVFrrDdppYRMjcTzj9J6sCpDDgiNYqcyqBcPUsSVLsbQc4JlwnHbrMP</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">8SWJeIucoEZAxLuVMs1ULSai5O3Zts0VTLLwu5uwSBq3VrOXnOBwsdsJ1mQeaM9X</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Qaw39KBLziSr87F0fb6qjkbhbjinQbQYOQNg4HRrwl76pJawmfyFGXPr7ppnUsMV</td>
             </tr>
               
   
@@ -1981,7 +1931,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr/robots.txt/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1989,7 +1939,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">8SWJeIucoEZAxLuVMs1ULSai5O3Zts0VTLLwu5uwSBq3VrOXnOBwsdsJ1mQeaM9X</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">lPQ1I4hPLZjdo1JjnGjL7N0n29QSakmbNfpPC7H9eEIccsuKg4eDMdGaGuK5iHG5</td>
             </tr>
               
   
@@ -2018,20 +1968,6 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">org/TR/2001/REC-SVG-20010904/DTD/svg10</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr/robots.txt/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">8SWJeIucoEZAxLuVMs1ULSai5O3Zts0VTLLwu5uwSBq3VrOXnOBwsdsJ1mQeaM9X</td>
             </tr>
               
   
@@ -2187,6 +2123,22 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr/exploitation/Mickael%20Masselot--64/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script type="text/javascript"&gt;
+        window.CSRF_TOKEN = "2SUwlrdiKKMw6XVQg3ADqayMArVzNZesuitkfuDCdpbvUoGh9rvv5AezeMPMVmym"
+    &lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr/static/js/app.94665aa1.js</td>
             </tr>
               
@@ -2201,22 +2153,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr/exploitation/GAEC%20BRAIDY--36/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script type="text/javascript"&gt;
-        window.CSRF_TOKEN = "Isb7pXLHHmUNBUZm6S1oGQe9GaphZMEgtl0UFkL1bjlgZAjoHeB0nbwACIcwG6Ni"
-    &lt;/script&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr/exploitation/Philippe%20Gransagne--69/</td>
             </tr>
               
@@ -2226,23 +2162,7 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script type="text/javascript"&gt;
-        window.CSRF_TOKEN = "eGvEYh7V17kkHjJfTVamrOTeVFrfi2ZNZzkreE7fv4LN5Z3huhKY89bFRdeuZm8P"
-    &lt;/script&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script type="text/javascript"&gt;
-        window.CSRF_TOKEN = "M8dcQ8nnOWM53zhmluWnLfoGeGMZT9Fnx12Z6vnHiTdyrfBoWQwZsAG7aezeAtOp"
+        window.CSRF_TOKEN = "wNtTJMsSswWM4H7rz09wu1gQGJPaFBdNYd2HDPScVblLS8SSso4o9rWDk4JnNYxH"
     &lt;/script&gt;</td>
             </tr>
               
@@ -2258,87 +2178,7 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script type="text/javascript"&gt;
-        window.CSRF_TOKEN = "Qp6HrjUfEypeIQUbsXyAH6J796yjYvpTBiVuHGUz8vQH6wed3j8cor1y5ElyFPyV"
-    &lt;/script&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script type="text/javascript"&gt;
-        window.CSRF_TOKEN = "1ongLhTsyC8RmSqlSENvdMIoesbNexvcMhc31ETM2zzkKyKnt0n7U70Pa0Y2VREe"
-    &lt;/script&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr/exploitation/SARL%20Bonnefoy--19/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script type="text/javascript"&gt;
-        window.CSRF_TOKEN = "05EY73ne1ny3lqNwunkw9L2GwkqrwntfLYtLnqnyvkZwJ67y5JU8Q6k7sSdGdHCh"
-    &lt;/script&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script type="text/javascript"&gt;
-        window.CSRF_TOKEN = "mwsKKNfO4hskJf1XIx59Sc6ip13NAgs16bO7EHFwKu8R7IQCeTztW5Y8behLFfCr"
-    &lt;/script&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr/exploitation/Mickael%20Masselot--64/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script type="text/javascript"&gt;
-        window.CSRF_TOKEN = "Zj4VVZOSl5bFjsMVESRqVXCNyXGt7HGoKcTIbmOcP2C8H86Xfer2CiUeuvtIO1Pq"
-    &lt;/script&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr/robots.txt/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script type="text/javascript"&gt;
-        window.CSRF_TOKEN = "LUyxMSCKqMq7zwT3mejDF4yEHNgYKgEswNnk2fC4UJRAXcd5XATfmpQ5Dl3drANu"
+        window.CSRF_TOKEN = "PQqYx9tdrjHy5qQf5ZvopzcAaHnK2LOQhgZMrcTxUY6xTRBGYnqg4ZSnO2hXa88K"
     &lt;/script&gt;</td>
             </tr>
               
@@ -2354,7 +2194,55 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script type="text/javascript"&gt;
-        window.CSRF_TOKEN = "YCiZYkYlBk45rWLPj9pHKN6cqzYuOxEBJv7MeHYF5hvyPC5RUvZjr8oDm7LJvRND"
+        window.CSRF_TOKEN = "1FWmMpO6yNJz9iw0tWZewl9YB1zP9WfYt5vaGseq1s8yXJhrmkU6bLPLfmt2hjzS"
+    &lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script type="text/javascript"&gt;
+        window.CSRF_TOKEN = "KM2q4bSI2hDmXHoht0K6z6trWR2pNU2NccBeYei2vW2lL89ImoFYew9eAcWCVhmH"
+    &lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr/robots.txt/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script type="text/javascript"&gt;
+        window.CSRF_TOKEN = "0BxZp7xGdlILhRgzDVCmYgT7UhJ3S7RSs16NjaX0G07K5i10wjxeDGzUyCDg0ubM"
+    &lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script type="text/javascript"&gt;
+        window.CSRF_TOKEN = "0JZM5Zx1136EGGfZZWBtA3D833vtnNYIs9yAZ2XluIvDu70qSkwlftjVHopGvaiC"
     &lt;/script&gt;</td>
             </tr>
               
@@ -2370,7 +2258,55 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script type="text/javascript"&gt;
-        window.CSRF_TOKEN = "9BkP2tdcAmIYQbPAwhOtc3fLpd10Wl2NUu9CiQdw4j9reR9C7Do5ToxclLOfDFbP"
+        window.CSRF_TOKEN = "E7qafkesBUQBdmHqCrPUkPVTjSYX5tbZ6xZY9nEM4zfA1NsRvPKMZfBGXdSadQvT"
+    &lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr/exploitation/SARL%20Bonnefoy--19/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script type="text/javascript"&gt;
+        window.CSRF_TOKEN = "xDVFf2Ss1WK9rcGVeFdNvmuVh4uSAEhHZ3ut95iMuB98fDrm738FaMaIVpo5I1BB"
+    &lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script type="text/javascript"&gt;
+        window.CSRF_TOKEN = "ljA9xkNzYMi5CqlsTWXlBI15hnolLp5sjZRmsh3fVPxKT2QY00pAYlFfdtvlPG1p"
+    &lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.peps.beta.gouv.fr/exploitation/GAEC%20BRAIDY--36/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script type="text/javascript"&gt;
+        window.CSRF_TOKEN = "JIS6nMMaHKSNqGfqXhitx6V8fawLOEdUb8rUhPcuaphMe70RQFdlcwBVTvqYW1xO"
     &lt;/script&gt;</td>
             </tr>
               
@@ -2385,7 +2321,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>No links have been found while there are scripts, which is an indication that this is a modern web application.</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
