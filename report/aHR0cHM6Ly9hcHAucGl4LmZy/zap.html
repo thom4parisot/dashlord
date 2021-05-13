@@ -81,7 +81,7 @@ ZAP Scanning Report
         <p>
 </p>
         <h3 class="left-header">Summary of Alerts</h3>
-        <h3 class="time-stamp">Generated on Wed, 12 May 2021 00:43:08</h3>
+        <h3 class="time-stamp">Generated on Thu, 13 May 2021 00:52:57</h3>
         <table width="45%" class="summary">
             <tr bgcolor="#666666">
                 <th width="45%" height="24">Risk 
@@ -92,7 +92,7 @@ ZAP Scanning Report
                 <td><a href="#high">High</a></td><td align="center">0</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#medium">Medium</a></td><td align="center">2</td>
+                <td><a href="#medium">Medium</a></td><td align="center">4</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td><a href="#low">Low</a></td><td align="center">4</td>
@@ -111,40 +111,46 @@ ZAP Scanning Report
                 <td>Content Security Policy (CSP) Header Not Set</td><td align="center">Medium</td><td align="center">3</td>
             </tr>
             <tr bgcolor="#e8e8e8">
+                <td>Source Code Disclosure - SQL</td><td align="center">Medium</td><td align="center">1</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
                 <td>Sub Resource Integrity Attribute Missing</td><td align="center">Medium</td><td align="center">6</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Vulnerable JS Library</td><td align="center">Medium</td><td align="center">1</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Cross-Domain JavaScript Source File Inclusion</td><td align="center">Low</td><td align="center">3</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Dangerous JS Functions</td><td align="center">Low</td><td align="center">1</td>
+                <td>Dangerous JS Functions</td><td align="center">Low</td><td align="center">2</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Feature Policy Header Not Set</td><td align="center">Low</td><td align="center">5</td>
+                <td>Feature Policy Header Not Set</td><td align="center">Low</td><td align="center">6</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Incomplete or No Cache-control and Pragma HTTP Header Set</td><td align="center">Low</td><td align="center">6</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Base64 Disclosure</td><td align="center">Informational</td><td align="center">4</td>
+                <td>Base64 Disclosure</td><td align="center">Informational</td><td align="center">5</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Information Disclosure - Suspicious Comments</td><td align="center">Informational</td><td align="center">6</td>
+                <td>Information Disclosure - Suspicious Comments</td><td align="center">Informational</td><td align="center">15</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Modern Web Application</td><td align="center">Informational</td><td align="center">3</td>
+                <td>Modern Web Application</td><td align="center">Informational</td><td align="center">4</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Retrieved from Cache</td><td align="center">Informational</td><td align="center">10</td>
+                <td>Retrieved from Cache</td><td align="center">Informational</td><td align="center">11</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Storable and Cacheable Content</td><td align="center">Informational</td><td align="center">7</td>
+                <td>Storable and Cacheable Content</td><td align="center">Informational</td><td align="center">8</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Storable but Non-Cacheable Content</td><td align="center">Informational</td><td align="center">3</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Timestamp Disclosure - Unix</td><td align="center">Informational</td><td align="center">12</td>
+                <td>Timestamp Disclosure - Unix</td><td align="center">Informational</td><td align="center">13</td>
             </tr>
         </table>
         <div class="spacer-lg"></div>
@@ -219,6 +225,75 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%">WASC Id</td><td width="80%">15</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-medium">
+                <th width="20%"><a name="medium"></a>Medium (Medium)</th><th width="80%">Source Code Disclosure - SQL</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>Application Source Code was disclosed by the web server - SQL</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/vendor-81785bfa31079356964b2a192a047eb2.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">create
+function n</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">1</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Ensure that application Source Code is not available with alternative extensions, and ensure that source code is not present within other files or data deployed to the web server, or served by the web server. </p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Other information</td><td width="80%"><p>create</p><p>function n</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>http://blogs.wsj.com/cio/2013/10/08/adobe-source-code-leak-is-bad-news-for-u-s-government/</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">540</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -363,6 +438,70 @@ ZAP Scanning Report
   
   
   
+            <tr height="24" class="risk-medium">
+                <th width="20%"><a name="medium"></a>Medium (Medium)</th><th width="80%">Vulnerable JS Library</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>The identified library jquery, version 3.4.1 is vulnerable.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/vendor-81785bfa31079356964b2a192a047eb2.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">* jQuery JavaScript Library v3.4.1</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">1</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Please upgrade to the latest version of jquery.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Other information</td><td width="80%"><p>CVE-2020-11023</p><p>CVE-2020-11022</p><p></p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/</p><p></p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">829</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
             <tr height="24" class="risk-low">
                 <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Cross-Domain JavaScript Source File Inclusion</th>
             </tr>
@@ -481,7 +620,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-30881f9e036bb11b3d881d12949e5c20.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-302a7dc991cdbeb66dcb69b760f8f71b.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -495,7 +634,21 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">1</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/vendor-81785bfa31079356964b2a192a047eb2.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Eval</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">2</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -548,16 +701,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-30881f9e036bb11b3d881d12949e5c20.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr</td>
             </tr>
               
@@ -578,6 +721,26 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-302a7dc991cdbeb66dcb69b760f8f71b.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/vendor-81785bfa31079356964b2a192a047eb2.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/</td>
             </tr>
               
@@ -588,7 +751,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">5</td>
+                <td width="20%">Instances</td><td width="80%">6</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -707,7 +870,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-fa2c04e6c634af5f1a0dd68320899498.css</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-0ffc59dd157207ae4d17b6136bdebeca.css</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -804,20 +967,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-30881f9e036bb11b3d881d12949e5c20.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">net/v1/AUTH_27c5a6d3d35841a5914c7fb9a8e96345/pix-images/badges/CleA_Num_certif</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/sitemap.xml</td>
             </tr>
               
@@ -827,6 +976,20 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">22PAR_pix_cac26b28c15971f8fda41f5a94b1b81647c7b5780582bb169467988b9233c757</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-302a7dc991cdbeb66dcb69b760f8f71b.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">net/v1/AUTH_27c5a6d3d35841a5914c7fb9a8e96345/pix-images/badges/CleA_Num_certif</td>
             </tr>
               
   
@@ -846,7 +1009,21 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">4</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/vendor-81785bfa31079356964b2a192a047eb2.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">5</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -900,63 +1077,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-30881f9e036bb11b3d881d12949e5c20.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">query</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-30881f9e036bb11b3d881d12949e5c20.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">later</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-30881f9e036bb11b3d881d12949e5c20.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">username</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-30881f9e036bb11b3d881d12949e5c20.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-30881f9e036bb11b3d881d12949e5c20.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/vendor-81785bfa31079356964b2a192a047eb2.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -970,7 +1091,105 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-30881f9e036bb11b3d881d12949e5c20.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-302a7dc991cdbeb66dcb69b760f8f71b.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-302a7dc991cdbeb66dcb69b760f8f71b.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">query</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-302a7dc991cdbeb66dcb69b760f8f71b.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">username</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/vendor-81785bfa31079356964b2a192a047eb2.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">TODO</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/vendor-81785bfa31079356964b2a192a047eb2.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/vendor-81785bfa31079356964b2a192a047eb2.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">username</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/vendor-81785bfa31079356964b2a192a047eb2.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">query</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/vendor-81785bfa31079356964b2a192a047eb2.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -984,7 +1203,91 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">6</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/vendor-81785bfa31079356964b2a192a047eb2.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">where</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-302a7dc991cdbeb66dcb69b760f8f71b.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">later</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-302a7dc991cdbeb66dcb69b760f8f71b.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">user</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/vendor-81785bfa31079356964b2a192a047eb2.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">later</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/vendor-81785bfa31079356964b2a192a047eb2.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">BUG</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-302a7dc991cdbeb66dcb69b760f8f71b.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">select</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">15</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -992,7 +1295,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>The following pattern was used: \bQUERY\b and was detected 6 times, the first in the element starting with: "var z=Ember.HTMLBars.template({id:"k/7FxJoO",block:'{"symbols":["badge","@model"],"statements":[[2,"\\n"],[10,"div"],[14,0,"skil", see evidence field for the suspicious comment/snippet.</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>The following pattern was used: \bSELECT\b and was detected 54 times, the first in the element starting with: "return-1},N="checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required", see evidence field for the suspicious comment/snippet.</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
@@ -1038,6 +1341,20 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/vendor-81785bfa31079356964b2a192a047eb2.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/</td>
             </tr>
               
@@ -1080,7 +1397,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">3</td>
+                <td width="20%">Instances</td><td width="80%">4</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1088,7 +1405,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>No links have been found while there are scripts, which is an indication that this is a modern web application.</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
@@ -1126,7 +1443,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/apple-touch-icon-pix_app.png</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/vendor-81785bfa31079356964b2a192a047eb2.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1134,27 +1451,27 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 41578</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/ember-cli-matomo-tag-manager/start-matomo-event-287c24c184abe16a29d1583c391e53b1.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 41581</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 0</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 0</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-0ffc59dd157207ae4d17b6136bdebeca.css</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1182,7 +1499,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-30881f9e036bb11b3d881d12949e5c20.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-302a7dc991cdbeb66dcb69b760f8f71b.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1190,7 +1507,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 39443</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 0</td>
             </tr>
               
   
@@ -1218,13 +1535,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 25808</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 0</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-fa2c04e6c634af5f1a0dd68320899498.css</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/apple-touch-icon-pix_app.png</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1232,7 +1549,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 39442</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 58550</td>
             </tr>
               
   
@@ -1266,7 +1583,21 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">10</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/ember-cli-matomo-tag-manager/start-matomo-event-287c24c184abe16a29d1583c391e53b1.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 58553</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">11</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1312,6 +1643,20 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/vendor-81785bfa31079356964b2a192a047eb2.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=315360000</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/robots.txt</td>
             </tr>
               
@@ -1326,7 +1671,21 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-30881f9e036bb11b3d881d12949e5c20.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-0ffc59dd157207ae4d17b6136bdebeca.css</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=315360000</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-302a7dc991cdbeb66dcb69b760f8f71b.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1368,20 +1727,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-fa2c04e6c634af5f1a0dd68320899498.css</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=315360000</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/images/interwind-5fe40c7fe159b0f34afe8360ab8ae303.gif</td>
             </tr>
               
@@ -1410,7 +1755,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">7</td>
+                <td width="20%">Instances</td><td width="80%">8</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1554,7 +1899,21 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">149344419</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">166200531</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/apple-touch-icon-pix_app.png</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">161496987</td>
             </tr>
               
   
@@ -1568,13 +1927,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">150302639</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">165902189</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1582,7 +1941,21 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">67745572</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">165902187</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-0ffc59dd157207ae4d17b6136bdebeca.css</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">315360000</td>
             </tr>
               
   
@@ -1596,35 +1969,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">149344417</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/robots.txt</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">84622199</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/vendor-0af7a581b4007708cb414fa845bec6b8.css</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">84622201</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">166200529</td>
             </tr>
               
   
@@ -1638,7 +1983,35 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">149344415</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">165902185</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/vendor-0af7a581b4007708cb414fa845bec6b8.css</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">71784521</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/ember-cli-matomo-tag-manager/start-matomo-event-287c24c184abe16a29d1583c391e53b1.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">163610867</td>
             </tr>
               
   
@@ -1658,7 +2031,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/apple-touch-icon-pix_app.png</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/robots.txt</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1666,7 +2039,21 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">149377621</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">64865135</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/assets/mon-pix-0ffc59dd157207ae4d17b6136bdebeca.css</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">64865137</td>
             </tr>
               
   
@@ -1680,41 +2067,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">150302631</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">166200524</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">150302637</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://app.pix.fr/ember-cli-matomo-tag-manager/start-matomo-event-287c24c184abe16a29d1583c391e53b1.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">149045865</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">12</td>
+                <td width="20%">Instances</td><td width="80%">13</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1722,7 +2081,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>149344419, which evaluates to: 1974-09-25 12:33:39</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>166200531, which evaluates to: 1975-04-08 14:48:51</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
