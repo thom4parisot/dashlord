@@ -21,13 +21,13 @@
 ###########################################################</span>
 
  Using &quot;OpenSSL 1.0.2-chacha (1.0.2k-dev)&quot; [~183 ciphers]
- on fv-az216-414:/home/testssl/bin/openssl.Linux.x86_64
+ on fv-az204-342:/home/testssl/bin/openssl.Linux.x86_64
  (built: &quot;Jan 18 17:12:17 2019&quot;, platform: &quot;linux-x86_64&quot;)
 
 
-<span style="color:white;background-color:black;"> Start 2021-05-18 00:58:58        --&gt;&gt; 185.94.140.194:443 (app.pix.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2021-05-19 00:55:45        --&gt;&gt; 185.94.140.195:443 (app.pix.fr) &lt;&lt;--</span>
 
- rDNS (185.94.140.194):  185-94-140-194.acorus.net.
+ rDNS (185.94.140.195):  185-94-140-195.acorus.net.
  Service detected:       HTTP
 
 
@@ -110,14 +110,14 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Server key size              </span>RSA 2048 bits (exponent is 65537)
 <span style="font-weight:bold;"> Server key usage             </span>Digital Signature, Key Encipherment
 <span style="font-weight:bold;"> Server extended key usage    </span>TLS Web Server Authentication, TLS Web Client Authentication
-<span style="font-weight:bold;"> Serial / Fingerprints        </span>048CF87985B9CBECE3C9FDA7B4B2C7DD95F9 / SHA1 33252FDBEE20FC767F056E09E8285E1AE5373E93
-                              SHA256 CBAA04E5AE71B6E9689A78A40B4F9B4527DFBB12F2E320558F195E83495AC863
-<span style="font-weight:bold;"> Common Name (CN)             </span><i>app.pix.fr </i>
-<span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>app.pix.fr </i>
-<span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (same w/o SNI)
+<span style="font-weight:bold;"> Serial / Fingerprints        </span>044410AE4AEEE8624C8C9A6D1F7EC6C4DF59 / SHA1 12936AE7209285244B79F1FB8F0BCCC576BC3432
+                              SHA256 E9B134C083E2C1807822C2665F303DB473F1ABE39416D482AE975D23DBE9EB70
+<span style="font-weight:bold;"> Common Name (CN)             </span><i>*.pix.fr </i>
+<span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>*.pix.fr </i>
+<span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN wildcard and CN wildcard</span> (same w/o SNI)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">48 &gt;= 30 days</span> (2021-04-06 12:30 --&gt; 2021-07-05 12:30)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">88 &gt;= 30 days</span> (2021-05-17 15:19 --&gt; 2021-08-15 15:19)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
@@ -125,9 +125,10 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> OCSP must staple extension   </span>--
 <span style="font-weight:bold;"> DNS CAA RR</span> (experimental)    <span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Certificate Transparency     </span><span style="color:#008817;">yes</span> (certificate extension)
-<span style="font-weight:bold;"> Certificates provided</span>        2
+<span style="font-weight:bold;"> Certificates provided</span>        3
 <span style="font-weight:bold;"> Issuer                       </span><i>R3</i> (<i>Let&apos;s Encrypt</i> from <i>US</i>)
-<span style="font-weight:bold;"> Intermediate cert validity   </span>#1: <span style="color:#008817;">ok &gt; 40 days</span> (2021-09-29 19:21). <i>R3</i> &lt;-- <i>DST Root CA X3</i>
+<span style="font-weight:bold;"> Intermediate cert validity   </span>#1: <span style="color:#008817;">ok &gt; 40 days</span> (2025-09-15 16:00). <i>R3</i> &lt;-- <i>ISRG Root X1</i>
+                              #2: <span style="color:#008817;">ok &gt; 40 days</span> (2024-09-30 18:14). <i>ISRG Root X1</i> &lt;-- <i>DST Root CA X3</i>
 <span style="font-weight:bold;"> Intermediate Bad OCSP</span> (exp.) <span style="color:#008817;">Ok</span>
 
 
@@ -135,7 +136,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
 <span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
-<span style="font-weight:bold;"> IPv4 address in header       </span><span style="color:#c05600;">bln-server: 172.26.174.128</span>
+<span style="font-weight:bold;"> IPv4 address in header       </span><span style="color:#c05600;">bln-server: 172.24.121.55</span>
                               (check if it&apos;s your IP address or e.g. a cluster IP)
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">365 days</span>=31536000 s<span style="color:#168092;">, just this domain</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
@@ -147,7 +148,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               X-XSS-Protection: 1
                               Referrer-Policy: origin-when-cross-origin
                               Cache-Control: no-cache
-<span style="font-weight:bold;"> Reverse Proxy banner         </span><span style="color:#8a7237;font-weight:bold;">X-Varnish</span>: <span style="color:#8a7237;">1</span><span style="color:#8a7237;">4</span><span style="color:#8a7237;">4</span><span style="color:#8a7237;">0</span><span style="color:#8a7237;">4</span><span style="color:#8a7237;">8</span><span style="color:#8a7237;">0</span><span style="color:#8a7237;">6</span><span style="color:#8a7237;">2</span>
+<span style="font-weight:bold;"> Reverse Proxy banner         </span><span style="color:#8a7237;font-weight:bold;">X-Varnish</span>: <span style="color:#8a7237;">1</span><span style="color:#8a7237;">4</span><span style="color:#8a7237;">0</span><span style="color:#8a7237;">8</span><span style="color:#8a7237;">7</span><span style="color:#8a7237;">6</span><span style="color:#8a7237;">9</span><span style="color:#8a7237;">6</span><span style="color:#8a7237;">9</span>
                               <span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> varnish (Varnish/<span style="color:#8a7237;">6</span>.<span style="color:#8a7237;">5</span>)
 
 
@@ -168,7 +169,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> FREAK</span> (CVE-2015-0204)                     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> DROWN</span> (CVE-2016-0800, CVE-2016-0703)      <span style="color:#008817;font-weight:bold;">not vulnerable on this host and port (OK)</span>
                                            make sure you don&apos;t use this certificate elsewhere with SSLv2 enabled services
-                                           <a href="https://censys.io/ipv4?q=CBAA04E5AE71B6E9689A78A40B4F9B4527DFBB12F2E320558F195E83495AC863" style="color:black;text-decoration:none;">https://censys.io/ipv4?q=CBAA04E5AE71B6E9689A78A40B4F9B4527DFBB12F2E320558F195E83495AC863</a> could help you to find out
+                                           <a href="https://censys.io/ipv4?q=E9B134C083E2C1807822C2665F303DB473F1ABE39416D482AE975D23DBE9EB70" style="color:black;text-decoration:none;">https://censys.io/ipv4?q=E9B134C083E2C1807822C2665F303DB473F1ABE39416D482AE975D23DBE9EB70</a> could help you to find out
 <span style="font-weight:bold;"> LOGJAM</span> (CVE-2015-4000), experimental      <span style="color:#008817;">not vulnerable (OK):</span> no DH EXPORT ciphers, no common prime detected
 <span style="font-weight:bold;"> BEAST</span> (CVE-2011-3389)                     <span style="color:#008817;">not vulnerable (OK)</span>, no SSL3 or TLS1
 <span style="font-weight:bold;"> LUCKY13</span> (CVE-2013-0169), experimental     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
@@ -228,7 +229,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>93
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2021-05-18 01:01:07 [ 131s] --&gt;&gt; 185.94.140.194:443 (app.pix.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2021-05-19 00:57:30 [ 107s] --&gt;&gt; 185.94.140.195:443 (app.pix.fr) &lt;&lt;--</span>
 
 
 </pre>
