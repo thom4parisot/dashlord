@@ -53,8 +53,8 @@
 <div class="jumbotron">
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">nmap --privileged -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln beta.gouv.fr</pre>
-<p class="lead">Sat May 29 01:34:23 2021 – Sat May 29 01:34:47 2021<br>1 hosts scanned.
+<pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln beta.gouv.fr</pre>
+<p class="lead">Sun May 30 01:38:06 2021 – Sun May 30 01:38:30 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -124,14 +124,14 @@
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   FourOhFourRequest: 
     HTTP/1.0 404 Not Found
-    Date: Sat, 29 May 2021 01:34:35 GMT
+    Date: Sun, 30 May 2021 01:38:18 GMT
     Content-Length: 0
     Age: 0
     Server: Netlify
-    X-NF-Request-ID: 2ec7c7cf-65fa-4dc5-b4c5-91730ff03979-91361462
-  GenericLines: 
+    X-NF-Request-ID: 67decbd8-5bbb-4189-8285-1d8ddaed60dc-355649335
+  GenericLines, RTSPRequest, X11Probe: 
     HTTP/1.0 400 Invalid HTTP Request
-    Date: Sat, 29 May 2021 01:34:35 GMT
+    Date: Sun, 30 May 2021 01:38:18 GMT
     Server: Netlify
     Cache-Control: no-store
     Content-Type: text/html
@@ -152,21 +152,78 @@
     &lt;/BODY&gt;
   GetRequest: 
     HTTP/1.0 404 Not Found
-    Date: Sat, 29 May 2021 01:34:34 GMT
+    Date: Sun, 30 May 2021 01:38:18 GMT
     Content-Length: 0
     Age: 0
     Server: Netlify
-    X-NF-Request-ID: 2ec7c7cf-65fa-4dc5-b4c5-91730ff03979-91361400
+    X-NF-Request-ID: 67decbd8-5bbb-4189-8285-1d8ddaed60dc-355649252
   HTTPOptions: 
     HTTP/1.0 404 Not Found
-    Date: Sat, 29 May 2021 01:34:34 GMT
+    Date: Sun, 30 May 2021 01:38:18 GMT
     Content-Length: 0
     Age: 0
     Server: Netlify
-    X-NF-Request-ID: 2ec7c7cf-65fa-4dc5-b4c5-91730ff03979-91361406
-  RTSPRequest, X11Probe: 
+    X-NF-Request-ID: 67decbd8-5bbb-4189-8285-1d8ddaed60dc-355649268</pre>
+<h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
+</td></tr>
+<tr class="success">
+<td title="Port">443</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">https</td>
+<td title="Product">Netlify</td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  FourOhFourRequest: 
+    HTTP/1.0 404 Not Found
+    Date: Sun, 30 May 2021 01:38:24 GMT
+    Content-Length: 0
+    Age: 0
+    Server: Netlify
+    X-NF-Request-ID: 67decbd8-5bbb-4189-8285-1d8ddaed60dc-355649927
+  GenericLines, tor-versions: 
     HTTP/1.0 400 Invalid HTTP Request
-    Date: Sat, 29 May 2021 01:34:34 GMT
+    Date: Sun, 30 May 2021 01:38:24 GMT
+    Server: Netlify
+    Cache-Control: no-store
+    Content-Type: text/html
+    Content-Language: en
+    X-NF-ATS-Version: 3438f24
+    Content-Length: 220
+    &lt;HTML&gt;
+    &lt;HEAD&gt;
+    &lt;TITLE&gt;Bad Request&lt;/TITLE&gt;
+    &lt;/HEAD&gt;
+    &lt;BODY BGCOLOR="white" FGCOLOR="black"&gt;
+    &lt;H1&gt;Bad Request&lt;/H1&gt;
+    &lt;HR&gt;
+    &lt;FONT FACE="Helvetica,Arial"&gt;&lt;B&gt;
+    Description: Could not process this request. 
+    &lt;/B&gt;&lt;/FONT&gt;
+    &lt;HR&gt;
+    &lt;/BODY&gt;
+  GetRequest: 
+    HTTP/1.0 404 Not Found
+    Date: Sun, 30 May 2021 01:38:24 GMT
+    Content-Length: 0
+    Age: 0
+    Server: Netlify
+    X-NF-Request-ID: 67decbd8-5bbb-4189-8285-1d8ddaed60dc-355649880
+  HTTPOptions: 
+    HTTP/1.0 404 Not Found
+    Date: Sun, 30 May 2021 01:38:24 GMT
+    Content-Length: 0
+    Age: 0
+    Server: Netlify
+    X-NF-Request-ID: 67decbd8-5bbb-4189-8285-1d8ddaed60dc-355649911
+  RTSPRequest: 
+    HTTP/1.0 400 Invalid HTTP Request
+    Date: Sun, 30 May 2021 01:38:25 GMT
     Server: Netlify
     Cache-Control: no-store
     Content-Type: text/html
@@ -185,63 +242,6 @@
     &lt;/B&gt;&lt;/FONT&gt;
     &lt;HR&gt;
     &lt;/BODY&gt;</pre>
-<h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
-</td></tr>
-<tr class="success">
-<td title="Port">443</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">https</td>
-<td title="Product">Netlify</td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
-</tr>
-<tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  FourOhFourRequest: 
-    HTTP/1.0 404 Not Found
-    Date: Sat, 29 May 2021 01:34:41 GMT
-    Content-Length: 0
-    Age: 0
-    Server: Netlify
-    X-NF-Request-ID: 2ec7c7cf-65fa-4dc5-b4c5-91730ff03979-91362203
-  GenericLines, RTSPRequest, tor-versions: 
-    HTTP/1.0 400 Invalid HTTP Request
-    Date: Sat, 29 May 2021 01:34:41 GMT
-    Server: Netlify
-    Cache-Control: no-store
-    Content-Type: text/html
-    Content-Language: en
-    X-NF-ATS-Version: 3438f24
-    Content-Length: 220
-    &lt;HTML&gt;
-    &lt;HEAD&gt;
-    &lt;TITLE&gt;Bad Request&lt;/TITLE&gt;
-    &lt;/HEAD&gt;
-    &lt;BODY BGCOLOR="white" FGCOLOR="black"&gt;
-    &lt;H1&gt;Bad Request&lt;/H1&gt;
-    &lt;HR&gt;
-    &lt;FONT FACE="Helvetica,Arial"&gt;&lt;B&gt;
-    Description: Could not process this request. 
-    &lt;/B&gt;&lt;/FONT&gt;
-    &lt;HR&gt;
-    &lt;/BODY&gt;
-  GetRequest: 
-    HTTP/1.0 404 Not Found
-    Date: Sat, 29 May 2021 01:34:40 GMT
-    Content-Length: 0
-    Age: 0
-    Server: Netlify
-    X-NF-Request-ID: 2ec7c7cf-65fa-4dc5-b4c5-91730ff03979-91362172
-  HTTPOptions: 
-    HTTP/1.0 404 Not Found
-    Date: Sat, 29 May 2021 01:34:40 GMT
-    Content-Length: 0
-    Age: 0
-    Server: Netlify
-    X-NF-Request-ID: 2ec7c7cf-65fa-4dc5-b4c5-91730ff03979-91362192</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
