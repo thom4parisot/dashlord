@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln blog.beta.gouv.fr</pre>
-<p class="lead">Sun May 30 01:44:24 2021 – Sun May 30 01:44:51 2021<br>1 hosts scanned.
+<p class="lead">Mon May 31 01:54:45 2021 – Mon May 31 01:55:11 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,9 +76,9 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>138.68.7.48</td>
+<td>68.183.29.183</td>
 <td>blog.beta.gouv.fr</td>
-<td>2</td>
+<td>3</td>
 <td>0</td>
 </tr></tbody>
 </table></div>
@@ -91,8 +91,8 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#138-68-7-48"><h3 class="panel-title">138.68.7.48 - blog.beta.gouv.fr</h3></div>
-<div class="panel-body collapse in" id="138-68-7-48">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#68-183-29-183"><h3 class="panel-title">68.183.29.183 - blog.beta.gouv.fr</h3></div>
+<div class="panel-body collapse in" id="68-183-29-183">
 <h4>Hostnames</h4>
 <ul><li>blog.beta.gouv.fr (user)</li></ul>
 <h4>Ports</h4>
@@ -119,26 +119,26 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, RPCCheck, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+  DNSStatusRequestTCP, Help, Kerberos, RPCCheck, SMBProgNeg: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 30 May 2021 01:44:40 GMT
-  FourOhFourRequest, GetRequest: 
+    date: Mon, 31 May 2021 01:55:01 GMT
+  DNSVersionBindReqTCP, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Mon, 31 May 2021 01:55:02 GMT
+  FourOhFourRequest, HTTPOptions: 
     HTTP/1.0 400 Bad Request
-    date: Sun, 30 May 2021 01:44:35 GMT
+    date: Mon, 31 May 2021 01:54:56 GMT
     Missing host header
-  HTTPOptions: 
+  GetRequest: 
     HTTP/1.0 400 Bad Request
-    date: Sun, 30 May 2021 01:44:34 GMT
+    date: Mon, 31 May 2021 01:54:57 GMT
     Missing host header
-  RTSPRequest: 
+  RTSPRequest, X11Probe: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 30 May 2021 01:44:34 GMT
-  X11Probe: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 30 May 2021 01:44:35 GMT</pre>
+    date: Mon, 31 May 2021 01:54:56 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -154,26 +154,26 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP: 
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 30 May 2021 01:44:46 GMT
-  DNSVersionBindReqTCP, Help, Kerberos, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 30 May 2021 01:44:47 GMT
-  FourOhFourRequest, GetRequest, HTTPOptions: 
+    date: Mon, 31 May 2021 01:55:07 GMT
+  FourOhFourRequest, HTTPOptions: 
     HTTP/1.0 400 Bad Request
-    date: Sun, 30 May 2021 01:44:41 GMT
+    date: Mon, 31 May 2021 01:55:02 GMT
     Missing host header
-  SMBProgNeg: 
+  GetRequest: 
+    HTTP/1.0 400 Bad Request
+    date: Mon, 31 May 2021 01:55:03 GMT
+    Missing host header
+  Help, Kerberos, RPCCheck, SMBProgNeg, TLSSessionReq: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 30 May 2021 01:44:48 GMT
+    date: Mon, 31 May 2021 01:55:08 GMT
   tor-versions: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 30 May 2021 01:44:41 GMT</pre>
+    date: Mon, 31 May 2021 01:55:03 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -186,6 +186,64 @@
 <td></td>
 <td></td>
 </tr>
+<tr class="success">
+<td title="Port">9080</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">glrpc</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  GenericLines, RPCCheck, RTSPRequest: 
+    HTTP/1.0 400 Invalid HTTP Request
+    Date: Mon, 31 May 2021 01:54:57 GMT
+    Server: Netlify
+    Cache-Control: no-store
+    Content-Type: text/html
+    Content-Language: en
+    X-NF-ATS-Version: 3438f24
+    Content-Length: 220
+    &lt;HTML&gt;
+    &lt;HEAD&gt;
+    &lt;TITLE&gt;Bad Request&lt;/TITLE&gt;
+    &lt;/HEAD&gt;
+    &lt;BODY BGCOLOR="white" FGCOLOR="black"&gt;
+    &lt;H1&gt;Bad Request&lt;/H1&gt;
+    &lt;HR&gt;
+    &lt;FONT FACE="Helvetica,Arial"&gt;&lt;B&gt;
+    Description: Could not process this request. 
+    &lt;/B&gt;&lt;/FONT&gt;
+    &lt;HR&gt;
+    &lt;/BODY&gt;
+  GetRequest: 
+    HTTP/1.0 404 Not Found
+    X-Nf-Block-Reason: 
+    Date: Mon, 31 May 2021 01:54:57 GMT
+    Content-Length: 0
+    Age: 0
+    Server: Netlify
+    X-NF-ATS-Version: 3438f24
+    X-NF-Cache-Result: miss
+    X-NF-Country: US
+    X-NF-Language: 
+    X-NF-Request-ID: 8ebb3418-4a2f-47ea-88ab-1431c4c81660-12028221
+  HTTPOptions: 
+    HTTP/1.0 404 Not Found
+    X-Nf-Block-Reason: 
+    Date: Mon, 31 May 2021 01:54:57 GMT
+    Content-Length: 0
+    Age: 0
+    Server: Netlify
+    X-NF-ATS-Version: 3438f24
+    X-NF-Cache-Result: skipped
+    X-NF-Country: US
+    X-NF-Language: 
+    X-NF-Request-ID: 8ebb3418-4a2f-47ea-88ab-1431c4c81660-12028242</pre>
+</td></tr>
 </tbody>
 </table></div>
 </div>
@@ -204,7 +262,7 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>138.68.7.48 - blog.beta.gouv.fr</td>
+<td>68.183.29.183 - blog.beta.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
@@ -214,11 +272,21 @@
 <td></td>
 </tr>
 <tr>
-<td>138.68.7.48 - blog.beta.gouv.fr</td>
+<td>68.183.29.183 - blog.beta.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
 <td>https</td>
 <td>Netlify</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>68.183.29.183 - blog.beta.gouv.fr</td>
+<td>9080</td>
+<td>tcp</td>
+<td>glrpc</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
