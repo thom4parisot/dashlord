@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln beta.gouv.fr</pre>
-<p class="lead">Sun Jun  6 11:23:00 2021 – Sun Jun  6 11:23:24 2021<br>1 hosts scanned.
+<p class="lead">Mon Jun  7 01:23:09 2021 – Mon Jun  7 01:23:33 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -124,14 +124,14 @@
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   FourOhFourRequest: 
     HTTP/1.0 404 Not Found
-    Date: Sun, 06 Jun 2021 11:23:12 GMT
+    Date: Mon, 07 Jun 2021 01:23:21 GMT
     Content-Length: 0
     Age: 0
     Server: Netlify
-    X-NF-Request-ID: 565af2d6-daec-419c-8691-2325e5289a47-39750856
-  GenericLines, X11Probe: 
+    X-NF-Request-ID: 5476a80c-3f0b-4fe0-b83d-a8544801b6b1-50579496
+  GenericLines, RTSPRequest, X11Probe: 
     HTTP/1.0 400 Invalid HTTP Request
-    Date: Sun, 06 Jun 2021 11:23:12 GMT
+    Date: Mon, 07 Jun 2021 01:23:21 GMT
     Server: Netlify
     Cache-Control: no-store
     Content-Type: text/html
@@ -152,21 +152,78 @@
     &lt;/BODY&gt;
   GetRequest: 
     HTTP/1.0 404 Not Found
-    Date: Sun, 06 Jun 2021 11:23:11 GMT
+    Date: Mon, 07 Jun 2021 01:23:21 GMT
     Content-Length: 0
     Age: 0
     Server: Netlify
-    X-NF-Request-ID: 565af2d6-daec-419c-8691-2325e5289a47-39750788
+    X-NF-Request-ID: 5476a80c-3f0b-4fe0-b83d-a8544801b6b1-50579456
   HTTPOptions: 
     HTTP/1.0 404 Not Found
-    Date: Sun, 06 Jun 2021 11:23:11 GMT
+    Date: Mon, 07 Jun 2021 01:23:21 GMT
     Content-Length: 0
     Age: 0
     Server: Netlify
-    X-NF-Request-ID: 565af2d6-daec-419c-8691-2325e5289a47-39750810
-  RTSPRequest: 
+    X-NF-Request-ID: 5476a80c-3f0b-4fe0-b83d-a8544801b6b1-50579464</pre>
+<h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
+</td></tr>
+<tr class="success">
+<td title="Port">443</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">https</td>
+<td title="Product">Netlify</td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  FourOhFourRequest: 
+    HTTP/1.0 404 Not Found
+    Date: Mon, 07 Jun 2021 01:23:27 GMT
+    Content-Length: 0
+    Age: 0
+    Server: Netlify
+    X-NF-Request-ID: 5476a80c-3f0b-4fe0-b83d-a8544801b6b1-50580685
+  GenericLines, RTSPRequest: 
     HTTP/1.0 400 Invalid HTTP Request
-    Date: Sun, 06 Jun 2021 11:23:11 GMT
+    Date: Mon, 07 Jun 2021 01:23:28 GMT
+    Server: Netlify
+    Cache-Control: no-store
+    Content-Type: text/html
+    Content-Language: en
+    X-NF-ATS-Version: 3415b6b
+    Content-Length: 220
+    &lt;HTML&gt;
+    &lt;HEAD&gt;
+    &lt;TITLE&gt;Bad Request&lt;/TITLE&gt;
+    &lt;/HEAD&gt;
+    &lt;BODY BGCOLOR="white" FGCOLOR="black"&gt;
+    &lt;H1&gt;Bad Request&lt;/H1&gt;
+    &lt;HR&gt;
+    &lt;FONT FACE="Helvetica,Arial"&gt;&lt;B&gt;
+    Description: Could not process this request. 
+    &lt;/B&gt;&lt;/FONT&gt;
+    &lt;HR&gt;
+    &lt;/BODY&gt;
+  GetRequest: 
+    HTTP/1.0 404 Not Found
+    Date: Mon, 07 Jun 2021 01:23:27 GMT
+    Content-Length: 0
+    Age: 0
+    Server: Netlify
+    X-NF-Request-ID: 5476a80c-3f0b-4fe0-b83d-a8544801b6b1-50580633
+  HTTPOptions: 
+    HTTP/1.0 404 Not Found
+    Date: Mon, 07 Jun 2021 01:23:27 GMT
+    Content-Length: 0
+    Age: 0
+    Server: Netlify
+    X-NF-Request-ID: 5476a80c-3f0b-4fe0-b83d-a8544801b6b1-50580666
+  tor-versions: 
+    HTTP/1.0 400 Invalid HTTP Request
+    Date: Mon, 07 Jun 2021 01:23:27 GMT
     Server: Netlify
     Cache-Control: no-store
     Content-Type: text/html
@@ -185,63 +242,6 @@
     &lt;/B&gt;&lt;/FONT&gt;
     &lt;HR&gt;
     &lt;/BODY&gt;</pre>
-<h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
-</td></tr>
-<tr class="success">
-<td title="Port">443</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">https</td>
-<td title="Product">Netlify</td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
-</tr>
-<tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  FourOhFourRequest: 
-    HTTP/1.0 404 Not Found
-    Date: Sun, 06 Jun 2021 11:23:18 GMT
-    Content-Length: 0
-    Age: 0
-    Server: Netlify
-    X-NF-Request-ID: 565af2d6-daec-419c-8691-2325e5289a47-39751414
-  GenericLines, RTSPRequest, tor-versions: 
-    HTTP/1.0 400 Invalid HTTP Request
-    Date: Sun, 06 Jun 2021 11:23:18 GMT
-    Server: Netlify
-    Cache-Control: no-store
-    Content-Type: text/html
-    Content-Language: en
-    X-NF-ATS-Version: 3415b6b
-    Content-Length: 220
-    &lt;HTML&gt;
-    &lt;HEAD&gt;
-    &lt;TITLE&gt;Bad Request&lt;/TITLE&gt;
-    &lt;/HEAD&gt;
-    &lt;BODY BGCOLOR="white" FGCOLOR="black"&gt;
-    &lt;H1&gt;Bad Request&lt;/H1&gt;
-    &lt;HR&gt;
-    &lt;FONT FACE="Helvetica,Arial"&gt;&lt;B&gt;
-    Description: Could not process this request. 
-    &lt;/B&gt;&lt;/FONT&gt;
-    &lt;HR&gt;
-    &lt;/BODY&gt;
-  GetRequest: 
-    HTTP/1.0 404 Not Found
-    Date: Sun, 06 Jun 2021 11:23:17 GMT
-    Content-Length: 0
-    Age: 0
-    Server: Netlify
-    X-NF-Request-ID: 565af2d6-daec-419c-8691-2325e5289a47-39751379
-  HTTPOptions: 
-    HTTP/1.0 404 Not Found
-    Date: Sun, 06 Jun 2021 11:23:18 GMT
-    Content-Length: 0
-    Age: 0
-    Server: Netlify
-    X-NF-Request-ID: 565af2d6-daec-419c-8691-2325e5289a47-39751396</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
