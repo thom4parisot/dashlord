@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln anais.beta.gouv.fr</pre>
-<p class="lead">Mon Jun  7 05:01:09 2021 – Mon Jun  7 05:01:30 2021<br>1 hosts scanned.
+<p class="lead">Tue Jun  8 05:18:56 2021 – Tue Jun  8 05:19:15 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -78,7 +78,7 @@
 <td><span class="label label-success">up</span></td>
 <td>51.91.221.38</td>
 <td>anais.beta.gouv.fr</td>
-<td>11</td>
+<td>7</td>
 <td>0</td>
 </tr></tbody>
 </table></div>
@@ -177,25 +177,15 @@
 <td title="Extra Info">Go-IPFS json-rpc or InfluxDB API</td>
 </tr>
 <tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:protocol_labs:go-ipfs">cpe:/a:protocol_labs:go-ipfs</a></td></tr>
-<tr class="success">
-<td title="Port">111</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">rpcbind</td>
-<td title="Product"></td>
-<td title="Version">2-4</td>
-<td title="Extra Info">RPC #100000</td>
+<tr class="warning">
+<td>111</td>
+<td>tcp</td>
+<td>filtered<br>no-response</td>
+<td>rpcbind</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>rpcinfo</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  program version    port/proto  service
-  100000  2,3,4        111/tcp   rpcbind
-  100000  2,3,4        111/udp   rpcbind
-  100000  3,4          111/tcp6  rpcbind
-  100000  3,4          111/udp6  rpcbind
-</pre>
-</td></tr>
 <tr class="success">
 <td title="Port">443</td>
 <td title="Protocol">tcp</td>
@@ -350,39 +340,15 @@
     	EDB-ID:46193	0.0	https://vulners.com/exploitdb/EDB-ID:46193	*EXPLOIT*
     	1337DAY-ID-32009	0.0	https://vulners.com/zdt/1337DAY-ID-32009	*EXPLOIT*</pre>
 </td></tr>
-<tr class="success">
-<td title="Port">3128</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http</td>
-<td title="Product">Proxmox Virtual Environment REST API</td>
-<td title="Version">3.0</td>
-<td title="Extra Info"></td>
+<tr class="warning">
+<td>3128</td>
+<td>tcp</td>
+<td>filtered<br>no-response</td>
+<td>squid-http</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:proxmox:proxmox_virtual_environment:3.0">cpe:/a:proxmox:proxmox_virtual_environment:3.0</a><h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">pve-api-daemon/3.0</pre>
-</td></tr>
-<tr class="success">
-<td title="Port">8080</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http</td>
-<td title="Product">Golang net/http server</td>
-<td title="Version"></td>
-<td title="Extra Info">Go-IPFS json-rpc or InfluxDB API</td>
-</tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:protocol_labs:go-ipfs">cpe:/a:protocol_labs:go-ipfs</a></td></tr>
-<tr class="success">
-<td title="Port">9100</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">jetdirect</td>
-<td title="Product"></td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
-</tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
 </tbody>
 </table></div>
 </div>
@@ -432,16 +398,6 @@
 </tr>
 <tr>
 <td>51.91.221.38 - anais.beta.gouv.fr</td>
-<td>111</td>
-<td>tcp</td>
-<td>rpcbind</td>
-<td></td>
-<td>2-4</td>
-<td></td>
-<td>RPC #100000</td>
-</tr>
-<tr>
-<td>51.91.221.38 - anais.beta.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
 <td>http</td>
@@ -479,36 +435,6 @@
 <td>7.9p1 Debian 10+deb10u2</td>
 <td>cpe:/a:openbsd:openssh:7.9p1</td>
 <td>protocol 2.0</td>
-</tr>
-<tr>
-<td>51.91.221.38 - anais.beta.gouv.fr</td>
-<td>3128</td>
-<td>tcp</td>
-<td>http</td>
-<td>Proxmox Virtual Environment REST API</td>
-<td>3.0</td>
-<td>cpe:/a:proxmox:proxmox_virtual_environment:3.0</td>
-<td></td>
-</tr>
-<tr>
-<td>51.91.221.38 - anais.beta.gouv.fr</td>
-<td>8080</td>
-<td>tcp</td>
-<td>http</td>
-<td>Golang net/http server</td>
-<td></td>
-<td>cpe:/a:protocol_labs:go-ipfs</td>
-<td>Go-IPFS json-rpc or InfluxDB API</td>
-</tr>
-<tr>
-<td>51.91.221.38 - anais.beta.gouv.fr</td>
-<td>9100</td>
-<td>tcp</td>
-<td>jetdirect</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </tbody>
 </table></div>
