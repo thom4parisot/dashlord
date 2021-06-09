@@ -81,7 +81,7 @@ ZAP Scanning Report
         <p>
 </p>
         <h3 class="left-header">Summary of Alerts</h3>
-        <h3 class="time-stamp">Generated on Tue, 8 Jun 2021 02:42:47</h3>
+        <h3 class="time-stamp">Generated on Wed, 9 Jun 2021 02:19:04</h3>
         <table width="45%" class="summary">
             <tr bgcolor="#666666">
                 <th width="45%" height="24">Risk 
@@ -95,7 +95,7 @@ ZAP Scanning Report
                 <td><a href="#medium">Medium</a></td><td align="center">3</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#low">Low</a></td><td align="center">6</td>
+                <td><a href="#low">Low</a></td><td align="center">9</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td><a href="#info">Informational</a></td><td align="center">3</td>
@@ -115,6 +115,15 @@ ZAP Scanning Report
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>X-Frame-Options Header Not Set</td><td align="center">Medium</td><td align="center">1</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Cookie No HttpOnly Flag</td><td align="center">Low</td><td align="center">1</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Cookie Without SameSite Attribute</td><td align="center">Low</td><td align="center">1</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Cookie Without Secure Flag</td><td align="center">Low</td><td align="center">1</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Cross-Domain JavaScript Source File Inclusion</td><td align="center">Low</td><td align="center">1</td>
@@ -340,6 +349,201 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%">WASC Id</td><td width="80%">15</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Cookie No HttpOnly Flag</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>A cookie has been set without the HttpOnly flag, which means that the cookie can be accessed by JavaScript. If a malicious script can be run on this page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://errial.georisques.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">TS0198706e</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Set-Cookie: TS0198706e</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">1</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Ensure that the HttpOnly flag is set for all cookies.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://owasp.org/www-community/HttpOnly</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">16</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Cookie Without SameSite Attribute</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://errial.georisques.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">TS0198706e</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Set-Cookie: TS0198706e</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">1</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">16</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Cookie Without Secure Flag</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>A cookie has been set without the secure flag, which means that the cookie can be accessed via unencrypted connections.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://errial.georisques.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">TS0198706e</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Set-Cookie: TS0198706e</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">1</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Whenever a cookie contains sensitive information or is a session token, then it should always be passed using an encrypted channel. Ensure that the secure flag is set for cookies containing such sensitive information.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">614</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
