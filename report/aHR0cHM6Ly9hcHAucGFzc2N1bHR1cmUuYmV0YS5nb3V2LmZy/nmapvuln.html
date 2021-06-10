@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln app.passculture.beta.gouv.fr</pre>
-<p class="lead">Wed Jun  9 03:12:34 2021 – Wed Jun  9 03:12:59 2021<br>1 hosts scanned.
+<p class="lead">Thu Jun 10 03:18:15 2021 – Thu Jun 10 03:18:44 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,7 +76,7 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>54.205.240.192</td>
+<td>52.73.87.228</td>
 <td>app.passculture.beta.gouv.fr</td>
 <td>2</td>
 <td>0</td>
@@ -91,12 +91,12 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#54-205-240-192"><h3 class="panel-title">54.205.240.192 - app.passculture.beta.gouv.fr</h3></div>
-<div class="panel-body collapse in" id="54-205-240-192">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#52-73-87-228"><h3 class="panel-title">52.73.87.228 - app.passculture.beta.gouv.fr</h3></div>
+<div class="panel-body collapse in" id="52-73-87-228">
 <h4>Hostnames</h4>
 <ul>
 <li>app.passculture.beta.gouv.fr (user)</li>
-<li>ec2-54-205-240-192.compute-1.amazonaws.com (PTR)</li>
+<li>ec2-52-73-87-228.compute-1.amazonaws.com (PTR)</li>
 </ul>
 <h4>Ports</h4>
 <div class="table-responsive"><table class="table table-bordered">
@@ -122,30 +122,22 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, Kerberos, SMBProgNeg, TLSSessionReq, TerminalServerCookie: 
+  DNSStatusRequestTCP, Help, RPCCheck, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Wed, 09 Jun 2021 03:12:51 GMT
-  DNSVersionBindReqTCP, Help, RPCCheck, SSLSessionReq: 
+    date: Thu, 10 Jun 2021 03:18:30 GMT
+  DNSVersionBindReqTCP, Kerberos, SMBProgNeg, SSLSessionReq, TLSSessionReq: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Wed, 09 Jun 2021 03:12:50 GMT
-  FourOhFourRequest, HTTPOptions: 
+    date: Thu, 10 Jun 2021 03:18:31 GMT
+  FourOhFourRequest, GetRequest, HTTPOptions: 
     HTTP/1.0 400 Bad Request
-    date: Wed, 09 Jun 2021 03:12:46 GMT
+    date: Thu, 10 Jun 2021 03:18:25 GMT
     Missing host header
-  GetRequest: 
-    HTTP/1.0 400 Bad Request
-    date: Wed, 09 Jun 2021 03:12:45 GMT
-    Missing host header
-  RTSPRequest: 
+  RTSPRequest, X11Probe: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Wed, 09 Jun 2021 03:12:46 GMT
-  X11Probe: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Wed, 09 Jun 2021 03:12:45 GMT</pre>
+    date: Thu, 10 Jun 2021 03:18:25 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -161,22 +153,30 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, Kerberos, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+  DNSStatusRequestTCP, Help, RPCCheck, RTSPRequest: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Wed, 09 Jun 2021 03:12:57 GMT
-  FourOhFourRequest, GetRequest, HTTPOptions: 
+    date: Thu, 10 Jun 2021 03:18:37 GMT
+  DNSVersionBindReqTCP, SMBProgNeg, SSLSessionReq, TerminalServerCookie: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Thu, 10 Jun 2021 03:18:38 GMT
+  FourOhFourRequest: 
     HTTP/1.0 400 Bad Request
-    date: Wed, 09 Jun 2021 03:12:51 GMT
+    date: Thu, 10 Jun 2021 03:18:32 GMT
     Missing host header
-  Help, RPCCheck, RTSPRequest, SMBProgNeg: 
+  GetRequest, HTTPOptions: 
+    HTTP/1.0 400 Bad Request
+    date: Thu, 10 Jun 2021 03:18:31 GMT
+    Missing host header
+  Kerberos, TLSSessionReq: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Wed, 09 Jun 2021 03:12:56 GMT
+    date: Thu, 10 Jun 2021 03:18:39 GMT
   tor-versions: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Wed, 09 Jun 2021 03:12:52 GMT</pre>
+    date: Thu, 10 Jun 2021 03:18:32 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -207,7 +207,7 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>54.205.240.192 - app.passculture.beta.gouv.fr</td>
+<td>52.73.87.228 - app.passculture.beta.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
@@ -217,7 +217,7 @@
 <td></td>
 </tr>
 <tr>
-<td>54.205.240.192 - app.passculture.beta.gouv.fr</td>
+<td>52.73.87.228 - app.passculture.beta.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
 <td>https</td>
