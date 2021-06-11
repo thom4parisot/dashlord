@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln blog.beta.gouv.fr</pre>
-<p class="lead">Thu Jun 10 01:18:00 2021 – Thu Jun 10 01:18:24 2021<br>1 hosts scanned.
+<p class="lead">Fri Jun 11 01:07:59 2021 – Fri Jun 11 01:08:23 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,9 +76,9 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>52.73.153.209</td>
+<td>34.194.149.67</td>
 <td>blog.beta.gouv.fr</td>
-<td>2</td>
+<td>3</td>
 <td>0</td>
 </tr></tbody>
 </table></div>
@@ -91,12 +91,12 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#52-73-153-209"><h3 class="panel-title">52.73.153.209 - blog.beta.gouv.fr</h3></div>
-<div class="panel-body collapse in" id="52-73-153-209">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#34-194-149-67"><h3 class="panel-title">34.194.149.67 - blog.beta.gouv.fr</h3></div>
+<div class="panel-body collapse in" id="34-194-149-67">
 <h4>Hostnames</h4>
 <ul>
 <li>blog.beta.gouv.fr (user)</li>
-<li>ec2-52-73-153-209.compute-1.amazonaws.com (PTR)</li>
+<li>ec2-34-194-149-67.compute-1.amazonaws.com (PTR)</li>
 </ul>
 <h4>Ports</h4>
 <div class="table-responsive"><table class="table table-bordered">
@@ -125,23 +125,15 @@
   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, RPCCheck, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Thu, 10 Jun 2021 01:18:15 GMT
-  FourOhFourRequest: 
+    date: Fri, 11 Jun 2021 01:08:15 GMT
+  FourOhFourRequest, GetRequest, HTTPOptions: 
     HTTP/1.0 400 Bad Request
-    date: Thu, 10 Jun 2021 01:18:10 GMT
+    date: Fri, 11 Jun 2021 01:08:10 GMT
     Missing host header
-  GetRequest, HTTPOptions: 
-    HTTP/1.0 400 Bad Request
-    date: Thu, 10 Jun 2021 01:18:11 GMT
-    Missing host header
-  RTSPRequest: 
+  RTSPRequest, X11Probe: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Thu, 10 Jun 2021 01:18:11 GMT
-  X11Probe: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Thu, 10 Jun 2021 01:18:10 GMT</pre>
+    date: Fri, 11 Jun 2021 01:08:10 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -157,22 +149,22 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck, RTSPRequest, SMBProgNeg, TLSSessionReq, TerminalServerCookie: 
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, RPCCheck, RTSPRequest, SMBProgNeg, SSLSessionReq: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Thu, 10 Jun 2021 01:18:22 GMT
+    date: Fri, 11 Jun 2021 01:08:21 GMT
   FourOhFourRequest, GetRequest, HTTPOptions: 
     HTTP/1.0 400 Bad Request
-    date: Thu, 10 Jun 2021 01:18:16 GMT
+    date: Fri, 11 Jun 2021 01:08:16 GMT
     Missing host header
-  Help, Kerberos, SSLSessionReq: 
+  TLSSessionReq, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Thu, 10 Jun 2021 01:18:21 GMT
+    date: Fri, 11 Jun 2021 01:08:22 GMT
   tor-versions: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Thu, 10 Jun 2021 01:18:16 GMT</pre>
+    date: Fri, 11 Jun 2021 01:08:16 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -185,6 +177,62 @@
 <td></td>
 <td></td>
 </tr>
+<tr class="success">
+<td title="Port">9080</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">glrpc</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  GenericLines, RPCCheck, RTSPRequest: 
+    HTTP/1.0 400 Invalid HTTP Request
+    Date: Fri, 11 Jun 2021 01:08:10 GMT
+    Server: Netlify
+    Cache-Control: no-store
+    Content-Type: text/html
+    Content-Language: en
+    X-NF-ATS-Version: 3415b6b
+    Content-Length: 220
+    &lt;HTML&gt;
+    &lt;HEAD&gt;
+    &lt;TITLE&gt;Bad Request&lt;/TITLE&gt;
+    &lt;/HEAD&gt;
+    &lt;BODY BGCOLOR="white" FGCOLOR="black"&gt;
+    &lt;H1&gt;Bad Request&lt;/H1&gt;
+    &lt;HR&gt;
+    &lt;FONT FACE="Helvetica,Arial"&gt;&lt;B&gt;
+    Description: Could not process this request. 
+    &lt;/B&gt;&lt;/FONT&gt;
+    &lt;HR&gt;
+    &lt;/BODY&gt;
+  GetRequest: 
+    HTTP/1.0 404 Not Found
+    X-Nf-Block-Reason: 
+    Date: Fri, 11 Jun 2021 01:08:10 GMT
+    Content-Length: 0
+    Age: 0
+    Server: Netlify
+    X-NF-ATS-Version: 3415b6b
+    X-NF-Cache-Result: miss
+    X-NF-Country: US
+    X-NF-Request-ID: 9802976f-31d9-4f35-bfcc-c48e0b51b1da-12289995
+  HTTPOptions: 
+    HTTP/1.0 404 Not Found
+    X-Nf-Block-Reason: 
+    Date: Fri, 11 Jun 2021 01:08:10 GMT
+    Content-Length: 0
+    Age: 0
+    Server: Netlify
+    X-NF-ATS-Version: 3415b6b
+    X-NF-Cache-Result: skipped
+    X-NF-Country: US
+    X-NF-Request-ID: 9802976f-31d9-4f35-bfcc-c48e0b51b1da-12290001</pre>
+</td></tr>
 </tbody>
 </table></div>
 </div>
@@ -203,7 +251,7 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>52.73.153.209 - blog.beta.gouv.fr</td>
+<td>34.194.149.67 - blog.beta.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
@@ -213,11 +261,21 @@
 <td></td>
 </tr>
 <tr>
-<td>52.73.153.209 - blog.beta.gouv.fr</td>
+<td>34.194.149.67 - blog.beta.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
 <td>https</td>
 <td>Netlify</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>34.194.149.67 - blog.beta.gouv.fr</td>
+<td>9080</td>
+<td>tcp</td>
+<td>glrpc</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
