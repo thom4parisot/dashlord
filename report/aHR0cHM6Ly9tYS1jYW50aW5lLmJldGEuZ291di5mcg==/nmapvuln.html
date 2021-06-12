@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ma-cantine.beta.gouv.fr</pre>
-<p class="lead">Fri Jun 11 02:24:35 2021 – Fri Jun 11 02:25:01 2021<br>1 hosts scanned.
+<p class="lead">Sat Jun 12 02:40:16 2021 – Sat Jun 12 02:43:03 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,9 +76,9 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>109.232.236.90</td>
+<td>46.252.181.104</td>
 <td>ma-cantine.beta.gouv.fr</td>
-<td>2</td>
+<td>8</td>
 <td>0</td>
 </tr></tbody>
 </table></div>
@@ -91,13 +91,10 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#109-232-236-90"><h3 class="panel-title">109.232.236.90 - ma-cantine.beta.gouv.fr</h3></div>
-<div class="panel-body collapse in" id="109-232-236-90">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#46-252-181-104"><h3 class="panel-title">46.252.181.104 - ma-cantine.beta.gouv.fr</h3></div>
+<div class="panel-body collapse in" id="46-252-181-104">
 <h4>Hostnames</h4>
-<ul>
-<li>ma-cantine.beta.gouv.fr (user)</li>
-<li>ows-109-232-236-90.eu-west-2.compute.outscale.com (PTR)</li>
-</ul>
+<ul><li>ma-cantine.beta.gouv.fr (user)</li></ul>
 <h4>Ports</h4>
 <div class="table-responsive"><table class="table table-bordered">
 <thead><tr>
@@ -115,27 +112,109 @@
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
 <td title="Service">http</td>
-<td title="Product">OpenResty web app server</td>
+<td title="Product"></td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:openresty:ngx_openresty">cpe:/a:openresty:ngx_openresty</a><h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">openresty</pre>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, Kerberos, LDAPBindReq, LDAPSearchReq, LPDString, RPCCheck, RTSPRequest, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe: 
+    HTTP/1.1 400 Bad Request
+    Cache-Control: no-cache
+    Connection: close</pre>
 </td></tr>
 <tr class="success">
 <td title="Port">443</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http</td>
-<td title="Product">OpenResty web app server</td>
+<td title="Service">https</td>
+<td title="Product"></td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:openresty:ngx_openresty">cpe:/a:openresty:ngx_openresty</a><h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">openresty</pre>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, Kerberos, LPDString, RPCCheck, RTSPRequest, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe, tor-versions: 
+    HTTP/1.1 400 Bad Request
+    Cache-Control: no-cache
+    Connection: close</pre>
+<h5>http-trane-info</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">Problem with XML parsing of /evox/about</pre>
 </td></tr>
+<tr class="success">
+<td title="Port">1080</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">socks</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
+<tr class="success">
+<td title="Port">1081</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">pvuniwien</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
+<tr class="success">
+<td title="Port">3000</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">ppp</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  Kerberos: 
+    M7Qa
+    m=@B
+    \xc4
+  TLSSessionReq: 
+    A)i?
+    Cj^[
+    J~G{
+    \xbdz</pre>
+</td></tr>
+<tr class="success">
+<td title="Port">5001</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">ssh</td>
+<td title="Product">Apache Mina sshd</td>
+<td title="Version">1.7.0</td>
+<td title="Extra Info">protocol 2.0</td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:apache:sshd:1.7.0">cpe:/a:apache:sshd:1.7.0</a></td></tr>
+<tr class="success">
+<td title="Port">5002</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">ssh</td>
+<td title="Product">Apache Mina sshd</td>
+<td title="Version">1.7.0</td>
+<td title="Extra Info">protocol 2.0</td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:apache:sshd:1.7.0">cpe:/a:apache:sshd:1.7.0</a></td></tr>
+<tr class="success">
+<td title="Port">9999</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">tcpwrapped</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
 </tbody>
 </table></div>
 </div>
@@ -154,23 +233,83 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>109.232.236.90 - ma-cantine.beta.gouv.fr</td>
+<td>46.252.181.104 - ma-cantine.beta.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
-<td>OpenResty web app server</td>
 <td></td>
-<td>cpe:/a:openresty:ngx_openresty</td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 <tr>
-<td>109.232.236.90 - ma-cantine.beta.gouv.fr</td>
+<td>46.252.181.104 - ma-cantine.beta.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
-<td>http</td>
-<td>OpenResty web app server</td>
+<td>https</td>
 <td></td>
-<td>cpe:/a:openresty:ngx_openresty</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>46.252.181.104 - ma-cantine.beta.gouv.fr</td>
+<td>1080</td>
+<td>tcp</td>
+<td>socks</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>46.252.181.104 - ma-cantine.beta.gouv.fr</td>
+<td>1081</td>
+<td>tcp</td>
+<td>pvuniwien</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>46.252.181.104 - ma-cantine.beta.gouv.fr</td>
+<td>3000</td>
+<td>tcp</td>
+<td>ppp</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>46.252.181.104 - ma-cantine.beta.gouv.fr</td>
+<td>5001</td>
+<td>tcp</td>
+<td>ssh</td>
+<td>Apache Mina sshd</td>
+<td>1.7.0</td>
+<td>cpe:/a:apache:sshd:1.7.0</td>
+<td>protocol 2.0</td>
+</tr>
+<tr>
+<td>46.252.181.104 - ma-cantine.beta.gouv.fr</td>
+<td>5002</td>
+<td>tcp</td>
+<td>ssh</td>
+<td>Apache Mina sshd</td>
+<td>1.7.0</td>
+<td>cpe:/a:apache:sshd:1.7.0</td>
+<td>protocol 2.0</td>
+</tr>
+<tr>
+<td>46.252.181.104 - ma-cantine.beta.gouv.fr</td>
+<td>9999</td>
+<td>tcp</td>
+<td>tcpwrapped</td>
+<td></td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 </tbody>
