@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln partaj.beta.gouv.fr</pre>
-<p class="lead">Mon Jun 14 03:13:12 2021 – Mon Jun 14 03:15:57 2021<br>1 hosts scanned.
+<p class="lead">Tue Jun 15 03:19:36 2021 – Tue Jun 15 03:22:23 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -78,7 +78,7 @@
 <td><span class="label label-success">up</span></td>
 <td>46.252.181.104</td>
 <td>partaj.beta.gouv.fr</td>
-<td>8</td>
+<td>6</td>
 <td>0</td>
 </tr></tbody>
 </table></div>
@@ -145,26 +145,24 @@
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">gunicorn/19.9.0</pre>
 </td></tr>
-<tr class="success">
-<td title="Port">1080</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">socks</td>
-<td title="Product"></td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
+<tr class="warning">
+<td>1080</td>
+<td>tcp</td>
+<td>filtered<br>no-response</td>
+<td>socks</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
-<tr class="success">
-<td title="Port">1081</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">pvuniwien</td>
-<td title="Product"></td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
+<tr class="warning">
+<td>1081</td>
+<td>tcp</td>
+<td>filtered<br>no-response</td>
+<td>pvuniwien</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
 <tr class="success">
 <td title="Port">3000</td>
 <td title="Protocol">tcp</td>
@@ -178,23 +176,22 @@
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   Kerberos: 
-    ;+5U}
-    [~#/
-    f^fPa
-    \xe2
-    SC9s5
-    7WXr_E
+    X/v&gt;
+    fHMeSs)%
+    7c1&amp;
+    n|Nze
+    yg!2
+    u!I$M
   TLSSessionReq: 
-    K*?1Yn%%
-    \x20=
-    *R)!,)
-    v@%92
-    N5,G
-    9+AP
-    [\xc70
-    aYzc'
-    M=inT
-    *X\xd3</pre>
+    \xe4
+    \xcc
+    \xb0B}~
+    L57/
+    ?I)[#S4
+    0Akkg
+    vaoV*
+    ~R&amp;:.
+    gzpS</pre>
 </td></tr>
 <tr class="success">
 <td title="Port">5001</td>
@@ -259,26 +256,6 @@
 <td>tcp</td>
 <td>https</td>
 <td>gunicorn/19.9.0</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>46.252.181.104 - partaj.beta.gouv.fr</td>
-<td>1080</td>
-<td>tcp</td>
-<td>socks</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>46.252.181.104 - partaj.beta.gouv.fr</td>
-<td>1081</td>
-<td>tcp</td>
-<td>pvuniwien</td>
-<td></td>
 <td></td>
 <td></td>
 <td></td>

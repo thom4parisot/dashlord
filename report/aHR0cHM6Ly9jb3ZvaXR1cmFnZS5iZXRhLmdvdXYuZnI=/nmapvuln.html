@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln covoiturage.beta.gouv.fr</pre>
-<p class="lead">Mon Jun 14 01:33:31 2021 – Mon Jun 14 01:36:45 2021<br>1 hosts scanned.
+<p class="lead">Tue Jun 15 01:34:57 2021 – Tue Jun 15 01:37:43 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -78,7 +78,7 @@
 <td><span class="label label-success">up</span></td>
 <td>185.31.40.11</td>
 <td>covoiturage.beta.gouv.fr</td>
-<td>2</td>
+<td>8</td>
 <td>0</td>
 </tr></tbody>
 </table></div>
@@ -111,6 +111,53 @@
 </tr></thead>
 <tbody>
 <tr class="success">
+<td title="Port">22</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">ssh</td>
+<td title="Product">OpenSSH</td>
+<td title="Version">7.9p1 Debian 10+deb10u2</td>
+<td title="Extra Info">protocol 2.0</td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:openbsd:openssh:7.9p1">cpe:/a:openbsd:openssh:7.9p1</a><h5>vulners</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  cpe:/a:openbsd:openssh:7.9p1: 
+    	EDB-ID:21018	10.0	https://vulners.com/exploitdb/EDB-ID:21018	*EXPLOIT*
+    	CVE-2001-0554	10.0	https://vulners.com/cve/CVE-2001-0554
+    	MSF:ILITIES/UBUNTU-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2019-6111/	*EXPLOIT*
+    	MSF:ILITIES/SUSE-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2019-6111/	*EXPLOIT*
+    	MSF:ILITIES/SUSE-CVE-2019-25017/	5.8	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2019-25017/	*EXPLOIT*
+    	MSF:ILITIES/REDHAT_LINUX-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/REDHAT_LINUX-CVE-2019-6111/	*EXPLOIT*
+    	MSF:ILITIES/REDHAT-OPENSHIFT-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/REDHAT-OPENSHIFT-CVE-2019-6111/	*EXPLOIT*
+    	MSF:ILITIES/ORACLE-SOLARIS-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2019-6111/	*EXPLOIT*
+    	MSF:ILITIES/OPENBSD-OPENSSH-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/OPENBSD-OPENSSH-CVE-2019-6111/	*EXPLOIT*
+    	MSF:ILITIES/IBM-AIX-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/IBM-AIX-CVE-2019-6111/	*EXPLOIT*
+    	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2019-6111/	*EXPLOIT*
+    	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2019-6111/	*EXPLOIT*
+    	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2019-6111/	*EXPLOIT*
+    	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2019-6111/	*EXPLOIT*
+    	MSF:ILITIES/GENTOO-LINUX-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/GENTOO-LINUX-CVE-2019-6111/	*EXPLOIT*
+    	MSF:ILITIES/F5-BIG-IP-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2019-6111/	*EXPLOIT*
+    	MSF:ILITIES/DEBIAN-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/DEBIAN-CVE-2019-6111/	*EXPLOIT*
+    	MSF:ILITIES/CENTOS_LINUX-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2019-6111/	*EXPLOIT*
+    	MSF:ILITIES/AMAZON_LINUX-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/AMAZON_LINUX-CVE-2019-6111/	*EXPLOIT*
+    	MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2019-6111/	*EXPLOIT*
+    	MSF:ILITIES/ALPINE-LINUX-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2019-6111/	*EXPLOIT*
+    	EXPLOITPACK:98FE96309F9524B8C84C508837551A19	5.8	https://vulners.com/exploitpack/EXPLOITPACK:98FE96309F9524B8C84C508837551A19	*EXPLOIT*
+    	EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97	5.8	https://vulners.com/exploitpack/EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97	*EXPLOIT*
+    	EDB-ID:46516	5.8	https://vulners.com/exploitdb/EDB-ID:46516	*EXPLOIT*
+    	CVE-2019-6111	5.8	https://vulners.com/cve/CVE-2019-6111
+    	MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/	*EXPLOIT*
+    	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/	*EXPLOIT*
+    	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/	*EXPLOIT*
+    	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/	*EXPLOIT*
+    	MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/	*EXPLOIT*
+    	PACKETSTORM:151227	0.0	https://vulners.com/packetstorm/PACKETSTORM:151227	*EXPLOIT*
+    	EDB-ID:46193	0.0	https://vulners.com/exploitdb/EDB-ID:46193	*EXPLOIT*
+    	1337DAY-ID-32009	0.0	https://vulners.com/zdt/1337DAY-ID-32009	*EXPLOIT*</pre>
+</td></tr>
+<tr class="success">
 <td title="Port">80</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
@@ -126,30 +173,75 @@
     HTTP/1.0 403 Forbidden
     Connection: Close
     Content-Length: 120
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: f8d9f726-ff35-4885-b658-85bcc7c328ff&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: b5ca21e3-4074-4fa8-a5e8-c4eea6baa6f5&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
   GetRequest: 
     HTTP/1.0 403 Forbidden
     Connection: Close
     Content-Length: 120
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 5ec3650f-3e6c-43cf-8662-3237b8841ce3&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 5809564b-190c-45f4-9c59-b17cdeed8642&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
   HTTPOptions: 
     HTTP/1.0 403 Forbidden
     Connection: Close
     Content-Length: 120
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 034a0796-7cd3-4878-a1c7-2ff1e0859ab2&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 6804be8d-d3e1-4f67-83b1-a13ec0263baf&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
   RTSPRequest: 
     HTTP/1.0 400 Bad Request
     Connection: Close
     Content-Length: 108
     Connection: close
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Bad Request&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 7d596c72-2893-4ea6-8d4a-c0febf8c6199&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Bad Request&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 5ab73388-a939-4717-a2ad-fffa644648f1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
   SIPOptions: 
     HTTP/1.0 400 Bad Request
     Connection: Close
     Content-Length: 108
     Connection: close
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Bad Request&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 5345a7a6-3ac1-4f53-9f5c-c5f9758249a6&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Bad Request&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: e1066079-4fdf-4f7c-98ad-1f7ea2f439c9&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</pre>
 </td></tr>
+<tr class="success">
+<td title="Port">111</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">rpcbind</td>
+<td title="Product"></td>
+<td title="Version">2-4</td>
+<td title="Extra Info">RPC #100000</td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>rpcinfo</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  program version    port/proto  service
+  100000  2,3,4        111/tcp   rpcbind
+  100000  2,3,4        111/udp   rpcbind
+  100000  3,4          111/tcp6  rpcbind
+  100000  3,4          111/udp6  rpcbind
+  100003  3           2049/udp   nfs
+  100003  3           2049/udp6  nfs
+  100003  3,4         2049/tcp   nfs
+  100003  3,4         2049/tcp6  nfs
+  100005  1,2,3      42872/udp   mountd
+  100005  1,2,3      43563/tcp6  mountd
+  100005  1,2,3      51899/tcp   mountd
+  100005  1,2,3      59117/udp6  mountd
+  100021  1,3,4      35974/udp   nlockmgr
+  100021  1,3,4      37133/tcp6  nlockmgr
+  100021  1,3,4      40841/tcp   nlockmgr
+  100021  1,3,4      46259/udp6  nlockmgr
+  100227  3           2049/tcp   nfs_acl
+  100227  3           2049/tcp6  nfs_acl
+  100227  3           2049/udp   nfs_acl
+  100227  3           2049/udp6  nfs_acl
+</pre>
+</td></tr>
+<tr class="success">
+<td title="Port">113</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">ident</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
 <tr class="success">
 <td title="Port">443</td>
 <td title="Protocol">tcp</td>
@@ -166,32 +258,62 @@
     HTTP/1.0 403 Forbidden
     Connection: Close
     Content-Length: 120
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: fc4f32ad-bb0c-447f-bbae-3d7b99a6d7a8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 7d42c02d-a3e9-4411-b87c-47570db3af59&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
   GetRequest: 
     HTTP/1.0 403 Forbidden
     Connection: Close
     Content-Length: 120
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 3195f4d9-b738-4a26-babc-533562fb7afa&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 10c716f2-332b-4739-bfec-ddeaec8551e2&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
   HTTPOptions: 
     HTTP/1.0 403 Forbidden
     Connection: Close
     Content-Length: 120
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: f1d1eba6-842b-4fdb-a0d1-686577fd86af&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 6b6a80a9-ceff-4ebd-a71f-7869812f9836&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
   RTSPRequest: 
     HTTP/1.0 400 Bad Request
     Connection: Close
     Content-Length: 108
     Connection: close
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Bad Request&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: f3b32889-be31-4718-944a-ab9cf9a84896&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Bad Request&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: bcda7ed7-69f8-4693-9d5a-ec38809ee250&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
   SIPOptions: 
     HTTP/1.0 400 Bad Request
     Connection: Close
     Content-Length: 108
     Connection: close
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Bad Request&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: abf99cc3-b1d7-44a3-9f0c-73679aee8e87&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Bad Request&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: b58b3089-ad20-44f8-a00e-9f5cdfaadf1a&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Apache</pre>
 </td></tr>
+<tr class="success">
+<td title="Port">873</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">rsync</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info">protocol version 31</td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
+<tr class="success">
+<td title="Port">2049</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">nfs_acl</td>
+<td title="Product"></td>
+<td title="Version">3</td>
+<td title="Extra Info">RPC #100227</td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
+<tr class="success">
+<td title="Port">34573</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">unknown</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
 </tbody>
 </table></div>
 </div>
@@ -211,9 +333,39 @@
 <tbody>
 <tr>
 <td>185.31.40.11 - covoiturage.beta.gouv.fr</td>
+<td>22</td>
+<td>tcp</td>
+<td>ssh</td>
+<td>OpenSSH</td>
+<td>7.9p1 Debian 10+deb10u2</td>
+<td>cpe:/a:openbsd:openssh:7.9p1</td>
+<td>protocol 2.0</td>
+</tr>
+<tr>
+<td>185.31.40.11 - covoiturage.beta.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>185.31.40.11 - covoiturage.beta.gouv.fr</td>
+<td>111</td>
+<td>tcp</td>
+<td>rpcbind</td>
+<td></td>
+<td>2-4</td>
+<td></td>
+<td>RPC #100000</td>
+</tr>
+<tr>
+<td>185.31.40.11 - covoiturage.beta.gouv.fr</td>
+<td>113</td>
+<td>tcp</td>
+<td>ident</td>
 <td></td>
 <td></td>
 <td></td>
@@ -225,6 +377,36 @@
 <td>tcp</td>
 <td>https</td>
 <td>Apache</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>185.31.40.11 - covoiturage.beta.gouv.fr</td>
+<td>873</td>
+<td>tcp</td>
+<td>rsync</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protocol version 31</td>
+</tr>
+<tr>
+<td>185.31.40.11 - covoiturage.beta.gouv.fr</td>
+<td>2049</td>
+<td>tcp</td>
+<td>nfs_acl</td>
+<td></td>
+<td>3</td>
+<td></td>
+<td>RPC #100227</td>
+</tr>
+<tr>
+<td>185.31.40.11 - covoiturage.beta.gouv.fr</td>
+<td>34573</td>
+<td>tcp</td>
+<td>unknown</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
