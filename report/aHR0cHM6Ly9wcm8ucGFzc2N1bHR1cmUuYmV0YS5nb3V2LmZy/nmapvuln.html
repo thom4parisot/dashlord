@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln pro.passculture.beta.gouv.fr</pre>
-<p class="lead">Tue Jun 15 03:21:49 2021 – Tue Jun 15 03:22:19 2021<br>1 hosts scanned.
+<p class="lead">Wed Jun 16 03:26:40 2021 – Wed Jun 16 03:27:10 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,7 +76,7 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>68.183.27.198</td>
+<td>54.205.240.192</td>
 <td>pro.passculture.beta.gouv.fr</td>
 <td>2</td>
 <td>0</td>
@@ -91,10 +91,13 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#68-183-27-198"><h3 class="panel-title">68.183.27.198 - pro.passculture.beta.gouv.fr</h3></div>
-<div class="panel-body collapse in" id="68-183-27-198">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#54-205-240-192"><h3 class="panel-title">54.205.240.192 - pro.passculture.beta.gouv.fr</h3></div>
+<div class="panel-body collapse in" id="54-205-240-192">
 <h4>Hostnames</h4>
-<ul><li>pro.passculture.beta.gouv.fr (user)</li></ul>
+<ul>
+<li>pro.passculture.beta.gouv.fr (user)</li>
+<li>ec2-54-205-240-192.compute-1.amazonaws.com (PTR)</li>
+</ul>
 <h4>Ports</h4>
 <div class="table-responsive"><table class="table table-bordered">
 <thead><tr>
@@ -122,23 +125,19 @@
   DNSStatusRequestTCP, Help, Kerberos, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Tue, 15 Jun 2021 03:22:06 GMT
+    date: Wed, 16 Jun 2021 03:26:57 GMT
   DNSVersionBindReqTCP, RPCCheck: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Tue, 15 Jun 2021 03:22:05 GMT
-  FourOhFourRequest, HTTPOptions: 
+    date: Wed, 16 Jun 2021 03:26:56 GMT
+  FourOhFourRequest, GetRequest, HTTPOptions: 
     HTTP/1.0 400 Bad Request
-    date: Tue, 15 Jun 2021 03:22:00 GMT
-    Missing host header
-  GetRequest: 
-    HTTP/1.0 400 Bad Request
-    date: Tue, 15 Jun 2021 03:21:59 GMT
+    date: Wed, 16 Jun 2021 03:26:51 GMT
     Missing host header
   RTSPRequest, X11Probe: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Tue, 15 Jun 2021 03:22:00 GMT</pre>
+    date: Wed, 16 Jun 2021 03:26:51 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -157,27 +156,27 @@
   DNSStatusRequestTCP, RPCCheck, RTSPRequest: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Tue, 15 Jun 2021 03:22:12 GMT
-  DNSVersionBindReqTCP, Help, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+    date: Wed, 16 Jun 2021 03:27:03 GMT
+  DNSVersionBindReqTCP, Help, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Tue, 15 Jun 2021 03:22:13 GMT
-  FourOhFourRequest: 
+    date: Wed, 16 Jun 2021 03:27:04 GMT
+  FourOhFourRequest, HTTPOptions: 
     HTTP/1.0 400 Bad Request
-    date: Tue, 15 Jun 2021 03:22:07 GMT
+    date: Wed, 16 Jun 2021 03:26:58 GMT
     Missing host header
-  GetRequest, HTTPOptions: 
+  GetRequest: 
     HTTP/1.0 400 Bad Request
-    date: Tue, 15 Jun 2021 03:22:06 GMT
+    date: Wed, 16 Jun 2021 03:26:57 GMT
     Missing host header
-  Kerberos, SMBProgNeg: 
+  Kerberos: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Tue, 15 Jun 2021 03:22:14 GMT
+    date: Wed, 16 Jun 2021 03:27:05 GMT
   tor-versions: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Tue, 15 Jun 2021 03:22:07 GMT</pre>
+    date: Wed, 16 Jun 2021 03:26:57 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -208,7 +207,7 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>68.183.27.198 - pro.passculture.beta.gouv.fr</td>
+<td>54.205.240.192 - pro.passculture.beta.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
@@ -218,7 +217,7 @@
 <td></td>
 </tr>
 <tr>
-<td>68.183.27.198 - pro.passculture.beta.gouv.fr</td>
+<td>54.205.240.192 - pro.passculture.beta.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
 <td>https</td>
