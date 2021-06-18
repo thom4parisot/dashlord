@@ -81,7 +81,7 @@ ZAP Scanning Report
         <p>
 </p>
         <h3 class="left-header">Summary of Alerts</h3>
-        <h3 class="time-stamp">Generated on Thu, 17 Jun 2021 04:26:08</h3>
+        <h3 class="time-stamp">Generated on Fri, 18 Jun 2021 04:32:42</h3>
         <table width="45%" class="summary">
             <tr bgcolor="#666666">
                 <th width="45%" height="24">Risk 
@@ -95,10 +95,10 @@ ZAP Scanning Report
                 <td><a href="#medium">Medium</a></td><td align="center">5</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#low">Low</a></td><td align="center">5</td>
+                <td><a href="#low">Low</a></td><td align="center">6</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#info">Informational</a></td><td align="center">8</td>
+                <td><a href="#info">Informational</a></td><td align="center">7</td>
             </tr>
         </table>
         <div class="spacer-lg"></div>
@@ -123,25 +123,25 @@ ZAP Scanning Report
                 <td>X-Frame-Options Header Not Set</td><td align="center">Medium</td><td align="center">7</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Cookie Without SameSite Attribute</td><td align="center">Low</td><td align="center">11</td>
+                <td>Cookie without SameSite Attribute</td><td align="center">Low</td><td align="center">11</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>CSP: Notices</td><td align="center">Low</td><td align="center">2</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Dangerous JS Functions</td><td align="center">Low</td><td align="center">1</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Feature Policy Header Not Set</td><td align="center">Low</td><td align="center">11</td>
+                <td>Incomplete or No Cache-control Header Set</td><td align="center">Low</td><td align="center">11</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Incomplete or No Cache-control and Pragma HTTP Header Set</td><td align="center">Low</td><td align="center">11</td>
+                <td>Permissions Policy Header Not Set</td><td align="center">Low</td><td align="center">11</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>X-Content-Type-Options Header Missing</td><td align="center">Low</td><td align="center">12</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Base64 Disclosure</td><td align="center">Informational</td><td align="center">12</td>
-            </tr>
-            <tr bgcolor="#e8e8e8">
-                <td>CSP: Notices</td><td align="center">Informational</td><td align="center">2</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Information Disclosure - Suspicious Comments</td><td align="center">Informational</td><td align="center">1</td>
@@ -229,7 +229,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">16</td>
+                <td width="20%">CWE Id</td><td width="80%">693</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -272,10 +272,6 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Content-Security-Policy</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; font-src 'self' data: github.com; img-src 'self' data: stats.data.gouv.fr voxusagers.numerique.gouv.fr; object-src 'none'; style-src 'self' 'unsafe-inline' *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; script-src 'self' 'unsafe-inline' stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src 'self' api-adresse.data.gouv.fr sentry.io cdnjs.cloudflare.com etalab-tiles.fr; report-uri https://o320280.ingest.sentry.io/api/1811205/security/?sentry_key=9483c31bc6f442ba8aa0ed3869608da0</td>
             </tr>
               
@@ -287,10 +283,6 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Content-Security-Policy</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -308,18 +300,11 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>The response contained multiple CSP headers, one or more of them contained a report-uri directive and therefore they could not be merged. The first identified header/policy was analyzed.</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-            <tr bgcolor="#e8e8e8">
                 <td width="20%">Reference</td><td width="80%"><p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p></td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">16</td>
+                <td width="20%">CWE Id</td><td width="80%">693</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -362,10 +347,6 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Content-Security-Policy</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; font-src 'self' data: github.com; img-src 'self' data: stats.data.gouv.fr voxusagers.numerique.gouv.fr; object-src 'none'; style-src 'self' 'unsafe-inline' *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; script-src 'self' 'unsafe-inline' stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src 'self' api-adresse.data.gouv.fr sentry.io cdnjs.cloudflare.com etalab-tiles.fr; report-uri https://o320280.ingest.sentry.io/api/1811205/security/?sentry_key=9483c31bc6f442ba8aa0ed3869608da0</td>
             </tr>
               
@@ -377,10 +358,6 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Content-Security-Policy</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -398,18 +375,11 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>The response contained multiple CSP headers, one or more of them contained a report-uri directive and therefore they could not be merged. The first identified header/policy was analyzed.</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-            <tr bgcolor="#e8e8e8">
                 <td width="20%">Reference</td><td width="80%"><p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p></td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">16</td>
+                <td width="20%">CWE Id</td><td width="80%">693</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -452,10 +422,6 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Content-Security-Policy</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; font-src 'self' data: github.com; img-src 'self' data: stats.data.gouv.fr voxusagers.numerique.gouv.fr; object-src 'none'; style-src 'self' 'unsafe-inline' *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; script-src 'self' 'unsafe-inline' stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src 'self' api-adresse.data.gouv.fr sentry.io cdnjs.cloudflare.com etalab-tiles.fr; report-uri https://o320280.ingest.sentry.io/api/1811205/security/?sentry_key=9483c31bc6f442ba8aa0ed3869608da0</td>
             </tr>
               
@@ -467,10 +433,6 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Content-Security-Policy</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -488,18 +450,11 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>The response contained multiple CSP headers, one or more of them contained a report-uri directive and therefore they could not be merged. The first identified header/policy was analyzed.</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-            <tr bgcolor="#e8e8e8">
                 <td width="20%">Reference</td><td width="80%"><p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p></td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">16</td>
+                <td width="20%">CWE Id</td><td width="80%">693</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -644,7 +599,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">16</td>
+                <td width="20%">CWE Id</td><td width="80%">1021</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -663,7 +618,7 @@ ZAP Scanning Report
   
   
             <tr height="24" class="risk-low">
-                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Cookie Without SameSite Attribute</th>
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Cookie without SameSite Attribute</th>
             </tr>
               
   
@@ -679,7 +634,25 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/stats</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accessibility</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">_lapin_session</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Set-Cookie: _lapin_session</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accueil_mds</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -733,6 +706,24 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/stats</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">_lapin_session</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Set-Cookie: _lapin_session</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/</td>
             </tr>
               
@@ -769,7 +760,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accueil_mds</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -787,7 +778,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accessibility</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/organisations/new</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -841,42 +832,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/organisations/new</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">_lapin_session</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Set-Cookie: _lapin_session</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">_lapin_session</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Set-Cookie: _lapin_session</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%">Instances</td><td width="80%">11</td>
             </tr>
               
@@ -889,11 +844,86 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">16</td>
+                <td width="20%">CWE Id</td><td width="80%">1275</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">CSP: Notices</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>Warnings:</p><p>The report-uri directive has ben deprecated in favor of the new report-to directive</p><p></p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; font-src 'self' data: github.com; img-src 'self' data: stats.data.gouv.fr voxusagers.numerique.gouv.fr; object-src 'none'; style-src 'self' 'unsafe-inline' *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; script-src 'self' 'unsafe-inline' stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src 'self' api-adresse.data.gouv.fr sentry.io cdnjs.cloudflare.com etalab-tiles.fr; report-uri https://o320280.ingest.sentry.io/api/1811205/security/?sentry_key=9483c31bc6f442ba8aa0ed3869608da0</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; font-src 'self' data: github.com; img-src 'self' data: stats.data.gouv.fr voxusagers.numerique.gouv.fr; object-src 'none'; style-src 'self' 'unsafe-inline' *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; script-src 'self' 'unsafe-inline' stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src 'self' api-adresse.data.gouv.fr sentry.io cdnjs.cloudflare.com etalab-tiles.fr; report-uri https://o320280.ingest.sentry.io/api/1811205/security/?sentry_key=9483c31bc6f442ba8aa0ed3869608da0</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">2</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">693</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">15</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -965,38 +995,18 @@ ZAP Scanning Report
   
   
             <tr height="24" class="risk-low">
-                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Feature Policy Header Not Set</th>
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Incomplete or No Cache-control Header Set</th>
             </tr>
               
   
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>Feature Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Feature Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p></td>
+                <td width="20%">Description</td><td width="80%"><p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content.</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
             </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/mds</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
               
   
   
@@ -1008,24 +1018,30 @@ ZAP Scanning Report
                 <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
             </tr>
               
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=0, private, must-revalidate</td>
+            </tr>
+              
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accueil_mds</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/mds</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
             </tr>
               
-  
-  
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/agents/sign_in</td>
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=0, private, must-revalidate</td>
             </tr>
               
   
@@ -1038,44 +1054,12 @@ ZAP Scanning Report
                 <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
             </tr>
               
-  
-  
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/contact</td>
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/users/sign_in</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/packs/js/application-8cc4da9fc9e1bc6a9a7a.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=0, private, must-revalidate</td>
             </tr>
               
   
@@ -1088,57 +1072,72 @@ ZAP Scanning Report
                 <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
             </tr>
               
-  
-  
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">11</td>
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p>Ensure that your web server, application server, load balancer, etc. is configured to set the Feature-Policy header.</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">16</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">WASC Id</td><td width="80%">15</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Source ID</td><td width="80%">3</td>
-            </tr>
-            
-        </table>
-        <div class="spacer"></div>
-        <table width="100%" class="results">
-              
-  
-  
-  
-            <tr height="24" class="risk-low">
-                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Incomplete or No Cache-control and Pragma HTTP Header Set</th>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=0, private, must-revalidate</td>
             </tr>
               
   
   
-  
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>The cache-control and pragma HTTP header have not been set properly or are missing allowing the browser and proxies to cache content.</p></td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/users/sign_in</td>
             </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=0, private, must-revalidate</td>
+            </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accueil_mds</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=0, private, must-revalidate</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/contact</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=0, private, must-revalidate</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/agents/sign_in</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1170,7 +1169,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accessibility</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accueil_mds</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1183,88 +1182,6 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=0, private, must-revalidate</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/mds</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=0, private, must-revalidate</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=0, private, must-revalidate</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/packs/media/images/welcome/location-06907703397aa504d21ad0f6bd8d1daa.svg</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/users/sign_in</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=0, private, must-revalidate</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/packs/css/application-3b77855d.css</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
             </tr>
               
   
@@ -1288,33 +1205,158 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">11</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">525</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Permissions Policy Header Not Set</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/stats</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/mds</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/packs/js/application-8cc4da9fc9e1bc6a9a7a.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accessibility</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/agents/sign_in</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/organisations/new</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/users/sign_in</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accueil_mds</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/contact</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=0, private, must-revalidate</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/packs/media/images/logos/logo-f5be109ad11920d0bb655368a542296b.svg</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
             </tr>
               
   
@@ -1324,19 +1366,19 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p>Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate; and that the pragma HTTP header is set with no-cache.</p></td>
+                <td width="20%">Solution</td><td width="80%"><p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p></td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p></td>
+                <td width="20%">Reference</td><td width="80%"><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p></td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">525</td>
+                <td width="20%">CWE Id</td><td width="80%">693</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">WASC Id</td><td width="80%">13</td>
+                <td width="20%">WASC Id</td><td width="80%">15</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1554,7 +1596,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">16</td>
+                <td width="20%">CWE Id</td><td width="80%">693</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1589,20 +1631,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">POST</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2BG6LNxXjIssLpnZAMogNLQO7MG9nZCS9b58</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/packs/css/application-3b77855d.css</td>
             </tr>
               
@@ -1612,20 +1640,6 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">iVBORw0KGgoAAAANSUhEUgAAAGQAAAAeCAYAAADaW7vzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0NBRjI1NjM0M0UwMTFFNDk4NkFGMzJFQkQzQjEwRUIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NBRjI1NjQ0M0UwMTFFNDk4NkFGMzJFQkQzQjEwRUIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQ0FGMjU2MTQzRTAxMUU0OTg2QUYzMkVCRDNCMTBFQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQ0FGMjU2MjQzRTAxMUU0OTg2QUYzMkVCRDNCMTBFQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PoNEP54AAAIOSURBVHja7Jq9TsMwEMcxrZD4WpBYeKUCe+kTMCACHZh4BFfHO/AAIHZGFhYkBBsSEqxsLCAgXKhbXYOTxh9pfJVP+qutnZ5s/5Lz2Y5I03QhWji2GIcgAokWgfCxNvcOCCGKqiSqhUp0laHOne05vdEyGMfkdxJDVjgwDlEQgYQBgx+ULJaWSXXS6r/ER5FBVR8VfGftTKcITNs+a1XpcFoExREIDF14AVIFxgQUS+h520cdud6wNkC0UBw6BCO/HoCYwBhD8QCkQ/x1mwDyD4plh4D6DDV0TAGyo4HcawLIBBSLDkHeH0Mg2yVP3l4TQMZQDDsEOl/MgHQqhMNuE0D+oBh0CIr8MAKyazBH9WyBuKxDWgbXfjNf32TZ1KWm/Ap1oSk/R53UtQ5xTh3LUlMmT8gt6g51Q9p+SobxgJQ/qmsfZhWywGFSl0yBjCLJCMgXail3b7+rumdVJ2YRss4cN+r6qAHDkPWjPjdJCF4n9RmAD/V9A/Wp4NQassDjwlB6XBiCxcJQWmZZb8THFilfy/lfrTvLghq2TqTHrRMTKNJ0sIhdo15RT+RpyWwFdY96UZ/LdQKBGjcXpcc1AlSFEfLmouD+1knuxBDUVrvOBmoOC/rEcN7OQxKVeJTCiAdUzUJhA2Oez9QTkp72OTVcxDcXY8iKNkxGAJXmJCOQwOa6dhyXsOa6XwEGAKdeb5ET3rQdAAAAAElFTkSuQmCC</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2BHtAWpGx4Amacis2ZbSMnrSNysG4DHKNCMHJwDCC8AbuMx4JKnl</td>
             </tr>
               
   
@@ -1645,7 +1659,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accessibility</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/stats</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1653,21 +1667,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2BNN5Rc7oS81LAj7aFo2sXdWXVnZUixWwybKXNHk56iFx1aTn6</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">fWyOEB2Ozt7l5zH1ZFnaSLF0pomIm945QLEUr9NEkJO1FSgT2ZDdP4gxd7Hpv38B1ATQLyn</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2Bc4Z9IAa5EGf8DzENQgRVoskWuF86uMggHKbLVzGy47W4mx</td>
             </tr>
               
   
@@ -1681,7 +1681,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2BYf9Ym3BJeleHT3Acuj2qIz6pjUWM1nlHOd6Ubq6S6Pz37uyDBF0wFTXC3pE7kw5ighwUlmUtiJ</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2Fnmjuke8K4nuN0BnIsAqwd4JPwtdaGpdRt1BQaZo2ROuZANyuSak9vFkO4t</td>
             </tr>
               
   
@@ -1695,13 +1695,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">vC9xJF78mEa1FhYbnuGFALGRl8wMzN3InsBA5h3I</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2FXujy7GU8NPDm3CmEQh5A1BdTDVfY2lDhpWJDnhswWeghYM0FNwzl</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/stats</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1709,7 +1709,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2BA1DqfWPB6vVPeQoua9YT9F1rvDns4</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2B28klAn02TXkQLYwWnptlCrLLECGHJA6ewvBdebeicKuCGcvpxvIW</td>
             </tr>
               
   
@@ -1723,7 +1723,21 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2BQ7sn8UPDrsYCo3ngOAvHvYG647UYLUGNq0jgtWYRMG3jjqySvCTQH</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2FOly7Vgj6MbxFcsAJXQ6efP8JHainI5fORuhUGspuRbjYDOwA27dFxdJe4E3Xjx26tg4AymjR1</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2Fqqk8ftck79AED1bTZjg2kGZopSYdN4xOT0sEgknFEdkYiCGUJszOXcFoJHwp8Q5vFcNKc8cNBjq04</td>
             </tr>
               
   
@@ -1737,7 +1751,21 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2FTWxAeqGWKzrc3X0viria2sXtjzDJv4QE3awJazWLcaeehOpKzhoOJR0n01Uf8BuRDQV4ikVa7RrN</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">i4Ob4TLfFxiGdmfk3Y8i7e4RFDZGlrFArdR6a0crjRXgeNCvUiW</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">POST</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2BFXvnRlSZJlZM70l7XXDFmoqEauCX5Z</td>
             </tr>
               
   
@@ -1751,7 +1779,21 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2FIG3D8v7f70sRJcOt7hDnwxY55YMqxoJ5C9bF7B</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2BiMMLqKzdiL7yioZjdSH34MzZQlTzMjtYPoAVrkaeXBGvej</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accessibility</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2FyYHJWDteUhqPQVt30RQBG74F5upZZE2cv8f0DALXVMZxv3y5JqYwY6z6wdQkXk2DIf2hU1Wi57Z1</td>
             </tr>
               
   
@@ -1765,7 +1807,8 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>�\x0011�,�W��,.��\x0000� 4�\x000e��������|</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>�PNG</p><p>\x001a</p><p>\x0000\x0000\x0000
+IHDR\x0000\x0000\x0000d\x0000\x0000\x0000\x001e\x0008\x0006\x0000\x0000\x0000�[��\x0000\x0000\x0000\x0019tEXtSoftware\x0000Adobe ImageReadyq�e&lt;\x0000\x0000\x0003"iTXtXML:com.adobe.xmp\x0000\x0000\x0000\x0000\x0000&lt;?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?&gt; &lt;x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.3-c011 66.145661, 2012/02/06-14:56:27        "&gt; &lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt; &lt;rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmp:CreatorTool="Adobe Photoshop CS6 (Windows)" xmpMM:InstanceID="xmp.iid:CCAF256343E011E4986AF32EBD3B10EB" xmpMM:DocumentID="xmp.did:CCAF256443E011E4986AF32EBD3B10EB"&gt; &lt;xmpMM:DerivedFrom stRef:instanceID="xmp.iid:CCAF256143E011E4986AF32EBD3B10EB" stRef:documentID="xmp.did:CCAF256243E011E4986AF32EBD3B10EB"/&gt; &lt;/rdf:Description&gt; &lt;/rdf:RDF&gt; &lt;/x:xmpmeta&gt; &lt;?xpacket end="r"?&gt;�D?�\x0000\x0000\x0002\x000eIDATx�욽N�0\x0010�1���Z�Xx�\x0002{�\x00130 \x0002\x001d�x\x0004W�;�\x0000 vF\x0016\x0016$\x0004\x001b\x0012\x0012�l,  \�[]���\x001fi|�O�����l���َH�t!Z8�\x0018� \x0002�\x0016��6�\x000e\x0008!��$��Jt��Ν�9��2\x0018��w\x0012CV80\x000eQ\x0010��\x0001�\x001f�,��Iu���G�AU\x001f\x0015|g�L�\x0008L�&gt;kU�pZ\x0004�\x0011\x0008\x000c]x\x0001R\x0005�\x0004\x0014K�y�G\x001d�ް6@�P\x001c:\x0004#�\x001e���\x0018C�\x0000�C�u�\x0000�\x000f�e���\x000c5tL\x0001����k\x0002�\x0004\x0014�\x000eA�\x001fC �%O�^\x0013@�P\x000c;\x0004:_̀t*��n\x0013@��\x0018t\x0008��0\x0002�k0G�l���CZ\x0006�~3_�d�ԥ��</p><p>u�)?G�Ե\x000eqN\x001d�RS&amp;O�-�\x000euC�~J��?�k\x001ff\x0015��aR�L��"�\x0008�\x0017j)wo���gU'f\x0011��\x001c7���\x0001&ETH;��&gt;7I\x0008^'�\x0019�\x000f�}\x0003����\x001a����Pz\\x0018���PZfYo��\x0016)_��_�;˂\x001a�N�ǭ\x0013\x0013(�t��]�^QO�i�l\x0005u�zQ��u\x0002�\x001a7\x0017��5\x0002T�\x0011�����I��\x0010�V��\x0006j\x000e\x000b��p��C\x0012�x�&#136;\x0007T�Ba\x0003c���\x0013���95\�7\x0017cȊ6LF\x0000��$#���v\x001c���_\x0001\x0006\x0000�^o�\x0013޴\x001d\x0000\x0000\x0000\x0000IEND�B`�</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
@@ -1781,96 +1824,6 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%">WASC Id</td><td width="80%">13</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Source ID</td><td width="80%">3</td>
-            </tr>
-            
-        </table>
-        <div class="spacer"></div>
-        <table width="100%" class="results">
-              
-  
-  
-  
-            <tr height="24" class="risk-info">
-                <th width="20%"><a name="info"></a>Informational (Medium)</th><th width="80%">CSP: Notices</th>
-            </tr>
-              
-  
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>Info Items:</p><p>1:509: A draft of the next version of CSP deprecates report-uri in favour of a new report-to directive.</p><p></p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Content-Security-Policy</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; font-src 'self' data: github.com; img-src 'self' data: stats.data.gouv.fr voxusagers.numerique.gouv.fr; object-src 'none'; style-src 'self' 'unsafe-inline' *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; script-src 'self' 'unsafe-inline' stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src 'self' api-adresse.data.gouv.fr sentry.io cdnjs.cloudflare.com etalab-tiles.fr; report-uri https://o320280.ingest.sentry.io/api/1811205/security/?sentry_key=9483c31bc6f442ba8aa0ed3869608da0</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Content-Security-Policy</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; font-src 'self' data: github.com; img-src 'self' data: stats.data.gouv.fr voxusagers.numerique.gouv.fr; object-src 'none'; style-src 'self' 'unsafe-inline' *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; script-src 'self' 'unsafe-inline' stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src 'self' api-adresse.data.gouv.fr sentry.io cdnjs.cloudflare.com etalab-tiles.fr; report-uri https://o320280.ingest.sentry.io/api/1811205/security/?sentry_key=9483c31bc6f442ba8aa0ed3869608da0</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">2</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>The response contained multiple CSP headers, one or more of them contained a report-uri directive and therefore they could not be merged. The first identified header/policy was analyzed.</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">16</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">WASC Id</td><td width="80%">15</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1997,7 +1950,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/users/sign_up</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/organisations/new</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">

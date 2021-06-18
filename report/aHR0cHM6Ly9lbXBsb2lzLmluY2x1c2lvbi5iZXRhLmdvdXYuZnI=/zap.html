@@ -81,7 +81,7 @@ ZAP Scanning Report
         <p>
 </p>
         <h3 class="left-header">Summary of Alerts</h3>
-        <h3 class="time-stamp">Generated on Thu, 17 Jun 2021 01:47:36</h3>
+        <h3 class="time-stamp">Generated on Fri, 18 Jun 2021 01:46:41</h3>
         <table width="45%" class="summary">
             <tr bgcolor="#666666">
                 <th width="45%" height="24">Risk 
@@ -120,19 +120,19 @@ ZAP Scanning Report
                 <td>Vulnerable JS Library</td><td align="center">Medium</td><td align="center">1</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Absence of Anti-CSRF Tokens</td><td align="center">Low</td><td align="center">7</td>
+                <td>Absence of Anti-CSRF Tokens</td><td align="center">Low</td><td align="center">9</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Cross-Domain JavaScript Source File Inclusion</td><td align="center">Low</td><td align="center">2</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Dangerous JS Functions</td><td align="center">Low</td><td align="center">4</td>
+                <td>Dangerous JS Functions</td><td align="center">Low</td><td align="center">2</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Feature Policy Header Not Set</td><td align="center">Low</td><td align="center">11</td>
+                <td>Incomplete or No Cache-control Header Set</td><td align="center">Low</td><td align="center">11</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Incomplete or No Cache-control and Pragma HTTP Header Set</td><td align="center">Low</td><td align="center">11</td>
+                <td>Permissions Policy Header Not Set</td><td align="center">Low</td><td align="center">11</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Strict-Transport-Security Header Not Set</td><td align="center">Low</td><td align="center">12</td>
@@ -159,7 +159,7 @@ ZAP Scanning Report
                 <td>Timestamp Disclosure - Unix</td><td align="center">Informational</td><td align="center">11</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>User Controllable HTML Element Attribute (Potential XSS)</td><td align="center">Informational</td><td align="center">14</td>
+                <td>User Controllable HTML Element Attribute (Potential XSS)</td><td align="center">Informational</td><td align="center">12</td>
             </tr>
         </table>
         <div class="spacer-lg"></div>
@@ -309,7 +309,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">16</td>
+                <td width="20%">CWE Id</td><td width="80%">693</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -753,7 +753,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">16</td>
+                <td width="20%">CWE Id</td><td width="80%">345</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -852,6 +852,34 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/search/prescribers/results?city&amp;city_name=ZAP&amp;distance=5</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form id="search-form" method="get" action="" class="d-block mb-5"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/search/employers/results?city&amp;city_name=ZAP</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form id="search-form" method="get" action="" class="d-block mb-5"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr</td>
             </tr>
               
@@ -866,7 +894,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/search/prescribers/results?city&amp;city_name=ZAP&amp;distance=5</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/search/prescribers/results?city&amp;city_name=ZAP</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -874,21 +902,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form method="get" action="" class="d-block mb-5"&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/search/prescribers</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form method="get" action="/search/prescribers/results" class="d-block mb-5"&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form id="search-form" method="get" action="" class="d-block mb-5"&gt;</td>
             </tr>
               
   
@@ -908,7 +922,21 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/search/employers/results?city&amp;city_name=ZAP</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/search/prescribers</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form method="get" action="/search/prescribers/results"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/search/employers/results?city&amp;city_name=ZAP&amp;distance=5&amp;kinds=EI</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -950,7 +978,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">7</td>
+                <td width="20%">Instances</td><td width="80%">9</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -958,7 +986,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF] was found in the following HTML form: [Form 1: "id_city" "id_city_name" ].</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF] was found in the following HTML form: [Form 1: "id_city" "id_city_name" "id_distance_0" "id_distance_1" "id_distance_2" "id_distance_3" "id_distance_4" "id_distance_5" "id_distance_6" ].</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
@@ -1101,20 +1129,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/static/vendor/bootstrap-4.3.1/bootstrap.min.e1d98d47689e.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">eVal</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/static/vendor/tarteaucitron/tarteaucitron.724a7484b65b.js</td>
             </tr>
               
@@ -1129,21 +1143,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/static/vendor/jquery-ui-1.12.1/jquery-ui.min.525832369e2a.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">evAl</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">4</td>
+                <td width="20%">Instances</td><td width="80%">2</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1170,14 +1170,14 @@ ZAP Scanning Report
   
   
             <tr height="24" class="risk-low">
-                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Feature Policy Header Not Set</th>
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Incomplete or No Cache-control Header Set</th>
             </tr>
               
   
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>Feature Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Feature Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p></td>
+                <td width="20%">Description</td><td width="80%"><p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content.</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
@@ -1186,21 +1186,15 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/stats/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/password/reset/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
             </tr>
               
-  
-  
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/'%20+%20url%20+%20'</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
             </tr>
               
   
@@ -1213,54 +1207,8 @@ ZAP Scanning Report
                 <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
             </tr>
               
-  
-  
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/sitemap.xml</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/robots.txt</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/search/prescribers</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/login/?account_type=siae</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
             </tr>
               
   
@@ -1273,83 +1221,6 @@ ZAP Scanning Report
                 <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
             </tr>
               
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/login/?account_type=job_seeker</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/signup/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">11</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p>Ensure that your web server, application server, load balancer, etc. is configured to set the Feature-Policy header.</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">16</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">WASC Id</td><td width="80%">15</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Source ID</td><td width="80%">3</td>
-            </tr>
-            
-        </table>
-        <div class="spacer"></div>
-        <table width="100%" class="results">
-              
-  
-  
-  
-            <tr height="24" class="risk-low">
-                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Incomplete or No Cache-control and Pragma HTTP Header Set</th>
-            </tr>
-              
-  
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>The cache-control and pragma HTTP header have not been set properly or are missing allowing the browser and proxies to cache content.</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/stats/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
             </tr>
@@ -1357,35 +1228,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/login/?account_type=job_seeker</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/login/?account_type=siae</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/search/employers/results?city&amp;city_name=ZAP</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1413,7 +1256,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/static/css/itou.aed262983490.css</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/signup/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1422,10 +1265,6 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=315360000</td>
             </tr>
               
   
@@ -1449,6 +1288,139 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/stats/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/login/?account_type=siae</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/login/?account_type=job_seeker</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">11</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">525</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Permissions Policy Header Not Set</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/'%20+%20url%20+%20'</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/login/?account_type=job_seeker</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/signup/</td>
             </tr>
               
@@ -1456,22 +1428,54 @@ ZAP Scanning Report
                 <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
             </tr>
               
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
-            </tr>
-              
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/login/?account_type=prescriber</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/search/prescribers</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
             </tr>
               
+  
+  
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/stats/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/login/?account_type=siae</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/robots.txt</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
             </tr>
               
   
@@ -1484,26 +1488,14 @@ ZAP Scanning Report
                 <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
             </tr>
               
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
-            </tr>
-              
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/static/vendor/jquery-ui-1.12.1/jquery-ui.min.03b4df74a362.css</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/login/?account_type=prescriber</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=315360000</td>
             </tr>
               
   
@@ -1513,19 +1505,19 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p>Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate; and that the pragma HTTP header is set with no-cache.</p></td>
+                <td width="20%">Solution</td><td width="80%"><p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p></td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p></td>
+                <td width="20%">Reference</td><td width="80%"><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p></td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">525</td>
+                <td width="20%">CWE Id</td><td width="80%">693</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">WASC Id</td><td width="80%">13</td>
+                <td width="20%">WASC Id</td><td width="80%">15</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1556,7 +1548,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/static/vendor/jquery-3.4.1/jquery.min.220afd743d9e.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/static/css/itou.f968b0549921.css</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1566,7 +1558,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/static/css/itou.aed262983490.css</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/static/vendor/jquery-3.4.1/jquery.min.220afd743d9e.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1587,16 +1579,6 @@ ZAP Scanning Report
   
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/static/js/logout.7b285c03f082.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/static/js/configure_jobs.3b689087a4c6.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1666,6 +1648,16 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/static/js/prevent_multiple_submit.f4f3a0a80166.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/static/vendor/jquery-ui-1.12.1/jquery-ui.min.525832369e2a.js</td>
             </tr>
               
@@ -1688,7 +1680,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">16</td>
+                <td width="20%">CWE Id</td><td width="80%">319</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1751,6 +1743,20 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/static/js/prevent_multiple_submit.f4f3a0a80166.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/static/favicon.b48853d646f6.ico</td>
             </tr>
               
@@ -1766,20 +1772,6 @@ ZAP Scanning Report
   
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/static/vendor/jquery-ui-1.12.1/jquery-ui.min.525832369e2a.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/static/js/configure_jobs.3b689087a4c6.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1821,7 +1813,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/static/css/itou.aed262983490.css</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/static/css/itou.f968b0549921.css</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1910,7 +1902,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">16</td>
+                <td width="20%">CWE Id</td><td width="80%">693</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1945,20 +1937,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/stats/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">NRFapjFQVBlQhKoCYlHwVnyCFmIpYsAPYPEGSjyWBLPNb0rAdil2WJ6dGwbOmSCy</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/robots.txt</td>
             </tr>
               
@@ -1967,21 +1945,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">F8axJAuOsDbfI7ynq4MwQferTBIWp80IDyAcSk54B0YCGg5OX5AVzskcvvNQ6deE</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/login/?account_type=prescriber</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">NRFapjFQVBlQhKoCYlHwVnyCFmIpYsAPYPEGSjyWBLPNb0rAdil2WJ6dGwbOmSCy</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Mp1in27eTNzFk0vJ1g3TxtQTYijqAro29PVuNIcYrsrbn6GpJ37NxU3vnwYY0s6r</td>
             </tr>
               
   
@@ -1995,105 +1959,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">NRFapjFQVBlQhKoCYlHwVnyCFmIpYsAPYPEGSjyWBLPNb0rAdil2WJ6dGwbOmSCy</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">n4AfZPT6P2OiKeFTzWKVqYBQs6WC9iylMPd33QsYVDyTL7FyYF5FW10cNVluGAre</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/'%20+%20url%20+%20'</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">NRFapjFQVBlQhKoCYlHwVnyCFmIpYsAPYPEGSjyWBLPNb0rAdil2WJ6dGwbOmSCy</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/signup/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">NRFapjFQVBlQhKoCYlHwVnyCFmIpYsAPYPEGSjyWBLPNb0rAdil2WJ6dGwbOmSCy</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/search/prescribers</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">NRFapjFQVBlQhKoCYlHwVnyCFmIpYsAPYPEGSjyWBLPNb0rAdil2WJ6dGwbOmSCy</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/login/?account_type=siae</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">NRFapjFQVBlQhKoCYlHwVnyCFmIpYsAPYPEGSjyWBLPNb0rAdil2WJ6dGwbOmSCy</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/login/?account_type=job_seeker</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">NRFapjFQVBlQhKoCYlHwVnyCFmIpYsAPYPEGSjyWBLPNb0rAdil2WJ6dGwbOmSCy</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">NRFapjFQVBlQhKoCYlHwVnyCFmIpYsAPYPEGSjyWBLPNb0rAdil2WJ6dGwbOmSCy</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">KZoqSW7QVRPdzRSWFT06RePdhDpz8eAZAorihDwDNh0GY8E6eFtuJb8l4mIQG3XK</td>
             </tr>
               
   
@@ -2107,7 +1973,133 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">NRFapjFQVBlQhKoCYlHwVnyCFmIpYsAPYPEGSjyWBLPNb0rAdil2WJ6dGwbOmSCy</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Mp1in27eTNzFk0vJ1g3TxtQTYijqAro29PVuNIcYrsrbn6GpJ37NxU3vnwYY0s6r</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/search/prescribers</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Mp1in27eTNzFk0vJ1g3TxtQTYijqAro29PVuNIcYrsrbn6GpJ37NxU3vnwYY0s6r</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/login/?account_type=prescriber</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Mp1in27eTNzFk0vJ1g3TxtQTYijqAro29PVuNIcYrsrbn6GpJ37NxU3vnwYY0s6r</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/login/?account_type=job_seeker</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Mp1in27eTNzFk0vJ1g3TxtQTYijqAro29PVuNIcYrsrbn6GpJ37NxU3vnwYY0s6r</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/stats/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Mp1in27eTNzFk0vJ1g3TxtQTYijqAro29PVuNIcYrsrbn6GpJ37NxU3vnwYY0s6r</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">yd4TI1xnAHBkvGdkMMMrvyr7A76cL4udtGl4bFEC2yzwauZTDM4PkXUvUu8Ie4nX</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/'%20+%20url%20+%20'</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Mp1in27eTNzFk0vJ1g3TxtQTYijqAro29PVuNIcYrsrbn6GpJ37NxU3vnwYY0s6r</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Mp1in27eTNzFk0vJ1g3TxtQTYijqAro29PVuNIcYrsrbn6GpJ37NxU3vnwYY0s6r</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/signup/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Mp1in27eTNzFk0vJ1g3TxtQTYijqAro29PVuNIcYrsrbn6GpJ37NxU3vnwYY0s6r</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/login/?account_type=siae</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Mp1in27eTNzFk0vJ1g3TxtQTYijqAro29PVuNIcYrsrbn6GpJ37NxU3vnwYY0s6r</td>
             </tr>
               
   
@@ -2121,7 +2113,8 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>5\x0011Z�1PT\x0019P��\x0002bQ�V|�\x0016b)b�\x000f`�\x0006J&lt;�\x0004��oJ�v)vX��\x001b\x0006Ι �</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>2�b�n�L�œK��
+���\x0013b(�\x0002�6��n4�\x0018��۟��'~��M�\x0006\x0018�Ϋ</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
@@ -2994,6 +2987,20 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/search/employers/results?city&amp;city_name=ZAP&amp;distance=5&amp;kinds=EI</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">kinds</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/accounts/login/?account_type=job_seeker</td>
             </tr>
               
@@ -3008,29 +3015,15 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/signup/job_seeker</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/search/employers/results?city&amp;city_name=ZAP&amp;distance=5&amp;kinds=EI</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">POST</td>
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">last_name</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/signup/job_seeker</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">POST</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">password2</td>
+                <td width="20%" class="indent2">Parameter</td><td width="80%">kinds</td>
             </tr>
               
   
@@ -3050,29 +3043,15 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/signup/job_seeker</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/search/employers/results?city&amp;city_name=ZAP&amp;distance=5&amp;kinds=EI</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">POST</td>
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">password1</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/signup/job_seeker</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">POST</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">first_name</td>
+                <td width="20%" class="indent2">Parameter</td><td width="80%">city_name</td>
             </tr>
               
   
@@ -3087,20 +3066,6 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Parameter</td><td width="80%">account_type</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/signup/job_seeker</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">POST</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">email</td>
             </tr>
               
   
@@ -3121,6 +3086,20 @@ ZAP Scanning Report
   
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/search/employers/results?city&amp;city_name=ZAP</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">city_name</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/search/prescribers/results?city&amp;city_name=ZAP</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -3162,21 +3141,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://emplois.inclusion.beta.gouv.fr/search/prescribers/results?city&amp;city_name=ZAP&amp;distance=5</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">city_name</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">14</td>
+                <td width="20%">Instances</td><td width="80%">12</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
