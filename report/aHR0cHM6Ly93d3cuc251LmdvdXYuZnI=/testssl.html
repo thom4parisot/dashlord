@@ -21,11 +21,11 @@
 ###########################################################</span>
 
  Using &quot;OpenSSL 1.0.2-chacha (1.0.2k-dev)&quot; [~183 ciphers]
- on fv-az292-28:/home/testssl/bin/openssl.Linux.x86_64
+ on fv-az204-719:/home/testssl/bin/openssl.Linux.x86_64
  (built: &quot;Jan 18 17:12:17 2019&quot;, platform: &quot;linux-x86_64&quot;)
 
 
-<span style="color:white;background-color:black;"> Start 2021-06-20 05:05:12        --&gt;&gt; 185.75.143.93:443 (www.snu.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2021-06-21 05:12:07        --&gt;&gt; 185.75.143.93:443 (www.snu.gouv.fr) &lt;&lt;--</span>
 
  rDNS (185.75.143.93):   men-tandem-lb-vip.dedie.ate.info.
  Service detected:       HTTP
@@ -56,23 +56,29 @@
 <span style="text-decoration:underline;font-weight:bold;"> Testing server&apos;s cipher preferences </span>
 
 <span style="font-weight:bold;"> Has server cipher order?     </span><span style="color:#cd00cd;"> Oops: openssl s_client connect problem</span>
-<span style="color:#008817;font-weight:bold;">yes (OK)</span>
-<span style="font-weight:bold;"> Negotiated protocol          </span><span style="color:#008817;font-weight:bold;">TLSv1.2</span>
-<span style="font-weight:bold;"> Negotiated cipher            </span><span style="color:#008817;font-weight:bold;">ECDHE-RSA-AES256-GCM-SHA384</span>, <span style="color:#008817;">256 bit ECDH (P-256)</span><span style="color:#cd00cd;"> -- inconclusive test, matching cipher in list missing</span>, better see below
-<span style="font-weight:bold;"> Cipher per protocol</span>
+<span style="color:#cd00cd;">no matching cipher in this list found (pls report this): </span>DHE-RSA-SEED-SHA:SEED-SHA:DES-CBC3-SHA:RC4-MD5:DES-CBC-SHA:RC4-SHA:AES128-SHA:AES128-SHA256:AES256-SHA:ECDHE-RSA-AES128-SHA:DHE-RSA-AES128-SHA:DHE-RSA-AES256-SHA:ECDH-RSA-DES-CBC3-SHA:ECDH-RSA-AES128-SHA:ECDH-RSA-AES256-SHA:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-SHA256:DHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:DHE-DSS-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:AES256-SHA256:ECDHE-RSA-DES-CBC3-SHA:ECDHE-RSA-AES128-SHA256:AES256-GCM-SHA384:AES128-GCM-SHA256:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-SHA256:ADH-AES256-GCM-SHA384:AECDH-AES128-SHA:ECDHE-RSA-RC4-SHA:ECDHE-ECDSA-AES128-SHA  . 
 
-Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Cipher Suite Name (IANA/RFC)
------------------------------------------------------------------------------------------------------------------------------
-<u>SSLv2</u>
- - 
-<u>SSLv3</u>
- - 
-<u>TLSv1</u> (server order)
-<u>TLSv1.1</u> (server order)
-<u>TLSv1.2</u> (server order)
+<span style="text-decoration:underline;font-weight:bold;"> Testing robust forward secrecy (FS)</span><u> -- omitting Null Authentication/Encryption, 3DES, RC4 </u>
 
-<span style="color:#be32d0;font-weight:bold;">Fatal error: repeated openssl s_client connect problem, doesn&apos;t make sense to continue</span>
-Consider increasing MAX_OSSL_FAIL (currently: 2)
+
+<span style="color:#008817;"> FS is offered (OK) </span>          ECDHE-RSA-AES256-GCM-SHA384
+                              ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA 
+<span style="font-weight:bold;"> Elliptic curves offered:     </span><span style="color:#008817;">secp256k1</span> <span style="color:#008817;">prime256v1</span> <span style="color:#008817;">secp384r1</span> <span style="color:#008817;">secp521r1</span> 
+
+<span style="color:#cd00cd;"> Oops: TCP connect problem</span>
+
+<span style="color:#cd00cd;">Unable to open a socket to 185.75.143.93:443. </span>
+<span style="text-decoration:underline;font-weight:bold;"> Testing server defaults (Server Hello) </span>
+
+<span style="font-weight:bold;"> TLS extensions (standard)    </span>&quot;server name/#0&quot; &quot;renegotiation info/#65281&quot;
+                              &quot;EC point formats/#11&quot; &quot;heartbeat/#15&quot;
+                              &quot;next protocol/#13172&quot;
+<span style="font-weight:bold;"> Session Ticket RFC 5077 hint </span>no -- no lifetime advertised
+<span style="font-weight:bold;"> SSL Session ID support       </span>yes
+<span style="font-weight:bold;"> Session Resumption           </span>Tickets no, <span style="color:#cd00cd;">ID resumption test failed</span>
+<span style="font-weight:bold;"> TLS clock skew</span>               
+<span style="color:#be32d0;font-weight:bold;">Fatal error: repeated TCP connect problems, giving up</span>
+Consider increasing MAX_SOCKET_FAIL (currently: 2)
 
 </pre>
 </body>
