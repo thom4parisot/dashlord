@@ -81,7 +81,7 @@ ZAP Scanning Report
         <p>
 </p>
         <h3 class="left-header">Summary of Alerts</h3>
-        <h3 class="time-stamp">Generated on Wed, 23 Jun 2021 05:55:11</h3>
+        <h3 class="time-stamp">Generated on Thu, 24 Jun 2021 06:01:35</h3>
         <table width="45%" class="summary">
             <tr bgcolor="#666666">
                 <th width="45%" height="24">Risk 
@@ -95,7 +95,7 @@ ZAP Scanning Report
                 <td><a href="#medium">Medium</a></td><td align="center">2</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#low">Low</a></td><td align="center">5</td>
+                <td><a href="#low">Low</a></td><td align="center">6</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td><a href="#info">Informational</a></td><td align="center">6</td>
@@ -114,10 +114,13 @@ ZAP Scanning Report
                 <td>X-Frame-Options Header Not Set</td><td align="center">Medium</td><td align="center">1</td>
             </tr>
             <tr bgcolor="#e8e8e8">
+                <td>Dangerous JS Functions</td><td align="center">Low</td><td align="center">1</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
                 <td>Incomplete or No Cache-control Header Set</td><td align="center">Low</td><td align="center">1</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Permissions Policy Header Not Set</td><td align="center">Low</td><td align="center">4</td>
+                <td>Permissions Policy Header Not Set</td><td align="center">Low</td><td align="center">5</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Server Leaks Version Information via "Server" HTTP Response Header Field</td><td align="center">Low</td><td align="center">10</td>
@@ -274,6 +277,63 @@ ZAP Scanning Report
   
   
             <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Low)</th><th width="80%">Dangerous JS Functions</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/main.ebef2604b1f9a0d1b0e1.js?1804062321</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">bypassSecurityTrustHtml</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">1</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>See the references for security advice on the use of these functions.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://angular.io/guide/security</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">749</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
                 <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Incomplete or No Cache-control Header Set</th>
             </tr>
               
@@ -365,7 +425,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/runtime.0e49e2b53282f40c8925.js?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/main.ebef2604b1f9a0d1b0e1.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -375,7 +435,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.a42ac12c6ee2b9d72842.js?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/runtime.7b63b9fd40098a2e8207.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -385,7 +445,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills-es5.0489c6f3b351638d3315.js?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills-es5.c0df479d281108d9c97f.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -395,7 +455,17 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">4</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.76df93537eb1aeb8b947.js?1804062321</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">5</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -442,7 +512,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.76df93537eb1aeb8b947.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -450,119 +520,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">nginx/1.14.2</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/runtime.0e49e2b53282f40c8925.js?1744022821</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">nginx/1.14.2</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/styles.6bc20a018e41c0bd56a9.css?1744022821</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">nginx/1.14.2</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">nginx/1.14.2</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/sitemap.xml</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">nginx/1.14.2</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/assets/icons/icon.png</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">nginx/1.14.2</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/manifest.webmanifest</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">nginx/1.14.2</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills-es5.0489c6f3b351638d3315.js?1744022821</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">nginx/1.14.2</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.a42ac12c6ee2b9d72842.js?1744022821</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">nginx/1.14.2</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">nginx/1.21.0</td>
             </tr>
               
   
@@ -576,7 +534,119 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">nginx/1.14.2</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">nginx/1.21.0</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">nginx/1.21.0</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/assets/icons/icon.png</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">nginx/1.21.0</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">nginx/1.21.0</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills-es5.c0df479d281108d9c97f.js?1804062321</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">nginx/1.21.0</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/styles.876b850bb6af730fb008.css?1804062321</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">nginx/1.21.0</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">nginx/1.21.0</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/manifest.webmanifest</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">nginx/1.21.0</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/runtime.7b63b9fd40098a2e8207.js?1804062321</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">nginx/1.21.0</td>
             </tr>
               
   
@@ -629,17 +699,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills-es5.0489c6f3b351638d3315.js?1744022821</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.a42ac12c6ee2b9d72842.js?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/runtime.7b63b9fd40098a2e8207.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -669,7 +729,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/main.6745d4ba5d51cb8af4f5.js?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.76df93537eb1aeb8b947.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -679,7 +739,17 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/runtime.0e49e2b53282f40c8925.js?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/styles.876b850bb6af730fb008.css?1804062321</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills-es5.c0df479d281108d9c97f.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -699,7 +769,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/styles.6bc20a018e41c0bd56a9.css?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/main.ebef2604b1f9a0d1b0e1.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -784,7 +854,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/runtime.0e49e2b53282f40c8925.js?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/runtime.7b63b9fd40098a2e8207.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -798,7 +868,35 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/main.6745d4ba5d51cb8af4f5.js?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/main.ebef2604b1f9a0d1b0e1.js?1804062321</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/styles.876b850bb6af730fb008.css?1804062321</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills-es5.c0df479d281108d9c97f.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -826,35 +924,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.a42ac12c6ee2b9d72842.js?1744022821</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills-es5.0489c6f3b351638d3315.js?1744022821</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/styles.6bc20a018e41c0bd56a9.css?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.76df93537eb1aeb8b947.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -922,7 +992,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/main.6745d4ba5d51cb8af4f5.js?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/main.ebef2604b1f9a0d1b0e1.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -990,7 +1060,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.a42ac12c6ee2b9d72842.js?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.76df93537eb1aeb8b947.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1004,7 +1074,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills-es5.0489c6f3b351638d3315.js?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/main.ebef2604b1f9a0d1b0e1.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1018,7 +1088,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/main.6745d4ba5d51cb8af4f5.js?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills-es5.c0df479d281108d9c97f.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1086,7 +1156,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills-es5.0489c6f3b351638d3315.js?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills-es5.c0df479d281108d9c97f.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1100,7 +1170,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.a42ac12c6ee2b9d72842.js?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.76df93537eb1aeb8b947.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1122,7 +1192,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="runtime.0e49e2b53282f40c8925.js?1744022821" defer&gt;&lt;/script&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="runtime.7b63b9fd40098a2e8207.js?1804062321" defer&gt;&lt;/script&gt;</td>
             </tr>
               
   
@@ -1174,7 +1244,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.a42ac12c6ee2b9d72842.js?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/runtime.7b63b9fd40098a2e8207.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1188,7 +1258,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills-es5.0489c6f3b351638d3315.js?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.76df93537eb1aeb8b947.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1202,7 +1272,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/runtime.0e49e2b53282f40c8925.js?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/styles.876b850bb6af730fb008.css?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1216,7 +1286,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/styles.6bc20a018e41c0bd56a9.css?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills-es5.c0df479d281108d9c97f.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1400,62 +1470,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.a42ac12c6ee2b9d72842.js?1744022821</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">1103515245</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.a42ac12c6ee2b9d72842.js?1744022821</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">94906265</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.a42ac12c6ee2b9d72842.js?1744022821</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2146823252</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.a42ac12c6ee2b9d72842.js?1744022821</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">1073741823</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/</td>
             </tr>
               
@@ -1464,27 +1478,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">1744022821</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">1804062321</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.a42ac12c6ee2b9d72842.js?1744022821</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">62425156</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.a42ac12c6ee2b9d72842.js?1744022821</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.76df93537eb1aeb8b947.js?1804062321</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1498,6 +1498,76 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.76df93537eb1aeb8b947.js?1804062321</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">94906265</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.76df93537eb1aeb8b947.js?1804062321</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">62425156</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.76df93537eb1aeb8b947.js?1804062321</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">1103515245</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.76df93537eb1aeb8b947.js?1804062321</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2146823252</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.76df93537eb1aeb8b947.js?1804062321</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">1073741823</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%">Instances</td><td width="80%">7</td>
             </tr>
               
@@ -1506,7 +1576,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>1103515245, which evaluates to: 2004-12-20 04:00:45</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>1804062321, which evaluates to: 2027-03-03 08:25:21</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
