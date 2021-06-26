@@ -81,7 +81,7 @@ ZAP Scanning Report
         <p>
 </p>
         <h3 class="left-header">Summary of Alerts</h3>
-        <h3 class="time-stamp">Generated on Fri, 25 Jun 2021 03:48:13</h3>
+        <h3 class="time-stamp">Generated on Sat, 26 Jun 2021 03:43:34</h3>
         <table width="45%" class="summary">
             <tr bgcolor="#666666">
                 <th width="45%" height="24">Risk 
@@ -92,7 +92,7 @@ ZAP Scanning Report
                 <td><a href="#high">High</a></td><td align="center">0</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#medium">Medium</a></td><td align="center">7</td>
+                <td><a href="#medium">Medium</a></td><td align="center">8</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td><a href="#low">Low</a></td><td align="center">5</td>
@@ -108,10 +108,13 @@ ZAP Scanning Report
                 <th width="60%" height="24">Name</th><th width="20%" align="center">Risk Level</th><th width="20%" align="center">Number of Instances</th>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>CSP: style-src unsafe-inline</td><td align="center">Medium</td><td align="center">4</td>
+                <td>CSP: script-src unsafe-inline</td><td align="center">Medium</td><td align="center">3</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>CSP: Wildcard Directive</td><td align="center">Medium</td><td align="center">4</td>
+                <td>CSP: style-src unsafe-inline</td><td align="center">Medium</td><td align="center">3</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>CSP: Wildcard Directive</td><td align="center">Medium</td><td align="center">3</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Reverse Tabnabbing</td><td align="center">Medium</td><td align="center">11</td>
@@ -132,7 +135,7 @@ ZAP Scanning Report
                 <td>Absence of Anti-CSRF Tokens</td><td align="center">Low</td><td align="center">2</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>CSP: Notices</td><td align="center">Low</td><td align="center">4</td>
+                <td>CSP: Notices</td><td align="center">Low</td><td align="center">3</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Dangerous JS Functions</td><td align="center">Low</td><td align="center">11</td>
@@ -174,6 +177,95 @@ ZAP Scanning Report
   
   
             <tr height="24" class="risk-medium">
+                <th width="20%"><a name="medium"></a>Medium (Medium)</th><th width="80%">CSP: script-src unsafe-inline</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>script-src includes unsafe-inline.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://github.com https://fonts.gstatic.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://www.ssa.gov https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.ssa.gov https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-lQ6vpLjgHIVF5GIq+XlE4A=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net www.pagespeed-mod.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-lQ6vpLjgHIVF5GIq+XlE4A=='; frame-src 'self' stats.data.gouv.fr browser.sentry-cdn.com cdn.jsdelivr.net https://bid.g.doubleclick.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://github.com https://fonts.gstatic.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://www.ssa.gov https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.ssa.gov https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-hvAlWubGZYrr/0l5PeEekA=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net www.pagespeed-mod.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-hvAlWubGZYrr/0l5PeEekA=='; frame-src 'self' stats.data.gouv.fr browser.sentry-cdn.com cdn.jsdelivr.net https://bid.g.doubleclick.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://github.com https://fonts.gstatic.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://www.ssa.gov https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.ssa.gov https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-/Ttbe1/Ur7r7me1cqpvMKw=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net www.pagespeed-mod.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-/Ttbe1/Ur7r7me1cqpvMKw=='; frame-src 'self' stats.data.gouv.fr browser.sentry-cdn.com cdn.jsdelivr.net https://bid.g.doubleclick.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">3</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">693</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">15</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-medium">
                 <th width="20%"><a name="medium"></a>Medium (Medium)</th><th width="80%">CSP: style-src unsafe-inline</th>
             </tr>
               
@@ -198,21 +290,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://fonts.gstatic.com https://github.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.ssa.gov; script-src 'self' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com https://www.ssa.gov 'nonce-HXMGUTMjYtdh+y9GfvXSJQ=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-HXMGUTMjYtdh+y9GfvXSJQ=='; frame-src 'self' stats.data.gouv.fr https://bid.g.doubleclick.net browser.sentry-cdn.com cdn.jsdelivr.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://fonts.gstatic.com https://github.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.ssa.gov; script-src 'self' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com https://www.ssa.gov 'nonce-Ak7k/fUah+/SPXaiPWHFLw=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-Ak7k/fUah+/SPXaiPWHFLw=='; frame-src 'self' stats.data.gouv.fr https://bid.g.doubleclick.net browser.sentry-cdn.com cdn.jsdelivr.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://github.com https://fonts.gstatic.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://www.ssa.gov https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.ssa.gov https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-hvAlWubGZYrr/0l5PeEekA=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net www.pagespeed-mod.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-hvAlWubGZYrr/0l5PeEekA=='; frame-src 'self' stats.data.gouv.fr browser.sentry-cdn.com cdn.jsdelivr.net https://bid.g.doubleclick.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
             </tr>
               
   
@@ -226,13 +304,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://fonts.gstatic.com https://github.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.ssa.gov; script-src 'self' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com https://www.ssa.gov 'nonce-bF/VqxitYUNC0sQuKG29pA=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-bF/VqxitYUNC0sQuKG29pA=='; frame-src 'self' stats.data.gouv.fr https://bid.g.doubleclick.net browser.sentry-cdn.com cdn.jsdelivr.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://github.com https://fonts.gstatic.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://www.ssa.gov https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.ssa.gov https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-lQ6vpLjgHIVF5GIq+XlE4A=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net www.pagespeed-mod.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-lQ6vpLjgHIVF5GIq+XlE4A=='; frame-src 'self' stats.data.gouv.fr browser.sentry-cdn.com cdn.jsdelivr.net https://bid.g.doubleclick.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/e/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -240,13 +318,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://fonts.gstatic.com https://github.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.ssa.gov; script-src 'self' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com https://www.ssa.gov 'nonce-AsL9vHeG7O+kOLbldK2OKg=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-AsL9vHeG7O+kOLbldK2OKg=='; frame-src 'self' stats.data.gouv.fr https://bid.g.doubleclick.net browser.sentry-cdn.com cdn.jsdelivr.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://github.com https://fonts.gstatic.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://www.ssa.gov https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.ssa.gov https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-/Ttbe1/Ur7r7me1cqpvMKw=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net www.pagespeed-mod.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-/Ttbe1/Ur7r7me1cqpvMKw=='; frame-src 'self' stats.data.gouv.fr browser.sentry-cdn.com cdn.jsdelivr.net https://bid.g.doubleclick.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">4</td>
+                <td width="20%">Instances</td><td width="80%">3</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -293,34 +371,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://fonts.gstatic.com https://github.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.ssa.gov; script-src 'self' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com https://www.ssa.gov 'nonce-bF/VqxitYUNC0sQuKG29pA=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-bF/VqxitYUNC0sQuKG29pA=='; frame-src 'self' stats.data.gouv.fr https://bid.g.doubleclick.net browser.sentry-cdn.com cdn.jsdelivr.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/e/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://fonts.gstatic.com https://github.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.ssa.gov; script-src 'self' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com https://www.ssa.gov 'nonce-AsL9vHeG7O+kOLbldK2OKg=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-AsL9vHeG7O+kOLbldK2OKg=='; frame-src 'self' stats.data.gouv.fr https://bid.g.doubleclick.net browser.sentry-cdn.com cdn.jsdelivr.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr</td>
             </tr>
               
@@ -329,7 +379,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://fonts.gstatic.com https://github.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.ssa.gov; script-src 'self' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com https://www.ssa.gov 'nonce-Ak7k/fUah+/SPXaiPWHFLw=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-Ak7k/fUah+/SPXaiPWHFLw=='; frame-src 'self' stats.data.gouv.fr https://bid.g.doubleclick.net browser.sentry-cdn.com cdn.jsdelivr.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://github.com https://fonts.gstatic.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://www.ssa.gov https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.ssa.gov https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-/Ttbe1/Ur7r7me1cqpvMKw=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net www.pagespeed-mod.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-/Ttbe1/Ur7r7me1cqpvMKw=='; frame-src 'self' stats.data.gouv.fr browser.sentry-cdn.com cdn.jsdelivr.net https://bid.g.doubleclick.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
             </tr>
               
   
@@ -343,13 +393,27 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://fonts.gstatic.com https://github.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.ssa.gov; script-src 'self' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com https://www.ssa.gov 'nonce-HXMGUTMjYtdh+y9GfvXSJQ=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-HXMGUTMjYtdh+y9GfvXSJQ=='; frame-src 'self' stats.data.gouv.fr https://bid.g.doubleclick.net browser.sentry-cdn.com cdn.jsdelivr.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://github.com https://fonts.gstatic.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://www.ssa.gov https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.ssa.gov https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-hvAlWubGZYrr/0l5PeEekA=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net www.pagespeed-mod.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-hvAlWubGZYrr/0l5PeEekA=='; frame-src 'self' stats.data.gouv.fr browser.sentry-cdn.com cdn.jsdelivr.net https://bid.g.doubleclick.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">4</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://github.com https://fonts.gstatic.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://www.ssa.gov https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.ssa.gov https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-lQ6vpLjgHIVF5GIq+XlE4A=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net www.pagespeed-mod.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-lQ6vpLjgHIVF5GIq+XlE4A=='; frame-src 'self' stats.data.gouv.fr browser.sentry-cdn.com cdn.jsdelivr.net https://bid.g.doubleclick.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">3</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1526,7 +1590,7 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/stats?commit=Chercher&amp;end_date=2021-06-25&amp;start_date=2020-12-01&amp;territory=126</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/stats?commit=Chercher&amp;end_date=2021-06-26&amp;start_date=2020-12-01&amp;territory=126</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1608,20 +1672,6 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://fonts.gstatic.com https://github.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.ssa.gov; script-src 'self' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com https://www.ssa.gov 'nonce-HXMGUTMjYtdh+y9GfvXSJQ=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-HXMGUTMjYtdh+y9GfvXSJQ=='; frame-src 'self' stats.data.gouv.fr https://bid.g.doubleclick.net browser.sentry-cdn.com cdn.jsdelivr.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr</td>
             </tr>
               
@@ -1630,21 +1680,7 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://fonts.gstatic.com https://github.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.ssa.gov; script-src 'self' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com https://www.ssa.gov 'nonce-Ak7k/fUah+/SPXaiPWHFLw=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-Ak7k/fUah+/SPXaiPWHFLw=='; frame-src 'self' stats.data.gouv.fr https://bid.g.doubleclick.net browser.sentry-cdn.com cdn.jsdelivr.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/e/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://fonts.gstatic.com https://github.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.ssa.gov; script-src 'self' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com https://www.ssa.gov 'nonce-AsL9vHeG7O+kOLbldK2OKg=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-AsL9vHeG7O+kOLbldK2OKg=='; frame-src 'self' stats.data.gouv.fr https://bid.g.doubleclick.net browser.sentry-cdn.com cdn.jsdelivr.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://github.com https://fonts.gstatic.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://www.ssa.gov https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.ssa.gov https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-/Ttbe1/Ur7r7me1cqpvMKw=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net www.pagespeed-mod.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-/Ttbe1/Ur7r7me1cqpvMKw=='; frame-src 'self' stats.data.gouv.fr browser.sentry-cdn.com cdn.jsdelivr.net https://bid.g.doubleclick.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
             </tr>
               
   
@@ -1658,13 +1694,27 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://fonts.gstatic.com https://github.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.ssa.gov; script-src 'self' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com https://www.ssa.gov 'nonce-bF/VqxitYUNC0sQuKG29pA=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-bF/VqxitYUNC0sQuKG29pA=='; frame-src 'self' stats.data.gouv.fr https://bid.g.doubleclick.net browser.sentry-cdn.com cdn.jsdelivr.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://github.com https://fonts.gstatic.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://www.ssa.gov https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.ssa.gov https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-hvAlWubGZYrr/0l5PeEekA=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net www.pagespeed-mod.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-hvAlWubGZYrr/0l5PeEekA=='; frame-src 'self' stats.data.gouv.fr browser.sentry-cdn.com cdn.jsdelivr.net https://bid.g.doubleclick.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">4</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; base-uri 'self'; font-src 'self' data: https://github.com https://fonts.gstatic.com; img-src 'self' data: https://voxusagers.numerique.gouv.fr https://stats.data.gouv.fr https://www.google.com https://www.google.fr https://googleads.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://www.gstatic.com https://adservice.google.com; object-src 'none'; style-src 'self' 'unsafe-inline' https://www.ssa.gov https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' blob: https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net https://www.ssa.gov https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-lQ6vpLjgHIVF5GIq+XlE4A=='; script-src-elem 'self' https://browser.sentry-cdn.com sentry.io https://stats.data.gouv.fr https://cdn.jsdelivr.net www.pagespeed-mod.com https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com 'nonce-lQ6vpLjgHIVF5GIq+XlE4A=='; frame-src 'self' stats.data.gouv.fr browser.sentry-cdn.com cdn.jsdelivr.net https://bid.g.doubleclick.net; connect-src 'self' *.sentry.io https://api-adresse.data.gouv.fr/ https://www.google.com https://adservice.google.com; report-uri https://o548798.ingest.sentry.io/api/5747178/security/?sentry_key=d975e83e2bee46cd8b3ca7be531a0a6b</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">3</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2310,7 +2360,7 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/e/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2318,105 +2368,7 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2Fs8PbGbgjanUwujx2IOl8lq43blNc48phKtK4d40K</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/comment_ca_marche</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2BGE6aUWFVa25353wo3MhwWhIvfqDGzLYZfCqMJ55gBZT3Hrs0</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/mon_compte/sign_in</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2B9D8YfM21fETRX7yJ6KGehEWBp5K6RKVqmqnSiwBZeawAuQdpmjh1GbSmbyZny8oTVpWkLXB0rAXG3lh6hSIN5F9Xnj6cr5yEKnR9SyImLeEK4GBRYIV6LQhbxlJlyyvaPqrSIRsiLkSt3</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/aide-entreprises/relance</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2BjUd3WVpr6JP7d8ejO9XN5K0G7njqZ</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">AsZJW86Lw4QuIyItbhy7G2szC9LgvDnz4L</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/aide-entreprises/droit-du-travail</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2BiDc71h1j8lyV24oYVmUtiKs03IJXioccp58is6cW6j0RYA87X</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2BtKmsxhp88YTi7tUgFZdJLAMLukQAxdJHuiAHUR8mRM7hzTITWLATOvWjrySHVMSbkJr6V</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/aide-entreprises/developpement-commercial</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2BySSlBnEBH4QU7Wny7tx2HNYVsi8zZuPucPMz</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2F95aioclEcaz0q6cFn6Y7H69pt3YrW5t3WblCihNTM2pnr</td>
             </tr>
               
   
@@ -2430,13 +2382,13 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">AQyc8dKymBsNZlROLjSayyt4pLxkTgKcLIJZ7U9ukoHn8xd8Gy0cq9dnMqfX6KPGWDkvmGzbLZs54yd6U4cTvguRAZqUGmeuwK4PAVqwG822TVXLcfW8OQKAg7QJtet4jX</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">HUNyAzAFABkrFXF4w92Ac6Of6jH0At3lihoF9q5AcIXul20QTA2Z7eBW57PSoq</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/aide-entreprises/entreprise-en-difficulte</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2444,13 +2396,13 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2Bl6hHkcHds4Cz2gBAjN0zSdt6ARXv7NA76XCndjEkp7xOToJihUpZLQymzGw3M07GH8mFF6jysulbZVBfilXrKz</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2F7im99N29k8QJJKfqPpnkTOW922PWjXDwMXOfTY9tuXJpaUE1WcknpDkk14nVqVVi4VkBMylVkgM5ooUAiLCgATlMEEy6w9OE</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/e/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/aide-entreprises/relance</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2458,7 +2410,63 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2B6ZDwNYaBMnSLBtpBnNlM34Q1yMc145PtVXhWprvkJDu2Yj</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2FKVppkYPeTslDcJwGkjOIPIayILFcjS2VPceBHBY71LXh6fJXvzANhZ8X3</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/comment_ca_marche</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2FufqiSuSv08rQ9lIAFs3aosI5NoTiMG</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/mon_compte/sign_in</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2FEO1TOCcyAtusRtzW0HnT6qUX25IXXYaCe</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/aide-entreprises/droit-du-travail</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2B8lqvzKa31p0Zcwsf6IfYBrRidsgCSFlfQo1BRhufnHhnf7Ej0</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/aide-entreprises/developpement-commercial</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2FznyObStw62VkiXjqAVvaGUiEZlyys8zje</td>
             </tr>
               
   
@@ -2472,7 +2480,49 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2FoTTGnhOCjvdCZCPt7u7fIkPHMXpPEkDLN4OWdHkZpF6iwybadlVA7M5V7oUXpKeFrT4aiIeZtOHs0MtbM</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">XQHPtcoUYXFuJ846e5itEvX8Pzc2DxeGGW9k1QGwd9S1efvK7Qv0CIkNZwjyB0t91MNMShaervvUyrKhaD3LHlzGSA9vuNUFsqFFZFrzcjhxKkHZUU2ZQ2CFj8yO2sooKxW8bhGKC3UuRo9x2zgIcdThBbTT5RxbSMvPmnqxEJMCJ4p6eyfCJNvkx5E2l24EGwXKdp0</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2B4DRVBRKuDBiFBMx93iTJ02VHbUUGIeUEDEVPtj8K</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/aide-entreprises/entreprise-en-difficulte</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2Fp3TxmdbuEm7q9O9z1lEEvZVIR6G7</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">XX49KU3roDKRW88NHj4AmBxAC2YBpLSxjfujMlAAD3tGkRwqwa02CaJuzYReCLzuBRkBM1QWf1d4RT8KsRu</td>
             </tr>
               
   
@@ -2486,7 +2536,7 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>�[&lt;=���6�S\x000b��b\x000e��j�v�5�&lt;�\x0012�+�x�</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>�_yj*\x001c�G\x001a�J�pY�c����wb���u��(�536�z</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
@@ -2532,7 +2582,7 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/aide-entreprises/relance</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2541,6 +2591,20 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">user</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
             </tr>
               
   
@@ -2554,76 +2618,6 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/comment_ca_marche</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/aide-entreprises/relance</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/aide-entreprises/relance</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">user</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/comment_ca_marche</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">user</td>
             </tr>
               
@@ -2639,20 +2633,6 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">user</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/mon_compte/sign_in</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
             </tr>
               
   
@@ -2672,6 +2652,76 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/mon_compte/sign_in</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">user</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/comment_ca_marche</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/aide-entreprises/relance</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/</td>
             </tr>
               
@@ -2686,7 +2736,7 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/comment_ca_marche</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2708,7 +2758,7 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>The following pattern was used: \bUSER\b and was detected in the element starting with: "&lt;script nonce="bF/VqxitYUNC0sQuKG29pA=="&gt;</p><p>//&lt;![CDATA[</p><p>  tarteaucitron.services.google_ads = {</p><p>    "key": "google_ads",</p><p>    "type", see evidence field for the suspicious comment/snippet.</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>The following pattern was used: \bUSER\b and was detected in the element starting with: "&lt;script nonce="JAfY2EX9FaXpA4CamMpabg=="&gt;</p><p>//&lt;![CDATA[</p><p>  tarteaucitron.services.google_ads = {</p><p>    "key": "google_ads",</p><p>    "type", see evidence field for the suspicious comment/snippet.</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
@@ -3396,7 +3446,35 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/stats?commit=Chercher&amp;end_date=2021-06-25&amp;start_date=2020-12-01&amp;territory=126</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/stats?commit=Chercher&amp;end_date=2021-06-26&amp;start_date=2020-12-01&amp;territory=126</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">commit</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/stats?commit=Chercher&amp;end_date=2021-06-26&amp;start_date=2020-12-01&amp;territory=126</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">end_date</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/stats?commit=Chercher&amp;end_date=2021-06-26&amp;start_date=2020-12-01&amp;territory=126</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -3405,20 +3483,6 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Parameter</td><td width="80%">start_date</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/stats?commit=Chercher&amp;end_date=2021-06-25&amp;start_date=2020-12-01&amp;territory=126</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">territory</td>
             </tr>
               
   
@@ -3452,20 +3516,6 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/stats?commit=Chercher&amp;end_date=2021-06-25&amp;start_date=2020-12-01&amp;territory=126</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">commit</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/aide-entreprises/developpement-commercial</td>
             </tr>
               
@@ -3475,20 +3525,6 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Parameter</td><td width="80%">solicitation[full_name]</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/stats?commit=Chercher&amp;end_date=2021-06-25&amp;start_date=2020-12-01&amp;territory=126</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">commit</td>
             </tr>
               
   
@@ -3517,20 +3553,6 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Parameter</td><td width="80%">solicitation[phone_number]</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/stats?commit=Chercher&amp;end_date=2021-06-25&amp;start_date=2020-12-01&amp;territory=126</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">end_date</td>
             </tr>
               
   
@@ -3573,6 +3595,34 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Parameter</td><td width="80%">solicitation[email]</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/stats?commit=Chercher&amp;end_date=2021-06-26&amp;start_date=2020-12-01&amp;territory=126</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">territory</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://place-des-entreprises.beta.gouv.fr/stats?commit=Chercher&amp;end_date=2021-06-26&amp;start_date=2020-12-01&amp;territory=126</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">commit</td>
             </tr>
               
   
@@ -3628,7 +3678,7 @@ h&pound;m&AElig;&aring;\x0019%c&#139;&iquest;&sup3;&ordm;X&Oslash;*n9&Egrave;&Aa
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p><p></p><p>https://place-des-entreprises.beta.gouv.fr/stats?commit=Chercher&amp;end_date=2021-06-25&amp;start_date=2020-12-01&amp;territory=126</p><p></p><p>appears to include user input in: </p><p></p><p>a(n) [input] tag [value] attribute </p><p></p><p>The user input found was:</p><p>start_date=2020-12-01</p><p></p><p>The user-controlled value was:</p><p>2020-12-01</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p><p></p><p>https://place-des-entreprises.beta.gouv.fr/stats?commit=Chercher&amp;end_date=2021-06-26&amp;start_date=2020-12-01&amp;territory=126</p><p></p><p>appears to include user input in: </p><p></p><p>a(n) [input] tag [value] attribute </p><p></p><p>The user input found was:</p><p>commit=Chercher</p><p></p><p>The user-controlled value was:</p><p>chercher</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
