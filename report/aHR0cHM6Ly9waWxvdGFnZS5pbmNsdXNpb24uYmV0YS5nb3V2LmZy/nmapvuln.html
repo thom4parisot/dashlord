@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln pilotage.inclusion.beta.gouv.fr</pre>
-<p class="lead">Mon Jun 28 04:14:47 2021 – Mon Jun 28 04:15:05 2021<br>1 hosts scanned.
+<p class="lead">Tue Jun 29 03:52:07 2021 – Tue Jun 29 03:52:26 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,7 +76,7 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>172.217.2.115</td>
+<td>185.199.110.153</td>
 <td>pilotage.inclusion.beta.gouv.fr</td>
 <td>2</td>
 <td>0</td>
@@ -91,12 +91,12 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#172-217-2-115"><h3 class="panel-title">172.217.2.115 - pilotage.inclusion.beta.gouv.fr</h3></div>
-<div class="panel-body collapse in" id="172-217-2-115">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#185-199-110-153"><h3 class="panel-title">185.199.110.153 - pilotage.inclusion.beta.gouv.fr</h3></div>
+<div class="panel-body collapse in" id="185-199-110-153">
 <h4>Hostnames</h4>
 <ul>
 <li>pilotage.inclusion.beta.gouv.fr (user)</li>
-<li>iad23s72-in-f19.1e100.net (PTR)</li>
+<li>cdn-185-199-110-153.github.com (PTR)</li>
 </ul>
 <h4>Ports</h4>
 <div class="table-responsive"><table class="table table-bordered">
@@ -114,31 +114,103 @@
 <td title="Port">80</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http</td>
-<td title="Product">Google httpd</td>
+<td title="Service">http-proxy</td>
+<td title="Product">Varnish</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  ESF
-  ghs</pre>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:varnish-cache:varnish">cpe:/a:varnish-cache:varnish</a><h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">GitHub.com</pre>
 </td></tr>
 <tr class="success">
 <td title="Port">443</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http</td>
-<td title="Product">Google httpd</td>
+<td title="Service">https</td>
+<td title="Product">GitHub.com</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  ESF
-  ghs</pre>
+  FourOhFourRequest: 
+    HTTP/1.1 404 Not Found
+    Connection: close
+    Content-Length: 9115
+    Server: GitHub.com
+    Content-Type: text/html; charset=utf-8
+    ETag: "5f77c9f3-239b"
+    Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
+    X-GitHub-Request-Id: 32EA:558F:1001DBD:1475C5C:60DA9450
+    Accept-Ranges: bytes
+    Date: Tue, 29 Jun 2021 03:52:24 GMT
+    Via: 1.1 varnish
+    Age: 1192
+    X-Served-By: cache-bwi5068-BWI
+    X-Cache: HIT
+    X-Cache-Hits: 1
+    X-Timer: S1624938745.642754,VS0,VE0
+    Vary: Accept-Encoding
+    X-Fastly-Request-ID: cf957e45cc13a1282003803c299e20a675d12680
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8"&gt;
+    &lt;meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'"&gt;
+    &lt;title&gt;Site not found &amp;middot; GitHub Pages&lt;/title&gt;
+    &lt;style ty
+  GetRequest: 
+    HTTP/1.1 404 Not Found
+    Connection: close
+    Content-Length: 9115
+    Server: GitHub.com
+    Content-Type: text/html; charset=utf-8
+    ETag: "5e6d6862-239b"
+    Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'
+    X-GitHub-Request-Id: 745A:37BA:C988BB:120398F:60DA905F
+    Accept-Ranges: bytes
+    Date: Tue, 29 Jun 2021 03:52:24 GMT
+    Via: 1.1 varnish
+    Age: 2201
+    X-Served-By: cache-bwi5050-BWI
+    X-Cache: HIT
+    X-Cache-Hits: 1
+    X-Timer: S1624938745.583889,VS0,VE1
+    Vary: Accept-Encoding
+    X-Fastly-Request-ID: 5bf89da2fff23b8f86c25e9a1eec353fa78ae920
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8"&gt;
+    &lt;meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'"&gt;
+    &lt;title&gt;Site not found &amp;middot; GitHub Pages&lt;/title&gt;
+    &lt;style typ
+  HTTPOptions: 
+    HTTP/1.1 405 Method Not Allowed
+    Connection: close
+    Content-Length: 131
+    Server: Varnish
+    Retry-After: 0
+    Accept-Ranges: bytes
+    Date: Tue, 29 Jun 2021 03:52:24 GMT
+    Via: 1.1 varnish
+    X-Served-By: cache-bwi5023-BWI
+    X-Cache: MISS
+    X-Cache-Hits: 0
+    X-Timer: S1624938745.626972,VS0,VE0
+    X-Fastly-Request-ID: 7fe3d8dea0063a1a680d207748c29d21f9be5932
+    &lt;html&gt;
+    &lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+    &lt;body bgcolor="white"&gt;
+    &lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;</pre>
+<h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  GitHub.com
+  Varnish</pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -158,21 +230,21 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>172.217.2.115 - pilotage.inclusion.beta.gouv.fr</td>
+<td>185.199.110.153 - pilotage.inclusion.beta.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
-<td>http</td>
-<td>Google httpd</td>
+<td>http-proxy</td>
+<td>Varnish</td>
 <td></td>
-<td></td>
+<td>cpe:/a:varnish-cache:varnish</td>
 <td></td>
 </tr>
 <tr>
-<td>172.217.2.115 - pilotage.inclusion.beta.gouv.fr</td>
+<td>185.199.110.153 - pilotage.inclusion.beta.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
-<td>http</td>
-<td>Google httpd</td>
+<td>https</td>
+<td>GitHub.com</td>
 <td></td>
 <td></td>
 <td></td>
