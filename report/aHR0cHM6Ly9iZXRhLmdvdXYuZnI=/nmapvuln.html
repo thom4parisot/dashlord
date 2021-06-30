@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln beta.gouv.fr</pre>
-<p class="lead">Tue Jun 29 01:09:41 2021 – Tue Jun 29 01:10:05 2021<br>1 hosts scanned.
+<p class="lead">Wed Jun 30 01:12:35 2021 – Wed Jun 30 01:13:08 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -122,48 +122,26 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  FourOhFourRequest: 
-    HTTP/1.0 404 Not Found
-    Date: Tue, 29 Jun 2021 01:09:53 GMT
-    Content-Length: 0
-    Age: 0
-    Server: Netlify
-    X-NF-Request-ID: e3dd310a-c415-4619-9ac7-6694134ff019-235743379
-  GenericLines, RTSPRequest, X11Probe: 
-    HTTP/1.0 400 Invalid HTTP Request
-    Date: Tue, 29 Jun 2021 01:09:53 GMT
-    Server: Netlify
-    Cache-Control: no-store
-    Content-Type: text/html
-    Content-Language: en
-    X-NF-ATS-Version: 94d0900
-    Content-Length: 220
-    &lt;HTML&gt;
-    &lt;HEAD&gt;
-    &lt;TITLE&gt;Bad Request&lt;/TITLE&gt;
-    &lt;/HEAD&gt;
-    &lt;BODY BGCOLOR="white" FGCOLOR="black"&gt;
-    &lt;H1&gt;Bad Request&lt;/H1&gt;
-    &lt;HR&gt;
-    &lt;FONT FACE="Helvetica,Arial"&gt;&lt;B&gt;
-    Description: Could not process this request. 
-    &lt;/B&gt;&lt;/FONT&gt;
-    &lt;HR&gt;
-    &lt;/BODY&gt;
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, Kerberos, RPCCheck, SMBProgNeg, TLSSessionReq, TerminalServerCookie: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Wed, 30 Jun 2021 01:12:53 GMT
+  FourOhFourRequest, HTTPOptions: 
+    HTTP/1.0 400 Bad Request
+    date: Wed, 30 Jun 2021 01:12:47 GMT
+    Missing host header
   GetRequest: 
-    HTTP/1.0 404 Not Found
-    Date: Tue, 29 Jun 2021 01:09:52 GMT
-    Content-Length: 0
-    Age: 0
-    Server: Netlify
-    X-NF-Request-ID: e3dd310a-c415-4619-9ac7-6694134ff019-235743307
-  HTTPOptions: 
-    HTTP/1.0 404 Not Found
-    Date: Tue, 29 Jun 2021 01:09:52 GMT
-    Content-Length: 0
-    Age: 0
-    Server: Netlify
-    X-NF-Request-ID: e3dd310a-c415-4619-9ac7-6694134ff019-235743320</pre>
+    HTTP/1.0 400 Bad Request
+    date: Wed, 30 Jun 2021 01:12:46 GMT
+    Missing host header
+  Help, SSLSessionReq: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Wed, 30 Jun 2021 01:12:52 GMT
+  RTSPRequest, X11Probe: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Wed, 30 Jun 2021 01:12:47 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -179,69 +157,42 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, SSLSessionReq, TerminalServerCookie: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Wed, 30 Jun 2021 01:13:00 GMT
   FourOhFourRequest: 
-    HTTP/1.0 404 Not Found
-    Date: Tue, 29 Jun 2021 01:09:59 GMT
-    Content-Length: 0
-    Age: 0
-    Server: Netlify
-    X-NF-Request-ID: e3dd310a-c415-4619-9ac7-6694134ff019-235744154
-  GenericLines, tor-versions: 
-    HTTP/1.0 400 Invalid HTTP Request
-    Date: Tue, 29 Jun 2021 01:09:59 GMT
-    Server: Netlify
-    Cache-Control: no-store
-    Content-Type: text/html
-    Content-Language: en
-    X-NF-ATS-Version: 94d0900
-    Content-Length: 220
-    &lt;HTML&gt;
-    &lt;HEAD&gt;
-    &lt;TITLE&gt;Bad Request&lt;/TITLE&gt;
-    &lt;/HEAD&gt;
-    &lt;BODY BGCOLOR="white" FGCOLOR="black"&gt;
-    &lt;H1&gt;Bad Request&lt;/H1&gt;
-    &lt;HR&gt;
-    &lt;FONT FACE="Helvetica,Arial"&gt;&lt;B&gt;
-    Description: Could not process this request. 
-    &lt;/B&gt;&lt;/FONT&gt;
-    &lt;HR&gt;
-    &lt;/BODY&gt;
+    HTTP/1.0 400 Bad Request
+    date: Wed, 30 Jun 2021 01:12:54 GMT
+    Missing host header
   GetRequest: 
-    HTTP/1.0 404 Not Found
-    Date: Tue, 29 Jun 2021 01:09:59 GMT
-    Content-Length: 0
-    Age: 0
-    Server: Netlify
-    X-NF-Request-ID: e3dd310a-c415-4619-9ac7-6694134ff019-235744112
+    HTTP/1.0 400 Bad Request
+    date: Wed, 30 Jun 2021 01:12:52 GMT
+    Missing host header
   HTTPOptions: 
-    HTTP/1.0 404 Not Found
-    Date: Tue, 29 Jun 2021 01:09:59 GMT
-    Content-Length: 0
-    Age: 0
-    Server: Netlify
-    X-NF-Request-ID: e3dd310a-c415-4619-9ac7-6694134ff019-235744128
+    HTTP/1.0 400 Bad Request
+    date: Wed, 30 Jun 2021 01:12:53 GMT
+    Missing host header
+  Kerberos: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Wed, 30 Jun 2021 01:13:02 GMT
+  RPCCheck: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Wed, 30 Jun 2021 01:12:59 GMT
   RTSPRequest: 
-    HTTP/1.0 400 Invalid HTTP Request
-    Date: Tue, 29 Jun 2021 01:10:00 GMT
-    Server: Netlify
-    Cache-Control: no-store
-    Content-Type: text/html
-    Content-Language: en
-    X-NF-ATS-Version: 94d0900
-    Content-Length: 220
-    &lt;HTML&gt;
-    &lt;HEAD&gt;
-    &lt;TITLE&gt;Bad Request&lt;/TITLE&gt;
-    &lt;/HEAD&gt;
-    &lt;BODY BGCOLOR="white" FGCOLOR="black"&gt;
-    &lt;H1&gt;Bad Request&lt;/H1&gt;
-    &lt;HR&gt;
-    &lt;FONT FACE="Helvetica,Arial"&gt;&lt;B&gt;
-    Description: Could not process this request. 
-    &lt;/B&gt;&lt;/FONT&gt;
-    &lt;HR&gt;
-    &lt;/BODY&gt;</pre>
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Wed, 30 Jun 2021 01:12:58 GMT
+  SMBProgNeg, TLSSessionReq: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Wed, 30 Jun 2021 01:13:01 GMT
+  tor-versions: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Wed, 30 Jun 2021 01:12:54 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
