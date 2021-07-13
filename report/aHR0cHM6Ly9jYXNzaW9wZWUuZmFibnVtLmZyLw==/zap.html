@@ -1,0 +1,1606 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>ZAP Scanning Report</title>
+        <style>
+body{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #000;
+  font-size: 13px;
+}
+h1{
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px
+}
+h3{
+  font-size: 16px;
+}
+table{
+  border: none;
+  font-size: 13px;
+}
+td, th {
+  padding: 3px 4px;
+  word-break: break-word;
+}
+th{
+  font-weight: bold;
+}
+.results th{
+  text-align: left;
+}
+.spacer{
+  margin: 10px;
+}
+.spacer-lg{
+  margin: 40px;
+}
+.indent1{
+  padding: 4px 20px;
+}
+.indent2{
+  padding: 4px 40px;
+}
+.risk-high{
+  background-color: red;
+  color: #FFF;
+}
+.risk-medium{
+  background-color: orange;
+  color: #FFF;
+}
+.risk-low{
+  background-color: yellow;
+  color: #000;
+}
+.risk-info{
+  background-color: blue;
+  color: #FFF;
+}
+.summary th{
+  color: #FFF;
+}
+.alerts th{
+  color: #FFF;
+}
+.left-header{
+  display: inline-block;
+}
+.time-stamp{
+  float: right;
+}
+</style>
+    </head>
+    <body>
+        <h1>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAABqbAAAamwHdbkbTAAAAB3RJTUUH4QsKDDQPKy6k8AAABxpJREFUWMO9l31sVWcdxz+/55xzbwt9QddJExClvIzNxTKJDZi22oJSbFZpmRb4g8sfhpEIwXQNTKh0NYgiMKIwo5AsdIxdQldGNBN5W2OTFRVcIZE1YwExcXOdc1DK+nLvOc/PP87tC9CWsj98bp6ck3Ofc57v7+37/T3wYGMucBR4F/gK/8exAugAdPXq1bpx40YFekZdHYuP+8PuGP+lAc8CmzIyMtLq6uqora3FcRwAzp49m/7Wv5O95tsNEfyEKvwH9B1V2hT7GnB+PABkhGePAvVA9dy5c6mvr2fp0qX3LOru7iYrK4toSQ1OXhGKohpOiyVQe0NVn9PGFb8iFofGFSMCMMPulwEXgbdXrlxZ3dHRQXt7+4ibA2RmZtLc3Ex/y/O4fg8RMUSMS8RxiRiPqPE+4xrnl07syA3Q+aN5wADlwO1oNPpqQ0NDfl9fH4cPH2bOnDn3dV9VVRWVlVV88vsteNF0XCO4xuA6Bs9xiBgPz/EmueKcIxavHyk/BPjnli1bpm3btu1TZ2hmxkTk8aeYMK8aay1WFVWwqgSqBDYgqQFJGxygccWa4e86IhJpbW39Zk5ODgUFBZ8KwOLFZeyr/wHZs0vw0jMxIqFpAuFt+EOYZ/OrAi41t96dhF8HThcWFnpnzpwhGo0+MIhnamvZs+8AM55uIhn4+Cnrkza8Wqv4NiBhfXwNCgxy3jauuKMKPOCPrpHSU2fOUlJS8sAg8qZP50bGY0xeuIFk4JO0SnIYiMAqSRuQDPyPgsbqh++ugqSsPXGC+WsoLS1lzZqnHxhA40svcfPvfyDNjRARwTOCJ+E0IjgiOGIwRnIkFl97NwBMX9dPvEfLSC+t5cCB/eTk5Ix78ylTplBcXMxDjy3EweIZISKSqoxwcyOCYwRXHETkuSEAsTjE4kVGTLrjpdP7p33U1NTQ2dk5bgCbN28Ow7BoA8YmcVOWR1KWuyKIgEEwYjBiJhN75Ushr15qRp747g9dcRZ4RtCuf3HhdBMlpQuZNm3auAAUFBRw+fJlWl/dy9SCaqwGIBIyJGBTUwemWqzy/mAIRPmaEUGsJeNbz+IVfJ+ioiI2bNgwbi80NTUxJWciV47/GM9Lwwg4CA6CSblbBqYYRPjqEACRR8JaVcRPkPHlJ5m66kX27W8kL2/6uMPR3t7Ox+++yQcXjmLEIEYQA8YIkuIHSYVDkBnDk3DSEDwAi5c5mUfWNtGVPovc3FwOHTp0XwDZ2dm0nTvH9Td+zSedVxDVkIQAEQ1BoIgKCpnmflqpQcAXyjYxo6KeVatWUVZWRiKRGPO1+fPns2vXLjoOr7uvFA8HcHMoQ8IHmkqOINnH1d81kJeXR0VFRcqKkUcQBLS0tHD79u2QXHq7UmkIqgKqoIKKAnQPNiSqXFG0QFVCXbcGK4pVIdnTBcDOnTupqqoa06q2tjZKS0uZ8LmZzKiox5nwWXzfx9qBfmGgCkDRa4MeUNE3repg2QSEiwMFk5nDF8vrWLZsGTNnzqS9vX1UAEVFRezYsYOeD68y8fNPEFifAL2rDAfBnJdhGv0NzzgtoYYbHGOICkSMIWKEqBE8x+X91v18cKGJyspKDh48SFZW1ohAlixZQstfLzM99iK9iQQJqySsxVfFDyz9Nolv/fw7gumsPtIbMZE0zxhcR3DFEDVCZIDTjeA5Drb3Jv84sYOu639j69atNDQ0jAgiN3cyPQ/NJXvhM/QnEwRW8dWSDAL6bbLTHlyee0cVWNWfBhpgVbEWfFUSqiSGqVoyCCCaxayndjKn+nm2736BzIyJHDt27B4AFy9eovvtU3R3nA5DkFJEXwNUtWHEptSsPtIXNW7UMy4mJSLeMA+4IrhCKC6A46XR+VYz772xj/z8fJqampg1a9bg906ePElZWRlZy3+DZuSGPUGQ/G/QuDznHjVMeaEyaS2+WqxVbMryxMDVKv0W+qzSr0pPoo/Mx8uZs/51rgdTmD17NrFYbJArFi9ezKZNm7h1dD1B4JO0PgG23KR6QxnlYLHXM846z7i4oX4P6vmA9Q6ENMsQZyiGxK1OPjr5M5Kd77B7925qamoAWLBgAX+59jFU7tmivy3fPvq5INXDSyx+3DXOd1xx8YzBiGBMKCIDwmKMDLEWEnoMUDdK37U2bp/6BQ9PSueV+BEWLVpEdnYW3be6f67wo7EOJoMgiMX3uuKs84zBEQcjghjBMCAmhF1niskGCMaiqFWs8ehrj+Off5nCwkK2b99OcXExwFTgvdEB3AmizIi85oqTNgDCSKrPFWV4DFRD/beqWLX4YUXdst0ffk+b168CVqZWpwN9YwO4Wzhi8c1GpM6ISTcYREJPMOSAQYZLHc1upY5meyjfBq/XAUwGbgL9Y4dgrBGLFwtSITAPkekCk1L73wS9qsoFxR6nceWfx/O5/wGLCSMJ+zJrfwAAAABJRU5ErkJggg==">
+ZAP Scanning Report
+
+        </h1>
+        <p>
+</p>
+        <h3 class="left-header">Summary of Alerts</h3>
+        <h3 class="time-stamp">Generated on Tue, 13 Jul 2021 07:26:08</h3>
+        <table width="45%" class="summary">
+            <tr bgcolor="#666666">
+                <th width="45%" height="24">Risk 
+      Level</th><th width="55%" align="center">Number 
+      of Alerts</th>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td><a href="#high">High</a></td><td align="center">0</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td><a href="#medium">Medium</a></td><td align="center">3</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td><a href="#low">Low</a></td><td align="center">5</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td><a href="#info">Informational</a></td><td align="center">7</td>
+            </tr>
+        </table>
+        <div class="spacer-lg"></div>
+        <h3>Alerts</h3>
+        <table width="75%" class="alerts">
+            <tr bgcolor="#666666">
+                <th width="60%" height="24">Name</th><th width="20%" align="center">Risk Level</th><th width="20%" align="center">Number of Instances</th>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Content Security Policy (CSP) Header Not Set</td><td align="center">Medium</td><td align="center">2</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Source Code Disclosure - Java</td><td align="center">Medium</td><td align="center">1</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>X-Frame-Options Header Not Set</td><td align="center">Medium</td><td align="center">2</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Dangerous JS Functions</td><td align="center">Low</td><td align="center">1</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Incomplete or No Cache-control Header Set</td><td align="center">Low</td><td align="center">3</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Permissions Policy Header Not Set</td><td align="center">Low</td><td align="center">6</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Strict-Transport-Security Header Not Set</td><td align="center">Low</td><td align="center">9</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>X-Content-Type-Options Header Missing</td><td align="center">Low</td><td align="center">8</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Base64 Disclosure</td><td align="center">Informational</td><td align="center">3</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Information Disclosure - Suspicious Comments</td><td align="center">Informational</td><td align="center">3</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Modern Web Application</td><td align="center">Informational</td><td align="center">3</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Non-Storable Content</td><td align="center">Informational</td><td align="center">1</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Storable and Cacheable Content</td><td align="center">Informational</td><td align="center">7</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Storable but Non-Cacheable Content</td><td align="center">Informational</td><td align="center">1</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Timestamp Disclosure - Unix</td><td align="center">Informational</td><td align="center">6</td>
+            </tr>
+        </table>
+        <div class="spacer-lg"></div>
+        <h3>Alert Detail</h3>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-medium">
+                <th width="20%"><a name="medium"></a>Medium (High)</th><th width="80%">Content Security Policy (CSP) Header Not Set</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page &mdash; covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">2</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header, to achieve optimal browser support: "Content-Security-Policy" for Chrome 25+, Firefox 23+ and Safari 7+, "X-Content-Security-Policy" for Firefox 4.0+ and Internet Explorer 10+, and "X-WebKit-CSP" for Chrome 14+ and Safari 6+.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">693</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">15</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-medium">
+                <th width="20%"><a name="medium"></a>Medium (Medium)</th><th width="80%">Source Code Disclosure - Java</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>Application Source Code was disclosed by the web server - Java</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/3267b60.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">class w{constructor(e,t){this.ctx=e,this.options=t,this._initState()}setUniversal(e,t){return h(t)?this.removeUniversal(e):(this.setCookie(e,t),this.setLocalStorage(e,t),this.setState(e,t),t)}getUniversal(e){let t;return h(t)&amp;&amp;(t=this.getCookie(e)),h(t)&amp;&amp;(t=this.getLocalStorage(e)),h(t)&amp;&amp;(t=this.getState(e)),t}syncUniversal(e,t){let c=this.getUniversal(e);return h(c)&amp;&amp;d(t)&amp;&amp;(c=t),d(c)&amp;&amp;this.setUniversal(e,c),c}removeUniversal(e){this.removeState(e),this.removeLocalStorage(e),this.removeCookie(e)}_initState(){if(r.set(this,"_state",{}),this._useVuex=this.options.vuex&amp;&amp;!!this.ctx.store,this._useVuex){const e={namespaced:!0,state:()=&gt;this.options.initialState,mutations:{SET(e,t){r.set(e,t.key,t.value)}}};this.ctx.store.registerModule(this.options.vuex.namespace,e,{preserveState:Boolean(this.ctx.store.state[this.options.vuex.namespace])}),this.state=this.ctx.store.state[this.options.vuex.namespace]}else r.set(this,"state",{}),console.warn("[AUTH] The Vuex Store is not activated. This might cause issues in auth module behavior, like redirects not working properly.To activate it, see https://nuxtjs.org/docs/2.x/directory-structure/store")}setState(e,t){return"_"===e[0]?r.set(this._state,e,t):this._useVuex?this.ctx.store.commit(this.options.vuex.namespace+"/SET",{key:e,value:t}):r.set(this.state,e,t),t}getState(e){return"_"!==e[0]?this.state[e]:this._state[e]}watchState(e,t){if(this._useVuex)return this.ctx.store.watch((t=&gt;x(t[this.options.vuex.namespace],e)),t)}removeState(e){this.setState(e,void 0)}setLocalStorage(e,t){if(h(t))return this.removeLocalStorage(e);if("undefined"==typeof localStorage||!this.options.localStorage)return;const c=this.options.localStorage.prefix+e;try{localStorage.setItem(c,M(t))}catch(e){if(!this.options.ignoreExceptions)throw e}return t}getLocalStorage(e){if("undefined"==typeof localStorage||!this.options.localStorage)return;const t=this.options.localStorage.prefix+e;return C(localStorage.getItem(t))}removeLocalStorage(e){if("undefined"==typeof localStorage||!this.options.localStorage)return;const t=this.options.localStorage.prefix+e;localStorage.removeItem(t)}getCookies(){const e=document.cookie;return o.parse(e||"")||{}}setCookie(e,t,c={}){if(!this.options.cookie)return;const n=(void 0!==c.prefix?c.prefix:this.options.cookie.prefix)+e,r=Object.assign({},this.options.cookie.options,c),l=M(t);h(t)&amp;&amp;(r.maxAge=-1),"number"==typeof r.expires&amp;&amp;(r.expires=new Date(Date.now()+864e5*r.expires));const f=o.serialize(n,l,r);return document.cookie=f,t}getCookie(e){if(!this.options.cookie)return;const t=this.options.cookie.prefix+e,c=this.getCookies();return C(c[t]?decodeURIComponent(c[t]):void 0)}removeCookie(e,t){this.setCookie(e,void 0,t)}}class H{constructor(e,t){this.strategies={},this._errorListeners=[],this._redirectListeners=[],this.ctx=e,this.options=t;const c=new w(e,{...t,initialState:{user:null,loggedIn:!1}});this.$storage=c,this.$state=c.state}get state(){return this._stateWarnShown||(this._stateWarnShown=!0,console.warn("[AUTH] $auth.state is deprecated. Please use $auth.$state or top level props like $auth.loggedIn")),this.$state}get strategy(){return this.getStrategy()}getStrategy(e=!0){if(e){if(!this.$state.strategy)throw new Error("No strategy is set!");if(!this.strategies[this.$state.strategy])throw new Error("Strategy not supported: "+this.$state.strategy)}return this.strategies[this.$state.strategy]}get user(){return this.$state.user}get loggedIn(){return this.$state.loggedIn}get busy(){return this.$storage.getState("busy")}async init(){if(this.options.resetOnError&amp;&amp;this.onError(((...e)=&gt;{("function"!=typeof this.options.resetOnError||this.options.resetOnError(...e))&amp;&amp;this.reset()})),this.$storage.syncUniversal("strategy",this.options.defaultStrategy),!this.getStrategy(!1)&amp;&amp;(this.$storage.setUniversal("strategy",this.options.defaultStrategy),!this.getStrategy(!1)))return Promise.resolve();try{await this.mounted()}catch(e){this.callOnError(e)}finally{this.options.watchLoggedIn&amp;&amp;this.$storage.watchState("loggedIn",(e=&gt;{z(this.ctx.route,"auth",!1)||this.redirect(e?"home":"logout")}))}}getState(e){return this._getStateWarnShown||(this._getStateWarnShown=!0,console.warn("[AUTH] $auth.getState is deprecated. Please use $auth.$storage.getState() or top level props like $auth.loggedIn")),this.$storage.getState(e)}registerStrategy(e,t){this.strategies[e]=t}setStrategy(e){if(e===this.$storage.getUniversal("strategy"))return Promise.resolve();if(!this.strategies[e])throw new Error(`Strategy ${e} is not defined!`);return this.reset(),this.$storage.setUniversal("strategy",e),this.mounted()}mounted(...e){return this.getStrategy().mounted?Promise.resolve(this.getStrategy().mounted(...e)).catch((e=&gt;(this.callOnError(e,{method:"mounted"}),Promise.reject(e)))):this.fetchUserOnce()}loginWith(e,...t){return this.setStrategy(e).then((()=&gt;this.login(...t)))}login(...e){return this.getStrategy().login?this.wrapLogin(this.getStrategy().login(...e)).catch((e=&gt;(this.callOnError(e,{method:"login"}),Promise.reject(e)))):Promise.resolve()}fetchUser(...e){return this.getStrategy().fetchUser?Promise.resolve(this.getStrategy().fetchUser(...e)).catch((e=&gt;(this.callOnError(e,{method:"fetchUser"}),Promise.reject(e)))):Promise.resolve()}logout(...e){return this.getStrategy().logout?Promise.resolve(this.getStrategy().logout(...e)).catch((e=&gt;(this.callOnError(e,{method:"logout"}),Promise.reject(e)))):(this.reset(),Promise.resolve())}setUserToken(e,t){return this.getStrategy().setUserToken?Promise.resolve(this.getStrategy().setUserToken(e,t)).catch((e=&gt;(this.callOnError(e,{method:"setUserToken"}),Promise.reject(e)))):(this.getStrategy().token.set(e),Promise.resolve())}reset(...e){return this.getStrategy().reset||(this.setUser(!1),this.getStrategy().token.reset(),this.getStrategy().refreshToken.reset()),this.getStrategy().reset(...e)}refreshTokens(){return this.getStrategy().refreshController?Promise.resolve(this.getStrategy().refreshController.handleRefresh()).catch((e=&gt;(this.callOnError(e,{method:"refreshTokens"}),Promise.reject(e)))):Promise.resolve()}check(...e){return this.getStrategy().check?this.getStrategy().check(...e):{valid:!0}}fetchUserOnce(...e){return this.$state.user?Promise.resolve():this.fetchUser(...e)}setUser(e){this.$storage.setState("user",e);let t={valid:Boolean(e)};t.valid&amp;&amp;(t=this.check()),this.$storage.setState("loggedIn",t.valid)}request(e,t={}){const c="object"==typeof t?Object.assign({},t,e):e;if(""===c.baseURL&amp;&amp;(c.baseURL=n(this.ctx.req)),this.ctx.app.$axios)return this.ctx.app.$axios.request(c).catch((e=&gt;(this.callOnError(e,{method:"request"}),Promise.reject(e))));console.error("[AUTH] add the @nuxtjs/axios module to nuxt.config file")}requestWith(e,t,c){const n=this.getStrategy().token.get(),r=Object.assign({},c,t),o=this.strategies[e].options.token.name||"Authorization";return r.headers||(r.headers={}),!r.headers[o]&amp;&amp;d(n)&amp;&amp;n&amp;&amp;"string"==typeof n&amp;&amp;(r.headers[o]=n),this.request(r)}wrapLogin(e){return this.$storage.setState("busy",!0),this.error=null,Promise.resolve(e).then((e=&gt;(this.$storage.setState("busy",!1),e))).catch((e=&gt;(this.$storage.setState("busy",!1),Promise.reject(e))))}onError(e){this._errorListeners.push(e)}callOnError(e,t={}){this.error=e;for(const c of this._errorListeners)c(e,t)}redirect(e,t=!1){if(!this.options.redirect)return;const c=this.options.fullPathRedirect?this.ctx.route.fullPath:this.ctx.route.path;let n=this.options.redirect[e];if(n){if(this.options.rewriteRedirects&amp;&amp;("login"===e&amp;&amp;v(c)&amp;&amp;!m(this.ctx,n,c)&amp;&amp;this.$storage.setUniversal("redirect",c),"home"===e)){const e=this.$storage.getUniversal("redirect");this.$storage.setUniversal("redirect",null),v(e)&amp;&amp;(n=e)}n=this.callOnRedirect(n,c)||n,m(this.ctx,n,c)||(t?(v(n)&amp;&amp;!n.includes(this.ctx.base)&amp;&amp;(n=y("/"+this.ctx.base+"/"+n)),window.location.replace(n)):this.ctx.redirect(n,this.ctx.query))}}onRedirect(e){this._redirectListeners.push(e)}callOnRedirect(e,t){for(const c of this._redirectListeners)e=c(e,t)||e;return e}hasScope(e){const t=this.$state.user&amp;&amp;x(this.$state.user,this.options.scopeKey);return!!t&amp;&amp;(Array.isArray(t)?t.includes(e):Boolean(x(t,e)))}}const S=async e=&gt;{if(z(e.route,"auth",!1))return;if(!function(e,t=[]){return[].concat(...e.matched.map((function(e,c){return Object.keys(e.components).map((function(n){return t.push(c),e.components[n]}))})))}(e.route,[]).length)return;const{login:t,callback:c}=e.$auth.options.redirect,n=z(e.route,"auth","guest"),r=t=&gt;y(e.route.path,e)===y(t,e);if(e.$auth.$state.loggedIn){const{tokenExpired:c,refreshTokenExpired:o,isRefreshable:l}=e.$auth.check(!0);if((!t||r(t)||n)&amp;&amp;e.$auth.redirect("home"),o)e.$auth.reset();else if(c)if(l)try{await e.$auth.refreshTokens()}catch(t){e.$auth.reset()}else e.$auth.reset()}else n||c&amp;&amp;r(c)||e.$auth.redirect("login")};class k extends Error{constructor(){super("Both token and refresh token have expired. Your request was aborted."),this.name="ExpiredAuthSessionError"}}class L{constructor(e){this.scheme=e,this._refreshPromise=null,this.$auth=e.$auth}handleRefresh(){return this._refreshPromise?this._refreshPromise:this._doRefresh()}_doRefresh(){return this._refreshPromise=new Promise(((e,t)=&gt;{this.scheme.refreshTokens().then((t=&gt;{this._refreshPromise=null,e(t)})).catch((e=&gt;{this._refreshPromise=null,t(e)}))})),this._refreshPromise}}var N,A;(A=N||(N={})).UNKNOWN="UNKNOWN",A.VALID="VALID",A.EXPIRED="EXPIRED";class D{constructor(e,t){this._status=this._calculate(e,t)}unknown(){return N.UNKNOWN===this._status}valid(){return N.VALID===this._status}expired(){return N.EXPIRED===this._status}_calculate(e,t){const c=Date.now();try{if(!e||!t)return N.UNKNOWN}catch(e){return N.UNKNOWN}return c&lt;(t-=500)?N.VALID:N.EXPIRED}}class O{constructor(e,t){this.scheme=e,this.$storage=t}get(){const e=this.scheme.options.refreshToken.prefix+this.scheme.name;return this.$storage.getUniversal(e)}set(e){const t=V(e,this.scheme.options.refreshToken.type);return this._setToken(t),this._updateExpiration(t),t}sync(){const e=this._syncToken();return this._syncExpiration(),e}reset(){this._setToken(!1),this._setExpiration(!1)}status(){return new D(this.get(),this._getExpiration())}_getExpiration(){const e=this.scheme.options.refreshToken.expirationPrefix+this.scheme.name;return this.$storage.getUniversal(e)}_setExpiration(e){const t=this.scheme.options.refreshToken.expirationPrefix+this.scheme.name;return this.$storage.setUniversal(t,e)}_syncExpiration(){const e=this.scheme.options.refreshToken.expirationPrefix+this.scheme.name;return this.$storage.syncUniversal(e)}_updateExpiration(e){let t;const c=Date.now(),n=1e3*Number(this.scheme.options.refreshToken.maxAge),r=n?c+n:0;try{t=1e3*l(e+"").exp||r}catch(e){if(t=r,!e||"InvalidTokenError"!==e.name)throw e}return this._setExpiration(t||!1)}_setToken(e){const t=this.scheme.options.refreshToken.prefix+this.scheme.name;return this.$storage.setUniversal(t,e)}_syncToken(){const e=this.scheme.options.refreshToken.prefix+this.scheme.name;return this.$storage.syncUniversal(e)}}class T{constructor(e,t){this.scheme=e,this.axios=t,this.interceptor=null}setHeader(e){this.scheme.options.token.global&amp;&amp;this.axios.setHeader(this.scheme.options.token.name,e)}clearHeader(){this.scheme.options.token.global&amp;&amp;this.axios.setHeader(this.scheme.options.token.name,!1)}initializeRequestInterceptor(e){this.interceptor=this.axios.interceptors.request.use((async t=&gt;{if(!this._needToken(t)||t.url===e)return t;const{valid:c,tokenExpired:n,refreshTokenExpired:r,isRefreshable:o}=this.scheme.check(!0);let l=c;if(r)throw this.scheme.reset(),new k;if(n){if(!o)throw this.scheme.reset(),new k;l=await this.scheme.refreshTokens().then((()=&gt;!0)).catch((()=&gt;{throw this.scheme.reset(),new k}))}const f=this.scheme.token.get();if(!l){if(!f&amp;&amp;this._requestHasAuthorizationHeader(t))throw new k;return t}return this._getUpdatedRequestConfig(t,f)}))}reset(){this.axios.interceptors.request.eject(this.interceptor),this.interceptor=null}_needToken(e){const t=this.scheme.options;return t.token.global||Object.values(t.endpoints).some((t=&gt;"object"==typeof t?t.url===e.url:t===e.url))}_getUpdatedRequestConfig(e,t){return"string"==typeof t&amp;&amp;(e.headers[this.scheme.options.token.name]=t),e}_requestHasAuthorizationHeader(e){return!!e.headers.common[this.scheme.options.token.name]}}class _{constructor(e,t){this.scheme=e,this.$storage=t}get(){const e=this.scheme.options.token.prefix+this.scheme.name;return this.$storage.getUniversal(e)}set(e){const t=V(e,this.scheme.options.token.type);return this._setToken(t),this._updateExpiration(t),"string"==typeof t&amp;&amp;this.scheme.requestHandler.setHeader(t),t}sync(){const e=this._syncToken();return this._syncExpiration(),"string"==typeof e&amp;&amp;this.scheme.requestHandler.setHeader(e),e}reset(){this.scheme.requestHandler.clearHeader(),this._setToken(!1),this._setExpiration(!1)}status(){return new D(this.get(),this._getExpiration())}_getExpiration(){const e=this.scheme.options.token.expirationPrefix+this.scheme.name;return this.$storage.getUniversal(e)}_setExpiration(e){const t=this.scheme.options.token.expirationPrefix+this.scheme.name;return this.$storage.setUniversal(t,e)}_syncExpiration(){const e=this.scheme.options.token.expirationPrefix+this.scheme.name;return this.$storage.syncUniversal(e)}_updateExpiration(e){let t;const c=Date.now(),n=1e3*Number(this.scheme.options.token.maxAge),r=n?c+n:0;try{t=1e3*l(e+"").exp||r}catch(e){if(t=r,!e||"InvalidTokenError"!==e.name)throw e}return this._setExpiration(t||!1)}_setToken(e){const t=this.scheme.options.token.prefix+this.scheme.name;return this.$storage.setUniversal(t,e)}_syncToken(){const e=this.scheme.options.token.prefix+this.scheme.name;return this.$storage.syncUniversal(e)}}class P{constructor(e,...t){this.$auth=e,this.options=t.reduce(((p,e)=&gt;f(p,e)),{})}get name(){return this.options.name}}const j={name:"local",endpoints:{login:{url:"/api/auth/login",method:"post"},logout:{url:"/api/auth/logout",method:"post"},user:{url:"/api/auth/user",method:"get"}},token:{property:"token",type:"Bearer",name:"Authorization",maxAge:1800,global:!0,required:!0,prefix:"_token.",expirationPrefix:"_token_expiration."},user:{property:"user",autoFetch:!0},clientId:!1,grantType:!1,scope:!1};class F extends P{constructor(e,t,...c){super(e,t,...c,j),this.token=new _(this,this.$auth.$storage),this.requestHandler=new T(this,this.$auth.ctx.$axios)}check(e=!1){const t={valid:!1,tokenExpired:!1};if(!this.token.sync())return t;if(!e)return t.valid=!0,t;return this.token.status().expired()?(t.tokenExpired=!0,t):(t.valid=!0,t)}mounted({tokenCallback:e=(()=&gt;this.$auth.reset()),refreshTokenCallback:t}={}){const{tokenExpired:c,refreshTokenExpired:n}=this.check(!0);return n&amp;&amp;"function"==typeof t?t():c&amp;&amp;"function"==typeof e&amp;&amp;e(),this.initializeRequestInterceptor(),this.$auth.fetchUserOnce()}async login(e,{reset:t=!0}={}){if(!this.options.endpoints.login)return;t&amp;&amp;this.$auth.reset({resetInterceptor:!1}),this.options.clientId&amp;&amp;(e.data.client_id=this.options.clientId),this.options.grantType&amp;&amp;(e.data.grant_type=this.options.grantType),this.options.scope&amp;&amp;(e.data.scope=this.options.scope);const c=await this.$auth.request(e,this.options.endpoints.login);return this.updateTokens(c),this.requestHandler.interceptor||this.initializeRequestInterceptor(),this.options.user.autoFetch&amp;&amp;await this.fetchUser(),c}setUserToken(e){return this.token.set(e),this.fetchUser()}fetchUser(e){return this.check().valid?this.options.endpoints.user?this.$auth.requestWith(this.name,e,this.options.endpoints.user).then((e=&gt;{const t=x(e.data,this.options.user.property);if(!t){const e=new Error(`User Data response does not contain field ${this.options.user.property}`);return Promise.reject(e)}return this.$auth.setUser(t),e})).catch((e=&gt;(this.$auth.callOnError(e,{method:"fetchUser"}),Promise.reject(e)))):(this.$auth.setUser({}),Promise.resolve()):Promise.resolve()}async logout(e={}){return this.options.endpoints.logout&amp;&amp;await this.$auth.requestWith(this.name,e,this.options.endpoints.logout).catch((()=&gt;{})),this.$auth.reset()}reset({resetInterceptor:e=!0}={}){this.$auth.setUser(!1),this.token.reset(),e&amp;&amp;this.requestHandler.reset()}updateTokens(e){const t=!this.options.token.required||x(e.data,this.options.token.property);this.token.set(t)}initializeRequestInterceptor(){this.requestHandler.initializeRequestInterceptor()}}const I={name:"refresh",endpoints:{refresh:{url:"/api/auth/refresh",method:"post"}},refreshToken:{property:"refresh_token",data:"refresh_token",maxAge:2592e3,required:!0,tokenRequired:!1,prefix:"_refresh_token.",expirationPrefix:"_refresh_token_expiration."},autoLogout:!1};class E extends F{constructor(e,t){super(e,t,I),this.refreshToken=new O(this,this.$auth.$storage),this.refreshController=new L(this)}check(e=!1){const t={valid:!1,tokenExpired:!1,refreshTokenExpired:!1,isRefreshable:!0},c=this.token.sync(),n=this.refreshToken.sync();if(!c||!n)return t;if(!e)return t.valid=!0,t;const r=this.token.status();return this.refreshToken.status().expired()?(t.refreshTokenExpired=!0,t):r.expired()?(t.tokenExpired=!0,t):(t.valid=!0,t)}mounted(){return super.mounted({tokenCallback:()=&gt;{this.options.autoLogout&amp;&amp;this.$auth.reset()},refreshTokenCallback:()=&gt;{this.$auth.reset()}})}refreshTokens(){if(!this.options.endpoints.refresh)return Promise.resolve();if(!this.check().valid)return Promise.resolve();if(this.refreshToken.status().expired())throw this.$auth.reset(),new k;this.options.refreshToken.tokenRequired||this.requestHandler.clearHeader();const e={data:{client_id:void 0,grant_type:void 0}};return this.options.refreshToken.required&amp;&amp;this.options.refreshToken.data&amp;&amp;(e.data[this.options.refreshToken.data]=this.refreshToken.get()),this.options.clientId&amp;&amp;(e.data.client_id=this.options.clientId),this.options.grantType&amp;&amp;(e.data.grant_type="refresh_token"),function(e){for(const t in e)void 0===e[t]&amp;&amp;delete e[t]}(e.data),this.$auth.request(e,this.options.endpoints.refresh).then((e=&gt;(this.updateTokens(e,{isRefreshing:!0}),e))).catch((e=&gt;(this.$auth.callOnError(e,{method:"refreshToken"}),Promise.reject(e))))}setUserToken(e,t){return this.token.set(e),t&amp;&amp;this.refreshToken.set(t),this.fetchUser()}reset({resetInterceptor:e=!0}={}){this.$auth.setUser(!1),this.token.reset(),this.refreshToken.reset(),e&amp;&amp;this.requestHandler.reset()}updateTokens(e,{isRefreshing:t=!1,updateOnRefresh:c=!0}={}){const n=!this.options.token.required||x(e.data,this.options.token.property),r=!this.options.refreshToken.required||x(e.data,this.options.refreshToken.property);this.token.set(n),r&amp;&amp;(!t||t&amp;&amp;c)&amp;&amp;this.refreshToken.set(r)}initializeRequestInterceptor(){this.requestHandler.initializeRequestInterceptor(this.options.endpoints.refresh.url)}}},81:function(e,t,c){"use strict";var n={name:"NoSsr",functional:!0,props:{placeholder:String,placeholderTag:{type:String,default:"div"}},render:function(e,t){var c=t.parent,n=t.slots,r=t.props,o=n(),l=o.default;void 0===l&amp;&amp;(l=[]);var f=o.placeholder;return c._isMounted?l:(c.$once("hook:mounted",(function(){c.$forceUpdate()})),r.placeholderTag&amp;&amp;(r.placeholder||f)?e(r.placeholderTag,{class:["no-ssr-placeholder"]},r.placeholder||f):l.length&gt;0?l.map((function(){return e(!1)})):e(!1))}};e.exports=n},9:function(e,t,c){"use strict";c.d(t,"a",(function(){return o}));var n=c(2),r=c(1),o={props:{size:String,expanded:Boolean,loading:Boolean,rounded:Boolean,icon:String,iconPack:String,autocomplete:String,maxlength:[Number,String],useHtml5Validation:{type:Boolean,default:function(){return r.c.defaultUseHtml5Validation}},validationMessage:String,locale:{type:[String,Array],default:function(){return r.c.defaultLocale}},statusIcon:{type:Boolean,default:function(){return r.c.defaultStatusIcon}}},data:function(){return{isValid:!0,isFocused:!1,newIconPack:this.iconPack||r.c.defaultIconPack}},computed:{parentField:function(){for(var e=this.$parent,i=0;i&lt;3;i++)e&amp;&amp;!e.$data._isField&amp;&amp;(e=e.$parent);return e},statusType:function(){var e=(this.parentField||{}).newType;if(e){if("string"==typeof e)return e;for(var t in e)if(e[t])return t}},statusMessage:function(){if(this.parentField)return this.parentField.newMessage||this.parentField.$slots.message},iconSize:function(){switch(this.size){case"is-small":return this.size;case"is-medium":return;case"is-large":return"mdi"===this.newIconPack?"is-medium":""}}},methods:{focus:function(){var e=this.getElement();void 0!==e&amp;&amp;this.$nextTick((function(){e&amp;&amp;e.focus()}))},onBlur:function(e){this.isFocused=!1,this.$emit("blur",e),this.checkHtml5Validity()},onFocus:function(e){this.isFocused=!0,this.$emit("focus",e)},getElement:function(){for(var e=this.$refs[this.$data._elementRef];Object(n.l)(e);)e=e.$refs[e.$data._elementRef];return e},setInvalid:function(){var e=this.validationMessage||this.getElement().validationMessage;this.setValidity("is-danger",e)},setValidity:function(e,t){var c=this;this.$nextTick((function(){c.parentField&amp;&amp;(c.parentField.type||(c.parentField.newType=e),c.parentField.message||(c.parentField.newMessage=t))}))},checkHtml5Validity:function(){if(this.useHtml5Validation){var e=this.getElement();if(void 0!==e)return e.checkValidity()?(this.setValidity(null,null),this.isValid=!0):(this.setInvalid(),this.isValid=!1),this.isValid}}}}}}</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">1</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Ensure that application Source Code is not available with alternative extensions, and ensure that source code is not present within other files or data deployed to the web server, or served by the web server. </p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Other information</td><td width="80%"><p>class w{constructor(e,t){this.ctx=e,this.options=t,this._initState()}setUniversal(e,t){return h(t)?this.removeUniversal(e):(this.setCookie(e,t),this.setLocalStorage(e,t),this.setState(e,t),t)}getUniversal(e){let t;return h(t)&amp;&amp;(t=this.getCookie(e)),h(t)&amp;&amp;(t=this.getLocalStorage(e)),h(t)&amp;&amp;(t=this.getState(e)),t}syncUniversal(e,t){let c=this.getUniversal(e);return h(c)&amp;&amp;d(t)&amp;&amp;(c=t),d(c)&amp;&amp;this.setUniversal(e,c),c}removeUniversal(e){this.removeState(e),this.removeLocalStorage(e),this.removeCookie(e)}_initState(){if(r.set(this,"_state",{}),this._useVuex=this.options.vuex&amp;&amp;!!this.ctx.store,this._useVuex){const e={namespaced:!0,state:()=&gt;this.options.initialState,mutations:{SET(e,t){r.set(e,t.key,t.value)}}};this.ctx.store.registerModule(this.options.vuex.namespace,e,{preserveState:Boolean(this.ctx.store.state[this.options.vuex.namespace])}),this.state=this.ctx.store.state[this.options.vuex.namespace]}else r.set(this,"state",{}),console.warn("[AUTH] The Vuex Store is not activated. This might cause issues in auth module behavior, like redirects not working properly.To activate it, see https://nuxtjs.org/docs/2.x/directory-structure/store")}setState(e,t){return"_"===e[0]?r.set(this._state,e,t):this._useVuex?this.ctx.store.commit(this.options.vuex.namespace+"/SET",{key:e,value:t}):r.set(this.state,e,t),t}getState(e){return"_"!==e[0]?this.state[e]:this._state[e]}watchState(e,t){if(this._useVuex)return this.ctx.store.watch((t=&gt;x(t[this.options.vuex.namespace],e)),t)}removeState(e){this.setState(e,void 0)}setLocalStorage(e,t){if(h(t))return this.removeLocalStorage(e);if("undefined"==typeof localStorage||!this.options.localStorage)return;const c=this.options.localStorage.prefix+e;try{localStorage.setItem(c,M(t))}catch(e){if(!this.options.ignoreExceptions)throw e}return t}getLocalStorage(e){if("undefined"==typeof localStorage||!this.options.localStorage)return;const t=this.options.localStorage.prefix+e;return C(localStorage.getItem(t))}removeLocalStorage(e){if("undefined"==typeof localStorage||!this.options.localStorage)return;const t=this.options.localStorage.prefix+e;localStorage.removeItem(t)}getCookies(){const e=document.cookie;return o.parse(e||"")||{}}setCookie(e,t,c={}){if(!this.options.cookie)return;const n=(void 0!==c.prefix?c.prefix:this.options.cookie.prefix)+e,r=Object.assign({},this.options.cookie.options,c),l=M(t);h(t)&amp;&amp;(r.maxAge=-1),"number"==typeof r.expires&amp;&amp;(r.expires=new Date(Date.now()+864e5*r.expires));const f=o.serialize(n,l,r);return document.cookie=f,t}getCookie(e){if(!this.options.cookie)return;const t=this.options.cookie.prefix+e,c=this.getCookies();return C(c[t]?decodeURIComponent(c[t]):void 0)}removeCookie(e,t){this.setCookie(e,void 0,t)}}class H{constructor(e,t){this.strategies={},this._errorListeners=[],this._redirectListeners=[],this.ctx=e,this.options=t;const c=new w(e,{...t,initialState:{user:null,loggedIn:!1}});this.$storage=c,this.$state=c.state}get state(){return this._stateWarnShown||(this._stateWarnShown=!0,console.warn("[AUTH] $auth.state is deprecated. Please use $auth.$state or top level props like $auth.loggedIn")),this.$state}get strategy(){return this.getStrategy()}getStrategy(e=!0){if(e){if(!this.$state.strategy)throw new Error("No strategy is set!");if(!this.strategies[this.$state.strategy])throw new Error("Strategy not supported: "+this.$state.strategy)}return this.strategies[this.$state.strategy]}get user(){return this.$state.user}get loggedIn(){return this.$state.loggedIn}get busy(){return this.$storage.getState("busy")}async init(){if(this.options.resetOnError&amp;&amp;this.onError(((...e)=&gt;{("function"!=typeof this.options.resetOnError||this.options.resetOnError(...e))&amp;&amp;this.reset()})),this.$storage.syncUniversal("strategy",this.options.defaultStrategy),!this.getStrategy(!1)&amp;&amp;(this.$storage.setUniversal("strategy",this.options.defaultStrategy),!this.getStrategy(!1)))return Promise.resolve();try{await this.mounted()}catch(e){this.callOnError(e)}finally{this.options.watchLoggedIn&amp;&amp;this.$storage.watchState("loggedIn",(e=&gt;{z(this.ctx.route,"auth",!1)||this.redirect(e?"home":"logout")}))}}getState(e){return this._getStateWarnShown||(this._getStateWarnShown=!0,console.warn("[AUTH] $auth.getState is deprecated. Please use $auth.$storage.getState() or top level props like $auth.loggedIn")),this.$storage.getState(e)}registerStrategy(e,t){this.strategies[e]=t}setStrategy(e){if(e===this.$storage.getUniversal("strategy"))return Promise.resolve();if(!this.strategies[e])throw new Error(`Strategy ${e} is not defined!`);return this.reset(),this.$storage.setUniversal("strategy",e),this.mounted()}mounted(...e){return this.getStrategy().mounted?Promise.resolve(this.getStrategy().mounted(...e)).catch((e=&gt;(this.callOnError(e,{method:"mounted"}),Promise.reject(e)))):this.fetchUserOnce()}loginWith(e,...t){return this.setStrategy(e).then((()=&gt;this.login(...t)))}login(...e){return this.getStrategy().login?this.wrapLogin(this.getStrategy().login(...e)).catch((e=&gt;(this.callOnError(e,{method:"login"}),Promise.reject(e)))):Promise.resolve()}fetchUser(...e){return this.getStrategy().fetchUser?Promise.resolve(this.getStrategy().fetchUser(...e)).catch((e=&gt;(this.callOnError(e,{method:"fetchUser"}),Promise.reject(e)))):Promise.resolve()}logout(...e){return this.getStrategy().logout?Promise.resolve(this.getStrategy().logout(...e)).catch((e=&gt;(this.callOnError(e,{method:"logout"}),Promise.reject(e)))):(this.reset(),Promise.resolve())}setUserToken(e,t){return this.getStrategy().setUserToken?Promise.resolve(this.getStrategy().setUserToken(e,t)).catch((e=&gt;(this.callOnError(e,{method:"setUserToken"}),Promise.reject(e)))):(this.getStrategy().token.set(e),Promise.resolve())}reset(...e){return this.getStrategy().reset||(this.setUser(!1),this.getStrategy().token.reset(),this.getStrategy().refreshToken.reset()),this.getStrategy().reset(...e)}refreshTokens(){return this.getStrategy().refreshController?Promise.resolve(this.getStrategy().refreshController.handleRefresh()).catch((e=&gt;(this.callOnError(e,{method:"refreshTokens"}),Promise.reject(e)))):Promise.resolve()}check(...e){return this.getStrategy().check?this.getStrategy().check(...e):{valid:!0}}fetchUserOnce(...e){return this.$state.user?Promise.resolve():this.fetchUser(...e)}setUser(e){this.$storage.setState("user",e);let t={valid:Boolean(e)};t.valid&amp;&amp;(t=this.check()),this.$storage.setState("loggedIn",t.valid)}request(e,t={}){const c="object"==typeof t?Object.assign({},t,e):e;if(""===c.baseURL&amp;&amp;(c.baseURL=n(this.ctx.req)),this.ctx.app.$axios)return this.ctx.app.$axios.request(c).catch((e=&gt;(this.callOnError(e,{method:"request"}),Promise.reject(e))));console.error("[AUTH] add the @nuxtjs/axios module to nuxt.config file")}requestWith(e,t,c){const n=this.getStrategy().token.get(),r=Object.assign({},c,t),o=this.strategies[e].options.token.name||"Authorization";return r.headers||(r.headers={}),!r.headers[o]&amp;&amp;d(n)&amp;&amp;n&amp;&amp;"string"==typeof n&amp;&amp;(r.headers[o]=n),this.request(r)}wrapLogin(e){return this.$storage.setState("busy",!0),this.error=null,Promise.resolve(e).then((e=&gt;(this.$storage.setState("busy",!1),e))).catch((e=&gt;(this.$storage.setState("busy",!1),Promise.reject(e))))}onError(e){this._errorListeners.push(e)}callOnError(e,t={}){this.error=e;for(const c of this._errorListeners)c(e,t)}redirect(e,t=!1){if(!this.options.redirect)return;const c=this.options.fullPathRedirect?this.ctx.route.fullPath:this.ctx.route.path;let n=this.options.redirect[e];if(n){if(this.options.rewriteRedirects&amp;&amp;("login"===e&amp;&amp;v(c)&amp;&amp;!m(this.ctx,n,c)&amp;&amp;this.$storage.setUniversal("redirect",c),"home"===e)){const e=this.$storage.getUniversal("redirect");this.$storage.setUniversal("redirect",null),v(e)&amp;&amp;(n=e)}n=this.callOnRedirect(n,c)||n,m(this.ctx,n,c)||(t?(v(n)&amp;&amp;!n.includes(this.ctx.base)&amp;&amp;(n=y("/"+this.ctx.base+"/"+n)),window.location.replace(n)):this.ctx.redirect(n,this.ctx.query))}}onRedirect(e){this._redirectListeners.push(e)}callOnRedirect(e,t){for(const c of this._redirectListeners)e=c(e,t)||e;return e}hasScope(e){const t=this.$state.user&amp;&amp;x(this.$state.user,this.options.scopeKey);return!!t&amp;&amp;(Array.isArray(t)?t.includes(e):Boolean(x(t,e)))}}const S=async e=&gt;{if(z(e.route,"auth",!1))return;if(!function(e,t=[]){return[].concat(...e.matched.map((function(e,c){return Object.keys(e.components).map((function(n){return t.push(c),e.components[n]}))})))}(e.route,[]).length)return;const{login:t,callback:c}=e.$auth.options.redirect,n=z(e.route,"auth","guest"),r=t=&gt;y(e.route.path,e)===y(t,e);if(e.$auth.$state.loggedIn){const{tokenExpired:c,refreshTokenExpired:o,isRefreshable:l}=e.$auth.check(!0);if((!t||r(t)||n)&amp;&amp;e.$auth.redirect("home"),o)e.$auth.reset();else if(c)if(l)try{await e.$auth.refreshTokens()}catch(t){e.$auth.reset()}else e.$auth.reset()}else n||c&amp;&amp;r(c)||e.$auth.redirect("login")};class k extends Error{constructor(){super("Both token and refresh token have expired. Your request was aborted."),this.name="ExpiredAuthSessionError"}}class L{constructor(e){this.scheme=e,this._refreshPromise=null,this.$auth=e.$auth}handleRefresh(){return this._refreshPromise?this._refreshPromise:this._doRefresh()}_doRefresh(){return this._refreshPromise=new Promise(((e,t)=&gt;{this.scheme.refreshTokens().then((t=&gt;{this._refreshPromise=null,e(t)})).catch((e=&gt;{this._refreshPromise=null,t(e)}))})),this._refreshPromise}}var N,A;(A=N||(N={})).UNKNOWN="UNKNOWN",A.VALID="VALID",A.EXPIRED="EXPIRED";class D{constructor(e,t){this._status=this._calculate(e,t)}unknown(){return N.UNKNOWN===this._status}valid(){return N.VALID===this._status}expired(){return N.EXPIRED===this._status}_calculate(e,t){const c=Date.now();try{if(!e||!t)return N.UNKNOWN}catch(e){return N.UNKNOWN}return c&lt;(t-=500)?N.VALID:N.EXPIRED}}class O{constructor(e,t){this.scheme=e,this.$storage=t}get(){const e=this.scheme.options.refreshToken.prefix+this.scheme.name;return this.$storage.getUniversal(e)}set(e){const t=V(e,this.scheme.options.refreshToken.type);return this._setToken(t),this._updateExpiration(t),t}sync(){const e=this._syncToken();return this._syncExpiration(),e}reset(){this._setToken(!1),this._setExpiration(!1)}status(){return new D(this.get(),this._getExpiration())}_getExpiration(){const e=this.scheme.options.refreshToken.expirationPrefix+this.scheme.name;return this.$storage.getUniversal(e)}_setExpiration(e){const t=this.scheme.options.refreshToken.expirationPrefix+this.scheme.name;return this.$storage.setUniversal(t,e)}_syncExpiration(){const e=this.scheme.options.refreshToken.expirationPrefix+this.scheme.name;return this.$storage.syncUniversal(e)}_updateExpiration(e){let t;const c=Date.now(),n=1e3*Number(this.scheme.options.refreshToken.maxAge),r=n?c+n:0;try{t=1e3*l(e+"").exp||r}catch(e){if(t=r,!e||"InvalidTokenError"!==e.name)throw e}return this._setExpiration(t||!1)}_setToken(e){const t=this.scheme.options.refreshToken.prefix+this.scheme.name;return this.$storage.setUniversal(t,e)}_syncToken(){const e=this.scheme.options.refreshToken.prefix+this.scheme.name;return this.$storage.syncUniversal(e)}}class T{constructor(e,t){this.scheme=e,this.axios=t,this.interceptor=null}setHeader(e){this.scheme.options.token.global&amp;&amp;this.axios.setHeader(this.scheme.options.token.name,e)}clearHeader(){this.scheme.options.token.global&amp;&amp;this.axios.setHeader(this.scheme.options.token.name,!1)}initializeRequestInterceptor(e){this.interceptor=this.axios.interceptors.request.use((async t=&gt;{if(!this._needToken(t)||t.url===e)return t;const{valid:c,tokenExpired:n,refreshTokenExpired:r,isRefreshable:o}=this.scheme.check(!0);let l=c;if(r)throw this.scheme.reset(),new k;if(n){if(!o)throw this.scheme.reset(),new k;l=await this.scheme.refreshTokens().then((()=&gt;!0)).catch((()=&gt;{throw this.scheme.reset(),new k}))}const f=this.scheme.token.get();if(!l){if(!f&amp;&amp;this._requestHasAuthorizationHeader(t))throw new k;return t}return this._getUpdatedRequestConfig(t,f)}))}reset(){this.axios.interceptors.request.eject(this.interceptor),this.interceptor=null}_needToken(e){const t=this.scheme.options;return t.token.global||Object.values(t.endpoints).some((t=&gt;"object"==typeof t?t.url===e.url:t===e.url))}_getUpdatedRequestConfig(e,t){return"string"==typeof t&amp;&amp;(e.headers[this.scheme.options.token.name]=t),e}_requestHasAuthorizationHeader(e){return!!e.headers.common[this.scheme.options.token.name]}}class _{constructor(e,t){this.scheme=e,this.$storage=t}get(){const e=this.scheme.options.token.prefix+this.scheme.name;return this.$storage.getUniversal(e)}set(e){const t=V(e,this.scheme.options.token.type);return this._setToken(t),this._updateExpiration(t),"string"==typeof t&amp;&amp;this.scheme.requestHandler.setHeader(t),t}sync(){const e=this._syncToken();return this._syncExpiration(),"string"==typeof e&amp;&amp;this.scheme.requestHandler.setHeader(e),e}reset(){this.scheme.requestHandler.clearHeader(),this._setToken(!1),this._setExpiration(!1)}status(){return new D(this.get(),this._getExpiration())}_getExpiration(){const e=this.scheme.options.token.expirationPrefix+this.scheme.name;return this.$storage.getUniversal(e)}_setExpiration(e){const t=this.scheme.options.token.expirationPrefix+this.scheme.name;return this.$storage.setUniversal(t,e)}_syncExpiration(){const e=this.scheme.options.token.expirationPrefix+this.scheme.name;return this.$storage.syncUniversal(e)}_updateExpiration(e){let t;const c=Date.now(),n=1e3*Number(this.scheme.options.token.maxAge),r=n?c+n:0;try{t=1e3*l(e+"").exp||r}catch(e){if(t=r,!e||"InvalidTokenError"!==e.name)throw e}return this._setExpiration(t||!1)}_setToken(e){const t=this.scheme.options.token.prefix+this.scheme.name;return this.$storage.setUniversal(t,e)}_syncToken(){const e=this.scheme.options.token.prefix+this.scheme.name;return this.$storage.syncUniversal(e)}}class P{constructor(e,...t){this.$auth=e,this.options=t.reduce(((p,e)=&gt;f(p,e)),{})}get name(){return this.options.name}}const j={name:"local",endpoints:{login:{url:"/api/auth/login",method:"post"},logout:{url:"/api/auth/logout",method:"post"},user:{url:"/api/auth/user",method:"get"}},token:{property:"token",type:"Bearer",name:"Authorization",maxAge:1800,global:!0,required:!0,prefix:"_token.",expirationPrefix:"_token_expiration."},user:{property:"user",autoFetch:!0},clientId:!1,grantType:!1,scope:!1};class F extends P{constructor(e,t,...c){super(e,t,...c,j),this.token=new _(this,this.$auth.$storage),this.requestHandler=new T(this,this.$auth.ctx.$axios)}check(e=!1){const t={valid:!1,tokenExpired:!1};if(!this.token.sync())return t;if(!e)return t.valid=!0,t;return this.token.status().expired()?(t.tokenExpired=!0,t):(t.valid=!0,t)}mounted({tokenCallback:e=(()=&gt;this.$auth.reset()),refreshTokenCallback:t}={}){const{tokenExpired:c,refreshTokenExpired:n}=this.check(!0);return n&amp;&amp;"function"==typeof t?t():c&amp;&amp;"function"==typeof e&amp;&amp;e(),this.initializeRequestInterceptor(),this.$auth.fetchUserOnce()}async login(e,{reset:t=!0}={}){if(!this.options.endpoints.login)return;t&amp;&amp;this.$auth.reset({resetInterceptor:!1}),this.options.clientId&amp;&amp;(e.data.client_id=this.options.clientId),this.options.grantType&amp;&amp;(e.data.grant_type=this.options.grantType),this.options.scope&amp;&amp;(e.data.scope=this.options.scope);const c=await this.$auth.request(e,this.options.endpoints.login);return this.updateTokens(c),this.requestHandler.interceptor||this.initializeRequestInterceptor(),this.options.user.autoFetch&amp;&amp;await this.fetchUser(),c}setUserToken(e){return this.token.set(e),this.fetchUser()}fetchUser(e){return this.check().valid?this.options.endpoints.user?this.$auth.requestWith(this.name,e,this.options.endpoints.user).then((e=&gt;{const t=x(e.data,this.options.user.property);if(!t){const e=new Error(`User Data response does not contain field ${this.options.user.property}`);return Promise.reject(e)}return this.$auth.setUser(t),e})).catch((e=&gt;(this.$auth.callOnError(e,{method:"fetchUser"}),Promise.reject(e)))):(this.$auth.setUser({}),Promise.resolve()):Promise.resolve()}async logout(e={}){return this.options.endpoints.logout&amp;&amp;await this.$auth.requestWith(this.name,e,this.options.endpoints.logout).catch((()=&gt;{})),this.$auth.reset()}reset({resetInterceptor:e=!0}={}){this.$auth.setUser(!1),this.token.reset(),e&amp;&amp;this.requestHandler.reset()}updateTokens(e){const t=!this.options.token.required||x(e.data,this.options.token.property);this.token.set(t)}initializeRequestInterceptor(){this.requestHandler.initializeRequestInterceptor()}}const I={name:"refresh",endpoints:{refresh:{url:"/api/auth/refresh",method:"post"}},refreshToken:{property:"refresh_token",data:"refresh_token",maxAge:2592e3,required:!0,tokenRequired:!1,prefix:"_refresh_token.",expirationPrefix:"_refresh_token_expiration."},autoLogout:!1};class E extends F{constructor(e,t){super(e,t,I),this.refreshToken=new O(this,this.$auth.$storage),this.refreshController=new L(this)}check(e=!1){const t={valid:!1,tokenExpired:!1,refreshTokenExpired:!1,isRefreshable:!0},c=this.token.sync(),n=this.refreshToken.sync();if(!c||!n)return t;if(!e)return t.valid=!0,t;const r=this.token.status();return this.refreshToken.status().expired()?(t.refreshTokenExpired=!0,t):r.expired()?(t.tokenExpired=!0,t):(t.valid=!0,t)}mounted(){return super.mounted({tokenCallback:()=&gt;{this.options.autoLogout&amp;&amp;this.$auth.reset()},refreshTokenCallback:()=&gt;{this.$auth.reset()}})}refreshTokens(){if(!this.options.endpoints.refresh)return Promise.resolve();if(!this.check().valid)return Promise.resolve();if(this.refreshToken.status().expired())throw this.$auth.reset(),new k;this.options.refreshToken.tokenRequired||this.requestHandler.clearHeader();const e={data:{client_id:void 0,grant_type:void 0}};return this.options.refreshToken.required&amp;&amp;this.options.refreshToken.data&amp;&amp;(e.data[this.options.refreshToken.data]=this.refreshToken.get()),this.options.clientId&amp;&amp;(e.data.client_id=this.options.clientId),this.options.grantType&amp;&amp;(e.data.grant_type="refresh_token"),function(e){for(const t in e)void 0===e[t]&amp;&amp;delete e[t]}(e.data),this.$auth.request(e,this.options.endpoints.refresh).then((e=&gt;(this.updateTokens(e,{isRefreshing:!0}),e))).catch((e=&gt;(this.$auth.callOnError(e,{method:"refreshToken"}),Promise.reject(e))))}setUserToken(e,t){return this.token.set(e),t&amp;&amp;this.refreshToken.set(t),this.fetchUser()}reset({resetInterceptor:e=!0}={}){this.$auth.setUser(!1),this.token.reset(),this.refreshToken.reset(),e&amp;&amp;this.requestHandler.reset()}updateTokens(e,{isRefreshing:t=!1,updateOnRefresh:c=!0}={}){const n=!this.options.token.required||x(e.data,this.options.token.property),r=!this.options.refreshToken.required||x(e.data,this.options.refreshToken.property);this.token.set(n),r&amp;&amp;(!t||t&amp;&amp;c)&amp;&amp;this.refreshToken.set(r)}initializeRequestInterceptor(){this.requestHandler.initializeRequestInterceptor(this.options.endpoints.refresh.url)}}},81:function(e,t,c){"use strict";var n={name:"NoSsr",functional:!0,props:{placeholder:String,placeholderTag:{type:String,default:"div"}},render:function(e,t){var c=t.parent,n=t.slots,r=t.props,o=n(),l=o.default;void 0===l&amp;&amp;(l=[]);var f=o.placeholder;return c._isMounted?l:(c.$once("hook:mounted",(function(){c.$forceUpdate()})),r.placeholderTag&amp;&amp;(r.placeholder||f)?e(r.placeholderTag,{class:["no-ssr-placeholder"]},r.placeholder||f):l.length&gt;0?l.map((function(){return e(!1)})):e(!1))}};e.exports=n},9:function(e,t,c){"use strict";c.d(t,"a",(function(){return o}));var n=c(2),r=c(1),o={props:{size:String,expanded:Boolean,loading:Boolean,rounded:Boolean,icon:String,iconPack:String,autocomplete:String,maxlength:[Number,String],useHtml5Validation:{type:Boolean,default:function(){return r.c.defaultUseHtml5Validation}},validationMessage:String,locale:{type:[String,Array],default:function(){return r.c.defaultLocale}},statusIcon:{type:Boolean,default:function(){return r.c.defaultStatusIcon}}},data:function(){return{isValid:!0,isFocused:!1,newIconPack:this.iconPack||r.c.defaultIconPack}},computed:{parentField:function(){for(var e=this.$parent,i=0;i&lt;3;i++)e&amp;&amp;!e.$data._isField&amp;&amp;(e=e.$parent);return e},statusType:function(){var e=(this.parentField||{}).newType;if(e){if("string"==typeof e)return e;for(var t in e)if(e[t])return t}},statusMessage:function(){if(this.parentField)return this.parentField.newMessage||this.parentField.$slots.message},iconSize:function(){switch(this.size){case"is-small":return this.size;case"is-medium":return;case"is-large":return"mdi"===this.newIconPack?"is-medium":""}}},methods:{focus:function(){var e=this.getElement();void 0!==e&amp;&amp;this.$nextTick((function(){e&amp;&amp;e.focus()}))},onBlur:function(e){this.isFocused=!1,this.$emit("blur",e),this.checkHtml5Validity()},onFocus:function(e){this.isFocused=!0,this.$emit("focus",e)},getElement:function(){for(var e=this.$refs[this.$data._elementRef];Object(n.l)(e);)e=e.$refs[e.$data._elementRef];return e},setInvalid:function(){var e=this.validationMessage||this.getElement().validationMessage;this.setValidity("is-danger",e)},setValidity:function(e,t){var c=this;this.$nextTick((function(){c.parentField&amp;&amp;(c.parentField.type||(c.parentField.newType=e),c.parentField.message||(c.parentField.newMessage=t))}))},checkHtml5Validity:function(){if(this.useHtml5Validation){var e=this.getElement();if(void 0!==e)return e.checkValidity()?(this.setValidity(null,null),this.isValid=!0):(this.setInvalid(),this.isValid=!1),this.isValid}}}}}}</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>http://blogs.wsj.com/cio/2013/10/08/adobe-source-code-leak-is-bad-news-for-u-s-government/</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">540</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-medium">
+                <th width="20%"><a name="medium"></a>Medium (Medium)</th><th width="80%">X-Frame-Options Header Not Set</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Frame-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Frame-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">2</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Most modern Web browsers support the X-Frame-Options HTTP header. Ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's "frame-ancestors" directive. </p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">1021</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">15</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Low)</th><th width="80%">Dangerous JS Functions</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/3267b60.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">eval</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">1</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>See the references for security advice on the use of these functions.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://angular.io/guide/security</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">749</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Incomplete or No Cache-control Header Set</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/manifest.23112669.json</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">public, max-age=31536000</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">3</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">525</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Permissions Policy Header Not Set</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/bd0c700.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/2a059cb.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/3267b60.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/366f947.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">6</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">693</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">15</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (High)</th><th width="80%">Strict-Transport-Security Header Not Set</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/bd0c700.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/favicon.ico</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/3267b60.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/2a059cb.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/manifest.23112669.json</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/robots.txt</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/366f947.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">9</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">319</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">15</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">X-Content-Type-Options Header Missing</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/bd0c700.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/manifest.23112669.json</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/favicon.ico</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/2a059cb.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/366f947.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/3267b60.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">8</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Other information</td><td width="80%"><p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At "High" threshold this scan rule will not alert on client or server error responses.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">693</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">15</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-info">
+                <th width="20%"><a name="info"></a>Informational (Medium)</th><th width="80%">Base64 Disclosure</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">e6e-awcc0KMaGM0vIYjkhzBhacoKbW0</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/3267b60.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">e6e-awcc0KMaGM0vIYjkhzBhacoKbW0</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">3</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Other information</td><td width="80%"><p>{��k\x0007\x001cУ\x001a\x0018�/!��0ai�</p><p>mm</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">200</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-info">
+                <th width="20%"><a name="info"></a>Informational (Low)</th><th width="80%">Information Disclosure - Suspicious Comments</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/366f947.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">query</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/3267b60.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">bug</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/2a059cb.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">query</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">3</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Other information</td><td width="80%"><p>The following pattern was used: \bQUERY\b and was detected in the element starting with: "(window.webpackJsonp=window.webpackJsonp||[]).push([[2],[,,,,,,function(t,e,n){"use strict";n.r(e),function(t,n){var r=Object.fr", see evidence field for the suspicious comment/snippet.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p></p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">200</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-info">
+                <th width="20%"><a name="info"></a>Informational (Medium)</th><th width="80%">Modern Web Application</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/366f947.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script&gt;window.addEventListener('error', function () {  var e = document.getElementById('nuxt-loading');  if (e) {e.className += ' error';  }});&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script&gt;window.addEventListener('error', function () {  var e = document.getElementById('nuxt-loading');  if (e) {e.className += ' error';  }});&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">3</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>This is an informational alert and so no changes are required.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Other information</td><td width="80%"><p>No links have been found while there are scripts, which is an indication that this is a modern web application.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p></p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-info">
+                <th width="20%"><a name="info"></a>Informational (Medium)</th><th width="80%">Non-Storable Content</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>The response contents are not storable by caching components such as proxy servers. If the response does not contain sensitive, personal or user-specific information, it may benefit from being stored and cached, to improve performance.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/robots.txt</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">no-store</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">1</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>The content may be marked as storable by ensuring that the following conditions are satisfied:</p><p>The request method must be understood by the cache and defined as being cacheable ("GET", "HEAD", and "POST" are currently defined as cacheable)</p><p>The response status code must be understood by the cache (one of the 1XX, 2XX, 3XX, 4XX, or 5XX response classes are generally understood)</p><p>The "no-store" cache directive must not appear in the request or response header fields</p><p>For caching by "shared" caches such as "proxy" caches, the "private" response directive must not appear in the response</p><p>For caching by "shared" caches such as "proxy" caches, the "Authorization" header field must not appear in the request, unless the response explicitly allows it (using one of the "must-revalidate", "public", or "s-maxage" Cache-Control response directives)</p><p>In addition to the conditions above, at least one of the following conditions must also be satisfied by the response:</p><p>It must contain an "Expires" header field</p><p>It must contain a "max-age" response directive</p><p>For "shared" caches such as "proxy" caches, it must contain a "s-maxage" response directive</p><p>It must contain a "Cache Control Extension" that allows it to be cached</p><p>It must have a status code that is defined as cacheable by default (200, 203, 204, 206, 300, 301, 404, 405, 410, 414, 501).   </p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">524</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-info">
+                <th width="20%"><a name="info"></a>Informational (Medium)</th><th width="80%">Storable and Cacheable Content</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where "shared" caching servers such as "proxy" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/bd0c700.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=31536000</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/manifest.23112669.json</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=31536000</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/2a059cb.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=31536000</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/366f947.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=31536000</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/3267b60.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=31536000</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">7</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">524</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-info">
+                <th width="20%"><a name="info"></a>Informational (Medium)</th><th width="80%">Storable but Non-Cacheable Content</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users. </p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/favicon.ico</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=0</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">1</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p></p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">524</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-info">
+                <th width="20%"><a name="info"></a>Informational (Low)</th><th width="80%">Timestamp Disclosure - Unix</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>A timestamp was disclosed by the application/web server - Unix</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">23112669</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/2a059cb.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">23112669</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/2a059cb.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">33333337</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/366f947.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2147483647</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">23112669</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://cassiopee.fabnum.fr/_nuxt/2a059cb.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">66666674</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">6</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Other information</td><td width="80%"><p>23112669, which evaluates to: 1970-09-25 12:11:09</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">200</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+    </body>
+</html>
