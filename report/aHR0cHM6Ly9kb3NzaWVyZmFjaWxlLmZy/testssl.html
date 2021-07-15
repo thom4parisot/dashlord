@@ -21,16 +21,16 @@
 ###########################################################</span>
 
  Using &quot;OpenSSL 1.0.2-chacha (1.0.2k-dev)&quot; [~183 ciphers]
- on fv-az290-680:/home/testssl/bin/openssl.Linux.x86_64
+ on fv-az292-378:/home/testssl/bin/openssl.Linux.x86_64
  (built: &quot;Jan 18 17:12:17 2019&quot;, platform: &quot;linux-x86_64&quot;)
 
 
-<span style="font-weight:bold;">Testing all IPv4 addresses (port 443): </span>13.249.126.28 13.249.126.127 13.249.126.48 13.249.126.75
+<span style="font-weight:bold;">Testing all IPv4 addresses (port 443): </span>13.35.101.96 13.35.101.15 13.35.101.104 13.35.101.118
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2021-07-14 02:11:49        --&gt;&gt; 13.249.126.28:443 (dossierfacile.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2021-07-15 02:17:19        --&gt;&gt; 13.35.101.96:443 (dossierfacile.fr) &lt;&lt;--</span>
 
- Further IP addresses:   13.249.126.127 13.249.126.48 13.249.126.75 
- rDNS (13.249.126.28):   server-13-249-126-28.atl51.r.cloudfront.net.
+ Further IP addresses:   13.35.101.15 13.35.101.104 13.35.101.118 
+ rDNS (13.35.101.96):    server-13-35-101-96.lax3.r.cloudfront.net.
  Service detected:       HTTP
 
 
@@ -91,9 +91,8 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing server defaults (Server Hello) </span>
 
 <span style="font-weight:bold;"> TLS extensions (standard)    </span>&quot;server name/#0&quot; &quot;EC point formats/#11&quot;
-                              &quot;renegotiation info/#65281&quot; &quot;status request/#5&quot;
-                              &quot;session ticket/#35&quot; &quot;supported versions/#43&quot;
-                              &quot;key share/#51&quot;
+                              &quot;renegotiation info/#65281&quot; &quot;session ticket/#35&quot;
+                              &quot;supported versions/#43&quot; &quot;key share/#51&quot;
                               &quot;application layer protocol negotiation/#16&quot;
 <span style="font-weight:bold;"> Session Ticket RFC 5077 hint </span>86400 seconds, session tickets keys seems to be rotated &lt; daily
 <span style="font-weight:bold;"> SSL Session ID support       </span>yes
@@ -111,11 +110,11 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">280 &gt;= 60 days</span> (2021-03-22 00:00 --&gt; 2022-04-20 23:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">279 &gt;= 60 days</span> (2021-03-22 00:00 --&gt; 2022-04-20 23:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.sca1b.amazontrust.com/sca1b.crl
 <span style="font-weight:bold;"> OCSP URI                     </span>http://ocsp.sca1b.amazontrust.com
-<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#008817;">offered</span>, <span style="color:#008817;">not revoked</span>
+<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> OCSP must staple extension   </span>--
 <span style="font-weight:bold;"> DNS CAA RR</span> (experimental)    <span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Certificate Transparency     </span><span style="color:#008817;">yes</span> (certificate extension)
@@ -138,7 +137,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Cookie(s)                    </span>(none issued at &quot;/&quot;) -- maybe better try target URL of 30x
 <span style="font-weight:bold;"> Security headers             </span><span style="color:#c05600;">--</span>
 <span style="font-weight:bold;"> Reverse Proxy banner         </span><span style="color:#8a7237;font-weight:bold;">X-Cache</span>: Miss from cloudfront
-                              <span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> <span style="color:#8a7237;">7</span><span style="color:#8a7237;">7</span><span style="color:#8a7237;">9</span><span style="color:#8a7237;">9</span>fcaed<span style="color:#8a7237;">3</span>aefe<span style="color:#8a7237;">6</span>ff<span style="color:#8a7237;">8</span>b<span style="color:#8a7237;">2</span>d<span style="color:#8a7237;">0</span><span style="color:#8a7237;">1</span>a<span style="color:#8a7237;">9</span>d<span style="color:#8a7237;">1</span>fddcd.cloudfront.net (CloudFront)
+                              <span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> <span style="color:#8a7237;">8</span><span style="color:#8a7237;">0</span>a<span style="color:#8a7237;">7</span>d<span style="color:#8a7237;">3</span><span style="color:#8a7237;">9</span><span style="color:#8a7237;">1</span><span style="color:#8a7237;">7</span>c<span style="color:#8a7237;">4</span>c<span style="color:#8a7237;">0</span><span style="color:#8a7237;">7</span><span style="color:#8a7237;">2</span><span style="color:#8a7237;">6</span>ede<span style="color:#8a7237;">0</span>bbf<span style="color:#8a7237;">8</span><span style="color:#8a7237;">3</span><span style="color:#8a7237;">4</span><span style="color:#8a7237;">3</span>d<span style="color:#8a7237;">1</span>cee.cloudfront.net (CloudFront)
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing vulnerabilities </span>
@@ -218,13 +217,13 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A</span>
 <span style="font-weight:bold;"> Grade cap reasons            </span>Grade capped to A. HSTS is not offered
 
-<span style="color:white;background-color:black;"> Done 2021-07-14 02:14:58 [ 191s] --&gt;&gt; 13.249.126.28:443 (dossierfacile.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2021-07-15 02:18:29 [  72s] --&gt;&gt; 13.35.101.96:443 (dossierfacile.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2021-07-14 02:14:59        --&gt;&gt; 13.249.126.127:443 (dossierfacile.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2021-07-15 02:18:29        --&gt;&gt; 13.35.101.15:443 (dossierfacile.fr) &lt;&lt;--</span>
 
- Further IP addresses:   13.249.126.28 13.249.126.48 13.249.126.75 
- rDNS (13.249.126.127):  server-13-249-126-127.atl51.r.cloudfront.net.
+ Further IP addresses:   13.35.101.96 13.35.101.104 13.35.101.118 
+ rDNS (13.35.101.15):    server-13-35-101-15.lax3.r.cloudfront.net.
  Service detected:       HTTP
 
 
@@ -285,9 +284,9 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing server defaults (Server Hello) </span>
 
 <span style="font-weight:bold;"> TLS extensions (standard)    </span>&quot;server name/#0&quot; &quot;EC point formats/#11&quot;
-                              &quot;renegotiation info/#65281&quot; &quot;status request/#5&quot;
-                              &quot;session ticket/#35&quot; &quot;supported versions/#43&quot;
-                              &quot;key share/#51&quot;
+                              &quot;renegotiation info/#65281&quot; &quot;session ticket/#35&quot;
+                              &quot;supported versions/#43&quot; &quot;key share/#51&quot;
+                              &quot;status request/#5&quot;
                               &quot;application layer protocol negotiation/#16&quot;
 <span style="font-weight:bold;"> Session Ticket RFC 5077 hint </span>86400 seconds, session tickets keys seems to be rotated &lt; daily
 <span style="font-weight:bold;"> SSL Session ID support       </span>yes
@@ -305,11 +304,11 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">280 &gt;= 60 days</span> (2021-03-22 00:00 --&gt; 2022-04-20 23:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">279 &gt;= 60 days</span> (2021-03-22 00:00 --&gt; 2022-04-20 23:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.sca1b.amazontrust.com/sca1b.crl
 <span style="font-weight:bold;"> OCSP URI                     </span>http://ocsp.sca1b.amazontrust.com
-<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#008817;">offered</span>, <span style="color:#008817;">not revoked</span>
+<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> OCSP must staple extension   </span>--
 <span style="font-weight:bold;"> DNS CAA RR</span> (experimental)    <span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Certificate Transparency     </span><span style="color:#008817;">yes</span> (certificate extension)
@@ -332,7 +331,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Cookie(s)                    </span>(none issued at &quot;/&quot;) -- maybe better try target URL of 30x
 <span style="font-weight:bold;"> Security headers             </span><span style="color:#c05600;">--</span>
 <span style="font-weight:bold;"> Reverse Proxy banner         </span><span style="color:#8a7237;font-weight:bold;">X-Cache</span>: Miss from cloudfront
-                              <span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> <span style="color:#8a7237;">2</span><span style="color:#8a7237;">4</span><span style="color:#8a7237;">9</span><span style="color:#8a7237;">9</span><span style="color:#8a7237;">0</span>d<span style="color:#8a7237;">5</span><span style="color:#8a7237;">1</span>e<span style="color:#8a7237;">5</span><span style="color:#8a7237;">3</span><span style="color:#8a7237;">3</span><span style="color:#8a7237;">7</span><span style="color:#8a7237;">5</span>dffbe<span style="color:#8a7237;">8</span><span style="color:#8a7237;">4</span><span style="color:#8a7237;">1</span><span style="color:#8a7237;">1</span>f<span style="color:#8a7237;">5</span>e<span style="color:#8a7237;">1</span><span style="color:#8a7237;">4</span>f<span style="color:#8a7237;">5</span><span style="color:#8a7237;">7</span><span style="color:#8a7237;">9</span>.cloudfront.net (CloudFront)
+                              <span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> <span style="color:#8a7237;">9</span><span style="color:#8a7237;">1</span><span style="color:#8a7237;">7</span>b<span style="color:#8a7237;">3</span>b<span style="color:#8a7237;">4</span><span style="color:#8a7237;">3</span><span style="color:#8a7237;">5</span><span style="color:#8a7237;">9</span><span style="color:#8a7237;">5</span>bd<span style="color:#8a7237;">7</span><span style="color:#8a7237;">5</span><span style="color:#8a7237;">1</span><span style="color:#8a7237;">6</span><span style="color:#8a7237;">9</span><span style="color:#8a7237;">3</span><span style="color:#8a7237;">3</span>b<span style="color:#8a7237;">3</span>ba<span style="color:#8a7237;">6</span>caf<span style="color:#8a7237;">5</span><span style="color:#8a7237;">1</span>ee.cloudfront.net (CloudFront)
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing vulnerabilities </span>
@@ -412,13 +411,13 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A</span>
 <span style="font-weight:bold;"> Grade cap reasons            </span>Grade capped to A. HSTS is not offered
 
-<span style="color:white;background-color:black;"> Done 2021-07-14 02:18:08 [ 381s] --&gt;&gt; 13.249.126.127:443 (dossierfacile.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2021-07-15 02:19:38 [ 141s] --&gt;&gt; 13.35.101.15:443 (dossierfacile.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2021-07-14 02:18:09        --&gt;&gt; 13.249.126.48:443 (dossierfacile.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2021-07-15 02:19:38        --&gt;&gt; 13.35.101.104:443 (dossierfacile.fr) &lt;&lt;--</span>
 
- Further IP addresses:   13.249.126.28 13.249.126.127 13.249.126.75 
- rDNS (13.249.126.48):   server-13-249-126-48.atl51.r.cloudfront.net.
+ Further IP addresses:   13.35.101.96 13.35.101.15 13.35.101.118 
+ rDNS (13.35.101.104):   server-13-35-101-104.lax3.r.cloudfront.net.
  Service detected:       HTTP
 
 
@@ -479,9 +478,9 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing server defaults (Server Hello) </span>
 
 <span style="font-weight:bold;"> TLS extensions (standard)    </span>&quot;server name/#0&quot; &quot;EC point formats/#11&quot;
-                              &quot;renegotiation info/#65281&quot; &quot;status request/#5&quot;
-                              &quot;session ticket/#35&quot; &quot;supported versions/#43&quot;
-                              &quot;key share/#51&quot;
+                              &quot;renegotiation info/#65281&quot; &quot;session ticket/#35&quot;
+                              &quot;supported versions/#43&quot; &quot;key share/#51&quot;
+                              &quot;status request/#5&quot;
                               &quot;application layer protocol negotiation/#16&quot;
 <span style="font-weight:bold;"> Session Ticket RFC 5077 hint </span>86400 seconds, session tickets keys seems to be rotated &lt; daily
 <span style="font-weight:bold;"> SSL Session ID support       </span>yes
@@ -499,11 +498,11 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">280 &gt;= 60 days</span> (2021-03-22 00:00 --&gt; 2022-04-20 23:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">279 &gt;= 60 days</span> (2021-03-22 00:00 --&gt; 2022-04-20 23:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.sca1b.amazontrust.com/sca1b.crl
 <span style="font-weight:bold;"> OCSP URI                     </span>http://ocsp.sca1b.amazontrust.com
-<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#008817;">offered</span>, <span style="color:#008817;">not revoked</span>
+<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> OCSP must staple extension   </span>--
 <span style="font-weight:bold;"> DNS CAA RR</span> (experimental)    <span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Certificate Transparency     </span><span style="color:#008817;">yes</span> (certificate extension)
@@ -526,7 +525,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Cookie(s)                    </span>(none issued at &quot;/&quot;) -- maybe better try target URL of 30x
 <span style="font-weight:bold;"> Security headers             </span><span style="color:#c05600;">--</span>
 <span style="font-weight:bold;"> Reverse Proxy banner         </span><span style="color:#8a7237;font-weight:bold;">X-Cache</span>: Miss from cloudfront
-                              <span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> dd<span style="color:#8a7237;">5</span>c<span style="color:#8a7237;">7</span><span style="color:#8a7237;">1</span><span style="color:#8a7237;">7</span>e<span style="color:#8a7237;">4</span>a<span style="color:#8a7237;">7</span><span style="color:#8a7237;">6</span><span style="color:#8a7237;">3</span><span style="color:#8a7237;">4</span><span style="color:#8a7237;">5</span><span style="color:#8a7237;">0</span>b<span style="color:#8a7237;">8</span><span style="color:#8a7237;">5</span><span style="color:#8a7237;">5</span>beecbfdfc<span style="color:#8a7237;">5</span><span style="color:#8a7237;">3</span><span style="color:#8a7237;">6</span>.cloudfront.net (CloudFront)
+                              <span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> eb<span style="color:#8a7237;">9</span><span style="color:#8a7237;">1</span><span style="color:#8a7237;">0</span><span style="color:#8a7237;">3</span><span style="color:#8a7237;">1</span><span style="color:#8a7237;">7</span><span style="color:#8a7237;">4</span>f<span style="color:#8a7237;">8</span><span style="color:#8a7237;">2</span><span style="color:#8a7237;">8</span>a<span style="color:#8a7237;">6</span><span style="color:#8a7237;">9</span>a<span style="color:#8a7237;">9</span><span style="color:#8a7237;">7</span><span style="color:#8a7237;">5</span>f<span style="color:#8a7237;">5</span><span style="color:#8a7237;">5</span>ae<span style="color:#8a7237;">9</span>d<span style="color:#8a7237;">3</span>f<span style="color:#8a7237;">4</span>fb.cloudfront.net (CloudFront)
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing vulnerabilities </span>
@@ -606,13 +605,13 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A</span>
 <span style="font-weight:bold;"> Grade cap reasons            </span>Grade capped to A. HSTS is not offered
 
-<span style="color:white;background-color:black;"> Done 2021-07-14 02:20:58 [ 551s] --&gt;&gt; 13.249.126.48:443 (dossierfacile.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2021-07-15 02:20:46 [ 209s] --&gt;&gt; 13.35.101.104:443 (dossierfacile.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2021-07-14 02:20:58        --&gt;&gt; 13.249.126.75:443 (dossierfacile.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2021-07-15 02:20:46        --&gt;&gt; 13.35.101.118:443 (dossierfacile.fr) &lt;&lt;--</span>
 
- Further IP addresses:   13.249.126.28 13.249.126.127 13.249.126.48 
- rDNS (13.249.126.75):   server-13-249-126-75.atl51.r.cloudfront.net.
+ Further IP addresses:   13.35.101.96 13.35.101.15 13.35.101.104 
+ rDNS (13.35.101.118):   server-13-35-101-118.lax3.r.cloudfront.net.
  Service detected:       HTTP
 
 
@@ -673,9 +672,9 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing server defaults (Server Hello) </span>
 
 <span style="font-weight:bold;"> TLS extensions (standard)    </span>&quot;server name/#0&quot; &quot;EC point formats/#11&quot;
-                              &quot;renegotiation info/#65281&quot; &quot;status request/#5&quot;
-                              &quot;session ticket/#35&quot; &quot;supported versions/#43&quot;
-                              &quot;key share/#51&quot;
+                              &quot;renegotiation info/#65281&quot; &quot;session ticket/#35&quot;
+                              &quot;supported versions/#43&quot; &quot;key share/#51&quot;
+                              &quot;status request/#5&quot;
                               &quot;application layer protocol negotiation/#16&quot;
 <span style="font-weight:bold;"> Session Ticket RFC 5077 hint </span>86400 seconds, session tickets keys seems to be rotated &lt; daily
 <span style="font-weight:bold;"> SSL Session ID support       </span>yes
@@ -693,11 +692,11 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">280 &gt;= 60 days</span> (2021-03-22 00:00 --&gt; 2022-04-20 23:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">279 &gt;= 60 days</span> (2021-03-22 00:00 --&gt; 2022-04-20 23:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.sca1b.amazontrust.com/sca1b.crl
 <span style="font-weight:bold;"> OCSP URI                     </span>http://ocsp.sca1b.amazontrust.com
-<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#008817;">offered</span>, <span style="color:#008817;">not revoked</span>
+<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> OCSP must staple extension   </span>--
 <span style="font-weight:bold;"> DNS CAA RR</span> (experimental)    <span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Certificate Transparency     </span><span style="color:#008817;">yes</span> (certificate extension)
@@ -720,7 +719,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Cookie(s)                    </span>(none issued at &quot;/&quot;) -- maybe better try target URL of 30x
 <span style="font-weight:bold;"> Security headers             </span><span style="color:#c05600;">--</span>
 <span style="font-weight:bold;"> Reverse Proxy banner         </span><span style="color:#8a7237;font-weight:bold;">X-Cache</span>: Miss from cloudfront
-                              <span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> <span style="color:#8a7237;">1</span>c<span style="color:#8a7237;">1</span>b<span style="color:#8a7237;">8</span><span style="color:#8a7237;">9</span>f<span style="color:#8a7237;">1</span>f<span style="color:#8a7237;">3</span>c<span style="color:#8a7237;">3</span><span style="color:#8a7237;">8</span>ed<span style="color:#8a7237;">1</span><span style="color:#8a7237;">6</span><span style="color:#8a7237;">8</span><span style="color:#8a7237;">5</span><span style="color:#8a7237;">2</span><span style="color:#8a7237;">5</span><span style="color:#8a7237;">4</span><span style="color:#8a7237;">9</span><span style="color:#8a7237;">0</span><span style="color:#8a7237;">1</span>bc<span style="color:#8a7237;">8</span>fb<span style="color:#8a7237;">2</span>d.cloudfront.net (CloudFront)
+                              <span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> <span style="color:#8a7237;">4</span><span style="color:#8a7237;">6</span><span style="color:#8a7237;">0</span>c<span style="color:#8a7237;">1</span>d<span style="color:#8a7237;">4</span>f<span style="color:#8a7237;">8</span><span style="color:#8a7237;">6</span>e<span style="color:#8a7237;">8</span>d<span style="color:#8a7237;">5</span><span style="color:#8a7237;">8</span><span style="color:#8a7237;">7</span>c<span style="color:#8a7237;">5</span><span style="color:#8a7237;">6</span>dcd<span style="color:#8a7237;">5</span>cef<span style="color:#8a7237;">7</span>cedef.cloudfront.net (CloudFront)
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing vulnerabilities </span>
@@ -800,10 +799,10 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A</span>
 <span style="font-weight:bold;"> Grade cap reasons            </span>Grade capped to A. HSTS is not offered
 
-<span style="color:white;background-color:black;"> Done 2021-07-14 02:23:38 [ 711s] --&gt;&gt; 13.249.126.75:443 (dossierfacile.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2021-07-15 02:21:58 [ 281s] --&gt;&gt; 13.35.101.118:443 (dossierfacile.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="font-weight:bold;">Done testing now all IP addresses (on port 443): </span>13.249.126.28 13.249.126.127 13.249.126.48 13.249.126.75
+<span style="font-weight:bold;">Done testing now all IP addresses (on port 443): </span>13.35.101.96 13.35.101.15 13.35.101.104 13.35.101.118
 
 </pre>
 </body>
