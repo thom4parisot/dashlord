@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln blog.beta.gouv.fr</pre>
-<p class="lead">Thu Jul 15 01:30:48 2021 – Thu Jul 15 01:31:13 2021<br>1 hosts scanned.
+<p class="lead">Fri Jul 16 01:22:28 2021 – Fri Jul 16 01:22:51 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,7 +76,7 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>167.172.136.193</td>
+<td>52.203.36.44</td>
 <td>blog.beta.gouv.fr</td>
 <td>2</td>
 <td>0</td>
@@ -91,10 +91,13 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#167-172-136-193"><h3 class="panel-title">167.172.136.193 - blog.beta.gouv.fr</h3></div>
-<div class="panel-body collapse in" id="167-172-136-193">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#52-203-36-44"><h3 class="panel-title">52.203.36.44 - blog.beta.gouv.fr</h3></div>
+<div class="panel-body collapse in" id="52-203-36-44">
 <h4>Hostnames</h4>
-<ul><li>blog.beta.gouv.fr (user)</li></ul>
+<ul>
+<li>blog.beta.gouv.fr (user)</li>
+<li>ec2-52-203-36-44.compute-1.amazonaws.com (PTR)</li>
+</ul>
 <h4>Ports</h4>
 <div class="table-responsive"><table class="table table-bordered">
 <thead><tr>
@@ -122,15 +125,15 @@
   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, RPCCheck, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Thu, 15 Jul 2021 01:31:04 GMT
+    date: Fri, 16 Jul 2021 01:22:43 GMT
   FourOhFourRequest, GetRequest, HTTPOptions: 
     HTTP/1.0 400 Bad Request
-    date: Thu, 15 Jul 2021 01:30:59 GMT
+    date: Fri, 16 Jul 2021 01:22:38 GMT
     Missing host header
   RTSPRequest, X11Probe: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Thu, 15 Jul 2021 01:30:59 GMT</pre>
+    date: Fri, 16 Jul 2021 01:22:38 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -146,18 +149,26 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, RPCCheck, RTSPRequest, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, RPCCheck, SSLSessionReq, TLSSessionReq: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Thu, 15 Jul 2021 01:31:11 GMT
-  FourOhFourRequest, GetRequest, HTTPOptions: 
+    date: Fri, 16 Jul 2021 01:22:49 GMT
+  FourOhFourRequest: 
     HTTP/1.0 400 Bad Request
-    date: Thu, 15 Jul 2021 01:31:05 GMT
+    date: Fri, 16 Jul 2021 01:22:45 GMT
     Missing host header
+  GetRequest, HTTPOptions: 
+    HTTP/1.0 400 Bad Request
+    date: Fri, 16 Jul 2021 01:22:44 GMT
+    Missing host header
+  RTSPRequest, SMBProgNeg, TerminalServerCookie: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Fri, 16 Jul 2021 01:22:50 GMT
   tor-versions: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Thu, 15 Jul 2021 01:31:06 GMT</pre>
+    date: Fri, 16 Jul 2021 01:22:44 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -188,7 +199,7 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>167.172.136.193 - blog.beta.gouv.fr</td>
+<td>52.203.36.44 - blog.beta.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
@@ -198,7 +209,7 @@
 <td></td>
 </tr>
 <tr>
-<td>167.172.136.193 - blog.beta.gouv.fr</td>
+<td>52.203.36.44 - blog.beta.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
 <td>https</td>
