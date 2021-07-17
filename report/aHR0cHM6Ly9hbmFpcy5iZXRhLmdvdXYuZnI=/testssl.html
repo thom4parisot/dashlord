@@ -21,11 +21,11 @@
 ###########################################################</span>
 
  Using &quot;OpenSSL 1.0.2-chacha (1.0.2k-dev)&quot; [~183 ciphers]
- on fv-az154-351:/home/testssl/bin/openssl.Linux.x86_64
+ on fv-az154-440:/home/testssl/bin/openssl.Linux.x86_64
  (built: &quot;Jan 18 17:12:17 2019&quot;, platform: &quot;linux-x86_64&quot;)
 
 
-<span style="color:white;background-color:black;"> Start 2021-07-16 05:50:09        --&gt;&gt; 51.210.1.8:443 (anais.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2021-07-17 06:11:51        --&gt;&gt; 51.210.1.8:443 (anais.beta.gouv.fr) &lt;&lt;--</span>
 
  rDNS (51.210.1.8):      ns3111743.ip-51-210-1.eu.
  Service detected:       HTTP
@@ -99,14 +99,14 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Server key size              </span>RSA <span style="color:#008817;">4096</span> bits (exponent is 65537)
 <span style="font-weight:bold;"> Server key usage             </span>Digital Signature, Key Encipherment
 <span style="font-weight:bold;"> Server extended key usage    </span>TLS Web Server Authentication, TLS Web Client Authentication
-<span style="font-weight:bold;"> Serial / Fingerprints        </span>0381A8957F2B7CB954EB4D0685605FD34C6B / SHA1 278EB31316FBB8351DC68B69E59A225C1EA30C75
-                              SHA256 6687505C733DD0C08EC514019817F79427097621A5E08721A9B437341FCF7EAF
-<span style="font-weight:bold;"> Common Name (CN)             </span><i>anais.beta.gouv.fr </i> (request w/o SNI didn&apos;t succeed)
-<span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>anais.beta.gouv.fr test.anais.beta.gouv.fr </i>
-<span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
+<span style="font-weight:bold;"> Serial / Fingerprints        </span>0485420FA8C7BA0FBB03971A4993C99F23E4 / SHA1 DC94C23ACEEE41EC50F669C840B085299B515A8B
+                              SHA256 21DA22A5BD0F800BB77BAD234E3EB480DD1A4020F861E5BAFC44D583152FD1E5
+<span style="font-weight:bold;"> Common Name (CN)             </span><i>anais.fabnum.fr </i> (request w/o SNI didn&apos;t succeed)
+<span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>anais.beta.gouv.fr anais.fabnum.fr </i>
+<span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">44 &gt;= 30 days</span> (2021-05-31 08:19 --&gt; 2021-08-29 08:19)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">79 &gt;= 30 days</span> (2021-07-06 07:32 --&gt; 2021-10-04 07:32)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
@@ -124,7 +124,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
-<span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
+<span style="font-weight:bold;"> HTTP clock skew              </span>-1 sec from localtime
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">3650 days</span>=315360000 s<span style="color:#008817;">, includeSubDomains</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>nginx/<span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span><span style="color:#8a7237;">8</span>.<span style="color:#8a7237;">0</span>
@@ -155,7 +155,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> FREAK</span> (CVE-2015-0204)                     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> DROWN</span> (CVE-2016-0800, CVE-2016-0703)      <span style="color:#008817;font-weight:bold;">not vulnerable on this host and port (OK)</span>
                                            make sure you don&apos;t use this certificate elsewhere with SSLv2 enabled services
-                                           <a href="https://censys.io/ipv4?q=6687505C733DD0C08EC514019817F79427097621A5E08721A9B437341FCF7EAF" style="color:black;text-decoration:none;">https://censys.io/ipv4?q=6687505C733DD0C08EC514019817F79427097621A5E08721A9B437341FCF7EAF</a> could help you to find out
+                                           <a href="https://censys.io/ipv4?q=21DA22A5BD0F800BB77BAD234E3EB480DD1A4020F861E5BAFC44D583152FD1E5" style="color:black;text-decoration:none;">https://censys.io/ipv4?q=21DA22A5BD0F800BB77BAD234E3EB480DD1A4020F861E5BAFC44D583152FD1E5</a> could help you to find out
 <span style="font-weight:bold;"> LOGJAM</span> (CVE-2015-4000), experimental      <span style="color:#008817;">not vulnerable (OK):</span> no DH EXPORT ciphers, no DH key detected with &lt;= TLS 1.2
 <span style="font-weight:bold;"> BEAST</span> (CVE-2011-3389)                     <span style="color:#008817;">not vulnerable (OK)</span>, no SSL3 or TLS1
 <span style="font-weight:bold;"> LUCKY13</span> (CVE-2013-0169), experimental     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
@@ -215,7 +215,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>84
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2021-07-16 05:51:57 [ 110s] --&gt;&gt; 51.210.1.8:443 (anais.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2021-07-17 06:13:45 [ 116s] --&gt;&gt; 51.210.1.8:443 (anais.beta.gouv.fr) &lt;&lt;--</span>
 
 
 </pre>
