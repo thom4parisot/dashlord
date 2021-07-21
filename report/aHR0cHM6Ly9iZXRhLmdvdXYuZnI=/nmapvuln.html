@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln beta.gouv.fr</pre>
-<p class="lead">Tue Jul 20 01:29:16 2021 – Tue Jul 20 01:29:47 2021<br>1 hosts scanned.
+<p class="lead">Wed Jul 21 01:19:42 2021 – Wed Jul 21 01:20:14 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -122,22 +122,26 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+  DNSStatusRequestTCP, RPCCheck: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Tue, 20 Jul 2021 01:29:32 GMT
-  FourOhFourRequest, GetRequest, HTTPOptions: 
+    date: Wed, 21 Jul 2021 01:19:58 GMT
+  DNSVersionBindReqTCP, Help, Kerberos, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Wed, 21 Jul 2021 01:19:59 GMT
+  FourOhFourRequest: 
     HTTP/1.0 400 Bad Request
-    date: Tue, 20 Jul 2021 01:29:26 GMT
+    date: Wed, 21 Jul 2021 01:19:54 GMT
     Missing host header
-  Kerberos, SMBProgNeg: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Tue, 20 Jul 2021 01:29:33 GMT
+  GetRequest, HTTPOptions: 
+    HTTP/1.0 400 Bad Request
+    date: Wed, 21 Jul 2021 01:19:53 GMT
+    Missing host header
   RTSPRequest, X11Probe: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Tue, 20 Jul 2021 01:29:26 GMT</pre>
+    date: Wed, 21 Jul 2021 01:19:53 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -153,34 +157,30 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck: 
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, SSLSessionReq, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Tue, 20 Jul 2021 01:29:39 GMT
-  FourOhFourRequest, HTTPOptions: 
+    date: Wed, 21 Jul 2021 01:20:06 GMT
+  FourOhFourRequest, GetRequest: 
     HTTP/1.0 400 Bad Request
-    date: Tue, 20 Jul 2021 01:29:33 GMT
+    date: Wed, 21 Jul 2021 01:19:59 GMT
     Missing host header
-  GetRequest: 
+  HTTPOptions: 
     HTTP/1.0 400 Bad Request
-    date: Tue, 20 Jul 2021 01:29:32 GMT
+    date: Wed, 21 Jul 2021 01:20:00 GMT
     Missing host header
-  Help, Kerberos, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+  Kerberos, SMBProgNeg, TLSSessionReq: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Tue, 20 Jul 2021 01:29:40 GMT
-  RTSPRequest: 
+    date: Wed, 21 Jul 2021 01:20:07 GMT
+  RPCCheck, RTSPRequest: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Tue, 20 Jul 2021 01:29:38 GMT
-  SMBProgNeg: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Tue, 20 Jul 2021 01:29:41 GMT
+    date: Wed, 21 Jul 2021 01:20:05 GMT
   tor-versions: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Tue, 20 Jul 2021 01:29:33 GMT</pre>
+    date: Wed, 21 Jul 2021 01:19:59 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
