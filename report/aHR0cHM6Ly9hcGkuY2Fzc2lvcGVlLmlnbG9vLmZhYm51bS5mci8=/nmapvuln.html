@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln api.cassiopee.igloo.fabnum.fr</pre>
-<p class="lead">Tue Aug  3 11:25:07 2021 – Tue Aug  3 11:25:36 2021<br>1 hosts scanned.
+<p class="lead">Wed Aug  4 11:25:35 2021 – Wed Aug  4 11:26:15 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -122,7 +122,13 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck, X11Probe: 
+  DNSStatusRequestTCP: 
+    HTTP/1.1 400 Bad request
+    content-length: 90
+    cache-control: no-cache
+    content-type: text/html
+    connection: close
+  DNSVersionBindReqTCP, RPCCheck, X11Probe: 
     HTTP/1.1 400 Bad request
     content-length: 90
     cache-control: no-cache
@@ -133,13 +139,13 @@
     &lt;/body&gt;&lt;/html&gt;
   FourOhFourRequest: 
     HTTP/1.0 404 Not Found
-    date: Tue, 03 Aug 2021 11:25:15 GMT
+    date: Wed, 04 Aug 2021 11:25:45 GMT
     content-length: 21
     content-type: text/plain; charset=utf-8
     default backend - 404
   GetRequest, HTTPOptions: 
     HTTP/1.0 404 Not Found
-    date: Tue, 03 Aug 2021 11:25:14 GMT
+    date: Wed, 04 Aug 2021 11:25:44 GMT
     content-length: 21
     content-type: text/plain; charset=utf-8
     default backend - 404
@@ -179,15 +185,15 @@
     &lt;html&gt;&lt;body&gt;&lt;h1&gt;400 Bad request&lt;/h1&gt;
     Your browser sent an invalid request.
     &lt;/body&gt;&lt;/html&gt;
-  FourOhFourRequest, HTTPOptions: 
+  FourOhFourRequest: 
     HTTP/1.0 404 Not Found
-    date: Tue, 03 Aug 2021 11:25:21 GMT
+    date: Wed, 04 Aug 2021 11:25:52 GMT
     content-length: 21
     content-type: text/plain; charset=utf-8
     default backend - 404
-  GetRequest: 
+  GetRequest, HTTPOptions: 
     HTTP/1.0 404 Not Found
-    date: Tue, 03 Aug 2021 11:25:20 GMT
+    date: Wed, 04 Aug 2021 11:25:51 GMT
     content-length: 21
     content-type: text/plain; charset=utf-8
     default backend - 404
