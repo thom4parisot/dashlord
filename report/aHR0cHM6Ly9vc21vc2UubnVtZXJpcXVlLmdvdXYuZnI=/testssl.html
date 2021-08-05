@@ -21,11 +21,11 @@
 ###########################################################</span>
 
  Using &quot;OpenSSL 1.0.2-chacha (1.0.2k-dev)&quot; [~183 ciphers]
- on fv-az154-994:/home/testssl/bin/openssl.Linux.x86_64
+ on fv-az292-578:/home/testssl/bin/openssl.Linux.x86_64
  (built: &quot;Jan 18 17:12:17 2019&quot;, platform: &quot;linux-x86_64&quot;)
 
 
-<span style="color:white;background-color:black;"> Start 2021-08-04 08:52:22        --&gt;&gt; 148.253.96.234:443 (osmose.numerique.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2021-08-05 07:04:35        --&gt;&gt; 148.253.96.234:443 (osmose.numerique.gouv.fr) &lt;&lt;--</span>
 
  rDNS (148.253.96.234):  ows-148-253-96-234.cloudgouv-eu-west-1.compute.outscale.com.
  Service detected:       HTTP
@@ -132,11 +132,17 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
-<span style="font-weight:bold;"> HTTP Status Code           </span><span style="color:#cd00cd;"> likely HTTP header requests failed (#lines: 0)</span>
-Rerun with DEBUG&gt;=1 and inspect /tmp/testssl.k9XECy/148.253.96.234.http_header.txt
-
-<span style="color:#be32d0;font-weight:bold;">HTTP header was repeatedly zero.</span>
-Skipping complete HTTP header section.
+<span style="font-weight:bold;"> HTTP Status Code           </span>  302 , redirecting to &quot;<a href="https://osmose.numerique.gouv.fr/plugins/DINUMThemePlugin/jsp/front/privateLoginOsmose.jsp?redirect=https%3A%2F%2Fosmose.numerique.gouv.fr%2Fjcms%2F" style="color:black;text-decoration:none;">https://osmose.numerique.gouv.fr/plugins/DINUMThemePlugin/jsp/front/privateLoginOsmose.jsp?redirect=https%3A%2F%2Fosmose.numerique.gouv.fr%2Fjcms%2F</a>&quot;
+<span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
+<span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">365 days</span>=31536000 s<span style="color:#008817;">, includeSubDomains</span><span style="color:#008817;">, preload</span>
+<span style="font-weight:bold;"> Public Key Pinning           </span>--
+<span style="font-weight:bold;"> Server banner                </span>(no &quot;Server&quot; line in header, interesting!)
+<span style="font-weight:bold;"> Application banner           </span>--
+<span style="font-weight:bold;"> Cookie(s)                    </span>1 issued: <span style="color:#008817;">1/1</span> secure, <span style="color:#008817;">1/1</span> HttpOnly -- maybe better try target URL of 30x
+<span style="font-weight:bold;"> Security headers             </span><span style="color:#008817;">X-Content-Type-Options</span>: nosniff
+                              X-XSS-Protection: 1
+                              Referrer-Policy: strict-origin
+<span style="font-weight:bold;"> Reverse Proxy banner         </span>--
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing vulnerabilities </span>
@@ -148,7 +154,8 @@ Skipping complete HTTP header section.
 <span style="font-weight:bold;"> Secure Renegotiation (RFC 5746)           </span><span style="color:#008817;font-weight:bold;">supported (OK)</span>
 <span style="font-weight:bold;"> Secure Client-Initiated Renegotiation     </span><span style="color:#008817;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> CRIME, TLS </span>(CVE-2012-4929)                <span style="color:#008817;">not vulnerable (OK)</span>
-<span style="font-weight:bold;"> BREACH</span> (CVE-2013-3587)                    <span style="color:#cd00cd;">At least 1/4 checks failed (HTTP header request stalled and was terminated</span>, debug: warn_killed:yes<span style="font-weight:bold;"> POODLE, SSL</span> (CVE-2014-3566)               <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>, no SSLv3 support
+<span style="font-weight:bold;"> BREACH</span> (CVE-2013-3587)                    <span style="color:#008817;">no gzip/deflate/compress/br HTTP compression (OK) </span> - only supplied &quot;/&quot; tested
+<span style="font-weight:bold;"> POODLE, SSL</span> (CVE-2014-3566)               <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>, no SSLv3 support
 <span style="font-weight:bold;"> TLS_FALLBACK_SCSV</span> (RFC 7507)              <span style="color:#008817;">No fallback possible (OK)</span>, no protocol below TLS 1.2 offered
 <span style="font-weight:bold;"> SWEET32</span> (CVE-2016-2183, CVE-2016-6329)    <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> FREAK</span> (CVE-2015-0204)                     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
@@ -214,7 +221,7 @@ Skipping complete HTTP header section.
 <span style="font-weight:bold;"> Final Score                  </span>81
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2021-08-04 08:54:09 [ 109s] --&gt;&gt; 148.253.96.234:443 (osmose.numerique.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2021-08-05 07:06:53 [ 140s] --&gt;&gt; 148.253.96.234:443 (osmose.numerique.gouv.fr) &lt;&lt;--</span>
 
 
 </pre>
