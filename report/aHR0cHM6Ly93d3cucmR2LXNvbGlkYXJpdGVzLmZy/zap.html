@@ -81,7 +81,7 @@ ZAP Scanning Report
         <p>
 </p>
         <h3 class="left-header">Summary of Alerts</h3>
-        <h3 class="time-stamp">Generated on Thu, 5 Aug 2021 07:02:29</h3>
+        <h3 class="time-stamp">Generated on Fri, 6 Aug 2021 06:46:38</h3>
         <table width="45%" class="summary">
             <tr bgcolor="#666666">
                 <th width="45%" height="24">Risk 
@@ -108,25 +108,25 @@ ZAP Scanning Report
                 <th width="60%" height="24">Name</th><th width="20%" align="center">Risk Level</th><th width="20%" align="center">Number of Instances</th>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Content Security Policy (CSP) Header Not Set</td><td align="center">Medium</td><td align="center">3</td>
+                <td>Content Security Policy (CSP) Header Not Set</td><td align="center">Medium</td><td align="center">4</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>CSP: script-src unsafe-inline</td><td align="center">Medium</td><td align="center">2</td>
+                <td>CSP: script-src unsafe-inline</td><td align="center">Medium</td><td align="center">3</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>CSP: style-src unsafe-inline</td><td align="center">Medium</td><td align="center">2</td>
+                <td>CSP: style-src unsafe-inline</td><td align="center">Medium</td><td align="center">3</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>CSP: Wildcard Directive</td><td align="center">Medium</td><td align="center">2</td>
+                <td>CSP: Wildcard Directive</td><td align="center">Medium</td><td align="center">3</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>X-Frame-Options Header Not Set</td><td align="center">Medium</td><td align="center">6</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Cookie without SameSite Attribute</td><td align="center">Low</td><td align="center">10</td>
+                <td>Cookie without SameSite Attribute</td><td align="center">Low</td><td align="center">11</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>CSP: Notices</td><td align="center">Low</td><td align="center">2</td>
+                <td>CSP: Notices</td><td align="center">Low</td><td align="center">3</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Dangerous JS Functions</td><td align="center">Low</td><td align="center">1</td>
@@ -147,7 +147,7 @@ ZAP Scanning Report
                 <td>Information Disclosure - Suspicious Comments</td><td align="center">Informational</td><td align="center">1</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Modern Web Application</td><td align="center">Informational</td><td align="center">5</td>
+                <td>Modern Web Application</td><td align="center">Informational</td><td align="center">6</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Non-Storable Content</td><td align="center">Informational</td><td align="center">7</td>
@@ -159,7 +159,7 @@ ZAP Scanning Report
                 <td>Timestamp Disclosure - Unix</td><td align="center">Informational</td><td align="center">13</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>User Controllable HTML Element Attribute (Potential XSS)</td><td align="center">Informational</td><td align="center">10</td>
+                <td>User Controllable HTML Element Attribute (Potential XSS)</td><td align="center">Informational</td><td align="center">13</td>
             </tr>
         </table>
         <div class="spacer-lg"></div>
@@ -187,7 +187,17 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/users</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/users/password</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/organisations</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -217,7 +227,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">3</td>
+                <td width="20%">Instances</td><td width="80%">4</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -264,6 +274,20 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accueil_mds</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; font-src 'self' data: github.com; img-src 'self' data: stats.data.gouv.fr voxusagers.numerique.gouv.fr; object-src 'none'; style-src 'self' 'unsafe-inline' *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; script-src 'self' 'unsafe-inline' stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src 'self' api-adresse.data.gouv.fr sentry.io cdnjs.cloudflare.com etalab-tiles.fr; report-uri https://o320280.ingest.sentry.io/api/1811205/security/?sentry_key=9483c31bc6f442ba8aa0ed3869608da0</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/</td>
             </tr>
               
@@ -292,7 +316,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">2</td>
+                <td width="20%">Instances</td><td width="80%">3</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -353,6 +377,20 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accueil_mds</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; font-src 'self' data: github.com; img-src 'self' data: stats.data.gouv.fr voxusagers.numerique.gouv.fr; object-src 'none'; style-src 'self' 'unsafe-inline' *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; script-src 'self' 'unsafe-inline' stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src 'self' api-adresse.data.gouv.fr sentry.io cdnjs.cloudflare.com etalab-tiles.fr; report-uri https://o320280.ingest.sentry.io/api/1811205/security/?sentry_key=9483c31bc6f442ba8aa0ed3869608da0</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr</td>
             </tr>
               
@@ -367,7 +405,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">2</td>
+                <td width="20%">Instances</td><td width="80%">3</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -428,6 +466,20 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accueil_mds</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; font-src 'self' data: github.com; img-src 'self' data: stats.data.gouv.fr voxusagers.numerique.gouv.fr; object-src 'none'; style-src 'self' 'unsafe-inline' *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; script-src 'self' 'unsafe-inline' stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src 'self' api-adresse.data.gouv.fr sentry.io cdnjs.cloudflare.com etalab-tiles.fr; report-uri https://o320280.ingest.sentry.io/api/1811205/security/?sentry_key=9483c31bc6f442ba8aa0ed3869608da0</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr</td>
             </tr>
               
@@ -442,7 +494,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">2</td>
+                <td width="20%">Instances</td><td width="80%">3</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -692,6 +744,24 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/stats</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">_lapin_session</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Set-Cookie: _lapin_session</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/</td>
             </tr>
               
@@ -800,7 +870,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">10</td>
+                <td width="20%">Instances</td><td width="80%">11</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -847,6 +917,20 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accueil_mds</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; font-src 'self' data: github.com; img-src 'self' data: stats.data.gouv.fr voxusagers.numerique.gouv.fr; object-src 'none'; style-src 'self' 'unsafe-inline' *.bootstrapcdn.com cdnjs.cloudflare.com api.mapbox.com; script-src 'self' 'unsafe-inline' stats.data.gouv.fr api-adresse.data.gouv.fr data1.ollapges.com fidoapi.com data1.gryplex.com lb.apicit.net tags.clickintext.net api.mapbox.com blob:; connect-src 'self' api-adresse.data.gouv.fr sentry.io cdnjs.cloudflare.com etalab-tiles.fr; report-uri https://o320280.ingest.sentry.io/api/1811205/security/?sentry_key=9483c31bc6f442ba8aa0ed3869608da0</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr</td>
             </tr>
               
@@ -875,7 +959,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">2</td>
+                <td width="20%">Instances</td><td width="80%">3</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1603,39 +1687,11 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2BpTrpY1rK7tVp8BwJ5MRSSdMwwIn1REANpGNslljDY2VgajGd6bdrsFu0ZO</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Method</td><td width="80%">POST</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2BsZESRKijLfwg1SyH3IkeR2XToG1imGYqms6ERkCgLt3tp8zvXW9Cric5I3qVKrDZjao7LyoyEHnTvdxO</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accueil_mds</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2BZq857GigRfAOKkx9gerdNDHcuRtLB7EpyOOsIB3vJg3ORvMHZjnBC2A1FjPMg6kOY5aZbHEndQIHgHv8</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2FS6a8uGhmqYoUihX1jm7MoQxia4QjjBxpqXMV56LDDUYpSaBjqoxrTHzgcap6A9jkxapaWkWfwQe7</td>
             </tr>
               
   
@@ -1655,7 +1711,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/contact</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accessibility</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1663,13 +1719,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2BnLX46BHH99ORRhOFPHK6coB0ahUd3sCP9sxhz4rM</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2FnqX1aEIZ7RxmDW9IaBojLjIMzj5rvMXBfjKp1vsKCgFwrup5xFolkXRY3UWBnOiapQUTuj9ZFoAY3Knz7X3gtqeI8c41y</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accueil_mds</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1677,7 +1733,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2B2G1ZYy4MvpYtNpchv1vfrmbPXjZJRdOdWBoXoitMulnmkEQM0ddSRbFKgsqzikeIgn9JNWde0cazKTRoTwmxH3bQovkLNdjmJrSIMxTy03</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">gdBdPADVtg05Yrja1GZDBISXqapp42cz6c9NCifYw4s6b5bKEafKLqIEWWFB6vtoftVuV5</td>
             </tr>
               
   
@@ -1697,7 +1753,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/users/sign_in</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1705,7 +1761,49 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2Bo9Lrw83YApanwUiaLtIOThOuxBH1xNc4McbURrSmtBuSG3EalDd848Rg3b4l4gJeg3QMS9U7</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2FvkZAYoSUOd1sHprldYwB2Z6Klx8KxSTb0G3PULC4Jm9Q3NRGQoiCPHw1nmKnlGJN2dbImsQwi</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/contact</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2Bl9OGnT3gFkPChy5DSCccPaVjN65AGd9XEO</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/stats</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2Fb5ejZGA7Cwt0KuBVrxVc9wfWzOoZwBNt</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">rHONDQnyrWMOGGp4kDSXEnyqZSBYR8T4AsB</td>
             </tr>
               
   
@@ -1719,13 +1817,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">HyrRkD5hZVvZTQMBPewHdYxkiVseJ7hepTFNgvc</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2BS7CtpmUvC8OKVNtnv82ZsjlVCf1q8</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/agents/sign_in</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/users/sign_in</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1733,7 +1831,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2Bp2DgsdUhucfiPVrCo0yPNfdLHSqznOy74RJMy8S2CHV6138jsy</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2FjbVIPNd8O5UJvkxOghfOwK7QyBEmwwLXbKOZjaTQ2kX9lXFPCYn8jb</td>
             </tr>
               
   
@@ -1747,21 +1845,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2F90uE1SaiFUirSAsqR9NKPZxInx8hVlsQTHBwk</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accessibility</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">2FHdWtBaxUV0XPavdL9dFh5Dtw2W949dSNPSJMYCfb5vFUaPeP8J</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">2BNCwtvfaAB5AO6UjY89OkBLzsSA1oKX2mnDa3JwFWJaIhk</td>
             </tr>
               
   
@@ -1775,7 +1859,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>�\x001aS��5���V�\x0001��LE$�3\x000c\x0008�TD\x0000�F6�e�66V\x0006�\x0019ޛv�\x0005�FN</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>�T�kˆ�j��H�_X���\x0010�&amp;�B8�ƚ�1^z,0�b��\x0006:�ƴ��\x0007\x001a��=�LZ���Y�\x0010{</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
@@ -1889,7 +1973,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/agents/sign_in</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/organisations/new</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1903,7 +1987,35 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/users</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/users/sign_up</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a class="close" data-dismiss="alert" href="#"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt;&lt;/a&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/users/password</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">POST</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a class="close" data-dismiss="alert" href="#"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt;&lt;/a&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/organisations</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1945,21 +2057,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/agents/password/new</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a class="close" data-dismiss="alert" href="#"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt;&lt;/a&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">5</td>
+                <td width="20%">Instances</td><td width="80%">6</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2244,6 +2342,20 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/accueil_mds</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">24415035</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/contact</td>
             </tr>
               
@@ -2412,20 +2524,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">18197958</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%">Instances</td><td width="80%">13</td>
             </tr>
               
@@ -2434,7 +2532,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>0296608686, which evaluates to: 1979-05-26 23:18:06</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>24415035, which evaluates to: 1970-10-10 13:57:15</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
@@ -2494,6 +2592,20 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/users/password</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">POST</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">commit</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/users</td>
             </tr>
               
@@ -2531,6 +2643,20 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Parameter</td><td width="80%">organisation[agent_roles_attributes][0][agent_attributes][email]</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/users/password</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">POST</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">commit</td>
             </tr>
               
   
@@ -2578,6 +2704,20 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/users/password</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">POST</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">user[email]</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://www.rdv-solidarites.fr/users</td>
             </tr>
               
@@ -2620,7 +2760,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">10</td>
+                <td width="20%">Instances</td><td width="80%">13</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
