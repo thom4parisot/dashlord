@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln beta.gouv.fr</pre>
-<p class="lead">Wed Aug 11 01:39:55 2021 – Wed Aug 11 01:40:27 2021<br>1 hosts scanned.
+<p class="lead">Thu Aug 12 01:47:02 2021 – Thu Aug 12 01:47:35 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -122,18 +122,22 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, RPCCheck, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+  DNSStatusRequestTCP, Kerberos, SMBProgNeg, SSLSessionReq, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Wed, 11 Aug 2021 01:40:12 GMT
+    date: Thu, 12 Aug 2021 01:47:20 GMT
+  DNSVersionBindReqTCP, Help, RPCCheck, TLSSessionReq: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Thu, 12 Aug 2021 01:47:19 GMT
   FourOhFourRequest, GetRequest, HTTPOptions: 
     HTTP/1.0 400 Bad Request
-    date: Wed, 11 Aug 2021 01:40:06 GMT
+    date: Thu, 12 Aug 2021 01:47:14 GMT
     Missing host header
   RTSPRequest, X11Probe: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Wed, 11 Aug 2021 01:40:07 GMT</pre>
+    date: Thu, 12 Aug 2021 01:47:14 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -149,34 +153,30 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck: 
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, SSLSessionReq, TLSSessionReq: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Wed, 11 Aug 2021 01:40:19 GMT
-  FourOhFourRequest, HTTPOptions: 
+    date: Thu, 12 Aug 2021 01:47:27 GMT
+  FourOhFourRequest, GetRequest, HTTPOptions: 
     HTTP/1.0 400 Bad Request
-    date: Wed, 11 Aug 2021 01:40:12 GMT
+    date: Thu, 12 Aug 2021 01:47:20 GMT
     Missing host header
-  GetRequest: 
-    HTTP/1.0 400 Bad Request
-    date: Wed, 11 Aug 2021 01:40:13 GMT
-    Missing host header
-  Help, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+  Kerberos, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Wed, 11 Aug 2021 01:40:20 GMT
-  Kerberos, SMBProgNeg: 
+    date: Thu, 12 Aug 2021 01:47:28 GMT
+  RPCCheck, RTSPRequest: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Wed, 11 Aug 2021 01:40:21 GMT
-  RTSPRequest: 
+    date: Thu, 12 Aug 2021 01:47:26 GMT
+  SMBProgNeg: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Wed, 11 Aug 2021 01:40:18 GMT
+    date: Thu, 12 Aug 2021 01:47:29 GMT
   tor-versions: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Wed, 11 Aug 2021 01:40:13 GMT</pre>
+    date: Thu, 12 Aug 2021 01:47:21 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
