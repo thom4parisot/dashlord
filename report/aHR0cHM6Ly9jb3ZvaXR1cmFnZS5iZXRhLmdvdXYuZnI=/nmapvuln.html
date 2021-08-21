@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln covoiturage.beta.gouv.fr</pre>
-<p class="lead">Thu Aug 19 02:34:30 2021 – Thu Aug 19 02:37:25 2021<br>1 hosts scanned.
+<p class="lead">Sat Aug 21 02:42:37 2021 – Sat Aug 21 02:42:48 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -78,7 +78,7 @@
 <td><span class="label label-success">up</span></td>
 <td>185.31.40.11</td>
 <td>covoiturage.beta.gouv.fr</td>
-<td>2</td>
+<td>0</td>
 <td>0</td>
 </tr></tbody>
 </table></div>
@@ -109,90 +109,7 @@
 <th>Version</th>
 <th>Extra Info</th>
 </tr></thead>
-<tbody>
-<tr class="success">
-<td title="Port">80</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http</td>
-<td title="Product"></td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
-</tr>
-<tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  FourOhFourRequest: 
-    HTTP/1.0 403 Forbidden
-    Connection: Close
-    Content-Length: 120
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 47713503-7b27-47d1-9014-c31aa081fef2&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-  GetRequest: 
-    HTTP/1.0 403 Forbidden
-    Connection: Close
-    Content-Length: 120
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: d027d2a0-bc5d-40a8-8699-958e05b42818&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-  HTTPOptions: 
-    HTTP/1.0 403 Forbidden
-    Connection: Close
-    Content-Length: 120
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 658aae96-73de-4107-a34a-dc87a7f02399&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-  RTSPRequest: 
-    HTTP/1.0 400 Bad Request
-    Connection: Close
-    Content-Length: 108
-    Connection: close
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Bad Request&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 4ffcebe1-943c-4eed-9bf3-a4470d95f8bd&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-  SIPOptions: 
-    HTTP/1.0 400 Bad Request
-    Connection: Close
-    Content-Length: 108
-    Connection: close
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Bad Request&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: e8c561d0-a2a2-4f10-8546-bd03cb986210&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</pre>
-</td></tr>
-<tr class="success">
-<td title="Port">443</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">https</td>
-<td title="Product">Apache</td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
-</tr>
-<tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  FourOhFourRequest: 
-    HTTP/1.0 403 Forbidden
-    Connection: Close
-    Content-Length: 120
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 6137ab44-212c-41de-b27a-5ddbf06eaadb&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-  GetRequest: 
-    HTTP/1.0 403 Forbidden
-    Connection: Close
-    Content-Length: 120
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 2e821884-778a-43fc-b54e-10a8d41f82d0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-  HTTPOptions: 
-    HTTP/1.0 403 Forbidden
-    Connection: Close
-    Content-Length: 120
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 66517adb-ae88-4f9f-a09a-e5140d9132b8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-  RTSPRequest: 
-    HTTP/1.0 400 Bad Request
-    Connection: Close
-    Content-Length: 108
-    Connection: close
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Bad Request&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 96ee2719-504a-4763-8b2b-a8b4c1844cc6&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-  SIPOptions: 
-    HTTP/1.0 400 Bad Request
-    Connection: Close
-    Content-Length: 108
-    Connection: close
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Bad Request&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 047faca3-26d5-4764-b882-76fac6428b9b&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</pre>
-<h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">Apache</pre>
-</td></tr>
-</tbody>
+<tbody></tbody>
 </table></div>
 </div>
 </div>
@@ -208,28 +125,7 @@
 <th>CPE</th>
 <th>Extra info</th>
 </tr></thead>
-<tbody>
-<tr>
-<td>185.31.40.11 - covoiturage.beta.gouv.fr</td>
-<td>80</td>
-<td>tcp</td>
-<td>http</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>185.31.40.11 - covoiturage.beta.gouv.fr</td>
-<td>443</td>
-<td>tcp</td>
-<td>https</td>
-<td>Apache</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
+<tbody></tbody>
 </table></div>
 <script>
             $(document).ready(function() {
