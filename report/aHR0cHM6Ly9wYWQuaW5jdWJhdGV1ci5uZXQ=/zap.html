@@ -81,7 +81,7 @@ ZAP Scanning Report
         <p>
 </p>
         <h3 class="left-header">Summary of Alerts</h3>
-        <h3 class="time-stamp">Generated on Wed, 25 Aug 2021 05:28:35</h3>
+        <h3 class="time-stamp">Generated on Thu, 26 Aug 2021 05:28:32</h3>
         <table width="45%" class="summary">
             <tr bgcolor="#666666">
                 <th width="45%" height="24">Risk 
@@ -92,13 +92,13 @@ ZAP Scanning Report
                 <td><a href="#high">High</a></td><td align="center">0</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#medium">Medium</a></td><td align="center">6</td>
+                <td><a href="#medium">Medium</a></td><td align="center">5</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#low">Low</a></td><td align="center">7</td>
+                <td><a href="#low">Low</a></td><td align="center">8</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#info">Informational</a></td><td align="center">9</td>
+                <td><a href="#info">Informational</a></td><td align="center">7</td>
             </tr>
         </table>
         <div class="spacer-lg"></div>
@@ -108,19 +108,16 @@ ZAP Scanning Report
                 <th width="60%" height="24">Name</th><th width="20%" align="center">Risk Level</th><th width="20%" align="center">Number of Instances</th>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>CSP: style-src unsafe-inline</td><td align="center">Medium</td><td align="center">5</td>
+                <td>CSP: script-src unsafe-inline</td><td align="center">Medium</td><td align="center">3</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>CSP: Wildcard Directive</td><td align="center">Medium</td><td align="center">5</td>
+                <td>CSP: style-src unsafe-inline</td><td align="center">Medium</td><td align="center">3</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>CSP: Wildcard Directive</td><td align="center">Medium</td><td align="center">3</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Reverse Tabnabbing</td><td align="center">Medium</td><td align="center">5</td>
-            </tr>
-            <tr bgcolor="#e8e8e8">
-                <td>Source Code Disclosure - SQL</td><td align="center">Medium</td><td align="center">2</td>
-            </tr>
-            <tr bgcolor="#e8e8e8">
-                <td>Sub Resource Integrity Attribute Missing</td><td align="center">Medium</td><td align="center">1</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>X-Frame-Options Header Not Set</td><td align="center">Medium</td><td align="center">7</td>
@@ -129,7 +126,10 @@ ZAP Scanning Report
                 <td>Absence of Anti-CSRF Tokens</td><td align="center">Low</td><td align="center">2</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Dangerous JS Functions</td><td align="center">Low</td><td align="center">5</td>
+                <td>CSP: Notices</td><td align="center">Low</td><td align="center">3</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Dangerous JS Functions</td><td align="center">Low</td><td align="center">6</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Incomplete or No Cache-control Header Set</td><td align="center">Low</td><td align="center">8</td>
@@ -150,12 +150,6 @@ ZAP Scanning Report
                 <td>Base64 Disclosure</td><td align="center">Informational</td><td align="center">12</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>CSP: X-Content-Security-Policy</td><td align="center">Informational</td><td align="center">1</td>
-            </tr>
-            <tr bgcolor="#e8e8e8">
-                <td>CSP: X-WebKit-CSP</td><td align="center">Informational</td><td align="center">1</td>
-            </tr>
-            <tr bgcolor="#e8e8e8">
                 <td>Information Disclosure - Suspicious Comments</td><td align="center">Informational</td><td align="center">12</td>
             </tr>
             <tr bgcolor="#e8e8e8">
@@ -168,11 +162,100 @@ ZAP Scanning Report
                 <td>Storable and Cacheable Content</td><td align="center">Informational</td><td align="center">3</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Timestamp Disclosure - Unix</td><td align="center">Informational</td><td align="center">6</td>
+                <td>Timestamp Disclosure - Unix</td><td align="center">Informational</td><td align="center">5</td>
             </tr>
         </table>
         <div class="spacer-lg"></div>
         <h3>Alert Detail</h3>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-medium">
+                <th width="20%"><a name="medium"></a>Medium (Medium)</th><th width="80%">CSP: script-src unsafe-inline</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>script-src includes unsafe-inline.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'none';base-uri 'self';connect-src 'self';font-src 'self';manifest-src 'self';frame-src 'self' https://player.vimeo.com https://www.slideshare.net/slideshow/embed_code/key/ https://www.youtube.com *;img-src *;script-src https://pad.incubateur.net/build/ https://pad.incubateur.net/js/ https://pad.incubateur.net/config https://gist.github.com/ https://vimeo.com/api/oembed.json https://www.slideshare.net/api/oembed/2 'unsafe-inline' 'nonce-b2242b6c-49a1-4122-b720-95d1b01d688d' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=';style-src https://pad.incubateur.net/build/ https://pad.incubateur.net/css/ 'unsafe-inline' https://github.githubassets.com;object-src * *;form-action 'self';media-src *;upgrade-insecure-requests</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'none';base-uri 'self';connect-src 'self';font-src 'self';manifest-src 'self';frame-src 'self' https://player.vimeo.com https://www.slideshare.net/slideshow/embed_code/key/ https://www.youtube.com *;img-src *;script-src https://pad.incubateur.net/build/ https://pad.incubateur.net/js/ https://pad.incubateur.net/config https://gist.github.com/ https://vimeo.com/api/oembed.json https://www.slideshare.net/api/oembed/2 'unsafe-inline' 'nonce-7b5edb34-b535-4afb-a20f-b294eb556181' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=';style-src https://pad.incubateur.net/build/ https://pad.incubateur.net/css/ 'unsafe-inline' https://github.githubassets.com;object-src * *;form-action 'self';media-src *;upgrade-insecure-requests</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'none';base-uri 'self';connect-src 'self';font-src 'self';manifest-src 'self';frame-src 'self' https://player.vimeo.com https://www.slideshare.net/slideshow/embed_code/key/ https://www.youtube.com *;img-src *;script-src https://pad.incubateur.net/build/ https://pad.incubateur.net/js/ https://pad.incubateur.net/config https://gist.github.com/ https://vimeo.com/api/oembed.json https://www.slideshare.net/api/oembed/2 'unsafe-inline' 'nonce-403101d3-2e5a-4ba8-98b5-dcc37eff4591' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=';style-src https://pad.incubateur.net/build/ https://pad.incubateur.net/css/ 'unsafe-inline' https://github.githubassets.com;object-src * *;form-action 'self';media-src *;upgrade-insecure-requests</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">3</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">693</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">15</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
         <div class="spacer"></div>
         <table width="100%" class="results">
               
@@ -204,7 +287,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; script-src 'self' vimeo.com https://gist.github.com www.slideshare.net https://query.yahooapis.com 'unsafe-eval' https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com 'nonce-db30d87e-3172-4f1c-b28e-1a57e6fa792b' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM='; img-src *; style-src 'self' 'unsafe-inline' https://github.githubassets.com https://*.disquscdn.com; font-src 'self' data: https://public.slidesharecdn.com https://*.disquscdn.com; object-src *; media-src *; child-src *; connect-src *</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'none';base-uri 'self';connect-src 'self';font-src 'self';manifest-src 'self';frame-src 'self' https://player.vimeo.com https://www.slideshare.net/slideshow/embed_code/key/ https://www.youtube.com *;img-src *;script-src https://pad.incubateur.net/build/ https://pad.incubateur.net/js/ https://pad.incubateur.net/config https://gist.github.com/ https://vimeo.com/api/oembed.json https://www.slideshare.net/api/oembed/2 'unsafe-inline' 'nonce-b2242b6c-49a1-4122-b720-95d1b01d688d' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=';style-src https://pad.incubateur.net/build/ https://pad.incubateur.net/css/ 'unsafe-inline' https://github.githubassets.com;object-src * *;form-action 'self';media-src *;upgrade-insecure-requests</td>
             </tr>
               
   
@@ -218,35 +301,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; script-src 'self' vimeo.com https://gist.github.com www.slideshare.net https://query.yahooapis.com 'unsafe-eval' https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com 'nonce-895a9877-78d2-48bc-899b-1854ffa957f4' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM='; img-src *; style-src 'self' 'unsafe-inline' https://github.githubassets.com https://*.disquscdn.com; font-src 'self' data: https://public.slidesharecdn.com https://*.disquscdn.com; object-src *; media-src *; child-src *; connect-src *</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/features</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; script-src 'self' vimeo.com https://gist.github.com www.slideshare.net https://query.yahooapis.com 'unsafe-eval' https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com 'nonce-d1c874a8-aa23-457f-98fc-981ac45abb57' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM='; img-src *; style-src 'self' 'unsafe-inline' https://github.githubassets.com https://*.disquscdn.com; font-src 'self' data: https://public.slidesharecdn.com https://*.disquscdn.com; object-src *; media-src *; child-src *; connect-src *</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/s/terms-of-use</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; script-src 'self' vimeo.com https://gist.github.com www.slideshare.net https://query.yahooapis.com 'unsafe-eval' https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com 'nonce-7ee90683-8c3e-44c8-a940-e0099ec24df8' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM='; img-src *; style-src 'self' 'unsafe-inline' https://github.githubassets.com https://*.disquscdn.com; font-src 'self' data: https://public.slidesharecdn.com https://*.disquscdn.com; object-src *; media-src *; child-src *; connect-src *</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'none';base-uri 'self';connect-src 'self';font-src 'self';manifest-src 'self';frame-src 'self' https://player.vimeo.com https://www.slideshare.net/slideshow/embed_code/key/ https://www.youtube.com *;img-src *;script-src https://pad.incubateur.net/build/ https://pad.incubateur.net/js/ https://pad.incubateur.net/config https://gist.github.com/ https://vimeo.com/api/oembed.json https://www.slideshare.net/api/oembed/2 'unsafe-inline' 'nonce-7b5edb34-b535-4afb-a20f-b294eb556181' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=';style-src https://pad.incubateur.net/build/ https://pad.incubateur.net/css/ 'unsafe-inline' https://github.githubassets.com;object-src * *;form-action 'self';media-src *;upgrade-insecure-requests</td>
             </tr>
               
   
@@ -260,13 +315,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; script-src 'self' vimeo.com https://gist.github.com www.slideshare.net https://query.yahooapis.com 'unsafe-eval' https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com 'nonce-beb4558b-9cdd-4c4e-a231-6691905f345c' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM='; img-src *; style-src 'self' 'unsafe-inline' https://github.githubassets.com https://*.disquscdn.com; font-src 'self' data: https://public.slidesharecdn.com https://*.disquscdn.com; object-src *; media-src *; child-src *; connect-src *</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'none';base-uri 'self';connect-src 'self';font-src 'self';manifest-src 'self';frame-src 'self' https://player.vimeo.com https://www.slideshare.net/slideshow/embed_code/key/ https://www.youtube.com *;img-src *;script-src https://pad.incubateur.net/build/ https://pad.incubateur.net/js/ https://pad.incubateur.net/config https://gist.github.com/ https://vimeo.com/api/oembed.json https://www.slideshare.net/api/oembed/2 'unsafe-inline' 'nonce-403101d3-2e5a-4ba8-98b5-dcc37eff4591' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=';style-src https://pad.incubateur.net/build/ https://pad.incubateur.net/css/ 'unsafe-inline' https://github.githubassets.com;object-src * *;form-action 'self';media-src *;upgrade-insecure-requests</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">5</td>
+                <td width="20%">Instances</td><td width="80%">3</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -304,39 +359,11 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: </p><p>img-src, connects-src, frame-src, frame-ancestors, media-src, object-src, worker-src, form-action</p><p></p><p>The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</p></td>
+                <td width="20%">Description</td><td width="80%"><p>The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: </p><p>img-src, frame-src, frame-ancestors, media-src, object-src</p><p></p><p>The directive(s): frame-ancestors are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
             </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; script-src 'self' vimeo.com https://gist.github.com www.slideshare.net https://query.yahooapis.com 'unsafe-eval' https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com 'nonce-db30d87e-3172-4f1c-b28e-1a57e6fa792b' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM='; img-src *; style-src 'self' 'unsafe-inline' https://github.githubassets.com https://*.disquscdn.com; font-src 'self' data: https://public.slidesharecdn.com https://*.disquscdn.com; object-src *; media-src *; child-src *; connect-src *</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/s/terms-of-use</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; script-src 'self' vimeo.com https://gist.github.com www.slideshare.net https://query.yahooapis.com 'unsafe-eval' https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com 'nonce-7ee90683-8c3e-44c8-a940-e0099ec24df8' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM='; img-src *; style-src 'self' 'unsafe-inline' https://github.githubassets.com https://*.disquscdn.com; font-src 'self' data: https://public.slidesharecdn.com https://*.disquscdn.com; object-src *; media-src *; child-src *; connect-src *</td>
-            </tr>
               
   
   
@@ -349,21 +376,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; script-src 'self' vimeo.com https://gist.github.com www.slideshare.net https://query.yahooapis.com 'unsafe-eval' https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com 'nonce-beb4558b-9cdd-4c4e-a231-6691905f345c' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM='; img-src *; style-src 'self' 'unsafe-inline' https://github.githubassets.com https://*.disquscdn.com; font-src 'self' data: https://public.slidesharecdn.com https://*.disquscdn.com; object-src *; media-src *; child-src *; connect-src *</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/features</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; script-src 'self' vimeo.com https://gist.github.com www.slideshare.net https://query.yahooapis.com 'unsafe-eval' https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com 'nonce-d1c874a8-aa23-457f-98fc-981ac45abb57' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM='; img-src *; style-src 'self' 'unsafe-inline' https://github.githubassets.com https://*.disquscdn.com; font-src 'self' data: https://public.slidesharecdn.com https://*.disquscdn.com; object-src *; media-src *; child-src *; connect-src *</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'none';base-uri 'self';connect-src 'self';font-src 'self';manifest-src 'self';frame-src 'self' https://player.vimeo.com https://www.slideshare.net/slideshow/embed_code/key/ https://www.youtube.com *;img-src *;script-src https://pad.incubateur.net/build/ https://pad.incubateur.net/js/ https://pad.incubateur.net/config https://gist.github.com/ https://vimeo.com/api/oembed.json https://www.slideshare.net/api/oembed/2 'unsafe-inline' 'nonce-403101d3-2e5a-4ba8-98b5-dcc37eff4591' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=';style-src https://pad.incubateur.net/build/ https://pad.incubateur.net/css/ 'unsafe-inline' https://github.githubassets.com;object-src * *;form-action 'self';media-src *;upgrade-insecure-requests</td>
             </tr>
               
   
@@ -377,13 +390,27 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; script-src 'self' vimeo.com https://gist.github.com www.slideshare.net https://query.yahooapis.com 'unsafe-eval' https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com 'nonce-895a9877-78d2-48bc-899b-1854ffa957f4' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM='; img-src *; style-src 'self' 'unsafe-inline' https://github.githubassets.com https://*.disquscdn.com; font-src 'self' data: https://public.slidesharecdn.com https://*.disquscdn.com; object-src *; media-src *; child-src *; connect-src *</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'none';base-uri 'self';connect-src 'self';font-src 'self';manifest-src 'self';frame-src 'self' https://player.vimeo.com https://www.slideshare.net/slideshow/embed_code/key/ https://www.youtube.com *;img-src *;script-src https://pad.incubateur.net/build/ https://pad.incubateur.net/js/ https://pad.incubateur.net/config https://gist.github.com/ https://vimeo.com/api/oembed.json https://www.slideshare.net/api/oembed/2 'unsafe-inline' 'nonce-b2242b6c-49a1-4122-b720-95d1b01d688d' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=';style-src https://pad.incubateur.net/build/ https://pad.incubateur.net/css/ 'unsafe-inline' https://github.githubassets.com;object-src * *;form-action 'self';media-src *;upgrade-insecure-requests</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">5</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'none';base-uri 'self';connect-src 'self';font-src 'self';manifest-src 'self';frame-src 'self' https://player.vimeo.com https://www.slideshare.net/slideshow/embed_code/key/ https://www.youtube.com *;img-src *;script-src https://pad.incubateur.net/build/ https://pad.incubateur.net/js/ https://pad.incubateur.net/config https://gist.github.com/ https://vimeo.com/api/oembed.json https://www.slideshare.net/api/oembed/2 'unsafe-inline' 'nonce-7b5edb34-b535-4afb-a20f-b294eb556181' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=';style-src https://pad.incubateur.net/build/ https://pad.incubateur.net/css/ 'unsafe-inline' https://github.githubassets.com;object-src * *;form-action 'self';media-src *;upgrade-insecure-requests</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">3</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -509,151 +536,6 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%">Reference</td><td width="80%"><p>https://owasp.org/www-community/attacks/Reverse_Tabnabbing</p><p>https://dev.to/ben/the-targetblank-vulnerability-by-example</p><p>https://mathiasbynens.github.io/rel-noopener/</p><p>https://medium.com/@jitbit/target-blank-the-most-underestimated-vulnerability-ever-96e328301f4c</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Source ID</td><td width="80%">3</td>
-            </tr>
-            
-        </table>
-        <div class="spacer"></div>
-        <table width="100%" class="results">
-              
-  
-  
-  
-            <tr height="24" class="risk-medium">
-                <th width="20%"><a name="medium"></a>Medium (Medium)</th><th width="80%">Source Code Disclosure - SQL</th>
-            </tr>
-              
-  
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>Application Source Code was disclosed by the web server - SQL</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/pretty-pack.eff46802d40e9014e27a.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">select set skip startsas stop title update waitsas where window x systask add and alter as cascade check create delete describe distinct drop foreign from group having index insert into in key like message modify msgtype not null on or order primary references reset restrict select set table unique update validate view where</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/index-pack.8ee15b21a281c9bb0f2f.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">select set skip startsas stop title update waitsas where window x systask add and alter as cascade check create delete describe distinct drop foreign from group having index insert into in key like message modify msgtype not null on or order primary references reset restrict select set table unique update validate view where</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">2</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p>Ensure that application Source Code is not available with alternative extensions, and ensure that source code is not present within other files or data deployed to the web server, or served by the web server. </p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>select set skip startsas stop title update waitsas where window x systask add and alter as cascade check create delete describe distinct drop foreign from group having index insert into in key like message modify msgtype not null on or order primary references reset restrict select set table unique update validate view where</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p>http://blogs.wsj.com/cio/2013/10/08/adobe-source-code-leak-is-bad-news-for-u-s-government/</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">540</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">WASC Id</td><td width="80%">13</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Source ID</td><td width="80%">3</td>
-            </tr>
-            
-        </table>
-        <div class="spacer"></div>
-        <table width="100%" class="results">
-              
-  
-  
-  
-            <tr height="24" class="risk-medium">
-                <th width="20%"><a name="medium"></a>Medium (High)</th><th width="80%">Sub Resource Integrity Attribute Missing</th>
-            </tr>
-              
-  
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content. </p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/MathJax/config/Safe.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script
- *    src="http://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_HTML,Safe"&gt;
- *  &lt;/script&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">1</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p>Provide a valid integrity attribute to the tag.</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p>https://developer.mozilla.org/en/docs/Web/Security/Subresource_Integrity</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">345</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">WASC Id</td><td width="80%">15</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -895,6 +777,95 @@ ZAP Scanning Report
   
   
             <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">CSP: Notices</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>Warnings:</p><p>Duplicate source-expression *</p><p></p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'none';base-uri 'self';connect-src 'self';font-src 'self';manifest-src 'self';frame-src 'self' https://player.vimeo.com https://www.slideshare.net/slideshow/embed_code/key/ https://www.youtube.com *;img-src *;script-src https://pad.incubateur.net/build/ https://pad.incubateur.net/js/ https://pad.incubateur.net/config https://gist.github.com/ https://vimeo.com/api/oembed.json https://www.slideshare.net/api/oembed/2 'unsafe-inline' 'nonce-b2242b6c-49a1-4122-b720-95d1b01d688d' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=';style-src https://pad.incubateur.net/build/ https://pad.incubateur.net/css/ 'unsafe-inline' https://github.githubassets.com;object-src * *;form-action 'self';media-src *;upgrade-insecure-requests</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'none';base-uri 'self';connect-src 'self';font-src 'self';manifest-src 'self';frame-src 'self' https://player.vimeo.com https://www.slideshare.net/slideshow/embed_code/key/ https://www.youtube.com *;img-src *;script-src https://pad.incubateur.net/build/ https://pad.incubateur.net/js/ https://pad.incubateur.net/config https://gist.github.com/ https://vimeo.com/api/oembed.json https://www.slideshare.net/api/oembed/2 'unsafe-inline' 'nonce-403101d3-2e5a-4ba8-98b5-dcc37eff4591' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=';style-src https://pad.incubateur.net/build/ https://pad.incubateur.net/css/ 'unsafe-inline' https://github.githubassets.com;object-src * *;form-action 'self';media-src *;upgrade-insecure-requests</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'none';base-uri 'self';connect-src 'self';font-src 'self';manifest-src 'self';frame-src 'self' https://player.vimeo.com https://www.slideshare.net/slideshow/embed_code/key/ https://www.youtube.com *;img-src *;script-src https://pad.incubateur.net/build/ https://pad.incubateur.net/js/ https://pad.incubateur.net/config https://gist.github.com/ https://vimeo.com/api/oembed.json https://www.slideshare.net/api/oembed/2 'unsafe-inline' 'nonce-7b5edb34-b535-4afb-a20f-b294eb556181' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=';style-src https://pad.incubateur.net/build/ https://pad.incubateur.net/css/ 'unsafe-inline' https://github.githubassets.com;object-src * *;form-action 'self';media-src *;upgrade-insecure-requests</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">3</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">693</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">15</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
                 <a name="low"></a><th width="20%">Low (Low)</th><th width="80%">Dangerous JS Functions</th>
             </tr>
               
@@ -911,7 +882,21 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/index-pack.8ee15b21a281c9bb0f2f.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/vendors~common.5e1034cb4e0fcfb8b567.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Eval</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/vendors~cover~cover-pack.46c3a7f3928401ea3af9.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -925,7 +910,35 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/cover-pack.192514c666b866e66682.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/vendors~index~index-pack~pretty~pretty-pack~slide~slide-pack.8092a5d86578aedd8625.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">eval</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/pretty-pack.b21dd2f79ece6ba8677f.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">eval</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/index-pack.2c5918216c59b64772c4.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -947,41 +960,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">EVAL</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/common.116b96cba39b7131b98f.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Eval</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/pretty-pack.eff46802d40e9014e27a.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">eval</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">5</td>
+                <td width="20%">Instances</td><td width="80%">6</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1207,6 +1192,16 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/vendors~cover~cover-pack.46c3a7f3928401ea3af9.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/config</td>
             </tr>
               
@@ -1247,27 +1242,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/cover-pack.192514c666b866e66682.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/common.116b96cba39b7131b98f.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/yaml-metadata</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/vendors~cover~cover-pack~index~index-pack~pretty~pretty-pack~slide~slide-pack.9f63351fd96366e9e752.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1287,6 +1262,16 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/vendors~common.5e1034cb4e0fcfb8b567.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/features</td>
             </tr>
               
@@ -1297,7 +1282,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/js/mathjax-config-extra.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/common.1c773fb6375f6e4c11cf.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1307,7 +1292,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/slide-example</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/cover-pack.9162a6d0589f02e83c1b.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1834,7 +1819,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/font-pack.8b60ca65f33929a11b34.css</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/icons/favicon.ico</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1930,6 +1915,20 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">3b75-Q1jK3et25H+doCfldiwS+sSG7vg</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/me/export</td>
             </tr>
               
@@ -1938,7 +1937,21 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">3AgPaZrXgtecjwURq-G2HP21pYQCN1jBWB</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">3AWQ3SRqXfAGwx4O0aAqLT07i92QMnzs-Q</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">3a7e-uAP1WecOIivF100oF9HC7++QfMc</td>
             </tr>
               
   
@@ -1952,7 +1965,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">3AgPaZrXgtecjwURq-G2HP21pYQCN1jBWB</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">3AWQ3SRqXfAGwx4O0aAqLT07i92QMnzs-Q</td>
             </tr>
               
   
@@ -1966,105 +1979,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">9b68-0MVNzocgG0H+oUQzpgg6Hflj2W4</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/new</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">3AgPaZrXgtecjwURq-G2HP21pYQCN1jBWB</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/s/terms-of-use</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">13db-YOWfpiHWO3K/Q83TO/QaxC3+A8I</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/robots.txt</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">3AgPaZrXgtecjwURq-G2HP21pYQCN1jBWB</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/s/release-notes</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">e274-Nz6trPjkHt46ip037jFOvzIV7MM</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/me/delete/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">3AgPaZrXgtecjwURq-G2HP21pYQCN1jBWB</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">4114-TFdcDPZVUQPos7kyMXtqMYPKwy8</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">401d-eana/gjmGvkk1uEHFXMzzjmJubs</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">9dca-tGMHyBJV6np6mx+sk8J/ITyBJGU</td>
             </tr>
               
   
@@ -2078,13 +1993,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">3AgPaZrXgtecjwURq-G2HP21pYQCN1jBWB</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">3AWQ3SRqXfAGwx4O0aAqLT07i92QMnzs-Q</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/me/delete/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2092,7 +2007,77 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">401d-eana/gjmGvkk1uEHFXMzzjmJubs</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">3AWQ3SRqXfAGwx4O0aAqLT07i92QMnzs-Q</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/s/release-notes</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">fcf5-5sIxJCaUj9WNO6jmtu/Y5oZdwsY</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">3a7e-uAP1WecOIivF100oF9HC7++QfMc</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/new</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">3AWQ3SRqXfAGwx4O0aAqLT07i92QMnzs-Q</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/robots.txt</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">3AWQ3SRqXfAGwx4O0aAqLT07i92QMnzs-Q</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/s/terms-of-use</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">15ea-sJonn05i7ecczozHKV37i9nNGXY</td>
             </tr>
               
   
@@ -2106,7 +2091,8 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>�\x0008\x000fi�ׂל�\x0005\x0011��\x001c����\x00027X�X</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>ݾ��
+c+w�ۑ�v���ذK�\x0012\x001b��</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
@@ -2122,136 +2108,6 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%">WASC Id</td><td width="80%">13</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Source ID</td><td width="80%">3</td>
-            </tr>
-            
-        </table>
-        <div class="spacer"></div>
-        <table width="100%" class="results">
-              
-  
-  
-  
-            <tr height="24" class="risk-info">
-                <th width="20%"><a name="info"></a>Informational (Medium)</th><th width="80%">CSP: X-Content-Security-Policy</th>
-            </tr>
-              
-  
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>The header X-Content-Security-Policy was found on this response. While it is a good sign that CSP is implemented to some degree the policy specified in this header has not been analyzed by ZAP. To ensure full support by modern browsers ensure that the Content-Security-Policy header is defined and attached to responses.</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Security-Policy</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; script-src 'self' vimeo.com https://gist.github.com www.slideshare.net https://query.yahooapis.com 'unsafe-eval' https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com 'nonce-895a9877-78d2-48bc-899b-1854ffa957f4' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM='; img-src *; style-src 'self' 'unsafe-inline' https://github.githubassets.com https://*.disquscdn.com; font-src 'self' data: https://public.slidesharecdn.com https://*.disquscdn.com; object-src *; media-src *; child-src *; connect-src *</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">1</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">693</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">WASC Id</td><td width="80%">15</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Source ID</td><td width="80%">3</td>
-            </tr>
-            
-        </table>
-        <div class="spacer"></div>
-        <table width="100%" class="results">
-              
-  
-  
-  
-            <tr height="24" class="risk-info">
-                <th width="20%"><a name="info"></a>Informational (Medium)</th><th width="80%">CSP: X-WebKit-CSP</th>
-            </tr>
-              
-  
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>The header X-WebKit-CSP was found on this response. While it is a good sign that CSP is implemented to some degree the policy specified in this header has not been analyzed by ZAP. To ensure full support by modern browsers ensure that the Content-Security-Policy header is defined and attached to responses.</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">X-WebKit-CSP</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">default-src 'self'; script-src 'self' vimeo.com https://gist.github.com www.slideshare.net https://query.yahooapis.com 'unsafe-eval' https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com 'nonce-895a9877-78d2-48bc-899b-1854ffa957f4' 'sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM='; img-src *; style-src 'self' 'unsafe-inline' https://github.githubassets.com https://*.disquscdn.com; font-src 'self' data: https://public.slidesharecdn.com https://*.disquscdn.com; object-src *; media-src *; child-src *; connect-src *</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">1</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">693</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">WASC Id</td><td width="80%">15</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2364,63 +2220,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/cover-pack.192514c666b866e66682.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/MathJax/MathJax.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Select</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/MathJax/MathJax.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">where</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/MathJax/MathJax.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">FIXME</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/cover-pack.192514c666b866e66682.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/cover-pack.9162a6d0589f02e83c1b.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2434,35 +2234,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/MathJax/MathJax.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">later</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/common.116b96cba39b7131b98f.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">username</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/common.116b96cba39b7131b98f.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/vendors~common.5e1034cb4e0fcfb8b567.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2476,21 +2248,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/cover-pack.192514c666b866e66682.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">select</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/MathJax/MathJax.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/vendors~cover~cover-pack~index~index-pack~pretty~pretty-pack~slide~slide-pack.9f63351fd96366e9e752.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2504,6 +2262,104 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/cover-pack.9162a6d0589f02e83c1b.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">user</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/cover-pack.9162a6d0589f02e83c1b.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">select</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/cover-pack.9162a6d0589f02e83c1b.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/cover-pack.9162a6d0589f02e83c1b.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">bug</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/vendors~cover~cover-pack.46c3a7f3928401ea3af9.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">query</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/vendors~cover~cover-pack.46c3a7f3928401ea3af9.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/vendors~common.5e1034cb4e0fcfb8b567.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">username</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%">Instances</td><td width="80%">10</td>
             </tr>
               
@@ -2512,7 +2368,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>The following pattern was used: \bFROM\b and was detected 5 times, the first in the element starting with: "!function(e){var t={};function n(r){if(t[r])return t[r].exports;var i=t[r]={i:r,l:!1,exports:{}};return e[r].call(i.exports,i,i.", see evidence field for the suspicious comment/snippet.</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>The following pattern was used: \bQUERY\b and was detected in the element starting with: "var t=d.defineLocale("da",{months:"januar_februar_marts_april_maj_juni_juli_august_september_oktober_november_december".split("_", see evidence field for the suspicious comment/snippet.</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
@@ -2558,7 +2414,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/MathJax/MathJax.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/cover-pack.9162a6d0589f02e83c1b.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2566,21 +2422,22 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/common.116b96cba39b7131b98f.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a id='"+x+"'&gt;&lt;/a&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="#"&gt;
+            &lt;div class="item"&gt;
+              &lt;div class="ui-history-pin fa fa-thumb-tack fa-fw"&gt;&lt;/div&gt;
+              &lt;div class="ui-history-close fa fa-close fa-fw" data-toggle="modal" data-target=".delete-history-modal"&gt;&lt;/div&gt;
+              &lt;div class="content"&gt;
+                &lt;h4 class="text"&gt;&lt;/h4&gt;
+                <p>
+                  &lt;i&gt;&lt;i class="fa fa-clock-o"&gt;&lt;/i&gt; visited &lt;/i&gt;&lt;i class="fromNow"&gt;&lt;/i&gt;
+                  &lt;br&gt;
+                  &lt;i class="timestamp" style="display:none;"&gt;&lt;/i&gt;
+                  &lt;i class="time"&gt;&lt;/i&gt;
+                </p>
+                &lt;p class="tags"&gt;</p>
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/a&gt;</td>
             </tr>
               
   
@@ -2595,6 +2452,34 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="#" class="ui-edit" title="Edit this note"&gt;&lt;i class="fa fa-fw fa-pencil"&gt;&lt;/i&gt;&lt;/a&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/vendors~cover~cover-pack~index~index-pack~pretty~pretty-pack~slide~slide-pack.9f63351fd96366e9e752.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/vendors~cover~cover-pack.46c3a7f3928401ea3af9.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a class='page' href='#'&gt;&lt;/a&gt;</td>
             </tr>
               
   
@@ -2672,7 +2557,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/MathJax/config/Safe.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/vendors~common.5e1034cb4e0fcfb8b567.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -2680,9 +2565,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script
- *    src="http://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_HTML,Safe"&gt;
- *  &lt;/script&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a id='"+Fe+"'&gt;&lt;/a&gt;</td>
             </tr>
               
   
@@ -2698,20 +2581,6 @@ ZAP Scanning Report
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a class="ui-short-status" data-toggle="dropdown"&gt;&lt;span class="label label-danger"&gt;&lt;i class="fa fa-plug"&gt;&lt;/i&gt; &lt;/span&gt;
             &lt;/a&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/cover-pack.192514c666b866e66682.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script&gt;</td>
             </tr>
               
   
@@ -3006,7 +2875,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/cover-styles-pack.b807addb6d3e44422f27.css</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/3.b67314821de89ccff48b.css</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -3020,35 +2889,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/cover-styles-pack.b807addb6d3e44422f27.css</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">33333333</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/icons/safari-pinned-tab.svg</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">34860715</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/cover-styles-pack.b807addb6d3e44422f27.css</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/3.b67314821de89ccff48b.css</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -3062,21 +2903,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/cover-styles-pack.b807addb6d3e44422f27.css</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">42857143</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/cover-styles-pack.b807addb6d3e44422f27.css</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/3.b67314821de89ccff48b.css</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -3090,7 +2917,35 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">6</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/3.b67314821de89ccff48b.css</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">42857143</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pad.incubateur.net/build/3.b67314821de89ccff48b.css</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">33333333</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">5</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
