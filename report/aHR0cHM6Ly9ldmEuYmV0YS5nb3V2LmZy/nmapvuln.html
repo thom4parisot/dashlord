@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln eva.beta.gouv.fr</pre>
-<p class="lead">Sat Aug 28 03:24:10 2021 – Sat Aug 28 03:27:03 2021<br>1 hosts scanned.
+<p class="lead">Sun Aug 29 03:29:44 2021 – Sun Aug 29 03:32:37 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -78,7 +78,7 @@
 <td><span class="label label-success">up</span></td>
 <td>185.31.40.19</td>
 <td>eva.beta.gouv.fr</td>
-<td>1</td>
+<td>2</td>
 <td>0</td>
 </tr></tbody>
 </table></div>
@@ -111,6 +111,46 @@
 </tr></thead>
 <tbody>
 <tr class="success">
+<td title="Port">80</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">http</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  FourOhFourRequest: 
+    HTTP/1.0 403 Forbidden
+    Connection: Close
+    Content-Length: 120
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 57031f0c-18b9-494c-ae01-ec8dbd9dc5b9&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+  GetRequest: 
+    HTTP/1.0 403 Forbidden
+    Connection: Close
+    Content-Length: 120
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 750a18c7-80ea-4348-a64c-ddde2fa3ccd3&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+  HTTPOptions: 
+    HTTP/1.0 403 Forbidden
+    Connection: Close
+    Content-Length: 120
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 8367dce3-9f08-413b-81fc-66373c96e400&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+  RTSPRequest: 
+    HTTP/1.0 400 Bad Request
+    Connection: Close
+    Content-Length: 108
+    Connection: close
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Bad Request&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: b8acead1-1617-4994-98c1-b9c283bb7c88&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+  SIPOptions: 
+    HTTP/1.0 400 Bad Request
+    Connection: Close
+    Content-Length: 108
+    Connection: close
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Bad Request&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: c772ce41-3580-4715-ae76-41abb8f1a946&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+</td></tr>
+<tr class="success">
 <td title="Port">443</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
@@ -126,29 +166,29 @@
     HTTP/1.0 403 Forbidden
     Connection: Close
     Content-Length: 120
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 2b0754d3-e096-4242-a55a-7b0e3c3cc79e&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 9888940a-d2b8-43b6-9d51-463fe0f17261&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
   GetRequest: 
     HTTP/1.0 403 Forbidden
     Connection: Close
     Content-Length: 120
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: c80174e8-6551-4a55-ad53-9416cc1ccdb3&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 5e850659-d22e-4488-b311-b6561836e82d&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
   HTTPOptions: 
     HTTP/1.0 403 Forbidden
     Connection: Close
     Content-Length: 120
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: f9de1099-4f5c-4e01-853d-937b9d3295ed&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Host header is required&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 4a057d78-9694-499e-95a9-37f2e696316e&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
   RTSPRequest: 
     HTTP/1.0 400 Bad Request
     Connection: Close
     Content-Length: 108
     Connection: close
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Bad Request&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 8bb26b69-43ab-417d-b6d2-9664502c127d&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Bad Request&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 68670fc8-6e86-4239-9a1f-467738eaed0d&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
   SIPOptions: 
     HTTP/1.0 400 Bad Request
     Connection: Close
     Content-Length: 108
     Connection: close
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Bad Request&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 721baed3-1cfa-49cf-933a-a6675f78e82c&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Bad Request&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 5412dca6-70fd-4068-b0b9-ee47b6db49ef&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Apache</pre>
 </td></tr>
@@ -168,7 +208,18 @@
 <th>CPE</th>
 <th>Extra info</th>
 </tr></thead>
-<tbody><tr>
+<tbody>
+<tr>
+<td>185.31.40.19 - eva.beta.gouv.fr</td>
+<td>80</td>
+<td>tcp</td>
+<td>http</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
 <td>185.31.40.19 - eva.beta.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
@@ -177,7 +228,8 @@
 <td></td>
 <td></td>
 <td></td>
-</tr></tbody>
+</tr>
+</tbody>
 </table></div>
 <script>
             $(document).ready(function() {
