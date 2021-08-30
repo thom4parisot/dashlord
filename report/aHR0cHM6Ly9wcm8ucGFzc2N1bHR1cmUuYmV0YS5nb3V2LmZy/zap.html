@@ -81,7 +81,7 @@ ZAP Scanning Report
         <p>
 </p>
         <h3 class="left-header">Summary of Alerts</h3>
-        <h3 class="time-stamp">Generated on Sun, 29 Aug 2021 06:44:58</h3>
+        <h3 class="time-stamp">Generated on Mon, 30 Aug 2021 06:36:40</h3>
         <table width="45%" class="summary">
             <tr bgcolor="#666666">
                 <th width="45%" height="24">Risk 
@@ -95,7 +95,7 @@ ZAP Scanning Report
                 <td><a href="#medium">Medium</a></td><td align="center">1</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#low">Low</a></td><td align="center">2</td>
+                <td><a href="#low">Low</a></td><td align="center">3</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td><a href="#info">Informational</a></td><td align="center">6</td>
@@ -111,13 +111,16 @@ ZAP Scanning Report
                 <td>Content Security Policy (CSP) Header Not Set</td><td align="center">Medium</td><td align="center">4</td>
             </tr>
             <tr bgcolor="#e8e8e8">
+                <td>Dangerous JS Functions</td><td align="center">Low</td><td align="center">1</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
                 <td>Incomplete or No Cache-control Header Set</td><td align="center">Low</td><td align="center">3</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Permissions Policy Header Not Set</td><td align="center">Low</td><td align="center">5</td>
+                <td>Permissions Policy Header Not Set</td><td align="center">Low</td><td align="center">6</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Base64 Disclosure</td><td align="center">Informational</td><td align="center">9</td>
+                <td>Base64 Disclosure</td><td align="center">Informational</td><td align="center">10</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Information Disclosure - Suspicious Comments</td><td align="center">Informational</td><td align="center">2</td>
@@ -129,7 +132,7 @@ ZAP Scanning Report
                 <td>Retrieved from Cache</td><td align="center">Informational</td><td align="center">7</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Storable and Cacheable Content</td><td align="center">Informational</td><td align="center">9</td>
+                <td>Storable and Cacheable Content</td><td align="center">Informational</td><td align="center">10</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Timestamp Disclosure - Unix</td><td align="center">Informational</td><td align="center">11</td>
@@ -217,6 +220,63 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%">WASC Id</td><td width="80%">15</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Low)</th><th width="80%">Dangerous JS Functions</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr/static/js/2.ec1aed77.chunk.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">eval</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">1</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>See the references for security advice on the use of these functions.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://angular.io/guide/security</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">749</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -388,6 +448,16 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr/static/js/2.ec1aed77.chunk.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr</td>
             </tr>
               
@@ -398,7 +468,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">5</td>
+                <td width="20%">Instances</td><td width="80%">6</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -445,7 +515,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr/static/css/main.e790ecdb.chunk.css</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -453,7 +523,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">ADPycdsu215dN1Br9JUadfqS2mSDARIIJoWXhjYJqXm8QD-yvlWzyDGz6c4lNkD3Hn_Lt6cUcPOxqafu8Ag9EnWHEFvqwQvvSQ</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">ADPycdv5q85AR95GEBAj5YmZgPqMTubbyFftF31oib7ttHYT0uWnaF7ZaIoFOzKkQc7lvCH-ghYD2Hnoq7dAyTQzAC_vkirjxQ</td>
             </tr>
               
   
@@ -467,21 +537,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">ADPycdtR3RB4z0c2kRxhYHgglgZu_sRjhTNtxs4NBzorto26m6NqJ74WSJD_iuTBdu6LMhqunwFmmtS7_yphk0w61TztL59jtA</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr/manifest.json</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">ADPycdtVazw1ZYFmdhsPWUtz5N9XCLRawpo8a4_7PM0mN7q2bxJKgb7bGwxjWiqhNkoK9K1v3ZE8SBZyLNo1NV3uwWw</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">ADPycduVwoMSUUHNU4VfFTEc1eodpYr-bJrPgeq3HD3jlQZmp7RmgOCqXjEnsMqZhw31a-Py4CXo1-DjVj_e3n1jCA</td>
             </tr>
               
   
@@ -495,7 +551,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">ADPycds_O018UOFKm6j1tF-N2wW1CzmKa90A_Et6hQHe7Zwe9VyDsi6AHGBjKq_BC_yYS2Ar9SENDX9qXyqaf_yZAMoxK6WUnw</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">ADPycdsZVh4VFs9vaxTnPoRUZlCfI32UhijEdDn0huWDdOWM_XHXFuvyUqr5SAmXccnLJRZqQWQq3xiq3typfiNy3jb2du_DBA</td>
             </tr>
               
   
@@ -509,7 +565,21 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">ADPycdtQnv-kPJGIpXabchTQA7dpDWoSxk6J3k2IGA0_OVW4olyw_UF1jajpDBw_O8P1UcZg83bMSU0Dj8Okyp6SXcMOkx8-_A</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">ADPycdv5q85AR95GEBAj5YmZgPqMTubbyFftF31oib7ttHYT0uWnaF7ZaIoFOzKkQc7lvCH-ghYD2Hnoq7dAyTQzAC_vkirjxQ</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr/manifest.json</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">ADPycdvtwiQ8nOK5jr--ECj8SuMvSyKfUtJoI_q4YNEzQbMvgt5DZFaS9coJ8dCTTZsORzDwEPbrCuClue_nbTNHIA</td>
             </tr>
               
   
@@ -523,13 +593,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">ADPycdvRu4NGq8F4QpkW_51ksB0Lw-wrtoEot_5AI4BDSNsbdt_Lweml65ry309In2ksxqihBvjInFhln1KMT8F_CBjFj6FS-Q</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">ADPycdu4t87TFkSL7PY59No8sXPR43aODlhfRiXR5KSxhvqpxe5ZZuuXf7Ce87Rqmx40M4zJjf7cJa2HHT3wfDAoPSZY_CopIQ</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr/static/js/2.ec1aed77.chunk.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -537,21 +607,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">ADPycdtQnv-kPJGIpXabchTQA7dpDWoSxk6J3k2IGA0_OVW4olyw_UF1jajpDBw_O8P1UcZg83bMSU0Dj8Okyp6SXcMOkx8-_A</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr/static/css/2.53ab2394.chunk.css</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">ADPycdvzulg2eMgmrVgua82ai9ABNTCLv02QgCkeloXDG2MIEb6eupBVbIoVrafDCmiY8mLI994O_AQMMmWF6hjflpSXjj0Tsw</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">ADPycduc2-CpVBbzlSiF7irKkXc5BS7Bha1-imRzjXa5vl1Zk5Rjl69eZnWUXSWgpBM1WVLp2ZYNUOPifo3v2GJs0I4</td>
             </tr>
               
   
@@ -565,13 +621,41 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">ADPycdtv6LwA8qSCz6Ye-ppK_qQ3QccMQyUPZ9UeLALKP9u_WkNbuYV7dQSUCjjSphzQtdEqTN27N3B_bVWUDpVf-CgM0GJXQw</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">ADPycdvZRhzQm3ErF0_Njv5oCqY-TJ5PkP2F_xZ9ElBpPnx4miC1aI_ngfAD5cbwgCX_xVzKppflnEpyBocoFIh9qdM0W2PBQQ</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">9</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr/static/css/2.53ab2394.chunk.css</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">ADPycds70xDsRAQcrh2XV-q_tBxRw-ANAfvmIaM_BhFNGjDGuY80erMWq5no1b8hVKGA8ZUN0g2ZP8PIvFOUkiNELypu1HIsTQ</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr/static/css/main.e790ecdb.chunk.css</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">ADPycdsfYH7sd9HRYPkStVAwBGVtU9uLm6qDaMGGeY5PSreqzIcZ8kaKMZHGeBDe8L4mJedF6gKUizVMwFHn9BE72A</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">10</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -579,7 +663,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>\x00003�q�.�^]7Pk��\x001au���d�\x0001\x0012\x0008&amp;���6	�y�@?��U��1���%6@�\x001e&#127;˷�\x0014p&#989799;��\x0008=\x0012u�\x0010[��\x000b�I</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>\x00003�q����@G�F\x0010\x0010#剙���N���W�\x0017}h���v\x0013��h^�h�\x0005;2�A��!��\x0016\x0003�y諷@�43\x0000/�*��</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
@@ -809,7 +893,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr/robots.txt</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr/static/js/2.ec1aed77.chunk.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -817,35 +901,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 19385</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 84</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 86</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 82</td>
             </tr>
               
   
@@ -859,7 +915,21 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 87</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 82</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 298</td>
             </tr>
               
   
@@ -873,13 +943,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 86</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 300</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr/manifest.json</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr/static/css/2.53ab2394.chunk.css</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -887,7 +957,21 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 61700</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 82</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 300</td>
             </tr>
               
   
@@ -901,7 +985,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 87</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 82</td>
             </tr>
               
   
@@ -954,6 +1038,16 @@ ZAP Scanning Report
   
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://pro.passculture.beta.gouv.fr/static/js/2.ec1aed77.chunk.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1051,7 +1145,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">9</td>
+                <td width="20%">Instances</td><td width="80%">10</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
