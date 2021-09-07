@@ -1,0 +1,1935 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>ZAP Scanning Report</title>
+        <style>
+body{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #000;
+  font-size: 13px;
+}
+h1{
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px
+}
+h3{
+  font-size: 16px;
+}
+table{
+  border: none;
+  font-size: 13px;
+}
+td, th {
+  padding: 3px 4px;
+  word-break: break-word;
+}
+th{
+  font-weight: bold;
+}
+.results th{
+  text-align: left;
+}
+.spacer{
+  margin: 10px;
+}
+.spacer-lg{
+  margin: 40px;
+}
+.indent1{
+  padding: 4px 20px;
+}
+.indent2{
+  padding: 4px 40px;
+}
+.risk-high{
+  background-color: red;
+  color: #FFF;
+}
+.risk-medium{
+  background-color: orange;
+  color: #FFF;
+}
+.risk-low{
+  background-color: yellow;
+  color: #000;
+}
+.risk-info{
+  background-color: blue;
+  color: #FFF;
+}
+.summary th{
+  color: #FFF;
+}
+.alerts th{
+  color: #FFF;
+}
+.left-header{
+  display: inline-block;
+}
+.time-stamp{
+  float: right;
+}
+</style>
+    </head>
+    <body>
+        <h1>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAABqbAAAamwHdbkbTAAAAB3RJTUUH4QsKDDQPKy6k8AAABxpJREFUWMO9l31sVWcdxz+/55xzbwt9QddJExClvIzNxTKJDZi22oJSbFZpmRb4g8sfhpEIwXQNTKh0NYgiMKIwo5AsdIxdQldGNBN5W2OTFRVcIZE1YwExcXOdc1DK+nLvOc/PP87tC9CWsj98bp6ck3Ofc57v7+37/T3wYGMucBR4F/gK/8exAugAdPXq1bpx40YFekZdHYuP+8PuGP+lAc8CmzIyMtLq6uqora3FcRwAzp49m/7Wv5O95tsNEfyEKvwH9B1V2hT7GnB+PABkhGePAvVA9dy5c6mvr2fp0qX3LOru7iYrK4toSQ1OXhGKohpOiyVQe0NVn9PGFb8iFofGFSMCMMPulwEXgbdXrlxZ3dHRQXt7+4ibA2RmZtLc3Ex/y/O4fg8RMUSMS8RxiRiPqPE+4xrnl07syA3Q+aN5wADlwO1oNPpqQ0NDfl9fH4cPH2bOnDn3dV9VVRWVlVV88vsteNF0XCO4xuA6Bs9xiBgPz/EmueKcIxavHyk/BPjnli1bpm3btu1TZ2hmxkTk8aeYMK8aay1WFVWwqgSqBDYgqQFJGxygccWa4e86IhJpbW39Zk5ODgUFBZ8KwOLFZeyr/wHZs0vw0jMxIqFpAuFt+EOYZ/OrAi41t96dhF8HThcWFnpnzpwhGo0+MIhnamvZs+8AM55uIhn4+Cnrkza8Wqv4NiBhfXwNCgxy3jauuKMKPOCPrpHSU2fOUlJS8sAg8qZP50bGY0xeuIFk4JO0SnIYiMAqSRuQDPyPgsbqh++ugqSsPXGC+WsoLS1lzZqnHxhA40svcfPvfyDNjRARwTOCJ+E0IjgiOGIwRnIkFl97NwBMX9dPvEfLSC+t5cCB/eTk5Ix78ylTplBcXMxDjy3EweIZISKSqoxwcyOCYwRXHETkuSEAsTjE4kVGTLrjpdP7p33U1NTQ2dk5bgCbN28Ow7BoA8YmcVOWR1KWuyKIgEEwYjBiJhN75Ushr15qRp747g9dcRZ4RtCuf3HhdBMlpQuZNm3auAAUFBRw+fJlWl/dy9SCaqwGIBIyJGBTUwemWqzy/mAIRPmaEUGsJeNbz+IVfJ+ioiI2bNgwbi80NTUxJWciV47/GM9Lwwg4CA6CSblbBqYYRPjqEACRR8JaVcRPkPHlJ5m66kX27W8kL2/6uMPR3t7Ox+++yQcXjmLEIEYQA8YIkuIHSYVDkBnDk3DSEDwAi5c5mUfWNtGVPovc3FwOHTp0XwDZ2dm0nTvH9Td+zSedVxDVkIQAEQ1BoIgKCpnmflqpQcAXyjYxo6KeVatWUVZWRiKRGPO1+fPns2vXLjoOr7uvFA8HcHMoQ8IHmkqOINnH1d81kJeXR0VFRcqKkUcQBLS0tHD79u2QXHq7UmkIqgKqoIKKAnQPNiSqXFG0QFVCXbcGK4pVIdnTBcDOnTupqqoa06q2tjZKS0uZ8LmZzKiox5nwWXzfx9qBfmGgCkDRa4MeUNE3repg2QSEiwMFk5nDF8vrWLZsGTNnzqS9vX1UAEVFRezYsYOeD68y8fNPEFifAL2rDAfBnJdhGv0NzzgtoYYbHGOICkSMIWKEqBE8x+X91v18cKGJyspKDh48SFZW1ohAlixZQstfLzM99iK9iQQJqySsxVfFDyz9Nolv/fw7gumsPtIbMZE0zxhcR3DFEDVCZIDTjeA5Drb3Jv84sYOu639j69atNDQ0jAgiN3cyPQ/NJXvhM/QnEwRW8dWSDAL6bbLTHlyee0cVWNWfBhpgVbEWfFUSqiSGqVoyCCCaxayndjKn+nm2736BzIyJHDt27B4AFy9eovvtU3R3nA5DkFJEXwNUtWHEptSsPtIXNW7UMy4mJSLeMA+4IrhCKC6A46XR+VYz772xj/z8fJqampg1a9bg906ePElZWRlZy3+DZuSGPUGQ/G/QuDznHjVMeaEyaS2+WqxVbMryxMDVKv0W+qzSr0pPoo/Mx8uZs/51rgdTmD17NrFYbJArFi9ezKZNm7h1dD1B4JO0PgG23KR6QxnlYLHXM846z7i4oX4P6vmA9Q6ENMsQZyiGxK1OPjr5M5Kd77B7925qamoAWLBgAX+59jFU7tmivy3fPvq5INXDSyx+3DXOd1xx8YzBiGBMKCIDwmKMDLEWEnoMUDdK37U2bp/6BQ9PSueV+BEWLVpEdnYW3be6f67wo7EOJoMgiMX3uuKs84zBEQcjghjBMCAmhF1niskGCMaiqFWs8ehrj+Off5nCwkK2b99OcXExwFTgvdEB3AmizIi85oqTNgDCSKrPFWV4DFRD/beqWLX4YUXdst0ffk+b168CVqZWpwN9YwO4Wzhi8c1GpM6ISTcYREJPMOSAQYZLHc1upY5meyjfBq/XAUwGbgL9Y4dgrBGLFwtSITAPkekCk1L73wS9qsoFxR6nceWfx/O5/wGLCSMJ+zJrfwAAAABJRU5ErkJggg==">
+ZAP Scanning Report
+
+        </h1>
+        <p>
+</p>
+        <h3 class="left-header">Summary of Alerts</h3>
+        <h3 class="time-stamp">Generated on Tue, 7 Sep 2021 12:46:02</h3>
+        <table width="45%" class="summary">
+            <tr bgcolor="#666666">
+                <th width="45%" height="24">Risk 
+      Level</th><th width="55%" align="center">Number 
+      of Alerts</th>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td><a href="#high">High</a></td><td align="center">0</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td><a href="#medium">Medium</a></td><td align="center">4</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td><a href="#low">Low</a></td><td align="center">6</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td><a href="#info">Informational</a></td><td align="center">5</td>
+            </tr>
+        </table>
+        <div class="spacer-lg"></div>
+        <h3>Alerts</h3>
+        <table width="75%" class="alerts">
+            <tr bgcolor="#666666">
+                <th width="60%" height="24">Name</th><th width="20%" align="center">Risk Level</th><th width="20%" align="center">Number of Instances</th>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Content Security Policy (CSP) Header Not Set</td><td align="center">Medium</td><td align="center">3</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Source Code Disclosure - Java</td><td align="center">Medium</td><td align="center">2</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Sub Resource Integrity Attribute Missing</td><td align="center">Medium</td><td align="center">3</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>X-Frame-Options Header Not Set</td><td align="center">Medium</td><td align="center">2</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Absence of Anti-CSRF Tokens</td><td align="center">Low</td><td align="center">2</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Cross-Domain JavaScript Source File Inclusion</td><td align="center">Low</td><td align="center">3</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Dangerous JS Functions</td><td align="center">Low</td><td align="center">1</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Incomplete or No Cache-control Header Set</td><td align="center">Low</td><td align="center">3</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Permissions Policy Header Not Set</td><td align="center">Low</td><td align="center">12</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>X-Content-Type-Options Header Missing</td><td align="center">Low</td><td align="center">11</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Base64 Disclosure</td><td align="center">Informational</td><td align="center">5</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Information Disclosure - Suspicious Comments</td><td align="center">Informational</td><td align="center">11</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Modern Web Application</td><td align="center">Informational</td><td align="center">3</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Storable and Cacheable Content</td><td align="center">Informational</td><td align="center">11</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Timestamp Disclosure - Unix</td><td align="center">Informational</td><td align="center">6</td>
+            </tr>
+        </table>
+        <div class="spacer-lg"></div>
+        <h3>Alert Detail</h3>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-medium">
+                <th width="20%"><a name="medium"></a>Medium (High)</th><th width="80%">Content Security Policy (CSP) Header Not Set</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page &mdash; covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/?city=ZAP</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">3</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header, to achieve optimal browser support: "Content-Security-Policy" for Chrome 25+, Firefox 23+ and Safari 7+, "X-Content-Security-Policy" for Firefox 4.0+ and Internet Explorer 10+, and "X-WebKit-CSP" for Chrome 14+ and Safari 6+.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">693</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">15</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-medium">
+                <th width="20%"><a name="medium"></a>Medium (Medium)</th><th width="80%">Source Code Disclosure - Java</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>Application Source Code was disclosed by the web server - Java</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/start-9ff9db47.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">class at{constructor({base:t,routes:e,trailing_slash:r,renderer:s}){this.base=t,this.routes=e,this.trailing_slash=r,this.renderer=s,s.router=this,this.enabled=!0,document.body.setAttribute("tabindex","-1"),history.replaceState(history.state||{},"",location.href)}init_listeners(){let t;"scrollRestoration"in history&amp;&amp;(history.scrollRestoration="manual"),addEventListener("beforeunload",(()=&gt;{history.scrollRestoration="auto"})),addEventListener("load",(()=&gt;{history.scrollRestoration="manual"})),addEventListener("scroll",(()=&gt;{clearTimeout(t),t=setTimeout((()=&gt;{const t=(s=i({},history.state||{}),o={"sveltekit:scroll":ot()},e(s,r(o)));var s,o;history.replaceState(t,document.title,window.location.href)}),50)}));const s=t=&gt;{const e=nt(t.target);e&amp;&amp;e.href&amp;&amp;e.hasAttribute("sveltekit:prefetch")&amp;&amp;this.prefetch(new URL(e.href))};let o;addEventListener("touchstart",s),addEventListener("mousemove",(t=&gt;{clearTimeout(o),o=setTimeout((()=&gt;{s(t)}),20)})),addEventListener("click",(t=&gt;{if(!this.enabled)return;if(t.button||1!==t.which)return;if(t.metaKey||t.ctrlKey||t.shiftKey||t.altKey)return;if(t.defaultPrevented)return;const e=nt(t.target);if(!e)return;if(!e.href)return;const r="object"==typeof e.href&amp;&amp;"SVGAnimatedString"===e.href.constructor.name,s=String(r?e.href.baseVal:e.href);if(s===location.href)return void(location.hash||t.preventDefault());const o=(e.getAttribute("rel")||"").split(/\s+/);if(e.hasAttribute("download")||o&amp;&amp;o.includes("external"))return;if(r?e.target.baseVal:e.target)return;const n=new URL(s);if(!this.owns(n))return;const a=e.hasAttribute("sveltekit:noscroll");history.pushState({},"",n.href),this._navigate(n,a?ot():null,!1,[],n.hash),t.preventDefault()})),addEventListener("popstate",(t=&gt;{if(t.state&amp;&amp;this.enabled){const e=new URL(location.href);this._navigate(e,t.state["sveltekit:scroll"],!1,[])}}))}owns(t){return t.origin===location.origin&amp;&amp;t.pathname.startsWith(this.base)}parse(t){if(this.owns(t)){const e=t.pathname.slice(this.base.length)||"/",r=decodeURI(e),s=this.routes.filter((([t])=&gt;t.test(r))),o=new URLSearchParams(t.search);return{id:`${e}?${o}`,routes:s,path:e,query:o}}}async goto(t,{noscroll:e=!1,replaceState:r=!1,keepfocus:s=!1,state:o={}}={},n){const a=new URL(t,function(t){let e=t.baseURI;if(!e){const r=t.getElementsByTagName("base");e=r.length?r[0].href:t.URL}return e}(document));return this.enabled&amp;&amp;this.owns(a)?(history[r?"replaceState":"pushState"](o,"",t),this._navigate(a,e?ot():null,s,n,a.hash)):(location.href=a.href,new Promise((()=&gt;{})))}enable(){this.enabled=!0}disable(){this.enabled=!1}async prefetch(t){const e=this.parse(t);if(!e)throw new Error("Attempted to prefetch a URL that does not belong to this app");return this.renderer.load(e)}async _navigate(t,e,r,s,o){const n=this.parse(t);if(!n)throw new Error("Attempted to navigate to a URL that does not belong to this app");if("/"!==n.path){const t=n.path.endsWith("/");(t&amp;&amp;"never"===this.trailing_slash||!t&amp;&amp;"always"===this.trailing_slash&amp;&amp;!(n.path.split("/").pop()||"").includes("."))&amp;&amp;(n.path=t?n.path.slice(0,-1):n.path+"/",history.replaceState({},"",`${this.base}${n.path}${location.search}`))}this.renderer.notify({path:n.path,query:n.query}),await this.renderer.update(n,s,!1),r||document.body.focus();const a=o&amp;&amp;document.getElementById(o.slice(1));e?scrollTo(e.x,e.y):a?a.scrollIntoView():scrollTo(0,0)}}function it(t){const e=D(t);let r=!0;return{notify:function(){r=!0,e.update((t=&gt;t))},set:function(t){r=!1,e.set(t)},subscribe:function(t){let s;return e.subscribe((e=&gt;{(void 0===s||r&amp;&amp;e!==s)&amp;&amp;t(s=e)}))}}}function lt(t,e){let r=`script[data-type="svelte-data"][data-url="${"string"==typeof t?t:t.url}"]`;e&amp;&amp;"string"==typeof e.body&amp;&amp;(r+=`[data-body="${function(t){let e=5381,r=t.length;if("string"==typeof t)for(;r;)e=33*e^t.charCodeAt(--r);else for(;r;)e=33*e^t[--r];return(e&gt;&gt;&gt;0).toString(36)}(e.body)}"]`);const a=document.querySelector(r);if(a&amp;&amp;a.textContent){const t=JSON.parse(a.textContent),{body:e}=t,r=((t,e)=&gt;{var r={};for(var a in t)o.call(t,a)&amp;&amp;e.indexOf(a)&lt;0&amp;&amp;(r[a]=t[a]);if(null!=t&amp;&amp;s)for(var a of s(t))e.indexOf(a)&lt;0&amp;&amp;n.call(t,a)&amp;&amp;(r[a]=t[a]);return r})(t,["body"]);return Promise.resolve(new Response(e,r))}return fetch(t,e)}class ct{constructor({Root:t,fallback:e,target:r,session:s,host:o}){this.Root=t,this.fallback=e,this.host=o,this.router,this.target=r,this.started=!1,this.session_id=1,this.invalid=new Set,this.invalidating=null,this.current={page:null,session_id:null,branch:[]},this.cache=new Map,this.loading={id:null,promise:null},this.stores={page:it({}),navigating:D(null),session:D(s)},this.$session=null,this.root=null;let n=!1;this.stores.session.subscribe((async t=&gt;{if(this.$session=t,!n||!this.router)return;this.session_id+=1;const e=this.router.parse(new URL(location.href));e&amp;&amp;this.update(e,[],!0)})),n=!0}async start({status:t,error:e,nodes:r,page:s}){const o=[];let n,a,l={};try{for(let n=0;n&lt;r.length;n+=1){const c=n===r.length-1,u=await this._load_node({module:await r[n],page:s,context:l,status:c?t:void 0,error:c?e:void 0});if(o.push(u),u&amp;&amp;u.loaded)if(u.loaded.error){if(e)throw u.loaded.error;a={status:u.loaded.status,error:u.loaded.error,path:s.path,query:s.query}}else u.loaded.context&amp;&amp;(l=i(i({},l),u.loaded.context))}n=a?await this._load_error(a):await this._get_navigation_result_from_branch({page:s,branch:o})}catch(u){if(e)throw u;n=await this._load_error({status:500,error:(c=u,c instanceof Error?c:new Error(JSON.stringify(c))),path:s.path,query:s.query})}var c;n.redirect?location.href=new URL(n.redirect,location.href).href:this._init(n)}notify({path:t,query:e}){dispatchEvent(new CustomEvent("sveltekit:navigation-start")),this.started&amp;&amp;this.stores.navigating.set({from:{path:this.current.page.path,query:this.current.page.query},to:{path:t,query:e}})}async update(t,e,r){const s=this.token={};let o=await this._get_navigation_result(t,r);if(s!==this.token)return;if(this.invalid.clear(),o.redirect){if(!(e.length&gt;10||e.includes(t.path)))return void(this.router?this.router.goto(o.redirect,{replaceState:!0},[...e,t.path]):location.href=new URL(o.redirect,location.href).href);o=await this._load_error({status:500,error:new Error("Redirect loop"),path:t.path,query:t.query})}if(o.reload?location.reload():this.started?(this.current=o.state,this.root.$set(o.props),this.stores.navigating.set(null),await 0):this._init(o),dispatchEvent(new CustomEvent("sveltekit:navigation-end")),this.loading.promise=null,this.loading.id=null,!this.router)return;const n=o.state.branch[o.state.branch.length-1];n&amp;&amp;!1===n.module.router?this.router.disable():this.router.enable()}load(t){return this.loading.promise=this._get_navigation_result(t,!1),this.loading.id=t.id,this.loading.promise}invalidate(t){return this.invalid.add(t),this.invalidating||(this.invalidating=Promise.resolve().then((async()=&gt;{const t=this.router&amp;&amp;this.router.parse(new URL(location.href));t&amp;&amp;await this.update(t,[],!0),this.invalidating=null}))),this.invalidating}_init(t){this.current=t.state;const e=document.querySelector("style[data-svelte]");e&amp;&amp;e.remove(),this.root=new this.Root({target:this.target,props:i({stores:this.stores},t.props),hydrate:!0}),this.started=!0}async _get_navigation_result(t,e){if(this.loading.id===t.id)return this.loading.promise;for(let r=0;r&lt;t.routes.length;r+=1){const s=t.routes[r];if(1===s.length)return{reload:!0,props:{},state:this.current};let o=r+1;for(;o&lt;t.routes.length;){const e=t.routes[o];if(e[0].toString()!==s[0].toString())break;1!==e.length&amp;&amp;e[1].forEach((t=&gt;t())),o+=1}const n=await this._load({route:s,path:t.path,query:t.query},e);if(n)return n}return await this._load_error({status:404,error:new Error(`Not found: ${t.path}`),path:t.path,query:t.query})}async _get_navigation_result_from_branch({page:t,branch:e}){const r=e.filter(Boolean),s={state:{page:t,branch:e,session_id:this.session_id},props:{components:r.map((t=&gt;t.module.default))}};for(let a=0;a&lt;r.length;a+=1){const t=r[a].loaded;t&amp;&amp;(s.props[`props_${a}`]=await t.props)}this.current.page&amp;&amp;t.path===this.current.page.path&amp;&amp;t.query.toString()===this.current.page.query.toString()||(s.props.page=t);const o=r[r.length-1],n=o.loaded&amp;&amp;o.loaded.maxage;if(n){const e=`${t.path}?${t.query}`;let r=!1;const o=()=&gt;{this.cache.get(e)===s&amp;&amp;this.cache.delete(e),i(),clearTimeout(a)},a=setTimeout(o,1e3*n),i=this.stores.session.subscribe((()=&gt;{r&amp;&amp;o()}));r=!0,this.cache.set(e,s)}return s}async _load_node({status:t,error:e,module:r,page:s,context:o}){const n={module:r,uses:{params:new Set,path:!1,query:!1,session:!1,context:!1,dependencies:[]},loaded:null,context:o},a={};for(const i in s.params)Object.defineProperty(a,i,{get:()=&gt;(n.uses.params.add(i),s.params[i]),enumerable:!0});const l=this.$session;if(r.load){const{started:c}=this,u={page:{host:s.host,params:a,get path(){return n.uses.path=!0,s.path},get query(){return n.uses.query=!0,s.query}},get session(){return n.uses.session=!0,l},get context(){return n.uses.context=!0,i({},o)},fetch(t,e){const r="string"==typeof t?t:t.url,{href:o}=new URL(r,new URL(s.path,document.baseURI));return n.uses.dependencies.push(o),c?fetch(t,e):lt(t,e)}};e&amp;&amp;(u.status=t,u.error=e);const d=await r.load.call(null,u);if(!d)return;n.loaded=function(t){const e=t.status&amp;&amp;t.status&gt;=400&amp;&amp;t.status&lt;=599&amp;&amp;!t.redirect;if(t.error||e){const r=t.status;if(!t.error&amp;&amp;e)return{status:r||500,error:new Error};const s="string"==typeof t.error?new Error(t.error):t.error;return s instanceof Error?!r||r&lt;400||r&gt;599?(console.warn('"error" returned from load() without a valid status code &mdash; defaulting to 500'),{status:500,error:s}):{status:r,error:s}:{status:500,error:new Error(`"error" property returned from load() must be a string or instance of Error, received type "${typeof s}"`)}}if(t.redirect){if(!t.status||3!==Math.floor(t.status/100))return{status:500,error:new Error('"redirect" property returned from load() must be accompanied by a 3xx status code')};if("string"!=typeof t.redirect)return{status:500,error:new Error('"redirect" property returned from load() must be a string')}}return t}(d),n.loaded.context&amp;&amp;(n.context=n.loaded.context)}return n}async _load({route:t,path:e,query:r},s){const o=`${e}?${r}`;if(!s){const t=this.cache.get(o);if(t)return t}const[n,a,l,c]=t,u=c?c(n.exec(e)):{},d=this.current.page&amp;&amp;{path:e!==this.current.page.path,params:Object.keys(u).filter((t=&gt;this.current.page.params[t]!==u[t])),query:r.toString()!==this.current.page.query.toString(),session:this.session_id!==this.current.session_id},h={host:this.host,path:e,query:r,params:u},p=[];let f,g={},_=!1,m=200;a.forEach((t=&gt;t()));t:for(let $=0;$&lt;a.length;$+=1){let t;try{if(!a[$])continue;const e=await a[$](),r=this.current.branch[$];if(!r||e!==r.module||d.path&amp;&amp;r.uses.path||d.params.some((t=&gt;r.uses.params.has(t)))||d.query&amp;&amp;r.uses.query||d.session&amp;&amp;r.uses.session||r.uses.dependencies.some((t=&gt;this.invalid.has(t)))||_&amp;&amp;r.uses.context){t=await this._load_node({module:e,page:h,context:g});const r=$===a.length-1;if(t&amp;&amp;t.loaded){if(t.loaded.error&amp;&amp;(m=t.loaded.status,f=t.loaded.error),t.loaded.redirect)return{redirect:t.loaded.redirect,props:{},state:this.current};t.loaded.context&amp;&amp;(_=!0)}else if(r&amp;&amp;e.load)return}else t=r}catch(y){m=500,f=y}if(f){for(;$--;)if(l[$]){let t,e,r=$;for(;!(e=p[r]);)r-=1;try{if(t=await this._load_node({status:m,error:f,module:await l[$](),page:h,context:e.context}),t&amp;&amp;t.loaded&amp;&amp;t.loaded.error)continue;p.push(t);break t}catch(y){continue}}return await this._load_error({status:m,error:f,path:e,query:r})}t&amp;&amp;t.loaded&amp;&amp;t.loaded.context&amp;&amp;(g=i(i({},g),t.loaded.context)),p.push(t)}return await this._get_navigation_result_from_branch({page:h,branch:p})}async _load_error({status:t,error:e,path:r,query:s}){const o={host:this.host,path:r,query:s,params:{}},n=await this._load_node({module:await this.fallback[0],page:o,context:{}}),a=[n,await this._load_node({status:t,error:e,module:await this.fallback[1],page:o,context:n&amp;&amp;n.loaded&amp;&amp;n.loaded.context||{}})];return await this._get_navigation_result_from_branch({page:o,branch:a})}}async function ut({paths:t,target:e,session:r,host:s,route:o,spa:n,trailing_slash:a,hydrate:i}){const l=new ct({Root:Y,fallback:rt,target:e,session:r,host:s}),c=o?new at({base:t.base,routes:et,trailing_slash:a,renderer:l}):null;U(c),function(t){st=t.base,t.assets}(t),i&amp;&amp;await l.start(i),c&amp;&amp;(n&amp;&amp;c.goto(location.href,{replaceState:!0},[]),c.init_listeners()),dispatchEvent(new CustomEvent("sveltekit:start"))}export{ut as start}</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/vendor-6122f38b.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">class id{constructor(e,t){this.editor=e,this.commands=t}createCommands(){const{commands:e,editor:t}=this,{state:n,view:r}=t,{tr:o}=n,i=this.buildProps(o);return Object.fromEntries(Object.entries(e).map((([e,t])=&gt;[e,(...e)=&gt;{const n=t(...e)(i);return o.getMeta("preventDispatch")||r.dispatch(o),n}])))}createChain(e,t=!0){const{commands:n,editor:r}=this,{state:o,view:i}=r,s=[],l=!!e,u=e||o.tr,p=c(a({},Object.fromEntries(Object.entries(n).map((([e,n])=&gt;[e,(...e)=&gt;{const r=this.buildProps(u,t),o=n(...e)(r);return s.push(o),p}])))),{run:()=&gt;(l||!t||u.getMeta("preventDispatch")||i.dispatch(u),s.every((e=&gt;!0===e)))});return p}createCan(e){const{commands:t,editor:n}=this,{state:r}=n,o=void 0,i=e||r.tr,s=this.buildProps(i,o),l=Object.fromEntries(Object.entries(t).map((([e,t])=&gt;[e,(...e)=&gt;t(...e)(c(a({},s),{dispatch:o}))])));return c(a({},l),{chain:()=&gt;this.createChain(i,o)})}buildProps(e,t=!0){const{editor:n,commands:r}=this,{state:o,view:i}=n;o.storedMarks&amp;&amp;e.setStoredMarks(o.storedMarks);const s={tr:e,editor:n,view:i,state:this.chainableState(e,o),dispatch:t?()=&gt;{}:void 0,chain:()=&gt;this.createChain(e),can:()=&gt;this.createCan(e),get commands(){return Object.fromEntries(Object.entries(r).map((([e,t])=&gt;[e,(...e)=&gt;t(...e)(s)])))}};return s}chainableState(e,t){let{selection:n}=e,{doc:r}=e,{storedMarks:o}=e;return c(a({},t),{schema:t.schema,plugins:t.plugins,apply:t.apply.bind(t),applyTransaction:t.applyTransaction.bind(t),reconfigure:t.reconfigure.bind(t),toJSON:t.toJSON.bind(t),get storedMarks(){return o},get selection(){return n},get doc(){return r},get tr(){return n=e.selection,r=e.doc,o=e.storedMarks,e}})}}function sd(e,t,n={}){if(void 0===e.config[t]&amp;&amp;e.parent)return sd(e.parent,t,n);if("function"==typeof e.config[t]){return e.config[t].bind(c(a({},n),{parent:e.parent?sd(e.parent,t,n):null}))}return e.config[t]}function ad(e){return{baseExtensions:e.filter((e=&gt;"extension"===e.type)),nodeExtensions:e.filter((e=&gt;"node"===e.type)),markExtensions:e.filter((e=&gt;"mark"===e.type))}}function cd(e){const t=[],{nodeExtensions:n,markExtensions:r}=ad(e),o=[...n,...r],i={default:null,rendered:!0,renderHTML:null,parseHTML:null,keepOnSplit:!0};return e.forEach((e=&gt;{const n=sd(e,"addGlobalAttributes",{name:e.name,options:e.options});if(!n)return;n().forEach((e=&gt;{e.types.forEach((n=&gt;{Object.entries(e.attributes).forEach((([e,r])=&gt;{t.push({type:n,name:e,attribute:a(a({},i),r)})}))}))}))})),o.forEach((e=&gt;{const n={name:e.name,options:e.options},r=sd(e,"addAttributes",n);if(!r)return;const o=r();Object.entries(o).forEach((([n,r])=&gt;{t.push({type:e.name,name:n,attribute:a(a({},i),r)})}))})),t}function ld(...e){return e.filter((e=&gt;!!e)).reduce(((e,t)=&gt;{const n=a({},e);return Object.entries(t).forEach((([e,t])=&gt;{n[e]?n[e]="class"===e?[n[e],t].join(" "):"style"===e?[n[e],t].join("; "):t:n[e]=t})),n}),{})}function ud(e,t){return t.filter((e=&gt;e.attribute.rendered)).map((t=&gt;t.attribute.renderHTML?t.attribute.renderHTML(e.attrs)||{}:{[t.name]:e.attrs[t.name]})).reduce(((e,t)=&gt;ld(e,t)),{})}function pd(e,t){return e.style?e:c(a({},e),{getAttrs:n=&gt;{const r=e.getAttrs?e.getAttrs(n):e.attrs;if(!1===r)return!1;const o=t.filter((e=&gt;e.attribute.rendered)).reduce(((e,t)=&gt;{const r=t.attribute.parseHTML?t.attribute.parseHTML(n)||{}:{[t.name]:(o=n.getAttribute(t.name),"string"!=typeof o?o:o.match(/^\d*(\.\d+)?$/)?Number(o):"true"===o||"false"!==o&amp;&amp;o)};var o;const i=Object.fromEntries(Object.entries(r).filter((([,e])=&gt;null!=e)));return a(a({},e),i)}),{});return a(a({},r),o)}})}function dd(e,t,...n){return"function"==typeof e?t?e.bind(t)(...n):e(...n):e}function hd(e){return Object.fromEntries(Object.entries(e).filter((([e,t])=&gt;("attrs"!==e||!function(e={}){return 0===Object.keys(e).length&amp;&amp;e.constructor===Object}(t))&amp;&amp;null!=t)))}function fd(e,t){return t.nodes[e]?t.nodes[e]:t.marks[e]?t.marks[e]:null}class md{constructor(e,t){this.splittableMarks=[],this.editor=t,this.extensions=md.resolve(e),this.schema=function(e){var t;const n=cd(e),{nodeExtensions:r,markExtensions:o}=ad(e),i=null===(t=r.find((e=&gt;sd(e,"topNode"))))||void 0===t?void 0:t.name,s=Object.fromEntries(r.map((t=&gt;{const r=n.filter((e=&gt;e.type===t.name)),o={name:t.name,options:t.options},i=e.reduce(((e,n)=&gt;{const r=sd(n,"extendNodeSchema",o);return a(a({},e),r?r(t):{})}),{}),s=hd(c(a({},i),{content:dd(sd(t,"content",o)),marks:dd(sd(t,"marks",o)),group:dd(sd(t,"group",o)),inline:dd(sd(t,"inline",o)),atom:dd(sd(t,"atom",o)),selectable:dd(sd(t,"selectable",o)),draggable:dd(sd(t,"draggable",o)),code:dd(sd(t,"code",o)),defining:dd(sd(t,"defining",o)),isolating:dd(sd(t,"isolating",o)),attrs:Object.fromEntries(r.map((e=&gt;{var t;return[e.name,{default:null===(t=null==e?void 0:e.attribute)||void 0===t?void 0:t.default}]})))})),l=dd(sd(t,"parseHTML",o));l&amp;&amp;(s.parseDOM=l.map((e=&gt;pd(e,r))));const u=sd(t,"renderHTML",o);return u&amp;&amp;(s.toDOM=e=&gt;u({node:e,HTMLAttributes:ud(e,r)})),[t.name,s]}))),l=Object.fromEntries(o.map((t=&gt;{const r=n.filter((e=&gt;e.type===t.name)),o={name:t.name,options:t.options},i=e.reduce(((e,n)=&gt;{const r=sd(n,"extendMarkSchema",o);return a(a({},e),r?r(t):{})}),{}),s=hd(c(a({},i),{inclusive:dd(sd(t,"inclusive",o)),excludes:dd(sd(t,"excludes",o)),group:dd(sd(t,"group",o)),spanning:dd(sd(t,"spanning",o)),attrs:Object.fromEntries(r.map((e=&gt;{var t;return[e.name,{default:null===(t=null==e?void 0:e.attribute)||void 0===t?void 0:t.default}]})))})),l=dd(sd(t,"parseHTML",o));l&amp;&amp;(s.parseDOM=l.map((e=&gt;pd(e,r))));const u=sd(t,"renderHTML",o);return u&amp;&amp;(s.toDOM=e=&gt;u({mark:e,HTMLAttributes:ud(e,r)})),[t.name,s]})));return new Ws({topNode:i,nodes:s,marks:l})}(this.extensions),this.extensions.forEach((e=&gt;{var t;const n={name:e.name,options:e.options,editor:this.editor,type:fd(e.name,this.schema)};if("mark"===e.type){(null===(t=dd(sd(e,"keepOnSplit",n)))||void 0===t||t)&amp;&amp;this.splittableMarks.push(e.name)}const r=sd(e,"onBeforeCreate",n);r&amp;&amp;this.editor.on("beforeCreate",r);const o=sd(e,"onCreate",n);o&amp;&amp;this.editor.on("create",o);const i=sd(e,"onUpdate",n);i&amp;&amp;this.editor.on("update",i);const s=sd(e,"onSelectionUpdate",n);s&amp;&amp;this.editor.on("selectionUpdate",s);const a=sd(e,"onTransaction",n);a&amp;&amp;this.editor.on("transaction",a);const c=sd(e,"onFocus",n);c&amp;&amp;this.editor.on("focus",c);const l=sd(e,"onBlur",n);l&amp;&amp;this.editor.on("blur",l);const u=sd(e,"onDestroy",n);u&amp;&amp;this.editor.on("destroy",u)}))}static resolve(e){return md.sort(md.flatten(e))}static flatten(e){return e.map((e=&gt;{const t=sd(e,"addExtensions",{name:e.name,options:e.options});return t?[e,...this.flatten(t())]:e})).flat(10)}static sort(e){return e.sort(((e,t)=&gt;{const n=sd(e,"priority")||100,r=sd(t,"priority")||100;return n&gt;r?-1:n&lt;r?1:0}))}get commands(){return this.extensions.reduce(((e,t)=&gt;{const n=sd(t,"addCommands",{name:t.name,options:t.options,editor:this.editor,type:fd(t.name,this.schema)});return n?a(a({},e),n()):e}),{})}get plugins(){return[...this.extensions].reverse().map((e=&gt;{const t={name:e.name,options:e.options,editor:this.editor,type:fd(e.name,this.schema)},n=[],r=sd(e,"addKeyboardShortcuts",t);if(r){const e=function(e){return new uc({props:{handleKeyDown:yp(e)}})}(Object.fromEntries(Object.entries(r()).map((([e,t])=&gt;[e,()=&gt;t({editor:this.editor})]))));n.push(e)}const o=sd(e,"addInputRules",t);if(this.editor.options.enableInputRules&amp;&amp;o){const e=o(),t=e.length?[(i={rules:e},s=i.rules,a=new uc({state:{init:function(){return null},apply:function(e,t){var n=e.getMeta(this);return n||(e.selectionSet||e.docChanged?null:t)}},props:{handleTextInput:function(e,t,n,r){return bp(e,t,n,r,s,a)},handleDOMEvents:{compositionend:function(e){setTimeout((function(){var t=e.state.selection.$cursor;t&amp;&amp;bp(e,t.pos,t.pos,"",s,a)}))}}},isInputRules:!0}),a)]:[];n.push(...t)}var i,s,a;const c=sd(e,"addPasteRules",t);if(this.editor.options.enablePasteRules&amp;&amp;c){const e=c();n.push(...e)}const l=sd(e,"addProseMirrorPlugins",t);if(l){const e=l();n.push(...e)}return n})).flat()}get attributes(){return cd(this.extensions)}get nodeViews(){const{editor:e}=this,{nodeExtensions:t}=ad(this.extensions);return Object.fromEntries(t.filter((e=&gt;!!sd(e,"addNodeView"))).map((t=&gt;{const n=this.attributes.filter((e=&gt;e.type===t.name)),r={name:t.name,options:t.options,editor:e,type:Gp(t.name,this.schema)},o=sd(t,"addNodeView",r);if(!o)return[];return[t.name,(r,i,s,a)=&gt;{const c=ud(r,n);return o()({editor:e,node:r,getPos:s,decorations:a,HTMLAttributes:c,extension:t})}]})))}get textSerializers(){const{editor:e}=this,{nodeExtensions:t}=ad(this.extensions);return Object.fromEntries(t.filter((e=&gt;!!sd(e,"renderText"))).map((t=&gt;{const n=sd(t,"renderText",{name:t.name,options:t.options,editor:e,type:Gp(t.name,this.schema)});if(!n)return[];return[t.name,e=&gt;n(e)]})))}}function gd(e){return"Object"===function(e){return Object.prototype.toString.call(e).slice(8,-1)}(e)&amp;&amp;(e.constructor===Object&amp;&amp;Object.getPrototypeOf(e)===Object.prototype)}function vd(e,t){const n=a({},e);return gd(e)&amp;&amp;gd(t)&amp;&amp;Object.keys(t).forEach((r=&gt;{gd(t[r])?r in e?n[r]=vd(e[r],t[r]):Object.assign(n,{[r]:t[r]}):Object.assign(n,{[r]:t[r]})})),n}class yd{constructor(e={}){this.type="extension",this.name="extension",this.parent=null,this.child=null,this.config={name:this.name,defaultOptions:{}},this.config=a(a({},this.config),e),this.name=this.config.name,this.options=this.config.defaultOptions}static create(e={}){return new yd(e)}configure(e={}){const t=this.extend();return t.options=vd(this.options,e),t}extend(e={}){const t=new yd(e);return t.parent=this,this.child=t,t.name=e.name?e.name:t.parent.name,t.options=e.defaultOptions?e.defaultOptions:t.parent.options,t}}const _d=yd.create({name:"editable",addProseMirrorPlugins(){return[new uc({key:new hc("clipboardTextSerializer"),props:{clipboardTextSerializer:()=&gt;{const{editor:e}=this,{from:t,to:n}=e.state.selection;return((e,t,n,r,o)=&gt;{let i="",s=!0;return e.state.doc.nodesBetween(t,n,((a,c)=&gt;{var l;const u=e.extensionManager.textSerializers[a.type.name];u?(i+=u({node:a}),s=!r):a.isText?(i+=null===(l=null==a?void 0:a.text)||void 0===l?void 0:l.slice(Math.max(t,c)-c,n-c),s=!r):a.isLeaf&amp;&amp;o?(i+=o,s=!r):!s&amp;&amp;a.isBlock&amp;&amp;(i+=r,s=!0)}),0),i})(e,t,n,"\n")}}})]}});var bd=Object.freeze({__proto__:null,blur:()=&gt;({editor:e,view:t})=&gt;(requestAnimationFrame((()=&gt;{e.isDestroyed||t.dom.blur()})),!0)});var wd=Object.freeze({__proto__:null,clearContent:(e=!1)=&gt;({commands:t})=&gt;t.setContent("",e)});var kd=Object.freeze({__proto__:null,clearNodes:()=&gt;({state:e,tr:t,dispatch:n})=&gt;{const{selection:r}=t,{ranges:o}=r;return o.forEach((r=&gt;{e.doc.nodesBetween(r.$from.pos,r.$to.pos,((e,r)=&gt;{if(e.type.isText)return;const o=t.doc.resolve(t.mapping.map(r)),i=t.doc.resolve(t.mapping.map(r+e.nodeSize)),s=o.blockRange(i);if(!s)return;const a=Sa(s);if(e.type.isTextblock&amp;&amp;n){const{defaultType:e}=o.parent.contentMatchAt(o.index());t.setNodeMarkup(s.start,e)}(a||0===a)&amp;&amp;n&amp;&amp;t.lift(s,a)}))})),!0}});var xd=Object.freeze({__proto__:null,command:e=&gt;t=&gt;e(t)});var Sd=Object.freeze({__proto__:null,createParagraphNear:()=&gt;({state:e,dispatch:t})=&gt;Dp(e,t)});var Md=Object.freeze({__proto__:null,deleteNode:e=&gt;({tr:t,state:n,dispatch:r})=&gt;{const o=Gp(e,n.schema),i=t.selection.$anchor;for(let e=i.depth;e&gt;0;e-=1){if(i.node(e).type===o){if(r){const n=i.before(e),r=i.after(e);t.delete(n,r).scrollIntoView()}return!0}}return!1}});var Ed=Object.freeze({__proto__:null,deleteRange:e=&gt;({tr:t,dispatch:n})=&gt;{const{from:r,to:o}=e;return n&amp;&amp;t.delete(r,o),!0}});var Od=Object.freeze({__proto__:null,deleteSelection:()=&gt;({state:e,dispatch:t})=&gt;xp(e,t)});var Td=Object.freeze({__proto__:null,enter:()=&gt;({commands:e})=&gt;e.keyboardShortcut("Enter")});var Cd=Object.freeze({__proto__:null,exitCode:()=&gt;({state:e,dispatch:t})=&gt;Ip(e,t)});function Ad(e,t,n={}){return e.find((e=&gt;e.type===t&amp;&amp;Qp(e.attrs,n)))}function Nd(e,t,n={}){return!!Ad(e,t,n)}function zd(e,t,n={}){if(!e||!t)return;const r=e.parent.childAfter(e.parentOffset);if(!r.node)return;const o=Ad(r.node.marks,t,n);if(!o)return;let i=e.index(),s=e.start()+r.offset,a=i+1,c=s+r.node.nodeSize;for(Ad(r.node.marks,t,n);i&gt;0&amp;&amp;o.isInSet(e.parent.child(i-1).marks);)i-=1,s-=e.parent.child(i).nodeSize;for(;a&lt;e.parent.childCount&amp;&amp;Nd(e.parent.child(a).marks,t,n);)c+=e.parent.child(a).nodeSize,a+=1;return{from:s,to:c}}var Pd=Object.freeze({__proto__:null,extendMarkRange:(e,t={})=&gt;({tr:n,state:r,dispatch:o})=&gt;{const i=Yp(e,r.schema),{doc:s,selection:a}=n,{$from:c,from:l,to:u}=a;if(o){const e=zd(c,i,t);if(e&amp;&amp;e.from&lt;=l&amp;&amp;e.to&gt;=u){const t=Ja.create(s,e.from,e.to);n.setSelection(t)}}return!0}});var Id=Object.freeze({__proto__:null,first:e=&gt;t=&gt;{const n="function"==typeof e?e(t):e;for(let e=0;e&lt;n.length;e+=1)if(n[e](t))return!0;return!1}});function Dd(e=0,t=0,n=0){return Math.min(Math.max(e,t),n)}function jd(e){return(t=e)&amp;&amp;"object"==typeof t&amp;&amp;!Array.isArray(t)&amp;&amp;!function(e){var t;return"class"===(null===(t=e.constructor)||void 0===t?void 0:t.toString().substring(0,5))}(t)&amp;&amp;e instanceof Ja;var t}var Rd=Object.freeze({__proto__:null,focus:(e=null)=&gt;({editor:t,view:n,tr:r,dispatch:o})=&gt;{const i=()=&gt;{requestAnimationFrame((()=&gt;{t.isDestroyed||n.focus()}))};if(n.hasFocus()&amp;&amp;null===e||!1===e)return!0;if(o&amp;&amp;null===e&amp;&amp;!jd(t.state.selection))return i(),!0;const{from:s,to:a}=function(e,t=null){if(!t)return null;if("start"===t||!0===t)return{from:0,to:0};if("end"===t){const{size:t}=e.doc.content;return{from:t,to:t}}return{from:t,to:t}}(t.state,e)||t.state.selection,{doc:c,storedMarks:l}=r,u=qa.atStart(c).from,p=qa.atEnd(c).to,d=Dd(s,u,p),h=Dd(a,u,p),f=Ja.create(c,d,h),m=t.state.selection.eq(f);return o&amp;&amp;(m||r.setSelection(f),m&amp;&amp;l&amp;&amp;r.setStoredMarks(l),i()),!0}});var Ld=Object.freeze({__proto__:null,forEach:(e,t)=&gt;n=&gt;e.every(((e,r)=&gt;t(e,c(a({},n),{index:r}))))});var Bd=Object.freeze({__proto__:null,insertContent:(e,t)=&gt;({tr:n,commands:r})=&gt;r.insertContentAt({from:n.selection.from,to:n.selection.to},e,t)});var $d=Object.freeze({__proto__:null,insertContentAt:(e,t,n)=&gt;({tr:r,dispatch:o,editor:i})=&gt;{if(o){const o=rd(t,i.schema,a({parseOptions:{preserveWhitespace:"full"}},n||{}));if("&lt;&gt;"===o.toString())return!0;const{from:s,to:c}="number"==typeof e?{from:e,to:e}:e;r.replaceWith(s,c,o),function(e,t,n){const r=e.steps.length-1;if(r&lt;t)return;const o=e.steps[r];if(!(o instanceof ba||o instanceof wa))return;const i=e.mapping.maps[r];let s=0;i.forEach(((e,t,n,r)=&gt;{0===s&amp;&amp;(s=r)})),e.setSelection(qa.near(e.doc.resolve(s),n))}(r,r.steps.length-1,1)}return!0}});var Hd=Object.freeze({__proto__:null,joinBackward:()=&gt;({state:e,dispatch:t})=&gt;Sp(e,t)});var Fd=Object.freeze({__proto__:null,joinForward:()=&gt;({state:e,dispatch:t})=&gt;Tp(e,t)});const Vd="undefined"!=typeof navigator&amp;&amp;/Mac/.test(navigator.platform);var qd=Object.freeze({__proto__:null,keyboardShortcut:e=&gt;({editor:t,view:n,tr:r,dispatch:o})=&gt;{const i=function(e){const t=e.split(/-(?!$)/);let n,r,o,i,s=t[t.length-1];"Space"===s&amp;&amp;(s=" ");for(let a=0;a&lt;t.length-1;a+=1){const e=t[a];if(/^(cmd|meta|m)$/i.test(e))i=!0;else if(/^a(lt)?$/i.test(e))n=!0;else if(/^(c|ctrl|control)$/i.test(e))r=!0;else if(/^s(hift)?$/i.test(e))o=!0;else{if(!/^mod$/i.test(e))throw new Error(`Unrecognized modifier name: ${e}`);Vd?i=!0:r=!0}}return n&amp;&amp;(s=`Alt-${s}`),r&amp;&amp;(s=`Ctrl-${s}`),i&amp;&amp;(s=`Meta-${s}`),o&amp;&amp;(s=`Shift-${s}`),s}(e).split(/-(?!$)/),s=i.find((e=&gt;!["Alt","Ctrl","Meta","Shift"].includes(e))),a=new KeyboardEvent("keydown",{key:"Space"===s?" ":s,altKey:i.includes("Alt"),ctrlKey:i.includes("Ctrl"),metaKey:i.includes("Meta"),shiftKey:i.includes("Shift"),bubbles:!0,cancelable:!0}),c=t.captureTransaction((()=&gt;{n.someProp("handleKeyDown",(e=&gt;e(n,a)))}));return null==c||c.steps.forEach((e=&gt;{const t=e.map(r.mapping);t&amp;&amp;o&amp;&amp;r.maybeStep(t)})),!0}});var Ud=Object.freeze({__proto__:null,lift:(e,t={})=&gt;({state:n,dispatch:r})=&gt;!!ed(n,Gp(e,n.schema),t)&amp;&amp;Np(n,r)});var Wd=Object.freeze({__proto__:null,liftEmptyBlock:()=&gt;({state:e,dispatch:t})=&gt;jp(e,t)});var Jd=Object.freeze({__proto__:null,liftListItem:e=&gt;({state:t,dispatch:n})=&gt;Jp(Gp(e,t.schema))(t,n)});var Kd=Object.freeze({__proto__:null,newlineInCode:()=&gt;({state:e,dispatch:t})=&gt;zp(e,t)});function Gd(e,t){const n="string"==typeof t?[t]:t;return Object.keys(e).reduce(((t,r)=&gt;(n.includes(r)||(t[r]=e[r]),t)),{})}var Yd=Object.freeze({__proto__:null,resetAttributes:(e,t)=&gt;({tr:n,state:r,dispatch:o})=&gt;{let i=null,s=null;const a=Kp("string"==typeof e?e:e.name,r.schema);return!!a&amp;&amp;("node"===a&amp;&amp;(i=Gp(e,r.schema)),"mark"===a&amp;&amp;(s=Yp(e,r.schema)),o&amp;&amp;n.selection.ranges.forEach((e=&gt;{r.doc.nodesBetween(e.$from.pos,e.$to.pos,((e,r)=&gt;{i&amp;&amp;i===e.type&amp;&amp;n.setNodeMarkup(r,void 0,Gd(e.attrs,t)),s&amp;&amp;e.marks.length&amp;&amp;e.marks.forEach((o=&gt;{s===o.type&amp;&amp;n.addMark(r,r+e.nodeSize,s.create(Gd(o.attrs,t)))}))}))})),!0)}});var Xd=Object.freeze({__proto__:null,scrollIntoView:()=&gt;({tr:e,dispatch:t})=&gt;(t&amp;&amp;e.scrollIntoView(),!0)});var Zd=Object.freeze({__proto__:null,selectAll:()=&gt;({state:e,dispatch:t})=&gt;Rp(e,t)});var Qd=Object.freeze({__proto__:null,selectNodeBackward:()=&gt;({state:e,dispatch:t})=&gt;Ep(e,t)});var eh=Object.freeze({__proto__:null,selectNodeForward:()=&gt;({state:e,dispatch:t})=&gt;Cp(e,t)});var th=Object.freeze({__proto__:null,selectParentNode:()=&gt;({state:e,dispatch:t})=&gt;function(e,t){var n,r=e.selection,o=r.$from,i=r.to,s=o.sharedDepth(i);return 0!=s&amp;&amp;(n=o.before(s),t&amp;&amp;t(e.tr.setSelection(Ga.create(e.doc,n))),!0)}(e,t)});var nh=Object.freeze({__proto__:null,setContent:(e,t=!1,n={})=&gt;({tr:r,editor:o,dispatch:i})=&gt;{const{doc:s}=r,a=od(e,o.schema,n),c=Ja.create(s,0,s.content.size);return i&amp;&amp;r.setSelection(c).replaceSelectionWith(a,!1).setMeta("preventUpdate",!t),!0}});var rh=Object.freeze({__proto__:null,setMark:(e,t={})=&gt;({tr:n,state:r,dispatch:o})=&gt;{const{selection:i}=n,{empty:s,ranges:c}=i,l=Yp(e,r.schema);if(o)if(s){const e=Xp(r,l);n.addStoredMark(l.create(a(a({},e),t)))}else c.forEach((e=&gt;{const o=e.$from.pos,i=e.$to.pos;r.doc.nodesBetween(o,i,((e,r)=&gt;{const s=Math.max(r,o),c=Math.min(r+e.nodeSize,i);e.marks.find((e=&gt;e.type===l))?e.marks.forEach((e=&gt;{l===e.type&amp;&amp;n.addMark(s,c,l.create(a(a({},e.attrs),t)))})):n.addMark(s,c,l.create(t))}))}));return!0}});var oh=Object.freeze({__proto__:null,setMeta:(e,t)=&gt;({tr:n})=&gt;(n.setMeta(e,t),!0)});var ih=Object.freeze({__proto__:null,setNode:(e,t={})=&gt;({state:n,dispatch:r})=&gt;{const o=Gp(e,n.schema);return(i=o,s=t,function(e,t){var n=e.selection,r=n.from,o=n.to,a=!1;return e.doc.nodesBetween(r,o,(function(t,n){if(a)return!1;if(t.isTextblock&amp;&amp;!t.hasMarkup(i,s))if(t.type==i)a=!0;else{var r=e.doc.resolve(n),o=r.index();a=r.parent.canReplaceWith(o,o+1,i)}})),!!a&amp;&amp;(t&amp;&amp;t(e.tr.setBlockType(r,o,i,s).scrollIntoView()),!0)})(n,r);var i,s}});var sh=Object.freeze({__proto__:null,setNodeSelection:e=&gt;({tr:t,dispatch:n})=&gt;{if(n){const{doc:n}=t,r=qa.atStart(n).from,o=qa.atEnd(n).to,i=Dd(e,r,o),s=Ga.create(n,i);t.setSelection(s)}return!0}});var ah=Object.freeze({__proto__:null,setTextSelection:e=&gt;({tr:t,dispatch:n})=&gt;{if(n){const{doc:n}=t,{from:r,to:o}="number"==typeof e?{from:e,to:e}:e,i=qa.atStart(n).from,s=qa.atEnd(n).to,a=Dd(r,i,s),c=Dd(o,i,s),l=Ja.create(n,a,c);t.setSelection(l)}return!0}});var ch=Object.freeze({__proto__:null,sinkListItem:e=&gt;({state:t,dispatch:n})=&gt;{const r=Gp(e,t.schema);return(o=r,function(e,t){var n=e.selection,r=n.$from,i=n.$to,s=r.blockRange(i,(function(e){return e.childCount&amp;&amp;e.firstChild.type==o}));if(!s)return!1;var a=s.startIndex;if(0==a)return!1;var c=s.parent,l=c.child(a-1);if(l.type!=o)return!1;if(t){var u=l.lastChild&amp;&amp;l.lastChild.type==c.type,p=Ki.from(u?o.create():null),d=new ts(Ki.from(o.create(null,Ki.from(c.type.create(null,p)))),u?3:1,0),h=s.start,f=s.end;t(e.tr.step(new wa(h-(u?3:1),f,h,f,d,1,!0)).scrollIntoView())}return!0})(t,n);var o}});function lh(e,t,n){return Object.fromEntries(Object.entries(n).filter((([n])=&gt;{const r=e.find((e=&gt;e.type===t&amp;&amp;e.name===n));return!!r&amp;&amp;r.attribute.keepOnSplit})))}function uh(e,t){const n=e.storedMarks||e.selection.$to.parentOffset&amp;&amp;e.selection.$from.marks();if(n){const r=n.filter((e=&gt;null==t?void 0:t.includes(e.type.name)));e.tr.ensureMarks(r)}}var ph=Object.freeze({__proto__:null,splitBlock:({keepMarks:e=!0}={})=&gt;({tr:t,state:n,dispatch:r,editor:o})=&gt;{const{selection:i,doc:s}=t,{$from:a,$to:c}=i,l=lh(o.extensionManager.attributes,a.node().type.name,a.node().attrs);if(i instanceof Ga&amp;&amp;i.node.isBlock)return!(!a.parentOffset||!Oa(s,a.pos))&amp;&amp;(r&amp;&amp;(e&amp;&amp;uh(n,o.extensionManager.splittableMarks),t.split(a.pos).scrollIntoView()),!0);if(!a.parent.isBlock)return!1;if(r){const r=c.parentOffset===c.parent.content.size;i instanceof Ja&amp;&amp;t.deleteSelection();const s=0===a.depth?void 0:function(e){for(let t=0;t&lt;e.edgeCount;t+=1){const{type:n}=e.edge(t);if(n.isTextblock&amp;&amp;!n.hasRequiredAttrs())return n}return null}(a.node(-1).contentMatchAt(a.indexAfter(-1)));let u=r&amp;&amp;s?[{type:s,attrs:l}]:void 0,p=Oa(t.doc,t.mapping.map(a.pos),1,u);if(u||p||!Oa(t.doc,t.mapping.map(a.pos),1,s?[{type:s}]:void 0)||(p=!0,u=s?[{type:s,attrs:l}]:void 0),p&amp;&amp;(t.split(t.mapping.map(a.pos),1,u),s&amp;&amp;!r&amp;&amp;!a.parentOffset&amp;&amp;a.parent.type!==s)){const e=t.mapping.map(a.before()),n=t.doc.resolve(e);a.node(-1).canReplaceWith(n.index(),n.index()+1,s)&amp;&amp;t.setNodeMarkup(t.mapping.map(a.before()),s)}e&amp;&amp;uh(n,o.extensionManager.splittableMarks),t.scrollIntoView()}return!0}});var dh=Object.freeze({__proto__:null,splitListItem:e=&gt;({tr:t,state:n,dispatch:r,editor:o})=&gt;{var i;const s=Gp(e,n.schema),{$from:a,$to:c}=n.selection,l=n.selection.node;if(l&amp;&amp;l.isBlock||a.depth&lt;2||!a.sameParent(c))return!1;const u=a.node(-1);if(u.type!==s)return!1;const p=o.extensionManager.attributes;if(0===a.parent.content.size&amp;&amp;a.node(-1).childCount===a.indexAfter(-1)){if(2===a.depth||a.node(-3).type!==s||a.index(-2)!==a.node(-2).childCount-1)return!1;if(r){let e=Ki.empty;const n=a.index(-1)?1:a.index(-2)?2:3;for(let t=a.depth-n;t&gt;=a.depth-3;t-=1)e=Ki.from(a.node(t).copy(e));const r=a.indexAfter(-1)&lt;a.node(-2).childCount?1:a.indexAfter(-2)&lt;a.node(-3).childCount?2:3,o=lh(p,a.node().type.name,a.node().attrs),c=(null===(i=s.contentMatch.defaultType)||void 0===i?void 0:i.createAndFill(o))||void 0;e=e.append(Ki.from(s.createAndFill(null,c)||void 0));const l=a.before(a.depth-(n-1));t.replace(l,a.after(-r),new ts(e,4-n,0));let u=-1;t.doc.nodesBetween(l,t.doc.content.size,((e,t)=&gt;{if(u&gt;-1)return!1;e.isTextblock&amp;&amp;0===e.content.size&amp;&amp;(u=t+1)})),u&gt;-1&amp;&amp;t.setSelection(Ja.near(t.doc.resolve(u))),t.scrollIntoView()}return!0}const d=c.pos===a.end()?u.contentMatchAt(0).defaultType:null,h=lh(p,u.type.name,u.attrs),f=lh(p,a.node().type.name,a.node().attrs);t.delete(a.pos,c.pos);const m=d?[{type:s,attrs:h},{type:d,attrs:f}]:[{type:s,attrs:h}];return!!Oa(t.doc,a.pos,2)&amp;&amp;(r&amp;&amp;t.split(a.pos,2,m).scrollIntoView(),!0)}});function hh(e,t){const{nodeExtensions:n}=ad(t),r=n.find((t=&gt;t.name===e));if(!r)return!1;const o=dd(sd(r,"group",{name:r.name,options:r.options}));return"string"==typeof o&amp;&amp;o.split(" ").includes("list")}var fh=Object.freeze({__proto__:null,toggleList:(e,t)=&gt;({editor:n,tr:r,state:o,dispatch:i,chain:s,commands:a,can:c})=&gt;{const{extensions:l}=n.extensionManager,u=Gp(e,o.schema),p=Gp(t,o.schema),{selection:d}=o,{$from:h,$to:f}=d,m=h.blockRange(f);if(!m)return!1;const g=(v=e=&gt;hh(e.type.name,l),e=&gt;function(e,t){for(let n=e.depth;n&gt;0;n-=1){const r=e.node(n);if(t(r))return{pos:n&gt;0?e.before(n):0,start:e.start(n),depth:n,node:r}}}(e.$from,v))(d);var v;if(m.depth&gt;=1&amp;&amp;g&amp;&amp;m.depth-g.depth&lt;=1){if(g.node.type===u)return a.liftListItem(p);if(hh(g.node.type.name,l)&amp;&amp;u.validContent(g.node.content)&amp;&amp;i)return r.setNodeMarkup(g.pos,u),!0}return c().wrapInList(u)?a.wrapInList(u):s().clearNodes().wrapInList(u).run()}});var mh=Object.freeze({__proto__:null,toggleMark:(e,t={})=&gt;({state:n,commands:r})=&gt;{const o=Yp(e,n.schema);return td(n,o,t)?r.unsetMark(o):r.setMark(o,t)}});var gh=Object.freeze({__proto__:null,toggleNode:(e,t,n={})=&gt;({state:r,commands:o})=&gt;{const i=Gp(e,r.schema),s=Gp(t,r.schema);return ed(r,i,n)?o.setNode(s):o.setNode(i,n)}});var vh=Object.freeze({__proto__:null,toggleWrap:(e,t={})=&gt;({state:n,dispatch:r})=&gt;{const o=Gp(e,n.schema);return ed(n,o,t)?Np(n,r):Bp(o,t)(n,r)}});var yh=Object.freeze({__proto__:null,undoInputRule:()=&gt;({state:e,dispatch:t})=&gt;function(e,t){for(var n=e.plugins,r=0;r&lt;n.length;r++){var o=n[r],i=void 0;if(o.spec.isInputRules&amp;&amp;(i=o.getState(e))){if(t){for(var s=e.tr,a=i.transform,c=a.steps.length-1;c&gt;=0;c--)s.step(a.steps[c].invert(a.docs[c]));if(i.text){var l=s.doc.resolve(i.from).marks();s.replaceWith(i.from,i.to,e.schema.text(i.text,l))}else s.delete(i.from,i.to);t(s)}return!0}}return!1}(e,t)});var _h=Object.freeze({__proto__:null,unsetAllMarks:()=&gt;({tr:e,state:t,dispatch:n})=&gt;{const{selection:r}=e,{empty:o,ranges:i}=r;return o||n&amp;&amp;Object.entries(t.schema.marks).forEach((([,t])=&gt;{i.forEach((n=&gt;{e.removeMark(n.$from.pos,n.$to.pos,t)}))})),!0}});var bh=Object.freeze({__proto__:null,unsetMark:e=&gt;({tr:t,state:n,dispatch:r})=&gt;{const{selection:o}=t,i=Yp(e,n.schema),{$from:s,empty:a,ranges:c}=o;if(r){if(a){let{from:e,to:n}=o;const r=zd(s,i);r&amp;&amp;(e=r.from,n=r.to),t.removeMark(e,n,i)}else c.forEach((e=&gt;{t.removeMark(e.$from.pos,e.$to.pos,i)}));t.removeStoredMark(i)}return!0}});var wh=Object.freeze({__proto__:null,updateAttributes:(e,t={})=&gt;({tr:n,state:r,dispatch:o})=&gt;{let i=null,s=null;const c=Kp("string"==typeof e?e:e.name,r.schema);return!!c&amp;&amp;("node"===c&amp;&amp;(i=Gp(e,r.schema)),"mark"===c&amp;&amp;(s=Yp(e,r.schema)),o&amp;&amp;n.selection.ranges.forEach((e=&gt;{const o=e.$from.pos,c=e.$to.pos;r.doc.nodesBetween(o,c,((e,r)=&gt;{i&amp;&amp;i===e.type&amp;&amp;n.setNodeMarkup(r,void 0,a(a({},e.attrs),t)),s&amp;&amp;e.marks.length&amp;&amp;e.marks.forEach((i=&gt;{if(s===i.type){const l=Math.max(r,o),u=Math.min(r+e.nodeSize,c);n.addMark(l,u,s.create(a(a({},i.attrs),t)))}}))}))})),!0)}});var kh=Object.freeze({__proto__:null,wrapIn:(e,t={})=&gt;({state:n,dispatch:r})=&gt;{const o=Gp(e,n.schema);return!ed(n,o,t)&amp;&amp;Bp(o,t)(n,r)}});var xh=Object.freeze({__proto__:null,wrapInList:(e,t={})=&gt;({state:n,dispatch:r})=&gt;Wp(Gp(e,n.schema),t)(n,r)});const Sh=yd.create({name:"commands",addCommands:()=&gt;a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a(a({},bd),wd),kd),xd),Sd),Md),Ed),Od),Td),Cd),Pd),Id),Rd),Ld),Bd),$d),Hd),Fd),qd),Ud),Wd),Jd),Kd),Yd),Xd),Zd),Qd),eh),th),nh),rh),oh),ih),sh),ah),ch),ph),dh),fh),mh),gh),vh),yh),_h),bh),wh),kh),xh)}),Mh=yd.create({name:"editable",addProseMirrorPlugins(){return[new uc({key:new hc("editable"),props:{editable:()=&gt;this.editor.options.editable}})]}}),Eh=yd.create({name:"focusEvents",addProseMirrorPlugins(){const{editor:e}=this;return[new uc({key:new hc("focusEvents"),props:{attributes:{tabindex:"0"},handleDOMEvents:{focus:(t,n)=&gt;{e.isFocused=!0;const r=e.state.tr.setMeta("focus",{event:n}).setMeta("addToHistory",!1);return t.dispatch(r),!1},blur:(t,n)=&gt;{e.isFocused=!1;const r=e.state.tr.setMeta("blur",{event:n}).setMeta("addToHistory",!1);return t.dispatch(r),!1}}}})]}}),Oh=yd.create({name:"keymap",addKeyboardShortcuts(){const e=()=&gt;this.editor.commands.first((({commands:e})=&gt;[()=&gt;e.undoInputRule(),()=&gt;e.deleteSelection(),()=&gt;e.joinBackward(),()=&gt;e.selectNodeBackward()])),t=()=&gt;this.editor.commands.first((({commands:e})=&gt;[()=&gt;e.deleteSelection(),()=&gt;e.joinForward(),()=&gt;e.selectNodeForward()]));return{Enter:()=&gt;this.editor.commands.first((({commands:e})=&gt;[()=&gt;e.newlineInCode(),()=&gt;e.createParagraphNear(),()=&gt;e.liftEmptyBlock(),()=&gt;e.splitBlock()])),"Mod-Enter":()=&gt;this.editor.commands.exitCode(),Backspace:()=&gt;e(),"Mod-Backspace":()=&gt;e(),Delete:()=&gt;t(),"Mod-Delete":()=&gt;t()}}});var Th=Object.freeze({__proto__:null,ClipboardTextSerializer:_d,Commands:Sh,Editable:Mh,FocusEvents:Eh,Keymap:Oh});class Ch extends class{constructor(){this.callbacks={}}on(e,t){return this.callbacks[e]||(this.callbacks[e]=[]),this.callbacks[e].push(t),this}emit(e,...t){const n=this.callbacks[e];return n&amp;&amp;n.forEach((e=&gt;e.apply(this,t))),this}off(e,t){const n=this.callbacks[e];return n&amp;&amp;(t?this.callbacks[e]=n.filter((e=&gt;e!==t)):delete this.callbacks[e]),this}removeAllListeners(){this.callbacks={}}}{constructor(e={}){super(),this.isFocused=!1,this.options={element:document.createElement("div"),content:"",injectCSS:!0,extensions:[],autofocus:!1,editable:!0,editorProps:{},parseOptions:{},enableInputRules:!0,enablePasteRules:!0,onBeforeCreate:()=&gt;null,onCreate:()=&gt;null,onUpdate:()=&gt;null,onSelectionUpdate:()=&gt;null,onTransaction:()=&gt;null,onFocus:()=&gt;null,onBlur:()=&gt;null,onDestroy:()=&gt;null},this.isCapturingTransaction=!1,this.capturedTransaction=null,this.setOptions(e),this.createExtensionManager(),this.createCommandManager(),this.createSchema(),this.on("beforeCreate",this.options.onBeforeCreate),this.emit("beforeCreate",{editor:this}),this.createView(),this.injectCSS(),this.on("create",this.options.onCreate),this.on("update",this.options.onUpdate),this.on("selectionUpdate",this.options.onSelectionUpdate),this.on("transaction",this.options.onTransaction),this.on("focus",this.options.onFocus),this.on("blur",this.options.onBlur),this.on("destroy",this.options.onDestroy),window.setTimeout((()=&gt;{this.isDestroyed||(this.commands.focus(this.options.autofocus),this.emit("create",{editor:this}))}),0)}get commands(){return this.commandManager.createCommands()}chain(){return this.commandManager.createChain()}can(){return this.commandManager.createCan()}injectCSS(){this.options.injectCSS&amp;&amp;document&amp;&amp;(this.css=function(e){const t=document.querySelector("style[data-tiptap-style]");if(null!==t)return t;const n=document.createElement("style");return n.setAttribute("data-tiptap-style",""),n.innerHTML=e,document.getElementsByTagName("head")[0].appendChild(n),n}('.ProseMirror {\n  position: relative;\n}\n\n.ProseMirror {\n  word-wrap: break-word;\n  white-space: pre-wrap;\n  -webkit-font-variant-ligatures: none;\n  font-variant-ligatures: none;\n}\n\n.ProseMirror [contenteditable="false"] {\n  white-space: normal;\n}\n\n.ProseMirror [contenteditable="false"] [contenteditable="true"] {\n  white-space: pre-wrap;\n}\n\n.ProseMirror pre {\n  white-space: pre-wrap;\n}\n\n.ProseMirror-gapcursor {\n  display: none;\n  pointer-events: none;\n  position: absolute;\n}\n\n.ProseMirror-gapcursor:after {\n  content: "";\n  display: block;\n  position: absolute;\n  top: -2px;\n  width: 20px;\n  border-top: 1px solid black;\n  animation: ProseMirror-cursor-blink 1.1s steps(2, start) infinite;\n}\n\n@keyframes ProseMirror-cursor-blink {\n  to {\n    visibility: hidden;\n  }\n}\n\n.ProseMirror-hideselection *::selection {\n  background: transparent;\n}\n\n.ProseMirror-hideselection *::-moz-selection {\n  background: transparent;\n}\n\n.ProseMirror-hideselection * {\n  caret-color: transparent;\n}\n\n.ProseMirror-focused .ProseMirror-gapcursor {\n  display: block;\n}\n\n.tippy-box[data-animation=fade][data-state=hidden] {\n  opacity: 0\n}'))}setOptions(e={}){this.options=a(a({},this.options),e),this.view&amp;&amp;this.state&amp;&amp;!this.isDestroyed&amp;&amp;(this.options.editorProps&amp;&amp;this.view.setProps(this.options.editorProps),this.view.updateState(this.state))}setEditable(e){this.setOptions({editable:e})}get isEditable(){return this.options.editable&amp;&amp;this.view&amp;&amp;this.view.editable}get state(){return this.view.state}registerPlugin(e,t){const n="function"==typeof t?t(e,this.state.plugins):[...this.state.plugins,e],r=this.state.reconfigure({plugins:n});this.view.updateState(r)}unregisterPlugin(e){if(this.isDestroyed)return;const t="string"==typeof e?`${e}$`:e.key,n=this.state.reconfigure({plugins:this.state.plugins.filter((e=&gt;!e.key.startsWith(t)))});this.view.updateState(n)}createExtensionManager(){const e=[...Object.entries(Th).map((([,e])=&gt;e)),...this.options.extensions].filter((e=&gt;["extension","node","mark"].includes(null==e?void 0:e.type)));this.extensionManager=new md(e,this)}createCommandManager(){this.commandManager=new id(this,this.extensionManager.commands)}createSchema(){this.schema=this.extensionManager.schema}createView(){this.view=new Qu(this.options.element,c(a({},this.options.editorProps),{dispatchTransaction:this.dispatchTransaction.bind(this),state:sc.create({doc:od(this.options.content,this.schema,this.options.parseOptions)})}));const e=this.state.reconfigure({plugins:this.extensionManager.plugins});this.view.updateState(e),this.createNodeViews();this.view.dom.editor=this}createNodeViews(){this.view.setProps({nodeViews:this.extensionManager.nodeViews})}captureTransaction(e){this.isCapturingTransaction=!0,e(),this.isCapturingTransaction=!1;const t=this.capturedTransaction;return this.capturedTransaction=null,t}dispatchTransaction(e){if(this.isCapturingTransaction)return this.capturedTransaction?void e.steps.forEach((e=&gt;{var t;return null===(t=this.capturedTransaction)||void 0===t?void 0:t.step(e)})):void(this.capturedTransaction=e);const t=this.state.apply(e),n=!this.state.selection.eq(t.selection);this.view.updateState(t),this.emit("transaction",{editor:this,transaction:e}),n&amp;&amp;this.emit("selectionUpdate",{editor:this,transaction:e});const r=e.getMeta("focus"),o=e.getMeta("blur");r&amp;&amp;this.emit("focus",{editor:this,event:r.event,transaction:e}),o&amp;&amp;this.emit("blur",{editor:this,event:o.event,transaction:e}),e.docChanged&amp;&amp;!e.getMeta("preventUpdate")&amp;&amp;this.emit("update",{editor:this,transaction:e})}getAttributes(e){return Zp(this.state,e)}isActive(e,t){const n="string"==typeof e?e:null,r="string"==typeof e?t:e;return function(e,t,n={}){if(!t)return ed(e,null,n)||td(e,null,n);const r=Kp(t,e.schema);return"node"===r?ed(e,t,n):"mark"===r&amp;&amp;td(e,t,n)}(this.state,n,r)}getJSON(){return this.state.doc.toJSON()}getHTML(){return function(e,t){const n=ia.fromSchema(t).serializeFragment(e.content),r=document.implementation.createHTMLDocument().createElement("div");return r.appendChild(n),r.innerHTML}(this.state.doc,this.schema)}get isEmpty(){return function(e){var t;const n=null===(t=e.type.createAndFill())||void 0===t?void 0:t.toJSON(),r=e.toJSON();return JSON.stringify(n)===JSON.stringify(r)}(this.state.doc)}getCharacterCount(){return this.state.doc.content.size-2}destroy(){var e;this.emit("destroy"),this.view&amp;&amp;this.view.destroy(),this.removeAllListeners(),(e=this.css)&amp;&amp;e.parentNode&amp;&amp;e.parentNode.removeChild(e)}get isDestroyed(){var e;return!(null===(e=this.view)||void 0===e?void 0:e.docView)}}class Ah{constructor(e={}){this.type="node",this.name="node",this.parent=null,this.child=null,this.config={name:this.name,defaultOptions:{}},this.config=a(a({},this.config),e),this.name=this.config.name,this.options=this.config.defaultOptions}static create(e={}){return new Ah(e)}configure(e={}){const t=this.extend();return t.options=vd(this.options,e),t}extend(e={}){const t=new Ah(e);return t.parent=this,this.child=t,t.name=e.name?e.name:t.parent.name,t.options=e.defaultOptions?e.defaultOptions:t.parent.options,t}}class Nh{constructor(e={}){this.type="mark",this.name="mark",this.parent=null,this.child=null,this.config={name:this.name,defaultOptions:{}},this.config=a(a({},this.config),e),this.name=this.config.name,this.options=this.config.defaultOptions}static create(e={}){return new Nh(e)}configure(e={}){const t=this.extend();return t.options=vd(this.options,e),t}extend(e={}){const t=new Nh(e);return t.parent=this,this.child=t,t.name=e.name?e.name:t.parent.name,t.options=e.defaultOptions?e.defaultOptions:t.parent.options,t}}function zh(e,t,n){return new _p(e,((e,r,o,i)=&gt;{const s=n instanceof Function?n(r):n,{tr:a}=e,c=r[r.length-1],l=r[0];let u=i;if(c){const n=l.search(/\S/),r=o+l.indexOf(c),p=r+c.length;if(function(e,t,n){let r=[];return n.doc.nodesBetween(e,t,((e,t)=&gt;{r=[...r,...e.marks.map((n=&gt;({from:t,to:t+e.nodeSize,mark:n})))]})),r}(o,i,e).filter((e=&gt;{const{excluded:n}=e.mark.type;return n.find((e=&gt;e.name===t.name))})).filter((e=&gt;e.to&gt;r)).length)return null;p&lt;i&amp;&amp;a.delete(p,i),r&gt;o&amp;&amp;a.delete(o+n,r),u=o+n+c.length,a.addMark(o+n,u,t.create(s)),a.removeStoredMark(t)}return a}))}function Ph(e,t,n){const r=(o,i)=&gt;{const s=[];return o.forEach((o=&gt;{if(o.isText&amp;&amp;o.text){const{text:r}=o;let a,c=0;for(;null!==(a=e.exec(r));){const e=Math.max(a.length-2,0),r=Math.max(a.length-1,0);if(null==i?void 0:i.type.allowsMarkType(t)){const i=a.index+a[0].indexOf(a[e]),l=i+a[e].length,u=i+a[e].lastIndexOf(a[r]),p=u+a[r].length,d=n instanceof Function?n(a):n;if(!d&amp;&amp;void 0!==d)continue;i&gt;0&amp;&amp;s.push(o.cut(c,i)),s.push(o.cut(u,p).mark(t.create(d).addToSet(o.marks))),c=l}}c&lt;r.length&amp;&amp;s.push(o.cut(c))}else s.push(o.copy(r(o.content,o)))})),Ki.fromArray(s)};return new uc({key:new hc("markPasteRule"),props:{transformPasted:e=&gt;new ts(r(e.content),e.openStart,e.openEnd)}})}const Ih=/^\s*&gt;\s$/gm,Dh=Ah.create({name:"blockquote",defaultOptions:{HTMLAttributes:{}},content:"block*",group:"block",defining:!0,parseHTML:()=&gt;[{tag:"blockquote"}],renderHTML({HTMLAttributes:e}){return["blockquote",ld(this.options.HTMLAttributes,e),0]},addCommands:()=&gt;({setBlockquote:()=&gt;({commands:e})=&gt;e.wrapIn("blockquote"),toggleBlockquote:()=&gt;({commands:e})=&gt;e.toggleWrap("blockquote"),unsetBlockquote:()=&gt;({commands:e})=&gt;e.lift("blockquote")}),addKeyboardShortcuts(){return{"Mod-Shift-b":()=&gt;this.editor.commands.toggleBlockquote()}},addInputRules(){return[wp(Ih,this.type)]}}),jh=/(?:^|\s)((?:\*\*)((?:[^*]+))(?:\*\*))$/gm,Rh=/(?:^|\s)((?:\*\*)((?:[^*]+))(?:\*\*))/gm,Lh=/(?:^|\s)((?:__)((?:[^__]+))(?:__))$/gm,Bh=/(?:^|\s)((?:__)((?:[^__]+))(?:__))/gm,$h=Nh.create({name:"bold",defaultOptions:{HTMLAttributes:{}},parseHTML:()=&gt;[{tag:"strong"},{tag:"b",getAttrs:e=&gt;"normal"!==e.style.fontWeight&amp;&amp;null},{style:"font-weight",getAttrs:e=&gt;/^(bold(er)?|[5-9]\d{2,})$/.test(e)&amp;&amp;null}],renderHTML({HTMLAttributes:e}){return["strong",ld(this.options.HTMLAttributes,e),0]},addCommands:()=&gt;({setBold:()=&gt;({commands:e})=&gt;e.setMark("bold"),toggleBold:()=&gt;({commands:e})=&gt;e.toggleMark("bold"),unsetBold:()=&gt;({commands:e})=&gt;e.unsetMark("bold")}),addKeyboardShortcuts(){return{"Mod-b":()=&gt;this.editor.commands.toggleBold()}},addInputRules(){return[zh(jh,this.type),zh(Lh,this.type)]},addPasteRules(){return[Ph(Rh,this.type),Ph(Bh,this.type)]}}),Hh=/^\s*([-+*])\s$/,Fh=Ah.create({name:"bulletList",defaultOptions:{HTMLAttributes:{}},group:"block list",content:"listItem+",parseHTML:()=&gt;[{tag:"ul"}],renderHTML({HTMLAttributes:e}){return["ul",ld(this.options.HTMLAttributes,e),0]},addCommands:()=&gt;({toggleBulletList:()=&gt;({commands:e})=&gt;e.toggleList("bulletList","listItem")}),addKeyboardShortcuts(){return{"Mod-Shift-8":()=&gt;this.editor.commands.toggleBulletList()}},addInputRules(){return[wp(Hh,this.type)]}}),Vh=/(?:^|\s)((?:`)((?:[^`]+))(?:`))$/gm,qh=/(?:^|\s)((?:`)((?:[^`]+))(?:`))/gm,Uh=Nh.create({name:"code",defaultOptions:{HTMLAttributes:{}},excludes:"_",parseHTML:()=&gt;[{tag:"code"}],renderHTML({HTMLAttributes:e}){return["code",ld(this.options.HTMLAttributes,e),0]},addCommands:()=&gt;({setCode:()=&gt;({commands:e})=&gt;e.setMark("code"),toggleCode:()=&gt;({commands:e})=&gt;e.toggleMark("code"),unsetCode:()=&gt;({commands:e})=&gt;e.unsetMark("code")}),addKeyboardShortcuts(){return{"Mod-e":()=&gt;this.editor.commands.toggleCode()}},addInputRules(){return[zh(Vh,this.type)]},addPasteRules(){return[Ph(qh,this.type)]}}),Wh=/^```(?&lt;language&gt;[a-z]*)? $/,Jh=/^~~~(?&lt;language&gt;[a-z]*)? $/,Kh=Ah.create({name:"codeBlock",defaultOptions:{languageClassPrefix:"language-",HTMLAttributes:{}},content:"text*",marks:"",group:"block",code:!0,defining:!0,addAttributes(){return{language:{default:null,parseHTML:e=&gt;{var t;const n=null===(t=e.firstElementChild)||void 0===t?void 0:t.getAttribute("class");if(!n)return null;const r=new RegExp(`^(${this.options.languageClassPrefix})`);return{language:n.replace(r,"")}},renderHTML:e=&gt;e.language?{class:this.options.languageClassPrefix+e.language}:null}}},parseHTML:()=&gt;[{tag:"pre",preserveWhitespace:"full"}],renderHTML({HTMLAttributes:e}){return["pre",this.options.HTMLAttributes,["code",e,0]]},addCommands:()=&gt;({setCodeBlock:e=&gt;({commands:t})=&gt;t.setNode("codeBlock",e),toggleCodeBlock:e=&gt;({commands:t})=&gt;t.toggleNode("codeBlock","paragraph",e)}),addKeyboardShortcuts(){return{"Mod-Alt-c":()=&gt;this.editor.commands.toggleCodeBlock(),Backspace:()=&gt;{const{empty:e,$anchor:t}=this.editor.state.selection,n=1===t.pos;return!(!e||t.parent.type.name!==this.name)&amp;&amp;(!(!n&amp;&amp;t.parent.textContent.length)&amp;&amp;this.editor.commands.clearNodes())}}},addInputRules(){return[kp(Wh,this.type,(({groups:e})=&gt;e)),kp(Jh,this.type,(({groups:e})=&gt;e))]}}),Gh=Ah.create({name:"doc",topNode:!0,content:"block+"});var Yh=function(e,t){var n=this;this.editorView=e,this.width=t.width||1,this.color=t.color||"black",this.class=t.class,this.cursorPos=null,this.element=null,this.timeout=null,this.handlers=["dragover","dragend","drop","dragleave"].map((function(t){var r=function(e){return n[t](e)};return e.dom.addEventListener(t,r),{name:t,handler:r}}))};Yh.prototype.destroy=function(){var e=this;this.handlers.forEach((function(t){var n=t.name,r=t.handler;return e.editorView.dom.removeEventListener(n,r)}))},Yh.prototype.update=function(e,t){null!=this.cursorPos&amp;&amp;t.doc!=e.state.doc&amp;&amp;(this.cursorPos&gt;e.state.doc.content.size?this.setCursor(null):this.updateOverlay())},Yh.prototype.setCursor=function(e){e!=this.cursorPos&amp;&amp;(this.cursorPos=e,null==e?(this.element.parentNode.removeChild(this.element),this.element=null):this.updateOverlay())},Yh.prototype.updateOverlay=function(){var e,t=this.editorView.state.doc.resolve(this.cursorPos);if(!t.parent.inlineContent){var n=t.nodeBefore,r=t.nodeAfter;if(n||r){var o=this.editorView.nodeDOM(this.cursorPos-(n?n.nodeSize:0)).getBoundingClientRect(),i=n?o.bottom:o.top;n&amp;&amp;r&amp;&amp;(i=(i+this.editorView.nodeDOM(this.cursorPos).getBoundingClientRect().top)/2),e={left:o.left,right:o.right,top:i-this.width/2,bottom:i+this.width/2}}}if(!e){var s=this.editorView.coordsAtPos(this.cursorPos);e={left:s.left-this.width/2,right:s.left+this.width/2,top:s.top,bottom:s.bottom}}var a,c,l=this.editorView.dom.offsetParent;if(this.element||(this.element=l.appendChild(document.createElement("div")),this.class&amp;&amp;(this.element.className=this.class),this.element.style.cssText="position: absolute; z-index: 50; pointer-events: none; background-color: "+this.color),!l||l==document.body&amp;&amp;"static"==getComputedStyle(l).position)a=-pageXOffset,c=-pageYOffset;else{var u=l.getBoundingClientRect();a=u.left-l.scrollLeft,c=u.top-l.scrollTop}this.element.style.left=e.left-a+"px",this.element.style.top=e.top-c+"px",this.element.style.width=e.right-e.left+"px",this.element.style.height=e.bottom-e.top+"px"},Yh.prototype.scheduleRemoval=function(e){var t=this;clearTimeout(this.timeout),this.timeout=setTimeout((function(){return t.setCursor(null)}),e)},Yh.prototype.dragover=function(e){if(this.editorView.editable){var t=this.editorView.posAtCoords({left:e.clientX,top:e.clientY});if(t){var n=t.pos;if(this.editorView.dragging&amp;&amp;this.editorView.dragging.slice&amp;&amp;null==(n=Ca(this.editorView.state.doc,n,this.editorView.dragging.slice)))return this.setCursor(null);this.setCursor(n),this.scheduleRemoval(5e3)}}},Yh.prototype.dragend=function(){this.scheduleRemoval(20)},Yh.prototype.drop=function(){this.scheduleRemoval(20)},Yh.prototype.dragleave=function(e){e.target!=this.editorView.dom&amp;&amp;this.editorView.dom.contains(e.relatedTarget)||this.setCursor(null)};const Xh=yd.create({name:"dropCursor",defaultOptions:{color:"currentColor",width:1,class:null},addProseMirrorPlugins(){return[(e=this.options,void 0===e&amp;&amp;(e={}),new uc({view:function(t){return new Yh(t,e)}}))];var e}});var Zh=function(e){function t(t){e.call(this,t,t)}return e&amp;&amp;(t.__proto__=e),t.prototype=Object.create(e&amp;&amp;e.prototype),t.prototype.constructor=t,t.prototype.map=function(n,r){var o=n.resolve(r.map(this.head));return t.valid(o)?new t(o):e.near(o)},t.prototype.content=function(){return ts.empty},t.prototype.eq=function(e){return e instanceof t&amp;&amp;e.head==this.head},t.prototype.toJSON=function(){return{type:"gapcursor",pos:this.head}},t.fromJSON=function(e,n){if("number"!=typeof n.pos)throw new RangeError("Invalid input for GapCursor.fromJSON");return new t(e.resolve(n.pos))},t.prototype.getBookmark=function(){return new Qh(this.anchor)},t.valid=function(e){var t=e.parent;if(t.isTextblock||!function(e){for(var t=e.depth;t&gt;=0;t--){var n=e.index(t);if(0!=n)for(var r=e.node(t).child(n-1);;r=r.lastChild){if(0==r.childCount&amp;&amp;!r.inlineContent||r.isAtom||r.type.spec.isolating)return!0;if(r.inlineContent)return!1}}return!0}(e)||!function(e){for(var t=e.depth;t&gt;=0;t--){var n=e.indexAfter(t),r=e.node(t);if(n!=r.childCount)for(var o=r.child(n);;o=o.firstChild){if(0==o.childCount&amp;&amp;!o.inlineContent||o.isAtom||o.type.spec.isolating)return!0;if(o.inlineContent)return!1}}return!0}(e))return!1;var n=t.type.spec.allowGapCursor;if(null!=n)return n;var r=t.contentMatchAt(e.index()).defaultType;return r&amp;&amp;r.isTextblock},t.findFrom=function(e,n,r){e:for(;;){if(!r&amp;&amp;t.valid(e))return e;for(var o=e.pos,i=null,s=e.depth;;s--){var a=e.node(s);if(n&gt;0?e.indexAfter(s)&lt;a.childCount:e.index(s)&gt;0){i=a.child(n&gt;0?e.indexAfter(s):e.index(s)-1);break}if(0==s)return null;o+=n;var c=e.doc.resolve(o);if(t.valid(c))return c}for(;;){var l=n&gt;0?i.firstChild:i.lastChild;if(!l){if(i.isAtom&amp;&amp;!i.isText&amp;&amp;!Ga.isSelectable(i)){e=e.doc.resolve(o+i.nodeSize*n),r=!1;continue e}break}i=l,o+=n;var u=e.doc.resolve(o);if(t.valid(u))return u}return null}},t}(qa);Zh.prototype.visible=!1,qa.jsonID("gapcursor",Zh);var Qh=function(e){this.pos=e};Qh.prototype.map=function(e){return new Qh(e.map(this.pos))},Qh.prototype.resolve=function(e){var t=e.resolve(this.pos);return Zh.valid(t)?new Zh(t):qa.near(t)};var ef=yp({ArrowLeft:tf("horiz",-1),ArrowRight:tf("horiz",1),ArrowUp:tf("vert",-1),ArrowDown:tf("vert",1)});function tf(e,t){var n="vert"==e?t&gt;0?"down":"up":t&gt;0?"right":"left";return function(e,r,o){var i=e.selection,s=t&gt;0?i.$to:i.$from,a=i.empty;if(i instanceof Ja){if(!o.endOfTextblock(n)||0==s.depth)return!1;a=!1,s=e.doc.resolve(t&gt;0?s.after():s.before())}var c=Zh.findFrom(s,t,a);return!!c&amp;&amp;(r&amp;&amp;r(e.tr.setSelection(new Zh(c))),!0)}}function nf(e,t,n){if(!e.editable)return!1;var r=e.state.doc.resolve(t);if(!Zh.valid(r))return!1;var o=e.posAtCoords({left:n.clientX,top:n.clientY}).inside;return!(o&gt;-1&amp;&amp;Ga.isSelectable(e.state.doc.nodeAt(o)))&amp;&amp;(e.dispatch(e.state.tr.setSelection(new Zh(r))),!0)}function rf(e){if(!(e.selection instanceof Zh))return null;var t=document.createElement("div");return t.className="ProseMirror-gapcursor",Fu.create(e.doc,[Lu.widget(e.selection.head,t,{key:"gapcursor"})])}const of=yd.create({name:"gapCursor",addProseMirrorPlugins:()=&gt;[new uc({props:{decorations:rf,createSelectionBetween:function(e,t,n){if(t.pos==n.pos&amp;&amp;Zh.valid(n))return new Zh(n)},handleClick:nf,handleKeyDown:ef}})],extendNodeSchema(e){var t;return{allowGapCursor:null!==(t=dd(sd(e,"allowGapCursor",{name:e.name,options:e.options})))&amp;&amp;void 0!==t?t:null}}}),sf=Ah.create({name:"hardBreak",defaultOptions:{HTMLAttributes:{}},inline:!0,group:"inline",selectable:!1,parseHTML:()=&gt;[{tag:"br"}],renderHTML({HTMLAttributes:e}){return["br",ld(this.options.HTMLAttributes,e)]},addCommands(){return{setHardBreak:()=&gt;({commands:e})=&gt;e.first([()=&gt;e.exitCode(),()=&gt;e.insertContent({type:this.name})])}},addKeyboardShortcuts(){return{"Mod-Enter":()=&gt;this.editor.commands.setHardBreak(),"Shift-Enter":()=&gt;this.editor.commands.setHardBreak()}}}),af=Ah.create({name:"heading",defaultOptions:{levels:[1,2,3,4,5,6],HTMLAttributes:{}},content:"inline*",group:"block",defining:!0,addAttributes:()=&gt;({level:{default:1,rendered:!1}}),parseHTML(){return this.options.levels.map((e=&gt;({tag:`h${e}`,attrs:{level:e}})))},renderHTML({node:e,HTMLAttributes:t}){return[`h${this.options.levels.includes(e.attrs.level)?e.attrs.level:this.options.levels[0]}`,ld(this.options.HTMLAttributes,t),0]},addCommands(){return{setHeading:e=&gt;({commands:t})=&gt;!!this.options.levels.includes(e.level)&amp;&amp;t.setNode("heading",e),toggleHeading:e=&gt;({commands:t})=&gt;!!this.options.levels.includes(e.level)&amp;&amp;t.toggleNode("heading","paragraph",e)}},addKeyboardShortcuts(){return this.options.levels.reduce(((e,t)=&gt;a(a({},e),{[`Mod-Alt-${t}`]:()=&gt;this.editor.commands.toggleHeading({level:t})})),{})},addInputRules(){return this.options.levels.map((e=&gt;kp(new RegExp(`^(#{1,${e}})\\s$`),this.type,{level:e})))}});var cf=function(){};cf.prototype.append=function(e){return e.length?(e=cf.from(e),!this.length&amp;&amp;e||e.length&lt;200&amp;&amp;this.leafAppend(e)||this.length&lt;200&amp;&amp;e.leafPrepend(this)||this.appendInner(e)):this},cf.prototype.prepend=function(e){return e.length?cf.from(e).append(this):this},cf.prototype.appendInner=function(e){return new uf(this,e)},cf.prototype.slice=function(e,t){return void 0===e&amp;&amp;(e=0),void 0===t&amp;&amp;(t=this.length),e&gt;=t?cf.empty:this.sliceInner(Math.max(0,e),Math.min(this.length,t))},cf.prototype.get=function(e){if(!(e&lt;0||e&gt;=this.length))return this.getInner(e)},cf.prototype.forEach=function(e,t,n){void 0===t&amp;&amp;(t=0),void 0===n&amp;&amp;(n=this.length),t&lt;=n?this.forEachInner(e,t,n,0):this.forEachInvertedInner(e,t,n,0)},cf.prototype.map=function(e,t,n){void 0===t&amp;&amp;(t=0),void 0===n&amp;&amp;(n=this.length);var r=[];return this.forEach((function(t,n){return r.push(e(t,n))}),t,n),r},cf.from=function(e){return e instanceof cf?e:e&amp;&amp;e.length?new lf(e):cf.empty};var lf=function(e){function t(t){e.call(this),this.values=t}e&amp;&amp;(t.__proto__=e),t.prototype=Object.create(e&amp;&amp;e.prototype),t.prototype.constructor=t;var n={length:{configurable:!0},depth:{configurable:!0}};return t.prototype.flatten=function(){return this.values},t.prototype.sliceInner=function(e,n){return 0==e&amp;&amp;n==this.length?this:new t(this.values.slice(e,n))},t.prototype.getInner=function(e){return this.values[e]},t.prototype.forEachInner=function(e,t,n,r){for(var o=t;o&lt;n;o++)if(!1===e(this.values[o],r+o))return!1},t.prototype.forEachInvertedInner=function(e,t,n,r){for(var o=t-1;o&gt;=n;o--)if(!1===e(this.values[o],r+o))return!1},t.prototype.leafAppend=function(e){if(this.length+e.length&lt;=200)return new t(this.values.concat(e.flatten()))},t.prototype.leafPrepend=function(e){if(this.length+e.length&lt;=200)return new t(e.flatten().concat(this.values))},n.length.get=function(){return this.values.length},n.depth.get=function(){return 0},Object.defineProperties(t.prototype,n),t}(cf);cf.empty=new lf([]);var uf=function(e){function t(t,n){e.call(this),this.left=t,this.right=n,this.length=t.length+n.length,this.depth=Math.max(t.depth,n.depth)+1}return e&amp;&amp;(t.__proto__=e),t.prototype=Object.create(e&amp;&amp;e.prototype),t.prototype.constructor=t,t.prototype.flatten=function(){return this.left.flatten().concat(this.right.flatten())},t.prototype.getInner=function(e){return e&lt;this.left.length?this.left.get(e):this.right.get(e-this.left.length)},t.prototype.forEachInner=function(e,t,n,r){var o=this.left.length;return!(t&lt;o&amp;&amp;!1===this.left.forEachInner(e,t,Math.min(n,o),r))&amp;&amp;(!(n&gt;o&amp;&amp;!1===this.right.forEachInner(e,Math.max(t-o,0),Math.min(this.length,n)-o,r+o))&amp;&amp;void 0)},t.prototype.forEachInvertedInner=function(e,t,n,r){var o=this.left.length;return!(t&gt;o&amp;&amp;!1===this.right.forEachInvertedInner(e,t-o,Math.max(n,o)-o,r+o))&amp;&amp;(!(n&lt;o&amp;&amp;!1===this.left.forEachInvertedInner(e,Math.min(t,o),n,r))&amp;&amp;void 0)},t.prototype.sliceInner=function(e,t){if(0==e&amp;&amp;t==this.length)return this;var n=this.left.length;return t&lt;=n?this.left.slice(e,t):e&gt;=n?this.right.slice(e-n,t-n):this.left.slice(e,n).append(this.right.slice(0,t-n))},t.prototype.leafAppend=function(e){var n=this.right.leafAppend(e);if(n)return new t(this.left,n)},t.prototype.leafPrepend=function(e){var n=this.left.leafPrepend(e);if(n)return new t(n,this.right)},t.prototype.appendInner=function(e){return this.left.depth&gt;=Math.max(this.right.depth,e.depth)+1?new t(this.left,new t(this.right,e)):new t(this,e)},t}(cf),pf=cf,df=function(e,t){this.items=e,this.eventCount=t};df.prototype.popEvent=function(e,t){var n=this;if(0==this.eventCount)return null;for(var r,o,i=this.items.length;;i--){if(this.items.get(i-1).selection){--i;break}}t&amp;&amp;(r=this.remapping(i,this.items.length),o=r.maps.length);var s,a,c=e.tr,l=[],u=[];return this.items.forEach((function(e,t){if(!e.step)return r||(r=n.remapping(i,t+1),o=r.maps.length),o--,void u.push(e);if(r){u.push(new hf(e.map));var p,d=e.step.map(r.slice(o));d&amp;&amp;c.maybeStep(d).doc&amp;&amp;(p=c.mapping.maps[c.mapping.maps.length-1],l.push(new hf(p,null,null,l.length+u.length))),o--,p&amp;&amp;r.appendMap(p,o)}else c.maybeStep(e.step);return e.selection?(s=r?e.selection.map(r.slice(o)):e.selection,a=new df(n.items.slice(0,i).append(u.reverse().concat(l)),n.eventCount-1),!1):void 0}),this.items.length,0),{remaining:a,transform:c,selection:s}},df.prototype.addTransform=function(e,t,n,r){for(var o=[],i=this.eventCount,s=this.items,a=!r&amp;&amp;s.length?s.get(s.length-1):null,c=0;c&lt;e.steps.length;c++){var l,u=e.steps[c].invert(e.docs[c]),p=new hf(e.mapping.maps[c],u,t);(l=a&amp;&amp;a.merge(p))&amp;&amp;(p=l,c?o.pop():s=s.slice(0,s.length-1)),o.push(p),t&amp;&amp;(i++,t=null),r||(a=p)}var d,h,f,m=i-n.depth;return m&gt;mf&amp;&amp;(h=m,(d=s).forEach((function(e,t){if(e.selection&amp;&amp;0==h--)return f=t,!1})),s=d.slice(f),i-=m),new df(s.append(o),i)},df.prototype.remapping=function(e,t){var n=new da;return this.items.forEach((function(t,r){var o=null!=t.mirrorOffset&amp;&amp;r-t.mirrorOffset&gt;=e?n.maps.length-t.mirrorOffset:null;n.appendMap(t.map,o)}),e,t),n},df.prototype.addMaps=function(e){return 0==this.eventCount?this:new df(this.items.append(e.map((function(e){return new hf(e)}))),this.eventCount)},df.prototype.rebased=function(e,t){if(!this.eventCount)return this;var n=[],r=Math.max(0,this.items.length-t),o=e.mapping,i=e.steps.length,s=this.eventCount;this.items.forEach((function(e){e.selection&amp;&amp;s--}),r);var a=t;this.items.forEach((function(t){var r=o.getMirror(--a);if(null!=r){i=Math.min(i,r);var c=o.maps[r];if(t.step){var l=e.steps[r].invert(e.docs[r]),u=t.selection&amp;&amp;t.selection.map(o.slice(a+1,r));u&amp;&amp;s++,n.push(new hf(c,l,u))}else n.push(new hf(c))}}),r);for(var c=[],l=t;l&lt;i;l++)c.push(new hf(o.maps[l]));var u=this.items.slice(0,r).append(c).append(n),p=new df(u,s);return p.emptyItemCount()&gt;500&amp;&amp;(p=p.compress(this.items.length-n.length)),p},df.prototype.emptyItemCount=function(){var e=0;return this.items.forEach((function(t){t.step||e++})),e},df.prototype.compress=function(e){void 0===e&amp;&amp;(e=this.items.length);var t=this.remapping(0,e),n=t.maps.length,r=[],o=0;return this.items.forEach((function(i,s){if(s&gt;=e)r.push(i),i.selection&amp;&amp;o++;else if(i.step){var a=i.step.map(t.slice(n)),c=a&amp;&amp;a.getMap();if(n--,c&amp;&amp;t.appendMap(c,n),a){var l=i.selection&amp;&amp;i.selection.map(t.slice(n));l&amp;&amp;o++;var u,p=new hf(c.invert(),a,l),d=r.length-1;(u=r.length&amp;&amp;r[d].merge(p))?r[d]=u:r.push(p)}}else i.map&amp;&amp;n--}),this.items.length,0),new df(pf.from(r.reverse()),o)},df.empty=new df(pf.empty,0);var hf=function(e,t,n,r){this.map=e,this.step=t,this.selection=n,this.mirrorOffset=r};hf.prototype.merge=function(e){if(this.step&amp;&amp;e.step&amp;&amp;!e.selection){var t=e.step.merge(this.step);if(t)return new hf(t.getMap().invert(),t,this.selection)}};var ff=function(e,t,n,r){this.done=e,this.undone=t,this.prevRanges=n,this.prevTime=r},mf=20;function gf(e){var t=[];return e.forEach((function(e,n,r,o){return t.push(r,o)})),t}function vf(e,t){if(!e)return null;for(var n=[],r=0;r&lt;e.length;r+=2){var o=t.map(e[r],1),i=t.map(e[r+1],-1);o&lt;=i&amp;&amp;n.push(o,i)}return n}function yf(e,t,n,r){var o=wf(t),i=kf.get(t).spec.config,s=(r?e.undone:e.done).popEvent(t,o);if(s){var a=s.selection.resolve(s.transform.doc),c=(r?e.done:e.undone).addTransform(s.transform,t.selection.getBookmark(),i,o),l=new ff(r?c:s.remaining,r?s.remaining:c,null,0);n(s.transform.setSelection(a).setMeta(kf,{redo:r,historyState:l}).scrollIntoView())}}var _f=!1,bf=null;function wf(e){var t=e.plugins;if(bf!=t){_f=!1,bf=t;for(var n=0;n&lt;t.length;n++)if(t[n].spec.historyPreserveItems){_f=!0;break}}return _f}var kf=new hc("history"),xf=new hc("closeHistory");function Sf(e){return e={depth:e&amp;&amp;e.depth||100,newGroupDelay:e&amp;&amp;e.newGroupDelay||500},new uc({key:kf,state:{init:function(){return new ff(df.empty,df.empty,null,0)},apply:function(t,n,r){return function(e,t,n,r){var o,i=n.getMeta(kf);if(i)return i.historyState;n.getMeta(xf)&amp;&amp;(e=new ff(e.done,e.undone,null,0));var s=n.getMeta("appendedTransaction");if(0==n.steps.length)return e;if(s&amp;&amp;s.getMeta(kf))return s.getMeta(kf).redo?new ff(e.done.addTransform(n,null,r,wf(t)),e.undone,gf(n.mapping.maps[n.steps.length-1]),e.prevTime):new ff(e.done,e.undone.addTransform(n,null,r,wf(t)),null,e.prevTime);if(!1===n.getMeta("addToHistory")||s&amp;&amp;!1===s.getMeta("addToHistory"))return(o=n.getMeta("rebased"))?new ff(e.done.rebased(n,o),e.undone.rebased(n,o),vf(e.prevRanges,n.mapping),e.prevTime):new ff(e.done.addMaps(n.mapping.maps),e.undone.addMaps(n.mapping.maps),vf(e.prevRanges,n.mapping),e.prevTime);var a=0==e.prevTime||!s&amp;&amp;(e.prevTime&lt;(n.time||0)-r.newGroupDelay||!function(e,t){if(!t)return!1;if(!e.docChanged)return!0;var n=!1;return e.mapping.maps[0].forEach((function(e,r){for(var o=0;o&lt;t.length;o+=2)e&lt;=t[o+1]&amp;&amp;r&gt;=t[o]&amp;&amp;(n=!0)})),n}(n,e.prevRanges)),c=s?vf(e.prevRanges,n.mapping):gf(n.mapping.maps[n.steps.length-1]);return new ff(e.done.addTransform(n,a?t.selection.getBookmark():null,r,wf(t)),df.empty,c,n.time)}(n,r,t,e)}},config:e})}const Mf=yd.create({name:"history",defaultOptions:{depth:100,newGroupDelay:500},addCommands:()=&gt;({undo:()=&gt;({state:e,dispatch:t})=&gt;function(e,t){var n=kf.getState(e);return!(!n||0==n.done.eventCount||(t&amp;&amp;yf(n,e,t,!1),0))}(e,t),redo:()=&gt;({state:e,dispatch:t})=&gt;function(e,t){var n=kf.getState(e);return!(!n||0==n.undone.eventCount||(t&amp;&amp;yf(n,e,t,!0),0))}(e,t)}),addProseMirrorPlugins(){return[Sf(this.options)]},addKeyboardShortcuts(){return{"Mod-z":()=&gt;this.editor.commands.undo(),"Mod-y":()=&gt;this.editor.commands.redo(),"Shift-Mod-z":()=&gt;this.editor.commands.redo(),"Mod-я":()=&gt;this.editor.commands.undo(),"Shift-Mod-я":()=&gt;this.editor.commands.redo()}}}),Ef=Ah.create({name:"horizontalRule",defaultOptions:{HTMLAttributes:{}},group:"block",parseHTML:()=&gt;[{tag:"hr"}],renderHTML({HTMLAttributes:e}){return["hr",ld(this.options.HTMLAttributes,e)]},addCommands(){return{setHorizontalRule:()=&gt;({chain:e})=&gt;e().command((({tr:e,dispatch:t})=&gt;{const{selection:n}=e,{empty:r,$anchor:o}=n,i=o.parent.isTextblock&amp;&amp;!o.parent.type.spec.code&amp;&amp;!o.parent.textContent;if(!r||!i||!t)return!0;const s=o.before();return e.deleteRange(s,s+1),!0})).insertContent({type:this.name}).command((({tr:e,dispatch:t})=&gt;{var n;if(t){const{parent:t,pos:r}=e.selection.$from,o=r+1;if(!e.doc.nodeAt(o)){const r=null===(n=t.type.contentMatch.defaultType)||void 0===n?void 0:n.create();r&amp;&amp;(e.insert(o,r),e.setSelection(Ja.create(e.doc,o)))}e.scrollIntoView()}return!0})).run()}},addInputRules(){return[(e=/^(?:---|&mdash;-|___\s|\*\*\*\s)$/,t=this.type,new _p(e,((e,r,o,i)=&gt;{const s=n instanceof Function?n(r):n,{tr:a}=e;return r[0]&amp;&amp;a.replaceWith(o-1,i,t.create(s)),a})))];var e,t,n}}),Of=/(?:^|\s)((?:\*)((?:[^*]+))(?:\*))$/gm,Tf=/(?:^|\s)((?:\*)((?:[^*]+))(?:\*))/gm,Cf=/(?:^|\s)((?:_)((?:[^_]+))(?:_))$/gm,Af=/(?:^|\s)((?:_)((?:[^_]+))(?:_))/gm,Nf=Nh.create({name:"italic",defaultOptions:{HTMLAttributes:{}},parseHTML:()=&gt;[{tag:"em"},{tag:"i",getAttrs:e=&gt;"normal"!==e.style.fontStyle&amp;&amp;null},{style:"font-style=italic"}],renderHTML({HTMLAttributes:e}){return["em",ld(this.options.HTMLAttributes,e),0]},addCommands:()=&gt;({setItalic:()=&gt;({commands:e})=&gt;e.setMark("italic"),toggleItalic:()=&gt;({commands:e})=&gt;e.toggleMark("italic"),unsetItalic:()=&gt;({commands:e})=&gt;e.unsetMark("italic")}),addKeyboardShortcuts(){return{"Mod-i":()=&gt;this.editor.commands.toggleItalic()}},addInputRules(){return[zh(Of,this.type),zh(Cf,this.type)]},addPasteRules(){return[Ph(Tf,this.type),Ph(Af,this.type)]}}),zf=Ah.create({name:"listItem",defaultOptions:{HTMLAttributes:{}},content:"paragraph block*",defining:!0,parseHTML:()=&gt;[{tag:"li"}],renderHTML({HTMLAttributes:e}){return["li",ld(this.options.HTMLAttributes,e),0]},addKeyboardShortcuts(){return{Enter:()=&gt;this.editor.commands.splitListItem("listItem"),Tab:()=&gt;this.editor.commands.sinkListItem("listItem"),"Shift-Tab":()=&gt;this.editor.commands.liftListItem("listItem")}}}),Pf=/^(\d+)\.\s$/,If=Ah.create({name:"orderedList",defaultOptions:{HTMLAttributes:{}},group:"block list",content:"listItem+",addAttributes:()=&gt;({start:{default:1,parseHTML:e=&gt;({start:e.hasAttribute("start")?parseInt(e.getAttribute("start")||"",10):1})}}),parseHTML:()=&gt;[{tag:"ol"}],renderHTML({HTMLAttributes:e}){const t=e,{start:n}=t,s=((e,t)=&gt;{var n={};for(var s in e)o.call(e,s)&amp;&amp;t.indexOf(s)&lt;0&amp;&amp;(n[s]=e[s]);if(null!=e&amp;&amp;r)for(var s of r(e))t.indexOf(s)&lt;0&amp;&amp;i.call(e,s)&amp;&amp;(n[s]=e[s]);return n})(t,["start"]);return 1===n?["ol",ld(this.options.HTMLAttributes,s),0]:["ol",ld(this.options.HTMLAttributes,e),0]},addCommands:()=&gt;({toggleOrderedList:()=&gt;({commands:e})=&gt;e.toggleList("orderedList","listItem")}),addKeyboardShortcuts(){return{"Mod-Shift-7":()=&gt;this.editor.commands.toggleOrderedList()}},addInputRules(){return[wp(Pf,this.type,(e=&gt;({start:+e[1]})),((e,t)=&gt;t.childCount+t.attrs.start===+e[1]))]}}),Df=Ah.create({name:"paragraph",priority:1e3,defaultOptions:{HTMLAttributes:{}},group:"block",content:"inline*",parseHTML:()=&gt;[{tag:"p"}],renderHTML({HTMLAttributes:e}){return["p",ld(this.options.HTMLAttributes,e),0]},addCommands:()=&gt;({setParagraph:()=&gt;({commands:e})=&gt;e.setNode("paragraph")}),addKeyboardShortcuts(){return{"Mod-Alt-0":()=&gt;this.editor.commands.setParagraph()}}}),jf=/(?:^|\s)((?:~~)((?:[^~]+))(?:~~))$/gm,Rf=/(?:^|\s)((?:~~)((?:[^~]+))(?:~~))/gm,Lf=Nh.create({name:"strike",defaultOptions:{HTMLAttributes:{}},parseHTML:()=&gt;[{tag:"s"},{tag:"del"},{tag:"strike"},{style:"text-decoration",consuming:!1,getAttrs:e=&gt;!!e.includes("line-through")&amp;&amp;{}}],renderHTML({HTMLAttributes:e}){return["s",ld(this.options.HTMLAttributes,e),0]},addCommands:()=&gt;({setStrike:()=&gt;({commands:e})=&gt;e.setMark("strike"),toggleStrike:()=&gt;({commands:e})=&gt;e.toggleMark("strike"),unsetStrike:()=&gt;({commands:e})=&gt;e.unsetMark("strike")}),addKeyboardShortcuts(){return{"Mod-Shift-x":()=&gt;this.editor.commands.toggleStrike()}},addInputRules(){return[zh(jf,this.type)]},addPasteRules(){return[Ph(Rf,this.type)]}}),Bf=Ah.create({name:"text",group:"inline"}),$f=yd.create({name:"starterKit",addExtensions(){var e,t,n,r,o,i,s,a,c,l,u,p,d,h,f,m,g,v;const y=[];return!1!==this.options.blockquote&amp;&amp;y.push(Dh.configure(null===(e=this.options)||void 0===e?void 0:e.blockquote)),!1!==this.options.bold&amp;&amp;y.push($h.configure(null===(t=this.options)||void 0===t?void 0:t.bold)),!1!==this.options.bulletList&amp;&amp;y.push(Fh.configure(null===(n=this.options)||void 0===n?void 0:n.bulletList)),!1!==this.options.code&amp;&amp;y.push(Uh.configure(null===(r=this.options)||void 0===r?void 0:r.code)),!1!==this.options.codeBlock&amp;&amp;y.push(Kh.configure(null===(o=this.options)||void 0===o?void 0:o.codeBlock)),!1!==this.options.document&amp;&amp;y.push(Gh.configure(null===(i=this.options)||void 0===i?void 0:i.document)),!1!==this.options.dropcursor&amp;&amp;y.push(Xh.configure(null===(s=this.options)||void 0===s?void 0:s.dropcursor)),!1!==this.options.gapcursor&amp;&amp;y.push(of.configure(null===(a=this.options)||void 0===a?void 0:a.gapcursor)),!1!==this.options.hardBreak&amp;&amp;y.push(sf.configure(null===(c=this.options)||void 0===c?void 0:c.hardBreak)),!1!==this.options.heading&amp;&amp;y.push(af.configure(null===(l=this.options)||void 0===l?void 0:l.heading)),!1!==this.options.history&amp;&amp;y.push(Mf.configure(null===(u=this.options)||void 0===u?void 0:u.history)),!1!==this.options.horizontalRule&amp;&amp;y.push(Ef.configure(null===(p=this.options)||void 0===p?void 0:p.horizontalRule)),!1!==this.options.italic&amp;&amp;y.push(Nf.configure(null===(d=this.options)||void 0===d?void 0:d.italic)),!1!==this.options.listItem&amp;&amp;y.push(zf.configure(null===(h=this.options)||void 0===h?void 0:h.listItem)),!1!==this.options.orderedList&amp;&amp;y.push(If.configure(null===(f=this.options)||void 0===f?void 0:f.orderedList)),!1!==this.options.paragraph&amp;&amp;y.push(Df.configure(null===(m=this.options)||void 0===m?void 0:m.paragraph)),!1!==this.options.strike&amp;&amp;y.push(Lf.configure(null===(g=this.options)||void 0===g?void 0:g.strike)),!1!==this.options.text&amp;&amp;y.push(Bf.configure(null===(v=this.options)||void 0===v?void 0:v.text)),y}}),Hf=yd.create({name:"placeholder",defaultOptions:{emptyEditorClass:"is-editor-empty",emptyNodeClass:"is-empty",placeholder:"Write something &hellip;",showOnlyWhenEditable:!0,showOnlyCurrent:!0},addProseMirrorPlugins(){return[new uc({props:{decorations:({doc:e,selection:t})=&gt;{const n=this.editor.isEditable||!this.options.showOnlyWhenEditable,{anchor:r}=t,o=[];if(n)return e.descendants(((e,t)=&gt;{const n=r&gt;=t&amp;&amp;r&lt;=t+e.nodeSize,i=!e.isLeaf&amp;&amp;!e.childCount;if((n||!this.options.showOnlyCurrent)&amp;&amp;i){const n=[this.options.emptyNodeClass];this.editor.isEmpty&amp;&amp;n.push(this.options.emptyEditorClass);const r=Lu.node(t,t+e.nodeSize,{class:n.join(" "),"data-placeholder":"function"==typeof this.options.placeholder?this.options.placeholder({editor:this.editor,node:e}):this.options.placeholder});o.push(r)}return!1})),Fu.create(e,o)}}})]}});export{Ko as $,pe as A,u as B,Ke as C,Vo as D,l as E,se as F,P as G,No as H,zr as I,w as J,ae as K,v as L,S as M,M as N,x as O,b as P,Fo as Q,Xo as R,We as S,ge as T,O as U,E as V,re as W,F as X,ve as Y,_e as Z,Be as _,J as a,V as a0,Me as a1,Lo as a2,Hi as a3,_ as a4,Vi as a5,f as a6,R as a7,Se as a8,oe as a9,T as aA,Go as aB,Yo as aC,Wo as aD,ii as aE,si as aF,$o as aG,Ir as aH,je as aI,Uo as aJ,ni as aK,Zo as aL,Jo as aM,ti as aN,ne as aa,C as ab,h as ac,ie as ad,ce as ae,ee as af,Ho as ag,Ch as ah,$f as ai,Hf as aj,he as ak,zo as al,Po as am,Io as an,Do as ao,jo as ap,Ro as aq,fe as ar,U as as,W as at,qo as au,Qo as av,ei as aw,Bo as ax,oi as ay,ri as az,q as b,Y as c,j as d,L as e,D as f,X as g,te as h,Ue as i,$e as j,$ as k,H as l,He as m,Z as n,Fe as o,Re as p,Le as q,ze as r,m as s,B as t,De as u,Ve as v,Pe as w,Ie as x,me as y,de as z}</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">2</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Ensure that application Source Code is not available with alternative extensions, and ensure that source code is not present within other files or data deployed to the web server, or served by the web server. </p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Other information</td><td width="80%"><p>class at{constructor({base:t,routes:e,trailing_slash:r,renderer:s}){this.base=t,this.routes=e,this.trailing_slash=r,this.renderer=s,s.router=this,this.enabled=!0,document.body.setAttribute("tabindex","-1"),history.replaceState(history.state||{},"",location.href)}init_listeners(){let t;"scrollRestoration"in history&amp;&amp;(history.scrollRestoration="manual"),addEventListener("beforeunload",(()=&gt;{history.scrollRestoration="auto"})),addEventListener("load",(()=&gt;{history.scrollRestoration="manual"})),addEventListener("scroll",(()=&gt;{clearTimeout(t),t=setTimeout((()=&gt;{const t=(s=i({},history.state||{}),o={"sveltekit:scroll":ot()},e(s,r(o)));var s,o;history.replaceState(t,document.title,window.location.href)}),50)}));const s=t=&gt;{const e=nt(t.target);e&amp;&amp;e.href&amp;&amp;e.hasAttribute("sveltekit:prefetch")&amp;&amp;this.prefetch(new URL(e.href))};let o;addEventListener("touchstart",s),addEventListener("mousemove",(t=&gt;{clearTimeout(o),o=setTimeout((()=&gt;{s(t)}),20)})),addEventListener("click",(t=&gt;{if(!this.enabled)return;if(t.button||1!==t.which)return;if(t.metaKey||t.ctrlKey||t.shiftKey||t.altKey)return;if(t.defaultPrevented)return;const e=nt(t.target);if(!e)return;if(!e.href)return;const r="object"==typeof e.href&amp;&amp;"SVGAnimatedString"===e.href.constructor.name,s=String(r?e.href.baseVal:e.href);if(s===location.href)return void(location.hash||t.preventDefault());const o=(e.getAttribute("rel")||"").split(/\s+/);if(e.hasAttribute("download")||o&amp;&amp;o.includes("external"))return;if(r?e.target.baseVal:e.target)return;const n=new URL(s);if(!this.owns(n))return;const a=e.hasAttribute("sveltekit:noscroll");history.pushState({},"",n.href),this._navigate(n,a?ot():null,!1,[],n.hash),t.preventDefault()})),addEventListener("popstate",(t=&gt;{if(t.state&amp;&amp;this.enabled){const e=new URL(location.href);this._navigate(e,t.state["sveltekit:scroll"],!1,[])}}))}owns(t){return t.origin===location.origin&amp;&amp;t.pathname.startsWith(this.base)}parse(t){if(this.owns(t)){const e=t.pathname.slice(this.base.length)||"/",r=decodeURI(e),s=this.routes.filter((([t])=&gt;t.test(r))),o=new URLSearchParams(t.search);return{id:`${e}?${o}`,routes:s,path:e,query:o}}}async goto(t,{noscroll:e=!1,replaceState:r=!1,keepfocus:s=!1,state:o={}}={},n){const a=new URL(t,function(t){let e=t.baseURI;if(!e){const r=t.getElementsByTagName("base");e=r.length?r[0].href:t.URL}return e}(document));return this.enabled&amp;&amp;this.owns(a)?(history[r?"replaceState":"pushState"](o,"",t),this._navigate(a,e?ot():null,s,n,a.hash)):(location.href=a.href,new Promise((()=&gt;{})))}enable(){this.enabled=!0}disable(){this.enabled=!1}async prefetch(t){const e=this.parse(t);if(!e)throw new Error("Attempted to prefetch a URL that does not belong to this app");return this.renderer.load(e)}async _navigate(t,e,r,s,o){const n=this.parse(t);if(!n)throw new Error("Attempted to navigate to a URL that does not belong to this app");if("/"!==n.path){const t=n.path.endsWith("/");(t&amp;&amp;"never"===this.trailing_slash||!t&amp;&amp;"always"===this.trailing_slash&amp;&amp;!(n.path.split("/").pop()||"").includes("."))&amp;&amp;(n.path=t?n.path.slice(0,-1):n.path+"/",history.replaceState({},"",`${this.base}${n.path}${location.search}`))}this.renderer.notify({path:n.path,query:n.query}),await this.renderer.update(n,s,!1),r||document.body.focus();const a=o&amp;&amp;document.getElementById(o.slice(1));e?scrollTo(e.x,e.y):a?a.scrollIntoView():scrollTo(0,0)}}function it(t){const e=D(t);let r=!0;return{notify:function(){r=!0,e.update((t=&gt;t))},set:function(t){r=!1,e.set(t)},subscribe:function(t){let s;return e.subscribe((e=&gt;{(void 0===s||r&amp;&amp;e!==s)&amp;&amp;t(s=e)}))}}}function lt(t,e){let r=`script[data-type="svelte-data"][data-url="${"string"==typeof t?t:t.url}"]`;e&amp;&amp;"string"==typeof e.body&amp;&amp;(r+=`[data-body="${function(t){let e=5381,r=t.length;if("string"==typeof t)for(;r;)e=33*e^t.charCodeAt(--r);else for(;r;)e=33*e^t[--r];return(e&gt;&gt;&gt;0).toString(36)}(e.body)}"]`);const a=document.querySelector(r);if(a&amp;&amp;a.textContent){const t=JSON.parse(a.textContent),{body:e}=t,r=((t,e)=&gt;{var r={};for(var a in t)o.call(t,a)&amp;&amp;e.indexOf(a)&lt;0&amp;&amp;(r[a]=t[a]);if(null!=t&amp;&amp;s)for(var a of s(t))e.indexOf(a)&lt;0&amp;&amp;n.call(t,a)&amp;&amp;(r[a]=t[a]);return r})(t,["body"]);return Promise.resolve(new Response(e,r))}return fetch(t,e)}class ct{constructor({Root:t,fallback:e,target:r,session:s,host:o}){this.Root=t,this.fallback=e,this.host=o,this.router,this.target=r,this.started=!1,this.session_id=1,this.invalid=new Set,this.invalidating=null,this.current={page:null,session_id:null,branch:[]},this.cache=new Map,this.loading={id:null,promise:null},this.stores={page:it({}),navigating:D(null),session:D(s)},this.$session=null,this.root=null;let n=!1;this.stores.session.subscribe((async t=&gt;{if(this.$session=t,!n||!this.router)return;this.session_id+=1;const e=this.router.parse(new URL(location.href));e&amp;&amp;this.update(e,[],!0)})),n=!0}async start({status:t,error:e,nodes:r,page:s}){const o=[];let n,a,l={};try{for(let n=0;n&lt;r.length;n+=1){const c=n===r.length-1,u=await this._load_node({module:await r[n],page:s,context:l,status:c?t:void 0,error:c?e:void 0});if(o.push(u),u&amp;&amp;u.loaded)if(u.loaded.error){if(e)throw u.loaded.error;a={status:u.loaded.status,error:u.loaded.error,path:s.path,query:s.query}}else u.loaded.context&amp;&amp;(l=i(i({},l),u.loaded.context))}n=a?await this._load_error(a):await this._get_navigation_result_from_branch({page:s,branch:o})}catch(u){if(e)throw u;n=await this._load_error({status:500,error:(c=u,c instanceof Error?c:new Error(JSON.stringify(c))),path:s.path,query:s.query})}var c;n.redirect?location.href=new URL(n.redirect,location.href).href:this._init(n)}notify({path:t,query:e}){dispatchEvent(new CustomEvent("sveltekit:navigation-start")),this.started&amp;&amp;this.stores.navigating.set({from:{path:this.current.page.path,query:this.current.page.query},to:{path:t,query:e}})}async update(t,e,r){const s=this.token={};let o=await this._get_navigation_result(t,r);if(s!==this.token)return;if(this.invalid.clear(),o.redirect){if(!(e.length&gt;10||e.includes(t.path)))return void(this.router?this.router.goto(o.redirect,{replaceState:!0},[...e,t.path]):location.href=new URL(o.redirect,location.href).href);o=await this._load_error({status:500,error:new Error("Redirect loop"),path:t.path,query:t.query})}if(o.reload?location.reload():this.started?(this.current=o.state,this.root.$set(o.props),this.stores.navigating.set(null),await 0):this._init(o),dispatchEvent(new CustomEvent("sveltekit:navigation-end")),this.loading.promise=null,this.loading.id=null,!this.router)return;const n=o.state.branch[o.state.branch.length-1];n&amp;&amp;!1===n.module.router?this.router.disable():this.router.enable()}load(t){return this.loading.promise=this._get_navigation_result(t,!1),this.loading.id=t.id,this.loading.promise}invalidate(t){return this.invalid.add(t),this.invalidating||(this.invalidating=Promise.resolve().then((async()=&gt;{const t=this.router&amp;&amp;this.router.parse(new URL(location.href));t&amp;&amp;await this.update(t,[],!0),this.invalidating=null}))),this.invalidating}_init(t){this.current=t.state;const e=document.querySelector("style[data-svelte]");e&amp;&amp;e.remove(),this.root=new this.Root({target:this.target,props:i({stores:this.stores},t.props),hydrate:!0}),this.started=!0}async _get_navigation_result(t,e){if(this.loading.id===t.id)return this.loading.promise;for(let r=0;r&lt;t.routes.length;r+=1){const s=t.routes[r];if(1===s.length)return{reload:!0,props:{},state:this.current};let o=r+1;for(;o&lt;t.routes.length;){const e=t.routes[o];if(e[0].toString()!==s[0].toString())break;1!==e.length&amp;&amp;e[1].forEach((t=&gt;t())),o+=1}const n=await this._load({route:s,path:t.path,query:t.query},e);if(n)return n}return await this._load_error({status:404,error:new Error(`Not found: ${t.path}`),path:t.path,query:t.query})}async _get_navigation_result_from_branch({page:t,branch:e}){const r=e.filter(Boolean),s={state:{page:t,branch:e,session_id:this.session_id},props:{components:r.map((t=&gt;t.module.default))}};for(let a=0;a&lt;r.length;a+=1){const t=r[a].loaded;t&amp;&amp;(s.props[`props_${a}`]=await t.props)}this.current.page&amp;&amp;t.path===this.current.page.path&amp;&amp;t.query.toString()===this.current.page.query.toString()||(s.props.page=t);const o=r[r.length-1],n=o.loaded&amp;&amp;o.loaded.maxage;if(n){const e=`${t.path}?${t.query}`;let r=!1;const o=()=&gt;{this.cache.get(e)===s&amp;&amp;this.cache.delete(e),i(),clearTimeout(a)},a=setTimeout(o,1e3*n),i=this.stores.session.subscribe((()=&gt;{r&amp;&amp;o()}));r=!0,this.cache.set(e,s)}return s}async _load_node({status:t,error:e,module:r,page:s,context:o}){const n={module:r,uses:{params:new Set,path:!1,query:!1,session:!1,context:!1,dependencies:[]},loaded:null,context:o},a={};for(const i in s.params)Object.defineProperty(a,i,{get:()=&gt;(n.uses.params.add(i),s.params[i]),enumerable:!0});const l=this.$session;if(r.load){const{started:c}=this,u={page:{host:s.host,params:a,get path(){return n.uses.path=!0,s.path},get query(){return n.uses.query=!0,s.query}},get session(){return n.uses.session=!0,l},get context(){return n.uses.context=!0,i({},o)},fetch(t,e){const r="string"==typeof t?t:t.url,{href:o}=new URL(r,new URL(s.path,document.baseURI));return n.uses.dependencies.push(o),c?fetch(t,e):lt(t,e)}};e&amp;&amp;(u.status=t,u.error=e);const d=await r.load.call(null,u);if(!d)return;n.loaded=function(t){const e=t.status&amp;&amp;t.status&gt;=400&amp;&amp;t.status&lt;=599&amp;&amp;!t.redirect;if(t.error||e){const r=t.status;if(!t.error&amp;&amp;e)return{status:r||500,error:new Error};const s="string"==typeof t.error?new Error(t.error):t.error;return s instanceof Error?!r||r&lt;400||r&gt;599?(console.warn('"error" returned from load() without a valid status code &mdash; defaulting to 500'),{status:500,error:s}):{status:r,error:s}:{status:500,error:new Error(`"error" property returned from load() must be a string or instance of Error, received type "${typeof s}"`)}}if(t.redirect){if(!t.status||3!==Math.floor(t.status/100))return{status:500,error:new Error('"redirect" property returned from load() must be accompanied by a 3xx status code')};if("string"!=typeof t.redirect)return{status:500,error:new Error('"redirect" property returned from load() must be a string')}}return t}(d),n.loaded.context&amp;&amp;(n.context=n.loaded.context)}return n}async _load({route:t,path:e,query:r},s){const o=`${e}?${r}`;if(!s){const t=this.cache.get(o);if(t)return t}const[n,a,l,c]=t,u=c?c(n.exec(e)):{},d=this.current.page&amp;&amp;{path:e!==this.current.page.path,params:Object.keys(u).filter((t=&gt;this.current.page.params[t]!==u[t])),query:r.toString()!==this.current.page.query.toString(),session:this.session_id!==this.current.session_id},h={host:this.host,path:e,query:r,params:u},p=[];let f,g={},_=!1,m=200;a.forEach((t=&gt;t()));t:for(let $=0;$&lt;a.length;$+=1){let t;try{if(!a[$])continue;const e=await a[$](),r=this.current.branch[$];if(!r||e!==r.module||d.path&amp;&amp;r.uses.path||d.params.some((t=&gt;r.uses.params.has(t)))||d.query&amp;&amp;r.uses.query||d.session&amp;&amp;r.uses.session||r.uses.dependencies.some((t=&gt;this.invalid.has(t)))||_&amp;&amp;r.uses.context){t=await this._load_node({module:e,page:h,context:g});const r=$===a.length-1;if(t&amp;&amp;t.loaded){if(t.loaded.error&amp;&amp;(m=t.loaded.status,f=t.loaded.error),t.loaded.redirect)return{redirect:t.loaded.redirect,props:{},state:this.current};t.loaded.context&amp;&amp;(_=!0)}else if(r&amp;&amp;e.load)return}else t=r}catch(y){m=500,f=y}if(f){for(;$--;)if(l[$]){let t,e,r=$;for(;!(e=p[r]);)r-=1;try{if(t=await this._load_node({status:m,error:f,module:await l[$](),page:h,context:e.context}),t&amp;&amp;t.loaded&amp;&amp;t.loaded.error)continue;p.push(t);break t}catch(y){continue}}return await this._load_error({status:m,error:f,path:e,query:r})}t&amp;&amp;t.loaded&amp;&amp;t.loaded.context&amp;&amp;(g=i(i({},g),t.loaded.context)),p.push(t)}return await this._get_navigation_result_from_branch({page:h,branch:p})}async _load_error({status:t,error:e,path:r,query:s}){const o={host:this.host,path:r,query:s,params:{}},n=await this._load_node({module:await this.fallback[0],page:o,context:{}}),a=[n,await this._load_node({status:t,error:e,module:await this.fallback[1],page:o,context:n&amp;&amp;n.loaded&amp;&amp;n.loaded.context||{}})];return await this._get_navigation_result_from_branch({page:o,branch:a})}}async function ut({paths:t,target:e,session:r,host:s,route:o,spa:n,trailing_slash:a,hydrate:i}){const l=new ct({Root:Y,fallback:rt,target:e,session:r,host:s}),c=o?new at({base:t.base,routes:et,trailing_slash:a,renderer:l}):null;U(c),function(t){st=t.base,t.assets}(t),i&amp;&amp;await l.start(i),c&amp;&amp;(n&amp;&amp;c.goto(location.href,{replaceState:!0},[]),c.init_listeners()),dispatchEvent(new CustomEvent("sveltekit:start"))}export{ut as start}</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>http://blogs.wsj.com/cio/2013/10/08/adobe-source-code-leak-is-bad-news-for-u-s-government/</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">540</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-medium">
+                <th width="20%"><a name="medium"></a>Medium (High)</th><th width="80%">Sub Resource Integrity Attribute Missing</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content. </p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script defer data-domain="dora.beta.gouv.fr" src="https://plausible.io/js/plausible.js" data-svelte="svelte-jlms0z"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/?city=ZAP</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script defer data-domain="dora.beta.gouv.fr" src="https://plausible.io/js/plausible.js" data-svelte="svelte-jlms0z"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script defer data-domain="dora.beta.gouv.fr" src="https://plausible.io/js/plausible.js" data-svelte="svelte-jlms0z"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">3</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Provide a valid integrity attribute to the tag.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://developer.mozilla.org/en/docs/Web/Security/Subresource_Integrity</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">345</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">15</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-medium">
+                <th width="20%"><a name="medium"></a>Medium (Medium)</th><th width="80%">X-Frame-Options Header Not Set</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>X-Frame-Options header is not included in the HTTP response to protect against 'ClickJacking' attacks.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Frame-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/?city=ZAP</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Frame-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">2</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Most modern Web browsers support the X-Frame-Options HTTP header. Ensure it's set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's "frame-ancestors" directive. </p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">1021</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">15</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Absence of Anti-CSRF Tokens</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>No Anti-CSRF tokens were found in a HTML submission form.</p><p>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</p><p></p><p>CSRF attacks are effective in a number of situations, including:</p><p>    * The victim has an active session on the target site.</p><p>    * The victim is authenticated via HTTP auth on the target site.</p><p>    * The victim is on the same local network as the target site.</p><p></p><p>CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form class="svelte-8o8quc"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/?city=ZAP</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form class="svelte-8o8quc"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">2</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Phase: Architecture and Design</p><p>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</p><p>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</p><p></p><p>Phase: Implementation</p><p>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</p><p></p><p>Phase: Architecture and Design</p><p>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Use the ESAPI Session Management control.</p><p>This control includes a component for CSRF.</p><p></p><p>Do not use the GET method for any request that triggers a state change.</p><p></p><p>Phase: Implementation</p><p>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Other information</td><td width="80%"><p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF] was found in the following HTML form: [Form 1: "" "city" ].</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>http://cwe.mitre.org/data/definitions/352.html</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">352</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">9</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Cross-Domain JavaScript Source File Inclusion</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>The page includes one or more script files from a third-party domain.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/?city=ZAP</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://plausible.io/js/plausible.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script defer data-domain="dora.beta.gouv.fr" src="https://plausible.io/js/plausible.js" data-svelte="svelte-jlms0z"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://plausible.io/js/plausible.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script defer data-domain="dora.beta.gouv.fr" src="https://plausible.io/js/plausible.js" data-svelte="svelte-jlms0z"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://plausible.io/js/plausible.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script defer data-domain="dora.beta.gouv.fr" src="https://plausible.io/js/plausible.js" data-svelte="svelte-jlms0z"&gt;&lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">3</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p></p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">829</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">15</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Low)</th><th width="80%">Dangerous JS Functions</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/vendor-6122f38b.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">eval</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">1</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>See the references for security advice on the use of these functions.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://angular.io/guide/security</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">749</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Incomplete or No Cache-control Header Set</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/robots.txt</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/?city=ZAP</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">3</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">525</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Permissions Policy Header Not Set</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/stores-077d352f.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/error.svelte-73602f1d.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/singletons-12a22614.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/centered-grid-6a1a3fa4.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/start-9ff9db47.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/link-button-b4f26bd9.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/navigation-2ffed81e.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/vendor-6122f38b.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/pages/__layout.svelte-dbc612db.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/auth-d0b88bd8.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/button-2f64147f.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/env-03385877.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">12</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">693</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">15</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">X-Content-Type-Options Header Missing</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/stores-077d352f.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/favicon.png</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/singletons-12a22614.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/robots.txt</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/vendor-6122f38b.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/start-9ff9db47.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/navigation-2ffed81e.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/pages/__layout.svelte-dbc612db.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/auth-d0b88bd8.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/env-03385877.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">X-Content-Type-Options</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">11</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Other information</td><td width="80%"><p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At "High" threshold this scan rule will not alert on client or server error responses.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">693</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">15</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-info">
+                <th width="20%"><a name="info"></a>Informational (Medium)</th><th width="80%">Base64 Disclosure</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/vendor-6122f38b.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">20h-2v-7H4v7H2V4h2v7h7V4h2v16zm8-12v12h-2v-9</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/assets/pages/index.svelte-b61f03b2.css</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgyNHYyNEgweiIvPjxwYXRoIHN0cm9rZT0iI2ZmZiIgZD0ibTEwIDE1LjE3MiA5LjE5Mi05LjE5MyAxLjQxNSAxLjQxNEwxMCAxOGwtNi4zNjQtNi4zNjQgMS40MTQtMS40MTR6Ii8+PC9zdmc+</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/?city=ZAP</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">10zm-1-11H7v2h4v4h2v-4h4v-2h-4V7h-2v4z</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">5</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Other information</td><td width="80%"><p>�L��_��~��\x001e/�\x001d���x����{���</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">200</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-info">
+                <th width="20%"><a name="info"></a>Informational (Low)</th><th width="80%">Information Disclosure - Suspicious Comments</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">TODO</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/stores-077d352f.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/vendor-6122f38b.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">bug</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/pages/__layout.svelte-dbc612db.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/start-9ff9db47.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">query</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/auth-d0b88bd8.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">TODO</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/navigation-2ffed81e.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/link-button-b4f26bd9.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/button-2f64147f.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/vendor-6122f38b.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">from</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">11</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Other information</td><td width="80%"><p>The following pattern was used: \bTODO\b and was detected in the element starting with: "&lt;script type="module"&gt;</p><p>			import { start } from "/_app/start-9ff9db47.js";</p><p>			start({</p><p>				target: document.querySelector("#svelt", see evidence field for the suspicious comment/snippet.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p></p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">200</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-info">
+                <th width="20%"><a name="info"></a>Informational (Medium)</th><th width="80%">Modern Web Application</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a class="flex flex-row items-center justify-center py-2 text-sm text-center rounded outline-none  focus:shadow-focus text-gray-text-alt2" href="" &gt;Plan du site
+  
+  &lt;div class="h-2 mx-2 border-l border-gray-03"&gt;&lt;/div&gt;&lt;/a&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a class="flex flex-row items-center justify-center py-2 text-sm text-center rounded outline-none  focus:shadow-focus text-gray-text-alt2" href="" &gt;Plan du site
+  
+  &lt;div class="h-2 mx-2 border-l border-gray-03"&gt;&lt;/div&gt;&lt;/a&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/?city=ZAP</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a class="flex flex-row items-center justify-center py-2 text-sm text-center rounded outline-none  focus:shadow-focus text-gray-text-alt2" href="" &gt;Plan du site
+  
+  &lt;div class="h-2 mx-2 border-l border-gray-03"&gt;&lt;/div&gt;&lt;/a&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">3</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>This is an informational alert and so no changes are required.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Other information</td><td width="80%"><p>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p></p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-info">
+                <th width="20%"><a name="info"></a>Informational (Medium)</th><th width="80%">Storable and Cacheable Content</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where "shared" caching servers such as "proxy" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/stores-077d352f.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=31536000</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/vendor-6122f38b.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=31536000</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/env-03385877.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=31536000</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/singletons-12a22614.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=31536000</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/robots.txt</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/chunks/navigation-2ffed81e.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=31536000</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/favicon.png</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/start-9ff9db47.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=31536000</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/pages/__layout.svelte-dbc612db.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">max-age=31536000</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">11</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">524</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-info">
+                <th width="20%"><a name="info"></a>Informational (Low)</th><th width="80%">Timestamp Disclosure - Unix</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>A timestamp was disclosed by the application/web server - Unix</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/start-9ff9db47.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">48008496</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">03385877</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">48008496</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">48008496</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/_app/start-9ff9db47.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">03385877</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://dora.beta.gouv.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">03385877</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">6</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Other information</td><td width="80%"><p>48008496, which evaluates to: 1971-07-10 15:41:36</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">200</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">13</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+    </body>
+</html>
