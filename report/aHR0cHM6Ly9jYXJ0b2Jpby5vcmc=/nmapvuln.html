@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln cartobio.org</pre>
-<p class="lead">Wed Sep  8 02:32:56 2021 – Wed Sep  8 02:33:23 2021<br>1 hosts scanned.
+<p class="lead">Thu Sep  9 02:52:22 2021 – Thu Sep  9 02:52:44 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -153,7 +153,16 @@
 <td title="Version">2-4</td>
 <td title="Extra Info">RPC #100000</td>
 </tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>rpcinfo</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  program version    port/proto  service
+  100000  2,3,4        111/tcp   rpcbind
+  100000  2,3,4        111/udp   rpcbind
+  100000  3,4          111/tcp6  rpcbind
+  100000  3,4          111/udp6  rpcbind
+</pre>
+</td></tr>
 <tr class="success">
 <td title="Port">443</td>
 <td title="Protocol">tcp</td>
