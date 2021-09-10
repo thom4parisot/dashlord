@@ -81,7 +81,7 @@ ZAP Scanning Report
         <p>
 </p>
         <h3 class="left-header">Summary of Alerts</h3>
-        <h3 class="time-stamp">Generated on Thu, 9 Sep 2021 03:34:42</h3>
+        <h3 class="time-stamp">Generated on Fri, 10 Sep 2021 03:51:29</h3>
         <table width="45%" class="summary">
             <tr bgcolor="#666666">
                 <th width="45%" height="24">Risk 
@@ -92,10 +92,10 @@ ZAP Scanning Report
                 <td><a href="#high">High</a></td><td align="center">0</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#medium">Medium</a></td><td align="center">2</td>
+                <td><a href="#medium">Medium</a></td><td align="center">3</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td><a href="#low">Low</a></td><td align="center">2</td>
+                <td><a href="#low">Low</a></td><td align="center">4</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td><a href="#info">Informational</a></td><td align="center">5</td>
@@ -108,13 +108,22 @@ ZAP Scanning Report
                 <th width="60%" height="24">Name</th><th width="20%" align="center">Risk Level</th><th width="20%" align="center">Number of Instances</th>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>CSP: Wildcard Directive</td><td align="center">Medium</td><td align="center">4</td>
+                <td>CSP: Wildcard Directive</td><td align="center">Medium</td><td align="center">8</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Sub Resource Integrity Attribute Missing</td><td align="center">Medium</td><td align="center">1</td>
+                <td>Reverse Tabnabbing</td><td align="center">Medium</td><td align="center">8</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Incomplete or No Cache-control Header Set</td><td align="center">Low</td><td align="center">9</td>
+                <td>Sub Resource Integrity Attribute Missing</td><td align="center">Medium</td><td align="center">10</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Absence of Anti-CSRF Tokens</td><td align="center">Low</td><td align="center">8</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Cross-Domain JavaScript Source File Inclusion</td><td align="center">Low</td><td align="center">8</td>
+            </tr>
+            <tr bgcolor="#e8e8e8">
+                <td>Incomplete or No Cache-control Header Set</td><td align="center">Low</td><td align="center">11</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Permissions Policy Header Not Set</td><td align="center">Low</td><td align="center">11</td>
@@ -126,13 +135,13 @@ ZAP Scanning Report
                 <td>Information Disclosure - Suspicious Comments</td><td align="center">Informational</td><td align="center">12</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Modern Web Application</td><td align="center">Informational</td><td align="center">7</td>
+                <td>Modern Web Application</td><td align="center">Informational</td><td align="center">11</td>
             </tr>
             <tr bgcolor="#e8e8e8">
                 <td>Storable and Cacheable Content</td><td align="center">Informational</td><td align="center">11</td>
             </tr>
             <tr bgcolor="#e8e8e8">
-                <td>Timestamp Disclosure - Unix</td><td align="center">Informational</td><td align="center">11</td>
+                <td>Timestamp Disclosure - Unix</td><td align="center">Informational</td><td align="center">10</td>
             </tr>
         </table>
         <div class="spacer-lg"></div>
@@ -202,6 +211,62 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/statistiques</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">frame-ancestors  https://diagoriente.beta.gouv.fr/ app.diagoriente.beta.gouv.fr diagoriente.beta.gouv.fr professionnels.diagoriente.beta.gouv.fr https://test.mathislorthios.dev test.mathislorthios.dev https://metis.afpa.fr https://metis.afpa.fr/;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/mentions-legales</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">frame-ancestors  https://diagoriente.beta.gouv.fr/ app.diagoriente.beta.gouv.fr diagoriente.beta.gouv.fr professionnels.diagoriente.beta.gouv.fr https://test.mathislorthios.dev test.mathislorthios.dev https://metis.afpa.fr https://metis.afpa.fr/;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/cgu</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">frame-ancestors  https://diagoriente.beta.gouv.fr/ app.diagoriente.beta.gouv.fr diagoriente.beta.gouv.fr professionnels.diagoriente.beta.gouv.fr https://test.mathislorthios.dev test.mathislorthios.dev https://metis.afpa.fr https://metis.afpa.fr/;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/documentation</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">frame-ancestors  https://diagoriente.beta.gouv.fr/ app.diagoriente.beta.gouv.fr diagoriente.beta.gouv.fr professionnels.diagoriente.beta.gouv.fr https://test.mathislorthios.dev test.mathislorthios.dev https://metis.afpa.fr https://metis.afpa.fr/;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/robots.txt</td>
             </tr>
               
@@ -216,7 +281,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">4</td>
+                <td width="20%">Instances</td><td width="80%">8</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -247,6 +312,157 @@ ZAP Scanning Report
   
   
             <tr height="24" class="risk-medium">
+                <th width="20%"><a name="medium"></a>Medium (Medium)</th><th width="80%">Reverse Tabnabbing</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>At least one link on this page is vulnerable to Reverse tabnabbing as it uses a target attribute without using both of the "noopener" and "noreferrer" keywords in the "rel" attribute, which allows the target page to take control of this page.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://beta.gouv.fr/" target="_blank"&gt;&lt;img style="width:100%;height:100%;margin-bottom:0" class="image2" src="/static/db2acdbfe5631303c513cc3611c90843/m.svg" alt="logo"/&gt;&lt;/a&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/robots.txt</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://beta.gouv.fr/" target="_blank"&gt;&lt;img style="width:100%;height:100%;margin-bottom:0" class="image2" src="/static/db2acdbfe5631303c513cc3611c90843/m.svg" alt="logo"/&gt;&lt;/a&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/documentation</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://beta.gouv.fr/" target="_blank"&gt;&lt;img style="width:100%;height:100%;margin-bottom:0" class="image2" src="/static/db2acdbfe5631303c513cc3611c90843/m.svg" alt="logo"/&gt;&lt;/a&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://beta.gouv.fr/" target="_blank"&gt;&lt;img style="width:100%;height:100%;margin-bottom:0" class="image2" src="/static/db2acdbfe5631303c513cc3611c90843/m.svg" alt="logo"/&gt;&lt;/a&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/cgu</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://beta.gouv.fr/" target="_blank"&gt;&lt;img style="width:100%;height:100%;margin-bottom:0" class="image2" src="/static/db2acdbfe5631303c513cc3611c90843/m.svg" alt="logo"/&gt;&lt;/a&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/mentions-legales</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://beta.gouv.fr/" target="_blank"&gt;&lt;img style="width:100%;height:100%;margin-bottom:0" class="image2" src="/static/db2acdbfe5631303c513cc3611c90843/m.svg" alt="logo"/&gt;&lt;/a&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/statistiques</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://beta.gouv.fr/" target="_blank"&gt;&lt;img style="width:100%;height:100%;margin-bottom:0" class="image2" src="/static/db2acdbfe5631303c513cc3611c90843/m.svg" alt="logo"/&gt;&lt;/a&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;a href="https://beta.gouv.fr/" target="_blank"&gt;&lt;img style="width:100%;height:100%;margin-bottom:0" class="image2" src="/static/db2acdbfe5631303c513cc3611c90843/m.svg" alt="logo"/&gt;&lt;/a&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">8</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Do not use a target attribute, or if you have to then also add the attribute: rel="noopener noreferrer".</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>https://owasp.org/www-community/attacks/Reverse_Tabnabbing</p><p>https://dev.to/ben/the-targetblank-vulnerability-by-example</p><p>https://mathiasbynens.github.io/rel-noopener/</p><p>https://medium.com/@jitbit/target-blank-the-most-underestimated-vulnerability-ever-96e328301f4c</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-medium">
                 <th width="20%"><a name="medium"></a>Medium (High)</th><th width="80%">Sub Resource Integrity Attribute Missing</th>
             </tr>
               
@@ -263,7 +479,22 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/4c1c676572c521914252e8b5391e12a5a8171883-d4a682656e8574deee17.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/robots.txt</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://sibforms.com/forms/end-form/build/main.js"&gt;
+    &lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/robots.txt</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -277,7 +508,123 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">1</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/documentation</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/documentation</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://sibforms.com/forms/end-form/build/main.js"&gt;
+    &lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://sibforms.com/forms/end-form/build/main.js"&gt;
+    &lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://sibforms.com/forms/end-form/build/main.js"&gt;
+    &lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://sibforms.com/forms/end-form/build/main.js"&gt;
+    &lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">10</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -290,6 +637,387 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%">CWE Id</td><td width="80%">345</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">15</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Absence of Anti-CSRF Tokens</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>No Anti-CSRF tokens were found in a HTML submission form.</p><p>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</p><p></p><p>CSRF attacks are effective in a number of situations, including:</p><p>    * The victim has an active session on the target site.</p><p>    * The victim is authenticated via HTTP auth on the target site.</p><p>    * The victim is on the same local network as the target site.</p><p></p><p>CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/statistiques</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form id="sib-form" style="padding:0px" method="POST"
+                    action="https://b54ca439.sibforms.com/serve/MUIEAOHL5-dvwPku0FEpat7THy2EZsEXhqs-p2phrL71trvz3W8FNGSHQQxXftCLHFIvZM_sG6pv5zd20QvVgJUvA30UUytioTT1S2p59YTrUiuL9mrvnAprcXFpNE0GbpnHhlLRiPryi4H4ychrC0GuznrfVb_034Qpj-9kKheghO8umISR1tvk0Sq8Hdg8bgiWuh_L4R4W7Q8Q"
+                    data-type="subscription"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form id="sib-form" style="padding:0px" method="POST"
+                    action="https://b54ca439.sibforms.com/serve/MUIEAOHL5-dvwPku0FEpat7THy2EZsEXhqs-p2phrL71trvz3W8FNGSHQQxXftCLHFIvZM_sG6pv5zd20QvVgJUvA30UUytioTT1S2p59YTrUiuL9mrvnAprcXFpNE0GbpnHhlLRiPryi4H4ychrC0GuznrfVb_034Qpj-9kKheghO8umISR1tvk0Sq8Hdg8bgiWuh_L4R4W7Q8Q"
+                    data-type="subscription"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/documentation</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form id="sib-form" style="padding:0px" method="POST"
+                    action="https://b54ca439.sibforms.com/serve/MUIEAOHL5-dvwPku0FEpat7THy2EZsEXhqs-p2phrL71trvz3W8FNGSHQQxXftCLHFIvZM_sG6pv5zd20QvVgJUvA30UUytioTT1S2p59YTrUiuL9mrvnAprcXFpNE0GbpnHhlLRiPryi4H4ychrC0GuznrfVb_034Qpj-9kKheghO8umISR1tvk0Sq8Hdg8bgiWuh_L4R4W7Q8Q"
+                    data-type="subscription"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form id="sib-form" style="padding:0px" method="POST"
+                    action="https://b54ca439.sibforms.com/serve/MUIEAOHL5-dvwPku0FEpat7THy2EZsEXhqs-p2phrL71trvz3W8FNGSHQQxXftCLHFIvZM_sG6pv5zd20QvVgJUvA30UUytioTT1S2p59YTrUiuL9mrvnAprcXFpNE0GbpnHhlLRiPryi4H4ychrC0GuznrfVb_034Qpj-9kKheghO8umISR1tvk0Sq8Hdg8bgiWuh_L4R4W7Q8Q"
+                    data-type="subscription"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form id="sib-form" style="padding:0px" method="POST"
+                    action="https://b54ca439.sibforms.com/serve/MUIEAOHL5-dvwPku0FEpat7THy2EZsEXhqs-p2phrL71trvz3W8FNGSHQQxXftCLHFIvZM_sG6pv5zd20QvVgJUvA30UUytioTT1S2p59YTrUiuL9mrvnAprcXFpNE0GbpnHhlLRiPryi4H4ychrC0GuznrfVb_034Qpj-9kKheghO8umISR1tvk0Sq8Hdg8bgiWuh_L4R4W7Q8Q"
+                    data-type="subscription"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/robots.txt</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form id="sib-form" style="padding:0px" method="POST"
+                    action="https://b54ca439.sibforms.com/serve/MUIEAOHL5-dvwPku0FEpat7THy2EZsEXhqs-p2phrL71trvz3W8FNGSHQQxXftCLHFIvZM_sG6pv5zd20QvVgJUvA30UUytioTT1S2p59YTrUiuL9mrvnAprcXFpNE0GbpnHhlLRiPryi4H4ychrC0GuznrfVb_034Qpj-9kKheghO8umISR1tvk0Sq8Hdg8bgiWuh_L4R4W7Q8Q"
+                    data-type="subscription"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/cgu</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form id="sib-form" style="padding:0px" method="POST"
+                    action="https://b54ca439.sibforms.com/serve/MUIEAOHL5-dvwPku0FEpat7THy2EZsEXhqs-p2phrL71trvz3W8FNGSHQQxXftCLHFIvZM_sG6pv5zd20QvVgJUvA30UUytioTT1S2p59YTrUiuL9mrvnAprcXFpNE0GbpnHhlLRiPryi4H4ychrC0GuznrfVb_034Qpj-9kKheghO8umISR1tvk0Sq8Hdg8bgiWuh_L4R4W7Q8Q"
+                    data-type="subscription"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/mentions-legales</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;form id="sib-form" style="padding:0px" method="POST"
+                    action="https://b54ca439.sibforms.com/serve/MUIEAOHL5-dvwPku0FEpat7THy2EZsEXhqs-p2phrL71trvz3W8FNGSHQQxXftCLHFIvZM_sG6pv5zd20QvVgJUvA30UUytioTT1S2p59YTrUiuL9mrvnAprcXFpNE0GbpnHhlLRiPryi4H4ychrC0GuznrfVb_034Qpj-9kKheghO8umISR1tvk0Sq8Hdg8bgiWuh_L4R4W7Q8Q"
+                    data-type="subscription"&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">8</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Phase: Architecture and Design</p><p>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</p><p>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</p><p></p><p>Phase: Implementation</p><p>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</p><p></p><p>Phase: Architecture and Design</p><p>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Use the ESAPI Session Management control.</p><p>This control includes a component for CSRF.</p><p></p><p>Do not use the GET method for any request that triggers a state change.</p><p></p><p>Phase: Implementation</p><p>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Other information</td><td width="80%"><p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF] was found in the following HTML form: [Form 1: "EMAIL" "email_address_check" "locale" ].</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>http://cwe.mitre.org/data/definitions/352.html</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">352</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">WASC Id</td><td width="80%">9</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Source ID</td><td width="80%">3</td>
+            </tr>
+            
+        </table>
+        <div class="spacer"></div>
+        <table width="100%" class="results">
+              
+  
+  
+  
+            <tr height="24" class="risk-low">
+                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Cross-Domain JavaScript Source File Inclusion</th>
+            </tr>
+              
+  
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Description</td><td width="80%"><p>The page includes one or more script files from a third-party domain.</p></td>
+            </tr>
+            <TR vAlign="top">
+                <TD colspan="2"></TD>
+            </TR>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/statistiques</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://sibforms.com/forms/end-form/build/main.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://sibforms.com/forms/end-form/build/main.js"&gt;
+    &lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/mentions-legales</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://sibforms.com/forms/end-form/build/main.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://sibforms.com/forms/end-form/build/main.js"&gt;
+    &lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://sibforms.com/forms/end-form/build/main.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://sibforms.com/forms/end-form/build/main.js"&gt;
+    &lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://sibforms.com/forms/end-form/build/main.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://sibforms.com/forms/end-form/build/main.js"&gt;
+    &lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/robots.txt</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://sibforms.com/forms/end-form/build/main.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://sibforms.com/forms/end-form/build/main.js"&gt;
+    &lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://sibforms.com/forms/end-form/build/main.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://sibforms.com/forms/end-form/build/main.js"&gt;
+    &lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/documentation</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://sibforms.com/forms/end-form/build/main.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://sibforms.com/forms/end-form/build/main.js"&gt;
+    &lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/cgu</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">https://sibforms.com/forms/end-form/build/main.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script src="https://sibforms.com/forms/end-form/build/main.js"&gt;
+    &lt;/script&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">8</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Solution</td><td width="80%"><p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Reference</td><td width="80%"><p></p></td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">CWE Id</td><td width="80%">829</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -324,20 +1052,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/page-data/sq/d/3715776872.json</td>
             </tr>
               
@@ -366,49 +1080,21 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/page-data/sq/d/63159454.json</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/page-data/app-data.json</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/statistiques</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -436,6 +1122,76 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/documentation</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/cgu</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/mentions-legales</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/page-data/index/page-data.json</td>
             </tr>
               
@@ -450,7 +1206,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">9</td>
+                <td width="20%">Instances</td><td width="80%">11</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -497,7 +1253,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/a79515f9-c7b83fbbdc210e296681.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/cgu</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -517,7 +1273,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/framework-93cd612b3d643a08ad6d.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/mentions-legales</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -527,57 +1283,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/styles-89fd2ae28bdf06750a71.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/app-8a21aad41e6ed296f4ca.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/sitemap.xml</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/webpack-runtime-ba3fffa374047c90e935.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/0b7b90cd-1678aede3a96c066fcac.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/statistiques</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -597,7 +1303,57 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/b50fcc16-c1f10fb85893c107245f.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/documentation</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/framework-93cd612b3d643a08ad6d.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/webpack-runtime-e9082057ace1f6b26b6a.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/styles-89fd2ae28bdf06750a71.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/sitemap.xml</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -654,7 +1410,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/0b7b90cd-1678aede3a96c066fcac.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -662,13 +1418,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">/static/odile-Regular-93680edbdd52f22d0fe76981257aeb59</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/documentation</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -696,7 +1452,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/component---src-pages-documentation-documentation-tsx-5f81452adc95cfc7dc3c.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/mentions-legales</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -704,13 +1460,13 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">documentation-module--documentation_container--2_SVh</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">/static/odile-Regular-93680edbdd52f22d0fe76981257aeb59</td>
             </tr>
               
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/component---src-pages-home-page-home-page-tsx-a35898d01c35c94dfa40.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/statistiques</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -718,7 +1474,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">homepage-module--home_container_home--1FTzV</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">/static/odile-Regular-93680edbdd52f22d0fe76981257aeb59</td>
             </tr>
               
   
@@ -738,34 +1494,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/app-8a21aad41e6ed296f4ca.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">/campus2023/components/demarcheCampus/demarche/</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/323797f025cf413a17fde46afddc588921e8fb37-5a8aefbea75c2fa0bec5.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">boxNumber-module--boxNumber_wrapper--2Uc-6</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/sitemap.xml</td>
             </tr>
               
@@ -780,7 +1508,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/component---src-pages-demarche-demarche-tsx-f65c2a023fd8ae3889ae.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/cgu</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -788,7 +1516,35 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">selectScroll-module--sticky--3udj3</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">/static/odile-Regular-93680edbdd52f22d0fe76981257aeb59</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/0b7b90cd-1678aede3a96c066fcac.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/app-8a21aad41e6ed296f4ca.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">/campus2023/components/demarcheCampus/demarche/</td>
             </tr>
               
   
@@ -816,7 +1572,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>GIF89a\x0001\x0000\x0001\x0000\x0000�\x0000,\x0000\x0000\x0000\x0000\x0001\x0000\x0001\x0000\x0000\x0002\x0000;</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>��Z�'?�إ{�^��Z��w��\x001eu�]�g���\x001f{���]���</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
@@ -862,7 +1618,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/0b7b90cd-1678aede3a96c066fcac.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/component---src-pages-index-tsx-3a95a5d615bc20bd1c94.js</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -870,21 +1626,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">SELECT</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/framework-93cd612b3d643a08ad6d.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">select</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">query</td>
             </tr>
               
   
@@ -904,20 +1646,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/component---src-pages-education-education-tsx-28ac1e5759ab01d696fe.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">admin</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/2d4594b7-8e97825caa24f86f4506.js</td>
             </tr>
               
@@ -927,34 +1655,6 @@ ZAP Scanning Report
               
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent2">Evidence</td><td width="80%">dB</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/component---src-pages-index-tsx-8bff82fcd27975550a01.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">query</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/polyfill-40d5b9705d0e5c94fc9f.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">username</td>
             </tr>
               
   
@@ -988,20 +1688,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/a79515f9-c7b83fbbdc210e296681.js</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">SELECT</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/323797f025cf413a17fde46afddc588921e8fb37-5a8aefbea75c2fa0bec5.js</td>
             </tr>
               
@@ -1030,6 +1716,76 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/0b7b90cd-1678aede3a96c066fcac.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">SELECT</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/framework-93cd612b3d643a08ad6d.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">select</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/component---src-pages-education-education-tsx-28ac1e5759ab01d696fe.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">admin</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/polyfill-40d5b9705d0e5c94fc9f.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">username</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/a79515f9-c7b83fbbdc210e296681.js</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">SELECT</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%">Instances</td><td width="80%">12</td>
             </tr>
               
@@ -1038,7 +1794,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>The following pattern was used: \bSELECT\b and was detected in the element starting with: "(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{"4R65":function(t,i,e){!function(t){"use strict";var i=Object.freeze;fu", see evidence field for the suspicious comment/snippet.</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>The following pattern was used: \bQUERY\b and was detected in the element starting with: "(window.webpackJsonp=window.webpackJsonp||[]).push([[29,20,21,22,24,26,32,33],{"+3zt":function(e,t,a){e.exports={essaiContainer:", see evidence field for the suspicious comment/snippet.</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
@@ -1084,7 +1840,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/sitemap.xml</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/robots.txt</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1092,7 +1848,77 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script&gt;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer', 'GTM-T5SXVD3');&lt;/script&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5SXVD3" height="0" width="0" style="display: none; visibility: hidden" aria-hidden="true"&gt;&lt;/iframe&gt;&lt;/noscript&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/statistiques</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5SXVD3" height="0" width="0" style="display: none; visibility: hidden" aria-hidden="true"&gt;&lt;/iframe&gt;&lt;/noscript&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/documentation</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5SXVD3" height="0" width="0" style="display: none; visibility: hidden" aria-hidden="true"&gt;&lt;/iframe&gt;&lt;/noscript&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5SXVD3" height="0" width="0" style="display: none; visibility: hidden" aria-hidden="true"&gt;&lt;/iframe&gt;&lt;/noscript&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/cgu</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5SXVD3" height="0" width="0" style="display: none; visibility: hidden" aria-hidden="true"&gt;&lt;/iframe&gt;&lt;/noscript&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5SXVD3" height="0" width="0" style="display: none; visibility: hidden" aria-hidden="true"&gt;&lt;/iframe&gt;&lt;/noscript&gt;</td>
             </tr>
               
   
@@ -1112,20 +1938,6 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/robots.txt</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script&gt;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer', 'GTM-T5SXVD3');&lt;/script&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/polyfill-40d5b9705d0e5c94fc9f.js</td>
             </tr>
               
@@ -1140,7 +1952,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/sitemap.xml</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1148,21 +1960,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script&gt;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer', 'GTM-T5SXVD3');&lt;/script&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;script&gt;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer', 'GTM-T5SXVD3');&lt;/script&gt;</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5SXVD3" height="0" width="0" style="display: none; visibility: hidden" aria-hidden="true"&gt;&lt;/iframe&gt;&lt;/noscript&gt;</td>
             </tr>
               
   
@@ -1182,7 +1980,21 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">7</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/mentions-legales</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5SXVD3" height="0" width="0" style="display: none; visibility: hidden" aria-hidden="true"&gt;&lt;/iframe&gt;&lt;/noscript&gt;</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%">Instances</td><td width="80%">11</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1190,7 +2002,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>No links have been found while there are scripts, which is an indication that this is a modern web application.</p></td>
+                <td width="20%">Other information</td><td width="80%"><p>A noScript tag has been found, which is an indication that the application works differently with JavaScript enabled compared to when it is not.</p></td>
             </tr>
             <TR vAlign="top">
                 <TD colspan="2"></TD>
@@ -1228,6 +2040,46 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/mentions-legales</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/statistiques</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/cgu</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/icons/icon-48x48.png?v=72d8827a7ff40f1b8f3eae272a482423</td>
             </tr>
               
@@ -1258,37 +2110,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/icons/icon-192x192.png?v=72d8827a7ff40f1b8f3eae272a482423</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/icons/icon-72x72.png?v=72d8827a7ff40f1b8f3eae272a482423</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/icons/icon-96x96.png?v=72d8827a7ff40f1b8f3eae272a482423</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/icons/icon-144x144.png?v=72d8827a7ff40f1b8f3eae272a482423</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/documentation</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1309,16 +2131,6 @@ ZAP Scanning Report
   
             <tr bgcolor="#e8e8e8">
                 <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/manifest.webmanifest</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1392,7 +2204,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/sitemap.xml</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/documentation</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1406,7 +2218,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/framework-93cd612b3d643a08ad6d.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/sitemap.xml</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1414,7 +2226,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">1073741823</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">63159454</td>
             </tr>
               
   
@@ -1448,7 +2260,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/framework-93cd612b3d643a08ad6d.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1456,7 +2268,21 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">1073741822</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">63159454</td>
+            </tr>
+              
+  
+  
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
+            </tr>
+              
+            <tr bgcolor="#e8e8e8">
+                <td width="20%" class="indent2">Evidence</td><td width="80%">63159454</td>
             </tr>
               
   
@@ -1476,7 +2302,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/framework-93cd612b3d643a08ad6d.js</td>
+                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/documentation</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
@@ -1484,21 +2310,7 @@ ZAP Scanning Report
             </tr>
               
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">1073741821</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">63159454</td>
+                <td width="20%" class="indent2">Evidence</td><td width="80%">1947816842</td>
             </tr>
               
   
@@ -1532,21 +2344,7 @@ ZAP Scanning Report
   
   
             <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://diagoriente.beta.gouv.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">63159454</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">11</td>
+                <td width="20%">Instances</td><td width="80%">10</td>
             </tr>
               
             <tr bgcolor="#e8e8e8">
