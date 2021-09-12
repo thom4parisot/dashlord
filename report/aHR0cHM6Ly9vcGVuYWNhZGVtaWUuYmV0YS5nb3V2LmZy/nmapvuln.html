@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln openacademie.beta.gouv.fr</pre>
-<p class="lead">Sat Sep 11 06:15:57 2021 – Sat Sep 11 06:16:38 2021<br>1 hosts scanned.
+<p class="lead">Sun Sep 12 05:39:51 2021 – Sun Sep 12 05:40:45 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -119,30 +119,34 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, SSLSessionReq: 
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sat, 11 Sep 2021 06:16:17 GMT
+    date: Sun, 12 Sep 2021 05:40:15 GMT
   FourOhFourRequest: 
     HTTP/1.0 400 Bad Request
-    date: Sat, 11 Sep 2021 06:16:12 GMT
+    date: Sun, 12 Sep 2021 05:40:09 GMT
     Missing host header
-  GetRequest: 
+  GetRequest, HTTPOptions: 
     HTTP/1.0 400 Bad Request
-    date: Sat, 11 Sep 2021 06:16:10 GMT
+    date: Sun, 12 Sep 2021 05:40:08 GMT
     Missing host header
-  HTTPOptions: 
-    HTTP/1.0 400 Bad Request
-    date: Sat, 11 Sep 2021 06:16:11 GMT
-    Missing host header
-  Kerberos, SMBProgNeg, TLSSessionReq, TerminalServerCookie: 
+  Kerberos, SMBProgNeg: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sat, 11 Sep 2021 06:16:18 GMT
-  RTSPRequest, X11Probe: 
+    date: Sun, 12 Sep 2021 05:40:17 GMT
+  RTSPRequest: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sat, 11 Sep 2021 06:16:11 GMT</pre>
+    date: Sun, 12 Sep 2021 05:40:08 GMT
+  SSLSessionReq, TLSSessionReq: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Sun, 12 Sep 2021 05:40:16 GMT
+  X11Probe: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Sun, 12 Sep 2021 05:40:09 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -158,38 +162,54 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP: 
+  DNSStatusRequestTCP: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sat, 11 Sep 2021 06:16:25 GMT
+    date: Sun, 12 Sep 2021 05:40:25 GMT
+  DNSVersionBindReqTCP, RPCCheck: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Sun, 12 Sep 2021 05:40:24 GMT
   FourOhFourRequest: 
     HTTP/1.0 400 Bad Request
-    date: Sat, 11 Sep 2021 06:16:18 GMT
+    date: Sun, 12 Sep 2021 05:40:16 GMT
     Missing host header
-  GetRequest, HTTPOptions: 
+  GetRequest: 
     HTTP/1.0 400 Bad Request
-    date: Sat, 11 Sep 2021 06:16:17 GMT
+    date: Sun, 12 Sep 2021 05:40:14 GMT
     Missing host header
-  Help, SSLSessionReq, TerminalServerCookie: 
+  HTTPOptions: 
+    HTTP/1.0 400 Bad Request
+    date: Sun, 12 Sep 2021 05:40:15 GMT
+    Missing host header
+  Help: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sat, 11 Sep 2021 06:16:26 GMT
-  Kerberos, TLSSessionReq: 
+    date: Sun, 12 Sep 2021 05:40:26 GMT
+  Kerberos: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sat, 11 Sep 2021 06:16:27 GMT
-  RPCCheck, RTSPRequest: 
+    date: Sun, 12 Sep 2021 05:40:29 GMT
+  RTSPRequest: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sat, 11 Sep 2021 06:16:24 GMT
+    date: Sun, 12 Sep 2021 05:40:23 GMT
   SMBProgNeg: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sat, 11 Sep 2021 06:16:28 GMT
+    date: Sun, 12 Sep 2021 05:40:30 GMT
+  SSLSessionReq, TerminalServerCookie: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Sun, 12 Sep 2021 05:40:27 GMT
+  TLSSessionReq: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Sun, 12 Sep 2021 05:40:28 GMT
   tor-versions: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sat, 11 Sep 2021 06:16:18 GMT</pre>
+    date: Sun, 12 Sep 2021 05:40:17 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
