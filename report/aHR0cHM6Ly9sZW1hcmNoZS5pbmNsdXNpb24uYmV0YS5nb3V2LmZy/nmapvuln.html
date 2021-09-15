@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln lemarche.inclusion.beta.gouv.fr</pre>
-<p class="lead">Tue Sep 14 05:04:32 2021 – Tue Sep 14 05:07:18 2021<br>1 hosts scanned.
+<p class="lead">Wed Sep 15 05:04:00 2021 – Wed Sep 15 05:06:48 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,7 +76,7 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>185.42.117.109</td>
+<td>185.42.117.108</td>
 <td>lemarche.inclusion.beta.gouv.fr</td>
 <td>7</td>
 <td>0</td>
@@ -91,8 +91,8 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#185-42-117-109"><h3 class="panel-title">185.42.117.109 - lemarche.inclusion.beta.gouv.fr</h3></div>
-<div class="panel-body collapse in" id="185-42-117-109">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#185-42-117-108"><h3 class="panel-title">185.42.117.108 - lemarche.inclusion.beta.gouv.fr</h3></div>
+<div class="panel-body collapse in" id="185-42-117-108">
 <h4>Hostnames</h4>
 <ul><li>lemarche.inclusion.beta.gouv.fr (user)</li></ul>
 <h4>Ports</h4>
@@ -174,19 +174,25 @@
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
   Kerberos: 
-    9.|V
-    &lt;&lt;&gt;R
-    r`[.
-  SMBProgNeg: 
-    .D8O
-    rd)8
-    Bp|yx
-    4'LPR
-    &lt;&amp;BQD
-    -\x1e
-    1J0$
+    wHcf[
+    +(K,HV
+    *7=j&amp;
+    1xdmc*H
+    kM|{
+    oyz_
+    \x19%
+    l!bN
+    *Z.B5
+    \xcc
   TLSSessionReq: 
-    ;M+nEX!</pre>
+    GP]s
+    .Q0R
+    _7&amp;#&lt;]xZ
+    ot=}
+    BqZb&lt;%v9
+    \xab
+    ;k73
+    z{/l3</pre>
 </td></tr>
 <tr class="success">
 <td title="Port">5001</td>
@@ -212,12 +218,29 @@
 <td title="Port">5903</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">tcpwrapped</td>
+<td title="Service">vnc-3</td>
 <td title="Product"></td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  DNSStatusRequestTCP: 
+    {"translate":"disconnect.genericReason","with":["Internal Exception: io.netty.handler.codec.DecoderException: java.lang.IndexOutOfBoundsException: index: 3, length: 16 (expected: range(0, 12))"]}
+  DNSVersionBindReqTCP: 
+    {"translate":"disconnect.genericReason","with":["Internal Exception: io.netty.handler.codec.DecoderException: java.io.IOException: Packet -1/0 (PacketHandshakingInSetProtocol) was larger than I expected, found 23 bytes extra whilst reading packet 0"]}
+  Kerberos: 
+    {"translate":"disconnect.genericReason","with":["Internal Exception: io.netty.handler.codec.DecoderException: java.io.IOException: Bad packet id 106"]}
+  LPDString: 
+    {"translate":"disconnect.genericReason","with":["Internal Exception: io.netty.handler.codec.DecoderException: java.io.IOException: Bad packet id 100"]}
+  RPCCheck: 
+    {"translate":"disconnect.genericReason","with":["Internal Exception: io.netty.handler.codec.DecoderException: java.io.IOException: Bad packet id 114"]}
+  SSLSessionReq, TLSSessionReq: 
+    {"translate":"disconnect.genericReason","with":["Internal Exception: io.netty.handler.codec.DecoderException: java.io.IOException: Bad packet id 3"]}
+  TerminalServerCookie: 
+    {"translate":"disconnect.genericReason","with":["Internal Exception: io.netty.handler.codec.DecoderException: java.lang.IndexOutOfBoundsException: index: 3, length: 42 (expected: range(0, 3))"]}</pre>
+</td></tr>
 <tr class="success">
 <td title="Port">9999</td>
 <td title="Protocol">tcp</td>
@@ -246,7 +269,7 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>185.42.117.109 - lemarche.inclusion.beta.gouv.fr</td>
+<td>185.42.117.108 - lemarche.inclusion.beta.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
@@ -256,7 +279,7 @@
 <td></td>
 </tr>
 <tr>
-<td>185.42.117.109 - lemarche.inclusion.beta.gouv.fr</td>
+<td>185.42.117.108 - lemarche.inclusion.beta.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
 <td>https</td>
@@ -266,7 +289,7 @@
 <td></td>
 </tr>
 <tr>
-<td>185.42.117.109 - lemarche.inclusion.beta.gouv.fr</td>
+<td>185.42.117.108 - lemarche.inclusion.beta.gouv.fr</td>
 <td>3000</td>
 <td>tcp</td>
 <td>ppp</td>
@@ -276,7 +299,7 @@
 <td></td>
 </tr>
 <tr>
-<td>185.42.117.109 - lemarche.inclusion.beta.gouv.fr</td>
+<td>185.42.117.108 - lemarche.inclusion.beta.gouv.fr</td>
 <td>5001</td>
 <td>tcp</td>
 <td>ssh</td>
@@ -286,7 +309,7 @@
 <td>protocol 2.0</td>
 </tr>
 <tr>
-<td>185.42.117.109 - lemarche.inclusion.beta.gouv.fr</td>
+<td>185.42.117.108 - lemarche.inclusion.beta.gouv.fr</td>
 <td>5002</td>
 <td>tcp</td>
 <td>ssh</td>
@@ -296,17 +319,17 @@
 <td>protocol 2.0</td>
 </tr>
 <tr>
-<td>185.42.117.109 - lemarche.inclusion.beta.gouv.fr</td>
+<td>185.42.117.108 - lemarche.inclusion.beta.gouv.fr</td>
 <td>5903</td>
 <td>tcp</td>
-<td>tcpwrapped</td>
+<td>vnc-3</td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>185.42.117.109 - lemarche.inclusion.beta.gouv.fr</td>
+<td>185.42.117.108 - lemarche.inclusion.beta.gouv.fr</td>
 <td>9999</td>
 <td>tcp</td>
 <td>tcpwrapped</td>
