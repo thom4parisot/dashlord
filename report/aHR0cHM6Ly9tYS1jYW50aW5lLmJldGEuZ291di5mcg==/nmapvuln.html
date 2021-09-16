@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln ma-cantine.beta.gouv.fr</pre>
-<p class="lead">Wed Sep 15 05:21:25 2021 – Wed Sep 15 05:24:10 2021<br>1 hosts scanned.
+<p class="lead">Thu Sep 16 05:27:46 2021 – Thu Sep 16 05:30:36 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,9 +76,9 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>46.252.181.104</td>
+<td>185.42.117.109</td>
 <td>ma-cantine.beta.gouv.fr</td>
-<td>7</td>
+<td>6</td>
 <td>0</td>
 </tr></tbody>
 </table></div>
@@ -91,8 +91,8 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#46-252-181-104"><h3 class="panel-title">46.252.181.104 - ma-cantine.beta.gouv.fr</h3></div>
-<div class="panel-body collapse in" id="46-252-181-104">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#185-42-117-109"><h3 class="panel-title">185.42.117.109 - ma-cantine.beta.gouv.fr</h3></div>
+<div class="panel-body collapse in" id="185-42-117-109">
 <h4>Hostnames</h4>
 <ul><li>ma-cantine.beta.gouv.fr (user)</li></ul>
 <h4>Ports</h4>
@@ -172,7 +172,30 @@
 </tr>
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">ERROR: Script execution failed (use -d to debug)</pre>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  Kerberos: 
+    &amp;a'S
+    \xce
+    }dBa
+    \xd1H
+    RX]obX
+    XMj&lt;
+    &gt;BXo4[
+    \xcd4
+    @]TR
+    G4Sh
+  TLSSessionReq: 
+    VH26
+    *W=#mQc.
+    Nga:F
+    2B8{
+    \x17b
+    `^pL
+    '-N`h
+    &lt;\x1c
+    \xed
+    @\${&amp;
+    0S+d</pre>
 </td></tr>
 <tr class="success">
 <td title="Port">5001</td>
@@ -194,33 +217,6 @@
 <td title="Extra Info">protocol 2.0</td>
 </tr>
 <tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:apache:sshd:1.7.0">cpe:/a:apache:sshd:1.7.0</a></td></tr>
-<tr class="success">
-<td title="Port">5903</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">vnc-3</td>
-<td title="Product"></td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
-</tr>
-<tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP: 
-    {"translate":"disconnect.genericReason","with":["Internal Exception: io.netty.handler.codec.DecoderException: java.lang.IndexOutOfBoundsException: index: 3, length: 16 (expected: range(0, 12))"]}
-  DNSVersionBindReqTCP: 
-    {"translate":"disconnect.genericReason","with":["Internal Exception: io.netty.handler.codec.DecoderException: java.io.IOException: Packet -1/0 (PacketHandshakingInSetProtocol) was larger than I expected, found 23 bytes extra whilst reading packet 0"]}
-  Kerberos: 
-    {"translate":"disconnect.genericReason","with":["Internal Exception: io.netty.handler.codec.DecoderException: java.io.IOException: Bad packet id 106"]}
-  LPDString: 
-    {"translate":"disconnect.genericReason","with":["Internal Exception: io.netty.handler.codec.DecoderException: java.io.IOException: Bad packet id 100"]}
-  RPCCheck: 
-    {"translate":"disconnect.genericReason","with":["Internal Exception: io.netty.handler.codec.DecoderException: java.io.IOException: Bad packet id 114"]}
-  SSLSessionReq, TLSSessionReq: 
-    {"translate":"disconnect.genericReason","with":["Internal Exception: io.netty.handler.codec.DecoderException: java.io.IOException: Bad packet id 3"]}
-  TerminalServerCookie: 
-    {"translate":"disconnect.genericReason","with":["Internal Exception: io.netty.handler.codec.DecoderException: java.lang.IndexOutOfBoundsException: index: 3, length: 42 (expected: range(0, 3))"]}</pre>
-</td></tr>
 <tr class="success">
 <td title="Port">9999</td>
 <td title="Protocol">tcp</td>
@@ -249,7 +245,7 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>46.252.181.104 - ma-cantine.beta.gouv.fr</td>
+<td>185.42.117.109 - ma-cantine.beta.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
@@ -259,7 +255,7 @@
 <td></td>
 </tr>
 <tr>
-<td>46.252.181.104 - ma-cantine.beta.gouv.fr</td>
+<td>185.42.117.109 - ma-cantine.beta.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
 <td>https</td>
@@ -269,7 +265,7 @@
 <td></td>
 </tr>
 <tr>
-<td>46.252.181.104 - ma-cantine.beta.gouv.fr</td>
+<td>185.42.117.109 - ma-cantine.beta.gouv.fr</td>
 <td>3000</td>
 <td>tcp</td>
 <td>ppp</td>
@@ -279,7 +275,7 @@
 <td></td>
 </tr>
 <tr>
-<td>46.252.181.104 - ma-cantine.beta.gouv.fr</td>
+<td>185.42.117.109 - ma-cantine.beta.gouv.fr</td>
 <td>5001</td>
 <td>tcp</td>
 <td>ssh</td>
@@ -289,7 +285,7 @@
 <td>protocol 2.0</td>
 </tr>
 <tr>
-<td>46.252.181.104 - ma-cantine.beta.gouv.fr</td>
+<td>185.42.117.109 - ma-cantine.beta.gouv.fr</td>
 <td>5002</td>
 <td>tcp</td>
 <td>ssh</td>
@@ -299,17 +295,7 @@
 <td>protocol 2.0</td>
 </tr>
 <tr>
-<td>46.252.181.104 - ma-cantine.beta.gouv.fr</td>
-<td>5903</td>
-<td>tcp</td>
-<td>vnc-3</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>46.252.181.104 - ma-cantine.beta.gouv.fr</td>
+<td>185.42.117.109 - ma-cantine.beta.gouv.fr</td>
 <td>9999</td>
 <td>tcp</td>
 <td>tcpwrapped</td>
