@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln openacademie.beta.gouv.fr</pre>
-<p class="lead">Thu Sep 16 06:20:50 2021 – Thu Sep 16 06:21:31 2021<br>1 hosts scanned.
+<p class="lead">Mon Sep 20 18:25:43 2021 – Mon Sep 20 18:26:30 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -119,26 +119,30 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, Help, Kerberos, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+  DNSStatusRequestTCP, Kerberos, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Thu, 16 Sep 2021 06:21:11 GMT
-  DNSVersionBindReqTCP, RPCCheck: 
+    date: Mon, 20 Sep 2021 18:26:06 GMT
+  DNSVersionBindReqTCP, Help, RPCCheck: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Thu, 16 Sep 2021 06:21:10 GMT
-  FourOhFourRequest: 
+    date: Mon, 20 Sep 2021 18:26:05 GMT
+  FourOhFourRequest, GetRequest, HTTPOptions: 
     HTTP/1.0 400 Bad Request
-    date: Thu, 16 Sep 2021 06:21:05 GMT
+    date: Mon, 20 Sep 2021 18:25:59 GMT
     Missing host header
-  GetRequest, HTTPOptions: 
-    HTTP/1.0 400 Bad Request
-    date: Thu, 16 Sep 2021 06:21:04 GMT
-    Missing host header
-  RTSPRequest, X11Probe: 
+  RTSPRequest: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Thu, 16 Sep 2021 06:21:04 GMT</pre>
+    date: Mon, 20 Sep 2021 18:25:58 GMT
+  SMBProgNeg: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Mon, 20 Sep 2021 18:26:07 GMT
+  X11Probe: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Mon, 20 Sep 2021 18:25:59 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -154,46 +158,38 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, SSLSessionReq: 
+  DNSStatusRequestTCP, DNSVersionBindReqTCP: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Thu, 16 Sep 2021 06:21:19 GMT
+    date: Mon, 20 Sep 2021 18:26:14 GMT
   FourOhFourRequest: 
     HTTP/1.0 400 Bad Request
-    date: Thu, 16 Sep 2021 06:21:12 GMT
+    date: Mon, 20 Sep 2021 18:26:06 GMT
     Missing host header
-  GetRequest: 
+  GetRequest, HTTPOptions: 
     HTTP/1.0 400 Bad Request
-    date: Thu, 16 Sep 2021 06:21:11 GMT
+    date: Mon, 20 Sep 2021 18:26:05 GMT
     Missing host header
-  HTTPOptions: 
-    HTTP/1.0 400 Bad Request
-    date: Thu, 16 Sep 2021 06:21:10 GMT
-    Missing host header
-  Help, TerminalServerCookie: 
+  Help: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Thu, 16 Sep 2021 06:21:20 GMT
-  Kerberos, TLSSessionReq: 
+    date: Mon, 20 Sep 2021 18:26:15 GMT
+  Kerberos, SMBProgNeg: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Thu, 16 Sep 2021 06:21:21 GMT
-  RPCCheck: 
+    date: Mon, 20 Sep 2021 18:26:18 GMT
+  RPCCheck, RTSPRequest: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Thu, 16 Sep 2021 06:21:18 GMT
-  RTSPRequest: 
+    date: Mon, 20 Sep 2021 18:26:13 GMT
+  SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Thu, 16 Sep 2021 06:21:17 GMT
-  SMBProgNeg: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Thu, 16 Sep 2021 06:21:22 GMT
+    date: Mon, 20 Sep 2021 18:26:16 GMT
   tor-versions: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Thu, 16 Sep 2021 06:21:12 GMT</pre>
+    date: Mon, 20 Sep 2021 18:26:06 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
