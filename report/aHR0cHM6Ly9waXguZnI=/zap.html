@@ -1,720 +1,943 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>ZAP Scanning Report</title>
-        <style>
-body{
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  color: #000;
-  font-size: 13px;
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ZAP Scanning Report</title>
+<style type="text/css">
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #000;
+	font-size: 13px;
 }
-h1{
-  text-align: center;
-  font-weight: bold;
-  font-size: 32px
+
+h1 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 32px
 }
-h3{
-  font-size: 16px;
+
+h3 {
+	font-size: 16px;
 }
-table{
-  border: none;
-  font-size: 13px;
+
+table {
+	border: none;
+	font-size: 13px;
 }
+
 td, th {
-  padding: 3px 4px;
-  word-break: break-word;
+	padding: 3px 4px;
+	word-break: break-word;
 }
-th{
-  font-weight: bold;
+
+th {
+	font-weight: bold;
+	background-color: #666666;
 }
-.results th{
-  text-align: left;
+
+td {
+	background-color: #e8e8e8;
 }
-.spacer{
-  margin: 10px;
+
+.spacer {
+	margin: 10px;
 }
-.spacer-lg{
-  margin: 40px;
+
+.spacer-lg {
+	margin: 40px;
 }
-.indent1{
-  padding: 4px 20px;
+
+.indent1 {
+	padding: 4px 20px;
 }
-.indent2{
-  padding: 4px 40px;
+
+.indent2 {
+	padding: 4px 40px;
 }
-.risk-high{
-  background-color: red;
-  color: #FFF;
+
+.risk-3 {
+	background-color: red;
+	color: #FFF;
 }
-.risk-medium{
-  background-color: orange;
-  color: #FFF;
+
+.risk-2 {
+	background-color: orange;
+	color: #FFF;
 }
-.risk-low{
-  background-color: yellow;
-  color: #000;
+
+.risk-1 {
+	background-color: yellow;
+	color: #000;
 }
-.risk-info{
-  background-color: blue;
-  color: #FFF;
+
+.risk-0 {
+	background-color: blue;
+	color: #FFF;
 }
-.summary th{
-  color: #FFF;
+
+.risk--1 {
+	background-color: green;
+	color: #FFF;
 }
-.alerts th{
-  color: #FFF;
+
+.summary {
+	width: 45%;
 }
-.left-header{
-  display: inline-block;
+
+.summary th {
+	color: #FFF;
 }
-.time-stamp{
-  float: right;
+
+.alerts {
+	width: 75%;
+}
+
+.alerts th {
+	color: #FFF;
+}
+
+.results {
+	width: 100%;
+}
+
+.results th {
+	text-align: left;
+}
+
+.left-header {
+	display: inline-block;
 }
 </style>
-    </head>
-    <body>
-        <h1>
-            <img src="data:image/png;base64,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">
-ZAP Scanning Report
+</head>
+<body>
+	<h1>
+		<!-- The ZAP Logo -->
+		<img
+			src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAABqbAAAamwHdbkbTAAAAB3RJTUUH4QsKDDQPKy6k8AAABxpJREFUWMO9l31sVWcdxz+/55xzbwt9QddJExClvIzNxTKJDZi22oJSbFZpmRb4g8sfhpEIwXQNTKh0NYgiMKIwo5AsdIxdQldGNBN5W2OTFRVcIZE1YwExcXOdc1DK+nLvOc/PP87tC9CWsj98bp6ck3Ofc57v7+37/T3wYGMucBR4F/gK/8exAugAdPXq1bpx40YFekZdHYuP+8PuGP+lAc8CmzIyMtLq6uqora3FcRwAzp49m/7Wv5O95tsNEfyEKvwH9B1V2hT7GnB+PABkhGePAvVA9dy5c6mvr2fp0qX3LOru7iYrK4toSQ1OXhGKohpOiyVQe0NVn9PGFb8iFofGFSMCMMPulwEXgbdXrlxZ3dHRQXt7+4ibA2RmZtLc3Ex/y/O4fg8RMUSMS8RxiRiPqPE+4xrnl07syA3Q+aN5wADlwO1oNPpqQ0NDfl9fH4cPH2bOnDn3dV9VVRWVlVV88vsteNF0XCO4xuA6Bs9xiBgPz/EmueKcIxavHyk/BPjnli1bpm3btu1TZ2hmxkTk8aeYMK8aay1WFVWwqgSqBDYgqQFJGxygccWa4e86IhJpbW39Zk5ODgUFBZ8KwOLFZeyr/wHZs0vw0jMxIqFpAuFt+EOYZ/OrAi41t96dhF8HThcWFnpnzpwhGo0+MIhnamvZs+8AM55uIhn4+Cnrkza8Wqv4NiBhfXwNCgxy3jauuKMKPOCPrpHSU2fOUlJS8sAg8qZP50bGY0xeuIFk4JO0SnIYiMAqSRuQDPyPgsbqh++ugqSsPXGC+WsoLS1lzZqnHxhA40svcfPvfyDNjRARwTOCJ+E0IjgiOGIwRnIkFl97NwBMX9dPvEfLSC+t5cCB/eTk5Ix78ylTplBcXMxDjy3EweIZISKSqoxwcyOCYwRXHETkuSEAsTjE4kVGTLrjpdP7p33U1NTQ2dk5bgCbN28Ow7BoA8YmcVOWR1KWuyKIgEEwYjBiJhN75Ushr15qRp747g9dcRZ4RtCuf3HhdBMlpQuZNm3auAAUFBRw+fJlWl/dy9SCaqwGIBIyJGBTUwemWqzy/mAIRPmaEUGsJeNbz+IVfJ+ioiI2bNgwbi80NTUxJWciV47/GM9Lwwg4CA6CSblbBqYYRPjqEACRR8JaVcRPkPHlJ5m66kX27W8kL2/6uMPR3t7Ox+++yQcXjmLEIEYQA8YIkuIHSYVDkBnDk3DSEDwAi5c5mUfWNtGVPovc3FwOHTp0XwDZ2dm0nTvH9Td+zSedVxDVkIQAEQ1BoIgKCpnmflqpQcAXyjYxo6KeVatWUVZWRiKRGPO1+fPns2vXLjoOr7uvFA8HcHMoQ8IHmkqOINnH1d81kJeXR0VFRcqKkUcQBLS0tHD79u2QXHq7UmkIqgKqoIKKAnQPNiSqXFG0QFVCXbcGK4pVIdnTBcDOnTupqqoa06q2tjZKS0uZ8LmZzKiox5nwWXzfx9qBfmGgCkDRa4MeUNE3repg2QSEiwMFk5nDF8vrWLZsGTNnzqS9vX1UAEVFRezYsYOeD68y8fNPEFifAL2rDAfBnJdhGv0NzzgtoYYbHGOICkSMIWKEqBE8x+X91v18cKGJyspKDh48SFZW1ohAlixZQstfLzM99iK9iQQJqySsxVfFDyz9Nolv/fw7gumsPtIbMZE0zxhcR3DFEDVCZIDTjeA5Drb3Jv84sYOu639j69atNDQ0jAgiN3cyPQ/NJXvhM/QnEwRW8dWSDAL6bbLTHlyee0cVWNWfBhpgVbEWfFUSqiSGqVoyCCCaxayndjKn+nm2736BzIyJHDt27B4AFy9eovvtU3R3nA5DkFJEXwNUtWHEptSsPtIXNW7UMy4mJSLeMA+4IrhCKC6A46XR+VYz772xj/z8fJqampg1a9bg906ePElZWRlZy3+DZuSGPUGQ/G/QuDznHjVMeaEyaS2+WqxVbMryxMDVKv0W+qzSr0pPoo/Mx8uZs/51rgdTmD17NrFYbJArFi9ezKZNm7h1dD1B4JO0PgG23KR6QxnlYLHXM846z7i4oX4P6vmA9Q6ENMsQZyiGxK1OPjr5M5Kd77B7925qamoAWLBgAX+59jFU7tmivy3fPvq5INXDSyx+3DXOd1xx8YzBiGBMKCIDwmKMDLEWEnoMUDdK37U2bp/6BQ9PSueV+BEWLVpEdnYW3be6f67wo7EOJoMgiMX3uuKs84zBEQcjghjBMCAmhF1niskGCMaiqFWs8ehrj+Off5nCwkK2b99OcXExwFTgvdEB3AmizIi85oqTNgDCSKrPFWV4DFRD/beqWLX4YUXdst0ffk+b168CVqZWpwN9YwO4Wzhi8c1GpM6ISTcYREJPMOSAQYZLHc1upY5meyjfBq/XAUwGbgL9Y4dgrBGLFwtSITAPkekCk1L73wS9qsoFxR6nceWfx/O5/wGLCSMJ+zJrfwAAAABJRU5ErkJggg=="
+			alt="" />
+		ZAP Scanning Report
+	</h1>
+	<p />
+	
 
-        </h1>
-        <p>
-</p>
-        <h3 class="left-header">Summary of Alerts</h3>
-        <h3 class="time-stamp">Generated on Sun, 3 Oct 2021 05:26:29</h3>
-        <table width="45%" class="summary">
-            <tr bgcolor="#666666">
-                <th width="45%" height="24">Risk 
-      Level</th><th width="55%" align="center">Number 
-      of Alerts</th>
-            </tr>
-            <tr bgcolor="#e8e8e8">
-                <td><a href="#high">High</a></td><td align="center">0</td>
-            </tr>
-            <tr bgcolor="#e8e8e8">
-                <td><a href="#medium">Medium</a></td><td align="center">2</td>
-            </tr>
-            <tr bgcolor="#e8e8e8">
-                <td><a href="#low">Low</a></td><td align="center">2</td>
-            </tr>
-            <tr bgcolor="#e8e8e8">
-                <td><a href="#info">Informational</a></td><td align="center">6</td>
-            </tr>
-        </table>
-        <div class="spacer-lg"></div>
-        <h3>Alerts</h3>
-        <table width="75%" class="alerts">
-            <tr bgcolor="#666666">
-                <th width="60%" height="24">Name</th><th width="20%" align="center">Risk Level</th><th width="20%" align="center">Number of Instances</th>
-            </tr>
-            <tr bgcolor="#e8e8e8">
-                <td>Content Security Policy (CSP) Header Not Set</td><td align="center">Medium</td><td align="center">3</td>
-            </tr>
-            <tr bgcolor="#e8e8e8">
-                <td>Sub Resource Integrity Attribute Missing</td><td align="center">Medium</td><td align="center">2</td>
-            </tr>
-            <tr bgcolor="#e8e8e8">
-                <td>Incomplete or No Cache-control Header Set</td><td align="center">Low</td><td align="center">3</td>
-            </tr>
-            <tr bgcolor="#e8e8e8">
-                <td>Permissions Policy Header Not Set</td><td align="center">Low</td><td align="center">3</td>
-            </tr>
-            <tr bgcolor="#e8e8e8">
-                <td>Base64 Disclosure</td><td align="center">Informational</td><td align="center">3</td>
-            </tr>
-            <tr bgcolor="#e8e8e8">
-                <td>Modern Web Application</td><td align="center">Informational</td><td align="center">2</td>
-            </tr>
-            <tr bgcolor="#e8e8e8">
-                <td>Retrieved from Cache</td><td align="center">Informational</td><td align="center">3</td>
-            </tr>
-            <tr bgcolor="#e8e8e8">
-                <td>Storable and Cacheable Content</td><td align="center">Informational</td><td align="center">3</td>
-            </tr>
-            <tr bgcolor="#e8e8e8">
-                <td>Storable but Non-Cacheable Content</td><td align="center">Informational</td><td align="center">2</td>
-            </tr>
-            <tr bgcolor="#e8e8e8">
-                <td>Timestamp Disclosure - Unix</td><td align="center">Informational</td><td align="center">4</td>
-            </tr>
-        </table>
-        <div class="spacer-lg"></div>
-        <h3>Alert Detail</h3>
-        <div class="spacer"></div>
-        <table width="100%" class="results">
-              
-  
-  
-  
-            <tr height="24" class="risk-medium">
-                <th width="20%"><a name="medium"></a>Medium (High)</th><th width="80%">Content Security Policy (CSP) Header Not Set</th>
-            </tr>
-              
-  
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page &mdash; covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/sitemap.xml</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">3</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header, to achieve optimal browser support: "Content-Security-Policy" for Chrome 25+, Firefox 23+ and Safari 7+, "X-Content-Security-Policy" for Firefox 4.0+ and Internet Explorer 10+, and "X-WebKit-CSP" for Chrome 14+ and Safari 6+.</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">693</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">WASC Id</td><td width="80%">15</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Source ID</td><td width="80%">3</td>
-            </tr>
-            
-        </table>
-        <div class="spacer"></div>
-        <table width="100%" class="results">
-              
-  
-  
-  
-            <tr height="24" class="risk-medium">
-                <th width="20%"><a name="medium"></a>Medium (High)</th><th width="80%">Sub Resource Integrity Attribute Missing</th>
-            </tr>
-              
-  
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content. </p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&amp;display=swap" rel="stylesheet"&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&amp;display=swap" rel="stylesheet"&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">2</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p>Provide a valid integrity attribute to the tag.</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p>https://developer.mozilla.org/en/docs/Web/Security/Subresource_Integrity</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">345</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">WASC Id</td><td width="80%">15</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Source ID</td><td width="80%">3</td>
-            </tr>
-            
-        </table>
-        <div class="spacer"></div>
-        <table width="100%" class="results">
-              
-  
-  
-  
-            <tr height="24" class="risk-low">
-                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Incomplete or No Cache-control Header Set</th>
-            </tr>
-              
-  
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content.</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">no-cache</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">no-cache</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/robots.txt</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Parameter</td><td width="80%">Cache-Control</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">3</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p>Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate.</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">525</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">WASC Id</td><td width="80%">13</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Source ID</td><td width="80%">3</td>
-            </tr>
-            
-        </table>
-        <div class="spacer"></div>
-        <table width="100%" class="results">
-              
-  
-  
-  
-            <tr height="24" class="risk-low">
-                <a name="low"></a><th width="20%">Low (Medium)</th><th width="80%">Permissions Policy Header Not Set</th>
-            </tr>
-              
-  
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/sitemap.xml</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">3</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">693</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">WASC Id</td><td width="80%">15</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Source ID</td><td width="80%">3</td>
-            </tr>
-            
-        </table>
-        <div class="spacer"></div>
-        <table width="100%" class="results">
-              
-  
-  
-  
-            <tr height="24" class="risk-info">
-                <th width="20%"><a name="info"></a>Informational (Medium)</th><th width="80%">Base64 Disclosure</th>
-            </tr>
-              
-  
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">_TckvcyAld8-yWtNcWT42WKpKH6SlVNf0F8IXMEG46pinr7SHz5bYWjdPw8NjOZjZU1Q6Mk4kypkmnbXR1Jn4pr4HqJ2UOsx0pSsOL09GVnDDTk8kY-gBlTujNRI-69A</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">_TckvcyAld8-yWtNcWT42ULEo1rH6YHPa85Aevd7P3kscrKcr6PG3z-Sgpux6csPXWXoZUoQ4QAUqDhURpY1s6kqErjthBjWRuLcCbB_8oJJ3kE1od6-8fpnYfTO5XiA8qmqu-X8MFc4i-5iDKQrKGnmeBl5Ping1UtEerCG241MjnX9NR4QEIujsa2u_8yp</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">_TckvcyAld8-yWtNcWT42ULEo1rH6YHPa85Aevd7P3kscrKcr6PG3z-Sgpux6csPXWXoZUoQ4QAUqDhURpY1s6kqErjthBjWRuLcCbB_8oJJ3kE1od6-8fpnYfTO5XiA8qmqu-X8MFc4i-5iDKQrKGnmeBl5Ping1UtEerCG241MjnX9NR4QEIujsa2u_8yp</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">3</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>�7$�̀��&gt;�kMqd��b�(~��S_�_\x0008\�\x0006�b���\x001f&gt;[ah�?\x000f
-��ceMP��8�*d�v�GRg��\x001e�vP�1Ҕ�8�=\x0019Y�
-9&lt;���\x0006T��H��@</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">200</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">WASC Id</td><td width="80%">13</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Source ID</td><td width="80%">3</td>
-            </tr>
-            
-        </table>
-        <div class="spacer"></div>
-        <table width="100%" class="results">
-              
-  
-  
-  
-            <tr height="24" class="risk-info">
-                <th width="20%"><a name="info"></a>Informational (Medium)</th><th width="80%">Modern Web Application</th>
-            </tr>
-              
-  
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;
-		&lt;div class="challengejs-container"&gt;
-			&lt;div class="container"&gt;
-				&lt;div class="challengejs-body"&gt;
-					&lt;div class="challengejs-card"&gt;
-						&lt;svg version="1.1" viewBox="0 0 71 64" xmlns="http://www.w3.org/2000/svg"&gt;
+	<h2>
+		
+		Site: https://pix.fr
+		
+	</h2>
+
+	<h3>
+		Generated on Sun, 10 Oct 2021 06:04:43
+	</h3>
+
+	
+		<h3 class="left-header">Summary of Alerts</h3>
+		<table class="summary">
+			<tr>
+				<th width="45%"
+					height="24">Risk Level</th>
+				<th width="55%"
+					align="center">Number of Alerts</th>
+			</tr>
+			<tr>
+				<td class="risk-3">
+					<div>High</div>
+				</td>
+				<td align="center">
+					<div>0</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="risk-2">
+					<div>Medium</div>
+				</td>
+				<td align="center">
+					<div>2</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="risk-1">
+					<div>Low</div>
+				</td>
+				<td align="center">
+					<div>2</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="risk-0">
+					<div>Informational</div>
+				</td>
+				<td align="center">
+					<div>5</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="risk--1">
+					<div>				False Positives:</div>
+				</td>
+				<td align="center">
+					<div>0</div>
+				</td>
+			</tr>
+		</table>
+		<div class="spacer-lg"></div>
+	
+
+	
+		<h3>Alerts</h3>
+		<table class="alerts">
+			<tr>
+				<th width="60%" height="24">Name</th>
+				<th width="20%"
+					align="center">Risk Level</th>
+				<th width="20%"
+					align="center">Number of Instances</th>
+			</tr>
+			<tr>
+				<td><a href="#10038">Content Security Policy (CSP) Header Not Set</a></td>
+				<td align="center" class="risk-2">Medium</td>
+				<td align="center">2</td>
+			</tr>
+			<tr>
+				<td><a href="#90003">Sub Resource Integrity Attribute Missing</a></td>
+				<td align="center" class="risk-2">Medium</td>
+				<td align="center">1</td>
+			</tr>
+			<tr>
+				<td><a href="#10015">Incomplete or No Cache-control Header Set</a></td>
+				<td align="center" class="risk-1">Low</td>
+				<td align="center">2</td>
+			</tr>
+			<tr>
+				<td><a href="#10063">Permissions Policy Header Not Set</a></td>
+				<td align="center" class="risk-1">Low</td>
+				<td align="center">2</td>
+			</tr>
+			<tr>
+				<td><a href="#10094">Base64 Disclosure</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">2</td>
+			</tr>
+			<tr>
+				<td><a href="#10109">Modern Web Application</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">1</td>
+			</tr>
+			<tr>
+				<td><a href="#10050">Retrieved from Cache</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">3</td>
+			</tr>
+			<tr>
+				<td><a href="#10049">Storable and Cacheable Content</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">3</td>
+			</tr>
+			<tr>
+				<td><a href="#10049">Storable but Non-Cacheable Content</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">1</td>
+			</tr>
+		</table>
+		<div class="spacer-lg"></div>
+	
+
+	
+		<h3>Alert Detail</h3>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-2"><a
+						id="10038"></a>
+						<div>Medium</div></th>
+					<th class="risk-2">Content Security Policy (CSP) Header Not Set</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pix.fr">https://pix.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pix.fr/sitemap.xml">https://pix.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">2</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header, to achieve optimal browser support: &quot;Content-Security-Policy&quot; for Chrome 25+, Firefox 23+ and Safari 7+, &quot;X-Content-Security-Policy&quot; for Firefox 4.0+ and Internet Explorer 10+, and &quot;X-WebKit-CSP&quot; for Chrome 14+ and Safari 6+.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy">https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a>
+							<br />
+						
+							<a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</a>
+							<br />
+						
+							<a href="http://www.w3.org/TR/CSP/">http://www.w3.org/TR/CSP/</a>
+							<br />
+						
+							<a href="http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html">http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</a>
+							<br />
+						
+							<a href="http://www.html5rocks.com/en/tutorials/security/content-security-policy/">http://www.html5rocks.com/en/tutorials/security/content-security-policy/</a>
+							<br />
+						
+							<a href="http://caniuse.com/#feat=contentsecuritypolicy">http://caniuse.com/#feat=contentsecuritypolicy</a>
+							<br />
+						
+							<a href="http://content-security-policy.com/">http://content-security-policy.com/</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">15</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10038/">10038</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-2"><a
+						id="90003"></a>
+						<div>Medium</div></th>
+					<th class="risk-2">Sub Resource Integrity Attribute Missing</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content. </div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pix.fr">https://pix.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">1</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Provide a valid integrity attribute to the tag.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://developer.mozilla.org/en/docs/Web/Security/Subresource_Integrity">https://developer.mozilla.org/en/docs/Web/Security/Subresource_Integrity</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/345.html">345</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">15</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/90003/">90003</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-1"><a
+						id="10015"></a>
+						<div>Low</div></th>
+					<th class="risk-1">Incomplete or No Cache-control Header Set</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pix.fr">https://pix.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">no-cache</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pix.fr/robots.txt">https://pix.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">2</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a>
+							<br />
+						
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/525.html">525</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10015/">10015</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-1"><a
+						id="10063"></a>
+						<div>Low</div></th>
+					<th class="risk-1">Permissions Policy Header Not Set</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pix.fr">https://pix.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pix.fr/sitemap.xml">https://pix.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">2</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</a>
+							<br />
+						
+							<a href="https://developers.google.com/web/updates/2018/06/feature-policy">https://developers.google.com/web/updates/2018/06/feature-policy</a>
+							<br />
+						
+							<a href="https://scotthelme.co.uk/a-new-security-header-feature-policy/">https://scotthelme.co.uk/a-new-security-header-feature-policy/</a>
+							<br />
+						
+							<a href="https://w3c.github.io/webappsec-feature-policy/">https://w3c.github.io/webappsec-feature-policy/</a>
+							<br />
+						
+							<a href="https://www.smashingmagazine.com/2018/12/feature-policy/">https://www.smashingmagazine.com/2018/12/feature-policy/</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">15</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10063/">10063</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
+						id="10094"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Base64 Disclosure</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pix.fr">https://pix.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">_TckvcyAld8-yWtNcWT42bE9f9QZzsH2fAGTfpqhJZuhF6Pgx91LL8AlDxNFw3yMjy232x7cbbCvvIvpG00gjelmaZS6maVWamuqALyoZ6J47gfhVdl_E14kbLUFQLABVM4ZDg_rtaWNNzmxRlqa54_PGSg7-Vj4eCIctFsz7NkB6mSEVKe7grjKG-fDGP8z</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pix.fr">https://pix.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">_TckvcyAld8-yWtNcWT42cWcNB0hClcnxHhIzeL5RTv31coDkFzZGvSsh-9e95K5vqoOpzSPu38-4c2OHVrWs5w5fhsrqOLDLOXiikayyNeGiCVCyj2EHpTjXy555n6qaFlGY0LH12hUlAggsP9bsutS5Y8c2wDAN0C4xHN8wyYxCA3rFYwXDvg4lN8P6B9a</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">2</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="http://projects.webappsec.org/w/page/13246936/Information%20Leakage">http://projects.webappsec.org/w/page/13246936/Information%20Leakage</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10094/">10094</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
+						id="10109"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Modern Web Application</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pix.fr">https://pix.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;noscript&gt;
+		&lt;div class=&quot;challengejs-container&quot;&gt;
+			&lt;div class=&quot;container&quot;&gt;
+				&lt;div class=&quot;challengejs-body&quot;&gt;
+					&lt;div class=&quot;challengejs-card&quot;&gt;
+						&lt;svg version=&quot;1.1&quot; viewBox=&quot;0 0 71 64&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
 							&lt;title&gt;logo&lt;/title&gt;
-							&lt;g fill="none" fill-rule="evenodd"&gt;
+							&lt;g fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;&gt;
 								&lt;path
-									d="m15.035 27.154s0.0805 2.774 1.3594 4.6882c1.279 1.9142 5.3529 5.8842 5.3529 5.8842s6.3515 1.8683 9.2705 0.2002c2.9191-1.6681 6.6875-3.3328 9.3905-8.1301 2.7028-4.7974 5.2049-11.887 6.4561-15.64 1.251-3.7531 4.2825-5.241 9.4389-5.7481 5.1565-0.50708 10.895 1.9488 10.895 1.9488s-2.9609-5.4648-6.8517-7.0879c-3.8909-1.6232-9.8379-4.215-17.081 0-7.2433 4.215-10.55 9.6317-14.452 17.783-2.8127 5.8754-4.8843 6.032-9.8885 6.449-5.0042 0.41706-3.8895-0.3472-3.8895-0.3472"
-									fill="#fff" /&gt;
+									d=&quot;m15.035 27.154s0.0805 2.774 1.3594 4.6882c1.279 1.9142 5.3529 5.8842 5.3529 5.8842s6.3515 1.8683 9.2705 0.2002c2.9191-1.6681 6.6875-3.3328 9.3905-8.1301 2.7028-4.7974 5.2049-11.887 6.4561-15.64 1.251-3.7531 4.2825-5.241 9.4389-5.7481 5.1565-0.50708 10.895 1.9488 10.895 1.9488s-2.9609-5.4648-6.8517-7.0879c-3.8909-1.6232-9.8379-4.215-17.081 0-7.2433 4.215-10.55 9.6317-14.452 17.783-2.8127 5.8754-4.8843 6.032-9.8885 6.449-5.0042 0.41706-3.8895-0.3472-3.8895-0.3472&quot;
+									fill=&quot;#fff&quot; /&gt;
 								&lt;path
-									d="m21.843 38.343s4.4289 4.2899 8.4697 6.1065c4.0407 1.8168 18.219 3.9018 25.725-1.5194 7.5062-5.4212 11.955-12.851 12.858-20.187 0.90328-7.336-0.15582-10.972-3.3793-12.698-3.2236-1.7269-15.734-3.3949-19.07 4.5283-3.3361 7.9233-5.0042 17.932-11.259 20.851-6.2552 2.9191-8.5641 3.3762-11.997 2.5222-3.4328-0.85414-1.3476 0.3969-1.3476 0.3969"
-									fill="#F2E205" /&gt;
+									d=&quot;m21.843 38.343s4.4289 4.2899 8.4697 6.1065c4.0407 1.8168 18.219 3.9018 25.725-1.5194 7.5062-5.4212 11.955-12.851 12.858-20.187 0.90328-7.336-0.15582-10.972-3.3793-12.698-3.2236-1.7269-15.734-3.3949-19.07 4.5283-3.3361 7.9233-5.0042 17.932-11.259 20.851-6.2552 2.9191-8.5641 3.3762-11.997 2.5222-3.4328-0.85414-1.3476 0.3969-1.3476 0.3969&quot;
+									fill=&quot;#F2E205&quot; /&gt;
 								&lt;path
-									d="m20.175 7.4842s-1.251-1.6681-5.0042-0.41706c-3.7531 1.2512-6.2552 2.9191-7.0892 5.8383-0.83398 2.919-2.1511 5.7266-0.65856 7.6588 1.4925 1.9324 3.9946 4.8516 6.0798 5.6855v-7.9233l0.70616-5.3673 1.4685-2.1536 3.45-2.1333 1.0475-1.188z"
-									fill="#0828F2" /&gt;
+									d=&quot;m20.175 7.4842s-1.251-1.6681-5.0042-0.41706c-3.7531 1.2512-6.2552 2.9191-7.0892 5.8383-0.83398 2.919-2.1511 5.7266-0.65856 7.6588 1.4925 1.9324 3.9946 4.8516 6.0798 5.6855v-7.9233l0.70616-5.3673 1.4685-2.1536 3.45-2.1333 1.0475-1.188z&quot;
+									fill=&quot;#0828F2&quot; /&gt;
 								&lt;path
-									d="m11.835 7.4842s-1.251-2.5021-6.2552-2.5021c-5.0042 0-3.3361 1.251-3.3361 1.251s5.4211 4.1702 5.0042 6.2552l4.5871-5.0042z"
-									fill="#0828F2" /&gt;
+									d=&quot;m11.835 7.4842s-1.251-2.5021-6.2552-2.5021c-5.0042 0-3.3361 1.251-3.3361 1.251s5.4211 4.1702 5.0042 6.2552l4.5871-5.0042z&quot;
+									fill=&quot;#0828F2&quot; /&gt;
 								&lt;path
-									d="m49.938 5.4833c0 0.57526-0.46634 1.0416-1.0416 1.0416s-1.0416-0.46634-1.0416-1.0416c0-0.57526 0.46634-1.0416 1.0416-1.0416s1.0416 0.46634 1.0416 1.0416"
-									fill="#000" /&gt;
+									d=&quot;m49.938 5.4833c0 0.57526-0.46634 1.0416-1.0416 1.0416s-1.0416-0.46634-1.0416-1.0416c0-0.57526 0.46634-1.0416 1.0416-1.0416s1.0416 0.46634 1.0416 1.0416&quot;
+									fill=&quot;#000&quot; /&gt;
 								&lt;path
-									d="m69.211 19.355c-0.4606 0-0.83412-0.37338-0.83412-0.83398 0-9.2156-7.4971-16.713-16.713-16.713-3.5735 0-6.9817 1.1115-9.8568 3.2143-0.37142 0.27188-0.89376 0.19082-1.1655-0.18074-0.27202-0.37184-0.19096-0.89376 0.18088-1.1656 3.1626-2.3132 6.9117-3.536 10.841-3.536 10.135 0 18.381 8.2457 18.381 18.381 0 0.4606-0.37338 0.83398-0.83398 0.83398"
-									fill="#000" /&gt;
+									d=&quot;m69.211 19.355c-0.4606 0-0.83412-0.37338-0.83412-0.83398 0-9.2156-7.4971-16.713-16.713-16.713-3.5735 0-6.9817 1.1115-9.8568 3.2143-0.37142 0.27188-0.89376 0.19082-1.1655-0.18074-0.27202-0.37184-0.19096-0.89376 0.18088-1.1656 3.1626-2.3132 6.9117-3.536 10.841-3.536 10.135 0 18.381 8.2457 18.381 18.381 0 0.4606-0.37338 0.83398-0.83398 0.83398&quot;
+									fill=&quot;#000&quot; /&gt;
 								&lt;path
-									d="m41.126 47.441c-15.947 0-28.92-12.973-28.92-28.92 0-0.98434 0.05026-1.9789 0.14924-2.9558 0.04648-0.45822 0.45626-0.7917 0.91378-0.74564 0.45836 0.04648 0.79212 0.45556 0.74578 0.91392-0.09324 0.92134-0.1407 1.8592-0.1407 2.7875 0 15.027 12.225 27.252 27.252 27.252 15.027 0 27.252-12.225 27.252-27.252 0-0.4606 0.37338-0.83412 0.83398-0.83412s0.83398 0.37352 0.83398 0.83412c0 15.947-12.973 28.92-28.92 28.92"
-									fill="#000" /&gt;
-								&lt;g transform="translate(5.88 .00182)" fill="#000"&gt;
+									d=&quot;m41.126 47.441c-15.947 0-28.92-12.973-28.92-28.92 0-0.98434 0.05026-1.9789 0.14924-2.9558 0.04648-0.45822 0.45626-0.7917 0.91378-0.74564 0.45836 0.04648 0.79212 0.45556 0.74578 0.91392-0.09324 0.92134-0.1407 1.8592-0.1407 2.7875 0 15.027 12.225 27.252 27.252 27.252 15.027 0 27.252-12.225 27.252-27.252 0-0.4606 0.37338-0.83412 0.83398-0.83412s0.83398 0.37352 0.83398 0.83412c0 15.947-12.973 28.92-28.92 28.92&quot;
+									fill=&quot;#000&quot; /&gt;
+								&lt;g transform=&quot;translate(5.88 .00182)&quot; fill=&quot;#000&quot;&gt;
 									&lt;path
-										d="m12.261 28.231c-0.48958 0-0.87738-0.00896-0.9016-0.00952-6.2275 1.4e-4 -11.31-5.0824-11.31-11.33 0-6.2472 5.0827-11.33 11.33-11.33 4.1066 0 6.4193 1.9823 6.5157 2.0665 0.27636 0.24178 0.36204 0.63588 0.21112 0.97062-0.15078 0.33516-0.50162 0.53228-0.8673 0.48412-0.34888-0.04508-0.70574-0.0679-1.0609-0.0679-4.9585 0-8.1624 3.2966-8.1624 8.3985 0 0.4606-0.37352 0.83398-0.83412 0.83398s-0.83398-0.37338-0.83398-0.83398c0-5.2259 2.9757-8.9634 7.6059-9.8594-0.72968-0.1911-1.5912-0.32438-2.574-0.32438-5.3276 0-9.6618 4.3341-9.6618 9.6617 0 5.3276 4.3343 9.6618 9.6618 9.6618 0.02842 5.6e-4 0.8904 0.0203 1.6418 1.4e-4 0.75278-0.02016 1.5796-0.08554 1.588-0.0861 0.17528-0.01022 3.7612-0.2632 6.9628-4.8348 0.6125-0.87458 1.2944-2.1406 2.0843-3.6068 3.6044-6.6905 9.637-17.888 23.398-17.888 0.4606 0 0.83398 0.37352 0.83398 0.83412 0 0.4606-0.37338 0.83398-0.83398 0.83398-12.765 0-18.281 10.237-21.93 17.012-0.81452 1.5121-1.518 2.8179-2.1865 3.7726-3.7012 5.2851-8.0436 5.5343-8.2267 5.5422-0.00588 0.00112-0.84938 0.06762-1.6454 0.08932-0.27118 7e-3 -0.5516 0.00952-0.80486 0.00952" /&gt;
+										d=&quot;m12.261 28.231c-0.48958 0-0.87738-0.00896-0.9016-0.00952-6.2275 1.4e-4 -11.31-5.0824-11.31-11.33 0-6.2472 5.0827-11.33 11.33-11.33 4.1066 0 6.4193 1.9823 6.5157 2.0665 0.27636 0.24178 0.36204 0.63588 0.21112 0.97062-0.15078 0.33516-0.50162 0.53228-0.8673 0.48412-0.34888-0.04508-0.70574-0.0679-1.0609-0.0679-4.9585 0-8.1624 3.2966-8.1624 8.3985 0 0.4606-0.37352 0.83398-0.83412 0.83398s-0.83398-0.37338-0.83398-0.83398c0-5.2259 2.9757-8.9634 7.6059-9.8594-0.72968-0.1911-1.5912-0.32438-2.574-0.32438-5.3276 0-9.6618 4.3341-9.6618 9.6617 0 5.3276 4.3343 9.6618 9.6618 9.6618 0.02842 5.6e-4 0.8904 0.0203 1.6418 1.4e-4 0.75278-0.02016 1.5796-0.08554 1.588-0.0861 0.17528-0.01022 3.7612-0.2632 6.9628-4.8348 0.6125-0.87458 1.2944-2.1406 2.0843-3.6068 3.6044-6.6905 9.637-17.888 23.398-17.888 0.4606 0 0.83398 0.37352 0.83398 0.83412 0 0.4606-0.37338 0.83398-0.83398 0.83398-12.765 0-18.281 10.237-21.93 17.012-0.81452 1.5121-1.518 2.8179-2.1865 3.7726-3.7012 5.2851-8.0436 5.5343-8.2267 5.5422-0.00588 0.00112-0.84938 0.06762-1.6454 0.08932-0.27118 7e-3 -0.5516 0.00952-0.80486 0.00952&quot; /&gt;
 								&lt;/g&gt;
 								&lt;path
-									d="m7.0933 14.972c-0.4606 0-0.83398-0.37338-0.83398-0.83412 0-3.5616-2.4879-6.5927-5.4328-6.6189-0.33516-0.00308-0.63588-0.2065-0.76356-0.51646-0.12768-0.30996-0.0574-0.66626 0.17836-0.90454 1.59-1.6057 3.7096-2.49 5.9692-2.49 1.9853 0 3.9119 0.7056 5.425 1.9867 0.01092 0.00938 0.02198 0.01918 0.03262 0.02912 0.09296 0.08764 0.92274 0.87444 1.3696 1.5056 0.26614 0.37604 0.17724 0.89656-0.19866 1.1627-0.37646 0.26614-0.89698 0.17654-1.1627-0.1988-0.29106-0.41132-0.903-1.0195-1.1355-1.2396-1.2095-1.0175-2.7467-1.5777-4.3303-1.5777-1.22 0-2.3891 0.32172-3.4119 0.92526 2.925 1.0395 5.1289 4.263 5.1289 7.9366 0 0.46074-0.37352 0.83412-0.83412 0.83412"
-									fill="#000" /&gt;
+									d=&quot;m7.0933 14.972c-0.4606 0-0.83398-0.37338-0.83398-0.83412 0-3.5616-2.4879-6.5927-5.4328-6.6189-0.33516-0.00308-0.63588-0.2065-0.76356-0.51646-0.12768-0.30996-0.0574-0.66626 0.17836-0.90454 1.59-1.6057 3.7096-2.49 5.9692-2.49 1.9853 0 3.9119 0.7056 5.425 1.9867 0.01092 0.00938 0.02198 0.01918 0.03262 0.02912 0.09296 0.08764 0.92274 0.87444 1.3696 1.5056 0.26614 0.37604 0.17724 0.89656-0.19866 1.1627-0.37646 0.26614-0.89698 0.17654-1.1627-0.1988-0.29106-0.41132-0.903-1.0195-1.1355-1.2396-1.2095-1.0175-2.7467-1.5777-4.3303-1.5777-1.22 0-2.3891 0.32172-3.4119 0.92526 2.925 1.0395 5.1289 4.263 5.1289 7.9366 0 0.46074-0.37352 0.83412-0.83412 0.83412&quot;
+									fill=&quot;#000&quot; /&gt;
 								&lt;path
-									d="m27.146 39.184c-2.3787 0-4.9279-0.52864-7.6289-1.5854-0.42896-0.16786-0.64064-0.6517-0.47278-1.0805 0.16758-0.42868 0.65086-0.64092 1.0805-0.47264 4.6698 1.8271 8.7959 1.9489 12.263 0.36358 6.97-3.1878 10.361-12.773 12.604-19.115 0.448-1.2656 0.87066-2.4613 1.2702-3.4646 1.4633-3.6743 5.0929-5.8811 10.22-6.2139 5.3088-0.34426 10.795 1.4771 12.235 4.0599 0.22442 0.40236 0.0798 0.91014-0.32256 1.1346-0.40278 0.22456-0.91014 0.08008-1.1346-0.32256-0.99036-1.7766-5.7624-3.5279-10.67-3.2073-2.577 0.16716-7.1436 1.0608-8.7784 5.1663-0.38766 0.97314-0.80514 2.1539-1.2473 3.404-2.3377 6.608-5.8701 16.594-13.483 20.076-1.8344 0.83888-3.8172 1.2579-5.9354 1.2579"
-									fill="#000" /&gt;
+									d=&quot;m27.146 39.184c-2.3787 0-4.9279-0.52864-7.6289-1.5854-0.42896-0.16786-0.64064-0.6517-0.47278-1.0805 0.16758-0.42868 0.65086-0.64092 1.0805-0.47264 4.6698 1.8271 8.7959 1.9489 12.263 0.36358 6.97-3.1878 10.361-12.773 12.604-19.115 0.448-1.2656 0.87066-2.4613 1.2702-3.4646 1.4633-3.6743 5.0929-5.8811 10.22-6.2139 5.3088-0.34426 10.795 1.4771 12.235 4.0599 0.22442 0.40236 0.0798 0.91014-0.32256 1.1346-0.40278 0.22456-0.91014 0.08008-1.1346-0.32256-0.99036-1.7766-5.7624-3.5279-10.67-3.2073-2.577 0.16716-7.1436 1.0608-8.7784 5.1663-0.38766 0.97314-0.80514 2.1539-1.2473 3.404-2.3377 6.608-5.8701 16.594-13.483 20.076-1.8344 0.83888-3.8172 1.2579-5.9354 1.2579&quot;
+									fill=&quot;#000&quot; /&gt;
 								&lt;path
-									d="m9.7252 60.582c0.65408 0.65422 1.4419 0.98126 2.3635 0.98126 0.92176 0 1.7097-0.32704 2.3638-0.98126 0.65408-0.65394 0.98098-1.4417 0.98098-2.3635 0-0.9219-0.3269-1.7097-0.98098-2.3636-0.65408-0.65422-1.442-0.98126-2.3638-0.98126-0.92162 0-1.7094 0.32704-2.3635 0.98126-0.24794 0.2478-0.45108 0.52038-0.60956 0.8176v3.0919c0.15848 0.29722 0.36162 0.57022 0.60956 0.8176zm-0.60956 2.4678h-1.8582v-12.264h1.8582v3.1514c0.86212-0.61446 1.853-0.92176 2.973-0.92176 1.437 0 2.6632 0.5082 3.6793 1.5238 1.0157 1.016 1.5238 2.2425 1.5238 3.6793 0 1.4371-0.50806 2.6636-1.5238 3.6792-1.0161 1.016-2.2424 1.5238-3.6793 1.5238-1.12 0-2.1109-0.3073-2.973-0.92176v0.55006z"
-									fill="#000" /&gt;
+									d=&quot;m9.7252 60.582c0.65408 0.65422 1.4419 0.98126 2.3635 0.98126 0.92176 0 1.7097-0.32704 2.3638-0.98126 0.65408-0.65394 0.98098-1.4417 0.98098-2.3635 0-0.9219-0.3269-1.7097-0.98098-2.3636-0.65408-0.65422-1.442-0.98126-2.3638-0.98126-0.92162 0-1.7094 0.32704-2.3635 0.98126-0.24794 0.2478-0.45108 0.52038-0.60956 0.8176v3.0919c0.15848 0.29722 0.36162 0.57022 0.60956 0.8176zm-0.60956 2.4678h-1.8582v-12.264h1.8582v3.1514c0.86212-0.61446 1.853-0.92176 2.973-0.92176 1.437 0 2.6632 0.5082 3.6793 1.5238 1.0157 1.016 1.5238 2.2425 1.5238 3.6793 0 1.4371-0.50806 2.6636-1.5238 3.6792-1.0161 1.016-2.2424 1.5238-3.6793 1.5238-1.12 0-2.1109-0.3073-2.973-0.92176v0.55006z&quot;
+									fill=&quot;#000&quot; /&gt;
 								&lt;path
-									d="m26.954 59.765v-3.0919c-0.15862-0.29722-0.3619-0.5698-0.60956-0.8176-0.65408-0.65436-1.4419-0.98126-2.3635-0.98126-0.92176 0-1.7097 0.3269-2.3638 0.98126-0.65408 0.65394-0.98098 1.4417-0.98098 2.3636 0 0.92176 0.3269 1.7095 0.98098 2.3635 0.65408 0.65422 1.442 0.98126 2.3638 0.98126 0.92162 0 1.7094-0.32704 2.3635-0.98126 0.24766-0.24738 0.45094-0.52038 0.60956-0.8176zm0 2.7353c-0.86212 0.61446-1.8532 0.92176-2.973 0.92176-1.4371 0-2.6635-0.50778-3.6793-1.5238-1.0158-1.0156-1.5238-2.2421-1.5238-3.6792 0-1.4368 0.50792-2.6634 1.5238-3.6793 1.0158-1.0156 2.2422-1.5238 3.6793-1.5238 1.1199 0 2.1109 0.3073 2.973 0.92176v-0.55006h1.8582v9.6627h-1.8582v-0.55006z"
-									fill="#000" /&gt;
-								&lt;polygon points="31.369 63.05 33.227 63.05 33.227 50.786 31.369 50.786" fill="#000" /&gt;
+									d=&quot;m26.954 59.765v-3.0919c-0.15862-0.29722-0.3619-0.5698-0.60956-0.8176-0.65408-0.65436-1.4419-0.98126-2.3635-0.98126-0.92176 0-1.7097 0.3269-2.3638 0.98126-0.65408 0.65394-0.98098 1.4417-0.98098 2.3636 0 0.92176 0.3269 1.7095 0.98098 2.3635 0.65408 0.65422 1.442 0.98126 2.3638 0.98126 0.92162 0 1.7094-0.32704 2.3635-0.98126 0.24766-0.24738 0.45094-0.52038 0.60956-0.8176zm0 2.7353c-0.86212 0.61446-1.8532 0.92176-2.973 0.92176-1.4371 0-2.6635-0.50778-3.6793-1.5238-1.0158-1.0156-1.5238-2.2421-1.5238-3.6792 0-1.4368 0.50792-2.6634 1.5238-3.6793 1.0158-1.0156 2.2422-1.5238 3.6793-1.5238 1.1199 0 2.1109 0.3073 2.973 0.92176v-0.55006h1.8582v9.6627h-1.8582v-0.55006z&quot;
+									fill=&quot;#000&quot; /&gt;
+								&lt;polygon points=&quot;31.369 63.05 33.227 63.05 33.227 50.786 31.369 50.786&quot; fill=&quot;#000&quot; /&gt;
 								&lt;path
-									d="m41.863 55.29c-0.48566-0.27706-1.0256-0.41608-1.6202-0.41608-0.9219 0-1.7097 0.3269-2.3639 0.98126-0.65394 0.65394-0.98098 1.4417-0.98098 2.3635 0 0.55916 0.12264 1.0704 0.3682 1.5334 0.0154 0.02926 0.0315 0.05824 0.04788 0.08708l1.3083 1.3082c0.48552 0.27762 1.0258 0.41622 1.6205 0.41622 1.0205 0 1.8976-0.42616 2.6312-1.2785l1.4568 1.1445c-1.0903 1.3282-2.4529 1.9922-4.088 1.9922-1.4372 0-2.6635-0.50778-3.6793-1.5238-1.016-1.0156-1.5238-2.2421-1.5238-3.6793 0-1.4367 0.50778-2.6632 1.5238-3.6792 1.0158-1.0156 2.2421-1.5238 3.6793-1.5238 0.29288 0 0.57694 0.021 0.8526 0.063 1.0765 0.16408 1.9305 0.6265 2.6768 1.5592"
-									fill="#000" /&gt;
+									d=&quot;m41.863 55.29c-0.48566-0.27706-1.0256-0.41608-1.6202-0.41608-0.9219 0-1.7097 0.3269-2.3639 0.98126-0.65394 0.65394-0.98098 1.4417-0.98098 2.3635 0 0.55916 0.12264 1.0704 0.3682 1.5334 0.0154 0.02926 0.0315 0.05824 0.04788 0.08708l1.3083 1.3082c0.48552 0.27762 1.0258 0.41622 1.6205 0.41622 1.0205 0 1.8976-0.42616 2.6312-1.2785l1.4568 1.1445c-1.0903 1.3282-2.4529 1.9922-4.088 1.9922-1.4372 0-2.6635-0.50778-3.6793-1.5238-1.016-1.0156-1.5238-2.2421-1.5238-3.6793 0-1.4367 0.50778-2.6632 1.5238-3.6792 1.0158-1.0156 2.2421-1.5238 3.6793-1.5238 0.29288 0 0.57694 0.021 0.8526 0.063 1.0765 0.16408 1.9305 0.6265 2.6768 1.5592&quot;
+									fill=&quot;#000&quot; /&gt;
 								&lt;path
-									d="m59.105 56.39v6.6598h-1.8582v-9.6776h1.8582v0.38682c0.763-0.4956 1.6302-0.74354 2.6016-0.74354 1.3378 0 2.4773 0.47096 3.4189 1.4125 0.94136 0.9415 1.4123 2.081 1.4123 3.4189v5.203h-1.8584v-5.203c0-0.82264-0.2898-1.5239-0.86968-2.1036-0.57974-0.57974-1.2809-0.86954-2.1032-0.86954-0.82292 0-1.5215 0.2877-2.0961 0.8624-0.20832 0.20804-0.37688 0.4263-0.50554 0.65394"
-									fill="#000" /&gt;
+									d=&quot;m59.105 56.39v6.6598h-1.8582v-9.6776h1.8582v0.38682c0.763-0.4956 1.6302-0.74354 2.6016-0.74354 1.3378 0 2.4773 0.47096 3.4189 1.4125 0.94136 0.9415 1.4123 2.081 1.4123 3.4189v5.203h-1.8584v-5.203c0-0.82264-0.2898-1.5239-0.86968-2.1036-0.57974-0.57974-1.2809-0.86954-2.1032-0.86954-0.82292 0-1.5215 0.2877-2.0961 0.8624-0.20832 0.20804-0.37688 0.4263-0.50554 0.65394&quot;
+									fill=&quot;#000&quot; /&gt;
 								&lt;path
-									d="m37.005 62.28c-0.53312-0.65814-0.74872-1.5355-0.59178-2.4073 0.1659-0.92092 0.72114-1.7024 1.5637-2.2002 0.49126-0.29036 1.1718-0.43792 1.9597-0.60858 0.53942-0.1169 1.4209-0.308 1.9414-0.55328 0.09716-0.04592 0.27706-0.24486 0.31738-0.46592 0.03682-0.20174-0.05978-0.42574-0.09856-0.49266-0.17234-0.29708-0.5334-0.48874-1.3178-0.63826l0.30366-1.8375c2.4144 0.45976 3.0744 2.0796 3.1615 2.4338 0.21462 0.81886-0.00532 1.4244-0.22806 1.7884-0.69188 1.1312-2.2606 1.4711-3.6448 1.771-0.50988 0.1106-1.1444 0.24808-1.3503 0.36974-0.41118 0.24304-0.5467 0.5677-0.58814 0.79716-0.04956 0.27566 0.01442 0.56378 0.16688 0.75194l-1.5947 1.2918z"
-									fill="#000" /&gt;
-								&lt;path d="m38.535 60.894s0.14154 0.30408 0.80584 0.5523l-0.53466 0.10066-0.79926-0.52556"
-									fill="#000" /&gt;
+									d=&quot;m37.005 62.28c-0.53312-0.65814-0.74872-1.5355-0.59178-2.4073 0.1659-0.92092 0.72114-1.7024 1.5637-2.2002 0.49126-0.29036 1.1718-0.43792 1.9597-0.60858 0.53942-0.1169 1.4209-0.308 1.9414-0.55328 0.09716-0.04592 0.27706-0.24486 0.31738-0.46592 0.03682-0.20174-0.05978-0.42574-0.09856-0.49266-0.17234-0.29708-0.5334-0.48874-1.3178-0.63826l0.30366-1.8375c2.4144 0.45976 3.0744 2.0796 3.1615 2.4338 0.21462 0.81886-0.00532 1.4244-0.22806 1.7884-0.69188 1.1312-2.2606 1.4711-3.6448 1.771-0.50988 0.1106-1.1444 0.24808-1.3503 0.36974-0.41118 0.24304-0.5467 0.5677-0.58814 0.79716-0.04956 0.27566 0.01442 0.56378 0.16688 0.75194l-1.5947 1.2918z&quot;
+									fill=&quot;#000&quot; /&gt;
+								&lt;path d=&quot;m38.535 60.894s0.14154 0.30408 0.80584 0.5523l-0.53466 0.10066-0.79926-0.52556&quot;
+									fill=&quot;#000&quot; /&gt;
 								&lt;path
-									d="m52.691 55.29c-0.48552-0.27706-1.0256-0.41608-1.6202-0.41608-0.9219 0-1.7097 0.3269-2.3638 0.98126-0.65408 0.65394-0.98098 1.4417-0.98098 2.3635 0 0.55916 0.1225 1.0704 0.36806 1.5334 0.0154 0.02926 0.0315 0.05824 0.04802 0.08708l1.3082 1.3082c0.48552 0.27762 1.0258 0.41622 1.6205 0.41622 1.0206 0 1.8976-0.42616 2.6312-1.2785l1.4568 1.1445c-1.0903 1.3282-2.4529 1.9922-4.088 1.9922-1.4371 0-2.6635-0.50778-3.6793-1.5238-1.016-1.0156-1.5238-2.2421-1.5238-3.6793 0-1.4367 0.50778-2.6632 1.5238-3.6792 1.0158-1.0156 2.2422-1.5238 3.6793-1.5238 0.29288 0 0.57708 0.021 0.8526 0.063 1.0765 0.16408 1.9305 0.6265 2.6768 1.5592"
-									fill="#000" /&gt;
+									d=&quot;m52.691 55.29c-0.48552-0.27706-1.0256-0.41608-1.6202-0.41608-0.9219 0-1.7097 0.3269-2.3638 0.98126-0.65408 0.65394-0.98098 1.4417-0.98098 2.3635 0 0.55916 0.1225 1.0704 0.36806 1.5334 0.0154 0.02926 0.0315 0.05824 0.04802 0.08708l1.3082 1.3082c0.48552 0.27762 1.0258 0.41622 1.6205 0.41622 1.0206 0 1.8976-0.42616 2.6312-1.2785l1.4568 1.1445c-1.0903 1.3282-2.4529 1.9922-4.088 1.9922-1.4371 0-2.6635-0.50778-3.6793-1.5238-1.016-1.0156-1.5238-2.2421-1.5238-3.6793 0-1.4367 0.50778-2.6632 1.5238-3.6792 1.0158-1.0156 2.2422-1.5238 3.6793-1.5238 0.29288 0 0.57708 0.021 0.8526 0.063 1.0765 0.16408 1.9305 0.6265 2.6768 1.5592&quot;
+									fill=&quot;#000&quot; /&gt;
 								&lt;path
-									d="m47.833 62.28c-0.53298-0.65814-0.74872-1.5355-0.59178-2.4073 0.1659-0.92092 0.72114-1.7024 1.5637-2.2002 0.4914-0.29036 1.1719-0.43792 1.9599-0.60858 0.53928-0.1169 1.4209-0.308 1.9412-0.55328 0.09716-0.04592 0.27706-0.24486 0.31738-0.46592 0.03682-0.20174-0.05964-0.42574-0.09842-0.49266-0.17248-0.29708-0.53354-0.48874-1.318-0.63826l0.30366-1.8375c2.4144 0.45976 3.0745 2.0796 3.1616 2.4338 0.21448 0.81886-0.00546 1.4244-0.2282 1.7884-0.69188 1.1312-2.2606 1.4711-3.6448 1.771-0.50974 0.1106-1.1444 0.24808-1.3503 0.36974-0.41118 0.24304-0.5467 0.5677-0.588 0.79716-0.0497 0.27566 0.01428 0.56378 0.16674 0.75194l-1.5947 1.2918z"
-									fill="#000" /&gt;
-								&lt;path d="m49.363 60.894s0.14154 0.30408 0.80584 0.5523l-0.53466 0.10066-0.79912-0.52556"
-									fill="#000" /&gt;
+									d=&quot;m47.833 62.28c-0.53298-0.65814-0.74872-1.5355-0.59178-2.4073 0.1659-0.92092 0.72114-1.7024 1.5637-2.2002 0.4914-0.29036 1.1719-0.43792 1.9599-0.60858 0.53928-0.1169 1.4209-0.308 1.9412-0.55328 0.09716-0.04592 0.27706-0.24486 0.31738-0.46592 0.03682-0.20174-0.05964-0.42574-0.09842-0.49266-0.17248-0.29708-0.53354-0.48874-1.318-0.63826l0.30366-1.8375c2.4144 0.45976 3.0745 2.0796 3.1616 2.4338 0.21448 0.81886-0.00546 1.4244-0.2282 1.7884-0.69188 1.1312-2.2606 1.4711-3.6448 1.771-0.50974 0.1106-1.1444 0.24808-1.3503 0.36974-0.41118 0.24304-0.5467 0.5677-0.588 0.79716-0.0497 0.27566 0.01428 0.56378 0.16674 0.75194l-1.5947 1.2918z&quot;
+									fill=&quot;#000&quot; /&gt;
+								&lt;path d=&quot;m49.363 60.894s0.14154 0.30408 0.80584 0.5523l-0.53466 0.10066-0.79912-0.52556&quot;
+									fill=&quot;#000&quot; /&gt;
 								&lt;path
-									d="m64.228 23.073c-0.03024 0-0.06062-0.00322-0.09156-0.01008-0.22708-0.05026-0.37044-0.27496-0.32018-0.50232 0.01932-0.08694 1.8978-8.7686-0.66654-13.541-0.1099-0.20496-0.03318-0.46032 0.17178-0.5705 0.20468-0.1106 0.46018-0.03318 0.5705 0.17178 2.7128 5.0487 0.82852 13.754 0.74704 14.122-0.04368 0.19642-0.21784 0.33012-0.41104 0.33012"
-									fill="#000" /&gt;
+									d=&quot;m64.228 23.073c-0.03024 0-0.06062-0.00322-0.09156-0.01008-0.22708-0.05026-0.37044-0.27496-0.32018-0.50232 0.01932-0.08694 1.8978-8.7686-0.66654-13.541-0.1099-0.20496-0.03318-0.46032 0.17178-0.5705 0.20468-0.1106 0.46018-0.03318 0.5705 0.17178 2.7128 5.0487 0.82852 13.754 0.74704 14.122-0.04368 0.19642-0.21784 0.33012-0.41104 0.33012&quot;
+									fill=&quot;#000&quot; /&gt;
 								&lt;path
-									d="m59.459 22.696c-0.03024 0-0.06076-0.00322-0.09156-0.01008-0.22708-0.05026-0.37044-0.27496-0.32018-0.50232 0.01932-0.08694 1.8976-8.7685-0.66654-13.541-0.11004-0.20482-0.03332-0.46032 0.17178-0.57036 0.2044-0.11088 0.46018-0.03332 0.57036 0.17164 2.7126 5.0487 0.82852 13.753 0.74704 14.122-0.04354 0.19642-0.21784 0.33012-0.4109 0.33012"
-									fill="#000" /&gt;
+									d=&quot;m59.459 22.696c-0.03024 0-0.06076-0.00322-0.09156-0.01008-0.22708-0.05026-0.37044-0.27496-0.32018-0.50232 0.01932-0.08694 1.8976-8.7685-0.66654-13.541-0.11004-0.20482-0.03332-0.46032 0.17178-0.57036 0.2044-0.11088 0.46018-0.03332 0.57036 0.17164 2.7126 5.0487 0.82852 13.753 0.74704 14.122-0.04354 0.19642-0.21784 0.33012-0.4109 0.33012&quot;
+									fill=&quot;#000&quot; /&gt;
 								&lt;path
-									d="m54.323 22.7c-0.0308 0-0.06202-0.00322-0.09338-0.0105-0.22694-0.0511-0.36918-0.27678-0.31794-0.50372 0.01974-0.08694 1.9373-8.7598-0.60522-13.544-0.1092-0.20538-0.03122-0.46046 0.1743-0.56952 0.20552-0.10948 0.46032-0.03108 0.56952 0.1743 2.69 5.0607 0.76636 13.757 0.68334 14.125-0.04452 0.19572-0.21812 0.3283-0.41062 0.3283"
-									fill="#000" /&gt;
+									d=&quot;m54.323 22.7c-0.0308 0-0.06202-0.00322-0.09338-0.0105-0.22694-0.0511-0.36918-0.27678-0.31794-0.50372 0.01974-0.08694 1.9373-8.7598-0.60522-13.544-0.1092-0.20538-0.03122-0.46046 0.1743-0.56952 0.20552-0.10948 0.46032-0.03108 0.56952 0.1743 2.69 5.0607 0.76636 13.757 0.68334 14.125-0.04452 0.19572-0.21812 0.3283-0.41062 0.3283&quot;
+									fill=&quot;#000&quot; /&gt;
 							&lt;/g&gt;
 						&lt;/svg&gt;
 
-						&lt;div class="challengejs-message-1"&gt;
-							Le JavaScript n'est pas activ&eacute; sur votre navigateur.
+						&lt;div class=&quot;challengejs-message-1&quot;&gt;
+							Le JavaScript n&#39;est pas activé sur votre navigateur.
 						&lt;/div&gt;
-						&lt;div class="separator"&gt;&lt;/div&gt;
-						&lt;div class="challengejs-message-2"&gt;
-							Le JavaScript n'est pas activ&eacute; sur votre navigateur. Pour vous permettre de naviguer
+						&lt;div class=&quot;separator&quot;&gt;&lt;/div&gt;
+						&lt;div class=&quot;challengejs-message-2&quot;&gt;
+							Le JavaScript n&#39;est pas activé sur votre navigateur. Pour vous permettre de naviguer
 							correctement sur
 							notre
 							site, il est
-							n&eacute;cessaire qu'il soit activ&eacute;.
+							nécessaire qu&#39;il soit activé.
 						&lt;/div&gt;
-						&lt;div class="challengejs-message-3"&gt;
-							&lt;div class="how"&gt;
+						&lt;div class=&quot;challengejs-message-3&quot;&gt;
+							&lt;div class=&quot;how&quot;&gt;
 								&lt;span&gt;Comment activer le JavaScript ?&lt;/span&gt;
 							&lt;/div&gt;
-							&lt;div class="drop"&gt;
-								&lt;div class="how-to chrome"&gt;
+							&lt;div class=&quot;drop&quot;&gt;
+								&lt;div class=&quot;how-to chrome&quot;&gt;
 									&lt;div&gt;Chrome&lt;/div&gt;
-									&lt;a href="https://support.google.com/chrome"&gt;
+									&lt;a href=&quot;https://support.google.com/chrome&quot;&gt;
 										https://support.google.com/chrome
 									&lt;/a&gt;
 								&lt;/div&gt;
-								&lt;div class="how-to firefox"&gt;
+								&lt;div class=&quot;how-to firefox&quot;&gt;
 									&lt;div&gt;Mozilla Firefox&lt;/div&gt;
-									&lt;a href="https://support.mozilla.org/fr/home"&gt;
+									&lt;a href=&quot;https://support.mozilla.org/fr/home&quot;&gt;
 										https://support.mozilla.org/fr/home
 									&lt;/a&gt;
 								&lt;/div&gt;
-								&lt;div class="how-to safari"&gt;
+								&lt;div class=&quot;how-to safari&quot;&gt;
 									&lt;div&gt;Safari&lt;/div&gt;
-									&lt;a href="https://www.apple.com/support/safari/"&gt;
+									&lt;a href=&quot;https://www.apple.com/support/safari/&quot;&gt;
 										https://www.apple.com/support/safari/
 									&lt;/a&gt;
 								&lt;/div&gt;
-								&lt;div class="how-to opera"&gt;
+								&lt;div class=&quot;how-to opera&quot;&gt;
 									&lt;div&gt;Opera&lt;/div&gt;
-									&lt;a href="https://support.google.com/adsense/answer/12654?hl=fr"&gt;
+									&lt;a href=&quot;https://support.google.com/adsense/answer/12654?hl=fr&quot;&gt;
 										https://support.google.com/adsense/answer/12654?hl=fr
 									&lt;/a&gt;
 								&lt;/div&gt;
-								&lt;div class="how-to explorer"&gt;
+								&lt;div class=&quot;how-to explorer&quot;&gt;
 									&lt;div&gt;Internet Explorer&lt;/div&gt;
-									&lt;a href="https://support.microsoft.com/product/internet-explorer"&gt;
+									&lt;a href=&quot;https://support.microsoft.com/product/internet-explorer&quot;&gt;
 										https://support.microsoft.com/product/internet-explorer
 									&lt;/a&gt;
 								&lt;/div&gt;
@@ -725,533 +948,419 @@ ZAP Scanning Report
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/noscript&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">&lt;noscript&gt;
-		&lt;div class="challengejs-container"&gt;
-			&lt;div class="container"&gt;
-				&lt;div class="challengejs-body"&gt;
-					&lt;div class="challengejs-card"&gt;
-						&lt;svg version="1.1" viewBox="0 0 71 64" xmlns="http://www.w3.org/2000/svg"&gt;
-							&lt;title&gt;logo&lt;/title&gt;
-							&lt;g fill="none" fill-rule="evenodd"&gt;
-								&lt;path
-									d="m15.035 27.154s0.0805 2.774 1.3594 4.6882c1.279 1.9142 5.3529 5.8842 5.3529 5.8842s6.3515 1.8683 9.2705 0.2002c2.9191-1.6681 6.6875-3.3328 9.3905-8.1301 2.7028-4.7974 5.2049-11.887 6.4561-15.64 1.251-3.7531 4.2825-5.241 9.4389-5.7481 5.1565-0.50708 10.895 1.9488 10.895 1.9488s-2.9609-5.4648-6.8517-7.0879c-3.8909-1.6232-9.8379-4.215-17.081 0-7.2433 4.215-10.55 9.6317-14.452 17.783-2.8127 5.8754-4.8843 6.032-9.8885 6.449-5.0042 0.41706-3.8895-0.3472-3.8895-0.3472"
-									fill="#fff" /&gt;
-								&lt;path
-									d="m21.843 38.343s4.4289 4.2899 8.4697 6.1065c4.0407 1.8168 18.219 3.9018 25.725-1.5194 7.5062-5.4212 11.955-12.851 12.858-20.187 0.90328-7.336-0.15582-10.972-3.3793-12.698-3.2236-1.7269-15.734-3.3949-19.07 4.5283-3.3361 7.9233-5.0042 17.932-11.259 20.851-6.2552 2.9191-8.5641 3.3762-11.997 2.5222-3.4328-0.85414-1.3476 0.3969-1.3476 0.3969"
-									fill="#F2E205" /&gt;
-								&lt;path
-									d="m20.175 7.4842s-1.251-1.6681-5.0042-0.41706c-3.7531 1.2512-6.2552 2.9191-7.0892 5.8383-0.83398 2.919-2.1511 5.7266-0.65856 7.6588 1.4925 1.9324 3.9946 4.8516 6.0798 5.6855v-7.9233l0.70616-5.3673 1.4685-2.1536 3.45-2.1333 1.0475-1.188z"
-									fill="#0828F2" /&gt;
-								&lt;path
-									d="m11.835 7.4842s-1.251-2.5021-6.2552-2.5021c-5.0042 0-3.3361 1.251-3.3361 1.251s5.4211 4.1702 5.0042 6.2552l4.5871-5.0042z"
-									fill="#0828F2" /&gt;
-								&lt;path
-									d="m49.938 5.4833c0 0.57526-0.46634 1.0416-1.0416 1.0416s-1.0416-0.46634-1.0416-1.0416c0-0.57526 0.46634-1.0416 1.0416-1.0416s1.0416 0.46634 1.0416 1.0416"
-									fill="#000" /&gt;
-								&lt;path
-									d="m69.211 19.355c-0.4606 0-0.83412-0.37338-0.83412-0.83398 0-9.2156-7.4971-16.713-16.713-16.713-3.5735 0-6.9817 1.1115-9.8568 3.2143-0.37142 0.27188-0.89376 0.19082-1.1655-0.18074-0.27202-0.37184-0.19096-0.89376 0.18088-1.1656 3.1626-2.3132 6.9117-3.536 10.841-3.536 10.135 0 18.381 8.2457 18.381 18.381 0 0.4606-0.37338 0.83398-0.83398 0.83398"
-									fill="#000" /&gt;
-								&lt;path
-									d="m41.126 47.441c-15.947 0-28.92-12.973-28.92-28.92 0-0.98434 0.05026-1.9789 0.14924-2.9558 0.04648-0.45822 0.45626-0.7917 0.91378-0.74564 0.45836 0.04648 0.79212 0.45556 0.74578 0.91392-0.09324 0.92134-0.1407 1.8592-0.1407 2.7875 0 15.027 12.225 27.252 27.252 27.252 15.027 0 27.252-12.225 27.252-27.252 0-0.4606 0.37338-0.83412 0.83398-0.83412s0.83398 0.37352 0.83398 0.83412c0 15.947-12.973 28.92-28.92 28.92"
-									fill="#000" /&gt;
-								&lt;g transform="translate(5.88 .00182)" fill="#000"&gt;
-									&lt;path
-										d="m12.261 28.231c-0.48958 0-0.87738-0.00896-0.9016-0.00952-6.2275 1.4e-4 -11.31-5.0824-11.31-11.33 0-6.2472 5.0827-11.33 11.33-11.33 4.1066 0 6.4193 1.9823 6.5157 2.0665 0.27636 0.24178 0.36204 0.63588 0.21112 0.97062-0.15078 0.33516-0.50162 0.53228-0.8673 0.48412-0.34888-0.04508-0.70574-0.0679-1.0609-0.0679-4.9585 0-8.1624 3.2966-8.1624 8.3985 0 0.4606-0.37352 0.83398-0.83412 0.83398s-0.83398-0.37338-0.83398-0.83398c0-5.2259 2.9757-8.9634 7.6059-9.8594-0.72968-0.1911-1.5912-0.32438-2.574-0.32438-5.3276 0-9.6618 4.3341-9.6618 9.6617 0 5.3276 4.3343 9.6618 9.6618 9.6618 0.02842 5.6e-4 0.8904 0.0203 1.6418 1.4e-4 0.75278-0.02016 1.5796-0.08554 1.588-0.0861 0.17528-0.01022 3.7612-0.2632 6.9628-4.8348 0.6125-0.87458 1.2944-2.1406 2.0843-3.6068 3.6044-6.6905 9.637-17.888 23.398-17.888 0.4606 0 0.83398 0.37352 0.83398 0.83412 0 0.4606-0.37338 0.83398-0.83398 0.83398-12.765 0-18.281 10.237-21.93 17.012-0.81452 1.5121-1.518 2.8179-2.1865 3.7726-3.7012 5.2851-8.0436 5.5343-8.2267 5.5422-0.00588 0.00112-0.84938 0.06762-1.6454 0.08932-0.27118 7e-3 -0.5516 0.00952-0.80486 0.00952" /&gt;
-								&lt;/g&gt;
-								&lt;path
-									d="m7.0933 14.972c-0.4606 0-0.83398-0.37338-0.83398-0.83412 0-3.5616-2.4879-6.5927-5.4328-6.6189-0.33516-0.00308-0.63588-0.2065-0.76356-0.51646-0.12768-0.30996-0.0574-0.66626 0.17836-0.90454 1.59-1.6057 3.7096-2.49 5.9692-2.49 1.9853 0 3.9119 0.7056 5.425 1.9867 0.01092 0.00938 0.02198 0.01918 0.03262 0.02912 0.09296 0.08764 0.92274 0.87444 1.3696 1.5056 0.26614 0.37604 0.17724 0.89656-0.19866 1.1627-0.37646 0.26614-0.89698 0.17654-1.1627-0.1988-0.29106-0.41132-0.903-1.0195-1.1355-1.2396-1.2095-1.0175-2.7467-1.5777-4.3303-1.5777-1.22 0-2.3891 0.32172-3.4119 0.92526 2.925 1.0395 5.1289 4.263 5.1289 7.9366 0 0.46074-0.37352 0.83412-0.83412 0.83412"
-									fill="#000" /&gt;
-								&lt;path
-									d="m27.146 39.184c-2.3787 0-4.9279-0.52864-7.6289-1.5854-0.42896-0.16786-0.64064-0.6517-0.47278-1.0805 0.16758-0.42868 0.65086-0.64092 1.0805-0.47264 4.6698 1.8271 8.7959 1.9489 12.263 0.36358 6.97-3.1878 10.361-12.773 12.604-19.115 0.448-1.2656 0.87066-2.4613 1.2702-3.4646 1.4633-3.6743 5.0929-5.8811 10.22-6.2139 5.3088-0.34426 10.795 1.4771 12.235 4.0599 0.22442 0.40236 0.0798 0.91014-0.32256 1.1346-0.40278 0.22456-0.91014 0.08008-1.1346-0.32256-0.99036-1.7766-5.7624-3.5279-10.67-3.2073-2.577 0.16716-7.1436 1.0608-8.7784 5.1663-0.38766 0.97314-0.80514 2.1539-1.2473 3.404-2.3377 6.608-5.8701 16.594-13.483 20.076-1.8344 0.83888-3.8172 1.2579-5.9354 1.2579"
-									fill="#000" /&gt;
-								&lt;path
-									d="m9.7252 60.582c0.65408 0.65422 1.4419 0.98126 2.3635 0.98126 0.92176 0 1.7097-0.32704 2.3638-0.98126 0.65408-0.65394 0.98098-1.4417 0.98098-2.3635 0-0.9219-0.3269-1.7097-0.98098-2.3636-0.65408-0.65422-1.442-0.98126-2.3638-0.98126-0.92162 0-1.7094 0.32704-2.3635 0.98126-0.24794 0.2478-0.45108 0.52038-0.60956 0.8176v3.0919c0.15848 0.29722 0.36162 0.57022 0.60956 0.8176zm-0.60956 2.4678h-1.8582v-12.264h1.8582v3.1514c0.86212-0.61446 1.853-0.92176 2.973-0.92176 1.437 0 2.6632 0.5082 3.6793 1.5238 1.0157 1.016 1.5238 2.2425 1.5238 3.6793 0 1.4371-0.50806 2.6636-1.5238 3.6792-1.0161 1.016-2.2424 1.5238-3.6793 1.5238-1.12 0-2.1109-0.3073-2.973-0.92176v0.55006z"
-									fill="#000" /&gt;
-								&lt;path
-									d="m26.954 59.765v-3.0919c-0.15862-0.29722-0.3619-0.5698-0.60956-0.8176-0.65408-0.65436-1.4419-0.98126-2.3635-0.98126-0.92176 0-1.7097 0.3269-2.3638 0.98126-0.65408 0.65394-0.98098 1.4417-0.98098 2.3636 0 0.92176 0.3269 1.7095 0.98098 2.3635 0.65408 0.65422 1.442 0.98126 2.3638 0.98126 0.92162 0 1.7094-0.32704 2.3635-0.98126 0.24766-0.24738 0.45094-0.52038 0.60956-0.8176zm0 2.7353c-0.86212 0.61446-1.8532 0.92176-2.973 0.92176-1.4371 0-2.6635-0.50778-3.6793-1.5238-1.0158-1.0156-1.5238-2.2421-1.5238-3.6792 0-1.4368 0.50792-2.6634 1.5238-3.6793 1.0158-1.0156 2.2422-1.5238 3.6793-1.5238 1.1199 0 2.1109 0.3073 2.973 0.92176v-0.55006h1.8582v9.6627h-1.8582v-0.55006z"
-									fill="#000" /&gt;
-								&lt;polygon points="31.369 63.05 33.227 63.05 33.227 50.786 31.369 50.786" fill="#000" /&gt;
-								&lt;path
-									d="m41.863 55.29c-0.48566-0.27706-1.0256-0.41608-1.6202-0.41608-0.9219 0-1.7097 0.3269-2.3639 0.98126-0.65394 0.65394-0.98098 1.4417-0.98098 2.3635 0 0.55916 0.12264 1.0704 0.3682 1.5334 0.0154 0.02926 0.0315 0.05824 0.04788 0.08708l1.3083 1.3082c0.48552 0.27762 1.0258 0.41622 1.6205 0.41622 1.0205 0 1.8976-0.42616 2.6312-1.2785l1.4568 1.1445c-1.0903 1.3282-2.4529 1.9922-4.088 1.9922-1.4372 0-2.6635-0.50778-3.6793-1.5238-1.016-1.0156-1.5238-2.2421-1.5238-3.6793 0-1.4367 0.50778-2.6632 1.5238-3.6792 1.0158-1.0156 2.2421-1.5238 3.6793-1.5238 0.29288 0 0.57694 0.021 0.8526 0.063 1.0765 0.16408 1.9305 0.6265 2.6768 1.5592"
-									fill="#000" /&gt;
-								&lt;path
-									d="m59.105 56.39v6.6598h-1.8582v-9.6776h1.8582v0.38682c0.763-0.4956 1.6302-0.74354 2.6016-0.74354 1.3378 0 2.4773 0.47096 3.4189 1.4125 0.94136 0.9415 1.4123 2.081 1.4123 3.4189v5.203h-1.8584v-5.203c0-0.82264-0.2898-1.5239-0.86968-2.1036-0.57974-0.57974-1.2809-0.86954-2.1032-0.86954-0.82292 0-1.5215 0.2877-2.0961 0.8624-0.20832 0.20804-0.37688 0.4263-0.50554 0.65394"
-									fill="#000" /&gt;
-								&lt;path
-									d="m37.005 62.28c-0.53312-0.65814-0.74872-1.5355-0.59178-2.4073 0.1659-0.92092 0.72114-1.7024 1.5637-2.2002 0.49126-0.29036 1.1718-0.43792 1.9597-0.60858 0.53942-0.1169 1.4209-0.308 1.9414-0.55328 0.09716-0.04592 0.27706-0.24486 0.31738-0.46592 0.03682-0.20174-0.05978-0.42574-0.09856-0.49266-0.17234-0.29708-0.5334-0.48874-1.3178-0.63826l0.30366-1.8375c2.4144 0.45976 3.0744 2.0796 3.1615 2.4338 0.21462 0.81886-0.00532 1.4244-0.22806 1.7884-0.69188 1.1312-2.2606 1.4711-3.6448 1.771-0.50988 0.1106-1.1444 0.24808-1.3503 0.36974-0.41118 0.24304-0.5467 0.5677-0.58814 0.79716-0.04956 0.27566 0.01442 0.56378 0.16688 0.75194l-1.5947 1.2918z"
-									fill="#000" /&gt;
-								&lt;path d="m38.535 60.894s0.14154 0.30408 0.80584 0.5523l-0.53466 0.10066-0.79926-0.52556"
-									fill="#000" /&gt;
-								&lt;path
-									d="m52.691 55.29c-0.48552-0.27706-1.0256-0.41608-1.6202-0.41608-0.9219 0-1.7097 0.3269-2.3638 0.98126-0.65408 0.65394-0.98098 1.4417-0.98098 2.3635 0 0.55916 0.1225 1.0704 0.36806 1.5334 0.0154 0.02926 0.0315 0.05824 0.04802 0.08708l1.3082 1.3082c0.48552 0.27762 1.0258 0.41622 1.6205 0.41622 1.0206 0 1.8976-0.42616 2.6312-1.2785l1.4568 1.1445c-1.0903 1.3282-2.4529 1.9922-4.088 1.9922-1.4371 0-2.6635-0.50778-3.6793-1.5238-1.016-1.0156-1.5238-2.2421-1.5238-3.6793 0-1.4367 0.50778-2.6632 1.5238-3.6792 1.0158-1.0156 2.2422-1.5238 3.6793-1.5238 0.29288 0 0.57708 0.021 0.8526 0.063 1.0765 0.16408 1.9305 0.6265 2.6768 1.5592"
-									fill="#000" /&gt;
-								&lt;path
-									d="m47.833 62.28c-0.53298-0.65814-0.74872-1.5355-0.59178-2.4073 0.1659-0.92092 0.72114-1.7024 1.5637-2.2002 0.4914-0.29036 1.1719-0.43792 1.9599-0.60858 0.53928-0.1169 1.4209-0.308 1.9412-0.55328 0.09716-0.04592 0.27706-0.24486 0.31738-0.46592 0.03682-0.20174-0.05964-0.42574-0.09842-0.49266-0.17248-0.29708-0.53354-0.48874-1.318-0.63826l0.30366-1.8375c2.4144 0.45976 3.0745 2.0796 3.1616 2.4338 0.21448 0.81886-0.00546 1.4244-0.2282 1.7884-0.69188 1.1312-2.2606 1.4711-3.6448 1.771-0.50974 0.1106-1.1444 0.24808-1.3503 0.36974-0.41118 0.24304-0.5467 0.5677-0.588 0.79716-0.0497 0.27566 0.01428 0.56378 0.16674 0.75194l-1.5947 1.2918z"
-									fill="#000" /&gt;
-								&lt;path d="m49.363 60.894s0.14154 0.30408 0.80584 0.5523l-0.53466 0.10066-0.79912-0.52556"
-									fill="#000" /&gt;
-								&lt;path
-									d="m64.228 23.073c-0.03024 0-0.06062-0.00322-0.09156-0.01008-0.22708-0.05026-0.37044-0.27496-0.32018-0.50232 0.01932-0.08694 1.8978-8.7686-0.66654-13.541-0.1099-0.20496-0.03318-0.46032 0.17178-0.5705 0.20468-0.1106 0.46018-0.03318 0.5705 0.17178 2.7128 5.0487 0.82852 13.754 0.74704 14.122-0.04368 0.19642-0.21784 0.33012-0.41104 0.33012"
-									fill="#000" /&gt;
-								&lt;path
-									d="m59.459 22.696c-0.03024 0-0.06076-0.00322-0.09156-0.01008-0.22708-0.05026-0.37044-0.27496-0.32018-0.50232 0.01932-0.08694 1.8976-8.7685-0.66654-13.541-0.11004-0.20482-0.03332-0.46032 0.17178-0.57036 0.2044-0.11088 0.46018-0.03332 0.57036 0.17164 2.7126 5.0487 0.82852 13.753 0.74704 14.122-0.04354 0.19642-0.21784 0.33012-0.4109 0.33012"
-									fill="#000" /&gt;
-								&lt;path
-									d="m54.323 22.7c-0.0308 0-0.06202-0.00322-0.09338-0.0105-0.22694-0.0511-0.36918-0.27678-0.31794-0.50372 0.01974-0.08694 1.9373-8.7598-0.60522-13.544-0.1092-0.20538-0.03122-0.46046 0.1743-0.56952 0.20552-0.10948 0.46032-0.03108 0.56952 0.1743 2.69 5.0607 0.76636 13.757 0.68334 14.125-0.04452 0.19572-0.21812 0.3283-0.41062 0.3283"
-									fill="#000" /&gt;
-							&lt;/g&gt;
-						&lt;/svg&gt;
-
-						&lt;div class="challengejs-message-1"&gt;
-							Le JavaScript n'est pas activ&eacute; sur votre navigateur.
-						&lt;/div&gt;
-						&lt;div class="separator"&gt;&lt;/div&gt;
-						&lt;div class="challengejs-message-2"&gt;
-							Le JavaScript n'est pas activ&eacute; sur votre navigateur. Pour vous permettre de naviguer
-							correctement sur
-							notre
-							site, il est
-							n&eacute;cessaire qu'il soit activ&eacute;.
-						&lt;/div&gt;
-						&lt;div class="challengejs-message-3"&gt;
-							&lt;div class="how"&gt;
-								&lt;span&gt;Comment activer le JavaScript ?&lt;/span&gt;
-							&lt;/div&gt;
-							&lt;div class="drop"&gt;
-								&lt;div class="how-to chrome"&gt;
-									&lt;div&gt;Chrome&lt;/div&gt;
-									&lt;a href="https://support.google.com/chrome"&gt;
-										https://support.google.com/chrome
-									&lt;/a&gt;
-								&lt;/div&gt;
-								&lt;div class="how-to firefox"&gt;
-									&lt;div&gt;Mozilla Firefox&lt;/div&gt;
-									&lt;a href="https://support.mozilla.org/fr/home"&gt;
-										https://support.mozilla.org/fr/home
-									&lt;/a&gt;
-								&lt;/div&gt;
-								&lt;div class="how-to safari"&gt;
-									&lt;div&gt;Safari&lt;/div&gt;
-									&lt;a href="https://www.apple.com/support/safari/"&gt;
-										https://www.apple.com/support/safari/
-									&lt;/a&gt;
-								&lt;/div&gt;
-								&lt;div class="how-to opera"&gt;
-									&lt;div&gt;Opera&lt;/div&gt;
-									&lt;a href="https://support.google.com/adsense/answer/12654?hl=fr"&gt;
-										https://support.google.com/adsense/answer/12654?hl=fr
-									&lt;/a&gt;
-								&lt;/div&gt;
-								&lt;div class="how-to explorer"&gt;
-									&lt;div&gt;Internet Explorer&lt;/div&gt;
-									&lt;a href="https://support.microsoft.com/product/internet-explorer"&gt;
-										https://support.microsoft.com/product/internet-explorer
-									&lt;/a&gt;
-								&lt;/div&gt;
-							&lt;/div&gt;
-						&lt;/div&gt;
-					&lt;/div&gt;
-				&lt;/div&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/noscript&gt;</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">2</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p>This is an informational alert and so no changes are required.</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>A noScript tag has been found, which is an indication that the application works differently with JavaScript enabled compared to when it is not.</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p></p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Source ID</td><td width="80%">3</td>
-            </tr>
-            
-        </table>
-        <div class="spacer"></div>
-        <table width="100%" class="results">
-              
-  
-  
-  
-            <tr height="24" class="risk-info">
-                <th width="20%"><a name="info"></a>Informational (Medium)</th><th width="80%">Retrieved from Cache</th>
-            </tr>
-              
-  
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>The content was retrieved from a shared cache. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where caching servers such as "proxy" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance. </p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/favicon.ico</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 0</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/robots.txt</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 6005</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/sitemap.xml</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">Age: 0</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">3</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>The presence of the 'Age' header indicates that that a HTTP/1.1 compliant caching server is in use.</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Source ID</td><td width="80%">3</td>
-            </tr>
-            
-        </table>
-        <div class="spacer"></div>
-        <table width="100%" class="results">
-              
-  
-  
-  
-            <tr height="24" class="risk-info">
-                <th width="20%"><a name="info"></a>Informational (Medium)</th><th width="80%">Storable and Cacheable Content</th>
-            </tr>
-              
-  
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where "shared" caching servers such as "proxy" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/favicon.ico</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/robots.txt</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/sitemap.xml</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">3</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">524</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">WASC Id</td><td width="80%">13</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Source ID</td><td width="80%">3</td>
-            </tr>
-            
-        </table>
-        <div class="spacer"></div>
-        <table width="100%" class="results">
-              
-  
-  
-  
-            <tr height="24" class="risk-info">
-                <th width="20%"><a name="info"></a>Informational (Medium)</th><th width="80%">Storable but Non-Cacheable Content</th>
-            </tr>
-              
-  
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users. </p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">no-cache</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">no-cache</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">2</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p></p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">524</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">WASC Id</td><td width="80%">13</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Source ID</td><td width="80%">3</td>
-            </tr>
-            
-        </table>
-        <div class="spacer"></div>
-        <table width="100%" class="results">
-              
-  
-  
-  
-            <tr height="24" class="risk-info">
-                <th width="20%"><a name="info"></a>Informational (Low)</th><th width="80%">Timestamp Disclosure - Unix</th>
-            </tr>
-              
-  
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Description</td><td width="80%"><p>A timestamp was disclosed by the application/web server - Unix</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/robots.txt</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">11984405</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/robots.txt</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">12233323</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/favicon.ico</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">14465371</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent1">URL</td><td width="80%">https://pix.fr/sitemap.xml</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Method</td><td width="80%">GET</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%" class="indent2">Evidence</td><td width="80%">14465369</td>
-            </tr>
-              
-  
-  
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Instances</td><td width="80%">4</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Solution</td><td width="80%"><p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Other information</td><td width="80%"><p>11984405, which evaluates to: 1970-05-19 17:00:05</p></td>
-            </tr>
-            <TR vAlign="top">
-                <TD colspan="2"></TD>
-            </TR>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Reference</td><td width="80%"><p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p></td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">CWE Id</td><td width="80%">200</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">WASC Id</td><td width="80%">13</td>
-            </tr>
-              
-            <tr bgcolor="#e8e8e8">
-                <td width="20%">Source ID</td><td width="80%">3</td>
-            </tr>
-            
-        </table>
-    </body>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">1</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>This is an informational alert and so no changes are required.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10109/">10109</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
+						id="10050"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Retrieved from Cache</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The content was retrieved from a shared cache. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where caching servers such as &quot;proxy&quot; caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance. </div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pix.fr/favicon.ico">https://pix.fr/favicon.ico</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Age: 0</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pix.fr/robots.txt">https://pix.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Age: 3892</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pix.fr/sitemap.xml">https://pix.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Age: 0</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">3</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</div>
+							<br />
+						
+							<div>Cache-Control: no-cache, no-store, must-revalidate, private</div>
+							<br />
+						
+							<div>Pragma: no-cache</div>
+							<br />
+						
+							<div>Expires: 0</div>
+							<br />
+						
+							<div>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://tools.ietf.org/html/rfc7234">https://tools.ietf.org/html/rfc7234</a>
+							<br />
+						
+							<a href="https://tools.ietf.org/html/rfc7231">https://tools.ietf.org/html/rfc7231</a>
+							<br />
+						
+							<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)">http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10050/">10050</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
+						id="10049"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Storable and Cacheable Content</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where &quot;shared&quot; caching servers such as &quot;proxy&quot; caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pix.fr/favicon.ico">https://pix.fr/favicon.ico</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pix.fr/robots.txt">https://pix.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pix.fr/sitemap.xml">https://pix.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">3</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</div>
+							<br />
+						
+							<div>Cache-Control: no-cache, no-store, must-revalidate, private</div>
+							<br />
+						
+							<div>Pragma: no-cache</div>
+							<br />
+						
+							<div>Expires: 0</div>
+							<br />
+						
+							<div>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://tools.ietf.org/html/rfc7234">https://tools.ietf.org/html/rfc7234</a>
+							<br />
+						
+							<a href="https://tools.ietf.org/html/rfc7231">https://tools.ietf.org/html/rfc7231</a>
+							<br />
+						
+							<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)">http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/524.html">524</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10049/">10049</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
+						id="10049"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Storable but Non-Cacheable Content</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users. </div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pix.fr">https://pix.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">no-cache</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">1</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://tools.ietf.org/html/rfc7234">https://tools.ietf.org/html/rfc7234</a>
+							<br />
+						
+							<a href="https://tools.ietf.org/html/rfc7231">https://tools.ietf.org/html/rfc7231</a>
+							<br />
+						
+							<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)">http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/524.html">524</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10049/">10049</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+	
+</body>
 </html>
+
