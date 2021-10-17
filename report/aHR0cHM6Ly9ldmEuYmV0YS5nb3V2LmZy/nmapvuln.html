@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln eva.beta.gouv.fr</pre>
-<p class="lead">Sun Oct 10 03:16:48 2021 – Sun Oct 10 03:17:22 2021<br>1 hosts scanned.
+<p class="lead">Sun Oct 17 03:18:23 2021 – Sun Oct 17 03:18:48 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,7 +76,7 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>185.31.40.19</td>
+<td>109.232.236.90</td>
 <td>eva.beta.gouv.fr</td>
 <td>2</td>
 <td>0</td>
@@ -91,12 +91,12 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#185-31-40-19"><h3 class="panel-title">185.31.40.19 - eva.beta.gouv.fr</h3></div>
-<div class="panel-body collapse in" id="185-31-40-19">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#109-232-236-90"><h3 class="panel-title">109.232.236.90 - eva.beta.gouv.fr</h3></div>
+<div class="panel-body collapse in" id="109-232-236-90">
 <h4>Hostnames</h4>
 <ul>
 <li>eva.beta.gouv.fr (user)</li>
-<li>http9.paris1.alwaysdata.com (PTR)</li>
+<li>ows-109-232-236-90.eu-west-2.compute.outscale.com (PTR)</li>
 </ul>
 <h4>Ports</h4>
 <div class="table-responsive"><table class="table table-bordered">
@@ -115,76 +115,26 @@
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
 <td title="Service">http</td>
-<td title="Product"></td>
+<td title="Product">OpenResty web app server</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, RTSPRequest, SSLSessionReq, X11Probe: 
-    HTTP/1.1 400 Bad Request
-    Connection: close
-    Content-Length: 11
-    content-type: text/plain; charset=utf-8
-    Request
-  FourOhFourRequest: 
-    HTTP/1.1 404 Not Found
-    Connection: close
-    via: 1.0 alproxy
-    date: Sun, 10 Oct 2021 03:17:04 GMT
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Site not found&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 031b1006-686ed5b8&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-  GetRequest: 
-    HTTP/1.1 404 Not Found
-    Connection: close
-    via: 1.0 alproxy
-    date: Sun, 10 Oct 2021 03:17:04 GMT
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Site not found&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: eb7381ce-79e11107&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-  HTTPOptions: 
-    HTTP/1.1 404 Not Found
-    Connection: close
-    via: 1.0 alproxy
-    date: Sun, 10 Oct 2021 03:17:04 GMT
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Site not found&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 23c05458-aace1495&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:openresty:ngx_openresty">cpe:/a:openresty:ngx_openresty</a><h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">openresty</pre>
 </td></tr>
 <tr class="success">
 <td title="Port">443</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">https</td>
-<td title="Product">Apache</td>
+<td title="Service">http</td>
+<td title="Product">OpenResty web app server</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, RTSPRequest, SSLSessionReq, tor-versions: 
-    HTTP/1.1 400 Bad Request
-    Connection: close
-    Content-Length: 11
-    content-type: text/plain; charset=utf-8
-    Request
-  FourOhFourRequest: 
-    HTTP/1.1 404 Not Found
-    Connection: close
-    via: 1.0 alproxy
-    date: Sun, 10 Oct 2021 03:17:11 GMT
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Site not found&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 4a4096dc-15b2fc1c&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-  GetRequest: 
-    HTTP/1.1 404 Not Found
-    Connection: close
-    via: 1.0 alproxy
-    date: Sun, 10 Oct 2021 03:17:10 GMT
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Site not found&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 599e0eeb-7c0ef183&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-  HTTPOptions: 
-    HTTP/1.1 404 Not Found
-    Connection: close
-    via: 1.0 alproxy
-    date: Sun, 10 Oct 2021 03:17:10 GMT
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Site not found&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: aa76631c-c66c6c8c&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</pre>
-<h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">Apache</pre>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:openresty:ngx_openresty">cpe:/a:openresty:ngx_openresty</a><h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">openresty</pre>
 </td></tr>
 </tbody>
 </table></div>
@@ -204,23 +154,23 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>185.31.40.19 - eva.beta.gouv.fr</td>
+<td>109.232.236.90 - eva.beta.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
+<td>OpenResty web app server</td>
 <td></td>
-<td></td>
-<td></td>
+<td>cpe:/a:openresty:ngx_openresty</td>
 <td></td>
 </tr>
 <tr>
-<td>185.31.40.19 - eva.beta.gouv.fr</td>
+<td>109.232.236.90 - eva.beta.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
-<td>https</td>
-<td>Apache</td>
+<td>http</td>
+<td>OpenResty web app server</td>
 <td></td>
-<td></td>
+<td>cpe:/a:openresty:ngx_openresty</td>
 <td></td>
 </tr>
 </tbody>

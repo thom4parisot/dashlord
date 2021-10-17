@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln mon-entreprise.fr</pre>
-<p class="lead">Sun Oct 10 04:22:36 2021 – Sun Oct 10 04:23:01 2021<br>1 hosts scanned.
+<p class="lead">Sun Oct 17 04:20:47 2021 – Sun Oct 17 04:21:17 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,7 +76,7 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>68.183.27.198</td>
+<td>64.227.12.111</td>
 <td>mon-entreprise.fr</td>
 <td>2</td>
 <td>0</td>
@@ -91,8 +91,8 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#68-183-27-198"><h3 class="panel-title">68.183.27.198 - mon-entreprise.fr</h3></div>
-<div class="panel-body collapse in" id="68-183-27-198">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#64-227-12-111"><h3 class="panel-title">64.227.12.111 - mon-entreprise.fr</h3></div>
+<div class="panel-body collapse in" id="64-227-12-111">
 <h4>Hostnames</h4>
 <ul><li>mon-entreprise.fr (user)</li></ul>
 <h4>Ports</h4>
@@ -119,22 +119,36 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, Help, Kerberos, RPCCheck, SMBProgNeg, TLSSessionReq, TerminalServerCookie: 
+  DNSStatusRequestTCP, Help, Kerberos, RPCCheck, SSLSessionReq, TLSSessionReq: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 10 Oct 2021 04:22:52 GMT
-  DNSVersionBindReqTCP, SSLSessionReq: 
+    date: Sun, 17 Oct 2021 04:21:03 GMT
+  DNSVersionBindReqTCP: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 10 Oct 2021 04:22:51 GMT
-  FourOhFourRequest, GetRequest, HTTPOptions: 
+    date: Sun, 17 Oct 2021 04:21:02 GMT
+  FourOhFourRequest, HTTPOptions: 
     HTTP/1.0 400 Bad Request
-    date: Sun, 10 Oct 2021 04:22:47 GMT
+    content-length: 19
+    date: Sun, 17 Oct 2021 04:20:57 GMT
     Missing host header
-  RTSPRequest, X11Probe: 
+  GetRequest: 
+    HTTP/1.0 400 Bad Request
+    content-length: 19
+    date: Sun, 17 Oct 2021 04:20:58 GMT
+    Missing host header
+  RTSPRequest: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 10 Oct 2021 04:22:47 GMT</pre>
+    date: Sun, 17 Oct 2021 04:20:57 GMT
+  SMBProgNeg, TerminalServerCookie: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Sun, 17 Oct 2021 04:21:04 GMT
+  X11Probe: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Sun, 17 Oct 2021 04:20:58 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -150,22 +164,23 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, Kerberos, RPCCheck, RTSPRequest, SMBProgNeg, TLSSessionReq: 
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, RTSPRequest, SSLSessionReq: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 10 Oct 2021 04:22:58 GMT
+    date: Sun, 17 Oct 2021 04:21:10 GMT
   FourOhFourRequest, GetRequest, HTTPOptions: 
     HTTP/1.0 400 Bad Request
-    date: Sun, 10 Oct 2021 04:22:53 GMT
+    content-length: 19
+    date: Sun, 17 Oct 2021 04:21:04 GMT
     Missing host header
-  Help, SSLSessionReq, TerminalServerCookie: 
+  Kerberos, SMBProgNeg, TLSSessionReq, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 10 Oct 2021 04:22:59 GMT
+    date: Sun, 17 Oct 2021 04:21:11 GMT
   tor-versions: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 10 Oct 2021 04:22:53 GMT</pre>
+    date: Sun, 17 Oct 2021 04:21:05 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -196,7 +211,7 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>68.183.27.198 - mon-entreprise.fr</td>
+<td>64.227.12.111 - mon-entreprise.fr</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
@@ -206,7 +221,7 @@
 <td></td>
 </tr>
 <tr>
-<td>68.183.27.198 - mon-entreprise.fr</td>
+<td>64.227.12.111 - mon-entreprise.fr</td>
 <td>443</td>
 <td>tcp</td>
 <td>https</td>

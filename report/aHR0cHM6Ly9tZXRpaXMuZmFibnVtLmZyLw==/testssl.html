@@ -21,11 +21,11 @@
 ###########################################################</span>
 
  Using &quot;OpenSSL 1.0.2-chacha (1.0.2k-dev)&quot; [~183 ciphers]
- on fv-az201-93:/home/testssl/bin/openssl.Linux.x86_64
+ on fv-az290-469:/home/testssl/bin/openssl.Linux.x86_64
  (built: &quot;Jan 18 17:12:17 2019&quot;, platform: &quot;linux-x86_64&quot;)
 
 
-<span style="color:white;background-color:black;"> Start 2021-10-10 08:58:52        --&gt;&gt; 51.15.215.184:443 (metiis.fabnum.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2021-10-17 08:01:46        --&gt;&gt; 51.15.215.184:443 (metiis.fabnum.fr) &lt;&lt;--</span>
 
  rDNS (51.15.215.184):   184-215-15-51.instances.scw.cloud.
  Service detected:       HTTP
@@ -107,7 +107,8 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing server defaults (Server Hello) </span>
 
 <span style="font-weight:bold;"> TLS extensions (standard)    </span>&quot;session ticket/#35&quot; &quot;renegotiation info/#65281&quot;
-                              &quot;EC point formats/#11&quot;
+                              &quot;EC point formats/#11&quot; &quot;supported versions/#43&quot;
+                              &quot;key share/#51&quot;
                               &quot;application layer protocol negotiation/#16&quot;
 <span style="font-weight:bold;"> Session Ticket RFC 5077 hint </span>no -- no lifetime advertised
 <span style="font-weight:bold;"> SSL Session ID support       </span>yes
@@ -119,14 +120,14 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Server key size              </span>RSA <span style="color:#008817;">4096</span> bits (exponent is 65537)
 <span style="font-weight:bold;"> Server key usage             </span>Digital Signature, Key Encipherment
 <span style="font-weight:bold;"> Server extended key usage    </span>TLS Web Server Authentication, TLS Web Client Authentication
-<span style="font-weight:bold;"> Serial / Fingerprints        </span>0468CDC1B3F11469C54E4D90994E01006B0C / SHA1 3841B276A2917D64D2180801F6EE7D95FA07F079
-                              SHA256 DBC8890B5599F26890D9C5CD5C81450F3C78F07D404C972AF0EC39C575B89FE6
+<span style="font-weight:bold;"> Serial / Fingerprints        </span>036C1E99AB1AC20A828108222FFB5A139BB4 / SHA1 819A6DAA6FC9B323C891AD414F272CC906E9C021
+                              SHA256 EE91B005A63551463E2320AEC3FFD31CDCB9AEB2D22234B04391A5DAC7D60070
 <span style="font-weight:bold;"> Common Name (CN)             </span><i>metiis.fabnum.fr </i> (CN in response to request w/o SNI: <i>TRAEFIK DEFAULT CERT </i>)
 <span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>metiis.fabnum.fr </i>
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">32 &gt;= 30 days</span> (2021-08-13 09:00 --&gt; 2021-11-11 09:00)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">85 &gt;= 30 days</span> (2021-10-12 09:00 --&gt; 2022-01-10 09:00)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
@@ -144,7 +145,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
-<span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
+<span style="font-weight:bold;"> HTTP clock skew              </span>-1 sec from localtime
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>(no &quot;Server&quot; line in header, interesting!)
@@ -171,7 +172,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> FREAK</span> (CVE-2015-0204)                     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> DROWN</span> (CVE-2016-0800, CVE-2016-0703)      <span style="color:#008817;font-weight:bold;">not vulnerable on this host and port (OK)</span>
                                            make sure you don&apos;t use this certificate elsewhere with SSLv2 enabled services
-                                           <a href="https://censys.io/ipv4?q=DBC8890B5599F26890D9C5CD5C81450F3C78F07D404C972AF0EC39C575B89FE6" style="color:black;text-decoration:none;">https://censys.io/ipv4?q=DBC8890B5599F26890D9C5CD5C81450F3C78F07D404C972AF0EC39C575B89FE6</a> could help you to find out
+                                           <a href="https://censys.io/ipv4?q=EE91B005A63551463E2320AEC3FFD31CDCB9AEB2D22234B04391A5DAC7D60070" style="color:black;text-decoration:none;">https://censys.io/ipv4?q=EE91B005A63551463E2320AEC3FFD31CDCB9AEB2D22234B04391A5DAC7D60070</a> could help you to find out
 <span style="font-weight:bold;"> LOGJAM</span> (CVE-2015-4000), experimental      <span style="color:#008817;">not vulnerable (OK):</span> no DH EXPORT ciphers, no DH key detected with &lt;= TLS 1.2
 <span style="font-weight:bold;"> BEAST</span> (CVE-2011-3389)                     TLS1: <span style="color:#a86437;">ECDHE-RSA-AES256-SHA
                                                  AES256-SHA
@@ -240,7 +241,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               Grade capped to B. TLS 1.0 offered
                               Grade capped to A. HSTS is not offered
 
-<span style="color:white;background-color:black;"> Done 2021-10-10 09:01:09 [ 139s] --&gt;&gt; 51.15.215.184:443 (metiis.fabnum.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2021-10-17 08:05:02 [ 198s] --&gt;&gt; 51.15.215.184:443 (metiis.fabnum.fr) &lt;&lt;--</span>
 
 
 </pre>
