@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln webinaire.numerique.gouv.fr</pre>
-<p class="lead">Sun Oct 17 06:30:52 2021 – Sun Oct 17 06:31:12 2021<br>1 hosts scanned.
+<p class="lead">Sun Oct 24 07:19:09 2021 – Sun Oct 24 07:19:30 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -78,7 +78,7 @@
 <td><span class="label label-success">up</span></td>
 <td>51.15.207.28</td>
 <td>webinaire.numerique.gouv.fr</td>
-<td>5</td>
+<td>3</td>
 <td>0</td>
 </tr></tbody>
 </table></div>
@@ -176,29 +176,24 @@
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:igor_sysoev:nginx">cpe:/a:igor_sysoev:nginx</a></td></tr>
-<tr class="success">
-<td title="Port">5000</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http</td>
-<td title="Product">Gunicorn</td>
-<td title="Version">20.0.4</td>
-<td title="Extra Info"></td>
+<tr class="warning">
+<td>5000</td>
+<td>tcp</td>
+<td>filtered<br>no-response</td>
+<td>upnp</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:gunicorn:gunicorn:20.0.4">cpe:/a:gunicorn:gunicorn:20.0.4</a><h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">gunicorn/20.0.4</pre>
-</td></tr>
-<tr class="success">
-<td title="Port">8443</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">https-alt</td>
-<td title="Product"></td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
+<tr class="warning">
+<td>8443</td>
+<td>tcp</td>
+<td>filtered<br>no-response</td>
+<td>https-alt</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
 </tbody>
 </table></div>
 </div>
@@ -244,26 +239,6 @@
 <td>nginx</td>
 <td></td>
 <td>cpe:/a:igor_sysoev:nginx</td>
-<td></td>
-</tr>
-<tr>
-<td>51.15.207.28 - webinaire.numerique.gouv.fr</td>
-<td>5000</td>
-<td>tcp</td>
-<td>http</td>
-<td>Gunicorn</td>
-<td>20.0.4</td>
-<td>cpe:/a:gunicorn:gunicorn:20.0.4</td>
-<td></td>
-</tr>
-<tr>
-<td>51.15.207.28 - webinaire.numerique.gouv.fr</td>
-<td>8443</td>
-<td>tcp</td>
-<td>https-alt</td>
-<td></td>
-<td></td>
-<td></td>
 <td></td>
 </tr>
 </tbody>

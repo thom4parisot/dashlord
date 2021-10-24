@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 17 Oct 2021 07:15:42
+		Generated on Sun, 24 Oct 2021 08:02:01
 	</h3>
 
 	
@@ -152,7 +152,7 @@ td {
 					<div>Medium</div>
 				</td>
 				<td align="center">
-					<div>4</div>
+					<div>5</div>
 				</td>
 			</tr>
 			<tr>
@@ -160,7 +160,7 @@ td {
 					<div>Low</div>
 				</td>
 				<td align="center">
-					<div>10</div>
+					<div>12</div>
 				</td>
 			</tr>
 			<tr>
@@ -194,6 +194,11 @@ td {
 					align="center">Number of Instances</th>
 			</tr>
 			<tr>
+				<td><a href="#90022">Application Error Disclosure</a></td>
+				<td align="center" class="risk-2">Medium</td>
+				<td align="center">5</td>
+			</tr>
+			<tr>
 				<td><a href="#10038">Content Security Policy (CSP) Header Not Set</a></td>
 				<td align="center" class="risk-2">Medium</td>
 				<td align="center">11</td>
@@ -219,6 +224,11 @@ td {
 				<td align="center">11</td>
 			</tr>
 			<tr>
+				<td><a href="#90022">Application Error Disclosure</a></td>
+				<td align="center" class="risk-1">Low</td>
+				<td align="center">2</td>
+			</tr>
+			<tr>
 				<td><a href="#10010">Cookie No HttpOnly Flag</a></td>
 				<td align="center" class="risk-1">Low</td>
 				<td align="center">1</td>
@@ -236,7 +246,7 @@ td {
 			<tr>
 				<td><a href="#10017">Cross-Domain JavaScript Source File Inclusion</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">10</td>
+				<td align="center">12</td>
 			</tr>
 			<tr>
 				<td><a href="#10110">Dangerous JS Functions</a></td>
@@ -249,6 +259,11 @@ td {
 				<td align="center">11</td>
 			</tr>
 			<tr>
+				<td><a href="#10023">Information Disclosure - Debug Error Messages</a></td>
+				<td align="center" class="risk-1">Low</td>
+				<td align="center">5</td>
+			</tr>
+			<tr>
 				<td><a href="#10063">Permissions Policy Header Not Set</a></td>
 				<td align="center" class="risk-1">Low</td>
 				<td align="center">11</td>
@@ -256,7 +271,7 @@ td {
 			<tr>
 				<td><a href="#10096">Timestamp Disclosure - Unix</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">10</td>
+				<td align="center">13</td>
 			</tr>
 			<tr>
 				<td><a href="#10021">X-Content-Type-Options Header Missing</a></td>
@@ -281,7 +296,7 @@ td {
 			<tr>
 				<td><a href="#10050">Retrieved from Cache</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">10</td>
+				<td align="center">12</td>
 			</tr>
 			<tr>
 				<td><a href="#10049">Storable and Cacheable Content</a></td>
@@ -291,7 +306,7 @@ td {
 			<tr>
 				<td><a href="#10031">User Controllable HTML Element Attribute (Potential XSS)</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">8</td>
+				<td align="center">6</td>
 			</tr>
 		</table>
 		<div class="spacer-lg"></div>
@@ -299,6 +314,186 @@ td {
 
 	
 		<h3>Alert Detail</h3>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-2"><a
+						id="90022"></a>
+						<div>Medium</div></th>
+					<th class="risk-2">Application Error Disclosure</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>This page contains an error/warning message that may disclose sensitive information like the location of the file that produced the unhandled exception. This information can be used to launch further attacks against the web application. The alert could be a false positive if the error message is found inside a documentation page.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/missions-benevolat/12768/benevolat-afev-lyon-7e-arrondissement">https://www.jeveuxaider.gouv.fr/missions-benevolat/12768/benevolat-afev-lyon-7e-arrondissement</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Internal Server Error</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/missions-benevolat/5686/benevolat-energie-jeunes-auvergne-rhone-alpes-bourgogne-villeurbanne">https://www.jeveuxaider.gouv.fr/missions-benevolat/5686/benevolat-energie-jeunes-auvergne-rhone-alpes-bourgogne-villeurbanne</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Internal Server Error</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/missions-benevolat/8021/benevolat-transport-solidaire-en-pays-de-hasparren-garraio-solidarioa-hazparneko-lurraldean-macaye">https://www.jeveuxaider.gouv.fr/missions-benevolat/8021/benevolat-transport-solidaire-en-pays-de-hasparren-garraio-solidarioa-hazparneko-lurraldean-macaye</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Internal Server Error</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/missions-benevolat/8728/benevolat-secours-catholique-2a-bastia">https://www.jeveuxaider.gouv.fr/missions-benevolat/8728/benevolat-secours-catholique-2a-bastia</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Internal Server Error</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/villes/marseille">https://www.jeveuxaider.gouv.fr/villes/marseille</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Internal Server Error</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">5</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Review the source code of this page. Implement custom error pages. Consider implementing a mechanism to provide a unique error reference/identifier to the client (browser) while logging the details on the server side and not exposing them to the user.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/90022/">90022</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
 		
 			<table class="results">
 				<tr height="24">
@@ -1257,7 +1452,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script defer src=&quot;https://static.cloudflareinsights.com/beacon.min.js&quot; data-cf-beacon=&#39;{&quot;rayId&quot;:&quot;69f7baeb1d4b02b0&quot;,&quot;token&quot;:&quot;cba5fa8241b048cbb52ececb5e988a18&quot;,&quot;version&quot;:&quot;2021.9.0&quot;,&quot;si&quot;:100}&#39;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script defer src=&quot;https://static.cloudflareinsights.com/beacon.min.js&quot; data-cf-beacon=&#39;{&quot;rayId&quot;:&quot;6a31ac932b0f6826&quot;,&quot;token&quot;:&quot;cba5fa8241b048cbb52ececb5e988a18&quot;,&quot;version&quot;:&quot;2021.10.0&quot;,&quot;si&quot;:100}&#39;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 				<tr>
@@ -2039,6 +2234,108 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-1"><a
+						id="90022"></a>
+						<div>Low</div></th>
+					<th class="risk-1">Application Error Disclosure</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>This page contains an error/warning message that may disclose sensitive information like the location of the file that produced the unhandled exception. This information can be used to launch further attacks against the web application. The alert could be a false positive if the error message is found inside a documentation page.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/missions-benevolat/11926/benevolat-les-papillons-blancs-de-paris-paris-13e-arrondissement">https://www.jeveuxaider.gouv.fr/missions-benevolat/11926/benevolat-les-papillons-blancs-de-paris-paris-13e-arrondissement</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">HTTP/1.1 500 RuntimeError</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/villes/rennes">https://www.jeveuxaider.gouv.fr/villes/rennes</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">HTTP/1.1 500 RuntimeError</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">2</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Review the source code of this page. Implement custom error pages. Consider implementing a mechanism to provide a unique error reference/identifier to the client (browser) while logging the details on the server side and not exposing them to the user.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/90022/">90022</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-1"><a
 						id="10010"></a>
 						<div>Low</div></th>
 					<th class="risk-1">Cookie No HttpOnly Flag</th>
@@ -2314,7 +2611,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script defer src=&quot;https://static.cloudflareinsights.com/beacon.min.js&quot; data-cf-beacon=&#39;{&quot;rayId&quot;:&quot;69f7baeb1d4b02b0&quot;,&quot;token&quot;:&quot;cba5fa8241b048cbb52ececb5e988a18&quot;,&quot;version&quot;:&quot;2021.9.0&quot;,&quot;si&quot;:100}&#39;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script defer src=&quot;https://static.cloudflareinsights.com/beacon.min.js&quot; data-cf-beacon=&#39;{&quot;rayId&quot;:&quot;6a31ac932b0f6826&quot;,&quot;token&quot;:&quot;cba5fa8241b048cbb52ececb5e988a18&quot;,&quot;version&quot;:&quot;2021.10.0&quot;,&quot;si&quot;:100}&#39;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2392,7 +2689,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script defer src=&quot;https://static.cloudflareinsights.com/beacon.min.js&quot; data-cf-beacon=&#39;{&quot;rayId&quot;:&quot;69f7bb11a9d102b0&quot;,&quot;token&quot;:&quot;cba5fa8241b048cbb52ececb5e988a18&quot;,&quot;version&quot;:&quot;2021.9.0&quot;,&quot;si&quot;:100}&#39;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script defer src=&quot;https://static.cloudflareinsights.com/beacon.min.js&quot; data-cf-beacon=&#39;{&quot;rayId&quot;:&quot;6a31acbab9896826&quot;,&quot;token&quot;:&quot;cba5fa8241b048cbb52ececb5e988a18&quot;,&quot;version&quot;:&quot;2021.10.0&quot;,&quot;si&quot;:100}&#39;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2470,7 +2767,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script defer src=&quot;https://static.cloudflareinsights.com/beacon.min.js&quot; data-cf-beacon=&#39;{&quot;rayId&quot;:&quot;69f7bb268b6f02b0&quot;,&quot;token&quot;:&quot;cba5fa8241b048cbb52ececb5e988a18&quot;,&quot;version&quot;:&quot;2021.9.0&quot;,&quot;si&quot;:100}&#39;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script defer src=&quot;https://static.cloudflareinsights.com/beacon.min.js&quot; data-cf-beacon=&#39;{&quot;rayId&quot;:&quot;6a31acd368c2f58d&quot;,&quot;token&quot;:&quot;cba5fa8241b048cbb52ececb5e988a18&quot;,&quot;version&quot;:&quot;2021.10.0&quot;,&quot;si&quot;:100}&#39;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2548,12 +2845,64 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script defer src=&quot;https://static.cloudflareinsights.com/beacon.min.js&quot; data-cf-beacon=&#39;{&quot;rayId&quot;:&quot;69f7bb8d9de502b0&quot;,&quot;token&quot;:&quot;cba5fa8241b048cbb52ececb5e988a18&quot;,&quot;version&quot;:&quot;2021.9.0&quot;,&quot;si&quot;:100}&#39;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script defer src=&quot;https://static.cloudflareinsights.com/beacon.min.js&quot; data-cf-beacon=&#39;{&quot;rayId&quot;:&quot;6a31ad5fcdfe6826&quot;,&quot;token&quot;:&quot;cba5fa8241b048cbb52ececb5e988a18&quot;,&quot;version&quot;:&quot;2021.10.0&quot;,&quot;si&quot;:100}&#39;&gt;&lt;/script&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/missions-benevolat/11926/benevolat-les-papillons-blancs-de-paris-paris-13e-arrondissement">https://www.jeveuxaider.gouv.fr/missions-benevolat/11926/benevolat-les-papillons-blancs-de-paris-paris-13e-arrondissement</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">https://static.cloudflareinsights.com/beacon.min.js</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;script defer src=&quot;https://static.cloudflareinsights.com/beacon.min.js&quot; data-cf-beacon=&#39;{&quot;rayId&quot;:&quot;6a31adb3fc08f58d&quot;,&quot;token&quot;:&quot;cba5fa8241b048cbb52ececb5e988a18&quot;,&quot;version&quot;:&quot;2021.10.0&quot;,&quot;si&quot;:100}&#39;&gt;&lt;/script&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/villes/rennes">https://www.jeveuxaider.gouv.fr/villes/rennes</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">https://static.cloudflareinsights.com/beacon.min.js</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;script defer src=&quot;https://static.cloudflareinsights.com/beacon.min.js&quot; data-cf-beacon=&#39;{&quot;rayId&quot;:&quot;6a31ad008e76f58d&quot;,&quot;token&quot;:&quot;cba5fa8241b048cbb52ececb5e988a18&quot;,&quot;version&quot;:&quot;2021.10.0&quot;,&quot;si&quot;:100}&#39;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">10</td>
+					<td width="80%">12</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -2604,7 +2953,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/cdeac90.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/cdeac90.modern.js</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/11f3dc6.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/11f3dc6.modern.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2839,7 +3188,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/password-reset">https://www.jeveuxaider.gouv.fr/password-reset</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/missions-benevolat?refinementList%5Btype%5D%5B0%5D=Mission%20%C3%A0%20distance">https://www.jeveuxaider.gouv.fr/missions-benevolat?refinementList%5Btype%5D%5B0%5D=Mission%20%C3%A0%20distance</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2865,7 +3214,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/regles-de-securite">https://www.jeveuxaider.gouv.fr/regles-de-securite</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/password-reset">https://www.jeveuxaider.gouv.fr/password-reset</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3000,6 +3349,186 @@ td {
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/10015/">10015</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-1"><a
+						id="10023"></a>
+						<div>Low</div></th>
+					<th class="risk-1">Information Disclosure - Debug Error Messages</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The response appeared to contain common error messages returned by platforms such as ASP.NET, and Web-servers such as IIS and Apache. You can configure the list of common debug messages.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/missions-benevolat/12768/benevolat-afev-lyon-7e-arrondissement">https://www.jeveuxaider.gouv.fr/missions-benevolat/12768/benevolat-afev-lyon-7e-arrondissement</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Internal Server Error</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/missions-benevolat/5686/benevolat-energie-jeunes-auvergne-rhone-alpes-bourgogne-villeurbanne">https://www.jeveuxaider.gouv.fr/missions-benevolat/5686/benevolat-energie-jeunes-auvergne-rhone-alpes-bourgogne-villeurbanne</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Internal Server Error</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/missions-benevolat/8021/benevolat-transport-solidaire-en-pays-de-hasparren-garraio-solidarioa-hazparneko-lurraldean-macaye">https://www.jeveuxaider.gouv.fr/missions-benevolat/8021/benevolat-transport-solidaire-en-pays-de-hasparren-garraio-solidarioa-hazparneko-lurraldean-macaye</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Internal Server Error</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/missions-benevolat/8728/benevolat-secours-catholique-2a-bastia">https://www.jeveuxaider.gouv.fr/missions-benevolat/8728/benevolat-secours-catholique-2a-bastia</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Internal Server Error</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/villes/marseille">https://www.jeveuxaider.gouv.fr/villes/marseille</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Internal Server Error</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">5</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Disable debugging messages before pushing to production.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10023/">10023</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -3402,6 +3931,32 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/villes/bordeaux">https://www.jeveuxaider.gouv.fr/villes/bordeaux</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">0953046365</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/villes/lille">https://www.jeveuxaider.gouv.fr/villes/lille</a></td>
 					</tr>
 					<tr>
@@ -3633,9 +4188,61 @@ td {
 						<td width="80%">637320046</td>
 					</tr>
 				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/villes/marseille">https://www.jeveuxaider.gouv.fr/villes/marseille</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">10485760</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/villes/marseille">https://www.jeveuxaider.gouv.fr/villes/marseille</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">31536000</td>
+					</tr>
+				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">10</td>
+					<td width="80%">13</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -3845,7 +4452,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/password-reset">https://www.jeveuxaider.gouv.fr/password-reset</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/missions-benevolat?refinementList%5Btype%5D%5B0%5D=Mission%20%C3%A0%20distance">https://www.jeveuxaider.gouv.fr/missions-benevolat?refinementList%5Btype%5D%5B0%5D=Mission%20%C3%A0%20distance</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3871,7 +4478,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/regles-de-securite">https://www.jeveuxaider.gouv.fr/regles-de-securite</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/password-reset">https://www.jeveuxaider.gouv.fr/password-reset</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4132,7 +4739,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">f1b7-qCGh2C1IGmZXv58dYFd5cIge9Hw</td>
+						<td width="80%">f2d9-b26nGH7PKXv7HBGBpZCKCN1zjas</td>
 					</tr>
 				
 					<tr>
@@ -4184,7 +4791,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">bcc6-LgQZ0qXC22x5Rt0Q32taZGPiNLs</td>
+						<td width="80%">bde8-yjH4jJMV3iSTVmO/JCCVCNqF1HU</td>
 					</tr>
 				
 					<tr>
@@ -4210,7 +4817,33 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">e38b-74fEGmzm30ZjBkyrSdqj5h/Kdpg</td>
+						<td width="80%">e4ad-CFTs4iIt31uP9hXVRigDU6kE3X4</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/missions-benevolat?refinementList%5Btype%5D%5B0%5D=Mission%20%C3%A0%20distance">https://www.jeveuxaider.gouv.fr/missions-benevolat?refinementList%5Btype%5D%5B0%5D=Mission%20%C3%A0%20distance</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDYgMTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik01Ljc3NC42MDJMNC4zMzQuNmMtMS42MTYgMC0yLjY2IDEuMDQzLTIuNjYgMi42NTh2MS4yMjVILjIyNWEuMjIzLjIyMyAwIDAwLS4yMjYuMjJWNi40OGMwIC4xMjIuMTAxLjIyLjIyNi4yMmgxLjQ0N3Y0LjQ4YzAgLjEyMi4xMDIuMjIxLjIyNy4yMjFoMS44ODdhLjIyMy4yMjMgMCAwMC4yMjctLjIyVjYuN2gxLjY5MmEuMjIzLjIyMyAwIDAwLjIyNi0uMjJWNC43MDNhLjIxOC4yMTggMCAwMC0uMDY2LS4xNTYuMjMuMjMgMCAwMC0uMTYtLjA2NUg0LjAxNFYzLjQ0NGMwLS40OTkuMTIyLS43NTIuNzktLjc1MmguOTdBLjIyMy4yMjMgMCAwMDYgMi40NzFWLjgyMWEuMjIzLjIyMyAwIDAwLS4yMjYtLjIyeiIgZmlsbD0iI0JDQkZDMiIvPjwvc3ZnPg==</td>
 					</tr>
 				
 					<tr>
@@ -4236,33 +4869,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">d769-Ui5BEWs4Yhov1Irc+svdd2eYXvA</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/regles-de-securite">https://www.jeveuxaider.gouv.fr/regles-de-securite</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">deef-WRNOqGVwJEnvzp6WTOQuy13jUY8</td>
+						<td width="80%">d88b-8GsmnfsbPCQXBMuHH7w63A/ipL4</td>
 					</tr>
 				
 					<tr>
@@ -4288,7 +4895,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">18fada-uiZh2ExapClZ8yK2z5LzbO/jdFE</td>
+						<td width="80%">198557-D4ULZr4hoVvUx5StPgxt8L3nTNQ</td>
 					</tr>
 				
 					<tr>
@@ -4581,7 +5188,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/password-reset">https://www.jeveuxaider.gouv.fr/password-reset</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/missions-benevolat?refinementList%5Btype%5D%5B0%5D=Mission%20%C3%A0%20distance">https://www.jeveuxaider.gouv.fr/missions-benevolat?refinementList%5Btype%5D%5B0%5D=Mission%20%C3%A0%20distance</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4607,7 +5214,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/regles-de-securite">https://www.jeveuxaider.gouv.fr/regles-de-securite</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/password-reset">https://www.jeveuxaider.gouv.fr/password-reset</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5048,6 +5655,32 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/11f3dc6.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/11f3dc6.modern.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Age: 195785</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/38336f1.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/38336f1.modern.js</a></td>
 					</tr>
 					<tr>
@@ -5068,13 +5701,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 324041</td>
+						<td width="80%">Age: 931635</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/6645b34.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/6645b34.modern.js</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/72344f4.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/72344f4.modern.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5094,13 +5727,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 317821</td>
+						<td width="80%">Age: 195785</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/944a670.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/944a670.modern.js</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/80cfa08.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/80cfa08.modern.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5120,59 +5753,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 144740</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/b15b209.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/b15b209.modern.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Age: 144741</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/cdeac90.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/cdeac90.modern.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Age: 324041</td>
+						<td width="80%">Age: 195786</td>
 					</tr>
 				
 					<tr>
@@ -5198,13 +5779,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 317821</td>
+						<td width="80%">Age: 925415</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/css/2f76849.css">https://www.jeveuxaider.gouv.fr/_nuxt/css/2f76849.css</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/css/5d281fb.css">https://www.jeveuxaider.gouv.fr/_nuxt/css/5d281fb.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5224,13 +5805,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 145864</td>
+						<td width="80%">Age: 351983</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/css/5ae1ebb.css">https://www.jeveuxaider.gouv.fr/_nuxt/css/5ae1ebb.css</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/css/f90fff8.css">https://www.jeveuxaider.gouv.fr/_nuxt/css/f90fff8.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5250,13 +5831,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 145855</td>
+						<td width="80%">Age: 351984</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/fcea826.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/fcea826.modern.js</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/fonts/element-icons.313f7da.woff">https://www.jeveuxaider.gouv.fr/_nuxt/fonts/element-icons.313f7da.woff</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5276,7 +5857,85 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 144735</td>
+						<td width="80%">Age: 607594</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/fonts/element-icons.4520188.ttf">https://www.jeveuxaider.gouv.fr/_nuxt/fonts/element-icons.4520188.ttf</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Age: 290545</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/fonts/Marianne-ExtraBold.c32a58c.woff2">https://www.jeveuxaider.gouv.fr/_nuxt/fonts/Marianne-ExtraBold.c32a58c.woff2</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Age: 401465</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/fonts/Marianne-Medium.811c637.woff2">https://www.jeveuxaider.gouv.fr/_nuxt/fonts/Marianne-Medium.811c637.woff2</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Age: 64588</td>
 					</tr>
 				
 					<tr>
@@ -5302,12 +5961,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 1986877</td>
+						<td width="80%">Age: 2594471</td>
 					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">10</td>
+					<td width="80%">12</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -5508,7 +6167,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/inscription/organisation">https://www.jeveuxaider.gouv.fr/inscription/organisation</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/login">https://www.jeveuxaider.gouv.fr/login</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5534,7 +6193,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/login">https://www.jeveuxaider.gouv.fr/login</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/missions-benevolat?refinementList%5Btype%5D%5B0%5D=Mission%20%C3%A0%20distance">https://www.jeveuxaider.gouv.fr/missions-benevolat?refinementList%5Btype%5D%5B0%5D=Mission%20%C3%A0%20distance</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5735,7 +6394,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/missions-benevolat?refinementList%5Bdomaines%5D%5B0%5D=Coop%C3%A9ration%20internationale">https://www.jeveuxaider.gouv.fr/missions-benevolat?refinementList%5Bdomaines%5D%5B0%5D=Coop%C3%A9ration%20internationale</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/missions-benevolat?refinementList%5Bdomaines%5D%5B0%5D=Art%20et%20culture%20pour%20tous">https://www.jeveuxaider.gouv.fr/missions-benevolat?refinementList%5Bdomaines%5D%5B0%5D=Art%20et%20culture%20pour%20tous</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5762,58 +6421,6 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/missions-benevolat?refinementList%5Bdomaines%5D%5B0%5D=Mobilisation%20covid-19">https://www.jeveuxaider.gouv.fr/missions-benevolat?refinementList%5Bdomaines%5D%5B0%5D=Mobilisation%20covid-19</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">refinementList[domaines][0]</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/missions-benevolat?refinementList%5Bdomaines%5D%5B0%5D=Pr%C3%A9vention%20et%20protection">https://www.jeveuxaider.gouv.fr/missions-benevolat?refinementList%5Bdomaines%5D%5B0%5D=Pr%C3%A9vention%20et%20protection</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">refinementList[domaines][0]</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/missions-benevolat?refinementList%5Bdomaines%5D%5B0%5D=Sport%20pour%20tous">https://www.jeveuxaider.gouv.fr/missions-benevolat?refinementList%5Bdomaines%5D%5B0%5D=Sport%20pour%20tous</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5942,7 +6549,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">8</td>
+					<td width="80%">6</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
