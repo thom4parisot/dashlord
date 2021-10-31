@@ -21,13 +21,13 @@
 ###########################################################</span>
 
  Using &quot;OpenSSL 1.0.2-chacha (1.0.2k-dev)&quot; [~183 ciphers]
- on fv-az198-353:/home/testssl/bin/openssl.Linux.x86_64
+ on fv-az213-297:/home/testssl/bin/openssl.Linux.x86_64
  (built: &quot;Jan 18 17:12:17 2019&quot;, platform: &quot;linux-x86_64&quot;)
 
 
 <span style="font-weight:bold;">Testing all IPv4 addresses (port 443): </span>148.253.96.193 185.21.194.105
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2021-10-24 01:20:08        --&gt;&gt; 148.253.96.193:443 (aidantsconnect.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2021-10-31 01:28:20        --&gt;&gt; 148.253.96.193:443 (aidantsconnect.beta.gouv.fr) &lt;&lt;--</span>
 
  Further IP addresses:   185.21.194.105 
  rDNS (148.253.96.193):  ows-148-253-96-193.cloudgouv-eu-west-1.compute.outscale.com.
@@ -108,7 +108,8 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Server key size              </span>RSA 2048 bits (exponent is 65537)
 <span style="font-weight:bold;"> Server key usage             </span>Digital Signature, Key Encipherment
 <span style="font-weight:bold;"> Server extended key usage    </span>TLS Web Server Authentication
-<span style="font-weight:bold;"> Serial / Fingerprints        </span>39EBA8D7D77CAD74E53C146D9AC6944E / SHA1 98EDBCFA9EEA2A70D741B38C351B147D651BDE65
+<span style="font-weight:bold;"> Serial                       </span>39EBA8D7D77CAD74E53C146D9AC6944E (OK: length 16)
+<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 98EDBCFA9EEA2A70D741B38C351B147D651BDE65
                               SHA256 86A7521C7AAF38DD15AA5919C63F8D4B21E90050AD73535780688656ADF3BAEC
 <span style="font-weight:bold;"> Common Name (CN)             </span><i>aidantsconnect.beta.gouv.fr </i> (CN in response to request w/o SNI: <i>*.osc-secnum-fr1.scalingo.io </i>)
 <span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>aidantsconnect.beta.gouv.fr
@@ -118,7 +119,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#e52207;font-weight:bold;">NOT ok</span><span style="color:#e52207;font-weight:bold;">:</span><span style="color:#e52207;"> Java </span>(chain incomplete)
 <span style="color:#008817;">OK: Mozilla Microsoft Linux Apple </span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">101 &gt;= 60 days</span> (2020-02-03 09:57 --&gt; 2022-02-02 09:57)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">94 &gt;= 60 days</span> (2020-02-03 09:57 --&gt; 2022-02-02 09:57)
                               &gt;= 398 days certificate life time but issued before 2020/09/01
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.certigna.fr/servicesca.crl
@@ -138,7 +139,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
-<span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
+<span style="font-weight:bold;"> HTTP clock skew              </span>-1 sec from localtime
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#c05600;">60 s = 0 days is too short ( &gt;= 15552000 seconds recommended)</span><span style="color:#168092;">, just this domain</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>openresty
@@ -242,10 +243,10 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A</span>
 <span style="font-weight:bold;"> Grade cap reasons            </span>Grade capped to A. HSTS max-age is too short
 
-<span style="color:white;background-color:black;"> Done 2021-10-24 01:21:41 [  95s] --&gt;&gt; 148.253.96.193:443 (aidantsconnect.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2021-10-31 01:29:51 [  93s] --&gt;&gt; 148.253.96.193:443 (aidantsconnect.beta.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2021-10-24 01:21:41        --&gt;&gt; 185.21.194.105:443 (aidantsconnect.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2021-10-31 01:29:51        --&gt;&gt; 185.21.194.105:443 (aidantsconnect.beta.gouv.fr) &lt;&lt;--</span>
 
  Further IP addresses:   148.253.96.193 
  rDNS (185.21.194.105):  ows-185-21-194-105.cloudgouv-eu-west-1.compute.outscale.com.
@@ -326,7 +327,8 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Server key size              </span>RSA 2048 bits (exponent is 65537)
 <span style="font-weight:bold;"> Server key usage             </span>Digital Signature, Key Encipherment
 <span style="font-weight:bold;"> Server extended key usage    </span>TLS Web Server Authentication
-<span style="font-weight:bold;"> Serial / Fingerprints        </span>39EBA8D7D77CAD74E53C146D9AC6944E / SHA1 98EDBCFA9EEA2A70D741B38C351B147D651BDE65
+<span style="font-weight:bold;"> Serial                       </span>39EBA8D7D77CAD74E53C146D9AC6944E (OK: length 16)
+<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 98EDBCFA9EEA2A70D741B38C351B147D651BDE65
                               SHA256 86A7521C7AAF38DD15AA5919C63F8D4B21E90050AD73535780688656ADF3BAEC
 <span style="font-weight:bold;"> Common Name (CN)             </span><i>aidantsconnect.beta.gouv.fr </i> (CN in response to request w/o SNI: <i>*.osc-secnum-fr1.scalingo.io </i>)
 <span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>aidantsconnect.beta.gouv.fr
@@ -336,7 +338,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#e52207;font-weight:bold;">NOT ok</span><span style="color:#e52207;font-weight:bold;">:</span><span style="color:#e52207;"> Java </span>(chain incomplete)
 <span style="color:#008817;">OK: Mozilla Microsoft Linux Apple </span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">101 &gt;= 60 days</span> (2020-02-03 09:57 --&gt; 2022-02-02 09:57)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">94 &gt;= 60 days</span> (2020-02-03 09:57 --&gt; 2022-02-02 09:57)
                               &gt;= 398 days certificate life time but issued before 2020/09/01
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.certigna.fr/servicesca.crl
@@ -460,7 +462,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A</span>
 <span style="font-weight:bold;"> Grade cap reasons            </span>Grade capped to A. HSTS max-age is too short
 
-<span style="color:white;background-color:black;"> Done 2021-10-24 01:23:14 [ 188s] --&gt;&gt; 185.21.194.105:443 (aidantsconnect.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2021-10-31 01:31:21 [ 183s] --&gt;&gt; 185.21.194.105:443 (aidantsconnect.beta.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
 <span style="font-weight:bold;">Done testing now all IP addresses (on port 443): </span>148.253.96.193 185.21.194.105

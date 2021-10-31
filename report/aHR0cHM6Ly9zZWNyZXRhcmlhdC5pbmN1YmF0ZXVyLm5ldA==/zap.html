@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 24 Oct 2021 06:52:03
+		Generated on Sun, 31 Oct 2021 11:18:37
 	</h3>
 
 	
@@ -160,7 +160,7 @@ td {
 					<div>Low</div>
 				</td>
 				<td align="center">
-					<div>6</div>
+					<div>7</div>
 				</td>
 			</tr>
 			<tr>
@@ -211,7 +211,7 @@ td {
 			<tr>
 				<td><a href="#10202">Absence of Anti-CSRF Tokens</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">6</td>
+				<td align="center">5</td>
 			</tr>
 			<tr>
 				<td><a href="#10011">Cookie Without Secure Flag</a></td>
@@ -221,7 +221,7 @@ td {
 			<tr>
 				<td><a href="#10015">Incomplete or No Cache-control Header Set</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">7</td>
+				<td align="center">6</td>
 			</tr>
 			<tr>
 				<td><a href="#10063">Permissions Policy Header Not Set</a></td>
@@ -232,6 +232,11 @@ td {
 				<td><a href="#10037">Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</a></td>
 				<td align="center" class="risk-1">Low</td>
 				<td align="center">11</td>
+			</tr>
+			<tr>
+				<td><a href="#10096">Timestamp Disclosure - Unix</a></td>
+				<td align="center" class="risk-1">Low</td>
+				<td align="center">1</td>
 			</tr>
 			<tr>
 				<td><a href="#10021">X-Content-Type-Options Header Missing</a></td>
@@ -1011,35 +1016,9 @@ td {
 						<td width="80%">&lt;form action=&quot;/onboarding&quot; method=&quot;POST&quot; onsubmit=&quot;event.submitter &amp;&amp; (event.submitter.disabled = true);&quot;&gt;</td>
 					</tr>
 				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://secretariat.incubateur.net/onboarding">https://secretariat.incubateur.net/onboarding</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">POST</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&quot;/onboarding&quot; method=&quot;POST&quot; onsubmit=&quot;event.submitter &amp;&amp; (event.submitter.disabled = true);&quot;&gt;</td>
-					</tr>
-				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">6</td>
+					<td width="80%">5</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -1526,35 +1505,9 @@ td {
 						<td width="80%">public, max-age=0</td>
 					</tr>
 				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://secretariat.incubateur.net/onboarding">https://secretariat.incubateur.net/onboarding</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">POST</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">7</td>
+					<td width="80%">6</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -2156,6 +2109,85 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-1"><a
+						id="10096"></a>
+						<div>Low</div></th>
+					<th class="risk-1">Timestamp Disclosure - Unix</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>A timestamp was disclosed by the application/web server - Unix</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://secretariat.incubateur.net/topbar.js">https://secretariat.incubateur.net/topbar.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">29708527</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">1</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="http://projects.webappsec.org/w/page/13246936/Information%20Leakage">http://projects.webappsec.org/w/page/13246936/Information%20Leakage</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10096/">10096</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-1"><a
 						id="10021"></a>
 						<div>Low</div></th>
 					<th class="risk-1">X-Content-Type-Options Header Missing</th>
@@ -2539,7 +2571,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3ATqtROPZ12ctLWIc1eLBWasRZCbaoKDoz</td>
+						<td width="80%">3Af7SDHT-bZHox0_DZAk5Zs6YV5iHe9pVs</td>
 					</tr>
 				
 					<tr>
@@ -2591,7 +2623,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1493-GWMntZpzTDLvaZzFdDNQU8tskAk</td>
+						<td width="80%">142f-nzioslg0VJPYARZk8lY4HOYP+Ms</td>
 					</tr>
 				
 					<tr>
@@ -2695,7 +2727,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3A4Us1ciPShAKP66h5x0TLOcTT8FoJXID-</td>
+						<td width="80%">3AAMkG-2BM2OwR4JlarvGwIZQ7RzHuhE5T</td>
 					</tr>
 				
 					<tr>
@@ -2721,7 +2753,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3A4Us1ciPShAKP66h5x0TLOcTT8FoJXID-</td>
+						<td width="80%">3Af7SDHT-bZHox0_DZAk5Zs6YV5iHe9pVs</td>
 					</tr>
 				
 					<tr>
@@ -2773,7 +2805,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3A4Us1ciPShAKP66h5x0TLOcTT8FoJXID-</td>
+						<td width="80%">3Af7SDHT-bZHox0_DZAk5Zs6YV5iHe9pVs</td>
 					</tr>
 				
 					<tr>
@@ -2799,7 +2831,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3A4Us1ciPShAKP66h5x0TLOcTT8FoJXID-</td>
+						<td width="80%">3Af7SDHT-bZHox0_DZAk5Zs6YV5iHe9pVs</td>
 					</tr>
 				
 					<tr>
@@ -2825,7 +2857,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3A4Us1ciPShAKP66h5x0TLOcTT8FoJXID-</td>
+						<td width="80%">3Af7SDHT-bZHox0_DZAk5Zs6YV5iHe9pVs</td>
 					</tr>
 				
 				<tr>

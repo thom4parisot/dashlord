@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 24 Oct 2021 05:58:39
+		Generated on Sun, 31 Oct 2021 10:28:02
 	</h3>
 
 	
@@ -160,7 +160,7 @@ td {
 					<div>Low</div>
 				</td>
 				<td align="center">
-					<div>3</div>
+					<div>4</div>
 				</td>
 			</tr>
 			<tr>
@@ -199,6 +199,11 @@ td {
 				<td align="center">3</td>
 			</tr>
 			<tr>
+				<td><a href="#10110">Dangerous JS Functions</a></td>
+				<td align="center" class="risk-1">Low</td>
+				<td align="center">1</td>
+			</tr>
+			<tr>
 				<td><a href="#10015">Incomplete or No Cache-control Header Set</a></td>
 				<td align="center" class="risk-1">Low</td>
 				<td align="center">2</td>
@@ -211,7 +216,7 @@ td {
 			<tr>
 				<td><a href="#10096">Timestamp Disclosure - Unix</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">11</td>
+				<td align="center">10</td>
 			</tr>
 			<tr>
 				<td><a href="#10094">Base64 Disclosure</a></td>
@@ -390,6 +395,85 @@ td {
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/10038/">10038</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-1"><a
+						id="10110"></a>
+						<div>Low</div></th>
+					<th class="risk-1">Dangerous JS Functions</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>A dangerous JS function seems to be in use that would leave the site vulnerable.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/js/2.ab90f4e3.chunk.js">https://pro.passculture.beta.gouv.fr/static/js/2.ab90f4e3.chunk.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">eval</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">1</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>See the references for security advice on the use of these functions.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://angular.io/guide/security">https://angular.io/guide/security</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/749.html">749</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10110/">10110</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -601,7 +685,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/js/main.668e04cb.chunk.js">https://pro.passculture.beta.gouv.fr/static/js/main.668e04cb.chunk.js</a></td>
+						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/js/2.ab90f4e3.chunk.js">https://pro.passculture.beta.gouv.fr/static/js/2.ab90f4e3.chunk.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -712,7 +796,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1634918759</td>
+						<td width="80%">1635426526</td>
 					</tr>
 				
 					<tr>
@@ -738,33 +822,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1634918689</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/manifest.json">https://pro.passculture.beta.gouv.fr/manifest.json</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">1634918689</td>
+						<td width="80%">1635426462</td>
 					</tr>
 				
 					<tr>
@@ -790,7 +848,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1634918759</td>
+						<td width="80%">1635426526</td>
 					</tr>
 				
 					<tr>
@@ -816,7 +874,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1634918759</td>
+						<td width="80%">1635426526</td>
 					</tr>
 				
 					<tr>
@@ -868,13 +926,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1634918759</td>
+						<td width="80%">1635426526</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/css/main.988b1e20.chunk.css">https://pro.passculture.beta.gouv.fr/static/css/main.988b1e20.chunk.css</a></td>
+						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/css/main.989d2266.chunk.css">https://pro.passculture.beta.gouv.fr/static/css/main.989d2266.chunk.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -894,13 +952,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1634918759</td>
+						<td width="80%">1635426526</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/css/main.988b1e20.chunk.css">https://pro.passculture.beta.gouv.fr/static/css/main.988b1e20.chunk.css</a></td>
+						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/css/main.989d2266.chunk.css">https://pro.passculture.beta.gouv.fr/static/css/main.989d2266.chunk.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -926,7 +984,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/css/main.988b1e20.chunk.css">https://pro.passculture.beta.gouv.fr/static/css/main.988b1e20.chunk.css</a></td>
+						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/css/main.989d2266.chunk.css">https://pro.passculture.beta.gouv.fr/static/css/main.989d2266.chunk.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -952,7 +1010,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/css/main.988b1e20.chunk.css">https://pro.passculture.beta.gouv.fr/static/css/main.988b1e20.chunk.css</a></td>
+						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/css/main.989d2266.chunk.css">https://pro.passculture.beta.gouv.fr/static/css/main.989d2266.chunk.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -977,7 +1035,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">11</td>
+					<td width="80%">10</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -1051,7 +1109,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">ADPycdtpWG-RGj0X4amofXMD4glhMENDhXuy6SH2lpIy5NT8_9Zk5TJX70hrhtAY4hWv1aGlWjyUhmZ_lQzN_JeWigs</td>
+						<td width="80%">ADPycduLCp8dPbdoJ-3N0nj1alQWM3pqHGsknWCIQjTaLwG2_2EJpCMf5JBYPURjfODqaDzsvDWUTRPicxyWm_waWnw</td>
 					</tr>
 				
 					<tr>
@@ -1077,7 +1135,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">ADPycdtGbEhxrTWy9PiABKDShvz2eeu3NqOI1BcLbrzvAGK_ckixkB56yAmSYHt_CfOuMPixKU5qEQIxy6711udy03vhuG9HuQ</td>
+						<td width="80%">ADPycdttbv7zIHVOAm7U1BAublZR7kgAeik3DGN198cBA9pHEGci1ahMi42DRb0_EwMZrLcsgcU2BnsvvZyllnECkJ1h2P02LA</td>
 					</tr>
 				
 					<tr>
@@ -1103,7 +1161,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">ADPycds-GdvSQ2gOIJ3eiDVzNByGLkftNyOowKgN3pGOybDxDPF2KWhuvbpPtRL-fmzE3unYRuZVguJqvhX3yRZ3i445-bDWgg</td>
+						<td width="80%">ADPycdsldSzFczab3-rBKlN_Z7NybWWw5ZzXseL79r3SzqaSKbLf9lWB0pJeO3GydJvizTQoby8M63Ysj-FhBKHCwp1BwTAsqw</td>
 					</tr>
 				
 					<tr>
@@ -1129,7 +1187,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">ADPycdvoFO_YvYNfzQQPSIczW3TjasARZDxEqpw1n2COIT2un7IIfLG3V8Ntldcg8p7QkBpSw0e2pRlDXNOrrhcfDnQAXnmGnw</td>
+						<td width="80%">ADPycdunwgGgHs45_cP5O2PnMdxkFQfkxMIvWqjGfYKcjtvCOQ83fNXObmS4OS3GrFqndpEVy2T4gWpljgmgg1fkggPVuhHGWg</td>
 					</tr>
 				
 					<tr>
@@ -1155,7 +1213,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">ADPycdu2UoOZ6HRNzE4h_ps4uH0yTqCnlfaHcMUQ615I5ULa6GNL28X-IRL9HaYjv6x0uBzSvD3GRl6HFAhDIBuDaXyPv6xueA</td>
+						<td width="80%">ADPycdt5E71b6nWT0kn9ZtJOXTLhJuJs2zrj82wKAz9osY-1VqO3u3EvsgX5V24RZl3cL9wVqWx7rftfKRJtHOU3ouSEJ0Wvmw</td>
 					</tr>
 				
 					<tr>
@@ -1181,13 +1239,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">ADPycdtLz_PP0fR_5d_AdTjUypi_9Q7_AskClsY7gztJqU3gZrATt0rejNzgOqMFcOTI6S8U8W1gJrCCCVfVu5m_8rg</td>
+						<td width="80%">ADPycdspHhTjYy2JZSJpcYceD3_1MVTX2l-_dz_JFXkH2AYjFAauvDPGbmW16ipm4JkSR3_jWdX1-u3bLXjrMRfbM-s</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/css/main.988b1e20.chunk.css">https://pro.passculture.beta.gouv.fr/static/css/main.988b1e20.chunk.css</a></td>
+						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/css/main.989d2266.chunk.css">https://pro.passculture.beta.gouv.fr/static/css/main.989d2266.chunk.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1207,13 +1265,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">ADPycduBgVxnjxEcxkvRIAsdLscNkAzenwqWo0MQdndi8ldrj6mUl5ujyn3O0LoL9h3LfqnyEcUhM2_pYJMjHAH8S-o</td>
+						<td width="80%">ADPycdumkbgSBHCWsslS4IRRRjPgVNqpsyFqrWCd57tfF6vTBXjQQBWIHuVodpQ8C6od1fFBYbqIl9aCIQXLDQLCcAQ</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/js/main.668e04cb.chunk.js">https://pro.passculture.beta.gouv.fr/static/js/main.668e04cb.chunk.js</a></td>
+						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/js/2.ab90f4e3.chunk.js">https://pro.passculture.beta.gouv.fr/static/js/2.ab90f4e3.chunk.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1233,7 +1291,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">ADPycdv5sUM0c8kEqS1N7Xk-br7bZ_q9_5zzOW7xUtEHV3VE4zviP5kajsZZFIStsRdgvpV29jQv8JKykQw9OteHcM7e-bwXxw</td>
+						<td width="80%">ADPycdvPzLs30rn05tJE5ID67eVBTsGOZqDWu6DEflSvEI9VU16VtK0TQXjob6iChzFrVwU8ZgvcycUBozcovzPYTvnXg1qB8w</td>
 					</tr>
 				
 				<tr>
@@ -1292,7 +1350,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/js/main.668e04cb.chunk.js">https://pro.passculture.beta.gouv.fr/static/js/main.668e04cb.chunk.js</a></td>
+						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/js/2.ab90f4e3.chunk.js">https://pro.passculture.beta.gouv.fr/static/js/2.ab90f4e3.chunk.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1312,7 +1370,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">query</td>
+						<td width="80%">bug</td>
 					</tr>
 				
 				<tr>
@@ -1515,13 +1573,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 71</td>
+						<td width="80%">Age: 3345</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/robots.txt">https://pro.passculture.beta.gouv.fr/robots.txt</a></td>
+						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/icon/app-icon-iphone.png">https://pro.passculture.beta.gouv.fr/icon/app-icon-iphone.png</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1541,7 +1599,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 43</td>
+						<td width="80%">Age: 36681</td>
 					</tr>
 				
 					<tr>
@@ -1567,13 +1625,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 63895</td>
+						<td width="80%">Age: 78</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/css/main.988b1e20.chunk.css">https://pro.passculture.beta.gouv.fr/static/css/main.988b1e20.chunk.css</a></td>
+						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/css/main.989d2266.chunk.css">https://pro.passculture.beta.gouv.fr/static/css/main.989d2266.chunk.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1593,13 +1651,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 63895</td>
+						<td width="80%">Age: 78</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/js/main.668e04cb.chunk.js">https://pro.passculture.beta.gouv.fr/static/js/main.668e04cb.chunk.js</a></td>
+						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/js/2.ab90f4e3.chunk.js">https://pro.passculture.beta.gouv.fr/static/js/2.ab90f4e3.chunk.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1619,7 +1677,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 63895</td>
+						<td width="80%">Age: 78</td>
 					</tr>
 				
 				<tr>
@@ -1851,7 +1909,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/css/main.988b1e20.chunk.css">https://pro.passculture.beta.gouv.fr/static/css/main.988b1e20.chunk.css</a></td>
+						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/css/main.989d2266.chunk.css">https://pro.passculture.beta.gouv.fr/static/css/main.989d2266.chunk.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1877,7 +1935,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/js/main.668e04cb.chunk.js">https://pro.passculture.beta.gouv.fr/static/js/main.668e04cb.chunk.js</a></td>
+						<td width="80%"><a href="https://pro.passculture.beta.gouv.fr/static/js/2.ab90f4e3.chunk.js">https://pro.passculture.beta.gouv.fr/static/js/2.ab90f4e3.chunk.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"

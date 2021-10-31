@@ -21,11 +21,11 @@
 ###########################################################</span>
 
  Using &quot;OpenSSL 1.0.2-chacha (1.0.2k-dev)&quot; [~183 ciphers]
- on fv-az292-77:/home/testssl/bin/openssl.Linux.x86_64
+ on fv-az201-705:/home/testssl/bin/openssl.Linux.x86_64
  (built: &quot;Jan 18 17:12:17 2019&quot;, platform: &quot;linux-x86_64&quot;)
 
 
-<span style="color:white;background-color:black;"> Start 2021-10-24 02:41:08        --&gt;&gt; 51.159.156.206:443 (carbure.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2021-10-31 07:15:46        --&gt;&gt; 51.159.156.206:443 (carbure.beta.gouv.fr) &lt;&lt;--</span>
 
  Further IP addresses:   2001:bc8:1200:5612::1 
  rDNS (51.159.156.206):  206-156-159-51.instances.scw.cloud.
@@ -109,14 +109,15 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Server key size              </span>RSA <span style="color:#008817;">4096</span> bits (exponent is 65537)
 <span style="font-weight:bold;"> Server key usage             </span>Digital Signature, Key Encipherment
 <span style="font-weight:bold;"> Server extended key usage    </span>TLS Web Server Authentication, TLS Web Client Authentication
-<span style="font-weight:bold;"> Serial / Fingerprints        </span>03D65A03A20F10A76997DBEE2295B286A4C7 / SHA1 C89AF3A878CC695A568FB15CA719A868650910C1
+<span style="font-weight:bold;"> Serial                       </span>03D65A03A20F10A76997DBEE2295B286A4C7 (OK: length 18)
+<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 C89AF3A878CC695A568FB15CA719A868650910C1
                               SHA256 BAE36D984039979EA2DA7DF8F001335331996780109F037A86238B1AD06FCA4D
 <span style="font-weight:bold;"> Common Name (CN)             </span><i>carbure.beta.gouv.fr </i> (CN in response to request w/o SNI: <i>metabase.carbure.beta.gouv.fr </i>)
 <span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>carbure.beta.gouv.fr </i>
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">57 &gt;= 30 days</span> (2021-09-21 12:39 --&gt; 2021-12-20 12:39)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">50 &gt;= 30 days</span> (2021-09-21 12:39 --&gt; 2021-12-20 12:39)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
@@ -135,12 +136,14 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  302 Found, redirecting to &quot;<a href="/v2/" style="color:black;text-decoration:none;">/v2/</a>&quot;
 <span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
-<span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#c05600;">300 s = 0 days is too short ( &gt;= 15552000 seconds recommended)</span><span style="color:#008817;">, includeSubDomains</span><span style="color:#008817;">, preload</span>
+<span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">182 days</span>=15768000 s<span style="color:#008817;">, includeSubDomains</span><span style="color:#008817;">, preload</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>nginx/<span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">2</span><span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">3</span>
 <span style="font-weight:bold;"> Application banner           </span>--
 <span style="font-weight:bold;"> Cookie(s)                    </span>(none issued at &quot;/&quot;) -- maybe better try target URL of 30x
-<span style="font-weight:bold;"> Security headers             </span><span style="color:#008817;">X-Frame-Options</span>: SAMEORIGIN
+<span style="font-weight:bold;"> Security headers             </span><span style="color:#c05600;">misconfiguration: </span><i>X-Frame-Options</i><span style="color:#c05600;"> 2x</span> -- checking first one only
+                              <span style="color:#008817;">X-Frame-Options</span>: SAMEORIGIN
+                              <span style="color:#c05600;">misconfiguration: </span><i>X-Content-Type-Options</i><span style="color:#c05600;"> 2x</span> -- checking first one only
                               <span style="color:#008817;">X-Content-Type-Options</span>: nosniff
                               X-XSS-Protection: 1; mode=block
                               Referrer-Policy: same-origin
@@ -222,10 +225,9 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Key Exchange </span>    (weighted)  90 (27)
 <span style="font-weight:bold;"> Cipher Strength </span> (weighted)  90 (36)
 <span style="font-weight:bold;"> Final Score                  </span>93
-<span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A</span>
-<span style="font-weight:bold;"> Grade cap reasons            </span>Grade capped to A. HSTS max-age is too short
+<span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2021-10-24 02:43:29 [ 143s] --&gt;&gt; 51.159.156.206:443 (carbure.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2021-10-31 07:17:31 [ 107s] --&gt;&gt; 51.159.156.206:443 (carbure.beta.gouv.fr) &lt;&lt;--</span>
 
 
 </pre>

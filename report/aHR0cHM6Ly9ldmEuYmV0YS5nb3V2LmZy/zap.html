@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 24 Oct 2021 03:52:45
+		Generated on Sun, 31 Oct 2021 08:27:50
 	</h3>
 
 	
@@ -152,7 +152,7 @@ td {
 					<div>Medium</div>
 				</td>
 				<td align="center">
-					<div>4</div>
+					<div>5</div>
 				</td>
 			</tr>
 			<tr>
@@ -160,7 +160,7 @@ td {
 					<div>Low</div>
 				</td>
 				<td align="center">
-					<div>10</div>
+					<div>11</div>
 				</td>
 			</tr>
 			<tr>
@@ -196,6 +196,11 @@ td {
 			<tr>
 				<td><a href="#10062">PII Disclosure</a></td>
 				<td align="center" class="risk-3">High</td>
+				<td align="center">1</td>
+			</tr>
+			<tr>
+				<td><a href="#10055">CSP: Wildcard Directive</a></td>
+				<td align="center" class="risk-2">Medium</td>
 				<td align="center">1</td>
 			</tr>
 			<tr>
@@ -241,7 +246,7 @@ td {
 			<tr>
 				<td><a href="#10110">Dangerous JS Functions</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">1</td>
+				<td align="center">2</td>
 			</tr>
 			<tr>
 				<td><a href="#10015">Incomplete or No Cache-control Header Set</a></td>
@@ -252,6 +257,11 @@ td {
 				<td><a href="#10063">Permissions Policy Header Not Set</a></td>
 				<td align="center" class="risk-1">Low</td>
 				<td align="center">11</td>
+			</tr>
+			<tr>
+				<td><a href="#10037">Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</a></td>
+				<td align="center" class="risk-1">Low</td>
+				<td align="center">12</td>
 			</tr>
 			<tr>
 				<td><a href="#10035">Strict-Transport-Security Header Not Set</a></td>
@@ -291,27 +301,27 @@ td {
 			<tr>
 				<td><a href="#10109">Modern Web Application</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">9</td>
+				<td align="center">11</td>
 			</tr>
 			<tr>
 				<td><a href="#10049">Non-Storable Content</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">2</td>
+				<td align="center">1</td>
 			</tr>
 			<tr>
 				<td><a href="#10049">Storable and Cacheable Content</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">8</td>
+				<td align="center">7</td>
 			</tr>
 			<tr>
 				<td><a href="#10049">Storable but Non-Cacheable Content</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">1</td>
+				<td align="center">3</td>
 			</tr>
 			<tr>
 				<td><a href="#10031">User Controllable HTML Element Attribute (Potential XSS)</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">8</td>
+				<td align="center">9</td>
 			</tr>
 		</table>
 		<div class="spacer-lg"></div>
@@ -396,6 +406,106 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-2"><a
+						id="10055"></a>
+						<div>Medium</div></th>
+					<th class="risk-2">CSP: Wildcard Directive</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: </div>
+							<br />
+						
+							<div>frame-ancestors, form-action</div>
+							<br />
+						
+							<div>The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/jeu?code=ZAP">https://eva.beta.gouv.fr/jeu?code=ZAP</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;none&#39;</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">1</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="http://www.w3.org/TR/CSP2/">http://www.w3.org/TR/CSP2/</a>
+							<br />
+						
+							<a href="http://www.w3.org/TR/CSP/">http://www.w3.org/TR/CSP/</a>
+							<br />
+						
+							<a href="http://caniuse.com/#search=content+security+policy">http://caniuse.com/#search=content+security+policy</a>
+							<br />
+						
+							<a href="http://content-security-policy.com/">http://content-security-policy.com/</a>
+							<br />
+						
+							<a href="https://github.com/shapesecurity/salvation">https://github.com/shapesecurity/salvation</a>
+							<br />
+						
+							<a href="https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources">https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">15</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10055/">10055</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-2"><a
 						id="10038"></a>
 						<div>Medium</div></th>
 					<th class="risk-2">Content Security Policy (CSP) Header Not Set</th>
@@ -441,32 +551,6 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://eva.beta.gouv.fr/">https://eva.beta.gouv.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/articles/">https://eva.beta.gouv.fr/articles/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -675,6 +759,32 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://eva.beta.gouv.fr/temoignages/">https://eva.beta.gouv.fr/temoignages/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/wp-admin/admin-ajax.php">https://eva.beta.gouv.fr/wp-admin/admin-ajax.php</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1190,7 +1300,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link rel=&#39;stylesheet&#39; id=&#39;astra-google-fonts-css&#39;  href=&#39;https://fonts.googleapis.com/css?family=Work+Sans%3A400%2C%2C700%7CQuicksand%3A700%2C&amp;#038;display=fallback&amp;#038;ver=3.7.3&#39; media=&#39;all&#39; /&gt;</td>
+						<td width="80%">&lt;link rel=&#39;stylesheet&#39; id=&#39;astra-google-fonts-css&#39;  href=&#39;https://fonts.googleapis.com/css?family=Work+Sans%3A400%2C%2C700%7CQuicksand%3A700%2C&amp;#038;display=fallback&amp;#038;ver=3.7.4&#39; media=&#39;all&#39; /&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1268,7 +1378,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link rel=&#39;stylesheet&#39; id=&#39;astra-google-fonts-css&#39;  href=&#39;https://fonts.googleapis.com/css?family=Work+Sans%3A400%2C%2C700%7CQuicksand%3A700%2C&amp;#038;display=fallback&amp;#038;ver=3.7.3&#39; media=&#39;all&#39; /&gt;</td>
+						<td width="80%">&lt;link rel=&#39;stylesheet&#39; id=&#39;astra-google-fonts-css&#39;  href=&#39;https://fonts.googleapis.com/css?family=Work+Sans%3A400%2C%2C700%7CQuicksand%3A700%2C&amp;#038;display=fallback&amp;#038;ver=3.7.4&#39; media=&#39;all&#39; /&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1300,7 +1410,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/sitemap.xml">https://eva.beta.gouv.fr/sitemap.xml</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/qui-sommes-nous/">https://eva.beta.gouv.fr/qui-sommes-nous/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1326,7 +1436,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/sitemap.xml">https://eva.beta.gouv.fr/sitemap.xml</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/qui-sommes-nous/">https://eva.beta.gouv.fr/qui-sommes-nous/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1346,65 +1456,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link rel=&#39;stylesheet&#39; id=&#39;astra-google-fonts-css&#39;  href=&#39;https://fonts.googleapis.com/css?family=Work+Sans%3A400%2C%2C700%7CQuicksand%3A700%2C&amp;#038;display=fallback&amp;#038;ver=3.7.3&#39; media=&#39;all&#39; /&gt;</td>
+						<td width="80%">&lt;link rel=&#39;stylesheet&#39; id=&#39;astra-google-fonts-css&#39;  href=&#39;https://fonts.googleapis.com/css?family=Work+Sans%3A400%2C%2C700%7CQuicksand%3A700%2C&amp;#038;display=fallback&amp;#038;ver=3.7.4&#39; media=&#39;all&#39; /&gt;</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/temoignages/">https://eva.beta.gouv.fr/temoignages/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;link rel=&quot;profile&quot; href=&quot;https://gmpg.org/xfn/11&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/temoignages/">https://eva.beta.gouv.fr/temoignages/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;link rel=&#39;stylesheet&#39; id=&#39;astra-google-fonts-css&#39;  href=&#39;https://fonts.googleapis.com/css?family=Work+Sans%3A400%2C%2C700%7CQuicksand%3A700%2C&amp;#038;display=fallback&amp;#038;ver=3.7.3&#39; media=&#39;all&#39; /&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/temoignages/">https://eva.beta.gouv.fr/temoignages/</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/qui-sommes-nous/">https://eva.beta.gouv.fr/qui-sommes-nous/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1425,6 +1483,58 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;link rel=&#39;stylesheet&#39; id=&#39;google-fonts-1-css&#39;  href=&#39;https://fonts.googleapis.com/css?family=Quicksand%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CWork+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;#038;display=auto&amp;#038;ver=5.8.1&#39; media=&#39;all&#39; /&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/sitemap.xml">https://eva.beta.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;link rel=&quot;profile&quot; href=&quot;https://gmpg.org/xfn/11&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/sitemap.xml">https://eva.beta.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;link rel=&#39;stylesheet&#39; id=&#39;astra-google-fonts-css&#39;  href=&#39;https://fonts.googleapis.com/css?family=Work+Sans%3A400%2C%2C700%7CQuicksand%3A700%2C&amp;#038;display=fallback&amp;#038;ver=3.7.4&#39; media=&#39;all&#39; /&gt;</td>
 					</tr>
 				
 				<tr>
@@ -1561,7 +1671,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/cgu">https://eva.beta.gouv.fr/cgu</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/cgu/">https://eva.beta.gouv.fr/cgu/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1717,7 +1827,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/statistiques">https://eva.beta.gouv.fr/statistiques</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/statistiques/">https://eva.beta.gouv.fr/statistiques/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1892,7 +2002,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/articles/">https://eva.beta.gouv.fr/articles/</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/en-savoir-plus-sur-les-referentiels-devaluation/">https://eva.beta.gouv.fr/en-savoir-plus-sur-les-referentiels-devaluation/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2016,7 +2126,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;form method=&#39;GET&#39; action=&quot;https://app.eva.beta.gouv.fr&quot;&gt;</td>
+						<td width="80%">&lt;form method=&#39;GET&#39; action=&quot;https://eva.beta.gouv.fr/jeu&quot;&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2952,6 +3062,32 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/jeu/js/index_54a63e76b74166406b61.js">https://eva.beta.gouv.fr/jeu/js/index_54a63e76b74166406b61.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Eval</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://eva.beta.gouv.fr/wp-includes/js/jquery/jquery.min.js?ver=3.6.0">https://eva.beta.gouv.fr/wp-includes/js/jquery/jquery.min.js?ver=3.6.0</a></td>
 					</tr>
 					<tr>
@@ -2977,7 +3113,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">1</td>
+					<td width="80%">2</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -3083,7 +3219,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/articles/">https://eva.beta.gouv.fr/articles/</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/en-savoir-plus-sur-les-referentiels-devaluation/">https://eva.beta.gouv.fr/en-savoir-plus-sur-les-referentiels-devaluation/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3425,32 +3561,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/articles/">https://eva.beta.gouv.fr/articles/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://eva.beta.gouv.fr/faq/">https://eva.beta.gouv.fr/faq/</a></td>
 					</tr>
 					<tr>
@@ -3656,6 +3766,32 @@ td {
 						<td width="80%"></td>
 					</tr>
 				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/wp-admin/admin-ajax.php">https://eva.beta.gouv.fr/wp-admin/admin-ajax.php</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
 				<tr>
 					<td width="20%">Instances</td>
 					<td width="80%">11</td>
@@ -3699,6 +3835,374 @@ td {
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/10063/">10063</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-1"><a
+						id="10037"></a>
+						<div>Low</div></th>
+					<th class="risk-1">Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The web/application server is leaking information via one or more &quot;X-Powered-By&quot; HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/jeu/?code=ZAP">https://eva.beta.gouv.fr/jeu/?code=ZAP</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">X-Powered-By: Express</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/jeu/assets/apple-touch-icon-114x114.png">https://eva.beta.gouv.fr/jeu/assets/apple-touch-icon-114x114.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">X-Powered-By: Express</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/jeu/assets/apple-touch-icon-57x57.png">https://eva.beta.gouv.fr/jeu/assets/apple-touch-icon-57x57.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">X-Powered-By: Express</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/jeu/assets/apple-touch-icon-60x60.png">https://eva.beta.gouv.fr/jeu/assets/apple-touch-icon-60x60.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">X-Powered-By: Express</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/jeu/assets/apple-touch-icon-72x72.png">https://eva.beta.gouv.fr/jeu/assets/apple-touch-icon-72x72.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">X-Powered-By: Express</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/jeu/assets/apple-touch-icon-76x76.png">https://eva.beta.gouv.fr/jeu/assets/apple-touch-icon-76x76.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">X-Powered-By: Express</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/jeu/assets/favicon-16x16.png">https://eva.beta.gouv.fr/jeu/assets/favicon-16x16.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">X-Powered-By: Express</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/jeu/assets/favicon-32x32.png">https://eva.beta.gouv.fr/jeu/assets/favicon-32x32.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">X-Powered-By: Express</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/jeu/assets/favicon-48x48.png">https://eva.beta.gouv.fr/jeu/assets/favicon-48x48.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">X-Powered-By: Express</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/jeu/assets/favicon.ico">https://eva.beta.gouv.fr/jeu/assets/favicon.ico</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">X-Powered-By: Express</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/jeu/assets/manifest.json">https://eva.beta.gouv.fr/jeu/assets/manifest.json</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">X-Powered-By: Express</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/jeu?code=ZAP">https://eva.beta.gouv.fr/jeu?code=ZAP</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">X-Powered-By: Express</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">12</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure that your web server, application server, load balancer, etc. is configured to suppress &quot;X-Powered-By&quot; headers.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx">http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx</a>
+							<br />
+						
+							<a href="http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html">http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10037/">10037</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -3776,7 +4280,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/articles/">https://eva.beta.gouv.fr/articles/</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/en-savoir-plus-sur-les-referentiels-devaluation/">https://eva.beta.gouv.fr/en-savoir-plus-sur-les-referentiels-devaluation/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3958,7 +4462,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/statistiques">https://eva.beta.gouv.fr/statistiques</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/temoignages/">https://eva.beta.gouv.fr/temoignages/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3984,7 +4488,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/temoignages/">https://eva.beta.gouv.fr/temoignages/</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/wp-admin/admin-ajax.php">https://eva.beta.gouv.fr/wp-admin/admin-ajax.php</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4147,7 +4651,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1635047495</td>
+						<td width="80%">1635668797</td>
 					</tr>
 				
 					<tr>
@@ -4173,7 +4677,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1635047496</td>
+						<td width="80%">1635668799</td>
 					</tr>
 				
 					<tr>
@@ -4251,7 +4755,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1635047497</td>
+						<td width="80%">1635668800</td>
 					</tr>
 				
 				<tr>
@@ -4388,7 +4892,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/cgu">https://eva.beta.gouv.fr/cgu</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/en-savoir-plus-sur-les-referentiels-devaluation/">https://eva.beta.gouv.fr/en-savoir-plus-sur-les-referentiels-devaluation/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4544,7 +5048,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/statistiques">https://eva.beta.gouv.fr/statistiques</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/statistiques/">https://eva.beta.gouv.fr/statistiques/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4733,6 +5237,32 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/en-savoir-plus-sur-les-referentiels-devaluation/">https://eva.beta.gouv.fr/en-savoir-plus-sur-les-referentiels-devaluation/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">fr/wp-content/uploads/2021/05/1200px-Republique-francaise-logo</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://eva.beta.gouv.fr/faq/">https://eva.beta.gouv.fr/faq/</a></td>
 					</tr>
 					<tr>
@@ -4831,7 +5361,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">kKT8vYwKrd1QZqVactrdp4jHe9Qj8tAVwfr55P9R7760LN6dFwn0OZs1Wn5atN5jKltTooqP4i6HZXflQ1FLESHsVwZMQI0O747FQiD</td>
+						<td width="80%">2Fsgoo7NAZ5wCYEo5vwa7z6J2JuRQ6kkW5jKu9ln6ccfVbRhYHzYzYAbTFD4LmoQF9DCQdN566oPkvLU2V7xbhOpwtX04P3NcwSy68NokhUO4VWapgKWhkqvsPwG3s</td>
 					</tr>
 				
 					<tr>
@@ -4857,39 +5387,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">7NXCmODtFucZxZuPY5ENGyvixlU8tqRbaTieHXmMRV5B</td>
+						<td width="80%">2Bjuj7OMzg3xmO67lPq8XtbSXpRz9BL8dgd91H3aYD0aDMWAzJ4kN8KZ06T4</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://eva.beta.gouv.fr/qui-sommes-nous/">https://eva.beta.gouv.fr/qui-sommes-nous/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">fr/wp-content/uploads/2021/05/1200px-Republique-francaise-logo</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/statistiques">https://eva.beta.gouv.fr/statistiques</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5231,7 +5735,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/wp-json/oembed/1.0/embed?format=xml&amp;url=https%3A%2F%2Feva.beta.gouv.fr%2Ftemoignage-de-fabienne%2F">https://eva.beta.gouv.fr/wp-json/oembed/1.0/embed?format=xml&amp;url=https%3A%2F%2Feva.beta.gouv.fr%2Ftemoignage-de-fabienne%2F</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/wp-json/oembed/1.0/embed?format=xml&amp;url=https%3A%2F%2Feva.beta.gouv.fr%2Ftemoignage-de-benjamin-genty-conseiller-16-18-ans%2F">https://eva.beta.gouv.fr/wp-json/oembed/1.0/embed?format=xml&amp;url=https%3A%2F%2Feva.beta.gouv.fr%2Ftemoignage-de-benjamin-genty-conseiller-16-18-ans%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5257,7 +5761,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/wp-json/oembed/1.0/embed?format=xml&amp;url=https%3A%2F%2Feva.beta.gouv.fr%2Ftemoignage-de-margaux-tarrerias-conseillere-pacea%2F">https://eva.beta.gouv.fr/wp-json/oembed/1.0/embed?format=xml&amp;url=https%3A%2F%2Feva.beta.gouv.fr%2Ftemoignage-de-margaux-tarrerias-conseillere-pacea%2F</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/wp-json/oembed/1.0/embed?format=xml&amp;url=https%3A%2F%2Feva.beta.gouv.fr%2Ftemoignage-de-fabienne%2F">https://eva.beta.gouv.fr/wp-json/oembed/1.0/embed?format=xml&amp;url=https%3A%2F%2Feva.beta.gouv.fr%2Ftemoignage-de-fabienne%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5597,59 +6101,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/sitemap.xml">https://eva.beta.gouv.fr/sitemap.xml</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">query</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/sitemap.xml">https://eva.beta.gouv.fr/sitemap.xml</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">select</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/temoignages/">https://eva.beta.gouv.fr/temoignages/</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/qui-sommes-nous/">https://eva.beta.gouv.fr/qui-sommes-nous/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5675,7 +6127,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/temoignages/">https://eva.beta.gouv.fr/temoignages/</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/qui-sommes-nous/">https://eva.beta.gouv.fr/qui-sommes-nous/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5701,7 +6153,59 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/temoignages/">https://eva.beta.gouv.fr/temoignages/</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/qui-sommes-nous/">https://eva.beta.gouv.fr/qui-sommes-nous/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">select</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/sitemap.xml">https://eva.beta.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">query</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/sitemap.xml">https://eva.beta.gouv.fr/sitemap.xml</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5798,6 +6302,59 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;script type=&quot;application/ld+json&quot; class=&quot;yoast-schema-graph&quot;&gt;{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@graph&quot;:[{&quot;@type&quot;:&quot;Organization&quot;,&quot;@id&quot;:&quot;https://eva.beta.gouv.fr/#organization&quot;,&quot;name&quot;:&quot;eva&quot;,&quot;url&quot;:&quot;https://eva.beta.gouv.fr/&quot;,&quot;sameAs&quot;:[&quot;https://www.linkedin.com/company/eva-betagouv/&quot;,&quot;https://www.youtube.com/watch?v=HQNj5XyR4Zo&quot;],&quot;logo&quot;:{&quot;@type&quot;:&quot;ImageObject&quot;,&quot;@id&quot;:&quot;https://eva.beta.gouv.fr/#logo&quot;,&quot;inLanguage&quot;:&quot;fr-FR&quot;,&quot;url&quot;:&quot;https://eva.beta.gouv.fr/wp-content/uploads/2021/05/cropped-eva-blue-logo-e1620814424919.png&quot;,&quot;contentUrl&quot;:&quot;https://eva.beta.gouv.fr/wp-content/uploads/2021/05/cropped-eva-blue-logo-e1620814424919.png&quot;,&quot;width&quot;:150,&quot;height&quot;:128,&quot;caption&quot;:&quot;eva&quot;},&quot;image&quot;:{&quot;@id&quot;:&quot;https://eva.beta.gouv.fr/#logo&quot;}},{&quot;@type&quot;:&quot;WebSite&quot;,&quot;@id&quot;:&quot;https://eva.beta.gouv.fr/#website&quot;,&quot;url&quot;:&quot;https://eva.beta.gouv.fr/&quot;,&quot;name&quot;:&quot;&quot;,&quot;description&quot;:&quot;Evaluer les comp\u00e9tences transversales&quot;,&quot;publisher&quot;:{&quot;@id&quot;:&quot;https://eva.beta.gouv.fr/#organization&quot;},&quot;potentialAction&quot;:[{&quot;@type&quot;:&quot;SearchAction&quot;,&quot;target&quot;:{&quot;@type&quot;:&quot;EntryPoint&quot;,&quot;urlTemplate&quot;:&quot;https://eva.beta.gouv.fr/?s={search_term_string}&quot;},&quot;query-input&quot;:&quot;required name=search_term_string&quot;}],&quot;inLanguage&quot;:&quot;fr-FR&quot;},{&quot;@type&quot;:&quot;WebPage&quot;,&quot;@id&quot;:&quot;https://eva.beta.gouv.fr/elementor-page-datterrissage-395/#webpage&quot;,&quot;url&quot;:&quot;https://eva.beta.gouv.fr/elementor-page-datterrissage-395/&quot;,&quot;name&quot;:&quot;Elementor Page d\u2019atterrissage #395 -&quot;,&quot;isPartOf&quot;:{&quot;@id&quot;:&quot;https://eva.beta.gouv.fr/#website&quot;},&quot;datePublished&quot;:&quot;2021-05-17T19:56:00+00:00&quot;,&quot;dateModified&quot;:&quot;2021-05-17T19:56:32+00:00&quot;,&quot;breadcrumb&quot;:{&quot;@id&quot;:&quot;https://eva.beta.gouv.fr/elementor-page-datterrissage-395/#breadcrumb&quot;},&quot;inLanguage&quot;:&quot;fr-FR&quot;,&quot;potentialAction&quot;:[{&quot;@type&quot;:&quot;ReadAction&quot;,&quot;target&quot;:[&quot;https://eva.beta.gouv.fr/elementor-page-datterrissage-395/&quot;]}]},{&quot;@type&quot;:&quot;BreadcrumbList&quot;,&quot;@id&quot;:&quot;https://eva.beta.gouv.fr/elementor-page-datterrissage-395/#breadcrumb&quot;,&quot;itemListElement&quot;:[{&quot;@type&quot;:&quot;ListItem&quot;,&quot;position&quot;:1,&quot;name&quot;:&quot;Accueil&quot;,&quot;item&quot;:&quot;https://eva.beta.gouv.fr/&quot;},{&quot;@type&quot;:&quot;ListItem&quot;,&quot;position&quot;:2,&quot;name&quot;:&quot;Elementor Page d\u2019atterrissage #395&quot;}]}]}&lt;/script&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/jeu/assets/apple-touch-startup-image-2224x1668.png">https://eva.beta.gouv.fr/jeu/assets/apple-touch-startup-image-2224x1668.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;a
+s[&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/jeu/js/index_54a63e76b74166406b61.js">https://eva.beta.gouv.fr/jeu/js/index_54a63e76b74166406b61.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;a id=&#39;&quot;+x+&quot;&#39;&gt;&lt;/a&gt;</td>
 					</tr>
 				
 					<tr>
@@ -6010,7 +6567,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">9</td>
+					<td width="80%">11</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -6083,35 +6640,9 @@ td {
 						<td width="80%">private</td>
 					</tr>
 				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/pro/structures">https://eva.beta.gouv.fr/pro/structures</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">private</td>
-					</tr>
-				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">2</td>
+					<td width="80%">1</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -6308,32 +6839,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/nos-experts-scientifiques-vous-invitent-dans-les-coulisses-deva/">https://eva.beta.gouv.fr/nos-experts-scientifiques-vous-invitent-dans-les-coulisses-deva/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://eva.beta.gouv.fr/qui-sommes-nous/">https://eva.beta.gouv.fr/qui-sommes-nous/</a></td>
 					</tr>
 					<tr>
@@ -6411,7 +6916,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">8</td>
+					<td width="80%">7</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -6506,9 +7011,61 @@ td {
 						<td width="80%">no-cache</td>
 					</tr>
 				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/wp-admin/">https://eva.beta.gouv.fr/wp-admin/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">no-cache</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/wp-admin/admin-ajax.php">https://eva.beta.gouv.fr/wp-admin/admin-ajax.php</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">no-cache</td>
+					</tr>
+				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">1</td>
+					<td width="80%">3</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -6565,6 +7122,32 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/wp-login.php?reauth=1&amp;redirect_to=https%3A%2F%2Fwp.eva.beta.gouv.fr%2Fwp-admin%2F">https://eva.beta.gouv.fr/wp-login.php?reauth=1&amp;redirect_to=https%3A%2F%2Fwp.eva.beta.gouv.fr%2Fwp-admin%2F</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">redirect_to</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://eva.beta.gouv.fr/">https://eva.beta.gouv.fr/</a></td>
 					</tr>
 					<tr>
@@ -6669,7 +7252,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/temoignages/">https://eva.beta.gouv.fr/temoignages/</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/qui-sommes-nous/">https://eva.beta.gouv.fr/qui-sommes-nous/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6695,7 +7278,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/temoignages/">https://eva.beta.gouv.fr/temoignages/</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/qui-sommes-nous/">https://eva.beta.gouv.fr/qui-sommes-nous/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6721,7 +7304,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/temoignages/">https://eva.beta.gouv.fr/temoignages/</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/qui-sommes-nous/">https://eva.beta.gouv.fr/qui-sommes-nous/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6747,7 +7330,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://eva.beta.gouv.fr/temoignages/">https://eva.beta.gouv.fr/temoignages/</a></td>
+						<td width="80%"><a href="https://eva.beta.gouv.fr/qui-sommes-nous/">https://eva.beta.gouv.fr/qui-sommes-nous/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6772,7 +7355,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">8</td>
+					<td width="80%">9</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
