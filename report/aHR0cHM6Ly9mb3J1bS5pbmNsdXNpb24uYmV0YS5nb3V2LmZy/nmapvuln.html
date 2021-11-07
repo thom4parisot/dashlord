@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln forum.inclusion.beta.gouv.fr</pre>
-<p class="lead">Sun Oct 31 08:53:00 2021 – Sun Oct 31 08:55:48 2021<br>1 hosts scanned.
+<p class="lead">Sun Nov  7 05:32:33 2021 – Sun Nov  7 05:33:06 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,9 +76,9 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>185.42.117.109</td>
+<td>184.104.202.143</td>
 <td>forum.inclusion.beta.gouv.fr</td>
-<td>7</td>
+<td>2</td>
 <td>0</td>
 </tr></tbody>
 </table></div>
@@ -91,8 +91,8 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#185-42-117-109"><h3 class="panel-title">185.42.117.109 - forum.inclusion.beta.gouv.fr</h3></div>
-<div class="panel-body collapse in" id="185-42-117-109">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#184-104-202-143"><h3 class="panel-title">184.104.202.143 - forum.inclusion.beta.gouv.fr</h3></div>
+<div class="panel-body collapse in" id="184-104-202-143">
 <h4>Hostnames</h4>
 <ul><li>forum.inclusion.beta.gouv.fr (user)</li></ul>
 <h4>Ports</h4>
@@ -119,111 +119,82 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, Kerberos, LDAPBindReq, LDAPSearchReq, LPDString, RPCCheck, RTSPRequest, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe: 
-    HTTP/1.1 400 Bad Request
-    Cache-Control: no-cache
-    Connection: close</pre>
+  GetRequest, HTTPOptions: 
+    HTTP/1.1 404 Not Found
+    cache-control: no-cache
+    content-length: 1427
+    content-type: text/html
+    connection: close
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;title&gt;Site Not Found - Discourse&lt;/title&gt;
+    &lt;link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" type="text/css"&gt;
+    &lt;style&gt;
+    body {
+    font-family: 'Open Sans',Arial,sans-serif;
+    background-color: rgb(231,238,247);
+    background-image: url('https://discourse-cdn.s3.amazonaws.com/bg.jpg');
+    background-repeat: repeat;
+    background-position: left top;
+    padding-bottom: 3em;
+    #logo {
+    width: 80%;
+    .content {
+    width: 60%;
+    max-width: 600px;
+    margin: 1em auto;
+    background-color: white;
+    padding: 1em;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    text-align: center;</pre>
 </td></tr>
 <tr class="success">
 <td title="Port">443</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
 <td title="Service">https</td>
-<td title="Product"></td>
+<td title="Product">nginx</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, Kerberos, LPDString, RPCCheck, RTSPRequest, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe, tor-versions: 
-    HTTP/1.1 400 Bad Request
-    Cache-Control: no-cache
-    Connection: close</pre>
+  GetRequest, HTTPOptions: 
+    HTTP/1.1 404 Not Found
+    cache-control: no-cache
+    content-length: 1427
+    content-type: text/html
+    connection: close
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;title&gt;Site Not Found - Discourse&lt;/title&gt;
+    &lt;link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" type="text/css"&gt;
+    &lt;style&gt;
+    body {
+    font-family: 'Open Sans',Arial,sans-serif;
+    background-color: rgb(231,238,247);
+    background-image: url('https://discourse-cdn.s3.amazonaws.com/bg.jpg');
+    background-repeat: repeat;
+    background-position: left top;
+    padding-bottom: 3em;
+    #logo {
+    width: 80%;
+    .content {
+    width: 60%;
+    max-width: 600px;
+    margin: 1em auto;
+    background-color: white;
+    padding: 1em;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    text-align: center;</pre>
+<h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">nginx</pre>
 </td></tr>
-<tr class="warning">
-<td>1080</td>
-<td>tcp</td>
-<td>filtered<br>no-response</td>
-<td>socks</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="warning">
-<td>1081</td>
-<td>tcp</td>
-<td>filtered<br>no-response</td>
-<td>pvuniwien</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="success">
-<td title="Port">3000</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">ppp</td>
-<td title="Product"></td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
-</tr>
-<tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  Kerberos: 
-    T9u-
-    UtdT
-    \xaa
-  TLSSessionReq: 
-    kSi$
-    \x81K
-    GD3YS,
-    d\xfc
-    49"z
-    Psn78
-    a!:y</pre>
-</td></tr>
-<tr class="success">
-<td title="Port">5001</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">tcpwrapped</td>
-<td title="Product"></td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
-</tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
-<tr class="success">
-<td title="Port">5002</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">ssh</td>
-<td title="Product">Apache Mina sshd</td>
-<td title="Version">1.7.0</td>
-<td title="Extra Info">protocol 2.0</td>
-</tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:apache:sshd:1.7.0">cpe:/a:apache:sshd:1.7.0</a></td></tr>
-<tr class="success">
-<td title="Port">5225</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">tcpwrapped</td>
-<td title="Product"></td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
-</tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
-<tr class="success">
-<td title="Port">9999</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">tcpwrapped</td>
-<td title="Product"></td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
-</tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
 </tbody>
 </table></div>
 </div>
@@ -242,7 +213,7 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>185.42.117.109 - forum.inclusion.beta.gouv.fr</td>
+<td>184.104.202.143 - forum.inclusion.beta.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
@@ -252,61 +223,11 @@
 <td></td>
 </tr>
 <tr>
-<td>185.42.117.109 - forum.inclusion.beta.gouv.fr</td>
+<td>184.104.202.143 - forum.inclusion.beta.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
 <td>https</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>185.42.117.109 - forum.inclusion.beta.gouv.fr</td>
-<td>3000</td>
-<td>tcp</td>
-<td>ppp</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>185.42.117.109 - forum.inclusion.beta.gouv.fr</td>
-<td>5001</td>
-<td>tcp</td>
-<td>tcpwrapped</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>185.42.117.109 - forum.inclusion.beta.gouv.fr</td>
-<td>5002</td>
-<td>tcp</td>
-<td>ssh</td>
-<td>Apache Mina sshd</td>
-<td>1.7.0</td>
-<td>cpe:/a:apache:sshd:1.7.0</td>
-<td>protocol 2.0</td>
-</tr>
-<tr>
-<td>185.42.117.109 - forum.inclusion.beta.gouv.fr</td>
-<td>5225</td>
-<td>tcp</td>
-<td>tcpwrapped</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>185.42.117.109 - forum.inclusion.beta.gouv.fr</td>
-<td>9999</td>
-<td>tcp</td>
-<td>tcpwrapped</td>
-<td></td>
+<td>nginx</td>
 <td></td>
 <td></td>
 <td></td>
