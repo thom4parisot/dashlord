@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln mon-entreprise.fr</pre>
-<p class="lead">Sun Nov  7 07:20:50 2021 – Sun Nov  7 07:21:15 2021<br>1 hosts scanned.
+<p class="lead">Sun Nov 14 07:51:07 2021 – Sun Nov 14 07:51:34 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,7 +76,7 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>67.207.80.24</td>
+<td>184.72.37.151</td>
 <td>mon-entreprise.fr</td>
 <td>2</td>
 <td>0</td>
@@ -91,10 +91,13 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#67-207-80-24"><h3 class="panel-title">67.207.80.24 - mon-entreprise.fr</h3></div>
-<div class="panel-body collapse in" id="67-207-80-24">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#184-72-37-151"><h3 class="panel-title">184.72.37.151 - mon-entreprise.fr</h3></div>
+<div class="panel-body collapse in" id="184-72-37-151">
 <h4>Hostnames</h4>
-<ul><li>mon-entreprise.fr (user)</li></ul>
+<ul>
+<li>mon-entreprise.fr (user)</li>
+<li>ec2-184-72-37-151.us-west-1.compute.amazonaws.com (PTR)</li>
+</ul>
 <h4>Ports</h4>
 <div class="table-responsive"><table class="table table-bordered">
 <thead><tr>
@@ -119,27 +122,23 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, Help, Kerberos, RPCCheck, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, SMBProgNeg, SSLSessionReq, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 07 Nov 2021 07:21:06 GMT
-  DNSVersionBindReqTCP: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 07 Nov 2021 07:21:05 GMT
+    date: Sun, 14 Nov 2021 07:51:22 GMT
   FourOhFourRequest, GetRequest, HTTPOptions: 
     HTTP/1.0 400 Bad Request
     content-length: 19
-    date: Sun, 07 Nov 2021 07:21:00 GMT
+    date: Sun, 14 Nov 2021 07:51:17 GMT
     Missing host header
-  RTSPRequest: 
+  Kerberos, TLSSessionReq: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 07 Nov 2021 07:21:01 GMT
-  X11Probe: 
+    date: Sun, 14 Nov 2021 07:51:23 GMT
+  RTSPRequest, X11Probe: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 07 Nov 2021 07:21:00 GMT</pre>
+    date: Sun, 14 Nov 2021 07:51:17 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -155,28 +154,28 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, RPCCheck, RTSPRequest, SMBProgNeg, SSLSessionReq, TLSSessionReq: 
+  DNSStatusRequestTCP, RPCCheck, RTSPRequest: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 07 Nov 2021 07:21:12 GMT
+    date: Sun, 14 Nov 2021 07:51:29 GMT
+  DNSVersionBindReqTCP, Help, Kerberos, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Sun, 14 Nov 2021 07:51:30 GMT
   FourOhFourRequest: 
     HTTP/1.0 400 Bad Request
     content-length: 19
-    date: Sun, 07 Nov 2021 07:21:07 GMT
+    date: Sun, 14 Nov 2021 07:51:23 GMT
     Missing host header
   GetRequest, HTTPOptions: 
     HTTP/1.0 400 Bad Request
     content-length: 19
-    date: Sun, 07 Nov 2021 07:21:06 GMT
+    date: Sun, 14 Nov 2021 07:51:24 GMT
     Missing host header
-  TerminalServerCookie: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 07 Nov 2021 07:21:11 GMT
   tor-versions: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 07 Nov 2021 07:21:06 GMT</pre>
+    date: Sun, 14 Nov 2021 07:51:24 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -207,7 +206,7 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>67.207.80.24 - mon-entreprise.fr</td>
+<td>184.72.37.151 - mon-entreprise.fr</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
@@ -217,7 +216,7 @@
 <td></td>
 </tr>
 <tr>
-<td>67.207.80.24 - mon-entreprise.fr</td>
+<td>184.72.37.151 - mon-entreprise.fr</td>
 <td>443</td>
 <td>tcp</td>
 <td>https</td>

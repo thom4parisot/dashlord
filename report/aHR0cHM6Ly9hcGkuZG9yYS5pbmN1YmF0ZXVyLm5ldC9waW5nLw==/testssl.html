@@ -21,13 +21,13 @@
 ###########################################################</span>
 
  Using &quot;OpenSSL 1.0.2-chacha (1.0.2k-dev)&quot; [~183 ciphers]
- on fv-az290-301:/home/testssl/bin/openssl.Linux.x86_64
+ on fv-az292-553:/home/testssl/bin/openssl.Linux.x86_64
  (built: &quot;Jan 18 17:12:17 2019&quot;, platform: &quot;linux-x86_64&quot;)
 
 
 <span style="font-weight:bold;">Testing all IPv4 addresses (port 443): </span>148.253.96.193 185.21.194.105
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2021-11-07 12:35:51        --&gt;&gt; 148.253.96.193:443 (api.dora.incubateur.net) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2021-11-14 12:58:04        --&gt;&gt; 148.253.96.193:443 (api.dora.incubateur.net) &lt;&lt;--</span>
 
  Further IP addresses:   185.21.194.105 
  rDNS (148.253.96.193):  ows-148-253-96-193.cloudgouv-eu-west-1.compute.outscale.com.
@@ -108,15 +108,15 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Server key size              </span>RSA 2048 bits (exponent is 65537)
 <span style="font-weight:bold;"> Server key usage             </span>Digital Signature, Key Encipherment
 <span style="font-weight:bold;"> Server extended key usage    </span>TLS Web Server Authentication, TLS Web Client Authentication
-<span style="font-weight:bold;"> Serial                       </span>04AABE4DB1534AEA9878C7AC9EFBEC7CF34F (OK: length 18)
-<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 44E305CC7949F56870B641EB8940A320F66114B5
-                              SHA256 1BA77124019A8F4CCB734D64F26C9F2264E83B6D8A500125ED4214AB6DEF4491
+<span style="font-weight:bold;"> Serial                       </span>04D68F68174301EA611C3126735BEA124296 (OK: length 18)
+<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 8D6BB0DD17FAD33798D1DAE157C4272BDDE0E839
+                              SHA256 8CC9CFF429EC1674A6943C6CA5BCE5F3057ECE4335C8737D27B6482338800F40
 <span style="font-weight:bold;"> Common Name (CN)             </span><i>api.dora.incubateur.net </i> (CN in response to request w/o SNI: <i>*.osc-secnum-fr1.scalingo.io </i>)
 <span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>api.dora.incubateur.net </i>
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">34 &gt;= 30 days</span> (2021-09-13 10:11 --&gt; 2021-12-12 10:11)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">87 &gt;= 30 days</span> (2021-11-12 10:12 --&gt; 2022-02-10 10:12)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
@@ -162,7 +162,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> FREAK</span> (CVE-2015-0204)                     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> DROWN</span> (CVE-2016-0800, CVE-2016-0703)      <span style="color:#008817;font-weight:bold;">not vulnerable on this host and port (OK)</span>
                                            make sure you don&apos;t use this certificate elsewhere with SSLv2 enabled services
-                                           <a href="https://censys.io/ipv4?q=1BA77124019A8F4CCB734D64F26C9F2264E83B6D8A500125ED4214AB6DEF4491" style="color:black;text-decoration:none;">https://censys.io/ipv4?q=1BA77124019A8F4CCB734D64F26C9F2264E83B6D8A500125ED4214AB6DEF4491</a> could help you to find out
+                                           <a href="https://censys.io/ipv4?q=8CC9CFF429EC1674A6943C6CA5BCE5F3057ECE4335C8737D27B6482338800F40" style="color:black;text-decoration:none;">https://censys.io/ipv4?q=8CC9CFF429EC1674A6943C6CA5BCE5F3057ECE4335C8737D27B6482338800F40</a> could help you to find out
 <span style="font-weight:bold;"> LOGJAM</span> (CVE-2015-4000), experimental      <span style="color:#008817;">not vulnerable (OK):</span> no DH EXPORT ciphers, no common prime detected
 <span style="font-weight:bold;"> BEAST</span> (CVE-2011-3389)                     <span style="color:#008817;">not vulnerable (OK)</span>, no SSL3 or TLS1
 <span style="font-weight:bold;"> LUCKY13</span> (CVE-2013-0169), experimental     potentially <span style="color:#a86437;">VULNERABLE</span>, uses cipher block chaining (CBC) ciphers with TLS. Check patches
@@ -222,10 +222,10 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>81
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2021-11-07 12:38:19 [ 150s] --&gt;&gt; 148.253.96.193:443 (api.dora.incubateur.net) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2021-11-14 13:00:27 [ 145s] --&gt;&gt; 148.253.96.193:443 (api.dora.incubateur.net) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2021-11-07 12:38:20        --&gt;&gt; 185.21.194.105:443 (api.dora.incubateur.net) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2021-11-14 13:00:28        --&gt;&gt; 185.21.194.105:443 (api.dora.incubateur.net) &lt;&lt;--</span>
 
  Further IP addresses:   148.253.96.193 
  rDNS (185.21.194.105):  ows-185-21-194-105.cloudgouv-eu-west-1.compute.outscale.com.
@@ -306,15 +306,15 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Server key size              </span>RSA 2048 bits (exponent is 65537)
 <span style="font-weight:bold;"> Server key usage             </span>Digital Signature, Key Encipherment
 <span style="font-weight:bold;"> Server extended key usage    </span>TLS Web Server Authentication, TLS Web Client Authentication
-<span style="font-weight:bold;"> Serial                       </span>04AABE4DB1534AEA9878C7AC9EFBEC7CF34F (OK: length 18)
-<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 44E305CC7949F56870B641EB8940A320F66114B5
-                              SHA256 1BA77124019A8F4CCB734D64F26C9F2264E83B6D8A500125ED4214AB6DEF4491
+<span style="font-weight:bold;"> Serial                       </span>04D68F68174301EA611C3126735BEA124296 (OK: length 18)
+<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 8D6BB0DD17FAD33798D1DAE157C4272BDDE0E839
+                              SHA256 8CC9CFF429EC1674A6943C6CA5BCE5F3057ECE4335C8737D27B6482338800F40
 <span style="font-weight:bold;"> Common Name (CN)             </span><i>api.dora.incubateur.net </i> (CN in response to request w/o SNI: <i>*.osc-secnum-fr1.scalingo.io </i>)
 <span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>api.dora.incubateur.net </i>
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">34 &gt;= 30 days</span> (2021-09-13 10:11 --&gt; 2021-12-12 10:11)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">87 &gt;= 30 days</span> (2021-11-12 10:12 --&gt; 2022-02-10 10:12)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
@@ -332,7 +332,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  404 Not Found (Hint: supply a path which doesn&apos;t give a &quot;404 Not Found&quot;)
-<span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
+<span style="font-weight:bold;"> HTTP clock skew              </span>+2 sec from localtime
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">365 days</span>=31536000 s<span style="color:#168092;">, just this domain</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>openresty
@@ -360,7 +360,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> FREAK</span> (CVE-2015-0204)                     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> DROWN</span> (CVE-2016-0800, CVE-2016-0703)      <span style="color:#008817;font-weight:bold;">not vulnerable on this host and port (OK)</span>
                                            make sure you don&apos;t use this certificate elsewhere with SSLv2 enabled services
-                                           <a href="https://censys.io/ipv4?q=1BA77124019A8F4CCB734D64F26C9F2264E83B6D8A500125ED4214AB6DEF4491" style="color:black;text-decoration:none;">https://censys.io/ipv4?q=1BA77124019A8F4CCB734D64F26C9F2264E83B6D8A500125ED4214AB6DEF4491</a> could help you to find out
+                                           <a href="https://censys.io/ipv4?q=8CC9CFF429EC1674A6943C6CA5BCE5F3057ECE4335C8737D27B6482338800F40" style="color:black;text-decoration:none;">https://censys.io/ipv4?q=8CC9CFF429EC1674A6943C6CA5BCE5F3057ECE4335C8737D27B6482338800F40</a> could help you to find out
 <span style="font-weight:bold;"> LOGJAM</span> (CVE-2015-4000), experimental      <span style="color:#008817;">not vulnerable (OK):</span> no DH EXPORT ciphers, no common prime detected
 <span style="font-weight:bold;"> BEAST</span> (CVE-2011-3389)                     <span style="color:#008817;">not vulnerable (OK)</span>, no SSL3 or TLS1
 <span style="font-weight:bold;"> LUCKY13</span> (CVE-2013-0169), experimental     potentially <span style="color:#a86437;">VULNERABLE</span>, uses cipher block chaining (CBC) ciphers with TLS. Check patches
@@ -420,7 +420,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>81
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2021-11-07 12:40:42 [ 293s] --&gt;&gt; 185.21.194.105:443 (api.dora.incubateur.net) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2021-11-14 13:02:43 [ 281s] --&gt;&gt; 185.21.194.105:443 (api.dora.incubateur.net) &lt;&lt;--</span>
 
 -----------------------------------------------------
 <span style="font-weight:bold;">Done testing now all IP addresses (on port 443): </span>148.253.96.193 185.21.194.105
