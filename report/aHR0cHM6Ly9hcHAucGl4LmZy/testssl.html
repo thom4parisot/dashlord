@@ -21,11 +21,11 @@
 ###########################################################</span>
 
  Using &quot;OpenSSL 1.0.2-chacha (1.0.2k-dev)&quot; [~183 ciphers]
- on fv-az212-621:/home/testssl/bin/openssl.Linux.x86_64
+ on fv-az219-596:/home/testssl/bin/openssl.Linux.x86_64
  (built: &quot;Jan 18 17:12:17 2019&quot;, platform: &quot;linux-x86_64&quot;)
 
 
-<span style="color:white;background-color:black;"> Start 2021-11-14 01:44:48        --&gt;&gt; 185.94.140.194:443 (app.pix.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2021-11-21 01:43:43        --&gt;&gt; 185.94.140.194:443 (app.pix.fr) &lt;&lt;--</span>
 
  rDNS (185.94.140.194):  185-94-140-194.acorus.net.
  Service detected:       HTTP
@@ -55,8 +55,31 @@
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing server&apos;s cipher preferences </span>
 
-<span style="font-weight:bold;"> Has server cipher order?     </span><span style="color:#cd00cd;">Fixme: something weird happened around line 6621</span>
-<span style="color:#cd00cd;">no matching cipher in this list found (pls report this): </span>DHE-RSA-SEED-SHA:SEED-SHA:DES-CBC3-SHA:RC4-MD5:DES-CBC-SHA:RC4-SHA:AES128-SHA:AES128-SHA256:AES256-SHA:ECDHE-RSA-AES128-SHA:DHE-RSA-AES128-SHA:DHE-RSA-AES256-SHA:ECDH-RSA-DES-CBC3-SHA:ECDH-RSA-AES128-SHA:ECDH-RSA-AES256-SHA:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-SHA256:DHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:DHE-DSS-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:AES256-SHA256:ECDHE-RSA-DES-CBC3-SHA:ECDHE-RSA-AES128-SHA256:AES256-GCM-SHA384:AES128-GCM-SHA256:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-SHA256:ADH-AES256-GCM-SHA384:AECDH-AES128-SHA:ECDHE-RSA-RC4-SHA:ECDHE-ECDSA-AES128-SHA  . 
+<span style="font-weight:bold;"> Has server cipher order?     </span><span style="color:#e52207;">no (NOT ok)</span>
+<span style="font-weight:bold;"> Negotiated protocol          </span><span style="color:#008817;font-weight:bold;">TLSv1.2</span>
+<span style="font-weight:bold;"> Negotiated cipher            </span><span style="color:#008817;font-weight:bold;">DHE-RSA-AES128-GCM-SHA256</span>, <span style="color:#008817;">2048 bit DH</span><span style="color:#cd00cd;"> -- inconclusive test, matching cipher in list missing</span>, better see below
+<span style="font-weight:bold;"> Cipher per protocol</span>
+
+Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Cipher Suite Name (IANA/RFC)
+-----------------------------------------------------------------------------------------------------------------------------
+<u>SSLv2</u>
+ - 
+<u>SSLv3</u>
+ - 
+<u>TLSv1</u>
+ - 
+<u>TLSv1.1</u>
+ - 
+<u>TLSv1.2</u><span style="color:#e52207;"> (no server order, thus listed by strength)</span>
+ xcc13   ECDHE-RSA-CHACHA20-POLY1305-OLD   ECDH<span style="color:#008817;"> 521</span>   ChaCha20    256      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256_OLD    
+ xc030   ECDHE-RSA-AES256-GCM-SHA384       ECDH<span style="color:#008817;"> 521</span>   AESGCM      256      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384              
+ x9f     DHE-RSA-AES256-GCM-SHA384         DH<span style="color:#008817;"> 2048</span>    AESGCM      256      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384                
+ xc02f   ECDHE-RSA-AES128-GCM-SHA256       ECDH<span style="color:#008817;"> 521</span>   AESGCM      128      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256              
+ x9e     DHE-RSA-AES128-GCM-SHA256         DH<span style="color:#008817;"> 2048</span>    AESGCM      128      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256                
+<u>TLSv1.3</u> (no server order, thus listed by strength)
+<span style="color:#cd00cd;">Local problem: /home/testssl/bin/openssl.Linux.x86_64 doesn&apos;t support &quot;s_client -tls1_3&quot;</span>
+<span style="color:#cd00cd;">Local problem: Your /home/testssl/bin/openssl.Linux.x86_64 does not support -tls1_3</span>
+
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing robust forward secrecy (FS)</span><u> -- omitting Null Authentication/Encryption, 3DES, RC4 </u>
 
@@ -96,7 +119,7 @@
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN wildcard</span> (same w/o SNI)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">42 &gt;= 30 days</span> (2021-09-27 08:06 --&gt; 2021-12-26 08:06)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">35 &gt;= 30 days</span> (2021-09-27 08:06 --&gt; 2021-12-26 08:06)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
@@ -113,37 +136,23 @@
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
-<span style="font-weight:bold;"> HTTP Status Code           </span><span style="color:#cd00cd;">HTTP header reply empty. </span><span style="color:#cd00cd;">No HTTP status code.</span>
-<span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
-<span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
-<span style="font-weight:bold;"> IPv4 address in header       </span><span style="color:#c05600;">bln-server: 172.26.53.50</span>
-                              (check if it&apos;s your IP address or e.g. a cluster IP)
-<span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">365 days</span>=31536000 s<span style="color:#168092;">, just this domain</span>
-<span style="font-weight:bold;"> Public Key Pinning           </span>--
-<span style="font-weight:bold;"> Server banner                </span>openresty
-<span style="font-weight:bold;"> Application banner           </span>--
-<span style="font-weight:bold;"> Cookie(s)                    </span>(none issued at &quot;/&quot;)
-<span style="font-weight:bold;"> Security headers             </span><span style="color:#008817;">X-Frame-Options</span>: SAMEORIGIN
-                              <span style="color:#008817;">X-Content-Type-Options</span>: nosniff
-                              X-XSS-Protection: 1
-                              Referrer-Policy: origin-when-cross-origin
-                              Cache-Control: no-cache
-<span style="font-weight:bold;"> Reverse Proxy banner         </span><span style="color:#8a7237;font-weight:bold;">X-Varnish</span>: <span style="color:#8a7237;">7</span><span style="color:#8a7237;">8</span><span style="color:#8a7237;">8</span><span style="color:#8a7237;">9</span><span style="color:#8a7237;">0</span><span style="color:#8a7237;">1</span><span style="color:#8a7237;">8</span><span style="color:#8a7237;">6</span><span style="color:#8a7237;">2</span>
-                              <span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> varnish (Varnish/<span style="color:#8a7237;">6</span>.<span style="color:#8a7237;">5</span>)
+<span style="font-weight:bold;"> HTTP Status Code           </span><span style="color:#cd00cd;"> likely HTTP header requests failed (#lines: 0)</span>
+Rerun with DEBUG&gt;=1 and inspect /tmp/testssl.0N9njN/185.94.140.194.http_header.txt
+
+<span style="color:#be32d0;font-weight:bold;">HTTP header was repeatedly zero.</span>
+Skipping complete HTTP header section.
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing vulnerabilities </span>
 
 <span style="font-weight:bold;"> Heartbleed</span> (CVE-2014-0160)                <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>, no heartbeat extension
 <span style="font-weight:bold;"> CCS</span> (CVE-2014-0224)                       <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
-<span style="font-weight:bold;"> Ticketbleed</span> (CVE-2016-9244), experiment.  <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>, no session tickets
+<span style="font-weight:bold;"> Ticketbleed</span> (CVE-2016-9244), experiment.  <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> ROBOT                                     </span><span style="color:#008817;font-weight:bold;">Server does not support any cipher suites that use RSA key transport</span>
 <span style="font-weight:bold;"> Secure Renegotiation (RFC 5746)           </span><span style="color:#008817;font-weight:bold;">supported (OK)</span>
 <span style="font-weight:bold;"> Secure Client-Initiated Renegotiation     </span><span style="color:#008817;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> CRIME, TLS </span>(CVE-2012-4929)                <span style="color:#008817;">not vulnerable (OK)</span>
-<span style="font-weight:bold;"> BREACH</span> (CVE-2013-3587)                    <span style="color:#c05600;">potentially NOT ok, &quot;gzip br&quot; HTTP compression detected.</span> - only supplied &quot;/&quot; tested
-                                           Can be ignored for static pages or if no secrets in the page
-<span style="font-weight:bold;"> POODLE, SSL</span> (CVE-2014-3566)               <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>, no SSLv3 support
+<span style="font-weight:bold;"> BREACH</span> (CVE-2013-3587)                    <span style="color:#cd00cd;">At least 1/4 checks failed (HTTP header request stalled and was terminated</span>, debug: warn_killed:yes<span style="font-weight:bold;"> POODLE, SSL</span> (CVE-2014-3566)               <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>, no SSLv3 support
 <span style="font-weight:bold;"> TLS_FALLBACK_SCSV</span> (RFC 7507)              <span style="color:#008817;">No fallback possible (OK)</span>, no protocol below TLS 1.2 offered
 <span style="font-weight:bold;"> SWEET32</span> (CVE-2016-2183, CVE-2016-6329)    <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> FREAK</span> (CVE-2015-0204)                     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
@@ -178,7 +187,7 @@
  IE 11 Win 7                  TLSv1.2   DHE-RSA-AES256-GCM-SHA384         <span style="color:#008817;">2048 bit DH  </span>
  IE 11 Win 8.1                TLSv1.2   DHE-RSA-AES256-GCM-SHA384         <span style="color:#008817;">2048 bit DH  </span>
  IE 11 Win Phone 8.1          No connection
- IE 11 Win 10                 TLSv1.2   ECDHE-RSA-AES256-GCM-SHA384       <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ IE 11 Win 10                 No connection
  Edge 15 Win 10               TLSv1.2   ECDHE-RSA-AES256-GCM-SHA384       <span style="color:#008817;">253 bit ECDH (X25519)</span>
  Edge 17 (Win 10)             TLSv1.2   ECDHE-RSA-AES256-GCM-SHA384       <span style="color:#008817;">253 bit ECDH (X25519)</span>
  Opera 66 (Win 10)            TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
@@ -190,12 +199,12 @@
  Apple ATS 9 iOS 9            TLSv1.2   ECDHE-RSA-AES256-GCM-SHA384       <span style="color:#008817;">256 bit ECDH (P-256)</span>
  Java 6u45                    No connection
  Java 7u25                    No connection
- Java 8u161                   No connection
- Java 11.0.2 (OpenJDK)        No connection
+ Java 8u161                   TLSv1.2   ECDHE-RSA-AES256-GCM-SHA384       <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ Java 11.0.2 (OpenJDK)        TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">256 bit ECDH (P-256)</span>
  Java 12.0.1 (OpenJDK)        TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">256 bit ECDH (P-256)</span>
- OpenSSL 1.0.2e               TLSv1.2   ECDHE-RSA-AES256-GCM-SHA384       <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ OpenSSL 1.0.2e               No connection
  OpenSSL 1.1.0l (Debian)      TLSv1.2   ECDHE-RSA-AES256-GCM-SHA384       <span style="color:#008817;">253 bit ECDH (X25519)</span>
- OpenSSL 1.1.1d (Debian)      TLSv1.3   TLS_AES_256_GCM_SHA384            <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ OpenSSL 1.1.1d (Debian)      No connection
  Thunderbird (68.3)           TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
 
 
@@ -205,11 +214,11 @@
 <span style="font-weight:bold;"> Specification documentation  </span><a href="https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide" style="color:black;text-decoration:none;">https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide</a>
 <span style="font-weight:bold;"> Protocol Support </span>(weighted)  100 (30)
 <span style="font-weight:bold;"> Key Exchange </span>    (weighted)  90 (27)
-<span style="font-weight:bold;"> Cipher Strength </span> (weighted)  60 (24)
-<span style="font-weight:bold;"> Final Score                  </span>81
+<span style="font-weight:bold;"> Cipher Strength </span> (weighted)  90 (36)
+<span style="font-weight:bold;"> Final Score                  </span>93
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2021-11-14 02:34:14 [2968s] --&gt;&gt; 185.94.140.194:443 (app.pix.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2021-11-21 02:03:44 [1203s] --&gt;&gt; 185.94.140.194:443 (app.pix.fr) &lt;&lt;--</span>
 
 
 </pre>
