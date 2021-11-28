@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 24 Oct 2021 01:06:50
+		Generated on Sun, 28 Nov 2021 01:08:09
 	</h3>
 
 	
@@ -160,7 +160,7 @@ td {
 					<div>Low</div>
 				</td>
 				<td align="center">
-					<div>10</div>
+					<div>9</div>
 				</td>
 			</tr>
 			<tr>
@@ -234,11 +234,6 @@ td {
 				<td align="center">11</td>
 			</tr>
 			<tr>
-				<td><a href="#2">Private IP Disclosure</a></td>
-				<td align="center" class="risk-1">Low</td>
-				<td align="center">1</td>
-			</tr>
-			<tr>
 				<td><a href="#10037">Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</a></td>
 				<td align="center" class="risk-1">Low</td>
 				<td align="center">11</td>
@@ -256,7 +251,7 @@ td {
 			<tr>
 				<td><a href="#10096">Timestamp Disclosure - Unix</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">40</td>
+				<td align="center">36</td>
 			</tr>
 			<tr>
 				<td><a href="#10021">X-Content-Type-Options Header Missing</a></td>
@@ -321,7 +316,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://api.gouv.fr/_next/static/chunks/main-1f2c591c5d3bfcfc95e6.js">https://api.gouv.fr/_next/static/chunks/main-1f2c591c5d3bfcfc95e6.js</a></td>
+						<td width="80%"><a href="https://api.gouv.fr/_next/static/chunks/main-e7f9cd3517807e31.js">https://api.gouv.fr/_next/static/chunks/main-e7f9cd3517807e31.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1768,7 +1763,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://api.gouv.fr/_next/static/chunks/1e7177e0-42bcaf27b5b342a3403c.js">https://api.gouv.fr/_next/static/chunks/1e7177e0-42bcaf27b5b342a3403c.js</a></td>
+						<td width="80%"><a href="https://api.gouv.fr/_next/static/chunks/1e7177e0-034573f607b79d79.js">https://api.gouv.fr/_next/static/chunks/1e7177e0-034573f607b79d79.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1794,7 +1789,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://api.gouv.fr/_next/static/chunks/9f96d65d-7a2bc5bf0bcd1588504d.js">https://api.gouv.fr/_next/static/chunks/9f96d65d-7a2bc5bf0bcd1588504d.js</a></td>
+						<td width="80%"><a href="https://api.gouv.fr/_next/static/chunks/9f96d65d-f1a9c4fd0d636f35.js">https://api.gouv.fr/_next/static/chunks/9f96d65d-f1a9c4fd0d636f35.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2541,85 +2536,6 @@ td {
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/10063/">10063</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
-		
-			<table class="results">
-				<tr height="24">
-					<th width="20%" class="risk-1"><a
-						id="2"></a>
-						<div>Low</div></th>
-					<th class="risk-1">Private IP Disclosure</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>A private IP (such as 10.x.x.x, 172.x.x.x, 192.168.x.x) or an Amazon EC2 private hostname (for example, ip-10-0-56-78) has been found in the HTTP response body. This information might be helpful for further attacks targeting internal systems.</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://api.gouv.fr/_next/static/chunks/1e7177e0-42bcaf27b5b342a3403c.js">https://api.gouv.fr/_next/static/chunks/1e7177e0-42bcaf27b5b342a3403c.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">ip-172-31-21-173</td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					<td width="80%">1</td>
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>Remove the private IP address from the HTTP response body.  For comments, use JSP/ASP/PHP comment instead of HTML/JavaScript comment which can be seen by client browsers.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%">
-							<a href="https://tools.ietf.org/html/rfc1918">https://tools.ietf.org/html/rfc1918</a>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%">13</td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/2/">2</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -3706,32 +3622,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">0000000000</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://api.gouv.fr">https://api.gouv.fr</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
 						<td width="80%">00170886</td>
 					</tr>
 				
@@ -3888,32 +3778,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1316585138</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://api.gouv.fr">https://api.gouv.fr</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
 						<td width="80%">14946203</td>
 					</tr>
 				
@@ -3967,32 +3831,6 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">175537975</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://api.gouv.fr">https://api.gouv.fr</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">1763496037</td>
 					</tr>
 				
 					<tr>
@@ -4200,32 +4038,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">413652908</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://api.gouv.fr">https://api.gouv.fr</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
 						<td width="80%">43265823</td>
 					</tr>
 				
@@ -4331,32 +4143,6 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">55772152</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://api.gouv.fr">https://api.gouv.fr</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">562661156</td>
 					</tr>
 				
 					<tr>
@@ -4590,6 +4376,32 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%">830343142</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://api.gouv.fr">https://api.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
 						<td width="80%">83522152</td>
 					</tr>
 				
@@ -4725,7 +4537,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">40</td>
+					<td width="80%">36</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -5144,7 +4956,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">bb8d-OLJrTv4TJ3dHa0J3ghGtFCIaFYU</td>
+						<td width="80%">c8b1-Vzo763B20ssJuLFdqKgQR3GHkHo</td>
 					</tr>
 				
 					<tr>
@@ -5170,7 +4982,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">bb8d-OLJrTv4TJ3dHa0J3ghGtFCIaFYU</td>
+						<td width="80%">c8b1-Vzo763B20ssJuLFdqKgQR3GHkHo</td>
 					</tr>
 				
 					<tr>
@@ -5196,7 +5008,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">749f-ILZOeTAfcbvARuTci806TNuTg1c</td>
+						<td width="80%">7b3a-OEMbqAJnpXQL5ktJ2iBuklkyyMI</td>
 					</tr>
 				
 					<tr>
@@ -5222,7 +5034,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">6c27-cgbm7Ax2zGXmIlDLuET2PnrWclw</td>
+						<td width="80%">71f2-3/H8FtYmuAMT8UHST/Ee2SRicrQ</td>
 					</tr>
 				
 					<tr>
@@ -5248,7 +5060,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">/_next/static/YARZ1MQNKgOeAqH8U5Chm/_buildManifest</td>
+						<td width="80%">/_next/static/UolZdH57MY50wFj2Rvh2J/_buildManifest</td>
 					</tr>
 				
 					<tr>
@@ -5274,7 +5086,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">9a99-JoypjnA7HvzDInmnEs7opaZkTis</td>
+						<td width="80%">a05d-TN+kCAJyNN/dJYaBIap1YOG1bAg</td>
 					</tr>
 				
 					<tr>
@@ -5300,7 +5112,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">acbd-GFT1PEZR+aIz9KIkqW9h7D7u+X4</td>
+						<td width="80%">b6cc-40bVjKCIf06fxO9U2eKXF3/Rl2Q</td>
 					</tr>
 				
 					<tr>
@@ -5326,7 +5138,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">5d71-6OFK3f6Hf8wMs8oUbhrzh4RnkIE</td>
+						<td width="80%">6389-mNJBA7lGAS+qtOOtU22Wc2uPmzc</td>
 					</tr>
 				
 					<tr>
@@ -5352,7 +5164,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">/_next/static/YARZ1MQNKgOeAqH8U5Chm/_buildManifest</td>
+						<td width="80%">/_next/static/UolZdH57MY50wFj2Rvh2J/_buildManifest</td>
 					</tr>
 				
 					<tr>
@@ -5378,7 +5190,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">f4f2-XY6xumIo3fP8ldSlJADlaT5j3HI</td>
+						<td width="80%">fcd4-AMxJ4niVUEz6gBA+uhTt8xdsBVg</td>
 					</tr>
 				
 					<tr>
@@ -6106,7 +5918,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;a id=&quot;apis&quot; class=&quot;jsx-2030958187 hidden-anchor&quot;&gt;This is a hidden anchor&lt;/a&gt;</td>
+						<td width="80%">&lt;a id=&quot;apis&quot; class=&quot;jsx-1f01af9d9c3990d5 hidden-anchor&quot;&gt;This is a hidden anchor&lt;/a&gt;</td>
 					</tr>
 				
 					<tr>
