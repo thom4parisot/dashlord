@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 28 Nov 2021 10:57:46
+		Generated on Sun, 5 Dec 2021 05:44:10
 	</h3>
 
 	
@@ -152,7 +152,7 @@ td {
 					<div>Medium</div>
 				</td>
 				<td align="center">
-					<div>5</div>
+					<div>4</div>
 				</td>
 			</tr>
 			<tr>
@@ -214,11 +214,6 @@ td {
 				<td align="center">4</td>
 			</tr>
 			<tr>
-				<td><a href="#10108">Reverse Tabnabbing</a></td>
-				<td align="center" class="risk-2">Medium</td>
-				<td align="center">3</td>
-			</tr>
-			<tr>
 				<td><a href="#90022">Application Error Disclosure</a></td>
 				<td align="center" class="risk-1">Low</td>
 				<td align="center">1</td>
@@ -231,7 +226,7 @@ td {
 			<tr>
 				<td><a href="#10015">Incomplete or No Cache-control Header Set</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">10</td>
+				<td align="center">11</td>
 			</tr>
 			<tr>
 				<td><a href="#10063">Permissions Policy Header Not Set</a></td>
@@ -911,145 +906,6 @@ td {
 		
 			<table class="results">
 				<tr height="24">
-					<th width="20%" class="risk-2"><a
-						id="10108"></a>
-						<div>Medium</div></th>
-					<th class="risk-2">Reverse Tabnabbing</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>At least one link on this page is vulnerable to Reverse tabnabbing as it uses a target attribute without using both of the &quot;noopener&quot; and &quot;noreferrer&quot; keywords in the &quot;rel&quot; attribute, which allows the target page to take control of this page.</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/administration">https://www.demarches-simplifiees.fr/administration</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;a target=&quot;_blank&quot; class=&quot;cta-panel-button-blue&quot; href=&quot;https://app.livestorm.co/demarches-simplifiees/presentation-general-de-demarches-simplifieesfr&quot;&gt;Inscription à notre webinaire&lt;/a&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/users/sign_in">https://www.demarches-simplifiees.fr/users/sign_in</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;a target=&quot;_blank&quot; class=&quot;button expend secondary&quot; href=&quot;https://faq.demarches-simplifiees.fr/article/59-comment-trouver-ma-demarche&quot;&gt;Trouvez votre démarche&lt;/a&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/users/sign_in">https://www.demarches-simplifiees.fr/users/sign_in</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">POST</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;a target=&quot;_blank&quot; class=&quot;button expend secondary&quot; href=&quot;https://faq.demarches-simplifiees.fr/article/59-comment-trouver-ma-demarche&quot;&gt;Trouvez votre démarche&lt;/a&gt;</td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					<td width="80%">3</td>
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>Do not use a target attribute, or if you have to then also add the attribute: rel=&quot;noopener noreferrer&quot;.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%">
-							<a href="https://owasp.org/www-community/attacks/Reverse_Tabnabbing">https://owasp.org/www-community/attacks/Reverse_Tabnabbing</a>
-							<br />
-						
-							<a href="https://dev.to/ben/the-targetblank-vulnerability-by-example">https://dev.to/ben/the-targetblank-vulnerability-by-example</a>
-							<br />
-						
-							<a href="https://mathiasbynens.github.io/rel-noopener/">https://mathiasbynens.github.io/rel-noopener/</a>
-							<br />
-						
-							<a href="https://medium.com/@jitbit/target-blank-the-most-underestimated-vulnerability-ever-96e328301f4c">https://medium.com/@jitbit/target-blank-the-most-underestimated-vulnerability-ever-96e328301f4c</a>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%"></td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10108/">10108</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
-		
-			<table class="results">
-				<tr height="24">
 					<th width="20%" class="risk-1"><a
 						id="90022"></a>
 						<div>Low</div></th>
@@ -1406,6 +1262,32 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.demarches-simplifiees.fr/stats">https://www.demarches-simplifiees.fr/stats</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=0, private, must-revalidate</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.demarches-simplifiees.fr/suivi">https://www.demarches-simplifiees.fr/suivi</a></td>
 					</tr>
 					<tr>
@@ -1509,7 +1391,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">10</td>
+					<td width="80%">11</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -1696,33 +1578,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/packs/js/runtime~application-478e949e46eba07787e4.js">https://www.demarches-simplifiees.fr/packs/js/runtime~application-478e949e46eba07787e4.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/packs/js/vendors~application-dd85bba43b0d18c0bbe8.chunk.js">https://www.demarches-simplifiees.fr/packs/js/vendors~application-dd85bba43b0d18c0bbe8.chunk.js</a></td>
+						<td width="80%"><a href="https://www.demarches-simplifiees.fr/packs/js/runtime~application-83e22c0c38014383c590.js">https://www.demarches-simplifiees.fr/packs/js/runtime~application-83e22c0c38014383c590.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1775,6 +1631,32 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.demarches-simplifiees.fr/save_locale?locale=fr">https://www.demarches-simplifiees.fr/save_locale?locale=fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.demarches-simplifiees.fr/stats">https://www.demarches-simplifiees.fr/stats</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1917,7 +1799,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/assets/application-92bb2b7f12c03fc8dda4d71ced97404745dc548152cd4157a1d81a56261e9e71.css">https://www.demarches-simplifiees.fr/assets/application-92bb2b7f12c03fc8dda4d71ced97404745dc548152cd4157a1d81a56261e9e71.css</a></td>
+						<td width="80%"><a href="https://www.demarches-simplifiees.fr/assets/application-d664a997b58cc87a007584e3171b4e71fdb460fbee4f1372a5726e6cbb0d750e.css">https://www.demarches-simplifiees.fr/assets/application-d664a997b58cc87a007584e3171b4e71fdb460fbee4f1372a5726e6cbb0d750e.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4050,7 +3932,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/assets/application-92bb2b7f12c03fc8dda4d71ced97404745dc548152cd4157a1d81a56261e9e71.css">https://www.demarches-simplifiees.fr/assets/application-92bb2b7f12c03fc8dda4d71ced97404745dc548152cd4157a1d81a56261e9e71.css</a></td>
+						<td width="80%"><a href="https://www.demarches-simplifiees.fr/assets/application-d664a997b58cc87a007584e3171b4e71fdb460fbee4f1372a5726e6cbb0d750e.css">https://www.demarches-simplifiees.fr/assets/application-d664a997b58cc87a007584e3171b4e71fdb460fbee4f1372a5726e6cbb0d750e.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4232,7 +4114,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/packs/js/runtime~application-478e949e46eba07787e4.js">https://www.demarches-simplifiees.fr/packs/js/runtime~application-478e949e46eba07787e4.js</a></td>
+						<td width="80%"><a href="https://www.demarches-simplifiees.fr/packs/js/runtime~application-83e22c0c38014383c590.js">https://www.demarches-simplifiees.fr/packs/js/runtime~application-83e22c0c38014383c590.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4499,7 +4381,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/assets/application-92bb2b7f12c03fc8dda4d71ced97404745dc548152cd4157a1d81a56261e9e71.css">https://www.demarches-simplifiees.fr/assets/application-92bb2b7f12c03fc8dda4d71ced97404745dc548152cd4157a1d81a56261e9e71.css</a></td>
+						<td width="80%"><a href="https://www.demarches-simplifiees.fr/assets/application-d664a997b58cc87a007584e3171b4e71fdb460fbee4f1372a5726e6cbb0d750e.css">https://www.demarches-simplifiees.fr/assets/application-d664a997b58cc87a007584e3171b4e71fdb460fbee4f1372a5726e6cbb0d750e.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4597,7 +4479,33 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">2FnXHCW7k0BvVUuuEifxEt1uGnlok1</td>
+						<td width="80%">lqIwsOCOpB93fvOj8RFfv8XTpUVrgIhHNFu4DnHtMYd</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.demarches-simplifiees.fr/stats">https://www.demarches-simplifiees.fr/stats</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">fr/assets/Muli-Regular-bb62be3d0c815d86838837a026024c5833d2a54e3b457012d5d161a3ece1aaa9</td>
 					</tr>
 				
 					<tr>
@@ -4661,32 +4569,6 @@ td {
 						<td width="20%"
 							class="indent2">Method</td>
 						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">fr/assets/Muli-Regular-bb62be3d0c815d86838837a026024c5833d2a54e3b457012d5d161a3ece1aaa9</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/users/sign_in">https://www.demarches-simplifiees.fr/users/sign_in</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">POST</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5044,7 +4926,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/suivi">https://www.demarches-simplifiees.fr/suivi</a></td>
+						<td width="80%"><a href="https://www.demarches-simplifiees.fr/stats">https://www.demarches-simplifiees.fr/stats</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5070,7 +4952,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/users/password/new">https://www.demarches-simplifiees.fr/users/password/new</a></td>
+						<td width="80%"><a href="https://www.demarches-simplifiees.fr/suivi">https://www.demarches-simplifiees.fr/suivi</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5299,7 +5181,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/administration">https://www.demarches-simplifiees.fr/administration</a></td>
+						<td width="80%"><a href="https://www.demarches-simplifiees.fr/contact">https://www.demarches-simplifiees.fr/contact</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5325,7 +5207,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/contact">https://www.demarches-simplifiees.fr/contact</a></td>
+						<td width="80%"><a href="https://www.demarches-simplifiees.fr/stats">https://www.demarches-simplifiees.fr/stats</a></td>
 					</tr>
 					<tr>
 						<td width="20%"

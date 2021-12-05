@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Tue, 30 Nov 2021 22:17:24
+		Generated on Sun, 5 Dec 2021 08:09:58
 	</h3>
 
 	
@@ -152,7 +152,7 @@ td {
 					<div>Medium</div>
 				</td>
 				<td align="center">
-					<div>2</div>
+					<div>1</div>
 				</td>
 			</tr>
 			<tr>
@@ -199,11 +199,6 @@ td {
 				<td align="center">11</td>
 			</tr>
 			<tr>
-				<td><a href="#10108">Reverse Tabnabbing</a></td>
-				<td align="center" class="risk-2">Medium</td>
-				<td align="center">3</td>
-			</tr>
-			<tr>
 				<td><a href="#10202">Absence of Anti-CSRF Tokens</a></td>
 				<td align="center" class="risk-1">Low</td>
 				<td align="center">11</td>
@@ -231,7 +226,7 @@ td {
 			<tr>
 				<td><a href="#10096">Timestamp Disclosure - Unix</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">184</td>
+				<td align="center">183</td>
 			</tr>
 			<tr>
 				<td><a href="#10021">X-Content-Type-Options Header Missing</a></td>
@@ -628,153 +623,6 @@ td {
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/10038/">10038</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
-		
-			<table class="results">
-				<tr height="24">
-					<th width="20%" class="risk-2"><a
-						id="10108"></a>
-						<div>Medium</div></th>
-					<th class="risk-2">Reverse Tabnabbing</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>At least one link on this page is vulnerable to Reverse tabnabbing as it uses a target attribute without using both of the &quot;noopener&quot; and &quot;noreferrer&quot; keywords in the &quot;rel&quot; attribute, which allows the target page to take control of this page.</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://mon-suivi-justice.beta.gouv.fr/preparer_sap_nanterre">https://mon-suivi-justice.beta.gouv.fr/preparer_sap_nanterre</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;a target=&quot;_blank&quot; class=&quot;static-google-map-link&quot; href=&quot;https://goo.gl/maps/NdpnVo23UZTeVUne7&quot;&gt;
-          &lt;div class=&#39;static-google-map-link-button&#39;&gt;
-            Ouvrir dans Google Maps
-          &lt;/div&gt;
-&lt;/a&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://mon-suivi-justice.beta.gouv.fr/preparer_spip92">https://mon-suivi-justice.beta.gouv.fr/preparer_spip92</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;a target=&quot;_blank&quot; class=&quot;static-google-map-link&quot; href=&quot;https://goo.gl/maps/ejsmD6nAmqEfWAf4A&quot;&gt;
-          &lt;div class=&#39;static-google-map-link-button&#39;&gt;
-            Ouvrir dans Google Maps
-          &lt;/div&gt;
-&lt;/a&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://mon-suivi-justice.beta.gouv.fr/travail_interet_general">https://mon-suivi-justice.beta.gouv.fr/travail_interet_general</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;a href=https://www.travail-interet-general.fr/ target=&quot;_blank&quot; class=&#39;static-link-card-anchor&#39;&gt;travail-interet-general.fr&lt;/a&gt;</td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					<td width="80%">3</td>
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>Do not use a target attribute, or if you have to then also add the attribute: rel=&quot;noopener noreferrer&quot;.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%">
-							<a href="https://owasp.org/www-community/attacks/Reverse_Tabnabbing">https://owasp.org/www-community/attacks/Reverse_Tabnabbing</a>
-							<br />
-						
-							<a href="https://dev.to/ben/the-targetblank-vulnerability-by-example">https://dev.to/ben/the-targetblank-vulnerability-by-example</a>
-							<br />
-						
-							<a href="https://mathiasbynens.github.io/rel-noopener/">https://mathiasbynens.github.io/rel-noopener/</a>
-							<br />
-						
-							<a href="https://medium.com/@jitbit/target-blank-the-most-underestimated-vulnerability-ever-96e328301f4c">https://medium.com/@jitbit/target-blank-the-most-underestimated-vulnerability-ever-96e328301f4c</a>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%"></td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10108/">10108</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -2568,32 +2416,6 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">23000091</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://mon-suivi-justice.beta.gouv.fr/assets/static/2021_09_SPIP92_LIVRET_PLATEAU_TECHNIQUE-bd06fe1a31aa9d18e8052daea97090f198b3f057b74a15bd6cf844c8083393d7.pdf">https://mon-suivi-justice.beta.gouv.fr/assets/static/2021_09_SPIP92_LIVRET_PLATEAU_TECHNIQUE-bd06fe1a31aa9d18e8052daea97090f198b3f057b74a15bd6cf844c8083393d7.pdf</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">0000000000</td>
 					</tr>
 				
 					<tr>
@@ -7305,7 +7127,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://mon-suivi-justice.beta.gouv.fr/stats">https://mon-suivi-justice.beta.gouv.fr/stats</a></td>
+						<td width="80%"><a href="https://mon-suivi-justice.beta.gouv.fr/sursis_probatoire">https://mon-suivi-justice.beta.gouv.fr/sursis_probatoire</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -7325,12 +7147,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">61887092</td>
+						<td width="80%">61321360</td>
 					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">184</td>
+					<td width="80%">183</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -7775,7 +7597,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">7Qulh2SYEMcIhcHcmg5oloYnpjHnqMFWAvOa6D1MWk6</td>
+						<td width="80%">2BwqJumYcSibpEMO4r2IsqYdcgLwjs2UIah5AtDO6lWQHCzF2Ucy13ZwmdnRObGVK5m</td>
 					</tr>
 				
 					<tr>
@@ -7801,7 +7623,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">2FhPgMbCxRqex4fZqtGok1C5XhEqG4Z1sA0VugxU5f</td>
+						<td width="80%">2FjUCVRL6eat1B4f23n0OasDvjlLng6uRF</td>
 					</tr>
 				
 					<tr>
@@ -7827,7 +7649,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">2BCaiCfEMXiYTcGAi7enH1rCBU9WkCwqj3d6Y4UHvmLpwF</td>
+						<td width="80%">2BuczoCKqwZHPZD0MlzAL5sSZK6htQF2W8fYNxNhSTnNc9lJVFlCIoqwO24zH5lRUwzRmjMwl2xoN9IiOmmqNCPN</td>
 					</tr>
 				
 					<tr>
@@ -7879,7 +7701,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">2BV6zP8Qe4Ib4i1jWZ4rMW1Uv0EM7OWElPQinGDg</td>
+						<td width="80%">MY0ZJv45BI1q5nRcbizimk0nETitHw</td>
 					</tr>
 				
 					<tr>
@@ -7905,7 +7727,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">2FHlfLScHQ3sTZs35d4nKTeOz5TJyu3mQVh</td>
+						<td width="80%">2BMmjMEqgXRXBzzhnve4cJAcE1uq2XbKPcKm</td>
 					</tr>
 				
 					<tr>
@@ -7931,7 +7753,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">2Bi45XprZTJentgQ3vdlaM136EzzvVI0icNDEvv1YPo06nn2z3yPbQfl</td>
+						<td width="80%">2BuSmRMPjCIoerRaWOJ76hp8uJZkSCG0</td>
 					</tr>
 				
 					<tr>
@@ -7957,7 +7779,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">2Byb3Xj7BQ4iLeZikKW1gPbF8Wvy0suN5JXqZ645vU9HlPEyKGhCYHjL2Q8CKNMVm1F</td>
+						<td width="80%">2FCgftclWPej8G3IHH0yFgQAK32QLYT8BNc8sD0SFM2j81Nvp44v37Xwhi4ZOdI6TfP</td>
 					</tr>
 				
 					<tr>
@@ -7983,7 +7805,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">0pUOdV3kRdJXtcYCiIbH940PBIaDgTreBJgwkI9f</td>
+						<td width="80%">EyDlbzWZQKFDLaaZ1pLappvE8QB2GfMTc0ClCHHHAF0iyg6ZhoSHmQTeKwfY3eAJ5omFCD81ObZximdaPazclHSHtOZqbEg0XTxbVYCqZJDP8U5z4aOLQPGm</td>
 					</tr>
 				
 					<tr>
@@ -8009,7 +7831,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">2B2sulGNhzNBy9pCESXdMvvGTXXkQzp</td>
+						<td width="80%">2BhgXaQzDrea5DmaSEACcO0wHb5OdyufWvxRJn2H1XtV4ObL3ukltE9zLZPd</td>
 					</tr>
 				
 					<tr>
@@ -8035,7 +7857,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">2B9gy5fQl2l7tXX3kaNlcPijJMMelAr3EnZyRqDoFqQqQvFkk1P7eprm37ASUmacWTbH4t3Eb8zF0WphpOXva7bIkOIO0eBGXsuSvUbJahAXqU</td>
+						<td width="80%">2F0YFfnYsbrkIOkSbVtzVUKOkW6eyOSwk9d9vyfRKQYRmXHQOIM</td>
 					</tr>
 				
 					<tr>
@@ -8061,7 +7883,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">2FAsbVXfTGrUDTFYlg0s6jYbsbbK6g4GNU</td>
+						<td width="80%">2Bim3I5VObZnKtdJJAm3AKKemh8qevdIre38akHHkiasJTijPiN6VOsOd9wuZj8RJAapSOVgpedIFqit</td>
 					</tr>
 				
 				<tr>

@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 28 Nov 2021 09:40:16
+		Generated on Sun, 5 Dec 2021 04:55:30
 	</h3>
 
 	
@@ -152,7 +152,7 @@ td {
 					<div>Medium</div>
 				</td>
 				<td align="center">
-					<div>3</div>
+					<div>2</div>
 				</td>
 			</tr>
 			<tr>
@@ -199,11 +199,6 @@ td {
 				<td align="center">6</td>
 			</tr>
 			<tr>
-				<td><a href="#10108">Reverse Tabnabbing</a></td>
-				<td align="center" class="risk-2">Medium</td>
-				<td align="center">6</td>
-			</tr>
-			<tr>
 				<td><a href="#10020">X-Frame-Options Header Not Set</a></td>
 				<td align="center" class="risk-2">Medium</td>
 				<td align="center">6</td>
@@ -216,7 +211,7 @@ td {
 			<tr>
 				<td><a href="#10011">Cookie Without Secure Flag</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">7</td>
+				<td align="center">8</td>
 			</tr>
 			<tr>
 				<td><a href="#10015">Incomplete or No Cache-control Header Set</a></td>
@@ -261,7 +256,7 @@ td {
 			<tr>
 				<td><a href="#10031">User Controllable HTML Element Attribute (Potential XSS)</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">8</td>
+				<td align="center">7</td>
 			</tr>
 		</table>
 		<div class="spacer-lg"></div>
@@ -493,223 +488,6 @@ td {
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/10038/">10038</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
-		
-			<table class="results">
-				<tr height="24">
-					<th width="20%" class="risk-2"><a
-						id="10108"></a>
-						<div>Medium</div></th>
-					<th class="risk-2">Reverse Tabnabbing</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>At least one link on this page is vulnerable to Reverse tabnabbing as it uses a target attribute without using both of the &quot;noopener&quot; and &quot;noreferrer&quot; keywords in the &quot;rel&quot; attribute, which allows the target page to take control of this page.</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://secretariat.incubateur.net">https://secretariat.incubateur.net</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;a href=&quot;https://mattermost.incubateur.net/betagouv/channels/incubateur-secretaria&quot; target=&quot;_blank&quot; title=&quot;Lien vers le channel secretariat sur Mattermost&quot;&gt;~incubateur-secretaria&lt;/a&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://secretariat.incubateur.net/login">https://secretariat.incubateur.net/login</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;a href=&quot;https://mattermost.incubateur.net/betagouv/channels/incubateur-secretaria&quot; target=&quot;_blank&quot; title=&quot;Lien vers le channel secretariat sur Mattermost&quot;&gt;~incubateur-secretaria&lt;/a&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://secretariat.incubateur.net/login?next=/robots.txt">https://secretariat.incubateur.net/login?next=/robots.txt</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;a href=&quot;https://mattermost.incubateur.net/betagouv/channels/incubateur-secretaria&quot; target=&quot;_blank&quot; title=&quot;Lien vers le channel secretariat sur Mattermost&quot;&gt;~incubateur-secretaria&lt;/a&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://secretariat.incubateur.net/login?next=/sitemap.xml">https://secretariat.incubateur.net/login?next=/sitemap.xml</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;a href=&quot;https://mattermost.incubateur.net/betagouv/channels/incubateur-secretaria&quot; target=&quot;_blank&quot; title=&quot;Lien vers le channel secretariat sur Mattermost&quot;&gt;~incubateur-secretaria&lt;/a&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://secretariat.incubateur.net/onboarding">https://secretariat.incubateur.net/onboarding</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;a href=&quot;https://beta.gouv.fr/communaute/&quot; target=&quot;_blank&quot;&gt;Communauté&lt;/a&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://secretariat.incubateur.net/onboarding">https://secretariat.incubateur.net/onboarding</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">POST</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;a href=&quot;https://beta.gouv.fr/communaute/&quot; target=&quot;_blank&quot;&gt;Communauté&lt;/a&gt;</td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					<td width="80%">6</td>
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>Do not use a target attribute, or if you have to then also add the attribute: rel=&quot;noopener noreferrer&quot;.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%">
-							<a href="https://owasp.org/www-community/attacks/Reverse_Tabnabbing">https://owasp.org/www-community/attacks/Reverse_Tabnabbing</a>
-							<br />
-						
-							<a href="https://dev.to/ben/the-targetblank-vulnerability-by-example">https://dev.to/ben/the-targetblank-vulnerability-by-example</a>
-							<br />
-						
-							<a href="https://mathiasbynens.github.io/rel-noopener/">https://mathiasbynens.github.io/rel-noopener/</a>
-							<br />
-						
-							<a href="https://medium.com/@jitbit/target-blank-the-most-underestimated-vulnerability-ever-96e328301f4c">https://medium.com/@jitbit/target-blank-the-most-underestimated-vulnerability-ever-96e328301f4c</a>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%"></td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10108/">10108</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -1268,6 +1046,32 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://secretariat.incubateur.net/login?next=/robots.txt">https://secretariat.incubateur.net/login?next=/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">connect.sid</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Set-Cookie: connect.sid</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://secretariat.incubateur.net/robots.txt">https://secretariat.incubateur.net/robots.txt</a></td>
 					</tr>
 					<tr>
@@ -1397,7 +1201,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">7</td>
+					<td width="80%">8</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -2643,7 +2447,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3AFiIMz0teMxACY2zlxcAbDKHMGtKgxdn5</td>
+						<td width="80%">fdc-OVi+b4uFxxMLBTQzpsLaXHglOoU</td>
 					</tr>
 				
 					<tr>
@@ -2669,7 +2473,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1028-7PTcdh5lveYv5qsj3BYZhacTtWI</td>
+						<td width="80%">3AONAZAur6jipKPQVJlWS8hkOYqx8ipMqp</td>
 					</tr>
 				
 					<tr>
@@ -2695,7 +2499,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1143-lS/Zjf9A6jP59tvc5lbzaXZmMBQ</td>
+						<td width="80%">1093-QVg2ptruIH5RYjRBGS++q+yq96Q</td>
 					</tr>
 				
 					<tr>
@@ -2721,7 +2525,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1039-hnoN9VMmViHC4yhdi6forQLKav4</td>
+						<td width="80%">fed-son/eJyDYjET7grinF65MAy9XN4</td>
 					</tr>
 				
 					<tr>
@@ -2747,7 +2551,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">103a-fujATiAA6r0bYXbhi4297tDN/7Y</td>
+						<td width="80%">fee-0qDl6jO95CPE8iFDQrIE97vAqyc</td>
 					</tr>
 				
 					<tr>
@@ -2799,7 +2603,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3AWdWCDNuZ60Y1NhNhbotREkF62uUh9dPW</td>
+						<td width="80%">3AHLvagm-8WM2Q64d_R1EUqXEfb2O6GGAc</td>
 					</tr>
 				
 					<tr>
@@ -2825,7 +2629,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3AWdWCDNuZ60Y1NhNhbotREkF62uUh9dPW</td>
+						<td width="80%">3AONAZAur6jipKPQVJlWS8hkOYqx8ipMqp</td>
 					</tr>
 				
 					<tr>
@@ -2877,7 +2681,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3AWdWCDNuZ60Y1NhNhbotREkF62uUh9dPW</td>
+						<td width="80%">3AONAZAur6jipKPQVJlWS8hkOYqx8ipMqp</td>
 					</tr>
 				
 					<tr>
@@ -2903,7 +2707,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3AWdWCDNuZ60Y1NhNhbotREkF62uUh9dPW</td>
+						<td width="80%">3AONAZAur6jipKPQVJlWS8hkOYqx8ipMqp</td>
 					</tr>
 				
 					<tr>
@@ -2929,7 +2733,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3AWdWCDNuZ60Y1NhNhbotREkF62uUh9dPW</td>
+						<td width="80%">3AONAZAur6jipKPQVJlWS8hkOYqx8ipMqp</td>
 					</tr>
 				
 				<tr>
@@ -3529,32 +3333,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Parameter</td>
-						<td width="80%">domaine</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://secretariat.incubateur.net/onboarding">https://secretariat.incubateur.net/onboarding</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">POST</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
 						<td width="80%">employer</td>
 					</tr>
 					<tr>
@@ -3726,7 +3504,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">8</td>
+					<td width="80%">7</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
