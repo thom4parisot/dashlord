@@ -21,11 +21,11 @@
 ###########################################################</span>
 
  Using &quot;OpenSSL 1.0.2-chacha (1.0.2k-dev)&quot; [~183 ciphers]
- on fv-az213-744:/home/testssl/bin/openssl.Linux.x86_64
+ on fv-az292-702:/home/testssl/bin/openssl.Linux.x86_64
  (built: &quot;Jan 18 17:12:17 2019&quot;, platform: &quot;linux-x86_64&quot;)
 
 
-<span style="color:white;background-color:black;"> Start 2021-12-05 04:41:34        --&gt;&gt; 151.101.122.22:443 (recosante.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2021-12-12 04:50:24        --&gt;&gt; 151.101.122.22:443 (recosante.beta.gouv.fr) &lt;&lt;--</span>
 
  Further IP addresses:   2a04:4e42:1d::534 
  rDNS (151.101.122.22):  --
@@ -89,8 +89,8 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing server defaults (Server Hello) </span>
 
 <span style="font-weight:bold;"> TLS extensions (standard)    </span>&quot;renegotiation info/#65281&quot; &quot;server name/#0&quot;
-                              &quot;EC point formats/#11&quot; &quot;session ticket/#35&quot;
-                              &quot;status request/#5&quot; &quot;max fragment length/#1&quot;
+                              &quot;max fragment length/#1&quot; &quot;EC point formats/#11&quot;
+                              &quot;session ticket/#35&quot;
                               &quot;application layer protocol negotiation/#16&quot;
                               &quot;encrypt-then-mac/#22&quot;
                               &quot;extended master secret/#23&quot;
@@ -99,47 +99,24 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Session Resumption           </span>Tickets: yes, ID: yes
 <span style="font-weight:bold;"> TLS clock skew</span>               Random values, no fingerprinting possible 
 <span style="font-weight:bold;"> Client Authentication        </span>none
-<span style="font-weight:bold;"> Signature Algorithm          </span><span style="color:#008817;">SHA384 with RSA</span>
-<span style="font-weight:bold;"> Server key size              </span>RSA 2048 bits (exponent is 65537)
-<span style="font-weight:bold;"> Server key usage             </span>Digital Signature, Key Encipherment
-<span style="font-weight:bold;"> Server extended key usage    </span>TLS Web Server Authentication, TLS Web Client Authentication
-<span style="font-weight:bold;"> Serial                       </span>5ED5F3D30F61DF8E88D291DAD66D0B70 (OK: length 16)
-<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 10EC693C9B9505D964505E208D8D24A0131152C9
-                              SHA256 3890783187C370CBA782A96928B36755DE4EC23AD4F0789DE91F9F23983BB5DE
-<span style="font-weight:bold;"> Common Name (CN)             </span><i>recosante.beta.gouv.fr </i> (CN in response to request w/o SNI: <i>fallback.tls.fastly.net </i>)
-<span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>recosante.beta.gouv.fr </i>
-<span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
-<span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
-<span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#c05600;">expires &lt; 60 days (36)</span> (2021-10-12 00:00 --&gt; 2022-01-10 23:59)
-<span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
-<span style="font-weight:bold;"> Certificate Revocation List  </span>--
-<span style="font-weight:bold;"> OCSP URI                     </span>http://zerossl.ocsp.sectigo.com
-<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#008817;">offered</span>, <span style="color:#008817;">not revoked</span>
-<span style="font-weight:bold;"> OCSP must staple extension   </span>--
-<span style="font-weight:bold;"> DNS CAA RR</span> (experimental)    <span style="color:#a86437;">not offered</span>
-<span style="font-weight:bold;"> Certificate Transparency     </span><span style="color:#008817;">yes</span> (certificate extension)
-<span style="font-weight:bold;"> Certificates provided</span>        3
-<span style="font-weight:bold;"> Issuer                       </span><i>ZeroSSL RSA Domain Secure Site CA</i> (<i>ZeroSSL</i> from <i>AT</i>)
-<span style="font-weight:bold;"> Intermediate cert validity   </span>#1: <span style="color:#008817;">ok &gt; 40 days</span> (2030-01-29 23:59). <i>ZeroSSL RSA Domain Secure Site CA</i> &lt;-- <i>USERTrust RSA Certification Authority</i>
-                              #2: <span style="color:#008817;">ok &gt; 40 days</span> (2028-12-31 23:59). <i>USERTrust RSA Certification Authority</i> &lt;-- <i>AAA Certificate Services</i>
-<span style="font-weight:bold;"> Intermediate Bad OCSP</span> (exp.) <span style="color:#008817;">Ok</span>
+
+<span style="color:#be32d0;font-weight:bold;">Client problem, shouldn&apos;t happen: Host certificate found but we can&apos;t continue with &quot;server defaults&quot;.</span>
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
-<span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
+<span style="font-weight:bold;"> HTTP clock skew              </span>-1 sec from localtime
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>GatsbyHosting
 <span style="font-weight:bold;"> Application banner           </span>--
 <span style="font-weight:bold;"> Cookie(s)                    </span>(none issued at &quot;/&quot;)
-<span style="font-weight:bold;"> Security headers             </span>X-Served-By: cache-cdg20764-CDG
+<span style="font-weight:bold;"> Security headers             </span>X-Served-By: cache-cdg20745-CDG
                               Cache-Control: public, max-age=0, must-revalidate
 <span style="font-weight:bold;"> Reverse Proxy banner         </span><span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> varnish
                               <span style="color:#8a7237;font-weight:bold;">X-Cache</span>: HIT
-                              <span style="color:#8a7237;font-weight:bold;">X-Cache</span>-Hits: <span style="color:#8a7237;">2</span>
+                              <span style="color:#8a7237;font-weight:bold;">X-Cache</span>-Hits: <span style="color:#8a7237;">1</span>
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing vulnerabilities </span>
@@ -214,13 +191,13 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Rating specs</span> (not complete)  SSL Labs&apos;s &apos;SSL Server Rating Guide&apos; (version 2009q from 2020-01-30)
 <span style="font-weight:bold;"> Specification documentation  </span><a href="https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide" style="color:black;text-decoration:none;">https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide</a>
 <span style="font-weight:bold;"> Protocol Support </span>(weighted)  100 (30)
-<span style="font-weight:bold;"> Key Exchange </span>    (weighted)  90 (27)
+<span style="font-weight:bold;"> Key Exchange </span>    (weighted)  100 (30)
 <span style="font-weight:bold;"> Cipher Strength </span> (weighted)  60 (24)
-<span style="font-weight:bold;"> Final Score                  </span>81
+<span style="font-weight:bold;"> Final Score                  </span>84
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A</span>
 <span style="font-weight:bold;"> Grade cap reasons            </span>Grade capped to A. HSTS is not offered
 
-<span style="color:white;background-color:black;"> Done 2021-12-05 04:43:17 [ 104s] --&gt;&gt; 151.101.122.22:443 (recosante.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2021-12-12 04:52:57 [ 155s] --&gt;&gt; 151.101.122.22:443 (recosante.beta.gouv.fr) &lt;&lt;--</span>
 
 
 </pre>

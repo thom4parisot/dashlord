@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln beta.gouv.fr</pre>
-<p class="lead">Sun Dec  5 01:54:18 2021 – Sun Dec  5 01:54:50 2021<br>1 hosts scanned.
+<p class="lead">Sun Dec 12 01:52:47 2021 – Sun Dec 12 01:53:19 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -122,27 +122,28 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, RPCCheck, SSLSessionReq, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 05 Dec 2021 01:54:35 GMT
-  FourOhFourRequest, GetRequest, HTTPOptions: 
+    date: Sun, 12 Dec 2021 01:53:04 GMT
+  FourOhFourRequest: 
     HTTP/1.0 400 Bad Request
     content-length: 19
-    date: Sun, 05 Dec 2021 01:54:29 GMT
+    date: Sun, 12 Dec 2021 01:52:59 GMT
     Missing host header
-  Help: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 05 Dec 2021 01:54:34 GMT
-  Kerberos, SMBProgNeg: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 05 Dec 2021 01:54:36 GMT
+  GetRequest, HTTPOptions: 
+    HTTP/1.0 400 Bad Request
+    content-length: 19
+    date: Sun, 12 Dec 2021 01:52:58 GMT
+    Missing host header
   RTSPRequest, X11Probe: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 05 Dec 2021 01:54:29 GMT</pre>
+    date: Sun, 12 Dec 2021 01:52:58 GMT
+  SMBProgNeg, TLSSessionReq: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Sun, 12 Dec 2021 01:53:05 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -158,27 +159,32 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RTSPRequest, TerminalServerCookie: 
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck, RTSPRequest: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 05 Dec 2021 01:54:42 GMT
-  FourOhFourRequest, GetRequest, HTTPOptions: 
+    date: Sun, 12 Dec 2021 01:53:11 GMT
+  FourOhFourRequest: 
     HTTP/1.0 400 Bad Request
     content-length: 19
-    date: Sun, 05 Dec 2021 01:54:35 GMT
+    date: Sun, 12 Dec 2021 01:53:05 GMT
     Missing host header
-  Kerberos, SMBProgNeg, SSLSessionReq, TLSSessionReq: 
+  GetRequest, HTTPOptions: 
+    HTTP/1.0 400 Bad Request
+    content-length: 19
+    date: Sun, 12 Dec 2021 01:53:04 GMT
+    Missing host header
+  Help, SSLSessionReq, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 05 Dec 2021 01:54:43 GMT
-  RPCCheck: 
+    date: Sun, 12 Dec 2021 01:53:12 GMT
+  Kerberos, SMBProgNeg, TLSSessionReq: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 05 Dec 2021 01:54:41 GMT
+    date: Sun, 12 Dec 2021 01:53:13 GMT
   tor-versions: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 05 Dec 2021 01:54:36 GMT</pre>
+    date: Sun, 12 Dec 2021 01:53:05 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
