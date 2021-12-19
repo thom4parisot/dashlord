@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln openacademie.beta.gouv.fr</pre>
-<p class="lead">Sun Dec 12 03:59:28 2021 – Sun Dec 12 04:00:09 2021<br>1 hosts scanned.
+<p class="lead">Sun Dec 19 03:55:20 2021 – Sun Dec 19 03:55:46 2021<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -119,23 +119,27 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck: 
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, SMBProgNeg, SSLSessionReq, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 12 Dec 2021 03:59:48 GMT
+    date: Sun, 19 Dec 2021 03:55:40 GMT
   FourOhFourRequest, GetRequest, HTTPOptions: 
     HTTP/1.0 400 Bad Request
     content-length: 19
-    date: Sun, 12 Dec 2021 03:59:42 GMT
+    date: Sun, 19 Dec 2021 03:55:34 GMT
     Missing host header
-  Kerberos, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+  RPCCheck: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 12 Dec 2021 03:59:49 GMT
+    date: Sun, 19 Dec 2021 03:55:39 GMT
   RTSPRequest, X11Probe: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 12 Dec 2021 03:59:42 GMT</pre>
+    date: Sun, 19 Dec 2021 03:55:34 GMT
+  TLSSessionReq: 
+    HTTP/1.1 400 Bad Request
+    content-length: 0
+    date: Sun, 19 Dec 2021 03:55:41 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -144,52 +148,12 @@
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
 <td title="Service">https</td>
-<td title="Product">Netlify</td>
+<td title="Product"></td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, RPCCheck: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 12 Dec 2021 03:59:56 GMT
-  FourOhFourRequest, GetRequest: 
-    HTTP/1.0 400 Bad Request
-    content-length: 19
-    date: Sun, 12 Dec 2021 03:59:49 GMT
-    Missing host header
-  HTTPOptions: 
-    HTTP/1.0 400 Bad Request
-    content-length: 19
-    date: Sun, 12 Dec 2021 03:59:48 GMT
-    Missing host header
-  Help, SSLSessionReq: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 12 Dec 2021 03:59:57 GMT
-  Kerberos, TLSSessionReq: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 12 Dec 2021 03:59:59 GMT
-  RTSPRequest: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 12 Dec 2021 03:59:55 GMT
-  SMBProgNeg: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 12 Dec 2021 04:00:00 GMT
-  TerminalServerCookie: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 12 Dec 2021 03:59:58 GMT
-  tor-versions: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 12 Dec 2021 03:59:50 GMT</pre>
-<h5>http-server-header</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
 <tr class="active">
@@ -233,7 +197,7 @@
 <td>443</td>
 <td>tcp</td>
 <td>https</td>
-<td>Netlify</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>
