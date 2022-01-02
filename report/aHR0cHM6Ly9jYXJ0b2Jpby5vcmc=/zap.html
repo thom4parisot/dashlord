@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 26 Dec 2021 02:48:50
+		Generated on Sun, 2 Jan 2022 02:14:29
 	</h3>
 
 	
@@ -152,7 +152,7 @@ td {
 					<div>Medium</div>
 				</td>
 				<td align="center">
-					<div>3</div>
+					<div>5</div>
 				</td>
 			</tr>
 			<tr>
@@ -168,7 +168,7 @@ td {
 					<div>Informational</div>
 				</td>
 				<td align="center">
-					<div>6</div>
+					<div>7</div>
 				</td>
 			</tr>
 			<tr>
@@ -194,9 +194,19 @@ td {
 					align="center">Number of Instances</th>
 			</tr>
 			<tr>
+				<td><a href="#10055">CSP: Wildcard Directive</a></td>
+				<td align="center" class="risk-2">Medium</td>
+				<td align="center">5</td>
+			</tr>
+			<tr>
+				<td><a href="#10055">CSP: script-src unsafe-inline</a></td>
+				<td align="center" class="risk-2">Medium</td>
+				<td align="center">5</td>
+			</tr>
+			<tr>
 				<td><a href="#10038">Content Security Policy (CSP) Header Not Set</a></td>
 				<td align="center" class="risk-2">Medium</td>
-				<td align="center">11</td>
+				<td align="center">1</td>
 			</tr>
 			<tr>
 				<td><a href="#10098">Cross-Domain Misconfiguration</a></td>
@@ -236,7 +246,7 @@ td {
 			<tr>
 				<td><a href="#10063">Permissions Policy Header Not Set</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">11</td>
+				<td align="center">9</td>
 			</tr>
 			<tr>
 				<td><a href="#10040">Secure Pages Include Mixed Content</a></td>
@@ -262,6 +272,11 @@ td {
 				<td><a href="#10094">Base64 Disclosure</a></td>
 				<td align="center" class="risk-0">Informational</td>
 				<td align="center">4</td>
+			</tr>
+			<tr>
+				<td><a href="#10038">Content Security Policy (CSP) Report-Only Header Found</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">1</td>
 			</tr>
 			<tr>
 				<td><a href="#10019">Content-Type Header Missing</a></td>
@@ -298,14 +313,20 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-2"><a
-						id="10038"></a>
+						id="10055"></a>
 						<div>Medium</div></th>
-					<th class="risk-2">Content Security Policy (CSP) Header Not Set</th>
+					<th class="risk-2">CSP: Wildcard Directive</th>
 				</tr>
 				<tr>
 					<td width="20%">Description</td>
 					<td width="80%">
-							<div>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</div>
+							<div>The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: </div>
+							<br />
+						
+							<div>frame-ancestors, form-action</div>
+							<br />
+						
+							<div>The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</div>
 							
 						</td>
 				</tr>
@@ -336,7 +357,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%"></td>
+						<td width="80%">default-src &#39;self&#39;; connect-src &#39;self&#39; https://api-adresse.data.gouv.fr/search/  https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39; &#39;unsafe-inline&#39; blob:; style-src &#39;self&#39;; upgrade-insecure-requests</td>
 					</tr>
 				
 					<tr>
@@ -362,111 +383,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/">https://cartobio.org/geoserver/gwc/service/tms/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/0">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/0</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/1">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/1</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/2">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/2</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
+						<td width="80%">default-src &#39;self&#39;; connect-src &#39;self&#39; https://api-adresse.data.gouv.fr/search/  https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39; &#39;unsafe-inline&#39; blob:; style-src &#39;self&#39;; upgrade-insecure-requests</td>
 					</tr>
 				
 					<tr>
@@ -492,59 +409,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/rest/web/geowebcache_logo.png">https://cartobio.org/geoserver/gwc/service/tms/rest/web/geowebcache_logo.png</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/rest/web/gwc.css">https://cartobio.org/geoserver/gwc/service/tms/rest/web/gwc.css</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
+						<td width="80%">default-src &#39;self&#39;; connect-src &#39;self&#39; https://api-adresse.data.gouv.fr/search/  https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39; &#39;unsafe-inline&#39; blob:; style-src &#39;self&#39;; upgrade-insecure-requests</td>
 					</tr>
 				
 					<tr>
@@ -570,7 +435,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%"></td>
+						<td width="80%">default-src &#39;self&#39;; connect-src &#39;self&#39; https://api-adresse.data.gouv.fr/search/  https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39; &#39;unsafe-inline&#39; blob:; style-src &#39;self&#39;; upgrade-insecure-requests</td>
 					</tr>
 				
 					<tr>
@@ -596,12 +461,304 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39;; connect-src &#39;self&#39; https://api-adresse.data.gouv.fr/search/  https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39; &#39;unsafe-inline&#39; blob:; style-src &#39;self&#39;; upgrade-insecure-requests</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">5</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="http://www.w3.org/TR/CSP2/">http://www.w3.org/TR/CSP2/</a>
+							<br />
+						
+							<a href="http://www.w3.org/TR/CSP/">http://www.w3.org/TR/CSP/</a>
+							<br />
+						
+							<a href="http://caniuse.com/#search=content+security+policy">http://caniuse.com/#search=content+security+policy</a>
+							<br />
+						
+							<a href="http://content-security-policy.com/">http://content-security-policy.com/</a>
+							<br />
+						
+							<a href="https://github.com/shapesecurity/salvation">https://github.com/shapesecurity/salvation</a>
+							<br />
+						
+							<a href="https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources">https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">15</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10055/">10055</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-2"><a
+						id="10055"></a>
+						<div>Medium</div></th>
+					<th class="risk-2">CSP: script-src unsafe-inline</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>script-src includes unsafe-inline.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org">https://cartobio.org</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39;; connect-src &#39;self&#39; https://api-adresse.data.gouv.fr/search/  https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39; &#39;unsafe-inline&#39; blob:; style-src &#39;self&#39;; upgrade-insecure-requests</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/api">https://cartobio.org/api</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39;; connect-src &#39;self&#39; https://api-adresse.data.gouv.fr/search/  https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39; &#39;unsafe-inline&#39; blob:; style-src &#39;self&#39;; upgrade-insecure-requests</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio:anon_rpgbio_">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio:anon_rpgbio_</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39;; connect-src &#39;self&#39; https://api-adresse.data.gouv.fr/search/  https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39; &#39;unsafe-inline&#39; blob:; style-src &#39;self&#39;; upgrade-insecure-requests</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/robots.txt">https://cartobio.org/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39;; connect-src &#39;self&#39; https://api-adresse.data.gouv.fr/search/  https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39; &#39;unsafe-inline&#39; blob:; style-src &#39;self&#39;; upgrade-insecure-requests</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/sitemap.xml">https://cartobio.org/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39;; connect-src &#39;self&#39; https://api-adresse.data.gouv.fr/search/  https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39; &#39;unsafe-inline&#39; blob:; style-src &#39;self&#39;; upgrade-insecure-requests</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">5</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="http://www.w3.org/TR/CSP2/">http://www.w3.org/TR/CSP2/</a>
+							<br />
+						
+							<a href="http://www.w3.org/TR/CSP/">http://www.w3.org/TR/CSP/</a>
+							<br />
+						
+							<a href="http://caniuse.com/#search=content+security+policy">http://caniuse.com/#search=content+security+policy</a>
+							<br />
+						
+							<a href="http://content-security-policy.com/">http://content-security-policy.com/</a>
+							<br />
+						
+							<a href="https://github.com/shapesecurity/salvation">https://github.com/shapesecurity/salvation</a>
+							<br />
+						
+							<a href="https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources">https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">15</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10055/">10055</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-2"><a
+						id="10038"></a>
+						<div>Medium</div></th>
+					<th class="risk-2">Content Security Policy (CSP) Header Not Set</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/api/espacecollaboratif/">https://cartobio.org/api/espacecollaboratif/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">11</td>
+					<td width="80%">1</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -829,7 +986,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/0">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/0</a></td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/0">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/0</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1172,7 +1329,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/0">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/0</a></td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/0">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/0</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1198,7 +1355,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/1">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/1</a></td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/1">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/1</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1224,7 +1381,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/2">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/2</a></td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/2">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/2</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1250,7 +1407,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/3">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/3</a></td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/3">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/3</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1276,7 +1433,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/4">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/4</a></td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/4">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/4</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1537,7 +1694,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/0">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/0</a></td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/0">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/0</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1563,7 +1720,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/1">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/1</a></td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/1">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/1</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1589,7 +1746,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/2">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/2</a></td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/2">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/2</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1615,7 +1772,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/3">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/3</a></td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/3">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/3</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1641,7 +1798,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/4">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/4</a></td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/4">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/4</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1902,7 +2059,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/0">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/0</a></td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/0">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/0</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1928,7 +2085,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/1">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/1</a></td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/1">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/1</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1954,7 +2111,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/2">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/2</a></td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/2">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/2</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1980,7 +2137,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/3">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/3</a></td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/3">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/3</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2006,7 +2163,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/4">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Arpgbio_points_2019@EPSG%3A900913@pbf/4</a></td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/4">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/4</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2430,7 +2587,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpgbio_2020@EPSG%3A4326@geojson">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpgbio_2020@EPSG%3A4326@geojson</a></td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2642,7 +2799,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org">https://cartobio.org</a></td>
+						<td width="80%"><a href="https://cartobio.org/api/espacecollaboratif/">https://cartobio.org/api/espacecollaboratif/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2873,61 +3030,9 @@ td {
 						<td width="80%"></td>
 					</tr>
 				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/robots.txt">https://cartobio.org/robots.txt</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/sitemap.xml">https://cartobio.org/sitemap.xml</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">11</td>
+					<td width="80%">9</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -3976,6 +4081,97 @@ td {
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/10094/">10094</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
+						id="10038"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Content Security Policy (CSP) Report-Only Header Found</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The response contained a Content-Security-Policy-Report-Only header, this may indicate a work-in-progress implementation, or an oversight in promoting pre-Prod to Prod, etc.</div>
+							<br />
+						
+							<div>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/api/espacecollaboratif/">https://cartobio.org/api/espacecollaboratif/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">1</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header, to achieve optimal browser support: &quot;Content-Security-Policy&quot; for Chrome 25+, Firefox 23+ and Safari 7+, &quot;X-Content-Security-Policy&quot; for Firefox 4.0+ and Internet Explorer 10+, and &quot;X-WebKit-CSP&quot; for Chrome 14+ and Safari 6+.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://www.w3.org/TR/CSP2/">https://www.w3.org/TR/CSP2/</a>
+							<br />
+						
+							<a href="https://w3c.github.io/webappsec-csp/">https://w3c.github.io/webappsec-csp/</a>
+							<br />
+						
+							<a href="http://caniuse.com/#feat=contentsecuritypolicy">http://caniuse.com/#feat=contentsecuritypolicy</a>
+							<br />
+						
+							<a href="http://content-security-policy.com/">http://content-security-policy.com/</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">15</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10038/">10038</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>

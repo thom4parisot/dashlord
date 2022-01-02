@@ -21,11 +21,11 @@
 ###########################################################</span>
 
  Using &quot;OpenSSL 1.0.2-chacha (1.0.2k-dev)&quot; [~183 ciphers]
- on fv-az290-454:/home/testssl/bin/openssl.Linux.x86_64
+ on fv-az216-775:/home/testssl/bin/openssl.Linux.x86_64
  (built: &quot;Jan 18 17:12:17 2019&quot;, platform: &quot;linux-x86_64&quot;)
 
 
-<span style="color:white;background-color:black;"> Start 2021-12-19 07:19:26        --&gt;&gt; 51.159.27.6:443 (octopus.igloo.fabnum.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2022-01-02 07:20:26        --&gt;&gt; 51.159.27.6:443 (octopus.igloo.fabnum.fr) &lt;&lt;--</span>
 
  rDNS (51.159.27.6):     51-159-27-6.lb.fr-par.scw.cloud.
  Service detected:       HTTP
@@ -107,15 +107,15 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Server key size              </span>RSA 2048 bits (exponent is 65537)
 <span style="font-weight:bold;"> Server key usage             </span>Digital Signature, Key Encipherment
 <span style="font-weight:bold;"> Server extended key usage    </span>TLS Web Server Authentication, TLS Web Client Authentication
-<span style="font-weight:bold;"> Serial                       </span>0326D444FAD60E571E34AAB86B15F96B0455 (OK: length 18)
-<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 357CA561F23EF4B71FDDCC24683DF68E5BC6D494
-                              SHA256 129D3396D16D505EFD15D56723163C4EFAC6F3F938E3599AFDB5FCF620527FDB
+<span style="font-weight:bold;"> Serial                       </span>030F1DE94E90B7F8674C3523BE7A5325AB90 (OK: length 18)
+<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 F46D7AB7B29FE97FCCAA9255AD170C332DAB204F
+                              SHA256 3ACA6C7BCCFDA2E7CBBCB2C7DD96393BD31D066992ED39662C2767754A267193
 <span style="font-weight:bold;"> Common Name (CN)             </span><i>octopus.igloo.fabnum.fr </i> (CN in response to request w/o SNI: <i>api.alpps.igloo.fabnum.fr </i>)
 <span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>octopus.igloo.fabnum.fr </i>
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">41 &gt;= 30 days</span> (2021-10-31 14:15 --&gt; 2022-01-29 14:15)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">87 &gt;= 30 days</span> (2021-12-30 13:15 --&gt; 2022-03-30 13:15)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
@@ -132,14 +132,14 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
-<span style="font-weight:bold;"> HTTP Status Code           </span>  503 Service Unavailable<span style="color:#cd00cd;">. Oh, didn&apos;t expect &quot;503 Service Unavailable&quot;</span>
-<span style="font-weight:bold;"> HTTP clock skew              </span>Got no HTTP time, maybe try different URL?
+<span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
+<span style="font-weight:bold;"> HTTP clock skew              </span>-2 sec from localtime
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>(no &quot;Server&quot; line in header, interesting!)
 <span style="font-weight:bold;"> Application banner           </span>--
-<span style="font-weight:bold;"> Cookie(s)                    </span>(none issued at &quot;/&quot;) -- maybe better try target URL of 30x
-<span style="font-weight:bold;"> Security headers             </span>Cache-Control: no-cache
+<span style="font-weight:bold;"> Cookie(s)                    </span>1 issued: <span style="color:#c05600;">NOT</span> secure, <span style="color:#c05600;">NOT</span> HttpOnly
+<span style="font-weight:bold;"> Security headers             </span><span style="color:#c05600;">--</span>
 <span style="font-weight:bold;"> Reverse Proxy banner         </span>--
 
 
@@ -152,14 +152,15 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Secure Renegotiation (RFC 5746)           </span><span style="color:#008817;font-weight:bold;">supported (OK)</span>
 <span style="font-weight:bold;"> Secure Client-Initiated Renegotiation     </span><span style="color:#008817;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> CRIME, TLS </span>(CVE-2012-4929)                <span style="color:#008817;">not vulnerable (OK)</span>
-<span style="font-weight:bold;"> BREACH</span> (CVE-2013-3587)                    <span style="color:#008817;">no gzip/deflate/compress/br HTTP compression (OK) </span> - only supplied &quot;/&quot; tested
+<span style="font-weight:bold;"> BREACH</span> (CVE-2013-3587)                    <span style="color:#c05600;">potentially NOT ok, &quot;gzip deflate&quot; HTTP compression detected.</span> - only supplied &quot;/&quot; tested
+                                           Can be ignored for static pages or if no secrets in the page
 <span style="font-weight:bold;"> POODLE, SSL</span> (CVE-2014-3566)               <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>, no SSLv3 support
 <span style="font-weight:bold;"> TLS_FALLBACK_SCSV</span> (RFC 7507)              <span style="color:#008817;">No fallback possible (OK)</span>, no protocol below TLS 1.2 offered
 <span style="font-weight:bold;"> SWEET32</span> (CVE-2016-2183, CVE-2016-6329)    <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> FREAK</span> (CVE-2015-0204)                     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> DROWN</span> (CVE-2016-0800, CVE-2016-0703)      <span style="color:#008817;font-weight:bold;">not vulnerable on this host and port (OK)</span>
                                            make sure you don&apos;t use this certificate elsewhere with SSLv2 enabled services
-                                           <a href="https://censys.io/ipv4?q=129D3396D16D505EFD15D56723163C4EFAC6F3F938E3599AFDB5FCF620527FDB" style="color:black;text-decoration:none;">https://censys.io/ipv4?q=129D3396D16D505EFD15D56723163C4EFAC6F3F938E3599AFDB5FCF620527FDB</a> could help you to find out
+                                           <a href="https://censys.io/ipv4?q=3ACA6C7BCCFDA2E7CBBCB2C7DD96393BD31D066992ED39662C2767754A267193" style="color:black;text-decoration:none;">https://censys.io/ipv4?q=3ACA6C7BCCFDA2E7CBBCB2C7DD96393BD31D066992ED39662C2767754A267193</a> could help you to find out
 <span style="font-weight:bold;"> LOGJAM</span> (CVE-2015-4000), experimental      common prime with 2048 bits detected: <i>HAProxy</i> (<span style="color:#008817;">2048 bits</span>),
                                            but no DH EXPORT ciphers
 <span style="font-weight:bold;"> BEAST</span> (CVE-2011-3389)                     <span style="color:#008817;">not vulnerable (OK)</span>, no SSL3 or TLS1
@@ -221,7 +222,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A</span>
 <span style="font-weight:bold;"> Grade cap reasons            </span>Grade capped to A. HSTS is not offered
 
-<span style="color:white;background-color:black;"> Done 2021-12-19 07:21:44 [ 141s] --&gt;&gt; 51.159.27.6:443 (octopus.igloo.fabnum.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2022-01-02 07:23:13 [ 169s] --&gt;&gt; 51.159.27.6:443 (octopus.igloo.fabnum.fr) &lt;&lt;--</span>
 
 
 </pre>
