@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 2 Jan 2022 04:56:28
+		Generated on Sun, 9 Jan 2022 05:08:13
 	</h3>
 
 	
@@ -204,7 +204,7 @@ td {
 				<td align="center">11</td>
 			</tr>
 			<tr>
-				<td><a href="#10020">X-Frame-Options Header Not Set</a></td>
+				<td><a href="#10020">Missing Anti-clickjacking Header</a></td>
 				<td align="center" class="risk-2">Medium</td>
 				<td align="center">7</td>
 			</tr>
@@ -226,12 +226,12 @@ td {
 			<tr>
 				<td><a href="#10035">Strict-Transport-Security Header Not Set</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">9</td>
+				<td align="center">8</td>
 			</tr>
 			<tr>
 				<td><a href="#10096">Timestamp Disclosure - Unix</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">11</td>
+				<td align="center">12</td>
 			</tr>
 			<tr>
 				<td><a href="#10021">X-Content-Type-Options Header Missing</a></td>
@@ -674,32 +674,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/commons-0ab6a36535b38eb1466e.js">https://trackdechets.beta.gouv.fr/commons-0ab6a36535b38eb1466e.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Access-Control-Allow-Origin: *</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/component---src-pages-404-tsx-f0670b402b4ffb85d753.js">https://trackdechets.beta.gouv.fr/component---src-pages-404-tsx-f0670b402b4ffb85d753.js</a></td>
 					</tr>
 					<tr>
@@ -779,6 +753,32 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/framework-cb37257835832d9565ad.js">https://trackdechets.beta.gouv.fr/framework-cb37257835832d9565ad.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Access-Control-Allow-Origin: *</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/partners">https://trackdechets.beta.gouv.fr/partners</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -922,12 +922,12 @@ td {
 					<th width="20%" class="risk-2"><a
 						id="10020"></a>
 						<div>Medium</div></th>
-					<th class="risk-2">X-Frame-Options Header Not Set</th>
+					<th class="risk-2">Missing Anti-clickjacking Header</th>
 				</tr>
 				<tr>
 					<td width="20%">Description</td>
 					<td width="80%">
-							<div>X-Frame-Options header is not included in the HTTP response to protect against &#39;ClickJacking&#39; attacks.</div>
+							<div>The response does not include either Content-Security-Policy with &#39;frame-ancestors&#39; directive or X-Frame-Options to protect against &#39;ClickJacking&#39; attacks.</div>
 							
 						</td>
 				</tr>
@@ -1124,7 +1124,10 @@ td {
 				<tr>
 					<td width="20%">Solution</td>
 					<td width="80%">
-							<div>Most modern Web browsers support the X-Frame-Options HTTP header. Ensure it&#39;s set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it&#39;s part of a FRAMESET) then you&#39;ll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy&#39;s &quot;frame-ancestors&quot; directive. </div>
+							<div>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</div>
+							<br />
+						
+							<div>If you expect the page to be framed only by pages on your server (e.g. it&#39;s part of a FRAMESET) then you&#39;ll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy&#39;s &quot;frame-ancestors&quot; directive.</div>
 							
 						</td>
 				</tr>
@@ -1200,6 +1203,32 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/">https://trackdechets.beta.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=600</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/accessibilite/">https://trackdechets.beta.gouv.fr/accessibilite/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1430,32 +1459,6 @@ td {
 						<td width="80%">max-age=600</td>
 					</tr>
 				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/stats/">https://trackdechets.beta.gouv.fr/stats/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=600</td>
-					</tr>
-				
 				<tr>
 					<td width="20%">Instances</td>
 					<td width="80%">11</td>
@@ -1568,32 +1571,6 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/78e521c3-a3d3718d8d14437d1503.js">https://trackdechets.beta.gouv.fr/78e521c3-a3d3718d8d14437d1503.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/app-256d738c0d99bf10ed78.js">https://trackdechets.beta.gouv.fr/app-256d738c0d99bf10ed78.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1776,6 +1753,32 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/sitemap.xml">https://trackdechets.beta.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/styles-7d4153d260c0197f0043.js">https://trackdechets.beta.gouv.fr/styles-7d4153d260c0197f0043.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2101,32 +2104,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/e2d93ed24b8a96621dffacdbecbffd1525ce7e5b-44539444c554f488744a.js">https://trackdechets.beta.gouv.fr/e2d93ed24b8a96621dffacdbecbffd1525ce7e5b-44539444c554f488744a.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/framework-cb37257835832d9565ad.js">https://trackdechets.beta.gouv.fr/framework-cb37257835832d9565ad.js</a></td>
 					</tr>
 					<tr>
@@ -2204,7 +2181,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">9</td>
+					<td width="80%">8</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -2271,6 +2248,32 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://trackdechets.beta.gouv.fr">https://trackdechets.beta.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">31536000</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/">https://trackdechets.beta.gouv.fr/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2555,7 +2558,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">11</td>
+					<td width="80%">12</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -2843,7 +2846,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/mentions-legales.pdf">https://trackdechets.beta.gouv.fr/mentions-legales.pdf</a></td>
+						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/page-data/404.html/page-data.json">https://trackdechets.beta.gouv.fr/page-data/404.html/page-data.json</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2869,7 +2872,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/politique-de-confidentialite.pdf">https://trackdechets.beta.gouv.fr/politique-de-confidentialite.pdf</a></td>
+						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/styles-7d4153d260c0197f0043.js">https://trackdechets.beta.gouv.fr/styles-7d4153d260c0197f0043.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3706,33 +3709,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">HIT</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/commons-0ab6a36535b38eb1466e.js">https://trackdechets.beta.gouv.fr/commons-0ab6a36535b38eb1466e.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">HIT</td>
+						<td width="80%">Age: 0</td>
 					</tr>
 				
 					<tr>
@@ -3784,7 +3761,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">HIT</td>
+						<td width="80%">Age: 0</td>
 					</tr>
 				
 					<tr>
@@ -3817,6 +3794,32 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/framework-cb37257835832d9565ad.js">https://trackdechets.beta.gouv.fr/framework-cb37257835832d9565ad.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Age: 0</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/partners">https://trackdechets.beta.gouv.fr/partners</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4068,32 +4071,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/commons-0ab6a36535b38eb1466e.js">https://trackdechets.beta.gouv.fr/commons-0ab6a36535b38eb1466e.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=600</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/component---src-pages-404-tsx-f0670b402b4ffb85d753.js">https://trackdechets.beta.gouv.fr/component---src-pages-404-tsx-f0670b402b4ffb85d753.js</a></td>
 					</tr>
 					<tr>
@@ -4173,6 +4150,32 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/framework-cb37257835832d9565ad.js">https://trackdechets.beta.gouv.fr/framework-cb37257835832d9565ad.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=600</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://trackdechets.beta.gouv.fr/partners">https://trackdechets.beta.gouv.fr/partners</a></td>
 					</tr>
 					<tr>
 						<td width="20%"

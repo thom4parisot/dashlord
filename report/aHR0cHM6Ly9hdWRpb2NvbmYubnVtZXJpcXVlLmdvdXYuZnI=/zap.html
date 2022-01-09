@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 2 Jan 2022 01:48:27
+		Generated on Sun, 9 Jan 2022 01:49:33
 	</h3>
 
 	
@@ -204,7 +204,7 @@ td {
 				<td align="center">6</td>
 			</tr>
 			<tr>
-				<td><a href="#10020">X-Frame-Options Header Not Set</a></td>
+				<td><a href="#10020">Missing Anti-clickjacking Header</a></td>
 				<td align="center" class="risk-2">Medium</td>
 				<td align="center">6</td>
 			</tr>
@@ -241,7 +241,7 @@ td {
 			<tr>
 				<td><a href="#10096">Timestamp Disclosure - Unix</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">1</td>
+				<td align="center">2</td>
 			</tr>
 			<tr>
 				<td><a href="#10021">X-Content-Type-Options Header Missing</a></td>
@@ -633,12 +633,12 @@ td {
 					<th width="20%" class="risk-2"><a
 						id="10020"></a>
 						<div>Medium</div></th>
-					<th class="risk-2">X-Frame-Options Header Not Set</th>
+					<th class="risk-2">Missing Anti-clickjacking Header</th>
 				</tr>
 				<tr>
 					<td width="20%">Description</td>
 					<td width="80%">
-							<div>X-Frame-Options header is not included in the HTTP response to protect against &#39;ClickJacking&#39; attacks.</div>
+							<div>The response does not include either Content-Security-Policy with &#39;frame-ancestors&#39; directive or X-Frame-Options to protect against &#39;ClickJacking&#39; attacks.</div>
 							
 						</td>
 				</tr>
@@ -809,7 +809,10 @@ td {
 				<tr>
 					<td width="20%">Solution</td>
 					<td width="80%">
-							<div>Most modern Web browsers support the X-Frame-Options HTTP header. Ensure it&#39;s set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it&#39;s part of a FRAMESET) then you&#39;ll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy&#39;s &quot;frame-ancestors&quot; directive. </div>
+							<div>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</div>
+							<br />
+						
+							<div>If you expect the page to be framed only by pages on your server (e.g. it&#39;s part of a FRAMESET) then you&#39;ll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy&#39;s &quot;frame-ancestors&quot; directive.</div>
 							
 						</td>
 				</tr>
@@ -1391,7 +1394,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://audioconf.numerique.gouv.fr/static/images/favicon/favicon-16x16.png">https://audioconf.numerique.gouv.fr/static/images/favicon/favicon-16x16.png</a></td>
+						<td width="80%"><a href="https://audioconf.numerique.gouv.fr/static/remixicon/remixicon.css">https://audioconf.numerique.gouv.fr/static/remixicon/remixicon.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1760,6 +1763,32 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://audioconf.numerique.gouv.fr/chart.js/Chart.min.js">https://audioconf.numerique.gouv.fr/chart.js/Chart.min.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://audioconf.numerique.gouv.fr/contact">https://audioconf.numerique.gouv.fr/contact</a></td>
 					</tr>
 					<tr>
@@ -1917,32 +1946,6 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://audioconf.numerique.gouv.fr/static/gouvfr/js/dsfr.nomodule.min.js">https://audioconf.numerique.gouv.fr/static/gouvfr/js/dsfr.nomodule.min.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://audioconf.numerique.gouv.fr/static/js/charts.js">https://audioconf.numerique.gouv.fr/static/js/charts.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2293,7 +2296,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://audioconf.numerique.gouv.fr/static/images/favicon/favicon-16x16.png">https://audioconf.numerique.gouv.fr/static/images/favicon/favicon-16x16.png</a></td>
+						<td width="80%"><a href="https://audioconf.numerique.gouv.fr/static/remixicon/remixicon.css">https://audioconf.numerique.gouv.fr/static/remixicon/remixicon.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2424,9 +2427,35 @@ td {
 						<td width="80%">23000091</td>
 					</tr>
 				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://audioconf.numerique.gouv.fr/static/js/charts.js">https://audioconf.numerique.gouv.fr/static/js/charts.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">02371227</td>
+					</tr>
+				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">1</td>
+					<td width="80%">2</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -2662,32 +2691,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://audioconf.numerique.gouv.fr/static/gouvfr/js/dsfr.module.min.js">https://audioconf.numerique.gouv.fr/static/gouvfr/js/dsfr.module.min.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">X-Content-Type-Options</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://audioconf.numerique.gouv.fr/static/images/favicon/favicon-16x16.png">https://audioconf.numerique.gouv.fr/static/images/favicon/favicon-16x16.png</a></td>
 					</tr>
 					<tr>
@@ -2715,6 +2718,32 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://audioconf.numerique.gouv.fr/static/images/favicon/favicon-32x32.png">https://audioconf.numerique.gouv.fr/static/images/favicon/favicon-32x32.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">X-Content-Type-Options</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://audioconf.numerique.gouv.fr/static/remixicon/remixicon.css">https://audioconf.numerique.gouv.fr/static/remixicon/remixicon.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2845,7 +2874,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3145-WqXmhj7+Yef4n/UFFKdVdeNiE1g</td>
+						<td width="80%">314b-dp0VCOlhI6IqhDPgSTgBO6MX5eU</td>
 					</tr>
 				
 					<tr>
@@ -2871,7 +2900,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3145-WqXmhj7+Yef4n/UFFKdVdeNiE1g</td>
+						<td width="80%">314b-dp0VCOlhI6IqhDPgSTgBO6MX5eU</td>
 					</tr>
 				
 					<tr>
@@ -2975,7 +3004,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3A09iymLNjt26d00d4YVWKL5H81TqSB_7G</td>
+						<td width="80%">3A1kQBpAcg7h-cqJGpLfAbWO5sqDG935k9</td>
 					</tr>
 				
 					<tr>
@@ -3001,7 +3030,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">IsofsGsxoqDdJ3JYS1/MWWN9FOmKrniSKbEsvnCk6xgFynwopcywgWBu1kzyMhWpvKjd0a7e6p/pKEn90YDCyQ==</td>
+						<td width="80%">IsofsGsxoqDdJ3JYS1/MWW5uLiSBLl6NFcLMHGzbO2e0WAQ5PGh/b83ELia0EsVyhDwx+YRuL8QxX+yRCD8JrA==</td>
 					</tr>
 				
 					<tr>
@@ -3027,7 +3056,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">IsofsGsxoqDdJ3JYS1/MWWN9FOmKrniSKbEsvnCk6xgFynwopcywgWBu1kzyMhWpvKjd0a7e6p/pKEn90YDCyQ==</td>
+						<td width="80%">IsofsGsxoqDdJ3JYS1/MWW5uLiSBLl6NFcLMHGzbO2e0WAQ5PGh/b83ELia0EsVyhDwx+YRuL8QxX+yRCD8JrA==</td>
 					</tr>
 				
 					<tr>
@@ -3053,13 +3082,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">IsofsGsxoqDdJ3JYS1/MWWN9FOmKrniSKbEsvnCk6xgFynwopcywgWBu1kzyMhWpvKjd0a7e6p/pKEn90YDCyQ==</td>
+						<td width="80%">IsofsGsxoqDdJ3JYS1/MWW5uLiSBLl6NFcLMHGzbO2e0WAQ5PGh/b83ELia0EsVyhDwx+YRuL8QxX+yRCD8JrA==</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://audioconf.numerique.gouv.fr/static/images/favicon/favicon-16x16.png">https://audioconf.numerique.gouv.fr/static/images/favicon/favicon-16x16.png</a></td>
+						<td width="80%"><a href="https://audioconf.numerique.gouv.fr/static/remixicon/remixicon.css">https://audioconf.numerique.gouv.fr/static/remixicon/remixicon.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3079,7 +3108,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">IsofsGsxoqDdJ3JYS1/MWWN9FOmKrniSKbEsvnCk6xgFynwopcywgWBu1kzyMhWpvKjd0a7e6p/pKEn90YDCyQ==</td>
+						<td width="80%">IsofsGsxoqDdJ3JYS1/MWW5uLiSBLl6NFcLMHGzbO2e0WAQ5PGh/b83ELia0EsVyhDwx+YRuL8QxX+yRCD8JrA==</td>
 					</tr>
 				
 					<tr>
@@ -3105,7 +3134,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">c4f8-PcFGTK6QbHbz9sYOceV/WvMK33w</td>
+						<td width="80%">cac8-ubfzI9xkrbHQI4rW8fWVC7PO+Lg</td>
 					</tr>
 				
 				<tr>
@@ -3805,7 +3834,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://audioconf.numerique.gouv.fr/static/images/favicon/favicon-16x16.png">https://audioconf.numerique.gouv.fr/static/images/favicon/favicon-16x16.png</a></td>
+						<td width="80%"><a href="https://audioconf.numerique.gouv.fr/static/remixicon/remixicon.css">https://audioconf.numerique.gouv.fr/static/remixicon/remixicon.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"

@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 2 Jan 2022 07:04:24
+		Generated on Sun, 9 Jan 2022 07:13:31
 	</h3>
 
 	
@@ -204,7 +204,7 @@ td {
 				<td align="center">3</td>
 			</tr>
 			<tr>
-				<td><a href="#10020">X-Frame-Options Header Not Set</a></td>
+				<td><a href="#10020">Missing Anti-clickjacking Header</a></td>
 				<td align="center" class="risk-2">Medium</td>
 				<td align="center">1</td>
 			</tr>
@@ -236,7 +236,7 @@ td {
 			<tr>
 				<td><a href="#10094">Base64 Disclosure</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">5</td>
+				<td align="center">6</td>
 			</tr>
 			<tr>
 				<td><a href="#10027">Information Disclosure - Suspicious Comments</a></td>
@@ -495,12 +495,12 @@ td {
 					<th width="20%" class="risk-2"><a
 						id="10020"></a>
 						<div>Medium</div></th>
-					<th class="risk-2">X-Frame-Options Header Not Set</th>
+					<th class="risk-2">Missing Anti-clickjacking Header</th>
 				</tr>
 				<tr>
 					<td width="20%">Description</td>
 					<td width="80%">
-							<div>X-Frame-Options header is not included in the HTTP response to protect against &#39;ClickJacking&#39; attacks.</div>
+							<div>The response does not include either Content-Security-Policy with &#39;frame-ancestors&#39; directive or X-Frame-Options to protect against &#39;ClickJacking&#39; attacks.</div>
 							
 						</td>
 				</tr>
@@ -541,7 +541,10 @@ td {
 				<tr>
 					<td width="20%">Solution</td>
 					<td width="80%">
-							<div>Most modern Web browsers support the X-Frame-Options HTTP header. Ensure it&#39;s set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it&#39;s part of a FRAMESET) then you&#39;ll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy&#39;s &quot;frame-ancestors&quot; directive. </div>
+							<div>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</div>
+							<br />
+						
+							<div>If you expect the page to be framed only by pages on your server (e.g. it&#39;s part of a FRAMESET) then you&#39;ll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy&#39;s &quot;frame-ancestors&quot; directive.</div>
 							
 						</td>
 				</tr>
@@ -1762,32 +1765,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://mes-adresses.data.gouv.fr/_next/image?q=75&amp;url=%2Fstatic%2Fimages%2Fmes-adresses.svg&amp;w=640">https://mes-adresses.data.gouv.fr/_next/image?q=75&amp;url=%2Fstatic%2Fimages%2Fmes-adresses.svg&amp;w=640</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">X-Content-Type-Options</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://mes-adresses.data.gouv.fr/_next/static/chunks/framework-336caa3f6419768205fe.js">https://mes-adresses.data.gouv.fr/_next/static/chunks/framework-336caa3f6419768205fe.js</a></td>
 					</tr>
 					<tr>
@@ -1815,6 +1792,32 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://mes-adresses.data.gouv.fr/_next/static/chunks/main-1a8ab6958d75eb67f0c6.js">https://mes-adresses.data.gouv.fr/_next/static/chunks/main-1a8ab6958d75eb67f0c6.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">X-Content-Type-Options</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://mes-adresses.data.gouv.fr/_next/static/chunks/pages/404-b968fd68e75123209f07.js">https://mes-adresses.data.gouv.fr/_next/static/chunks/pages/404-b968fd68e75123209f07.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2101,7 +2104,33 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">e98a-uuoPDdYu1a2E3JSEGTOpYtSyVAg</td>
+						<td width="80%">e98a-XUmYUsn1Gr8iwzcmNUBiaKpxXLE</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://mes-adresses.data.gouv.fr/">https://mes-adresses.data.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">e98a-Ydzp+hp+VkvzJ7CVz3H85514BCA</td>
 					</tr>
 				
 					<tr>
@@ -2179,7 +2208,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">c6dc-uCHkJFRkt87fuJnPVWa6slWE7/o</td>
+						<td width="80%">c6dc-0YfV4z4WGLpcOJO1bbUfWXKFJug</td>
 					</tr>
 				
 					<tr>
@@ -2205,12 +2234,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">c6dc-uCHkJFRkt87fuJnPVWa6slWE7/o</td>
+						<td width="80%">c6dc-pVL5Okz8iy2iRb6pEaX/rE9yHJY</td>
 					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">5</td>
+					<td width="80%">6</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>

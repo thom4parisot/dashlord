@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 2 Jan 2022 05:27:31
+		Generated on Sun, 9 Jan 2022 05:35:34
 	</h3>
 
 	
@@ -160,7 +160,7 @@ td {
 					<div>Low</div>
 				</td>
 				<td align="center">
-					<div>7</div>
+					<div>6</div>
 				</td>
 			</tr>
 			<tr>
@@ -214,7 +214,7 @@ td {
 				<td align="center">3</td>
 			</tr>
 			<tr>
-				<td><a href="#10020">X-Frame-Options Header Not Set</a></td>
+				<td><a href="#10020">Missing Anti-clickjacking Header</a></td>
 				<td align="center" class="risk-2">Medium</td>
 				<td align="center">6</td>
 			</tr>
@@ -222,11 +222,6 @@ td {
 				<td><a href="#10055">CSP: Notices</a></td>
 				<td align="center" class="risk-1">Low</td>
 				<td align="center">2</td>
-			</tr>
-			<tr>
-				<td><a href="#10054">Cookie without SameSite Attribute</a></td>
-				<td align="center" class="risk-1">Low</td>
-				<td align="center">10</td>
 			</tr>
 			<tr>
 				<td><a href="#10110">Dangerous JS Functions</a></td>
@@ -246,7 +241,7 @@ td {
 			<tr>
 				<td><a href="#10096">Timestamp Disclosure - Unix</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">16</td>
+				<td align="center">11</td>
 			</tr>
 			<tr>
 				<td><a href="#10021">X-Content-Type-Options Header Missing</a></td>
@@ -266,7 +261,7 @@ td {
 			<tr>
 				<td><a href="#10109">Modern Web Application</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">5</td>
+				<td align="center">6</td>
 			</tr>
 			<tr>
 				<td><a href="#10049">Non-Storable Content</a></td>
@@ -810,12 +805,12 @@ td {
 					<th width="20%" class="risk-2"><a
 						id="10020"></a>
 						<div>Medium</div></th>
-					<th class="risk-2">X-Frame-Options Header Not Set</th>
+					<th class="risk-2">Missing Anti-clickjacking Header</th>
 				</tr>
 				<tr>
 					<td width="20%">Description</td>
 					<td width="80%">
-							<div>X-Frame-Options header is not included in the HTTP response to protect against &#39;ClickJacking&#39; attacks.</div>
+							<div>The response does not include either Content-Security-Policy with &#39;frame-ancestors&#39; directive or X-Frame-Options to protect against &#39;ClickJacking&#39; attacks.</div>
 							
 						</td>
 				</tr>
@@ -986,7 +981,10 @@ td {
 				<tr>
 					<td width="20%">Solution</td>
 					<td width="80%">
-							<div>Most modern Web browsers support the X-Frame-Options HTTP header. Ensure it&#39;s set on all web pages returned by your site (if you expect the page to be framed only by pages on your server (e.g. it&#39;s part of a FRAMESET) then you&#39;ll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy&#39;s &quot;frame-ancestors&quot; directive. </div>
+							<div>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</div>
+							<br />
+						
+							<div>If you expect the page to be framed only by pages on your server (e.g. it&#39;s part of a FRAMESET) then you&#39;ll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy&#39;s &quot;frame-ancestors&quot; directive.</div>
 							
 						</td>
 				</tr>
@@ -1140,319 +1138,6 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-1"><a
-						id="10054"></a>
-						<div>Low</div></th>
-					<th class="risk-1">Cookie without SameSite Attribute</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>A cookie has been set without the SameSite attribute, which means that the cookie can be sent as a result of a &#39;cross-site&#39; request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr">https://www.rdv-solidarites.fr</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">_lapin_session</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Set-Cookie: _lapin_session</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/">https://www.rdv-solidarites.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">_lapin_session</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Set-Cookie: _lapin_session</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/accessibility">https://www.rdv-solidarites.fr/accessibility</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">_lapin_session</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Set-Cookie: _lapin_session</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/accueil_mds">https://www.rdv-solidarites.fr/accueil_mds</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">_lapin_session</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Set-Cookie: _lapin_session</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/agents/sign_in">https://www.rdv-solidarites.fr/agents/sign_in</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">_lapin_session</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Set-Cookie: _lapin_session</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/contact">https://www.rdv-solidarites.fr/contact</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">_lapin_session</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Set-Cookie: _lapin_session</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/mds">https://www.rdv-solidarites.fr/mds</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">_lapin_session</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Set-Cookie: _lapin_session</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/stats">https://www.rdv-solidarites.fr/stats</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">_lapin_session</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Set-Cookie: _lapin_session</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/users/sign_in">https://www.rdv-solidarites.fr/users/sign_in</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">_lapin_session</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Set-Cookie: _lapin_session</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/">https://www.rdv-solidarites.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">POST</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">_lapin_session</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Set-Cookie: _lapin_session</td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					<td width="80%">10</td>
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>Ensure that the SameSite attribute is set to either &#39;lax&#39; or ideally &#39;strict&#39; for all cookies.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%">
-							<a href="https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site">https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site</a>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/1275.html">1275</a></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%">13</td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10054/">10054</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
-		
-			<table class="results">
-				<tr height="24">
-					<th width="20%" class="risk-1"><a
 						id="10110"></a>
 						<div>Low</div></th>
 					<th class="risk-1">Dangerous JS Functions</th>
@@ -1471,7 +1156,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/js/application-e2e196845d527d3320fc.js">https://www.rdv-solidarites.fr/packs/js/application-e2e196845d527d3320fc.js</a></td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/js/application-a3c4bacb43c10f5e387e.js">https://www.rdv-solidarites.fr/packs/js/application-a3c4bacb43c10f5e387e.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2100,7 +1785,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/js/application-e2e196845d527d3320fc.js">https://www.rdv-solidarites.fr/packs/js/application-e2e196845d527d3320fc.js</a></td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/js/application-a3c4bacb43c10f5e387e.js">https://www.rdv-solidarites.fr/packs/js/application-a3c4bacb43c10f5e387e.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2425,7 +2110,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/css/application-05cceee4.css">https://www.rdv-solidarites.fr/packs/css/application-05cceee4.css</a></td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/css/application-886c8600.css">https://www.rdv-solidarites.fr/packs/css/application-886c8600.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2445,13 +2130,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">36722648</td>
+						<td width="80%">33333333</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/js/application-e2e196845d527d3320fc.js">https://www.rdv-solidarites.fr/packs/js/application-e2e196845d527d3320fc.js</a></td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/css/application-886c8600.css">https://www.rdv-solidarites.fr/packs/css/application-886c8600.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2471,13 +2156,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">0123456789</td>
+						<td width="80%">66666667</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/js/application-e2e196845d527d3320fc.js">https://www.rdv-solidarites.fr/packs/js/application-e2e196845d527d3320fc.js</a></td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/css/application-886c8600.css">https://www.rdv-solidarites.fr/packs/css/application-886c8600.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2497,13 +2182,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1073741824</td>
+						<td width="80%">85714286</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/js/application-e2e196845d527d3320fc.js">https://www.rdv-solidarites.fr/packs/js/application-e2e196845d527d3320fc.js</a></td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/media/images/favicon/apple-touch-icon-c4d0d633e092edb358ce3fc357105bc9.png">https://www.rdv-solidarites.fr/packs/media/images/favicon/apple-touch-icon-c4d0d633e092edb358ce3fc357105bc9.png</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2523,142 +2208,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">16711680</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/js/application-e2e196845d527d3320fc.js">https://www.rdv-solidarites.fr/packs/js/application-e2e196845d527d3320fc.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">2147483647</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/js/application-e2e196845d527d3320fc.js">https://www.rdv-solidarites.fr/packs/js/application-e2e196845d527d3320fc.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">62425156</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/js/application-e2e196845d527d3320fc.js">https://www.rdv-solidarites.fr/packs/js/application-e2e196845d527d3320fc.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">94906265</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/media/images/favicon/favicon-32x32-c752017713fef76c08c49481fb078516.png">https://www.rdv-solidarites.fr/packs/media/images/favicon/favicon-32x32-c752017713fef76c08c49481fb078516.png</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">71858339</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/media/images/welcome/illu-2x-9539603ec869985c917fadcc0b7fb6eb.svg">https://www.rdv-solidarites.fr/packs/media/images/welcome/illu-2x-9539603ec869985c917fadcc0b7fb6eb.svg</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">08305926</td>
+						<td width="80%">87307012</td>
 					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">16</td>
+					<td width="80%">11</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -2712,7 +2267,33 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/css/application-05cceee4.css">https://www.rdv-solidarites.fr/packs/css/application-05cceee4.css</a></td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/css/application-886c8600.css">https://www.rdv-solidarites.fr/packs/css/application-886c8600.css</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">X-Content-Type-Options</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/js/application-a3c4bacb43c10f5e387e.js">https://www.rdv-solidarites.fr/packs/js/application-a3c4bacb43c10f5e387e.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2843,32 +2424,6 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/media/images/logos/logo-f5be109ad11920d0bb655368a542296b.svg">https://www.rdv-solidarites.fr/packs/media/images/logos/logo-f5be109ad11920d0bb655368a542296b.svg</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">X-Content-Type-Options</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/media/images/welcome/agent-9b65a41f70f19f29583fe40a0603e048.svg">https://www.rdv-solidarites.fr/packs/media/images/welcome/agent-9b65a41f70f19f29583fe40a0603e048.svg</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3103,7 +2658,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">2BXl0RIA4WsIxqnejaYES1pZJi6XEwYK</td>
+						<td width="80%">2B8c3r0GktDbez7jaot3YYLh3kkmkACJMe4ViGRZlK9d3ofg3JukiyrTckfc8FPvxchOcUUEjMhbWb9r4Y2g</td>
 					</tr>
 				
 					<tr>
@@ -3129,7 +2684,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">2BrKT9lYIUoIUwX9ajav9cBwQNJRvnOUU22idZ1xuDMryC</td>
+						<td width="80%">2FK6m3g8marOIEIF2nrBZXjr6TtBRTb</td>
 					</tr>
 				
 					<tr>
@@ -3155,7 +2710,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">2FnEzBHet6v7Szoebkjy9SsgZHQtsCub70Tlt9ucWnJgmt</td>
+						<td width="80%">3D--NS2uekOmRKBDK7JM--0NP8LQ4GUbm3i2MXEpo73g</td>
 					</tr>
 				
 					<tr>
@@ -3181,7 +2736,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">2FvDLv0yIhimzEYYr5QNOVMye2gaxsnFdDlA</td>
+						<td width="80%">Eh31HErzxR9DAjehuRzZpYv6TZHz0FisyXDyANQLMLCzZXg7PPfQEFj0mAhqGtmAI5ORqfY9QW</td>
 					</tr>
 				
 					<tr>
@@ -3207,7 +2762,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">2FXArphiDAmNZfS7EtIZxdB1EyEsQsTCwW6RMyEhPTAElduj0iLhmPS0mGcQ0ZE9PMDe3RlbTMVL</td>
+						<td width="80%">2FIhDxASIb30Npma6UWpl81FK4X2ysp1EQKIqJ06SPq3XQS</td>
 					</tr>
 				
 					<tr>
@@ -3233,7 +2788,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">2FJImYC97TvllrQWE5wNFvL194DsUJo8FYF4bg</td>
+						<td width="80%">2FPA0h6aBeBhaxBVI1nSi9BJyzFtUj6QDjUefWrbDSXcnYE</td>
 					</tr>
 				
 					<tr>
@@ -3259,13 +2814,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">x2vxCGqNzd1UJZ8oaeBYYu30cjN5uBczk5ZlrIssKUtarFj0xrzABjoPd3AP4ECUq6FdnD4md5abUcYvLvwtHBYNGE9Cga4frFZYUbcUmuuI05D7ZnARWI2</td>
+						<td width="80%">2FJ9G4YzSw8E06teaUqFNVk079liEF3bXZTzY3ycvrQ4Lnq</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/css/application-05cceee4.css">https://www.rdv-solidarites.fr/packs/css/application-05cceee4.css</a></td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/css/application-886c8600.css">https://www.rdv-solidarites.fr/packs/css/application-886c8600.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3291,6 +2846,32 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/js/application-a3c4bacb43c10f5e387e.js">https://www.rdv-solidarites.fr/packs/js/application-a3c4bacb43c10f5e387e.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.rdv-solidarites.fr/stats">https://www.rdv-solidarites.fr/stats</a></td>
 					</tr>
 					<tr>
@@ -3311,7 +2892,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">2BobUIeL8rA8U7lJ0mgWJrOQpEfYgQzz8pQUBfo3x899gvTp4pX4YSUblUUdbjGeqWGjgO</td>
+						<td width="80%">BEc4DEnWIvBU4IMxokjG2iY9d5XxSWbjgI4SURMd7xBZoHk2Br2s1f</td>
 					</tr>
 				
 					<tr>
@@ -3337,7 +2918,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">2FyD82yHywqVHKDauwc2VrrdK5I90mfuETrHii7J3qufP2UTE4mGaTC6mpUYXaB5rCTqFMveIC1S50Tns3tDWHO9PHybg7Oh7zPENKJ</td>
+						<td width="80%">SlC6IYPuojmeJr3PqrPCi6KoIsCz5pwTo4DtK8MeqYIPgv8</td>
 					</tr>
 				
 					<tr>
@@ -3363,33 +2944,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">2Bl2kGHdybTdPZSby5ToLZG6T6tsfYSMNPLPL0fB3ojbHTBmtp2qwtmV2IZmTMZ84rhspIqedlNSOUI6D3rHdy6mw5BfqPi7</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/">https://www.rdv-solidarites.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">POST</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">2FGsEeqJ5HUAs4XkXPy97mytSPp3xwk46swIFtuqylsITUq2VMb6HPdgRO1QHAX9J7M</td>
+						<td width="80%">2BjVyKivDMni304JUi4anyHmOpr7ZcinU2nBO5Uq5rG9FTpvxqarlAWbDmxwovDbDpeYNSe4kM3W2OvK9dgqBHYOBkjAhFyAyQyO9yH3m9en</td>
 					</tr>
 				
 				<tr>
@@ -3448,7 +3003,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/js/application-e2e196845d527d3320fc.js">https://www.rdv-solidarites.fr/packs/js/application-e2e196845d527d3320fc.js</a></td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/js/application-a3c4bacb43c10f5e387e.js">https://www.rdv-solidarites.fr/packs/js/application-a3c4bacb43c10f5e387e.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3550,7 +3105,33 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/js/application-e2e196845d527d3320fc.js">https://www.rdv-solidarites.fr/packs/js/application-e2e196845d527d3320fc.js</a></td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/organisations/new">https://www.rdv-solidarites.fr/organisations/new</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.rdv-solidarites.fr/packs/js/application-a3c4bacb43c10f5e387e.js">https://www.rdv-solidarites.fr/packs/js/application-a3c4bacb43c10f5e387e.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3653,7 +3234,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">5</td>
+					<td width="80%">6</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
