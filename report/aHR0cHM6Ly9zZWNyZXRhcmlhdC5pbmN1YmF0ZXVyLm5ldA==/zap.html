@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 9 Jan 2022 05:05:30
+		Generated on Sun, 16 Jan 2022 04:59:44
 	</h3>
 
 	
@@ -160,7 +160,7 @@ td {
 					<div>Low</div>
 				</td>
 				<td align="center">
-					<div>6</div>
+					<div>7</div>
 				</td>
 			</tr>
 			<tr>
@@ -221,7 +221,7 @@ td {
 			<tr>
 				<td><a href="#10063">Permissions Policy Header Not Set</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">6</td>
+				<td align="center">7</td>
 			</tr>
 			<tr>
 				<td><a href="#10037">Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</a></td>
@@ -229,9 +229,14 @@ td {
 				<td align="center">11</td>
 			</tr>
 			<tr>
+				<td><a href="#10096">Timestamp Disclosure - Unix</a></td>
+				<td align="center" class="risk-1">Low</td>
+				<td align="center">1</td>
+			</tr>
+			<tr>
 				<td><a href="#10021">X-Content-Type-Options Header Missing</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">11</td>
+				<td align="center">12</td>
 			</tr>
 			<tr>
 				<td><a href="#10094">Base64 Disclosure</a></td>
@@ -1517,6 +1522,32 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://secretariat.incubateur.net/static/scripts/hashtoparam.js">https://secretariat.incubateur.net/static/scripts/hashtoparam.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://secretariat.incubateur.net/topbar.js">https://secretariat.incubateur.net/topbar.js</a></td>
 					</tr>
 					<tr>
@@ -1542,7 +1573,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">6</td>
+					<td width="80%">7</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -1932,6 +1963,85 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-1"><a
+						id="10096"></a>
+						<div>Low</div></th>
+					<th class="risk-1">Timestamp Disclosure - Unix</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>A timestamp was disclosed by the application/web server - Unix</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://secretariat.incubateur.net/">https://secretariat.incubateur.net/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">11439460</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">1</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="http://projects.webappsec.org/w/page/13246936/Information%20Leakage">http://projects.webappsec.org/w/page/13246936/Information%20Leakage</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10096/">10096</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-1"><a
 						id="10021"></a>
 						<div>Low</div></th>
 					<th class="risk-1">X-Content-Type-Options Header Missing</th>
@@ -2210,6 +2320,32 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://secretariat.incubateur.net/static/scripts/hashtoparam.js">https://secretariat.incubateur.net/static/scripts/hashtoparam.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">X-Content-Type-Options</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://secretariat.incubateur.net/topbar.js">https://secretariat.incubateur.net/topbar.js</a></td>
 					</tr>
 					<tr>
@@ -2235,7 +2371,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">11</td>
+					<td width="80%">12</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -2315,7 +2451,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">fdc-OVi+b4uFxxMLBTQzpsLaXHglOoU</td>
+						<td width="80%">3AdoxmlFxktFA3E-d1XRqD8d0qIYduwd17</td>
 					</tr>
 				
 					<tr>
@@ -2341,7 +2477,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3A8WqtpvM6Si8-OYfQhL--pYj8sFCF5Y3a</td>
+						<td width="80%">1014-agrhz35mHdRmeLJJtlhrcLIjtDU</td>
 					</tr>
 				
 					<tr>
@@ -2367,7 +2503,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">10f7-GMfaOp3pO5NusTGH84jRGZjbt2E</td>
+						<td width="80%">1014-agrhz35mHdRmeLJJtlhrcLIjtDU</td>
 					</tr>
 				
 					<tr>
@@ -2393,7 +2529,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">fed-son/eJyDYjET7grinF65MAy9XN4</td>
+						<td width="80%">1025-f9YbdgVid+37AsyBVXvPMutWRrE</td>
 					</tr>
 				
 					<tr>
@@ -2419,7 +2555,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">fee-0qDl6jO95CPE8iFDQrIE97vAqyc</td>
+						<td width="80%">1026-6IHZY4lkIU5o2D0GnMXEAMXm7C8</td>
 					</tr>
 				
 					<tr>
@@ -2471,7 +2607,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3A24cfYPYlZl2r5DCCN01nXtyplZx4h6vn</td>
+						<td width="80%">3ANi1M9iUY-jj9venGvosNLX60x9Zt5AS9</td>
 					</tr>
 				
 					<tr>
@@ -2497,7 +2633,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3A24cfYPYlZl2r5DCCN01nXtyplZx4h6vn</td>
+						<td width="80%">3AdoxmlFxktFA3E-d1XRqD8d0qIYduwd17</td>
 					</tr>
 				
 					<tr>
@@ -2549,7 +2685,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3A24cfYPYlZl2r5DCCN01nXtyplZx4h6vn</td>
+						<td width="80%">3AdoxmlFxktFA3E-d1XRqD8d0qIYduwd17</td>
 					</tr>
 				
 					<tr>
@@ -2575,7 +2711,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3A24cfYPYlZl2r5DCCN01nXtyplZx4h6vn</td>
+						<td width="80%">3AdoxmlFxktFA3E-d1XRqD8d0qIYduwd17</td>
 					</tr>
 				
 					<tr>
@@ -2601,7 +2737,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3A24cfYPYlZl2r5DCCN01nXtyplZx4h6vn</td>
+						<td width="80%">3AdoxmlFxktFA3E-d1XRqD8d0qIYduwd17</td>
 					</tr>
 				
 				<tr>

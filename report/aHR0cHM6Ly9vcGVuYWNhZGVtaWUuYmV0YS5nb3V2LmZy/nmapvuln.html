@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln openacademie.beta.gouv.fr</pre>
-<p class="lead">Sun Jan  9 04:08:16 2022 – Sun Jan  9 04:08:51 2022<br>1 hosts scanned.
+<p class="lead">Sun Jan 16 03:58:47 2022 – Sun Jan 16 03:59:09 2022<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,7 +76,7 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>167.99.242.112</td>
+<td>109.232.236.90</td>
 <td>openacademie.beta.gouv.fr</td>
 <td>2</td>
 <td>0</td>
@@ -91,10 +91,13 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#167-99-242-112"><h3 class="panel-title">167.99.242.112 - openacademie.beta.gouv.fr</h3></div>
-<div class="panel-body collapse in" id="167-99-242-112">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#109-232-236-90"><h3 class="panel-title">109.232.236.90 - openacademie.beta.gouv.fr</h3></div>
+<div class="panel-body collapse in" id="109-232-236-90">
 <h4>Hostnames</h4>
-<ul><li>openacademie.beta.gouv.fr (user)</li></ul>
+<ul>
+<li>openacademie.beta.gouv.fr (user)</li>
+<li>ows-109-232-236-90.eu-west-2.compute.outscale.com (PTR)</li>
+</ul>
 <h4>Ports</h4>
 <div class="table-responsive"><table class="table table-bordered">
 <thead><tr>
@@ -112,68 +115,27 @@
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
 <td title="Service">http</td>
-<td title="Product">Netlify</td>
+<td title="Product">OpenResty web app server</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, RPCCheck: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 09 Jan 2022 04:08:40 GMT
-  DNSVersionBindReqTCP, Help, SSLSessionReq: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 09 Jan 2022 04:08:41 GMT
-  FourOhFourRequest: 
-    HTTP/1.0 400 Bad Request
-    content-length: 19
-    date: Sun, 09 Jan 2022 04:08:35 GMT
-    Missing host header
-  GetRequest, HTTPOptions: 
-    HTTP/1.0 400 Bad Request
-    content-length: 19
-    date: Sun, 09 Jan 2022 04:08:34 GMT
-    Missing host header
-  Kerberos, SMBProgNeg, TLSSessionReq, TerminalServerCookie: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 09 Jan 2022 04:08:42 GMT
-  RTSPRequest: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 09 Jan 2022 04:08:34 GMT
-  X11Probe: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 09 Jan 2022 04:08:35 GMT</pre>
-<h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:openresty:ngx_openresty">cpe:/a:openresty:ngx_openresty</a><h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">openresty</pre>
 </td></tr>
 <tr class="success">
 <td title="Port">443</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">https</td>
-<td title="Product"></td>
+<td title="Service">http</td>
+<td title="Product">OpenResty web app server</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version=cpe:/a:openresty:ngx_openresty">cpe:/a:openresty:ngx_openresty</a><h5>http-server-header</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">openresty</pre>
 </td></tr>
-<tr class="active">
-<td>8300</td>
-<td>tcp</td>
-<td>closed<br>reset</td>
-<td>tmi</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
 </tbody>
 </table></div>
 </div>
@@ -192,23 +154,23 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>167.99.242.112 - openacademie.beta.gouv.fr</td>
+<td>109.232.236.90 - openacademie.beta.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
-<td>Netlify</td>
+<td>OpenResty web app server</td>
 <td></td>
-<td></td>
+<td>cpe:/a:openresty:ngx_openresty</td>
 <td></td>
 </tr>
 <tr>
-<td>167.99.242.112 - openacademie.beta.gouv.fr</td>
+<td>109.232.236.90 - openacademie.beta.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
-<td>https</td>
+<td>http</td>
+<td>OpenResty web app server</td>
 <td></td>
-<td></td>
-<td></td>
+<td>cpe:/a:openresty:ngx_openresty</td>
 <td></td>
 </tr>
 </tbody>

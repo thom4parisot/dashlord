@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 9 Jan 2022 05:56:18
+		Generated on Sun, 16 Jan 2022 05:52:47
 	</h3>
 
 	
@@ -160,7 +160,7 @@ td {
 					<div>Low</div>
 				</td>
 				<td align="center">
-					<div>6</div>
+					<div>5</div>
 				</td>
 			</tr>
 			<tr>
@@ -211,12 +211,7 @@ td {
 			<tr>
 				<td><a href="#10038">Content Security Policy (CSP) Header Not Set</a></td>
 				<td align="center" class="risk-2">Medium</td>
-				<td align="center">7</td>
-			</tr>
-			<tr>
-				<td><a href="#90022">Application Error Disclosure</a></td>
-				<td align="center" class="risk-1">Low</td>
-				<td align="center">4</td>
+				<td align="center">3</td>
 			</tr>
 			<tr>
 				<td><a href="#10110">Dangerous JS Functions</a></td>
@@ -236,7 +231,7 @@ td {
 			<tr>
 				<td><a href="#10096">Timestamp Disclosure - Unix</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">80</td>
+				<td align="center">81</td>
 			</tr>
 			<tr>
 				<td><a href="#10021">X-Content-Type-Options Header Missing</a></td>
@@ -825,113 +820,9 @@ td {
 						<td width="80%"></td>
 					</tr>
 				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/statistiques/demande-d-inscription-a-demarches-simplifiees">https://www.demarches-simplifiees.fr/statistiques/demande-d-inscription-a-demarches-simplifiees</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/users/password/reset-link-sent?email=foo-bar%40example.com">https://www.demarches-simplifiees.fr/users/password/reset-link-sent?email=foo-bar%40example.com</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/users/sign_up">https://www.demarches-simplifiees.fr/users/sign_up</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/users/sign_in">https://www.demarches-simplifiees.fr/users/sign_in</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">POST</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">7</td>
+					<td width="80%">3</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -978,160 +869,6 @@ td {
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/10038/">10038</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
-		
-			<table class="results">
-				<tr height="24">
-					<th width="20%" class="risk-1"><a
-						id="90022"></a>
-						<div>Low</div></th>
-					<th class="risk-1">Application Error Disclosure</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>This page contains an error/warning message that may disclose sensitive information like the location of the file that produced the unhandled exception. This information can be used to launch further attacks against the web application. The alert could be a false positive if the error message is found inside a documentation page.</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/statistiques/demande-d-inscription-a-demarches-simplifiees">https://www.demarches-simplifiees.fr/statistiques/demande-d-inscription-a-demarches-simplifiees</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">HTTP/1.1 500 Internal Server Error</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/users/password/reset-link-sent?email=foo-bar%40example.com">https://www.demarches-simplifiees.fr/users/password/reset-link-sent?email=foo-bar%40example.com</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">HTTP/1.1 500 Internal Server Error</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/users/sign_up">https://www.demarches-simplifiees.fr/users/sign_up</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">HTTP/1.1 500 Internal Server Error</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/users/sign_in">https://www.demarches-simplifiees.fr/users/sign_in</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">POST</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">HTTP/1.1 500 Internal Server Error</td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					<td width="80%">4</td>
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>Review the source code of this page. Implement custom error pages. Consider implementing a mechanism to provide a unique error reference/identifier to the client (browser) while logging the details on the server side and not exposing them to the user.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%"></td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%">13</td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/90022/">90022</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -1708,7 +1445,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/packs/js/runtime~application-ad6811d93867b835428c.js">https://www.demarches-simplifiees.fr/packs/js/runtime~application-ad6811d93867b835428c.js</a></td>
+						<td width="80%"><a href="https://www.demarches-simplifiees.fr/packs/js/runtime~application-ef9ca01f158a0ce2b546.js">https://www.demarches-simplifiees.fr/packs/js/runtime~application-ef9ca01f158a0ce2b546.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1929,7 +1666,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/assets/application-6e419e83ca8a38c5b9717ed40acc8f3acfd3636869f9f1fa3a3c3c1bb71e0733.css">https://www.demarches-simplifiees.fr/assets/application-6e419e83ca8a38c5b9717ed40acc8f3acfd3636869f9f1fa3a3c3c1bb71e0733.css</a></td>
+						<td width="80%"><a href="https://www.demarches-simplifiees.fr/assets/application-6dbbb232d93beebf2568de2754706ff60bf12d696ae2b57e88d4f709d87e6b4e.css">https://www.demarches-simplifiees.fr/assets/application-6dbbb232d93beebf2568de2754706ff60bf12d696ae2b57e88d4f709d87e6b4e.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4006,9 +3743,35 @@ td {
 						<td width="80%">995338651</td>
 					</tr>
 				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.demarches-simplifiees.fr/suivi">https://www.demarches-simplifiees.fr/suivi</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">09915640</td>
+					</tr>
+				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">80</td>
+					<td width="80%">81</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -4062,7 +3825,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/assets/application-6e419e83ca8a38c5b9717ed40acc8f3acfd3636869f9f1fa3a3c3c1bb71e0733.css">https://www.demarches-simplifiees.fr/assets/application-6e419e83ca8a38c5b9717ed40acc8f3acfd3636869f9f1fa3a3c3c1bb71e0733.css</a></td>
+						<td width="80%"><a href="https://www.demarches-simplifiees.fr/assets/application-6dbbb232d93beebf2568de2754706ff60bf12d696ae2b57e88d4f709d87e6b4e.css">https://www.demarches-simplifiees.fr/assets/application-6dbbb232d93beebf2568de2754706ff60bf12d696ae2b57e88d4f709d87e6b4e.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4244,7 +4007,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/packs/js/runtime~application-ad6811d93867b835428c.js">https://www.demarches-simplifiees.fr/packs/js/runtime~application-ad6811d93867b835428c.js</a></td>
+						<td width="80%"><a href="https://www.demarches-simplifiees.fr/packs/js/runtime~application-ef9ca01f158a0ce2b546.js">https://www.demarches-simplifiees.fr/packs/js/runtime~application-ef9ca01f158a0ce2b546.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4511,7 +4274,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.demarches-simplifiees.fr/assets/application-6e419e83ca8a38c5b9717ed40acc8f3acfd3636869f9f1fa3a3c3c1bb71e0733.css">https://www.demarches-simplifiees.fr/assets/application-6e419e83ca8a38c5b9717ed40acc8f3acfd3636869f9f1fa3a3c3c1bb71e0733.css</a></td>
+						<td width="80%"><a href="https://www.demarches-simplifiees.fr/assets/application-6dbbb232d93beebf2568de2754706ff60bf12d696ae2b57e88d4f709d87e6b4e.css">https://www.demarches-simplifiees.fr/assets/application-6dbbb232d93beebf2568de2754706ff60bf12d696ae2b57e88d4f709d87e6b4e.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4609,7 +4372,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">sqF8stlfZNWV3wTfDuZA5L7nTXD3DiPconAN</td>
+						<td width="80%">2BaySsMI9eDtdgwwDQu1WHLVAZwxVzpvX5trCmDwGW86UOoo1SAM2nmn0IYHWQl3I8lFD7EUbNJJUJ1o82nw021nlDgQ6UszAXoup0lcxVjsNTIdvw5JEwX</td>
 					</tr>
 				
 					<tr>

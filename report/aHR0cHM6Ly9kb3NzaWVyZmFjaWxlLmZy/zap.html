@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 9 Jan 2022 02:54:27
+		Generated on Sun, 16 Jan 2022 02:51:53
 	</h3>
 
 	
@@ -160,7 +160,7 @@ td {
 					<div>Low</div>
 				</td>
 				<td align="center">
-					<div>4</div>
+					<div>6</div>
 				</td>
 			</tr>
 			<tr>
@@ -194,17 +194,27 @@ td {
 					align="center">Number of Instances</th>
 			</tr>
 			<tr>
-				<td><a href="#10038">Content Security Policy (CSP) Header Not Set</a></td>
+				<td><a href="#10055">CSP: Wildcard Directive</a></td>
 				<td align="center" class="risk-2">Medium</td>
 				<td align="center">1</td>
 			</tr>
 			<tr>
-				<td><a href="#10020">Missing Anti-clickjacking Header</a></td>
+				<td><a href="#10055">CSP: style-src unsafe-inline</a></td>
 				<td align="center" class="risk-2">Medium</td>
+				<td align="center">1</td>
+			</tr>
+			<tr>
+				<td><a href="#10015">Incomplete or No Cache-control Header Set</a></td>
+				<td align="center" class="risk-1">Low</td>
 				<td align="center">1</td>
 			</tr>
 			<tr>
 				<td><a href="#10063">Permissions Policy Header Not Set</a></td>
+				<td align="center" class="risk-1">Low</td>
+				<td align="center">1</td>
+			</tr>
+			<tr>
+				<td><a href="#10037">Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</a></td>
 				<td align="center" class="risk-1">Low</td>
 				<td align="center">1</td>
 			</tr>
@@ -253,14 +263,20 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-2"><a
-						id="10038"></a>
+						id="10055"></a>
 						<div>Medium</div></th>
-					<th class="risk-2">Content Security Policy (CSP) Header Not Set</th>
+					<th class="risk-2">CSP: Wildcard Directive</th>
 				</tr>
 				<tr>
 					<td width="20%">Description</td>
 					<td width="80%">
-							<div>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</div>
+							<div>The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: </div>
+							<br />
+						
+							<div>frame-ancestors, form-action</div>
+							<br />
+						
+							<div>The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</div>
 							
 						</td>
 				</tr>
@@ -291,7 +307,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%"></td>
+						<td width="80%">default-src &#39;none&#39;; script-src &#39;self&#39; *.dossierfacile.fr https://www.google-analytics.com https://www.googletagmanager.com *.inspectlet.com; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; https://www.google-analytics.com data:; font-src &#39;self&#39; fonts.google.com fonts.googleapis.com data:; object-src &#39;none&#39;; prefetch-src &#39;self&#39;; connect-src https://www.google-analytics.com *.inspectlet.com https://stats.g.doubleclick.net https://sheets.googleapis.com</td>
 					</tr>
 				
 				<tr>
@@ -301,32 +317,29 @@ td {
 				<tr>
 					<td width="20%">Solution</td>
 					<td width="80%">
-							<div>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header, to achieve optimal browser support: &quot;Content-Security-Policy&quot; for Chrome 25+, Firefox 23+ and Safari 7+, &quot;X-Content-Security-Policy&quot; for Firefox 4.0+ and Internet Explorer 10+, and &quot;X-WebKit-CSP&quot; for Chrome 14+ and Safari 6+.</div>
+							<div>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</div>
 							
 						</td>
 				</tr>
 				<tr>
 					<td width="20%">Reference</td>
 					<td width="80%">
-							<a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy">https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a>
-							<br />
-						
-							<a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</a>
+							<a href="http://www.w3.org/TR/CSP2/">http://www.w3.org/TR/CSP2/</a>
 							<br />
 						
 							<a href="http://www.w3.org/TR/CSP/">http://www.w3.org/TR/CSP/</a>
 							<br />
 						
-							<a href="http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html">http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</a>
-							<br />
-						
-							<a href="http://www.html5rocks.com/en/tutorials/security/content-security-policy/">http://www.html5rocks.com/en/tutorials/security/content-security-policy/</a>
-							<br />
-						
-							<a href="http://caniuse.com/#feat=contentsecuritypolicy">http://caniuse.com/#feat=contentsecuritypolicy</a>
+							<a href="http://caniuse.com/#search=content+security+policy">http://caniuse.com/#search=content+security+policy</a>
 							<br />
 						
 							<a href="http://content-security-policy.com/">http://content-security-policy.com/</a>
+							<br />
+						
+							<a href="https://github.com/shapesecurity/salvation">https://github.com/shapesecurity/salvation</a>
+							<br />
+						
+							<a href="https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources">https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</a>
 							
 						</td>
 				</tr>
@@ -342,7 +355,7 @@ td {
 				<tr>
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10038/">10038</a></td>
+						href="https://www.zaproxy.org/docs/alerts/10055/">10055</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -350,14 +363,14 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-2"><a
-						id="10020"></a>
+						id="10055"></a>
 						<div>Medium</div></th>
-					<th class="risk-2">Missing Anti-clickjacking Header</th>
+					<th class="risk-2">CSP: style-src unsafe-inline</th>
 				</tr>
 				<tr>
 					<td width="20%">Description</td>
 					<td width="80%">
-							<div>The response does not include either Content-Security-Policy with &#39;frame-ancestors&#39; directive or X-Frame-Options to protect against &#39;ClickJacking&#39; attacks.</div>
+							<div>style-src includes unsafe-inline.</div>
 							
 						</td>
 				</tr>
@@ -378,7 +391,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Parameter</td>
-						<td width="80%">X-Frame-Options</td>
+						<td width="80%"></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -388,7 +401,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%"></td>
+						<td width="80%">default-src &#39;none&#39;; script-src &#39;self&#39; *.dossierfacile.fr https://www.google-analytics.com https://www.googletagmanager.com *.inspectlet.com; style-src &#39;self&#39; &#39;unsafe-inline&#39;; img-src &#39;self&#39; https://www.google-analytics.com data:; font-src &#39;self&#39; fonts.google.com fonts.googleapis.com data:; object-src &#39;none&#39;; prefetch-src &#39;self&#39;; connect-src https://www.google-analytics.com *.inspectlet.com https://stats.g.doubleclick.net https://sheets.googleapis.com</td>
 					</tr>
 				
 				<tr>
@@ -398,24 +411,36 @@ td {
 				<tr>
 					<td width="20%">Solution</td>
 					<td width="80%">
-							<div>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</div>
-							<br />
-						
-							<div>If you expect the page to be framed only by pages on your server (e.g. it&#39;s part of a FRAMESET) then you&#39;ll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy&#39;s &quot;frame-ancestors&quot; directive.</div>
+							<div>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</div>
 							
 						</td>
 				</tr>
 				<tr>
 					<td width="20%">Reference</td>
 					<td width="80%">
-							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</a>
+							<a href="http://www.w3.org/TR/CSP2/">http://www.w3.org/TR/CSP2/</a>
+							<br />
+						
+							<a href="http://www.w3.org/TR/CSP/">http://www.w3.org/TR/CSP/</a>
+							<br />
+						
+							<a href="http://caniuse.com/#search=content+security+policy">http://caniuse.com/#search=content+security+policy</a>
+							<br />
+						
+							<a href="http://content-security-policy.com/">http://content-security-policy.com/</a>
+							<br />
+						
+							<a href="https://github.com/shapesecurity/salvation">https://github.com/shapesecurity/salvation</a>
+							<br />
+						
+							<a href="https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources">https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</a>
 							
 						</td>
 				</tr>
 				<tr>
 					<td width="20%">CWE Id</td>
 					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/1021.html">1021</a></td>
+						href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
 				</tr>
 				<tr>
 					<td width="20%">WASC Id</td>
@@ -424,7 +449,89 @@ td {
 				<tr>
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10020/">10020</a></td>
+						href="https://www.zaproxy.org/docs/alerts/10055/">10055</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-1"><a
+						id="10015"></a>
+						<div>Low</div></th>
+					<th class="risk-1">Incomplete or No Cache-control Header Set</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://dossierfacile.fr">https://dossierfacile.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">public, max-age=0</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">1</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a>
+							<br />
+						
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/525.html">525</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10015/">10015</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -516,6 +623,88 @@ td {
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/10063/">10063</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-1"><a
+						id="10037"></a>
+						<div>Low</div></th>
+					<th class="risk-1">Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The web/application server is leaking information via one or more &quot;X-Powered-By&quot; HTTP response headers. Access to such information may facilitate attackers identifying other frameworks/components your web application is reliant upon and the vulnerabilities such components may be subject to.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://dossierfacile.fr">https://dossierfacile.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">X-Powered-By: Express</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">1</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure that your web server, application server, load balancer, etc. is configured to suppress &quot;X-Powered-By&quot; headers.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx">http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx</a>
+							<br />
+						
+							<a href="http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html">http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10037/">10037</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -929,7 +1118,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">FEMTvUAngEhaIHKYbkatZs_z1HjTFoL9oSGJXn6_dXzzH_oaMJKvQA==</td>
+						<td width="80%">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</td>
 					</tr>
 				
 					<tr>
@@ -955,7 +1144,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">okuWGNZ2yIaspeeTqvaY1RP111hbj2AT5yEcmKUBOZas5JTWygL59w==</td>
+						<td width="80%">jUkqSfFyN2wNd7sRfjWHpGiEtg7hQqoOLyI9yGg4MOaxD9WoG4nYUw==</td>
 					</tr>
 				
 					<tr>
@@ -981,7 +1170,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">ad32V1fyQYiovWtlSqKXymmkHc4_s-ieH3ILXVaEH-PbIqltyEsicw==</td>
+						<td width="80%">lMmlPxNXR2uUPG-jfTjk3u_GIcI5TKwZ0L2gsffrRI6NBEE6Lm_Heg==</td>
 					</tr>
 				
 					<tr>
@@ -1007,7 +1196,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">oUxibOBK4pNmgi6MRmerPXN1YDBMTJuQUmdMHmgS-nDLnUnpjpzuRw==</td>
+						<td width="80%">AnC_CU8Ksc-im963AwPXHA5d_o9ITVZ5y1DNCIQH3ythZQZJ4mAgyg==</td>
 					</tr>
 				
 				<tr>
@@ -1086,7 +1275,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;a data-v-5f8fb970=&quot;&quot; href=&quot;#&quot; class=&quot;fr-tile__link&quot;&gt;Démarquez-vous grâce à un dossier de qualité&lt;/a&gt;</td>
+						<td width="80%">&lt;a data-v-676984fb=&quot;&quot; href=&quot;#&quot; class=&quot;fr-tile__link&quot;&gt;Démarquez-vous grâce à un dossier de qualité&lt;/a&gt;</td>
 					</tr>
 				
 				<tr>
@@ -1310,7 +1499,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">max-age=0,no-cache,no-store,must-revalidate</td>
+						<td width="80%">max-age=0</td>
 					</tr>
 				
 				<tr>
