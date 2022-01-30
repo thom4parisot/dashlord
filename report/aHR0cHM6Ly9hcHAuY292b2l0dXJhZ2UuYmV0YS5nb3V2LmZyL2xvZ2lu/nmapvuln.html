@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln app.covoiturage.beta.gouv.fr</pre>
-<p class="lead">Sun Jan 23 02:34:50 2022 – Sun Jan 23 02:35:30 2022<br>1 hosts scanned.
+<p class="lead">Sun Jan 30 02:36:13 2022 – Sun Jan 30 02:36:27 2022<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -114,76 +114,23 @@
 <td title="Port">80</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">http</td>
+<td title="Service">tcpwrapped</td>
+<td title="Product"></td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
+<tr class="success">
+<td title="Port">443</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">tcpwrapped</td>
 <td title="Product"></td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, RTSPRequest, SSLSessionReq, X11Probe: 
-    HTTP/1.1 400 Bad Request
-    Connection: close
-    Content-Length: 11
-    content-type: text/plain; charset=utf-8
-    Request
-  FourOhFourRequest: 
-    HTTP/1.1 404 Not Found
-    Connection: close
-    via: 1.0 alproxy
-    date: Sun, 23 Jan 2022 02:35:10 GMT
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Site not found&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 8de1597c-963e0adc&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-  GetRequest: 
-    HTTP/1.1 404 Not Found
-    Connection: close
-    via: 1.0 alproxy
-    date: Sun, 23 Jan 2022 02:35:09 GMT
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Site not found&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: ba702fb5-85329f9d&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-  HTTPOptions: 
-    HTTP/1.1 404 Not Found
-    Connection: close
-    via: 1.0 alproxy
-    date: Sun, 23 Jan 2022 02:35:09 GMT
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Site not found&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: e037f612-9ab76787&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</pre>
-</td></tr>
-<tr class="success">
-<td title="Port">443</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">https</td>
-<td title="Product">Apache</td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
-</tr>
-<tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
-<pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, RTSPRequest, SSLSessionReq, tor-versions: 
-    HTTP/1.1 400 Bad Request
-    Connection: close
-    Content-Length: 11
-    content-type: text/plain; charset=utf-8
-    Request
-  FourOhFourRequest: 
-    HTTP/1.1 404 Not Found
-    Connection: close
-    via: 1.0 alproxy
-    date: Sun, 23 Jan 2022 02:35:16 GMT
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Site not found&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: c0f200bb-29548d7d&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-  GetRequest: 
-    HTTP/1.1 404 Not Found
-    Connection: close
-    via: 1.0 alproxy
-    date: Sun, 23 Jan 2022 02:35:15 GMT
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Site not found&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: adaee8a3-6f71021c&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-  HTTPOptions: 
-    HTTP/1.1 404 Not Found
-    Connection: close
-    via: 1.0 alproxy
-    date: Sun, 23 Jan 2022 02:35:16 GMT
-    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Site not found&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 3c9f3d2c-caf37c64&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</pre>
-<h5>http-server-header</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Apache</pre>
 </td></tr>
 </tbody>
@@ -207,7 +154,7 @@
 <td>185.31.40.11 - app.covoiturage.beta.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
-<td>http</td>
+<td>tcpwrapped</td>
 <td></td>
 <td></td>
 <td></td>
@@ -217,8 +164,8 @@
 <td>185.31.40.11 - app.covoiturage.beta.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
-<td>https</td>
-<td>Apache</td>
+<td>tcpwrapped</td>
+<td></td>
 <td></td>
 <td></td>
 <td></td>

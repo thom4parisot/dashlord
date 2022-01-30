@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln mon-entreprise.urssaf.fr</pre>
-<p class="lead">Sun Jan 23 03:51:37 2022 – Sun Jan 23 03:52:01 2022<br>1 hosts scanned.
+<p class="lead">Sun Jan 30 03:56:37 2022 – Sun Jan 30 03:57:06 2022<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,7 +76,7 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>34.194.149.67</td>
+<td>52.204.121.99</td>
 <td>mon-entreprise.urssaf.fr</td>
 <td>2</td>
 <td>0</td>
@@ -91,12 +91,12 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#34-194-149-67"><h3 class="panel-title">34.194.149.67 - mon-entreprise.urssaf.fr</h3></div>
-<div class="panel-body collapse in" id="34-194-149-67">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#52-204-121-99"><h3 class="panel-title">52.204.121.99 - mon-entreprise.urssaf.fr</h3></div>
+<div class="panel-body collapse in" id="52-204-121-99">
 <h4>Hostnames</h4>
 <ul>
 <li>mon-entreprise.urssaf.fr (user)</li>
-<li>ec2-34-194-149-67.compute-1.amazonaws.com (PTR)</li>
+<li>ec2-52-204-121-99.compute-1.amazonaws.com (PTR)</li>
 </ul>
 <h4>Ports</h4>
 <div class="table-responsive"><table class="table table-bordered">
@@ -122,27 +122,23 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, Help, Kerberos, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, SSLSessionReq, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 23 Jan 2022 03:51:52 GMT
-  DNSVersionBindReqTCP, RPCCheck: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 23 Jan 2022 03:51:53 GMT
+    date: Sun, 30 Jan 2022 03:56:53 GMT
   FourOhFourRequest, GetRequest, HTTPOptions: 
     HTTP/1.0 400 Bad Request
     content-length: 19
-    date: Sun, 23 Jan 2022 03:51:48 GMT
+    date: Sun, 30 Jan 2022 03:56:48 GMT
     Missing host header
-  RTSPRequest: 
+  Kerberos, SMBProgNeg, TLSSessionReq: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 23 Jan 2022 03:51:47 GMT
-  X11Probe: 
+    date: Sun, 30 Jan 2022 03:56:54 GMT
+  RTSPRequest, X11Probe: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 23 Jan 2022 03:51:48 GMT</pre>
+    date: Sun, 30 Jan 2022 03:56:48 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -158,28 +154,23 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, SSLSessionReq: 
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, RTSPRequest, TerminalServerCookie: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 23 Jan 2022 03:51:58 GMT
-  DNSVersionBindReqTCP, Help, Kerberos, RPCCheck, RTSPRequest, SMBProgNeg, TLSSessionReq, TerminalServerCookie: 
+    date: Sun, 30 Jan 2022 03:57:00 GMT
+  FourOhFourRequest, GetRequest, HTTPOptions: 
+    HTTP/1.0 400 Bad Request
+    content-length: 19
+    date: Sun, 30 Jan 2022 03:56:54 GMT
+    Missing host header
+  Kerberos, SMBProgNeg, SSLSessionReq, TLSSessionReq: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 23 Jan 2022 03:51:59 GMT
-  FourOhFourRequest: 
-    HTTP/1.0 400 Bad Request
-    content-length: 19
-    date: Sun, 23 Jan 2022 03:51:53 GMT
-    Missing host header
-  GetRequest, HTTPOptions: 
-    HTTP/1.0 400 Bad Request
-    content-length: 19
-    date: Sun, 23 Jan 2022 03:51:54 GMT
-    Missing host header
+    date: Sun, 30 Jan 2022 03:57:01 GMT
   tor-versions: 
     HTTP/1.1 400 Bad Request
     content-length: 0
-    date: Sun, 23 Jan 2022 03:51:54 GMT</pre>
+    date: Sun, 30 Jan 2022 03:56:54 GMT</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -210,7 +201,7 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>34.194.149.67 - mon-entreprise.urssaf.fr</td>
+<td>52.204.121.99 - mon-entreprise.urssaf.fr</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
@@ -220,7 +211,7 @@
 <td></td>
 </tr>
 <tr>
-<td>34.194.149.67 - mon-entreprise.urssaf.fr</td>
+<td>52.204.121.99 - mon-entreprise.urssaf.fr</td>
 <td>443</td>
 <td>tcp</td>
 <td>https</td>
