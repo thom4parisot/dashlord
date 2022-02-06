@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln app.covoiturage.beta.gouv.fr</pre>
-<p class="lead">Sun Jan 30 02:36:13 2022 – Sun Jan 30 02:36:27 2022<br>1 hosts scanned.
+<p class="lead">Sun Feb  6 02:44:27 2022 – Sun Feb  6 02:45:14 2022<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -114,23 +114,76 @@
 <td title="Port">80</td>
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">tcpwrapped</td>
-<td title="Product"></td>
-<td title="Version"></td>
-<td title="Extra Info"></td>
-</tr>
-<tr><td colspan="7"><a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a></td></tr>
-<tr class="success">
-<td title="Port">443</td>
-<td title="Protocol">tcp</td>
-<td title="State / Reason">open<br>syn-ack</td>
-<td title="Service">tcpwrapped</td>
+<td title="Service">http</td>
 <td title="Product"></td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, RTSPRequest, SSLSessionReq, X11Probe: 
+    HTTP/1.1 400 Bad Request
+    Connection: close
+    Content-Length: 11
+    content-type: text/plain; charset=utf-8
+    Request
+  FourOhFourRequest: 
+    HTTP/1.1 404 Not Found
+    Connection: close
+    via: 1.0 alproxy
+    date: Sun, 06 Feb 2022 02:44:50 GMT
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Site not found&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: b0507e88-2f454389&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+  GetRequest: 
+    HTTP/1.1 404 Not Found
+    Connection: close
+    via: 1.0 alproxy
+    date: Sun, 06 Feb 2022 02:44:48 GMT
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Site not found&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 65a8587d-02bc3c80&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+  HTTPOptions: 
+    HTTP/1.1 404 Not Found
+    Connection: close
+    via: 1.0 alproxy
+    date: Sun, 06 Feb 2022 02:44:49 GMT
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Site not found&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: c62e5c68-f519e085&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+</td></tr>
+<tr class="success">
+<td title="Port">443</td>
+<td title="Protocol">tcp</td>
+<td title="State / Reason">open<br>syn-ack</td>
+<td title="Service">https</td>
+<td title="Product">Apache</td>
+<td title="Version"></td>
+<td title="Extra Info"></td>
+</tr>
+<tr><td colspan="7">
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, RTSPRequest, SSLSessionReq, tor-versions: 
+    HTTP/1.1 400 Bad Request
+    Connection: close
+    Content-Length: 11
+    content-type: text/plain; charset=utf-8
+    Request
+  FourOhFourRequest: 
+    HTTP/1.1 404 Not Found
+    Connection: close
+    via: 1.0 alproxy
+    date: Sun, 06 Feb 2022 02:44:56 GMT
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Site not found&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: f745e981-b7939e40&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+  GetRequest: 
+    HTTP/1.1 404 Not Found
+    Connection: close
+    via: 1.0 alproxy
+    date: Sun, 06 Feb 2022 02:44:55 GMT
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Site not found&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: c0e53cfa-04678192&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+  HTTPOptions: 
+    HTTP/1.1 404 Not Found
+    Connection: close
+    via: 1.0 alproxy
+    date: Sun, 06 Feb 2022 02:44:55 GMT
+    &lt;html&gt;&lt;body&gt;&lt;h1&gt;Site not found&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Request ID: 0ea4698c-329e4d06&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+<h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Apache</pre>
 </td></tr>
 </tbody>
@@ -154,7 +207,7 @@
 <td>185.31.40.11 - app.covoiturage.beta.gouv.fr</td>
 <td>80</td>
 <td>tcp</td>
-<td>tcpwrapped</td>
+<td>http</td>
 <td></td>
 <td></td>
 <td></td>
@@ -164,8 +217,8 @@
 <td>185.31.40.11 - app.covoiturage.beta.gouv.fr</td>
 <td>443</td>
 <td>tcp</td>
-<td>tcpwrapped</td>
-<td></td>
+<td>https</td>
+<td>Apache</td>
 <td></td>
 <td></td>
 <td></td>
