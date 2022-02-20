@@ -21,17 +21,17 @@
 ###########################################################</span>
 
  Using &quot;OpenSSL 1.0.2-chacha (1.0.2k-dev)&quot; [~183 ciphers]
- on fv-az216-974:/home/testssl/bin/openssl.Linux.x86_64
+ on fv-az397-799:/home/testssl/bin/openssl.Linux.x86_64
  (built: &quot;Jan 18 17:12:17 2019&quot;, platform: &quot;linux-x86_64&quot;)
 
 
-<span style="font-weight:bold;">Testing all IPv4 addresses (port 443): </span>54.241.68.193 138.68.60.208
+<span style="font-weight:bold;">Testing all IPv4 addresses (port 443): </span>34.204.131.44 67.207.80.24
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2022-02-13 04:27:25        --&gt;&gt; 54.241.68.193:443 (app.passculture.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2022-02-20 04:25:42        --&gt;&gt; 34.204.131.44:443 (app.passculture.beta.gouv.fr) &lt;&lt;--</span>
 
- Further IP addresses:   138.68.60.208 2604:a880:2:d0::212d:f001
-                         2604:a880:2:d0::20b2:9001 
- rDNS (54.241.68.193):   ec2-54-241-68-193.us-west-1.compute.amazonaws.com.
+ Further IP addresses:   67.207.80.24 2600:1f18:2489:8202:8b08:4681:8310:cd65
+                         2604:a880:400:d0::1756:9001 
+ rDNS (34.204.131.44):   ec2-34-204-131-44.compute-1.amazonaws.com.
  Service detected:       HTTP
 
 
@@ -111,7 +111,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">77 &gt;= 30 days</span> (2022-01-31 07:00 --&gt; 2022-05-01 07:00)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">70 &gt;= 30 days</span> (2022-01-31 07:00 --&gt; 2022-05-01 07:00)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
@@ -130,7 +130,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  302 Found, redirecting to &quot;<a href="" style="color:black;text-decoration:none;"></a>&quot;
 <span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
-<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          330
+<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          96855
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">365 days</span>=31536000 s<span style="color:#008817;">, includeSubDomains</span><span style="color:#008817;">, preload</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>Netlify
@@ -218,14 +218,14 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>84
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2022-02-13 04:28:15 [  53s] --&gt;&gt; 54.241.68.193:443 (app.passculture.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2022-02-20 04:26:31 [  51s] --&gt;&gt; 34.204.131.44:443 (app.passculture.beta.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2022-02-13 04:28:15        --&gt;&gt; 138.68.60.208:443 (app.passculture.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2022-02-20 04:26:31        --&gt;&gt; 67.207.80.24:443 (app.passculture.beta.gouv.fr) &lt;&lt;--</span>
 
- Further IP addresses:   54.241.68.193 2604:a880:2:d0::212d:f001
-                         2604:a880:2:d0::20b2:9001 
- rDNS (138.68.60.208):   --
+ Further IP addresses:   34.204.131.44 2600:1f18:2489:8202:8b08:4681:8310:cd65
+                         2604:a880:400:d0::1756:9001 
+ rDNS (67.207.80.24):    --
  Service detected:       HTTP
 
 
@@ -253,9 +253,9 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing server&apos;s cipher preferences </span>
 
-<span style="font-weight:bold;"> Has server cipher order?     </span><span style="color:#008817;">yes (OK)</span> -- only for &lt; TLS 1.3
+<span style="font-weight:bold;"> Has server cipher order?     </span><span style="color:#008817;font-weight:bold;">yes (OK)</span> -- TLS 1.3 and below
 <span style="font-weight:bold;"> Negotiated protocol          </span><span style="color:#008817;font-weight:bold;">TLSv1.3</span>
-<span style="font-weight:bold;"> Negotiated cipher            </span><span style="color:#008817;font-weight:bold;">TLS_AES_128_GCM_SHA256</span>, <span style="color:#008817;">256 bit ECDH (P-256)</span>
+<span style="font-weight:bold;"> Negotiated cipher            </span><span style="color:#008817;font-weight:bold;">TLS_AES_256_GCM_SHA384</span>, <span style="color:#008817;">253 bit ECDH (X25519)</span>
 <span style="font-weight:bold;"> Cipher per protocol</span>
 
 Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Cipher Suite Name (IANA/RFC)
@@ -269,9 +269,8 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <u>TLSv1.1</u>
  - 
 <u>TLSv1.2</u> (server order)
-<u>TLSv1.3</u> (no server order, thus listed by strength)
+<u>TLSv1.3</u> (server order)
 <span style="color:#cd00cd;">Local problem: /home/testssl/bin/openssl.Linux.x86_64 doesn&apos;t support &quot;s_client -tls1_3&quot;</span>
-<span style="color:#cd00cd;">Local problem: Your /home/testssl/bin/openssl.Linux.x86_64 does not support -tls1_3</span>
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing robust forward secrecy (FS)</span><u> -- omitting Null Authentication/Encryption, 3DES, RC4 </u>
@@ -284,13 +283,13 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing server defaults (Server Hello) </span>
 
-<span style="font-weight:bold;"> TLS extensions (standard)    </span>&quot;session ticket/#35&quot; &quot;renegotiation info/#65281&quot;
-                              &quot;EC point formats/#11&quot; &quot;supported versions/#43&quot;
-                              &quot;key share/#51&quot;
+<span style="font-weight:bold;"> TLS extensions (standard)    </span>&quot;server name/#0&quot; &quot;renegotiation info/#65281&quot;
+                              &quot;key share/#51&quot; &quot;supported versions/#43&quot;
                               &quot;application layer protocol negotiation/#16&quot;
+                              &quot;extended master secret/#23&quot;
 <span style="font-weight:bold;"> Session Ticket RFC 5077 hint </span>no -- no lifetime advertised
 <span style="font-weight:bold;"> SSL Session ID support       </span>yes
-<span style="font-weight:bold;"> Session Resumption           </span>Tickets no, ID: no
+<span style="font-weight:bold;"> Session Resumption           </span>Tickets no, ID: yes
 <span style="font-weight:bold;"> TLS clock skew</span>               Random values, no fingerprinting possible 
 <span style="font-weight:bold;"> Certificate Compression      </span>none
 <span style="font-weight:bold;"> Client Authentication        </span>none
@@ -306,7 +305,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">77 &gt;= 30 days</span> (2022-01-31 07:00 --&gt; 2022-05-01 07:00)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">70 &gt;= 30 days</span> (2022-01-31 07:00 --&gt; 2022-05-01 07:00)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
@@ -323,9 +322,9 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
-<span style="font-weight:bold;"> HTTP Status Code           </span>  302 Found, redirecting to &quot;<a href="https://passculture.app/" style="color:black;text-decoration:none;">https://passculture.app/</a>&quot;
+<span style="font-weight:bold;"> HTTP Status Code           </span>  302 Found, redirecting to &quot;<a href="" style="color:black;text-decoration:none;"></a>&quot;
 <span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
-<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          19
+<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          175455
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">365 days</span>=31536000 s<span style="color:#008817;">, includeSubDomains</span><span style="color:#008817;">, preload</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>Netlify
@@ -342,7 +341,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="font-weight:bold;"> Heartbleed</span> (CVE-2014-0160)                <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>, no heartbeat extension
 <span style="font-weight:bold;"> CCS</span> (CVE-2014-0224)                       <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
-<span style="font-weight:bold;"> Ticketbleed</span> (CVE-2016-9244), experiment.  <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
+<span style="font-weight:bold;"> Ticketbleed</span> (CVE-2016-9244), experiment.  <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>, no session ticket extension
 <span style="font-weight:bold;"> ROBOT                                     </span><span style="color:#008817;font-weight:bold;">Server does not support any cipher suites that use RSA key transport</span>
 <span style="font-weight:bold;"> Secure Renegotiation (RFC 5746)           </span><span style="color:#008817;font-weight:bold;">supported (OK)</span>
 <span style="font-weight:bold;"> Secure Client-Initiated Renegotiation     </span><span style="color:#008817;">not vulnerable (OK)</span>
@@ -365,42 +364,42 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
  Browser                      Protocol  Cipher Suite Name (OpenSSL)       Forward Secrecy
 ------------------------------------------------------------------------------------------------
- Android 4.4.2                TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ Android 4.4.2                TLSv1.2   ECDHE-ECDSA-AES256-GCM-SHA384     <span style="color:#008817;">256 bit ECDH (P-256)</span>
  Android 5.0.0                TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">256 bit ECDH (P-256)</span>
  Android 6.0                  TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">256 bit ECDH (P-256)</span>
- Android 7.0 (native)         TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">256 bit ECDH (P-256)</span>
- Android 8.1 (native)         TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">253 bit ECDH (X25519)</span>
- Android 9.0 (native)         TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
- Android 10.0 (native)        TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
- Chrome 74 (Win 10)           TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
- Chrome 79 (Win 10)           TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
- Firefox 66 (Win 8.1/10)      TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">256 bit ECDH (P-256)</span>
- Firefox 71 (Win 10)          TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ Android 7.0 (native)         TLSv1.2   ECDHE-ECDSA-AES256-GCM-SHA384     <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ Android 8.1 (native)         TLSv1.2   ECDHE-ECDSA-AES256-GCM-SHA384     <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ Android 9.0 (native)         TLSv1.3   TLS_AES_256_GCM_SHA384            <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ Android 10.0 (native)        TLSv1.3   TLS_AES_256_GCM_SHA384            <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ Chrome 74 (Win 10)           TLSv1.3   TLS_AES_256_GCM_SHA384            <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ Chrome 79 (Win 10)           TLSv1.3   TLS_AES_256_GCM_SHA384            <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ Firefox 66 (Win 8.1/10)      TLSv1.3   TLS_AES_256_GCM_SHA384            <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ Firefox 71 (Win 10)          TLSv1.3   TLS_AES_256_GCM_SHA384            <span style="color:#008817;">253 bit ECDH (X25519)</span>
  IE 6 XP                      No connection
  IE 8 Win 7                   No connection
  IE 8 XP                      No connection
- IE 11 Win 7                  TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">256 bit ECDH (P-256)</span>
- IE 11 Win 8.1                TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">256 bit ECDH (P-256)</span>
- IE 11 Win Phone 8.1          TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">256 bit ECDH (P-256)</span>
- IE 11 Win 10                 TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">256 bit ECDH (P-256)</span>
- Edge 15 Win 10               TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">253 bit ECDH (X25519)</span>
- Edge 17 (Win 10)             TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">253 bit ECDH (X25519)</span>
- Opera 66 (Win 10)            TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
- Safari 9 iOS 9               TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">256 bit ECDH (P-256)</span>
- Safari 9 OS X 10.11          TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">256 bit ECDH (P-256)</span>
- Safari 10 OS X 10.12         TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">256 bit ECDH (P-256)</span>
- Safari 12.1 (iOS 12.2)       TLSv1.3   TLS_CHACHA20_POLY1305_SHA256      <span style="color:#008817;">253 bit ECDH (X25519)</span>
- Safari 13.0 (macOS 10.14.6)  TLSv1.3   TLS_CHACHA20_POLY1305_SHA256      <span style="color:#008817;">253 bit ECDH (X25519)</span>
- Apple ATS 9 iOS 9            TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ IE 11 Win 7                  TLSv1.2   ECDHE-ECDSA-AES256-GCM-SHA384     <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ IE 11 Win 8.1                TLSv1.2   ECDHE-ECDSA-AES256-GCM-SHA384     <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ IE 11 Win Phone 8.1          TLSv1.2   ECDHE-ECDSA-AES256-GCM-SHA384     <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ IE 11 Win 10                 TLSv1.2   ECDHE-ECDSA-AES256-GCM-SHA384     <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ Edge 15 Win 10               TLSv1.2   ECDHE-ECDSA-AES256-GCM-SHA384     <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ Edge 17 (Win 10)             TLSv1.2   ECDHE-ECDSA-AES256-GCM-SHA384     <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ Opera 66 (Win 10)            TLSv1.3   TLS_AES_256_GCM_SHA384            <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ Safari 9 iOS 9               TLSv1.2   ECDHE-ECDSA-AES256-GCM-SHA384     <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ Safari 9 OS X 10.11          TLSv1.2   ECDHE-ECDSA-AES256-GCM-SHA384     <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ Safari 10 OS X 10.12         TLSv1.2   ECDHE-ECDSA-AES256-GCM-SHA384     <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ Safari 12.1 (iOS 12.2)       TLSv1.3   TLS_AES_256_GCM_SHA384            <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ Safari 13.0 (macOS 10.14.6)  TLSv1.3   TLS_AES_256_GCM_SHA384            <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ Apple ATS 9 iOS 9            TLSv1.2   ECDHE-ECDSA-AES256-GCM-SHA384     <span style="color:#008817;">256 bit ECDH (P-256)</span>
  Java 6u45                    No connection
  Java 7u25                    No connection
- Java 8u161                   TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">256 bit ECDH (P-256)</span>
- Java 11.0.2 (OpenJDK)        TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">256 bit ECDH (P-256)</span>
- Java 12.0.1 (OpenJDK)        TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">256 bit ECDH (P-256)</span>
- OpenSSL 1.0.2e               TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">256 bit ECDH (P-256)</span>
- OpenSSL 1.1.0l (Debian)      TLSv1.2   ECDHE-ECDSA-AES128-GCM-SHA256     <span style="color:#008817;">253 bit ECDH (X25519)</span>
- OpenSSL 1.1.1d (Debian)      TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">253 bit ECDH (X25519)</span>
- Thunderbird (68.3)           TLSv1.3   TLS_AES_128_GCM_SHA256            <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ Java 8u161                   TLSv1.2   ECDHE-ECDSA-AES256-GCM-SHA384     <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ Java 11.0.2 (OpenJDK)        TLSv1.3   TLS_AES_256_GCM_SHA384            <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ Java 12.0.1 (OpenJDK)        TLSv1.3   TLS_AES_256_GCM_SHA384            <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ OpenSSL 1.0.2e               TLSv1.2   ECDHE-ECDSA-AES256-GCM-SHA384     <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ OpenSSL 1.1.0l (Debian)      TLSv1.2   ECDHE-ECDSA-AES256-GCM-SHA384     <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ OpenSSL 1.1.1d (Debian)      TLSv1.3   TLS_AES_256_GCM_SHA384            <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ Thunderbird (68.3)           TLSv1.3   TLS_AES_256_GCM_SHA384            <span style="color:#008817;">253 bit ECDH (X25519)</span>
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Rating (experimental) </span>
@@ -413,10 +412,10 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>84
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2022-02-13 04:29:08 [ 106s] --&gt;&gt; 138.68.60.208:443 (app.passculture.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2022-02-20 04:27:23 [ 103s] --&gt;&gt; 67.207.80.24:443 (app.passculture.beta.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="font-weight:bold;">Done testing now all IP addresses (on port 443): </span>54.241.68.193 138.68.60.208
+<span style="font-weight:bold;">Done testing now all IP addresses (on port 443): </span>34.204.131.44 67.207.80.24
 
 </pre>
 </body>
