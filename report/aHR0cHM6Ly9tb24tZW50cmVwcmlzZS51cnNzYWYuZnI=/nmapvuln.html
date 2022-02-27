@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln mon-entreprise.urssaf.fr</pre>
-<p class="lead">Sun Feb 20 04:02:26 2022 – Sun Feb 20 04:02:46 2022<br>1 hosts scanned.
+<p class="lead">Sun Feb 27 04:13:10 2022 – Sun Feb 27 04:14:53 2022<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -76,7 +76,7 @@
 </tr></thead>
 <tbody><tr>
 <td><span class="label label-success">up</span></td>
-<td>34.196.254.27</td>
+<td>54.205.240.192</td>
 <td>mon-entreprise.urssaf.fr</td>
 <td>2</td>
 <td>0</td>
@@ -91,12 +91,12 @@
             });
           </script><h2 id="onlinehosts" class="target">Online Hosts</h2>
 <div class="panel panel-default">
-<div class="panel-heading clickable" data-toggle="collapse" data-target="#34-196-254-27"><h3 class="panel-title">34.196.254.27 - mon-entreprise.urssaf.fr</h3></div>
-<div class="panel-body collapse in" id="34-196-254-27">
+<div class="panel-heading clickable" data-toggle="collapse" data-target="#54-205-240-192"><h3 class="panel-title">54.205.240.192 - mon-entreprise.urssaf.fr</h3></div>
+<div class="panel-body collapse in" id="54-205-240-192">
 <h4>Hostnames</h4>
 <ul>
 <li>mon-entreprise.urssaf.fr (user)</li>
-<li>ec2-34-196-254-27.compute-1.amazonaws.com (PTR)</li>
+<li>ec2-54-205-240-192.compute-1.amazonaws.com (PTR)</li>
 </ul>
 <h4>Ports</h4>
 <div class="table-responsive"><table class="table table-bordered">
@@ -122,27 +122,32 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, RPCCheck, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+  DNSStatusRequestTCP, GenericLines, Help, RPCCheck, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe: 
     HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 20 Feb 2022 04:02:43 GMT
-  FourOhFourRequest, GetRequest, HTTPOptions: 
-    HTTP/1.0 400 Bad Request
-    content-length: 19
-    date: Sun, 20 Feb 2022 04:02:37 GMT
-    Missing host header
-  RTSPRequest: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 20 Feb 2022 04:02:38 GMT
-  SMBProgNeg: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 20 Feb 2022 04:02:44 GMT
-  X11Probe: 
-    HTTP/1.1 400 Bad Request
-    content-length: 0
-    date: Sun, 20 Feb 2022 04:02:37 GMT</pre>
+    Content-Type: text/plain; charset=utf-8
+    Connection: close
+    Request
+  FourOhFourRequest: 
+    HTTP/1.0 404 Not Found
+    Age: 0
+    Content-Length: 0
+    Date: Sun, 27 Feb 2022 04:13:25 GMT
+    Server: Netlify
+    X-Nf-Request-Id: 01FWWP47BDXXVWWJ0WN6RWGQHV
+  GetRequest: 
+    HTTP/1.0 404 Not Found
+    Age: 0
+    Content-Length: 0
+    Date: Sun, 27 Feb 2022 04:13:20 GMT
+    Server: Netlify
+    X-Nf-Request-Id: 01FWWP42E9PJBH9E0NEBRWPCS4
+  HTTPOptions: 
+    HTTP/1.0 404 Not Found
+    Age: 0
+    Content-Length: 0
+    Date: Sun, 27 Feb 2022 04:13:20 GMT
+    Server: Netlify
+    X-Nf-Request-Id: 01FWWP42EHD9VY3ZNVWJRJ1TZA</pre>
 <h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
@@ -151,12 +156,40 @@
 <td title="Protocol">tcp</td>
 <td title="State / Reason">open<br>syn-ack</td>
 <td title="Service">https</td>
-<td title="Product"></td>
+<td title="Product">Netlify</td>
 <td title="Version"></td>
 <td title="Extra Info"></td>
 </tr>
 <tr><td colspan="7">
-<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>http-server-header</h5>
+<a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
+<pre style="white-space:pre-wrap; word-wrap:break-word;">
+  FourOhFourRequest: 
+    HTTP/1.0 404 Not Found
+    Age: 0
+    Content-Length: 0
+    Date: Sun, 27 Feb 2022 04:13:26 GMT
+    Server: Netlify
+    X-Nf-Request-Id: 01FWWP48BAW484YVYSXKS5R44Z
+  GenericLines, Help, Kerberos, LDAPSearchReq, LPDString, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+    HTTP/1.1 400 Bad Request
+    Content-Type: text/plain; charset=utf-8
+    Connection: close
+    Request
+  GetRequest: 
+    HTTP/1.0 404 Not Found
+    Age: 0
+    Content-Length: 0
+    Date: Sun, 27 Feb 2022 04:13:26 GMT
+    Server: Netlify
+    X-Nf-Request-Id: 01FWWP48AED3Z1D877JZ6GST06
+  HTTPOptions: 
+    HTTP/1.0 404 Not Found
+    Age: 0
+    Content-Length: 0
+    Date: Sun, 27 Feb 2022 04:13:26 GMT
+    Server: Netlify
+    X-Nf-Request-Id: 01FWWP48AWMP9KDM6WGJ1970PS</pre>
+<h5>http-server-header</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">Netlify</pre>
 </td></tr>
 <tr class="active">
@@ -186,7 +219,7 @@
 </tr></thead>
 <tbody>
 <tr>
-<td>34.196.254.27 - mon-entreprise.urssaf.fr</td>
+<td>54.205.240.192 - mon-entreprise.urssaf.fr</td>
 <td>80</td>
 <td>tcp</td>
 <td>http</td>
@@ -196,11 +229,11 @@
 <td></td>
 </tr>
 <tr>
-<td>34.196.254.27 - mon-entreprise.urssaf.fr</td>
+<td>54.205.240.192 - mon-entreprise.urssaf.fr</td>
 <td>443</td>
 <td>tcp</td>
 <td>https</td>
-<td></td>
+<td>Netlify</td>
 <td></td>
 <td></td>
 <td></td>

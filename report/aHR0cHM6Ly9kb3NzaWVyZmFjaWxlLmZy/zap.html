@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 20 Feb 2022 03:01:20
+		Generated on Sun, 27 Feb 2022 03:03:42
 	</h3>
 
 	
@@ -160,7 +160,7 @@ td {
 					<div>Low</div>
 				</td>
 				<td align="center">
-					<div>5</div>
+					<div>6</div>
 				</td>
 			</tr>
 			<tr>
@@ -227,6 +227,11 @@ td {
 				<td><a href="#10035">Strict-Transport-Security Header Not Set</a></td>
 				<td align="center" class="risk-1">Low</td>
 				<td align="center">3</td>
+			</tr>
+			<tr>
+				<td><a href="#10096">Timestamp Disclosure - Unix</a></td>
+				<td align="center" class="risk-1">Low</td>
+				<td align="center">1</td>
 			</tr>
 			<tr>
 				<td><a href="#10094">Base64 Disclosure</a></td>
@@ -989,6 +994,85 @@ td {
 		
 			<table class="results">
 				<tr height="24">
+					<th width="20%" class="risk-1"><a
+						id="10096"></a>
+						<div>Low</div></th>
+					<th class="risk-1">Timestamp Disclosure - Unix</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>A timestamp was disclosed by the application/web server - Unix</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://dossierfacile.fr">https://dossierfacile.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">51894208</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">1</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="http://projects.webappsec.org/w/page/13246936/Information%20Leakage">http://projects.webappsec.org/w/page/13246936/Information%20Leakage</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10096/">10096</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
 					<th width="20%" class="risk-0"><a
 						id="10094"></a>
 						<div>Informational</div></th>
@@ -1028,7 +1112,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">LnDcwxxlBuP8KJzzkle_QlQTzhhh3v-SnF_08_WFM0u8nyzGkdRWVw==</td>
+						<td width="80%">cXwNwjdEHLR-srCwIwIy5AWIm8E9GmtWQ02FbEx3dwUDBh6zBtlvLA==</td>
 					</tr>
 				
 					<tr>
@@ -1080,7 +1164,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">PJoqwdQDGiuVHISCMzfN3DcDf7i8Sq685RFqQWzHz7xTqMQotG6I6w==</td>
+						<td width="80%">i3IlwmvpB3axlvInIpILRlmGbroZQB9yAYvhP91ubw6v_CVHmawn-A==</td>
 					</tr>
 				
 					<tr>
@@ -1106,7 +1190,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">dh3ZKF_weEC11CjdBtU6hFK0Uq_VuVcTPfk3YLbFeBu9e22eyF03ew==</td>
+						<td width="80%">l_udsTJ1tdly5K4qLLT-FHkYwxlsuIZvN0H3cr8s74l5BsV3tVsRqg==</td>
 					</tr>
 				
 				<tr>
@@ -1185,7 +1269,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;a data-v-053a8165=&quot;&quot; href=&quot;#&quot; class=&quot;fr-tile__link&quot;&gt;Démarquez-vous grâce à un dossier de qualité&lt;/a&gt;</td>
+						<td width="80%">&lt;a data-v-26f250d1=&quot;&quot; href=&quot;#&quot; class=&quot;fr-tile__link&quot;&gt;Démarquez-vous grâce à un dossier de qualité&lt;/a&gt;</td>
 					</tr>
 				
 				<tr>
