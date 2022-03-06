@@ -21,11 +21,11 @@
 ###########################################################</span>
 
  Using &quot;OpenSSL 1.0.2-chacha (1.0.2k-dev)&quot; [~183 ciphers]
- on fv-az201-504:/home/testssl/bin/openssl.Linux.x86_64
+ on fv-az154-869:/home/testssl/bin/openssl.Linux.x86_64
  (built: &quot;Jan 18 17:12:17 2019&quot;, platform: &quot;linux-x86_64&quot;)
 
 
-<span style="color:white;background-color:black;"> Start 2022-02-27 01:13:47        --&gt;&gt; 185.231.164.12:443 (annuaire-entreprises.data.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2022-03-06 01:15:21        --&gt;&gt; 185.231.164.12:443 (annuaire-entreprises.data.gouv.fr) &lt;&lt;--</span>
 
  rDNS (185.231.164.12):  --
  Service detected:       HTTP
@@ -107,15 +107,15 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Server key size              </span>RSA 2048 bits (exponent is 65537)
 <span style="font-weight:bold;"> Server key usage             </span>Digital Signature, Key Encipherment
 <span style="font-weight:bold;"> Server extended key usage    </span>TLS Web Server Authentication, TLS Web Client Authentication
-<span style="font-weight:bold;"> Serial                       </span>036E9069A54D51D1ED9F273040D2E91720DC (OK: length 18)
-<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 F20AD835AD068DD574DFBEB15063C698D54AF14E
-                              SHA256 5DB0E6B2C4DD67E17BC031ADF43EF16A92AC52141CFD31E32135BC0FCE607B6B
+<span style="font-weight:bold;"> Serial                       </span>035A3A5DF9ABF3939CBE3EECCC256920D6D8 (OK: length 18)
+<span style="font-weight:bold;"> Fingerprints                 </span>SHA1 F7908887D652E553BC6574DF6F0535D53C7BC3C8
+                              SHA256 CE83506163FC1AFCC5E71C97A2FB012925A770D8A078D37B91D629A3214CE8E3
 <span style="font-weight:bold;"> Common Name (CN)             </span><i>annuaire-entreprises.data.gouv.fr </i>
 <span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>annuaire-entreprises.data.gouv.fr </i>
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (same w/o SNI)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#e52207;">expires &lt; 15 days (2)</span> (2021-12-01 01:55 --&gt; 2022-03-01 01:55)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">79 &gt;= 30 days</span> (2022-02-23 12:57 --&gt; 2022-05-24 12:57)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
@@ -123,16 +123,17 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> OCSP must staple extension   </span>--
 <span style="font-weight:bold;"> DNS CAA RR</span> (experimental)    <span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Certificate Transparency     </span><span style="color:#008817;">yes</span> (certificate extension)
-<span style="font-weight:bold;"> Certificates provided</span>        2
+<span style="font-weight:bold;"> Certificates provided</span>        3
 <span style="font-weight:bold;"> Issuer                       </span><i>R3</i> (<i>Let&apos;s Encrypt</i> from <i>US</i>)
 <span style="font-weight:bold;"> Intermediate cert validity   </span>#1: <span style="color:#008817;">ok &gt; 40 days</span> (2025-09-15 16:00). <i>R3</i> &lt;-- <i>ISRG Root X1</i>
+                              #2: <span style="color:#008817;">ok &gt; 40 days</span> (2024-09-30 18:14). <i>ISRG Root X1</i> &lt;-- <i>DST Root CA X3</i>
 <span style="font-weight:bold;"> Intermediate Bad OCSP</span> (exp.) <span style="color:#008817;">Ok</span>
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
-<span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
+<span style="font-weight:bold;"> HTTP clock skew              </span>-1 sec from localtime
 <span style="font-weight:bold;"> IPv4 address in header       </span><span style="color:#c05600;">bln-server: 172.24.201.63</span>
                               (check if it&apos;s your IP address or e.g. a cluster IP)
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">730 days</span>=63072000 s<span style="color:#168092;">, just this domain</span>
@@ -165,7 +166,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> FREAK</span> (CVE-2015-0204)                     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> DROWN</span> (CVE-2016-0800, CVE-2016-0703)      <span style="color:#008817;font-weight:bold;">not vulnerable on this host and port (OK)</span>
                                            make sure you don&apos;t use this certificate elsewhere with SSLv2 enabled services
-                                           <a href="https://censys.io/ipv4?q=5DB0E6B2C4DD67E17BC031ADF43EF16A92AC52141CFD31E32135BC0FCE607B6B" style="color:black;text-decoration:none;">https://censys.io/ipv4?q=5DB0E6B2C4DD67E17BC031ADF43EF16A92AC52141CFD31E32135BC0FCE607B6B</a> could help you to find out
+                                           <a href="https://censys.io/ipv4?q=CE83506163FC1AFCC5E71C97A2FB012925A770D8A078D37B91D629A3214CE8E3" style="color:black;text-decoration:none;">https://censys.io/ipv4?q=CE83506163FC1AFCC5E71C97A2FB012925A770D8A078D37B91D629A3214CE8E3</a> could help you to find out
 <span style="font-weight:bold;"> LOGJAM</span> (CVE-2015-4000), experimental      <span style="color:#008817;">not vulnerable (OK):</span> no DH EXPORT ciphers, no common prime detected
 <span style="font-weight:bold;"> BEAST</span> (CVE-2011-3389)                     <span style="color:#008817;">not vulnerable (OK)</span>, no SSL3 or TLS1
 <span style="font-weight:bold;"> LUCKY13</span> (CVE-2013-0169), experimental     potentially <span style="color:#a86437;">VULNERABLE</span>, uses cipher block chaining (CBC) ciphers with TLS. Check patches
@@ -225,7 +226,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>81
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2022-02-27 01:15:26 [ 101s] --&gt;&gt; 185.231.164.12:443 (annuaire-entreprises.data.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2022-03-06 01:17:04 [ 106s] --&gt;&gt; 185.231.164.12:443 (annuaire-entreprises.data.gouv.fr) &lt;&lt;--</span>
 
 
 </pre>
