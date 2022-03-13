@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 6 Mar 2022 02:24:49
+		Generated on Sun, 13 Mar 2022 02:17:54
 	</h3>
 
 	
@@ -152,7 +152,7 @@ td {
 					<div>Medium</div>
 				</td>
 				<td align="center">
-					<div>5</div>
+					<div>4</div>
 				</td>
 			</tr>
 			<tr>
@@ -160,7 +160,7 @@ td {
 					<div>Low</div>
 				</td>
 				<td align="center">
-					<div>10</div>
+					<div>9</div>
 				</td>
 			</tr>
 			<tr>
@@ -168,7 +168,7 @@ td {
 					<div>Informational</div>
 				</td>
 				<td align="center">
-					<div>7</div>
+					<div>8</div>
 				</td>
 			</tr>
 			<tr>
@@ -194,14 +194,9 @@ td {
 					align="center">Number of Instances</th>
 			</tr>
 			<tr>
-				<td><a href="#10055">CSP: Wildcard Directive</a></td>
+				<td><a href="#10055">CSP: style-src unsafe-inline</a></td>
 				<td align="center" class="risk-2">Medium</td>
-				<td align="center">5</td>
-			</tr>
-			<tr>
-				<td><a href="#10055">CSP: script-src unsafe-inline</a></td>
-				<td align="center" class="risk-2">Medium</td>
-				<td align="center">5</td>
+				<td align="center">11</td>
 			</tr>
 			<tr>
 				<td><a href="#10038">Content Security Policy (CSP) Header Not Set</a></td>
@@ -239,14 +234,9 @@ td {
 				<td align="center">1</td>
 			</tr>
 			<tr>
-				<td><a href="#10015">Incomplete or No Cache-control Header Set</a></td>
-				<td align="center" class="risk-1">Low</td>
-				<td align="center">11</td>
-			</tr>
-			<tr>
 				<td><a href="#10063">Permissions Policy Header Not Set</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">9</td>
+				<td align="center">10</td>
 			</tr>
 			<tr>
 				<td><a href="#10040">Secure Pages Include Mixed Content</a></td>
@@ -271,7 +261,7 @@ td {
 			<tr>
 				<td><a href="#10094">Base64 Disclosure</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">4</td>
+				<td align="center">5</td>
 			</tr>
 			<tr>
 				<td><a href="#10038">Content Security Policy (CSP) Report-Only Header Found</a></td>
@@ -290,6 +280,11 @@ td {
 			</tr>
 			<tr>
 				<td><a href="#10109">Modern Web Application</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">11</td>
+			</tr>
+			<tr>
+				<td><a href="#10015">Re-examine Cache-control Directives</a></td>
 				<td align="center" class="risk-0">Informational</td>
 				<td align="center">11</td>
 			</tr>
@@ -315,18 +310,12 @@ td {
 					<th width="20%" class="risk-2"><a
 						id="10055"></a>
 						<div>Medium</div></th>
-					<th class="risk-2">CSP: Wildcard Directive</th>
+					<th class="risk-2">CSP: style-src unsafe-inline</th>
 				</tr>
 				<tr>
 					<td width="20%">Description</td>
 					<td width="80%">
-							<div>The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: </div>
-							<br />
-						
-							<div>frame-ancestors, form-action</div>
-							<br />
-						
-							<div>The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</div>
+							<div>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</div>
 							
 						</td>
 				</tr>
@@ -357,7 +346,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;; connect-src &#39;self&#39; https://api-adresse.data.gouv.fr/search/  https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39; &#39;unsafe-inline&#39; blob:; style-src &#39;self&#39;; upgrade-insecure-requests</td>
+						<td width="80%">default-src &#39;self&#39;; object-src &#39;self&#39;; worker-src blob:; connect-src &#39;self&#39; https://cartobio.org/api/ https://api-adresse.data.gouv.fr/search/ https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; upgrade-insecure-requests; frame-ancestors &#39;none&#39;; child-src &#39;none&#39;; frame-src &#39;none&#39;; form-action &#39;self&#39; https://cartobio.org/api/; base-uri &#39;self&#39;;</td>
 					</tr>
 				
 					<tr>
@@ -383,7 +372,59 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;; connect-src &#39;self&#39; https://api-adresse.data.gouv.fr/search/  https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39; &#39;unsafe-inline&#39; blob:; style-src &#39;self&#39;; upgrade-insecure-requests</td>
+						<td width="80%">default-src &#39;self&#39;; object-src &#39;self&#39;; worker-src blob:; connect-src &#39;self&#39; https://cartobio.org/api/ https://api-adresse.data.gouv.fr/search/ https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; upgrade-insecure-requests; frame-ancestors &#39;none&#39;; child-src &#39;none&#39;; frame-src &#39;none&#39;; form-action &#39;self&#39; https://cartobio.org/api/; base-uri &#39;self&#39;;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/api/notifications">https://cartobio.org/api/notifications</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39;; object-src &#39;self&#39;; worker-src blob:; connect-src &#39;self&#39; https://cartobio.org/api/ https://api-adresse.data.gouv.fr/search/ https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; upgrade-insecure-requests; frame-ancestors &#39;none&#39;; child-src &#39;none&#39;; frame-src &#39;none&#39;; form-action &#39;self&#39; https://cartobio.org/api/; base-uri &#39;self&#39;;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/">https://cartobio.org/geoserver/gwc/service/tms/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39;; object-src &#39;self&#39;; worker-src blob:; connect-src &#39;self&#39; https://cartobio.org/api/ https://api-adresse.data.gouv.fr/search/ https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; upgrade-insecure-requests; frame-ancestors &#39;none&#39;; child-src &#39;none&#39;; frame-src &#39;none&#39;; form-action &#39;self&#39; https://cartobio.org/api/; base-uri &#39;self&#39;;</td>
 					</tr>
 				
 					<tr>
@@ -409,7 +450,59 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;; connect-src &#39;self&#39; https://api-adresse.data.gouv.fr/search/  https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39; &#39;unsafe-inline&#39; blob:; style-src &#39;self&#39;; upgrade-insecure-requests</td>
+						<td width="80%">default-src &#39;self&#39;; object-src &#39;self&#39;; worker-src blob:; connect-src &#39;self&#39; https://cartobio.org/api/ https://api-adresse.data.gouv.fr/search/ https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; upgrade-insecure-requests; frame-ancestors &#39;none&#39;; child-src &#39;none&#39;; frame-src &#39;none&#39;; form-action &#39;self&#39; https://cartobio.org/api/; base-uri &#39;self&#39;;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/rest/web/geowebcache_logo.png">https://cartobio.org/geoserver/gwc/service/tms/rest/web/geowebcache_logo.png</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39;; object-src &#39;self&#39;; worker-src blob:; connect-src &#39;self&#39; https://cartobio.org/api/ https://api-adresse.data.gouv.fr/search/ https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; upgrade-insecure-requests; frame-ancestors &#39;none&#39;; child-src &#39;none&#39;; frame-src &#39;none&#39;; form-action &#39;self&#39; https://cartobio.org/api/; base-uri &#39;self&#39;;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/rest/web/gwc.css">https://cartobio.org/geoserver/gwc/service/tms/rest/web/gwc.css</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39;; object-src &#39;self&#39;; worker-src blob:; connect-src &#39;self&#39; https://cartobio.org/api/ https://api-adresse.data.gouv.fr/search/ https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; upgrade-insecure-requests; frame-ancestors &#39;none&#39;; child-src &#39;none&#39;; frame-src &#39;none&#39;; form-action &#39;self&#39; https://cartobio.org/api/; base-uri &#39;self&#39;;</td>
 					</tr>
 				
 					<tr>
@@ -435,7 +528,59 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;; connect-src &#39;self&#39; https://api-adresse.data.gouv.fr/search/  https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39; &#39;unsafe-inline&#39; blob:; style-src &#39;self&#39;; upgrade-insecure-requests</td>
+						<td width="80%">default-src &#39;self&#39;; object-src &#39;self&#39;; worker-src blob:; connect-src &#39;self&#39; https://cartobio.org/api/ https://api-adresse.data.gouv.fr/search/ https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; upgrade-insecure-requests; frame-ancestors &#39;none&#39;; child-src &#39;none&#39;; frame-src &#39;none&#39;; form-action &#39;self&#39; https://cartobio.org/api/; base-uri &#39;self&#39;;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/s/">https://cartobio.org/s/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39;; object-src &#39;self&#39;; worker-src blob:; connect-src &#39;self&#39; https://cartobio.org/api/ https://api-adresse.data.gouv.fr/search/ https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; upgrade-insecure-requests; frame-ancestors &#39;none&#39;; child-src &#39;none&#39;; frame-src &#39;none&#39;; form-action &#39;self&#39; https://cartobio.org/api/; base-uri &#39;self&#39;;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/s/api">https://cartobio.org/s/api</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39;; object-src &#39;self&#39;; worker-src blob:; connect-src &#39;self&#39; https://cartobio.org/api/ https://api-adresse.data.gouv.fr/search/ https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; upgrade-insecure-requests; frame-ancestors &#39;none&#39;; child-src &#39;none&#39;; frame-src &#39;none&#39;; form-action &#39;self&#39; https://cartobio.org/api/; base-uri &#39;self&#39;;</td>
 					</tr>
 				
 					<tr>
@@ -461,210 +606,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;; connect-src &#39;self&#39; https://api-adresse.data.gouv.fr/search/  https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39; &#39;unsafe-inline&#39; blob:; style-src &#39;self&#39;; upgrade-insecure-requests</td>
+						<td width="80%">default-src &#39;self&#39;; object-src &#39;self&#39;; worker-src blob:; connect-src &#39;self&#39; https://cartobio.org/api/ https://api-adresse.data.gouv.fr/search/ https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39;; style-src &#39;self&#39; &#39;unsafe-inline&#39;; upgrade-insecure-requests; frame-ancestors &#39;none&#39;; child-src &#39;none&#39;; frame-src &#39;none&#39;; form-action &#39;self&#39; https://cartobio.org/api/; base-uri &#39;self&#39;;</td>
 					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">5</td>
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%">
-							<a href="http://www.w3.org/TR/CSP2/">http://www.w3.org/TR/CSP2/</a>
-							<br />
-						
-							<a href="http://www.w3.org/TR/CSP/">http://www.w3.org/TR/CSP/</a>
-							<br />
-						
-							<a href="http://caniuse.com/#search=content+security+policy">http://caniuse.com/#search=content+security+policy</a>
-							<br />
-						
-							<a href="http://content-security-policy.com/">http://content-security-policy.com/</a>
-							<br />
-						
-							<a href="https://github.com/shapesecurity/salvation">https://github.com/shapesecurity/salvation</a>
-							<br />
-						
-							<a href="https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources">https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</a>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%">15</td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10055/">10055</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
-		
-			<table class="results">
-				<tr height="24">
-					<th width="20%" class="risk-2"><a
-						id="10055"></a>
-						<div>Medium</div></th>
-					<th class="risk-2">CSP: script-src unsafe-inline</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>script-src includes unsafe-inline.</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org">https://cartobio.org</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;; connect-src &#39;self&#39; https://api-adresse.data.gouv.fr/search/  https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39; &#39;unsafe-inline&#39; blob:; style-src &#39;self&#39;; upgrade-insecure-requests</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/api">https://cartobio.org/api</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;; connect-src &#39;self&#39; https://api-adresse.data.gouv.fr/search/  https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39; &#39;unsafe-inline&#39; blob:; style-src &#39;self&#39;; upgrade-insecure-requests</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio:anon_rpgbio_">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio:anon_rpgbio_</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;; connect-src &#39;self&#39; https://api-adresse.data.gouv.fr/search/  https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39; &#39;unsafe-inline&#39; blob:; style-src &#39;self&#39;; upgrade-insecure-requests</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/robots.txt">https://cartobio.org/robots.txt</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;; connect-src &#39;self&#39; https://api-adresse.data.gouv.fr/search/  https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39; &#39;unsafe-inline&#39; blob:; style-src &#39;self&#39;; upgrade-insecure-requests</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/sitemap.xml">https://cartobio.org/sitemap.xml</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;; connect-src &#39;self&#39; https://api-adresse.data.gouv.fr/search/  https://openmaptiles.geo.data.gouv.fr/ https://openmaptiles.github.io/osm-bright-gl-style/ https://wxs.ign.fr/essentiels/geoportail/wmts https://back.datapass.api.gouv.fr/api/; font-src &#39;self&#39; https://openmaptiles.geo.data.gouv.fr/fonts/; img-src &#39;self&#39; data: blob:; script-src &#39;self&#39; &#39;unsafe-inline&#39; blob:; style-src &#39;self&#39;; upgrade-insecure-requests</td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					<td width="80%">5</td>
+					<td width="80%">11</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -986,32 +933,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/0">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpg_2020@EPSG%3A900913@pbf/0</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Access-Control-Allow-Origin: *</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio:anon_rpg_2020@EPSG:900913@pbf/">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio:anon_rpg_2020@EPSG:900913@pbf/</a></td>
 					</tr>
 					<tr>
@@ -1117,6 +1038,32 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/rest/web/gwc.css">https://cartobio.org/geoserver/gwc/service/tms/rest/web/gwc.css</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Access-Control-Allow-Origin: *</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/s/">https://cartobio.org/s/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2442,348 +2389,6 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-1"><a
-						id="10015"></a>
-						<div>Low</div></th>
-					<th class="risk-1">Incomplete or No Cache-control Header Set</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content.</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org">https://cartobio.org</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=0</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/api">https://cartobio.org/api</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=0</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/api/espacecollaboratif/">https://cartobio.org/api/espacecollaboratif/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=0</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/">https://cartobio.org/geoserver/gwc/service/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=0</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0">https://cartobio.org/geoserver/gwc/service/tms/1.0.0</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=0</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpgbio_2020@EPSG%3A4326@geojson">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpgbio_2020@EPSG%3A4326@geojson</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=0</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpgbio_2020@EPSG%3A4326@pbf">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpgbio_2020@EPSG%3A4326@pbf</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=0</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio:anon_rpg_2020@EPSG:900913@pbf/">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio:anon_rpg_2020@EPSG:900913@pbf/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=0</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio:rpgbio_points_2019@EPSG:900913@pbf/">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio:rpgbio_points_2019@EPSG:900913@pbf/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=0</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/robots.txt">https://cartobio.org/robots.txt</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=0</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/sitemap.xml">https://cartobio.org/sitemap.xml</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=0</td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					<td width="80%">11</td>
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%">
-							<a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a>
-							<br />
-						
-							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/525.html">525</a></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%">13</td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10015/">10015</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
-		
-			<table class="results">
-				<tr height="24">
-					<th width="20%" class="risk-1"><a
 						id="10063"></a>
 						<div>Low</div></th>
 					<th class="risk-1">Permissions Policy Header Not Set</th>
@@ -2828,7 +2433,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/js/app.89568e0e.js">https://cartobio.org/js/app.89568e0e.js</a></td>
+						<td width="80%"><a href="https://cartobio.org/js/app.bb1a9021.js">https://cartobio.org/js/app.bb1a9021.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2880,7 +2485,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/js/chunk-vendors.2fd6453c.js">https://cartobio.org/js/chunk-vendors.2fd6453c.js</a></td>
+						<td width="80%"><a href="https://cartobio.org/js/chunk-vendors.4937e24a.js">https://cartobio.org/js/chunk-vendors.4937e24a.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2906,7 +2511,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/js/map.cc35f041.js">https://cartobio.org/js/map.cc35f041.js</a></td>
+						<td width="80%"><a href="https://cartobio.org/js/map.9ad39750.js">https://cartobio.org/js/map.9ad39750.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2958,7 +2563,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/js/map~prototypes.8daee50a.js">https://cartobio.org/js/map~prototypes.8daee50a.js</a></td>
+						<td width="80%"><a href="https://cartobio.org/js/map~prototypes.a27f379f.js">https://cartobio.org/js/map~prototypes.a27f379f.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2984,7 +2589,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/js/operator.551ce2b8.js">https://cartobio.org/js/operator.551ce2b8.js</a></td>
+						<td width="80%"><a href="https://cartobio.org/js/operator.28fe4e4f.js">https://cartobio.org/js/operator.28fe4e4f.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3010,7 +2615,33 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/js/prototypes.c4221620.js">https://cartobio.org/js/prototypes.c4221620.js</a></td>
+						<td width="80%"><a href="https://cartobio.org/js/prototypes.9dba91b3.js">https://cartobio.org/js/prototypes.9dba91b3.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/s/index.js">https://cartobio.org/s/index.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3035,7 +2666,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">9</td>
+					<td width="80%">10</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -3978,7 +3609,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/js/app.89568e0e.js">https://cartobio.org/js/app.89568e0e.js</a></td>
+						<td width="80%"><a href="https://cartobio.org/js/app.bb1a9021.js">https://cartobio.org/js/app.bb1a9021.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4030,7 +3661,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/js/prototypes.c4221620.js">https://cartobio.org/js/prototypes.c4221620.js</a></td>
+						<td width="80%"><a href="https://cartobio.org/js/prototypes.9dba91b3.js">https://cartobio.org/js/prototypes.9dba91b3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4053,9 +3684,35 @@ td {
 						<td width="80%">org/officeDocument/2006/docPropsVTypes</td>
 					</tr>
 				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/s/index.js">https://cartobio.org/s/index.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ</td>
+					</tr>
+				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">4</td>
+					<td width="80%">5</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -4279,33 +3936,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/api/espacecollaboratif/">https://cartobio.org/api/espacecollaboratif/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">user</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/js/app.89568e0e.js">https://cartobio.org/js/app.89568e0e.js</a></td>
+						<td width="80%"><a href="https://cartobio.org/js/app.bb1a9021.js">https://cartobio.org/js/app.bb1a9021.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4357,7 +3988,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/js/chunk-vendors.2fd6453c.js">https://cartobio.org/js/chunk-vendors.2fd6453c.js</a></td>
+						<td width="80%"><a href="https://cartobio.org/js/chunk-vendors.4937e24a.js">https://cartobio.org/js/chunk-vendors.4937e24a.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4383,7 +4014,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/js/chunk-vendors.2fd6453c.js">https://cartobio.org/js/chunk-vendors.2fd6453c.js</a></td>
+						<td width="80%"><a href="https://cartobio.org/js/chunk-vendors.4937e24a.js">https://cartobio.org/js/chunk-vendors.4937e24a.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4409,7 +4040,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/js/chunk-vendors.2fd6453c.js">https://cartobio.org/js/chunk-vendors.2fd6453c.js</a></td>
+						<td width="80%"><a href="https://cartobio.org/js/chunk-vendors.4937e24a.js">https://cartobio.org/js/chunk-vendors.4937e24a.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4435,7 +4066,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/js/chunk-vendors.2fd6453c.js">https://cartobio.org/js/chunk-vendors.2fd6453c.js</a></td>
+						<td width="80%"><a href="https://cartobio.org/js/chunk-vendors.4937e24a.js">https://cartobio.org/js/chunk-vendors.4937e24a.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4461,7 +4092,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/js/map.cc35f041.js">https://cartobio.org/js/map.cc35f041.js</a></td>
+						<td width="80%"><a href="https://cartobio.org/js/map.9ad39750.js">https://cartobio.org/js/map.9ad39750.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4487,7 +4118,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/js/operator.551ce2b8.js">https://cartobio.org/js/operator.551ce2b8.js</a></td>
+						<td width="80%"><a href="https://cartobio.org/js/operator.28fe4e4f.js">https://cartobio.org/js/operator.28fe4e4f.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4513,7 +4144,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/js/prototypes.c4221620.js">https://cartobio.org/js/prototypes.c4221620.js</a></td>
+						<td width="80%"><a href="https://cartobio.org/js/prototypes.9dba91b3.js">https://cartobio.org/js/prototypes.9dba91b3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4539,7 +4170,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/js/prototypes.c4221620.js">https://cartobio.org/js/prototypes.c4221620.js</a></td>
+						<td width="80%"><a href="https://cartobio.org/js/prototypes.9dba91b3.js">https://cartobio.org/js/prototypes.9dba91b3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4565,7 +4196,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/js/prototypes.c4221620.js">https://cartobio.org/js/prototypes.c4221620.js</a></td>
+						<td width="80%"><a href="https://cartobio.org/js/prototypes.9dba91b3.js">https://cartobio.org/js/prototypes.9dba91b3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4586,6 +4217,32 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">TODO</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/s/index.js">https://cartobio.org/s/index.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">dB</td>
 					</tr>
 				
 				<tr>
@@ -4661,17 +4318,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script&gt;var _paq = window._paq || [];
-    /* tracker methods like &quot;setCustomDimension&quot; should be called before &quot;trackPageView&quot; */
-    _paq.push([&#39;setDomains&#39;, [&#39;cartobio.org&#39;, &#39;www.cartobio.org&#39;]]);
-    _paq.push([&#39;enableLinkTracking&#39;]);
-    _paq.push([&#39;enableHeartBeatTimer&#39;, 15]);
-    (function() {
-      _paq.push([&#39;setTrackerUrl&#39;, &#39;https://cartobio.org/s/&#39;]);
-      _paq.push([&#39;setSiteId&#39;, &#39;116&#39;]);
-      var d=document, g=d.createElement(&#39;script&#39;), s=d.getElementsByTagName(&#39;script&#39;)[0];
-      g.type=&#39;text/javascript&#39;; g.async=true; g.defer=true; g.src=&#39;omotam.js&#39;; s.parentNode.insertBefore(g,s);
-    })();&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;/js/chunk-vendors.4937e24a.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -4697,17 +4344,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script&gt;var _paq = window._paq || [];
-    /* tracker methods like &quot;setCustomDimension&quot; should be called before &quot;trackPageView&quot; */
-    _paq.push([&#39;setDomains&#39;, [&#39;cartobio.org&#39;, &#39;www.cartobio.org&#39;]]);
-    _paq.push([&#39;enableLinkTracking&#39;]);
-    _paq.push([&#39;enableHeartBeatTimer&#39;, 15]);
-    (function() {
-      _paq.push([&#39;setTrackerUrl&#39;, &#39;https://cartobio.org/s/&#39;]);
-      _paq.push([&#39;setSiteId&#39;, &#39;116&#39;]);
-      var d=document, g=d.createElement(&#39;script&#39;), s=d.getElementsByTagName(&#39;script&#39;)[0];
-      g.type=&#39;text/javascript&#39;; g.async=true; g.defer=true; g.src=&#39;omotam.js&#39;; s.parentNode.insertBefore(g,s);
-    })();&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;/js/chunk-vendors.4937e24a.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -4733,17 +4370,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script&gt;var _paq = window._paq || [];
-    /* tracker methods like &quot;setCustomDimension&quot; should be called before &quot;trackPageView&quot; */
-    _paq.push([&#39;setDomains&#39;, [&#39;cartobio.org&#39;, &#39;www.cartobio.org&#39;]]);
-    _paq.push([&#39;enableLinkTracking&#39;]);
-    _paq.push([&#39;enableHeartBeatTimer&#39;, 15]);
-    (function() {
-      _paq.push([&#39;setTrackerUrl&#39;, &#39;https://cartobio.org/s/&#39;]);
-      _paq.push([&#39;setSiteId&#39;, &#39;116&#39;]);
-      var d=document, g=d.createElement(&#39;script&#39;), s=d.getElementsByTagName(&#39;script&#39;)[0];
-      g.type=&#39;text/javascript&#39;; g.async=true; g.defer=true; g.src=&#39;omotam.js&#39;; s.parentNode.insertBefore(g,s);
-    })();&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;/js/chunk-vendors.4937e24a.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -4799,17 +4426,33 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script&gt;var _paq = window._paq || [];
-    /* tracker methods like &quot;setCustomDimension&quot; should be called before &quot;trackPageView&quot; */
-    _paq.push([&#39;setDomains&#39;, [&#39;cartobio.org&#39;, &#39;www.cartobio.org&#39;]]);
-    _paq.push([&#39;enableLinkTracking&#39;]);
-    _paq.push([&#39;enableHeartBeatTimer&#39;, 15]);
-    (function() {
-      _paq.push([&#39;setTrackerUrl&#39;, &#39;https://cartobio.org/s/&#39;]);
-      _paq.push([&#39;setSiteId&#39;, &#39;116&#39;]);
-      var d=document, g=d.createElement(&#39;script&#39;), s=d.getElementsByTagName(&#39;script&#39;)[0];
-      g.type=&#39;text/javascript&#39;; g.async=true; g.defer=true; g.src=&#39;omotam.js&#39;; s.parentNode.insertBefore(g,s);
-    })();&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;/js/chunk-vendors.4937e24a.js&quot;&gt;&lt;/script&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/georem-stats/">https://cartobio.org/georem-stats/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;script src=&quot;/js/chunk-vendors.4937e24a.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -4835,17 +4478,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script&gt;var _paq = window._paq || [];
-    /* tracker methods like &quot;setCustomDimension&quot; should be called before &quot;trackPageView&quot; */
-    _paq.push([&#39;setDomains&#39;, [&#39;cartobio.org&#39;, &#39;www.cartobio.org&#39;]]);
-    _paq.push([&#39;enableLinkTracking&#39;]);
-    _paq.push([&#39;enableHeartBeatTimer&#39;, 15]);
-    (function() {
-      _paq.push([&#39;setTrackerUrl&#39;, &#39;https://cartobio.org/s/&#39;]);
-      _paq.push([&#39;setSiteId&#39;, &#39;116&#39;]);
-      var d=document, g=d.createElement(&#39;script&#39;), s=d.getElementsByTagName(&#39;script&#39;)[0];
-      g.type=&#39;text/javascript&#39;; g.async=true; g.defer=true; g.src=&#39;omotam.js&#39;; s.parentNode.insertBefore(g,s);
-    })();&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;/js/chunk-vendors.4937e24a.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -4871,23 +4504,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script&gt;var _paq = window._paq || [];
-    /* tracker methods like &quot;setCustomDimension&quot; should be called before &quot;trackPageView&quot; */
-    _paq.push([&#39;setDomains&#39;, [&#39;cartobio.org&#39;, &#39;www.cartobio.org&#39;]]);
-    _paq.push([&#39;enableLinkTracking&#39;]);
-    _paq.push([&#39;enableHeartBeatTimer&#39;, 15]);
-    (function() {
-      _paq.push([&#39;setTrackerUrl&#39;, &#39;https://cartobio.org/s/&#39;]);
-      _paq.push([&#39;setSiteId&#39;, &#39;116&#39;]);
-      var d=document, g=d.createElement(&#39;script&#39;), s=d.getElementsByTagName(&#39;script&#39;)[0];
-      g.type=&#39;text/javascript&#39;; g.async=true; g.defer=true; g.src=&#39;omotam.js&#39;; s.parentNode.insertBefore(g,s);
-    })();&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;/js/chunk-vendors.4937e24a.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/js/chunk-vendors.2fd6453c.js">https://cartobio.org/js/chunk-vendors.2fd6453c.js</a></td>
+						<td width="80%"><a href="https://cartobio.org/js/chunk-vendors.4937e24a.js">https://cartobio.org/js/chunk-vendors.4937e24a.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4913,42 +4536,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/plugins/">https://cartobio.org/plugins/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;script&gt;var _paq = window._paq || [];
-    /* tracker methods like &quot;setCustomDimension&quot; should be called before &quot;trackPageView&quot; */
-    _paq.push([&#39;setDomains&#39;, [&#39;cartobio.org&#39;, &#39;www.cartobio.org&#39;]]);
-    _paq.push([&#39;enableLinkTracking&#39;]);
-    _paq.push([&#39;enableHeartBeatTimer&#39;, 15]);
-    (function() {
-      _paq.push([&#39;setTrackerUrl&#39;, &#39;https://cartobio.org/s/&#39;]);
-      _paq.push([&#39;setSiteId&#39;, &#39;116&#39;]);
-      var d=document, g=d.createElement(&#39;script&#39;), s=d.getElementsByTagName(&#39;script&#39;)[0];
-      g.type=&#39;text/javascript&#39;; g.async=true; g.defer=true; g.src=&#39;omotam.js&#39;; s.parentNode.insertBefore(g,s);
-    })();&lt;/script&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://cartobio.org/robots.txt">https://cartobio.org/robots.txt</a></td>
 					</tr>
 					<tr>
@@ -4969,17 +4556,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script&gt;var _paq = window._paq || [];
-    /* tracker methods like &quot;setCustomDimension&quot; should be called before &quot;trackPageView&quot; */
-    _paq.push([&#39;setDomains&#39;, [&#39;cartobio.org&#39;, &#39;www.cartobio.org&#39;]]);
-    _paq.push([&#39;enableLinkTracking&#39;]);
-    _paq.push([&#39;enableHeartBeatTimer&#39;, 15]);
-    (function() {
-      _paq.push([&#39;setTrackerUrl&#39;, &#39;https://cartobio.org/s/&#39;]);
-      _paq.push([&#39;setSiteId&#39;, &#39;116&#39;]);
-      var d=document, g=d.createElement(&#39;script&#39;), s=d.getElementsByTagName(&#39;script&#39;)[0];
-      g.type=&#39;text/javascript&#39;; g.async=true; g.defer=true; g.src=&#39;omotam.js&#39;; s.parentNode.insertBefore(g,s);
-    })();&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;/js/chunk-vendors.4937e24a.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -5005,17 +4582,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script&gt;var _paq = window._paq || [];
-    /* tracker methods like &quot;setCustomDimension&quot; should be called before &quot;trackPageView&quot; */
-    _paq.push([&#39;setDomains&#39;, [&#39;cartobio.org&#39;, &#39;www.cartobio.org&#39;]]);
-    _paq.push([&#39;enableLinkTracking&#39;]);
-    _paq.push([&#39;enableHeartBeatTimer&#39;, 15]);
-    (function() {
-      _paq.push([&#39;setTrackerUrl&#39;, &#39;https://cartobio.org/s/&#39;]);
-      _paq.push([&#39;setSiteId&#39;, &#39;116&#39;]);
-      var d=document, g=d.createElement(&#39;script&#39;), s=d.getElementsByTagName(&#39;script&#39;)[0];
-      g.type=&#39;text/javascript&#39;; g.async=true; g.defer=true; g.src=&#39;omotam.js&#39;; s.parentNode.insertBefore(g,s);
-    })();&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;/js/chunk-vendors.4937e24a.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 				<tr>
@@ -5045,6 +4612,348 @@ td {
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/10109/">10109</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
+						id="10015"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Re-examine Cache-control Directives</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org">https://cartobio.org</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=0</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/api">https://cartobio.org/api</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=0</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/api/espacecollaboratif/">https://cartobio.org/api/espacecollaboratif/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=0</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/">https://cartobio.org/geoserver/gwc/service/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=0</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0">https://cartobio.org/geoserver/gwc/service/tms/1.0.0</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=0</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpgbio_2020@EPSG%3A4326@pbf">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio%3Aanon_rpgbio_2020@EPSG%3A4326@pbf</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=0</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio:anon_rpg_2020@EPSG:900913@pbf/">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio:anon_rpg_2020@EPSG:900913@pbf/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=0</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio:rpgbio_points_2019@EPSG:900913@pbf/">https://cartobio.org/geoserver/gwc/service/tms/1.0.0/cartobio:rpgbio_points_2019@EPSG:900913@pbf/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=0</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/robots.txt">https://cartobio.org/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=0</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/s/">https://cartobio.org/s/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=0</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://cartobio.org/sitemap.xml">https://cartobio.org/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=0</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">11</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Whenever possible ensure the cache-control HTTP header is set with &quot;no-cache, no-store, must-revalidate&quot;. If an asset should be cached consider setting the directives &quot;public, max-age, immutable&quot;.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a>
+							<br />
+						
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/525.html">525</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10015/">10015</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -5252,7 +5161,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://cartobio.org/js/map.cc35f041.js">https://cartobio.org/js/map.cc35f041.js</a></td>
+						<td width="80%"><a href="https://cartobio.org/js/map.9ad39750.js">https://cartobio.org/js/map.9ad39750.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"

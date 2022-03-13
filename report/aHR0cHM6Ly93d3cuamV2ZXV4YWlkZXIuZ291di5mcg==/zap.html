@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 6 Mar 2022 06:58:01
+		Generated on Sun, 13 Mar 2022 06:39:05
 	</h3>
 
 	
@@ -152,7 +152,7 @@ td {
 					<div>Medium</div>
 				</td>
 				<td align="center">
-					<div>4</div>
+					<div>5</div>
 				</td>
 			</tr>
 			<tr>
@@ -160,7 +160,7 @@ td {
 					<div>Low</div>
 				</td>
 				<td align="center">
-					<div>8</div>
+					<div>6</div>
 				</td>
 			</tr>
 			<tr>
@@ -168,7 +168,7 @@ td {
 					<div>Informational</div>
 				</td>
 				<td align="center">
-					<div>6</div>
+					<div>7</div>
 				</td>
 			</tr>
 			<tr>
@@ -194,6 +194,11 @@ td {
 					align="center">Number of Instances</th>
 			</tr>
 			<tr>
+				<td><a href="#10202">Absence of Anti-CSRF Tokens</a></td>
+				<td align="center" class="risk-2">Medium</td>
+				<td align="center">11</td>
+			</tr>
+			<tr>
 				<td><a href="#10038">Content Security Policy (CSP) Header Not Set</a></td>
 				<td align="center" class="risk-2">Medium</td>
 				<td align="center">11</td>
@@ -201,7 +206,7 @@ td {
 			<tr>
 				<td><a href="#10098">Cross-Domain Misconfiguration</a></td>
 				<td align="center" class="risk-2">Medium</td>
-				<td align="center">5</td>
+				<td align="center">6</td>
 			</tr>
 			<tr>
 				<td><a href="#10020">Missing Anti-clickjacking Header</a></td>
@@ -212,11 +217,6 @@ td {
 				<td><a href="#90003">Sub Resource Integrity Attribute Missing</a></td>
 				<td align="center" class="risk-2">Medium</td>
 				<td align="center">8</td>
-			</tr>
-			<tr>
-				<td><a href="#10202">Absence of Anti-CSRF Tokens</a></td>
-				<td align="center" class="risk-1">Low</td>
-				<td align="center">11</td>
 			</tr>
 			<tr>
 				<td><a href="#10010">Cookie No HttpOnly Flag</a></td>
@@ -232,11 +232,6 @@ td {
 				<td><a href="#10110">Dangerous JS Functions</a></td>
 				<td align="center" class="risk-1">Low</td>
 				<td align="center">1</td>
-			</tr>
-			<tr>
-				<td><a href="#10015">Incomplete or No Cache-control Header Set</a></td>
-				<td align="center" class="risk-1">Low</td>
-				<td align="center">11</td>
 			</tr>
 			<tr>
 				<td><a href="#10063">Permissions Policy Header Not Set</a></td>
@@ -269,6 +264,11 @@ td {
 				<td align="center">11</td>
 			</tr>
 			<tr>
+				<td><a href="#10015">Re-examine Cache-control Directives</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">11</td>
+			</tr>
+			<tr>
 				<td><a href="#10050">Retrieved from Cache</a></td>
 				<td align="center" class="risk-0">Informational</td>
 				<td align="center">12</td>
@@ -289,6 +289,408 @@ td {
 
 	
 		<h3>Alert Detail</h3>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-2"><a
+						id="10202"></a>
+						<div>Medium</div></th>
+					<th class="risk-2">Absence of Anti-CSRF Tokens</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>No Anti-CSRF tokens were found in a HTML submission form.</div>
+							<br />
+						
+							<div>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</div>
+							<br />
+						
+							<div>CSRF attacks are effective in a number of situations, including:</div>
+							<br />
+						
+							<div>    * The victim has an active session on the target site.</div>
+							<br />
+						
+							<div>    * The victim is authenticated via HTTP auth on the target site.</div>
+							<br />
+						
+							<div>    * The victim is on the same local network as the target site.</div>
+							<br />
+						
+							<div>CSRF has primarily been used to perform an action against a target site using the victim&#39;s privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr">https://www.jeveuxaider.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form aria-labelledby=&quot;newsletter-headline&quot; class=&quot;relative flex flex-col lg:flex-row lg:items-start&quot; data-v-56c01318&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/">https://www.jeveuxaider.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form aria-labelledby=&quot;newsletter-headline&quot; class=&quot;relative flex flex-col lg:flex-row lg:items-start&quot; data-v-56c01318&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/actualites/">https://www.jeveuxaider.gouv.fr/engagement/actualites/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form method=&quot;post&quot; class=&quot;gdpr-privacy-preferences-frm&quot; action=&quot;https://www.jeveuxaider.gouv.fr/engagement/wp-admin/admin-post.php&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/benevolat-ukraine/">https://www.jeveuxaider.gouv.fr/engagement/benevolat-ukraine/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form method=&quot;post&quot; class=&quot;gdpr-privacy-preferences-frm&quot; action=&quot;https://www.jeveuxaider.gouv.fr/engagement/wp-admin/admin-post.php&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/ecoles-et-universites/">https://www.jeveuxaider.gouv.fr/engagement/ecoles-et-universites/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form method=&quot;post&quot; class=&quot;gdpr-privacy-preferences-frm&quot; action=&quot;https://www.jeveuxaider.gouv.fr/engagement/wp-admin/admin-post.php&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/organisations/">https://www.jeveuxaider.gouv.fr/engagement/organisations/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form method=&quot;post&quot; class=&quot;gdpr-privacy-preferences-frm&quot; action=&quot;https://www.jeveuxaider.gouv.fr/engagement/wp-admin/admin-post.php&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/login">https://www.jeveuxaider.gouv.fr/login</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form class=&quot;el-form mt-4 el-form--label-top&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/password-reset">https://www.jeveuxaider.gouv.fr/password-reset</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form class=&quot;el-form mt-4 el-form--label-top&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/register/volontaire">https://www.jeveuxaider.gouv.fr/register/volontaire</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form class=&quot;el-form form-register-steps el-form--label-top&quot; data-v-f7bd9e88&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/territoires">https://www.jeveuxaider.gouv.fr/territoires</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&quot;#&quot; method=&quot;GET&quot; class=&quot;w-full flex md:ml-0 mb-0&quot; data-v-4980c36c&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/villes/paris">https://www.jeveuxaider.gouv.fr/villes/paris</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form class=&quot;el-form flex flex-wrap sm:flex-nowrap gap-4 sm:gap-8&quot; data-v-d17aa68e&gt;</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">11</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Phase: Architecture and Design</div>
+							<br />
+						
+							<div>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</div>
+							<br />
+						
+							<div>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</div>
+							<br />
+						
+							<div>Phase: Implementation</div>
+							<br />
+						
+							<div>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</div>
+							<br />
+						
+							<div>Phase: Architecture and Design</div>
+							<br />
+						
+							<div>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</div>
+							<br />
+						
+							<div>Note that this can be bypassed using XSS.</div>
+							<br />
+						
+							<div>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</div>
+							<br />
+						
+							<div>Note that this can be bypassed using XSS.</div>
+							<br />
+						
+							<div>Use the ESAPI Session Management control.</div>
+							<br />
+						
+							<div>This control includes a component for CSRF.</div>
+							<br />
+						
+							<div>Do not use the GET method for any request that triggers a state change.</div>
+							<br />
+						
+							<div>Phase: Implementation</div>
+							<br />
+						
+							<div>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="http://projects.webappsec.org/Cross-Site-Request-Forgery">http://projects.webappsec.org/Cross-Site-Request-Forgery</a>
+							<br />
+						
+							<a href="http://cwe.mitre.org/data/definitions/352.html">http://cwe.mitre.org/data/definitions/352.html</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">9</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10202/">10202</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
 		
 			<table class="results">
 				<tr height="24">
@@ -415,7 +817,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/organisations/">https://www.jeveuxaider.gouv.fr/engagement/organisations/</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/benevolat-ukraine/">https://www.jeveuxaider.gouv.fr/engagement/benevolat-ukraine/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -441,7 +843,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/inscription">https://www.jeveuxaider.gouv.fr/inscription</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/organisations/">https://www.jeveuxaider.gouv.fr/engagement/organisations/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -694,6 +1096,32 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/benevolat-ukraine/">https://www.jeveuxaider.gouv.fr/engagement/benevolat-ukraine/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">access-control-allow-origin: *</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/communication/">https://www.jeveuxaider.gouv.fr/engagement/communication/</a></td>
 					</tr>
 					<tr>
@@ -797,7 +1225,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">5</td>
+					<td width="80%">6</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -932,7 +1360,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/ecoles-et-universites/">https://www.jeveuxaider.gouv.fr/engagement/ecoles-et-universites/</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/benevolat-ukraine/">https://www.jeveuxaider.gouv.fr/engagement/benevolat-ukraine/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1439,408 +1867,6 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-1"><a
-						id="10202"></a>
-						<div>Low</div></th>
-					<th class="risk-1">Absence of Anti-CSRF Tokens</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>No Anti-CSRF tokens were found in a HTML submission form.</div>
-							<br />
-						
-							<div>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</div>
-							<br />
-						
-							<div>CSRF attacks are effective in a number of situations, including:</div>
-							<br />
-						
-							<div>    * The victim has an active session on the target site.</div>
-							<br />
-						
-							<div>    * The victim is authenticated via HTTP auth on the target site.</div>
-							<br />
-						
-							<div>    * The victim is on the same local network as the target site.</div>
-							<br />
-						
-							<div>CSRF has primarily been used to perform an action against a target site using the victim&#39;s privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr">https://www.jeveuxaider.gouv.fr</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form aria-labelledby=&quot;newsletter-headline&quot; class=&quot;relative flex flex-col lg:flex-row lg:items-start&quot; data-v-56c01318&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/">https://www.jeveuxaider.gouv.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form aria-labelledby=&quot;newsletter-headline&quot; class=&quot;relative flex flex-col lg:flex-row lg:items-start&quot; data-v-56c01318&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/actualites/">https://www.jeveuxaider.gouv.fr/engagement/actualites/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form method=&quot;post&quot; class=&quot;gdpr-privacy-preferences-frm&quot; action=&quot;https://www.jeveuxaider.gouv.fr/engagement/wp-admin/admin-post.php&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/ecoles-et-universites/">https://www.jeveuxaider.gouv.fr/engagement/ecoles-et-universites/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form method=&quot;post&quot; class=&quot;gdpr-privacy-preferences-frm&quot; action=&quot;https://www.jeveuxaider.gouv.fr/engagement/wp-admin/admin-post.php&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/organisations/">https://www.jeveuxaider.gouv.fr/engagement/organisations/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form method=&quot;post&quot; class=&quot;gdpr-privacy-preferences-frm&quot; action=&quot;https://www.jeveuxaider.gouv.fr/engagement/wp-admin/admin-post.php&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/login">https://www.jeveuxaider.gouv.fr/login</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form class=&quot;el-form mt-4 el-form--label-top&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/password-reset">https://www.jeveuxaider.gouv.fr/password-reset</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form class=&quot;el-form mt-4 el-form--label-top&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/register/volontaire">https://www.jeveuxaider.gouv.fr/register/volontaire</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form class=&quot;el-form form-register-steps el-form--label-top&quot; data-v-f7bd9e88&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/territoires">https://www.jeveuxaider.gouv.fr/territoires</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&quot;#&quot; method=&quot;GET&quot; class=&quot;w-full flex md:ml-0 mb-0&quot; data-v-4980c36c&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/villes/paris">https://www.jeveuxaider.gouv.fr/villes/paris</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form class=&quot;el-form flex flex-wrap sm:flex-nowrap gap-4 sm:gap-8&quot; data-v-d17aa68e&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/villes/toulouse">https://www.jeveuxaider.gouv.fr/villes/toulouse</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form class=&quot;el-form flex flex-wrap sm:flex-nowrap gap-4 sm:gap-8&quot; data-v-d17aa68e&gt;</td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					<td width="80%">11</td>
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>Phase: Architecture and Design</div>
-							<br />
-						
-							<div>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</div>
-							<br />
-						
-							<div>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</div>
-							<br />
-						
-							<div>Phase: Implementation</div>
-							<br />
-						
-							<div>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</div>
-							<br />
-						
-							<div>Phase: Architecture and Design</div>
-							<br />
-						
-							<div>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</div>
-							<br />
-						
-							<div>Note that this can be bypassed using XSS.</div>
-							<br />
-						
-							<div>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</div>
-							<br />
-						
-							<div>Note that this can be bypassed using XSS.</div>
-							<br />
-						
-							<div>Use the ESAPI Session Management control.</div>
-							<br />
-						
-							<div>This control includes a component for CSRF.</div>
-							<br />
-						
-							<div>Do not use the GET method for any request that triggers a state change.</div>
-							<br />
-						
-							<div>Phase: Implementation</div>
-							<br />
-						
-							<div>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%">
-							<a href="http://projects.webappsec.org/Cross-Site-Request-Forgery">http://projects.webappsec.org/Cross-Site-Request-Forgery</a>
-							<br />
-						
-							<a href="http://cwe.mitre.org/data/definitions/352.html">http://cwe.mitre.org/data/definitions/352.html</a>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%">9</td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10202/">10202</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
-		
-			<table class="results">
-				<tr height="24">
-					<th width="20%" class="risk-1"><a
 						id="10010"></a>
 						<div>Low</div></th>
 					<th class="risk-1">Cookie No HttpOnly Flag</th>
@@ -2042,7 +2068,33 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/ecoles-et-universites/">https://www.jeveuxaider.gouv.fr/engagement/ecoles-et-universites/</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/actualites/">https://www.jeveuxaider.gouv.fr/engagement/actualites/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">https://plausible.io/js/plausible.js</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;script defer data-domain=&quot;jeveuxaider.gouv.fr&quot; src=&quot;https://plausible.io/js/plausible.js&quot;&gt;&lt;/script&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/benevolat-ukraine/">https://www.jeveuxaider.gouv.fr/engagement/benevolat-ukraine/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2068,7 +2120,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/ecoles-et-universites/">https://www.jeveuxaider.gouv.fr/engagement/ecoles-et-universites/</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/benevolat-ukraine/">https://www.jeveuxaider.gouv.fr/engagement/benevolat-ukraine/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2094,7 +2146,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/ecoles-et-universites/">https://www.jeveuxaider.gouv.fr/engagement/ecoles-et-universites/</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/benevolat-ukraine/">https://www.jeveuxaider.gouv.fr/engagement/benevolat-ukraine/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2115,6 +2167,32 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;script src=&quot;https://code.jquery.com/jquery-3.5.1.min.js&quot;&gt;&lt;/script&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/benevolat-ukraine/">https://www.jeveuxaider.gouv.fr/engagement/benevolat-ukraine/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">https://plausible.io/js/plausible.js</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;script defer data-domain=&quot;jeveuxaider.gouv.fr&quot; src=&quot;https://plausible.io/js/plausible.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2198,7 +2276,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/presse/">https://www.jeveuxaider.gouv.fr/engagement/presse/</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/organisations/">https://www.jeveuxaider.gouv.fr/engagement/organisations/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2208,7 +2286,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Parameter</td>
-						<td width="80%">//tag.aticdn.net/610648/smarttag.js</td>
+						<td width="80%">https://plausible.io/js/plausible.js</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2218,59 +2296,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;//tag.aticdn.net/610648/smarttag.js&quot;&gt;&lt;/script&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/presse/">https://www.jeveuxaider.gouv.fr/engagement/presse/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">https://code.jquery.com/jquery-3.4.1.js</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://code.jquery.com/jquery-3.4.1.js&quot;&gt;&lt;/script&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/presse/">https://www.jeveuxaider.gouv.fr/engagement/presse/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">https://code.jquery.com/jquery-3.5.1.min.js</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://code.jquery.com/jquery-3.5.1.min.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script defer data-domain=&quot;jeveuxaider.gouv.fr&quot; src=&quot;https://plausible.io/js/plausible.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 				<tr>
@@ -2326,7 +2352,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/d32baf8.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/d32baf8.modern.js</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/2bae83b.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/2bae83b.modern.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2380,348 +2406,6 @@ td {
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/10110/">10110</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
-		
-			<table class="results">
-				<tr height="24">
-					<th width="20%" class="risk-1"><a
-						id="10015"></a>
-						<div>Low</div></th>
-					<th class="risk-1">Incomplete or No Cache-control Header Set</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content.</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr">https://www.jeveuxaider.gouv.fr</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=60, public, no-transform</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/">https://www.jeveuxaider.gouv.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=60, public, no-transform</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/actualites/">https://www.jeveuxaider.gouv.fr/engagement/actualites/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/organisations/">https://www.jeveuxaider.gouv.fr/engagement/organisations/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/inscription/organisation">https://www.jeveuxaider.gouv.fr/inscription/organisation</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=60, public, no-transform</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/login">https://www.jeveuxaider.gouv.fr/login</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=60, public, no-transform</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/password-reset">https://www.jeveuxaider.gouv.fr/password-reset</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=60, public, no-transform</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/register/volontaire">https://www.jeveuxaider.gouv.fr/register/volontaire</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=60, public, no-transform</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/robots.txt">https://www.jeveuxaider.gouv.fr/robots.txt</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=60, public, no-transform</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/sitemap.xml">https://www.jeveuxaider.gouv.fr/sitemap.xml</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=60, public, no-transform</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/territoires">https://www.jeveuxaider.gouv.fr/territoires</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">max-age=60, public, no-transform</td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					<td width="80%">11</td>
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%">
-							<a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a>
-							<br />
-						
-							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/525.html">525</a></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%">13</td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10015/">10015</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -2851,7 +2535,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/organisations/">https://www.jeveuxaider.gouv.fr/engagement/organisations/</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/benevolat-ukraine/">https://www.jeveuxaider.gouv.fr/engagement/benevolat-ukraine/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2877,7 +2561,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/inscription">https://www.jeveuxaider.gouv.fr/inscription</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/organisations/">https://www.jeveuxaider.gouv.fr/engagement/organisations/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3118,7 +2802,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">0153102222</td>
+						<td width="80%">0153413939</td>
 					</tr>
 				
 					<tr>
@@ -3750,7 +3434,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">fr/engagement/wp-content/uploads/2020/12/DJEPVA-uai-258x42</td>
+						<td width="80%">fr/engagement/wp-content/uploads/2020/12/Armee-du-Salut-uai-258x258</td>
 					</tr>
 				
 					<tr>
@@ -3776,7 +3460,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">9fd8-US78XC/wIyd2zFooau0bZcBA8tk</td>
+						<td width="80%">a182-7GEqwZPdh1m8PesrCrwxJl5DyrI</td>
 					</tr>
 				
 					<tr>
@@ -3802,7 +3486,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">dd15-zF9FhimUljfpTYC173+tR9IcQPI</td>
+						<td width="80%">debf-XAaes6B3eBJsXoMhV52xxk0lo8M</td>
 					</tr>
 				
 					<tr>
@@ -3828,7 +3512,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">d12f-urp5SSdAbifduvcO/76SsdZjUn8</td>
+						<td width="80%">d2d9-BWcp/u8ofa2+70OPRWaFucLNs3I</td>
 					</tr>
 				
 					<tr>
@@ -3880,7 +3564,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">23af13-SC7Gv2h/oNZSWJoSm3BhduKEawI</td>
+						<td width="80%">245f6a-Y3BALuwlxJB2Dp/HZ8ZF5poLUgo</td>
 					</tr>
 				
 					<tr>
@@ -3906,7 +3590,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">12b4d0-FkHzWnmmiAlF9AxE6/T4HGXrVNo</td>
+						<td width="80%">1304d9-Ze4zCtdvTb1cEhcYauuh+ZLu1Ag</td>
 					</tr>
 				
 				<tr>
@@ -4347,7 +4031,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;a class=&quot;text-[#696974] hover:underline cursor-pointer&quot; data-v-0d399b51&gt;
+						<td width="80%">&lt;a class=&quot;text-[#696974] hover:underline cursor-pointer&quot; data-v-1419de14&gt;
       Plus de missions ›
     &lt;/a&gt;</td>
 					</tr>
@@ -4375,7 +4059,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;a class=&quot;text-[#696974] hover:underline cursor-pointer&quot; data-v-0d399b51&gt;
+						<td width="80%">&lt;a class=&quot;text-[#696974] hover:underline cursor-pointer&quot; data-v-1419de14&gt;
       Plus de missions ›
     &lt;/a&gt;</td>
 					</tr>
@@ -4435,6 +4119,32 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/benevolat-ukraine/">https://www.jeveuxaider.gouv.fr/engagement/benevolat-ukraine/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;a href=&quot;#&quot; class=&quot;scroll-top&quot;&gt;&lt;i class=&quot;fa fa-angle-up fa-stack btn-default btn-hover-nobg&quot;&gt;&lt;/i&gt;&lt;/a&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/organisations/">https://www.jeveuxaider.gouv.fr/engagement/organisations/</a></td>
 					</tr>
 					<tr>
@@ -4456,32 +4166,6 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;a href=&quot;#&quot; data-filter=&quot;*&quot; class=&quot;active isotope-nav-link&quot;&gt;Tout&lt;/a&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/inscription">https://www.jeveuxaider.gouv.fr/inscription</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;noscript data-n-head=&quot;ssr&quot; data-hid=&quot;gtm-noscript&quot; data-pbody=&quot;true&quot;&gt;&lt;iframe src=&quot;https://www.googletagmanager.com/ns.html?id=GTM-5S3DCV6&amp;&quot; height=&quot;0&quot; width=&quot;0&quot; style=&quot;display:none;visibility:hidden&quot; title=&quot;gtm&quot;&gt;&lt;/iframe&gt;&lt;/noscript&gt;</td>
 					</tr>
 				
 					<tr>
@@ -4648,6 +4332,348 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-0"><a
+						id="10015"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Re-examine Cache-control Directives</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr">https://www.jeveuxaider.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=60, public, no-transform</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/">https://www.jeveuxaider.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=60, public, no-transform</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/actualites/">https://www.jeveuxaider.gouv.fr/engagement/actualites/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/engagement/organisations/">https://www.jeveuxaider.gouv.fr/engagement/organisations/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/inscription/organisation">https://www.jeveuxaider.gouv.fr/inscription/organisation</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=60, public, no-transform</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/login">https://www.jeveuxaider.gouv.fr/login</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=60, public, no-transform</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/password-reset">https://www.jeveuxaider.gouv.fr/password-reset</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=60, public, no-transform</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/register/volontaire">https://www.jeveuxaider.gouv.fr/register/volontaire</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=60, public, no-transform</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/robots.txt">https://www.jeveuxaider.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=60, public, no-transform</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/sitemap.xml">https://www.jeveuxaider.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=60, public, no-transform</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/territoires">https://www.jeveuxaider.gouv.fr/territoires</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=60, public, no-transform</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">11</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Whenever possible ensure the cache-control HTTP header is set with &quot;no-cache, no-store, must-revalidate&quot;. If an asset should be cached consider setting the directives &quot;public, max-age, immutable&quot;.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a>
+							<br />
+						
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/525.html">525</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10015/">10015</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
 						id="10050"></a>
 						<div>Informational</div></th>
 					<th class="risk-0">Retrieved from Cache</th>
@@ -4666,7 +4692,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/013c100.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/013c100.modern.js</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/2bae83b.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/2bae83b.modern.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4686,13 +4712,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 1347237</td>
+						<td width="80%">Age: 458887</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/5810830.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/5810830.modern.js</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/413fd72.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/413fd72.modern.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4712,13 +4738,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 2545281</td>
+						<td width="80%">Age: 234977</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/728a3ae.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/728a3ae.modern.js</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/971a518.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/971a518.modern.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4738,85 +4764,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 1347236</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/css/5e2b645.css">https://www.jeveuxaider.gouv.fr/_nuxt/css/5e2b645.css</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Age: 7557370</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/css/71a80c7.css">https://www.jeveuxaider.gouv.fr/_nuxt/css/71a80c7.css</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Age: 3959848</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/css/c1c3cf4.css">https://www.jeveuxaider.gouv.fr/_nuxt/css/c1c3cf4.css</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Age: 251353</td>
+						<td width="80%">Age: 234975</td>
 					</tr>
 				
 					<tr>
@@ -4842,13 +4790,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 2918124</td>
+						<td width="80%">Age: 289325</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/d32baf8.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/d32baf8.modern.js</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/css/e33ba0a.css">https://www.jeveuxaider.gouv.fr/_nuxt/css/e33ba0a.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4868,13 +4816,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 251353</td>
+						<td width="80%">Age: 463517</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/d9cafb6.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/d9cafb6.modern.js</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/css/f96b6cc.css">https://www.jeveuxaider.gouv.fr/_nuxt/css/f96b6cc.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4894,7 +4842,33 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 1347236</td>
+						<td width="80%">Age: 463518</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/e82b8d2.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/e82b8d2.modern.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Age: 234976</td>
 					</tr>
 				
 					<tr>
@@ -4920,13 +4894,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 251353</td>
+						<td width="80%">Age: 458887</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/fddc10b.modern.js">https://www.jeveuxaider.gouv.fr/_nuxt/fddc10b.modern.js</a></td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/fonts/element-icons.313f7da.woff">https://www.jeveuxaider.gouv.fr/_nuxt/fonts/element-icons.313f7da.woff</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4946,7 +4920,59 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 251354</td>
+						<td width="80%">Age: 229148</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/fonts/element-icons.4520188.ttf">https://www.jeveuxaider.gouv.fr/_nuxt/fonts/element-icons.4520188.ttf</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Age: 220749</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.jeveuxaider.gouv.fr/_nuxt/fonts/Marianne-Light.e6623e9.woff2">https://www.jeveuxaider.gouv.fr/_nuxt/fonts/Marianne-Light.e6623e9.woff2</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Age: 229147</td>
 					</tr>
 				
 					<tr>
@@ -4972,7 +4998,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">Age: 3033300</td>
+						<td width="80%">Age: 434120</td>
 					</tr>
 				
 				<tr>

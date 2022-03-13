@@ -21,11 +21,11 @@
 ###########################################################</span>
 
  Using &quot;OpenSSL 1.0.2-chacha (1.0.2k-dev)&quot; [~183 ciphers]
- on fv-az502-417:/home/testssl/bin/openssl.Linux.x86_64
+ on fv-az198-169:/home/testssl/bin/openssl.Linux.x86_64
  (built: &quot;Jan 18 17:12:17 2019&quot;, platform: &quot;linux-x86_64&quot;)
 
 
-<span style="color:white;background-color:black;"> Start 2022-03-06 02:26:04        --&gt;&gt; 91.134.137.224:443 (cartobio.org) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2022-03-13 02:19:06        --&gt;&gt; 91.134.137.224:443 (cartobio.org) &lt;&lt;--</span>
 
  rDNS (91.134.137.224):  224.ip-91-134-137.eu.
  Service detected:       HTTP
@@ -116,7 +116,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (same w/o SNI)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">67 &gt;= 30 days</span> (2022-02-11 22:44 --&gt; 2022-05-12 22:44)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">60 &gt;= 30 days</span> (2022-02-11 22:44 --&gt; 2022-05-12 22:44)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
@@ -143,17 +143,21 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Security headers             </span><span style="color:#008817;">X-Frame-Options</span>: DENY
                               <span style="color:#008817;">X-Content-Type-Options</span>: nosniff
                               <span style="color:#008817;">Content-Security-Policy</span>: default-src &apos;self&apos;;
-                                connect-src &apos;self&apos;
-                                https://api-adresse.data.gouv.fr/search/ 
+                                object-src &apos;self&apos;; worker-src blob:;
+                                connect-src &apos;self&apos; https://cartobio.org/api/
+                                https://api-adresse.data.gouv.fr/search/
                                 https://openmaptiles.geo.data.gouv.fr/
                                 https://openmaptiles.github.io/osm-bright-gl-style/ 
                                 ttps://wxs.ign.fr/essentiels/geoportail/wmts
                                 https://back.datapass.api.gouv.fr/api/;
                                 font-src &apos;self&apos;
                                 https://openmaptiles.geo.data.gouv.fr/fonts/;
-                                img-src &apos;self&apos; data: blob:; script-src &apos;self&apos;
-                                &apos;unsafe-inline&apos; blob:; style-src &apos;self&apos;;
-                                upgrade-insecure-requests
+                                img-src &apos;self&apos; data: blob:; script-src &apos;self&apos;;
+                                style-src &apos;self&apos; &apos;unsafe-inline&apos;;
+                                upgrade-insecure-requests; frame-ancestors
+                                &apos;none&apos;; child-src &apos;none&apos;; frame-src &apos;none&apos;;
+                                form-action &apos;self&apos; https://cartobio.org/api/;
+                                base-uri &apos;self&apos;;
                               <span style="color:#008817;">Permissions-Policy</span>:
                                 accelerometer=(),autoplay=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),geolocation=(),gyroscope=(),magnetometer=(),microphone=(),midi=(),payment=(),picture-in-picture=(),publickey-credentials-get=(),screen-wake-lock=(),sync-xhr=(self),usb=(),web-share=(),xr-spatial-tracking=()
                               Referrer-Policy: strict-origin-when-cross-origin
@@ -239,7 +243,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>93
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2022-03-06 02:28:43 [ 161s] --&gt;&gt; 91.134.137.224:443 (cartobio.org) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2022-03-13 02:20:53 [ 110s] --&gt;&gt; 91.134.137.224:443 (cartobio.org) &lt;&lt;--</span>
 
 
 </pre>

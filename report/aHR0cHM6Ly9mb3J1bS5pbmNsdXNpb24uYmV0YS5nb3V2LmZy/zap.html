@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 6 Mar 2022 03:44:15
+		Generated on Sun, 13 Mar 2022 03:22:36
 	</h3>
 
 	
@@ -152,7 +152,7 @@ td {
 					<div>Medium</div>
 				</td>
 				<td align="center">
-					<div>3</div>
+					<div>5</div>
 				</td>
 			</tr>
 			<tr>
@@ -160,7 +160,7 @@ td {
 					<div>Low</div>
 				</td>
 				<td align="center">
-					<div>5</div>
+					<div>3</div>
 				</td>
 			</tr>
 			<tr>
@@ -168,7 +168,7 @@ td {
 					<div>Informational</div>
 				</td>
 				<td align="center">
-					<div>6</div>
+					<div>7</div>
 				</td>
 			</tr>
 			<tr>
@@ -194,9 +194,19 @@ td {
 					align="center">Number of Instances</th>
 			</tr>
 			<tr>
-				<td><a href="#10055">CSP: Wildcard Directive</a></td>
+				<td><a href="#10202">Absence of Anti-CSRF Tokens</a></td>
 				<td align="center" class="risk-2">Medium</td>
 				<td align="center">11</td>
+			</tr>
+			<tr>
+				<td><a href="#10055">CSP: Wildcard Directive</a></td>
+				<td align="center" class="risk-2">Medium</td>
+				<td align="center">5</td>
+			</tr>
+			<tr>
+				<td><a href="#10055">CSP: style-src unsafe-inline</a></td>
+				<td align="center" class="risk-2">Medium</td>
+				<td align="center">5</td>
 			</tr>
 			<tr>
 				<td><a href="#10038">Content Security Policy (CSP) Header Not Set</a></td>
@@ -209,19 +219,9 @@ td {
 				<td align="center">73</td>
 			</tr>
 			<tr>
-				<td><a href="#10202">Absence of Anti-CSRF Tokens</a></td>
-				<td align="center" class="risk-1">Low</td>
-				<td align="center">11</td>
-			</tr>
-			<tr>
 				<td><a href="#10017">Cross-Domain JavaScript Source File Inclusion</a></td>
 				<td align="center" class="risk-1">Low</td>
 				<td align="center">28</td>
-			</tr>
-			<tr>
-				<td><a href="#10015">Incomplete or No Cache-control Header Set</a></td>
-				<td align="center" class="risk-1">Low</td>
-				<td align="center">11</td>
 			</tr>
 			<tr>
 				<td><a href="#10063">Permissions Policy Header Not Set</a></td>
@@ -231,7 +231,7 @@ td {
 			<tr>
 				<td><a href="#10096">Timestamp Disclosure - Unix</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">3</td>
+				<td align="center">6</td>
 			</tr>
 			<tr>
 				<td><a href="#10094">Base64 Disclosure</a></td>
@@ -259,6 +259,11 @@ td {
 				<td align="center">3</td>
 			</tr>
 			<tr>
+				<td><a href="#10015">Re-examine Cache-control Directives</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">11</td>
+			</tr>
+			<tr>
 				<td><a href="#10049">Storable and Cacheable Content</a></td>
 				<td align="center" class="risk-0">Informational</td>
 				<td align="center">8</td>
@@ -273,6 +278,408 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-2"><a
+						id="10202"></a>
+						<div>Medium</div></th>
+					<th class="risk-2">Absence of Anti-CSRF Tokens</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>No Anti-CSRF tokens were found in a HTML submission form.</div>
+							<br />
+						
+							<div>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</div>
+							<br />
+						
+							<div>CSRF attacks are effective in a number of situations, including:</div>
+							<br />
+						
+							<div>    * The victim has an active session on the target site.</div>
+							<br />
+						
+							<div>    * The victim is authenticated via HTTP auth on the target site.</div>
+							<br />
+						
+							<div>    * The victim is on the same local network as the target site.</div>
+							<br />
+						
+							<div>CSRF has primarily been used to perform an action against a target site using the victim&#39;s privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr">https://forum.inclusion.beta.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form id=&#39;hidden-login-form&#39; method=&quot;post&quot; action=&quot;/login&quot; style=&quot;display: none;&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/">https://forum.inclusion.beta.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form id=&#39;hidden-login-form&#39; method=&quot;post&quot; action=&quot;/login&quot; style=&quot;display: none;&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/*?*api_key">https://forum.inclusion.beta.gouv.fr/*?*api_key</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&#39;/search&#39; id=&#39;discourse-search&#39;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/*?api_key">https://forum.inclusion.beta.gouv.fr/*?api_key</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&#39;/search&#39; id=&#39;discourse-search&#39;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/admin/">https://forum.inclusion.beta.gouv.fr/admin/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&#39;/search&#39; id=&#39;discourse-search&#39;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/assets/browser-update*.js">https://forum.inclusion.beta.gouv.fr/assets/browser-update*.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&#39;/search&#39; id=&#39;discourse-search&#39;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/auth/">https://forum.inclusion.beta.gouv.fr/auth/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&#39;/search&#39; id=&#39;discourse-search&#39;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/email/">https://forum.inclusion.beta.gouv.fr/email/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&#39;/search&#39; id=&#39;discourse-search&#39;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/session">https://forum.inclusion.beta.gouv.fr/session</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&#39;/search&#39; id=&#39;discourse-search&#39;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/sitemap.xml">https://forum.inclusion.beta.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&#39;/search&#39; id=&#39;discourse-search&#39;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/user-api-key">https://forum.inclusion.beta.gouv.fr/user-api-key</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&#39;/search&#39; id=&#39;discourse-search&#39;&gt;</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">11</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Phase: Architecture and Design</div>
+							<br />
+						
+							<div>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</div>
+							<br />
+						
+							<div>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</div>
+							<br />
+						
+							<div>Phase: Implementation</div>
+							<br />
+						
+							<div>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</div>
+							<br />
+						
+							<div>Phase: Architecture and Design</div>
+							<br />
+						
+							<div>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</div>
+							<br />
+						
+							<div>Note that this can be bypassed using XSS.</div>
+							<br />
+						
+							<div>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</div>
+							<br />
+						
+							<div>Note that this can be bypassed using XSS.</div>
+							<br />
+						
+							<div>Use the ESAPI Session Management control.</div>
+							<br />
+						
+							<div>This control includes a component for CSRF.</div>
+							<br />
+						
+							<div>Do not use the GET method for any request that triggers a state change.</div>
+							<br />
+						
+							<div>Phase: Implementation</div>
+							<br />
+						
+							<div>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="http://projects.webappsec.org/Cross-Site-Request-Forgery">http://projects.webappsec.org/Cross-Site-Request-Forgery</a>
+							<br />
+						
+							<a href="http://cwe.mitre.org/data/definitions/352.html">http://cwe.mitre.org/data/definitions/352.html</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">9</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10202/">10202</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-2"><a
 						id="10055"></a>
 						<div>Medium</div></th>
 					<th class="risk-2">CSP: Wildcard Directive</th>
@@ -280,13 +687,7 @@ td {
 				<tr>
 					<td width="20%">Description</td>
 					<td width="80%">
-							<div>The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: </div>
-							<br />
-						
-							<div>style-src, img-src, connects-src, frame-src, frame-ancestors, font-src, media-src, prefetch-src, form-action</div>
-							<br />
-						
-							<div>The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</div>
+							<div>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</div>
 							
 						</td>
 				</tr>
@@ -375,7 +776,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/c/*.rss">https://forum.inclusion.beta.gouv.fr/c/*.rss</a></td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/search">https://forum.inclusion.beta.gouv.fr/search</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -401,7 +802,101 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/c/actualites/81">https://forum.inclusion.beta.gouv.fr/c/actualites/81</a></td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/u/">https://forum.inclusion.beta.gouv.fr/u/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">upgrade-insecure-requests; base-uri &#39;self&#39;; object-src &#39;none&#39;; script-src https://forum.inclusion.beta.gouv.fr/logs/ https://forum.inclusion.beta.gouv.fr/sidekiq/ https://forum.inclusion.beta.gouv.fr/mini-profiler-resources/ https://aws1.discourse-cdn.com/standard20/assets/ https://aws1.discourse-cdn.com/standard20/brotli_asset/ https://forum.inclusion.beta.gouv.fr/extra-locales/ https://dub2.discourse-cdn.com/standard20/highlight-js/ https://dub2.discourse-cdn.com/standard20/javascripts/ https://dub2.discourse-cdn.com/standard20/plugins/ https://dub2.discourse-cdn.com/standard20/theme-javascripts/ https://dub2.discourse-cdn.com/standard20/svg-sprite/ https://stats.data.gouv.fr/matomo.js https://stats.data.gouv.fr/piwik.php https://stats.data.gouv.fr/ http://forum.inclusion.beta.gouv.fr/matomo.js http://forum.inclusion.beta.gouv.fr/hotjar.js https://static.hotjar.com/ https://script.hotjar.com/; worker-src &#39;self&#39; https://aws1.discourse-cdn.com/standard20/assets/ https://aws1.discourse-cdn.com/standard20/brotli_asset/ https://dub2.discourse-cdn.com/standard20/javascripts/ https://dub2.discourse-cdn.com/standard20/plugins/; manifest-src &#39;self&#39;</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">5</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="http://www.w3.org/TR/CSP2/">http://www.w3.org/TR/CSP2/</a>
+							<br />
+						
+							<a href="http://www.w3.org/TR/CSP/">http://www.w3.org/TR/CSP/</a>
+							<br />
+						
+							<a href="http://caniuse.com/#search=content+security+policy">http://caniuse.com/#search=content+security+policy</a>
+							<br />
+						
+							<a href="http://content-security-policy.com/">http://content-security-policy.com/</a>
+							<br />
+						
+							<a href="https://github.com/shapesecurity/salvation">https://github.com/shapesecurity/salvation</a>
+							<br />
+						
+							<a href="https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources">https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">15</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10055/">10055</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-2"><a
+						id="10055"></a>
+						<div>Medium</div></th>
+					<th class="risk-2">CSP: style-src unsafe-inline</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr">https://forum.inclusion.beta.gouv.fr</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -427,7 +922,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/c/spie/49">https://forum.inclusion.beta.gouv.fr/c/spie/49</a></td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/">https://forum.inclusion.beta.gouv.fr/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -453,33 +948,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/g">https://forum.inclusion.beta.gouv.fr/g</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">upgrade-insecure-requests; base-uri &#39;self&#39;; object-src &#39;none&#39;; script-src https://forum.inclusion.beta.gouv.fr/logs/ https://forum.inclusion.beta.gouv.fr/sidekiq/ https://forum.inclusion.beta.gouv.fr/mini-profiler-resources/ https://aws1.discourse-cdn.com/standard20/assets/ https://aws1.discourse-cdn.com/standard20/brotli_asset/ https://forum.inclusion.beta.gouv.fr/extra-locales/ https://dub2.discourse-cdn.com/standard20/highlight-js/ https://dub2.discourse-cdn.com/standard20/javascripts/ https://dub2.discourse-cdn.com/standard20/plugins/ https://dub2.discourse-cdn.com/standard20/theme-javascripts/ https://dub2.discourse-cdn.com/standard20/svg-sprite/ https://stats.data.gouv.fr/matomo.js https://stats.data.gouv.fr/piwik.php https://stats.data.gouv.fr/ http://forum.inclusion.beta.gouv.fr/matomo.js http://forum.inclusion.beta.gouv.fr/hotjar.js https://static.hotjar.com/ https://script.hotjar.com/; worker-src &#39;self&#39; https://aws1.discourse-cdn.com/standard20/assets/ https://aws1.discourse-cdn.com/standard20/brotli_asset/ https://dub2.discourse-cdn.com/standard20/javascripts/ https://dub2.discourse-cdn.com/standard20/plugins/; manifest-src &#39;self&#39;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/login">https://forum.inclusion.beta.gouv.fr/login</a></td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/badges">https://forum.inclusion.beta.gouv.fr/badges</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -531,32 +1000,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/signup">https://forum.inclusion.beta.gouv.fr/signup</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">upgrade-insecure-requests; base-uri &#39;self&#39;; object-src &#39;none&#39;; script-src https://forum.inclusion.beta.gouv.fr/logs/ https://forum.inclusion.beta.gouv.fr/sidekiq/ https://forum.inclusion.beta.gouv.fr/mini-profiler-resources/ https://aws1.discourse-cdn.com/standard20/assets/ https://aws1.discourse-cdn.com/standard20/brotli_asset/ https://forum.inclusion.beta.gouv.fr/extra-locales/ https://dub2.discourse-cdn.com/standard20/highlight-js/ https://dub2.discourse-cdn.com/standard20/javascripts/ https://dub2.discourse-cdn.com/standard20/plugins/ https://dub2.discourse-cdn.com/standard20/theme-javascripts/ https://dub2.discourse-cdn.com/standard20/svg-sprite/ https://stats.data.gouv.fr/matomo.js https://stats.data.gouv.fr/piwik.php https://stats.data.gouv.fr/ http://forum.inclusion.beta.gouv.fr/matomo.js http://forum.inclusion.beta.gouv.fr/hotjar.js https://static.hotjar.com/ https://script.hotjar.com/; worker-src &#39;self&#39; https://aws1.discourse-cdn.com/standard20/assets/ https://aws1.discourse-cdn.com/standard20/brotli_asset/ https://dub2.discourse-cdn.com/standard20/javascripts/ https://dub2.discourse-cdn.com/standard20/plugins/; manifest-src &#39;self&#39;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/u/">https://forum.inclusion.beta.gouv.fr/u/</a></td>
 					</tr>
 					<tr>
@@ -582,7 +1025,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">11</td>
+					<td width="80%">5</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -1054,7 +1497,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/color_definitions_clair_2_3_c8c655ede6427a4a7a367b97193224cedaa8fbc4.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; class=&quot;light-scheme&quot;/&gt;</td>
+						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/color_definitions_clair_2_3_2ab221043ef705e238d8754def0fa5f478c24e13.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; class=&quot;light-scheme&quot;/&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1080,7 +1523,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/desktop_880e82a6fc79ef32950c07575c8341b1415688fa.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;desktop&quot;  /&gt;</td>
+						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/desktop_2c63bb8c91b925c7068203d364d76c29b53f3337.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;desktop&quot;  /&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1106,7 +1549,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/desktop_theme_3_18bc65846937cf330ce8214ff9f913389380e040.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;desktop_theme&quot; data-theme-id=&quot;3&quot; data-theme-name=&quot;clair&quot;/&gt;</td>
+						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/desktop_theme_3_41ea92ec90bbda52da46e9c39b7934466948b827.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;desktop_theme&quot; data-theme-id=&quot;3&quot; data-theme-name=&quot;clair&quot;/&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1132,7 +1575,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/desktop_theme_6_97cf3210a50137032fd4a114be90337f92ebcccd.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;desktop_theme&quot; data-theme-id=&quot;6&quot; data-theme-name=&quot;discourse-search-banner&quot;/&gt;</td>
+						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/desktop_theme_6_163c4a4e96b23909968e54fc9cc47f5245a7fcd5.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;desktop_theme&quot; data-theme-id=&quot;6&quot; data-theme-name=&quot;discourse-search-banner&quot;/&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1158,7 +1601,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-adplugin_880e82a6fc79ef32950c07575c8341b1415688fa.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-adplugin&quot;  /&gt;</td>
+						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-adplugin_2c63bb8c91b925c7068203d364d76c29b53f3337.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-adplugin&quot;  /&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1184,7 +1627,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-akismet_880e82a6fc79ef32950c07575c8341b1415688fa.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-akismet&quot;  /&gt;</td>
+						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-akismet_2c63bb8c91b925c7068203d364d76c29b53f3337.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-akismet&quot;  /&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1210,7 +1653,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-cakeday_880e82a6fc79ef32950c07575c8341b1415688fa.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-cakeday&quot;  /&gt;</td>
+						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-cakeday_2c63bb8c91b925c7068203d364d76c29b53f3337.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-cakeday&quot;  /&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1236,7 +1679,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-chat-integration_880e82a6fc79ef32950c07575c8341b1415688fa.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-chat-integration&quot;  /&gt;</td>
+						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-chat-integration_2c63bb8c91b925c7068203d364d76c29b53f3337.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-chat-integration&quot;  /&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1262,7 +1705,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-details_880e82a6fc79ef32950c07575c8341b1415688fa.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-details&quot;  /&gt;</td>
+						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-details_2c63bb8c91b925c7068203d364d76c29b53f3337.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-details&quot;  /&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1288,7 +1731,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-footnote_880e82a6fc79ef32950c07575c8341b1415688fa.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-footnote&quot;  /&gt;</td>
+						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-footnote_2c63bb8c91b925c7068203d364d76c29b53f3337.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-footnote&quot;  /&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1314,7 +1757,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-local-dates_880e82a6fc79ef32950c07575c8341b1415688fa.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-local-dates&quot;  /&gt;</td>
+						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-local-dates_2c63bb8c91b925c7068203d364d76c29b53f3337.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-local-dates&quot;  /&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1340,7 +1783,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-narrative-bot_880e82a6fc79ef32950c07575c8341b1415688fa.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-narrative-bot&quot;  /&gt;</td>
+						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-narrative-bot_2c63bb8c91b925c7068203d364d76c29b53f3337.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-narrative-bot&quot;  /&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1366,7 +1809,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-presence_880e82a6fc79ef32950c07575c8341b1415688fa.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-presence&quot;  /&gt;</td>
+						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-presence_2c63bb8c91b925c7068203d364d76c29b53f3337.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-presence&quot;  /&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1392,7 +1835,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-solved_880e82a6fc79ef32950c07575c8341b1415688fa.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-solved&quot;  /&gt;</td>
+						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-solved_2c63bb8c91b925c7068203d364d76c29b53f3337.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-solved&quot;  /&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1418,7 +1861,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-spoiler-alert_880e82a6fc79ef32950c07575c8341b1415688fa.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-spoiler-alert&quot;  /&gt;</td>
+						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/discourse-spoiler-alert_2c63bb8c91b925c7068203d364d76c29b53f3337.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;discourse-spoiler-alert&quot;  /&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1444,7 +1887,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/hosted-site_880e82a6fc79ef32950c07575c8341b1415688fa.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;hosted-site&quot;  /&gt;</td>
+						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/hosted-site_2c63bb8c91b925c7068203d364d76c29b53f3337.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;hosted-site&quot;  /&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1470,7 +1913,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/lazy-yt_880e82a6fc79ef32950c07575c8341b1415688fa.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;lazy-yt&quot;  /&gt;</td>
+						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/lazy-yt_2c63bb8c91b925c7068203d364d76c29b53f3337.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;lazy-yt&quot;  /&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1496,7 +1939,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/poll_880e82a6fc79ef32950c07575c8341b1415688fa.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;poll&quot;  /&gt;</td>
+						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/poll_2c63bb8c91b925c7068203d364d76c29b53f3337.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;poll&quot;  /&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1522,7 +1965,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/poll_desktop_880e82a6fc79ef32950c07575c8341b1415688fa.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;poll_desktop&quot;  /&gt;</td>
+						<td width="80%">&lt;link href=&quot;https://dub2.discourse-cdn.com/standard20/stylesheets/poll_desktop_2c63bb8c91b925c7068203d364d76c29b53f3337.css?__ws=forum.inclusion.beta.gouv.fr&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; data-target=&quot;poll_desktop&quot;  /&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1600,7 +2043,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/application-5c894309f065ae3800f56788ed47b18b.js&quot; as=&quot;script&quot;&gt;</td>
+						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/application-100b763e5ca08481f2c2920216307e24.js&quot; as=&quot;script&quot;&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1678,7 +2121,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.123.8dfc816933cff5455266-d7dfd035d090a2fa8958f420d15d003f.js&quot; as=&quot;script&quot;&gt;</td>
+						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.143.da2fcfea7f34c12eb3ad-dad82278f1d7028e8bcc5b00c96c5ec0.js&quot; as=&quot;script&quot;&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1704,7 +2147,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.143.ec5e21534bec6265689d-58f7e901013702d3ce59d40c1088a267.js&quot; as=&quot;script&quot;&gt;</td>
+						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.178.f4c58744c29c3c55d227-7bbe28fa444a3167a46685d52e9c37a4.js&quot; as=&quot;script&quot;&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1730,7 +2173,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.178.3e85ac2079ac2036ab5a-2e6b5870a0f4d652d241998765724cb0.js&quot; as=&quot;script&quot;&gt;</td>
+						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.293.2add4bb22c2c5a983a16-01c24e6ab0e1a6f37a345227309fcef0.js&quot; as=&quot;script&quot;&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1756,7 +2199,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.529.34d02da4d3fb14a1e7e0-92b7d4db6c48db1e9699c3b6931b7e96.js&quot; as=&quot;script&quot;&gt;</td>
+						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.529.6ee9018498e97f872147-248a6f3ff1492f6e27f3e7b6d099d3b4.js&quot; as=&quot;script&quot;&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1782,7 +2225,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/locales/fr-75bf2b2d3394aa552b486b3b3f96cd91af9fbaca6685a9c2311b808410c443cb.js&quot; as=&quot;script&quot;&gt;</td>
+						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/locales/fr-fbc50143adffa36945b4c72fc2bd94829424e37cd8f01e790726b80485817478.js&quot; as=&quot;script&quot;&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1808,7 +2251,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-adplugin-0b068b6d70ab8da970a61cb7e6c5bf0a61d9394fee1a85f75df42e0b9e427905.js&quot; as=&quot;script&quot;&gt;</td>
+						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-adplugin-d0b53fe12925af7539f0f187c5c2a9cd75bfbf0b210bed3302e1aba353161acb.js&quot; as=&quot;script&quot;&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1860,7 +2303,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-cakeday-7170eff28fdf8c48ccb2b5d5e21a34df4bcd40b4b2c1f216350b502630d01e01.js&quot; as=&quot;script&quot;&gt;</td>
+						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-cakeday-1cfee90d0980ed891c937ec1d29817a564023f370df7305020758c8a4b66fef9.js&quot; as=&quot;script&quot;&gt;</td>
 					</tr>
 				
 					<tr>
@@ -1886,7 +2329,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-chat-integration-f16e84d63bacc8515a64930b5b55402f6e5e44229c6cfae2fc14132b5d97f609.js&quot; as=&quot;script&quot;&gt;</td>
+						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-chat-integration-dc3fa47fb3a70cfe7c6069c9fc1572bb76c9b5cf89257fbf96aeb0c226356a05.js&quot; as=&quot;script&quot;&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2042,7 +2485,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-solved-eca061b819d457c7aad98b15e2a4c2865e014bbcd4fb536055357e91b9799fe3.js&quot; as=&quot;script&quot;&gt;</td>
+						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-solved-9ea56c0f8bd53ac675c40da8c19212b20c78af18a0fb0a51968adca4e5044fef.js&quot; as=&quot;script&quot;&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2094,7 +2537,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/hosted-site-ebcb88c9c2f6a4138b0857b0323c027bf770466baeb0ef60e9e7f748ed3d68a0.js&quot; as=&quot;script&quot;&gt;</td>
+						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/hosted-site-c7a73cd2d15af05c76643b47f51f79d160529321b303c4aed5d0c97aabbf1de0.js&quot; as=&quot;script&quot;&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2198,7 +2641,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/vendor-e6c7595f5d822c9113a105af7bfd0952.js&quot; as=&quot;script&quot;&gt;</td>
+						<td width="80%">&lt;link rel=&quot;preload&quot; href=&quot;https://aws1.discourse-cdn.com/standard20/assets/vendor-b7e6ba8e2d25000b602110aa3732f6a2.js&quot; as=&quot;script&quot;&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2224,7 +2667,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/application-5c894309f065ae3800f56788ed47b18b.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/application-100b763e5ca08481f2c2920216307e24.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2302,7 +2745,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.123.8dfc816933cff5455266-d7dfd035d090a2fa8958f420d15d003f.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.143.da2fcfea7f34c12eb3ad-dad82278f1d7028e8bcc5b00c96c5ec0.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2328,7 +2771,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.143.ec5e21534bec6265689d-58f7e901013702d3ce59d40c1088a267.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.178.f4c58744c29c3c55d227-7bbe28fa444a3167a46685d52e9c37a4.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2354,7 +2797,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.178.3e85ac2079ac2036ab5a-2e6b5870a0f4d652d241998765724cb0.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.293.2add4bb22c2c5a983a16-01c24e6ab0e1a6f37a345227309fcef0.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2380,7 +2823,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.529.34d02da4d3fb14a1e7e0-92b7d4db6c48db1e9699c3b6931b7e96.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.529.6ee9018498e97f872147-248a6f3ff1492f6e27f3e7b6d099d3b4.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2406,7 +2849,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/locales/fr-75bf2b2d3394aa552b486b3b3f96cd91af9fbaca6685a9c2311b808410c443cb.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/locales/fr-fbc50143adffa36945b4c72fc2bd94829424e37cd8f01e790726b80485817478.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2432,7 +2875,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-adplugin-0b068b6d70ab8da970a61cb7e6c5bf0a61d9394fee1a85f75df42e0b9e427905.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-adplugin-d0b53fe12925af7539f0f187c5c2a9cd75bfbf0b210bed3302e1aba353161acb.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2484,7 +2927,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-cakeday-7170eff28fdf8c48ccb2b5d5e21a34df4bcd40b4b2c1f216350b502630d01e01.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-cakeday-1cfee90d0980ed891c937ec1d29817a564023f370df7305020758c8a4b66fef9.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2510,7 +2953,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-chat-integration-f16e84d63bacc8515a64930b5b55402f6e5e44229c6cfae2fc14132b5d97f609.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-chat-integration-dc3fa47fb3a70cfe7c6069c9fc1572bb76c9b5cf89257fbf96aeb0c226356a05.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2666,7 +3109,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-solved-eca061b819d457c7aad98b15e2a4c2865e014bbcd4fb536055357e91b9799fe3.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-solved-9ea56c0f8bd53ac675c40da8c19212b20c78af18a0fb0a51968adca4e5044fef.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2718,7 +3161,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/hosted-site-ebcb88c9c2f6a4138b0857b0323c027bf770466baeb0ef60e9e7f748ed3d68a0.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/hosted-site-c7a73cd2d15af05c76643b47f51f79d160529321b303c4aed5d0c97aabbf1de0.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2822,7 +3265,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/vendor-e6c7595f5d822c9113a105af7bfd0952.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/vendor-b7e6ba8e2d25000b602110aa3732f6a2.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -2967,408 +3410,6 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-1"><a
-						id="10202"></a>
-						<div>Low</div></th>
-					<th class="risk-1">Absence of Anti-CSRF Tokens</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>No Anti-CSRF tokens were found in a HTML submission form.</div>
-							<br />
-						
-							<div>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</div>
-							<br />
-						
-							<div>CSRF attacks are effective in a number of situations, including:</div>
-							<br />
-						
-							<div>    * The victim has an active session on the target site.</div>
-							<br />
-						
-							<div>    * The victim is authenticated via HTTP auth on the target site.</div>
-							<br />
-						
-							<div>    * The victim is on the same local network as the target site.</div>
-							<br />
-						
-							<div>CSRF has primarily been used to perform an action against a target site using the victim&#39;s privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr">https://forum.inclusion.beta.gouv.fr</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form id=&#39;hidden-login-form&#39; method=&quot;post&quot; action=&quot;/login&quot; style=&quot;display: none;&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/">https://forum.inclusion.beta.gouv.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form id=&#39;hidden-login-form&#39; method=&quot;post&quot; action=&quot;/login&quot; style=&quot;display: none;&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/*?*api_key">https://forum.inclusion.beta.gouv.fr/*?*api_key</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&#39;/search&#39; id=&#39;discourse-search&#39;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/*?api_key">https://forum.inclusion.beta.gouv.fr/*?api_key</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&#39;/search&#39; id=&#39;discourse-search&#39;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/admin/">https://forum.inclusion.beta.gouv.fr/admin/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&#39;/search&#39; id=&#39;discourse-search&#39;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/assets/browser-update*.js">https://forum.inclusion.beta.gouv.fr/assets/browser-update*.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&#39;/search&#39; id=&#39;discourse-search&#39;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/auth/">https://forum.inclusion.beta.gouv.fr/auth/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&#39;/search&#39; id=&#39;discourse-search&#39;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/email/">https://forum.inclusion.beta.gouv.fr/email/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&#39;/search&#39; id=&#39;discourse-search&#39;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/session">https://forum.inclusion.beta.gouv.fr/session</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&#39;/search&#39; id=&#39;discourse-search&#39;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/sitemap.xml">https://forum.inclusion.beta.gouv.fr/sitemap.xml</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&#39;/search&#39; id=&#39;discourse-search&#39;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/user-api-key">https://forum.inclusion.beta.gouv.fr/user-api-key</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&#39;/search&#39; id=&#39;discourse-search&#39;&gt;</td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					<td width="80%">11</td>
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>Phase: Architecture and Design</div>
-							<br />
-						
-							<div>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</div>
-							<br />
-						
-							<div>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</div>
-							<br />
-						
-							<div>Phase: Implementation</div>
-							<br />
-						
-							<div>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</div>
-							<br />
-						
-							<div>Phase: Architecture and Design</div>
-							<br />
-						
-							<div>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</div>
-							<br />
-						
-							<div>Note that this can be bypassed using XSS.</div>
-							<br />
-						
-							<div>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</div>
-							<br />
-						
-							<div>Note that this can be bypassed using XSS.</div>
-							<br />
-						
-							<div>Use the ESAPI Session Management control.</div>
-							<br />
-						
-							<div>This control includes a component for CSRF.</div>
-							<br />
-						
-							<div>Do not use the GET method for any request that triggers a state change.</div>
-							<br />
-						
-							<div>Phase: Implementation</div>
-							<br />
-						
-							<div>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%">
-							<a href="http://projects.webappsec.org/Cross-Site-Request-Forgery">http://projects.webappsec.org/Cross-Site-Request-Forgery</a>
-							<br />
-						
-							<a href="http://cwe.mitre.org/data/definitions/352.html">http://cwe.mitre.org/data/definitions/352.html</a>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%">9</td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10202/">10202</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
-		
-			<table class="results">
-				<tr height="24">
-					<th width="20%" class="risk-1"><a
 						id="10017"></a>
 						<div>Low</div></th>
 					<th class="risk-1">Cross-Domain JavaScript Source File Inclusion</th>
@@ -3397,7 +3438,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Parameter</td>
-						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/application-5c894309f065ae3800f56788ed47b18b.js</td>
+						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/application-100b763e5ca08481f2c2920216307e24.js</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3407,7 +3448,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/application-5c894309f065ae3800f56788ed47b18b.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/application-100b763e5ca08481f2c2920216307e24.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -3475,7 +3516,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Parameter</td>
-						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/chunk.123.8dfc816933cff5455266-d7dfd035d090a2fa8958f420d15d003f.js</td>
+						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/chunk.143.da2fcfea7f34c12eb3ad-dad82278f1d7028e8bcc5b00c96c5ec0.js</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3485,7 +3526,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.123.8dfc816933cff5455266-d7dfd035d090a2fa8958f420d15d003f.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.143.da2fcfea7f34c12eb3ad-dad82278f1d7028e8bcc5b00c96c5ec0.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -3501,7 +3542,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Parameter</td>
-						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/chunk.143.ec5e21534bec6265689d-58f7e901013702d3ce59d40c1088a267.js</td>
+						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/chunk.178.f4c58744c29c3c55d227-7bbe28fa444a3167a46685d52e9c37a4.js</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3511,7 +3552,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.143.ec5e21534bec6265689d-58f7e901013702d3ce59d40c1088a267.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.178.f4c58744c29c3c55d227-7bbe28fa444a3167a46685d52e9c37a4.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -3527,7 +3568,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Parameter</td>
-						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/chunk.178.3e85ac2079ac2036ab5a-2e6b5870a0f4d652d241998765724cb0.js</td>
+						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/chunk.293.2add4bb22c2c5a983a16-01c24e6ab0e1a6f37a345227309fcef0.js</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3537,7 +3578,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.178.3e85ac2079ac2036ab5a-2e6b5870a0f4d652d241998765724cb0.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.293.2add4bb22c2c5a983a16-01c24e6ab0e1a6f37a345227309fcef0.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -3553,7 +3594,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Parameter</td>
-						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/chunk.529.34d02da4d3fb14a1e7e0-92b7d4db6c48db1e9699c3b6931b7e96.js</td>
+						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/chunk.529.6ee9018498e97f872147-248a6f3ff1492f6e27f3e7b6d099d3b4.js</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3563,7 +3604,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.529.34d02da4d3fb14a1e7e0-92b7d4db6c48db1e9699c3b6931b7e96.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/chunk.529.6ee9018498e97f872147-248a6f3ff1492f6e27f3e7b6d099d3b4.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -3579,7 +3620,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Parameter</td>
-						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/locales/fr-75bf2b2d3394aa552b486b3b3f96cd91af9fbaca6685a9c2311b808410c443cb.js</td>
+						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/locales/fr-fbc50143adffa36945b4c72fc2bd94829424e37cd8f01e790726b80485817478.js</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3589,7 +3630,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/locales/fr-75bf2b2d3394aa552b486b3b3f96cd91af9fbaca6685a9c2311b808410c443cb.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/locales/fr-fbc50143adffa36945b4c72fc2bd94829424e37cd8f01e790726b80485817478.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -3605,7 +3646,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Parameter</td>
-						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-adplugin-0b068b6d70ab8da970a61cb7e6c5bf0a61d9394fee1a85f75df42e0b9e427905.js</td>
+						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-adplugin-d0b53fe12925af7539f0f187c5c2a9cd75bfbf0b210bed3302e1aba353161acb.js</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3615,7 +3656,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-adplugin-0b068b6d70ab8da970a61cb7e6c5bf0a61d9394fee1a85f75df42e0b9e427905.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-adplugin-d0b53fe12925af7539f0f187c5c2a9cd75bfbf0b210bed3302e1aba353161acb.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -3657,7 +3698,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Parameter</td>
-						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-cakeday-7170eff28fdf8c48ccb2b5d5e21a34df4bcd40b4b2c1f216350b502630d01e01.js</td>
+						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-cakeday-1cfee90d0980ed891c937ec1d29817a564023f370df7305020758c8a4b66fef9.js</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3667,7 +3708,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-cakeday-7170eff28fdf8c48ccb2b5d5e21a34df4bcd40b4b2c1f216350b502630d01e01.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-cakeday-1cfee90d0980ed891c937ec1d29817a564023f370df7305020758c8a4b66fef9.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -3683,7 +3724,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Parameter</td>
-						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-chat-integration-f16e84d63bacc8515a64930b5b55402f6e5e44229c6cfae2fc14132b5d97f609.js</td>
+						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-chat-integration-dc3fa47fb3a70cfe7c6069c9fc1572bb76c9b5cf89257fbf96aeb0c226356a05.js</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3693,7 +3734,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-chat-integration-f16e84d63bacc8515a64930b5b55402f6e5e44229c6cfae2fc14132b5d97f609.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-chat-integration-dc3fa47fb3a70cfe7c6069c9fc1572bb76c9b5cf89257fbf96aeb0c226356a05.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -3839,7 +3880,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Parameter</td>
-						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-solved-eca061b819d457c7aad98b15e2a4c2865e014bbcd4fb536055357e91b9799fe3.js</td>
+						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-solved-9ea56c0f8bd53ac675c40da8c19212b20c78af18a0fb0a51968adca4e5044fef.js</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3849,7 +3890,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-solved-eca061b819d457c7aad98b15e2a4c2865e014bbcd4fb536055357e91b9799fe3.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/discourse-solved-9ea56c0f8bd53ac675c40da8c19212b20c78af18a0fb0a51968adca4e5044fef.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -3891,7 +3932,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Parameter</td>
-						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/hosted-site-ebcb88c9c2f6a4138b0857b0323c027bf770466baeb0ef60e9e7f748ed3d68a0.js</td>
+						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/plugins/hosted-site-c7a73cd2d15af05c76643b47f51f79d160529321b303c4aed5d0c97aabbf1de0.js</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3901,7 +3942,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/hosted-site-ebcb88c9c2f6a4138b0857b0323c027bf770466baeb0ef60e9e7f748ed3d68a0.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/plugins/hosted-site-c7a73cd2d15af05c76643b47f51f79d160529321b303c4aed5d0c97aabbf1de0.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -3995,7 +4036,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Parameter</td>
-						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/vendor-e6c7595f5d822c9113a105af7bfd0952.js</td>
+						<td width="80%">https://aws1.discourse-cdn.com/standard20/assets/vendor-b7e6ba8e2d25000b602110aa3732f6a2.js</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4005,7 +4046,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/vendor-e6c7595f5d822c9113a105af7bfd0952.js&quot;&gt;&lt;/script&gt;</td>
+						<td width="80%">&lt;script src=&quot;https://aws1.discourse-cdn.com/standard20/assets/vendor-b7e6ba8e2d25000b602110aa3732f6a2.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
 				
 					<tr>
@@ -4140,348 +4181,6 @@ td {
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/10017/">10017</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
-		
-			<table class="results">
-				<tr height="24">
-					<th width="20%" class="risk-1"><a
-						id="10015"></a>
-						<div>Low</div></th>
-					<th class="risk-1">Incomplete or No Cache-control Header Set</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content.</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr">https://forum.inclusion.beta.gouv.fr</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">no-cache, no-store</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/">https://forum.inclusion.beta.gouv.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">no-cache, no-store</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/badges">https://forum.inclusion.beta.gouv.fr/badges</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">no-cache, no-store</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/c/actualites/81">https://forum.inclusion.beta.gouv.fr/c/actualites/81</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">no-cache, no-store</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/c/spie/49">https://forum.inclusion.beta.gouv.fr/c/spie/49</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">no-cache, no-store</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/g">https://forum.inclusion.beta.gouv.fr/g</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/login">https://forum.inclusion.beta.gouv.fr/login</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">no-cache, no-store</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/robots.txt">https://forum.inclusion.beta.gouv.fr/robots.txt</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">no-cache, no-store</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/search">https://forum.inclusion.beta.gouv.fr/search</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">no-cache, no-store</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/signup">https://forum.inclusion.beta.gouv.fr/signup</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">no-cache, no-store</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/u/">https://forum.inclusion.beta.gouv.fr/u/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					<td width="80%">11</td>
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%">
-							<a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a>
-							<br />
-						
-							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/525.html">525</a></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%">13</td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10015/">10015</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -4858,6 +4557,84 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/badges">https://forum.inclusion.beta.gouv.fr/badges</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">59758027</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/c/actualites/espace-juridique/47">https://forum.inclusion.beta.gouv.fr/c/actualites/espace-juridique/47</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">10122021</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/c/actualites/espace-juridique/47">https://forum.inclusion.beta.gouv.fr/c/actualites/espace-juridique/47</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">61621798</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/c/plateforme-de-linclusion/2">https://forum.inclusion.beta.gouv.fr/c/plateforme-de-linclusion/2</a></td>
 					</tr>
 					<tr>
@@ -4910,7 +4687,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/c/plateforme-de-linclusion/difficultes-ou-interrogations/89">https://forum.inclusion.beta.gouv.fr/c/plateforme-de-linclusion/difficultes-ou-interrogations/89</a></td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/search">https://forum.inclusion.beta.gouv.fr/search</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4930,12 +4707,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">95982049</td>
+						<td width="80%">43252272</td>
 					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">3</td>
+					<td width="80%">6</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -5354,32 +5131,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/c/actualites/espace-juridique/47">https://forum.inclusion.beta.gouv.fr/c/actualites/espace-juridique/47</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/latest">https://forum.inclusion.beta.gouv.fr/latest</a></td>
 					</tr>
 					<tr>
@@ -5406,7 +5157,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/t/code-rome-non-fonctionnel-sur-iae2-asp/8677">https://forum.inclusion.beta.gouv.fr/t/code-rome-non-fonctionnel-sur-iae2-asp/8677</a></td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/search?q=ZAP">https://forum.inclusion.beta.gouv.fr/search?q=ZAP</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5432,7 +5183,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/t/delai-entre-2-pass-iae/8655">https://forum.inclusion.beta.gouv.fr/t/delai-entre-2-pass-iae/8655</a></td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/t/agrement-se-terminant-en-cours-de-contrat/8695">https://forum.inclusion.beta.gouv.fr/t/agrement-se-terminant-en-cours-de-contrat/8695</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5458,7 +5209,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/t/demande-de-fin-de-contrat-cddi-pour-une-afpr/8669">https://forum.inclusion.beta.gouv.fr/t/demande-de-fin-de-contrat-cddi-pour-une-afpr/8669</a></td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/t/cdi-inclusion-etti/8724">https://forum.inclusion.beta.gouv.fr/t/cdi-inclusion-etti/8724</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5484,7 +5235,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/t/erreur-3436-impossibilite-dintegrer-une-fiche-salarie-dans-lasp/8674">https://forum.inclusion.beta.gouv.fr/t/erreur-3436-impossibilite-dintegrer-une-fiche-salarie-dans-lasp/8674</a></td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/t/changement-siret-juillet-22/8704">https://forum.inclusion.beta.gouv.fr/t/changement-siret-juillet-22/8704</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5510,7 +5261,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/t/exporter-des-candidatures/8678">https://forum.inclusion.beta.gouv.fr/t/exporter-des-candidatures/8678</a></td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/t/compte-plus-actif/8697">https://forum.inclusion.beta.gouv.fr/t/compte-plus-actif/8697</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5536,7 +5287,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/t/pass-iae-possibilite-de-travailler-sur-deux-structures-iae-avec-un-meme-pass/8651">https://forum.inclusion.beta.gouv.fr/t/pass-iae-possibilite-de-travailler-sur-deux-structures-iae-avec-un-meme-pass/8651</a></td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/t/contrat-passerelle/8722">https://forum.inclusion.beta.gouv.fr/t/contrat-passerelle/8722</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5562,7 +5313,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/t/pass-iae-se-terminant-ce-jour-relance-du-sujet/8672">https://forum.inclusion.beta.gouv.fr/t/pass-iae-se-terminant-ce-jour-relance-du-sujet/8672</a></td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/t/partage-dun-pass-iae/8703">https://forum.inclusion.beta.gouv.fr/t/partage-dun-pass-iae/8703</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5588,7 +5339,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/t/suspension-du-pass-iae/8652">https://forum.inclusion.beta.gouv.fr/t/suspension-du-pass-iae/8652</a></td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/t/prolongation-dagrement-et-auto-prescription/8698">https://forum.inclusion.beta.gouv.fr/t/prolongation-dagrement-et-auto-prescription/8698</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5614,12 +5365,38 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/t/toujours-pas-de-pass-iae-pour-salaries-presents-avant-1er-decembre/8658">https://forum.inclusion.beta.gouv.fr/t/toujours-pas-de-pass-iae-pour-salaries-presents-avant-1er-decembre/8658</a></td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/t/suspension-de-contrat/8723">https://forum.inclusion.beta.gouv.fr/t/suspension-de-contrat/8723</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
 							class="indent2">Method</td>
 						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/login">https://forum.inclusion.beta.gouv.fr/login</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">POST</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5745,32 +5522,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/*?*api_key">https://forum.inclusion.beta.gouv.fr/*?*api_key</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">query</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/*?api_key">https://forum.inclusion.beta.gouv.fr/*?api_key</a></td>
 					</tr>
 					<tr>
@@ -5844,6 +5595,32 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">query</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/assets/browser-update*.js">https://forum.inclusion.beta.gouv.fr/assets/browser-update*.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">user</td>
 					</tr>
 				
 					<tr>
@@ -6134,7 +5911,7 @@ Connexion&lt;/a&gt;
             &lt;/div&gt;
           &lt;/td&gt;
           &lt;td class=&#39;topics&#39;&gt;
-            &lt;div title=&#39;263 Sujets&#39;&gt;263&lt;/div&gt;
+            &lt;div title=&#39;270 Sujets&#39;&gt;270&lt;/div&gt;
           &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -6304,7 +6081,7 @@ Connexion&lt;/a&gt;
             &lt;/div&gt;
           &lt;/td&gt;
           &lt;td class=&#39;topics&#39;&gt;
-            &lt;div title=&#39;263 Sujets&#39;&gt;263&lt;/div&gt;
+            &lt;div title=&#39;270 Sujets&#39;&gt;270&lt;/div&gt;
           &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -6553,7 +6330,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;3&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;602&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;607&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Avril 15, 2021
@@ -6587,7 +6364,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;396&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;401&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Mars 30, 2021
@@ -6625,7 +6402,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;13&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;21&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Mars 2, 2022
@@ -6651,21 +6428,21 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;/div&gt;
           &lt;/td&gt;
           &lt;td class=&#39;posters&#39;&gt;
-              &lt;a href=&quot;https://forum.inclusion.beta.gouv.fr/u/CynthiaRLIse&quot; class=&quot;&quot;&gt;
-                &lt;img width=&quot;25&quot; height=&quot;25&quot; src=&quot;https://avatars.discourse-cdn.com/v4/letter/c/9e8a1a/25.png&quot; class=&quot;avatar&quot; title=&#39;CynthiaRLIse - Créateur du sujet&#39; aria-label=&#39;CynthiaRLIse - Créateur du sujet&#39;&gt;
+              &lt;a href=&quot;https://forum.inclusion.beta.gouv.fr/u/CynthiaRLIse&quot; class=&quot;latest&quot;&gt;
+                &lt;img width=&quot;25&quot; height=&quot;25&quot; src=&quot;https://avatars.discourse-cdn.com/v4/letter/c/9e8a1a/25.png&quot; class=&quot;avatar&quot; title=&#39;CynthiaRLIse - Créateur du sujet, Auteur le plus récent&#39; aria-label=&#39;CynthiaRLIse - Créateur du sujet, Auteur le plus récent&#39;&gt;
               &lt;/a&gt;
-              &lt;a href=&quot;https://forum.inclusion.beta.gouv.fr/u/Elodie31&quot; class=&quot;latest&quot;&gt;
-                &lt;img width=&quot;25&quot; height=&quot;25&quot; src=&quot;https://avatars.discourse-cdn.com/v4/letter/e/e19b73/25.png&quot; class=&quot;avatar&quot; title=&#39;Elodie31 - Auteur le plus récent&#39; aria-label=&#39;Elodie31 - Auteur le plus récent&#39;&gt;
+              &lt;a href=&quot;https://forum.inclusion.beta.gouv.fr/u/Elodie31&quot; class=&quot;&quot;&gt;
+                &lt;img width=&quot;25&quot; height=&quot;25&quot; src=&quot;https://avatars.discourse-cdn.com/v4/letter/e/e19b73/25.png&quot; class=&quot;avatar&quot; title=&#39;Elodie31 - Auteur fréquent, Réponse acceptée&#39; aria-label=&#39;Elodie31 - Auteur fréquent, Réponse acceptée&#39;&gt;
               &lt;/a&gt;
           &lt;/td&gt;
           &lt;td class=&quot;replies&quot;&gt;
-            &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;1&lt;/span&gt;
+            &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;2&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;28&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;36&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
-            Février 25, 2022
+            Mars 7, 2022
           &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr class=&quot;topic-list-item&quot;&gt;
@@ -6698,7 +6475,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;23&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;31&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Février 23, 2022
@@ -6726,18 +6503,21 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;/div&gt;
           &lt;/td&gt;
           &lt;td class=&#39;posters&#39;&gt;
-              &lt;a href=&quot;https://forum.inclusion.beta.gouv.fr/u/Virginie-v&quot; class=&quot;latest single&quot;&gt;
+              &lt;a href=&quot;https://forum.inclusion.beta.gouv.fr/u/Virginie-v&quot; class=&quot;latest&quot;&gt;
                 &lt;img width=&quot;25&quot; height=&quot;25&quot; src=&quot;/user_avatar/forum.inclusion.beta.gouv.fr/virginie-v/25/913_2.png&quot; class=&quot;avatar&quot; title=&#39;Virginie-v - Créateur du sujet, Auteur le plus récent&#39; aria-label=&#39;Virginie-v - Créateur du sujet, Auteur le plus récent&#39;&gt;
+              &lt;/a&gt;
+              &lt;a href=&quot;https://forum.inclusion.beta.gouv.fr/u/Zohra_H&quot; class=&quot;&quot;&gt;
+                &lt;img width=&quot;25&quot; height=&quot;25&quot; src=&quot;/user_avatar/forum.inclusion.beta.gouv.fr/zohra_h/25/795_2.png&quot; class=&quot;avatar&quot; title=&#39;Zohra_H - Auteur fréquent&#39; aria-label=&#39;Zohra_H - Auteur fréquent&#39;&gt;
               &lt;/a&gt;
           &lt;/td&gt;
           &lt;td class=&quot;replies&quot;&gt;
-            &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;1&lt;/span&gt;
+            &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;3&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;44&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;52&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
-            Mars 2, 2022
+            Mars 7, 2022
           &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr class=&quot;topic-list-item&quot;&gt;
@@ -6768,7 +6548,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;29&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;33&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Février 16, 2022
@@ -6804,7 +6584,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;33&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;39&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Février 15, 2022
@@ -6838,7 +6618,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;30&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;32&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Février 10, 2022
@@ -6846,11 +6626,11 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
         &lt;/tr&gt;
         &lt;tr class=&quot;topic-list-item&quot;&gt;
           &lt;td class=&quot;main-link&quot; itemprop=&#39;itemListElement&#39; itemscope itemtype=&#39;http://schema.org/ListItem&#39;&gt;
-            &lt;meta itemprop=&#39;name&#39; content=&#39;Webinaires de démonstration de La communauté de l&amp;#39;inclusion&#39;&gt;
-            &lt;meta itemprop=&#39;url&#39; content=&#39;https://forum.inclusion.beta.gouv.fr/t/webinaires-de-demonstration-de-la-communaute-de-linclusion/8525&#39;&gt;
+            &lt;meta itemprop=&#39;name&#39; content=&#39;Votre espace d’entraide et de partage évolue!&#39;&gt;
+            &lt;meta itemprop=&#39;url&#39; content=&#39;https://forum.inclusion.beta.gouv.fr/t/votre-espace-d-entraide-et-de-partage-evolue/8525&#39;&gt;
             &lt;meta itemprop=&#39;position&#39; content=&#39;10&#39;&gt;
             &lt;span class=&quot;link-top-line&quot;&gt;
-              &lt;a href=&#39;https://forum.inclusion.beta.gouv.fr/t/webinaires-de-demonstration-de-la-communaute-de-linclusion/8525&#39; class=&#39;title raw-link raw-topic-link&#39;&gt;Webinaires de démonstration de La communauté de l&amp;#39;inclusion&lt;/a&gt;
+              &lt;a href=&#39;https://forum.inclusion.beta.gouv.fr/t/votre-espace-d-entraide-et-de-partage-evolue/8525&#39; class=&#39;title raw-link raw-topic-link&#39;&gt;Votre espace d’entraide et de partage évolue!&lt;/a&gt;
             &lt;/span&gt;
             &lt;div class=&quot;link-bottom-line&quot;&gt;
                 &lt;a href=&#39;/c/actualites/81&#39; class=&#39;badge-wrapper bullet&#39;&gt;
@@ -6864,18 +6644,21 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;/div&gt;
           &lt;/td&gt;
           &lt;td class=&#39;posters&#39;&gt;
-              &lt;a href=&quot;https://forum.inclusion.beta.gouv.fr/u/Equipe_Forum&quot; class=&quot;latest single&quot;&gt;
-                &lt;img width=&quot;25&quot; height=&quot;25&quot; src=&quot;https://avatars.discourse-cdn.com/v4/letter/e/df705f/25.png&quot; class=&quot;avatar&quot; title=&#39;Equipe_Forum - Créateur du sujet, Auteur le plus récent&#39; aria-label=&#39;Equipe_Forum - Créateur du sujet, Auteur le plus récent&#39;&gt;
+              &lt;a href=&quot;https://forum.inclusion.beta.gouv.fr/u/Equipe_Forum&quot; class=&quot;&quot;&gt;
+                &lt;img width=&quot;25&quot; height=&quot;25&quot; src=&quot;https://avatars.discourse-cdn.com/v4/letter/e/df705f/25.png&quot; class=&quot;avatar&quot; title=&#39;Equipe_Forum - Créateur du sujet&#39; aria-label=&#39;Equipe_Forum - Créateur du sujet&#39;&gt;
+              &lt;/a&gt;
+              &lt;a href=&quot;https://forum.inclusion.beta.gouv.fr/u/Zohra_H&quot; class=&quot;latest&quot;&gt;
+                &lt;img width=&quot;25&quot; height=&quot;25&quot; src=&quot;/user_avatar/forum.inclusion.beta.gouv.fr/zohra_h/25/795_2.png&quot; class=&quot;avatar&quot; title=&#39;Zohra_H - Auteur le plus récent&#39; aria-label=&#39;Zohra_H - Auteur le plus récent&#39;&gt;
               &lt;/a&gt;
           &lt;/td&gt;
           &lt;td class=&quot;replies&quot;&gt;
-            &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;2&lt;/span&gt;
+            &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;3&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;32&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;40&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
-            Février 10, 2022
+            Mars 9, 2022
           &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr class=&quot;topic-list-item&quot;&gt;
@@ -6898,11 +6681,8 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;/div&gt;
           &lt;/td&gt;
           &lt;td class=&#39;posters&#39;&gt;
-              &lt;a href=&quot;https://forum.inclusion.beta.gouv.fr/u/Fabrice&quot; class=&quot;&quot;&gt;
-                &lt;img width=&quot;25&quot; height=&quot;25&quot; src=&quot;https://avatars.discourse-cdn.com/v4/letter/f/5fc32e/25.png&quot; class=&quot;avatar&quot; title=&#39;Fabrice - Créateur du sujet&#39; aria-label=&#39;Fabrice - Créateur du sujet&#39;&gt;
-              &lt;/a&gt;
-              &lt;a href=&quot;https://forum.inclusion.beta.gouv.fr/u/Elodie31&quot; class=&quot;&quot;&gt;
-                &lt;img width=&quot;25&quot; height=&quot;25&quot; src=&quot;https://avatars.discourse-cdn.com/v4/letter/e/e19b73/25.png&quot; class=&quot;avatar&quot; title=&#39;Elodie31 - Auteur fréquent, Réponse acceptée&#39; aria-label=&#39;Elodie31 - Auteur fréquent, Réponse acceptée&#39;&gt;
+              &lt;a href=&quot;https://forum.inclusion.beta.gouv.fr/u/Fabrice&quot; class=&quot;latest&quot;&gt;
+                &lt;img width=&quot;25&quot; height=&quot;25&quot; src=&quot;https://avatars.discourse-cdn.com/v4/letter/f/5fc32e/25.png&quot; class=&quot;avatar&quot; title=&#39;Fabrice - Créateur du sujet, Auteur le plus récent, Réponse acceptée&#39; aria-label=&#39;Fabrice - Créateur du sujet, Auteur le plus récent, Réponse acceptée&#39;&gt;
               &lt;/a&gt;
               &lt;a href=&quot;https://forum.inclusion.beta.gouv.fr/u/Zohra_H&quot; class=&quot;&quot;&gt;
                 &lt;img width=&quot;25&quot; height=&quot;25&quot; src=&quot;/user_avatar/forum.inclusion.beta.gouv.fr/zohra_h/25/795_2.png&quot; class=&quot;avatar&quot; title=&#39;Zohra_H - Auteur fréquent&#39; aria-label=&#39;Zohra_H - Auteur fréquent&#39;&gt;
@@ -6910,18 +6690,21 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
               &lt;a href=&quot;https://forum.inclusion.beta.gouv.fr/u/armel&quot; class=&quot;&quot;&gt;
                 &lt;img width=&quot;25&quot; height=&quot;25&quot; src=&quot;https://avatars.discourse-cdn.com/v4/letter/a/977dab/25.png&quot; class=&quot;avatar&quot; title=&#39;armel - Auteur fréquent&#39; aria-label=&#39;armel - Auteur fréquent&#39;&gt;
               &lt;/a&gt;
-              &lt;a href=&quot;https://forum.inclusion.beta.gouv.fr/u/Catherine&quot; class=&quot;latest&quot;&gt;
-                &lt;img width=&quot;25&quot; height=&quot;25&quot; src=&quot;https://avatars.discourse-cdn.com/v4/letter/c/c67d28/25.png&quot; class=&quot;avatar&quot; title=&#39;Catherine - Auteur le plus récent&#39; aria-label=&#39;Catherine - Auteur le plus récent&#39;&gt;
+              &lt;a href=&quot;https://forum.inclusion.beta.gouv.fr/u/Elodie31&quot; class=&quot;&quot;&gt;
+                &lt;img width=&quot;25&quot; height=&quot;25&quot; src=&quot;https://avatars.discourse-cdn.com/v4/letter/e/e19b73/25.png&quot; class=&quot;avatar&quot; title=&#39;Elodie31 - Auteur fréquent&#39; aria-label=&#39;Elodie31 - Auteur fréquent&#39;&gt;
+              &lt;/a&gt;
+              &lt;a href=&quot;https://forum.inclusion.beta.gouv.fr/u/Catherine&quot; class=&quot;&quot;&gt;
+                &lt;img width=&quot;25&quot; height=&quot;25&quot; src=&quot;https://avatars.discourse-cdn.com/v4/letter/c/c67d28/25.png&quot; class=&quot;avatar&quot; title=&#39;Catherine - Auteur fréquent&#39; aria-label=&#39;Catherine - Auteur fréquent&#39;&gt;
               &lt;/a&gt;
           &lt;/td&gt;
           &lt;td class=&quot;replies&quot;&gt;
-            &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;5&lt;/span&gt;
+            &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;6&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;68&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;78&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
-            Février 15, 2022
+            Mars 8, 2022
           &lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr class=&quot;topic-list-item&quot;&gt;
@@ -6955,7 +6738,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;1&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;262&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;294&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Février 8, 2022
@@ -6989,7 +6772,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;40&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;41&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Février 1, 2022
@@ -7028,7 +6811,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;2&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;115&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;131&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Janvier 31, 2022
@@ -7062,7 +6845,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;47&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;49&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Janvier 27, 2022
@@ -7108,7 +6891,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;6&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;117&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;119&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Janvier 28, 2022
@@ -7144,7 +6927,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;34&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;37&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Janvier 21, 2022
@@ -7178,7 +6961,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;34&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;36&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Janvier 20, 2022
@@ -7215,7 +6998,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;1&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;68&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;69&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Janvier 17, 2022
@@ -7252,7 +7035,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;1&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;80&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;81&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Février 25, 2022
@@ -7292,7 +7075,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;2&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;53&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;55&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Janvier 20, 2022
@@ -7330,7 +7113,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;64&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;67&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Janvier 7, 2022
@@ -7372,7 +7155,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;10&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;243&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;269&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Janvier 31, 2022
@@ -7409,7 +7192,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;1&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;38&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;39&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Janvier 4, 2022
@@ -7446,7 +7229,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;2&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;74&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;79&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Janvier 4, 2022
@@ -7485,7 +7268,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;1&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;69&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;70&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Décembre 28, 2021
@@ -7522,7 +7305,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;1&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;176&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;179&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Décembre 30, 2021
@@ -7561,7 +7344,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;3&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;64&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;69&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Décembre 24, 2021
@@ -7598,7 +7381,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;1&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;152&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;157&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Décembre 23, 2021
@@ -7638,7 +7421,7 @@ Vous êtes au courant d’un fait marquant ou &amp;hellip;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;2&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;441&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;447&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Janvier 3, 2022
@@ -7784,7 +7567,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;1&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;201&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;202&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Octobre 5, 2021
@@ -7821,7 +7604,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;2&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;249&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;252&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Septembre 22, 2021
@@ -7858,7 +7641,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;2&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;357&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;366&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Septembre 22, 2021
@@ -7898,7 +7681,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;2&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;159&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;165&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Septembre 9, 2021
@@ -7935,7 +7718,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;1&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;242&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;244&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Septembre 8, 2021
@@ -7972,7 +7755,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;3&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;165&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;166&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Juillet 1, 2021
@@ -8012,7 +7795,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;2&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;340&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;342&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Mai 6, 2021
@@ -8157,7 +7940,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;784&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;791&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Décembre 17, 2020
@@ -8197,7 +7980,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;3&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;708&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;860&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Mars 3, 2022
@@ -8234,7 +8017,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;2&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;578&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;600&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Mars 3, 2022
@@ -8274,7 +8057,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;2&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;152&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;156&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Février 15, 2022
@@ -8308,7 +8091,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;1&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;115&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;128&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Février 7, 2022
@@ -8351,7 +8134,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;6&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;112&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;120&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Février 2, 2022
@@ -8385,7 +8168,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;60&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;62&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Février 1, 2022
@@ -8419,7 +8202,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;538&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;548&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Octobre 12, 2021
@@ -8453,7 +8236,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;372&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;412&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Janvier 19, 2022
@@ -8487,7 +8270,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;55&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;56&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Janvier 18, 2022
@@ -8521,7 +8304,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;40&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;42&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Janvier 13, 2022
@@ -8558,7 +8341,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;3&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;98&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;102&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Janvier 11, 2022
@@ -8604,7 +8387,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;8&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;185&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;191&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Janvier 5, 2022
@@ -8644,7 +8427,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;2&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;117&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;118&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Décembre 31, 2021
@@ -8681,7 +8464,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;1&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;44&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;45&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Décembre 21, 2021
@@ -8715,7 +8498,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;60&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;65&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Décembre 17, 2021
@@ -8749,7 +8532,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;332&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;337&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Décembre 16, 2021
@@ -8783,7 +8566,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;77&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;79&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Décembre 16, 2021
@@ -8817,7 +8600,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;49&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;52&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Décembre 14, 2021
@@ -8854,7 +8637,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;1&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;77&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;79&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Décembre 10, 2021
@@ -8889,7 +8672,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;110&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;115&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Décembre 10, 2021
@@ -8923,7 +8706,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;72&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;76&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Décembre 10, 2021
@@ -8960,7 +8743,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;1&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;284&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;286&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Décembre 7, 2021
@@ -8997,7 +8780,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;1&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;136&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;140&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Décembre 6, 2021
@@ -9031,7 +8814,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;73&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;77&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Décembre 3, 2021
@@ -9066,7 +8849,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;80&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;81&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Novembre 30, 2021
@@ -9107,7 +8890,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;2&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;321&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;329&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Décembre 20, 2021
@@ -9144,7 +8927,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;1&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;163&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;166&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Novembre 29, 2021
@@ -9187,7 +8970,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;3&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;78&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;79&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Novembre 25, 2021
@@ -9226,7 +9009,7 @@ Connexion&lt;/a&gt;
             &lt;span class=&#39;posts&#39; title=&#39;messages&#39;&gt;0&lt;/span&gt;
           &lt;/td&gt;
           &lt;td class=&quot;views&quot;&gt;
-            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;60&lt;/span&gt;
+            &lt;span class=&#39;views&#39; title=&#39;vues&#39;&gt;62&lt;/span&gt;
           &lt;/td&gt;
           &lt;td&gt;
             Novembre 25, 2021
@@ -9820,6 +9603,348 @@ Connexion&lt;/a&gt;
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-0"><a
+						id="10015"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Re-examine Cache-control Directives</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr">https://forum.inclusion.beta.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">no-cache, no-store</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/">https://forum.inclusion.beta.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">no-cache, no-store</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/badges">https://forum.inclusion.beta.gouv.fr/badges</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">no-cache, no-store</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/c/actualites/81">https://forum.inclusion.beta.gouv.fr/c/actualites/81</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">no-cache, no-store</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/c/spie/49">https://forum.inclusion.beta.gouv.fr/c/spie/49</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">no-cache, no-store</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/g">https://forum.inclusion.beta.gouv.fr/g</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/login">https://forum.inclusion.beta.gouv.fr/login</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">no-cache, no-store</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/robots.txt">https://forum.inclusion.beta.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">no-cache, no-store</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/search">https://forum.inclusion.beta.gouv.fr/search</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">no-cache, no-store</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/signup">https://forum.inclusion.beta.gouv.fr/signup</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">no-cache, no-store</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/u/">https://forum.inclusion.beta.gouv.fr/u/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">11</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Whenever possible ensure the cache-control HTTP header is set with &quot;no-cache, no-store, must-revalidate&quot;. If an asset should be cached consider setting the directives &quot;public, max-age, immutable&quot;.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a>
+							<br />
+						
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/525.html">525</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10015/">10015</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
 						id="10049"></a>
 						<div>Informational</div></th>
 					<th class="risk-0">Storable and Cacheable Content</th>
@@ -9838,7 +9963,7 @@ Connexion&lt;/a&gt;
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/*?*api_key">https://forum.inclusion.beta.gouv.fr/*?*api_key</a></td>
+						<td width="80%"><a href="https://forum.inclusion.beta.gouv.fr/*?api_key">https://forum.inclusion.beta.gouv.fr/*?api_key</a></td>
 					</tr>
 					<tr>
 						<td width="20%"

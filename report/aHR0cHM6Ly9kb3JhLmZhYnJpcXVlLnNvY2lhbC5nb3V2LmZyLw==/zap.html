@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 6 Mar 2022 08:37:20
+		Generated on Sun, 13 Mar 2022 08:15:03
 	</h3>
 
 	
@@ -152,7 +152,7 @@ td {
 					<div>Medium</div>
 				</td>
 				<td align="center">
-					<div>6</div>
+					<div>7</div>
 				</td>
 			</tr>
 			<tr>
@@ -160,7 +160,7 @@ td {
 					<div>Low</div>
 				</td>
 				<td align="center">
-					<div>7</div>
+					<div>5</div>
 				</td>
 			</tr>
 			<tr>
@@ -168,7 +168,7 @@ td {
 					<div>Informational</div>
 				</td>
 				<td align="center">
-					<div>4</div>
+					<div>5</div>
 				</td>
 			</tr>
 			<tr>
@@ -192,6 +192,11 @@ td {
 					align="center">Risk Level</th>
 				<th width="20%"
 					align="center">Number of Instances</th>
+			</tr>
+			<tr>
+				<td><a href="#10202">Absence of Anti-CSRF Tokens</a></td>
+				<td align="center" class="risk-2">Medium</td>
+				<td align="center">2</td>
 			</tr>
 			<tr>
 				<td><a href="#10055">CSP: Wildcard Directive</a></td>
@@ -224,11 +229,6 @@ td {
 				<td align="center">11</td>
 			</tr>
 			<tr>
-				<td><a href="#10202">Absence of Anti-CSRF Tokens</a></td>
-				<td align="center" class="risk-1">Low</td>
-				<td align="center">2</td>
-			</tr>
-			<tr>
 				<td><a href="#10017">Cross-Domain JavaScript Source File Inclusion</a></td>
 				<td align="center" class="risk-1">Low</td>
 				<td align="center">11</td>
@@ -237,11 +237,6 @@ td {
 				<td><a href="#10110">Dangerous JS Functions</a></td>
 				<td align="center" class="risk-1">Low</td>
 				<td align="center">2</td>
-			</tr>
-			<tr>
-				<td><a href="#10015">Incomplete or No Cache-control Header Set</a></td>
-				<td align="center" class="risk-1">Low</td>
-				<td align="center">11</td>
 			</tr>
 			<tr>
 				<td><a href="#10063">Permissions Policy Header Not Set</a></td>
@@ -274,6 +269,11 @@ td {
 				<td align="center">11</td>
 			</tr>
 			<tr>
+				<td><a href="#10015">Re-examine Cache-control Directives</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">11</td>
+			</tr>
+			<tr>
 				<td><a href="#10049">Storable and Cacheable Content</a></td>
 				<td align="center" class="risk-0">Informational</td>
 				<td align="center">11</td>
@@ -288,6 +288,174 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-2"><a
+						id="10202"></a>
+						<div>Medium</div></th>
+					<th class="risk-2">Absence of Anti-CSRF Tokens</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>No Anti-CSRF tokens were found in a HTML submission form.</div>
+							<br />
+						
+							<div>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</div>
+							<br />
+						
+							<div>CSRF attacks are effective in a number of situations, including:</div>
+							<br />
+						
+							<div>    * The victim has an active session on the target site.</div>
+							<br />
+						
+							<div>    * The victim is authenticated via HTTP auth on the target site.</div>
+							<br />
+						
+							<div>    * The victim is on the same local network as the target site.</div>
+							<br />
+						
+							<div>CSRF has primarily been used to perform an action against a target site using the victim&#39;s privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/">https://dora.fabrique.social.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form class=&quot;svelte-1ri7bxc&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/?category=ZAP&amp;city=ZAP&amp;subcategory=ZAP">https://dora.fabrique.social.gouv.fr/?category=ZAP&amp;city=ZAP&amp;subcategory=ZAP</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form class=&quot;svelte-1ri7bxc&quot;&gt;</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">2</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Phase: Architecture and Design</div>
+							<br />
+						
+							<div>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</div>
+							<br />
+						
+							<div>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</div>
+							<br />
+						
+							<div>Phase: Implementation</div>
+							<br />
+						
+							<div>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</div>
+							<br />
+						
+							<div>Phase: Architecture and Design</div>
+							<br />
+						
+							<div>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</div>
+							<br />
+						
+							<div>Note that this can be bypassed using XSS.</div>
+							<br />
+						
+							<div>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</div>
+							<br />
+						
+							<div>Note that this can be bypassed using XSS.</div>
+							<br />
+						
+							<div>Use the ESAPI Session Management control.</div>
+							<br />
+						
+							<div>This control includes a component for CSRF.</div>
+							<br />
+						
+							<div>Do not use the GET method for any request that triggers a state change.</div>
+							<br />
+						
+							<div>Phase: Implementation</div>
+							<br />
+						
+							<div>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="http://projects.webappsec.org/Cross-Site-Request-Forgery">http://projects.webappsec.org/Cross-Site-Request-Forgery</a>
+							<br />
+						
+							<a href="http://cwe.mitre.org/data/definitions/352.html">http://cwe.mitre.org/data/definitions/352.html</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">9</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10202/">10202</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-2"><a
 						id="10055"></a>
 						<div>Medium</div></th>
 					<th class="risk-2">CSP: Wildcard Directive</th>
@@ -295,13 +463,7 @@ td {
 				<tr>
 					<td width="20%">Description</td>
 					<td width="80%">
-							<div>The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: </div>
-							<br />
-						
-							<div>frame-ancestors, form-action</div>
-							<br />
-						
-							<div>The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</div>
+							<div>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</div>
 							
 						</td>
 				</tr>
@@ -338,7 +500,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/auth">https://dora.fabrique.social.gouv.fr/auth</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/?category=ZAP&amp;city=ZAP&amp;subcategory=ZAP">https://dora.fabrique.social.gouv.fr/?category=ZAP&amp;city=ZAP&amp;subcategory=ZAP</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -447,7 +609,7 @@ td {
 				<tr>
 					<td width="20%">Description</td>
 					<td width="80%">
-							<div>script-src includes unsafe-inline.</div>
+							<div>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</div>
 							
 						</td>
 				</tr>
@@ -484,7 +646,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/auth">https://dora.fabrique.social.gouv.fr/auth</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/?category=ZAP&amp;city=ZAP&amp;subcategory=ZAP">https://dora.fabrique.social.gouv.fr/?category=ZAP&amp;city=ZAP&amp;subcategory=ZAP</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -593,7 +755,7 @@ td {
 				<tr>
 					<td width="20%">Description</td>
 					<td width="80%">
-							<div>style-src includes unsafe-inline.</div>
+							<div>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</div>
 							
 						</td>
 				</tr>
@@ -630,7 +792,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/auth">https://dora.fabrique.social.gouv.fr/auth</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/?category=ZAP&amp;city=ZAP&amp;subcategory=ZAP">https://dora.fabrique.social.gouv.fr/?category=ZAP&amp;city=ZAP&amp;subcategory=ZAP</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1033,7 +1195,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/assconseils-ressour-">https://dora.fabrique.social.gouv.fr/structures/assconseils-ressour-</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/association-pour-adu">https://dora.fabrique.social.gouv.fr/structures/association-pour-adu</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1059,7 +1221,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/bourema-houria-coach">https://dora.fabrique.social.gouv.fr/structures/bourema-houria-coach</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/centre-socio-culture">https://dora.fabrique.social.gouv.fr/structures/centre-socio-culture</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1085,7 +1247,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/centre-communal-dact">https://dora.fabrique.social.gouv.fr/structures/centre-communal-dact</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/corylus-formations-c">https://dora.fabrique.social.gouv.fr/structures/corylus-formations-c</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1111,7 +1273,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/centre-de-documentat">https://dora.fabrique.social.gouv.fr/structures/centre-de-documentat</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/la-boite-aux-lettres">https://dora.fabrique.social.gouv.fr/structures/la-boite-aux-lettres</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1137,7 +1299,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/departement-des-bouc">https://dora.fabrique.social.gouv.fr/structures/departement-des-bouc</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/lentraide-le-travail">https://dora.fabrique.social.gouv.fr/structures/lentraide-le-travail</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1163,7 +1325,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/entreprise-interim-i">https://dora.fabrique.social.gouv.fr/structures/entreprise-interim-i</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/mission-locale-de-lo">https://dora.fabrique.social.gouv.fr/structures/mission-locale-de-lo</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1189,7 +1351,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/fil-terre">https://dora.fabrique.social.gouv.fr/structures/fil-terre</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/ohe-promethee-cotes-">https://dora.fabrique.social.gouv.fr/structures/ohe-promethee-cotes-</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1243,174 +1405,6 @@ td {
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/90003/">90003</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
-		
-			<table class="results">
-				<tr height="24">
-					<th width="20%" class="risk-1"><a
-						id="10202"></a>
-						<div>Low</div></th>
-					<th class="risk-1">Absence of Anti-CSRF Tokens</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>No Anti-CSRF tokens were found in a HTML submission form.</div>
-							<br />
-						
-							<div>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</div>
-							<br />
-						
-							<div>CSRF attacks are effective in a number of situations, including:</div>
-							<br />
-						
-							<div>    * The victim has an active session on the target site.</div>
-							<br />
-						
-							<div>    * The victim is authenticated via HTTP auth on the target site.</div>
-							<br />
-						
-							<div>    * The victim is on the same local network as the target site.</div>
-							<br />
-						
-							<div>CSRF has primarily been used to perform an action against a target site using the victim&#39;s privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/">https://dora.fabrique.social.gouv.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form class=&quot;svelte-1ri7bxc&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/?category=ZAP&amp;city=ZAP&amp;subcategory=ZAP">https://dora.fabrique.social.gouv.fr/?category=ZAP&amp;city=ZAP&amp;subcategory=ZAP</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form class=&quot;svelte-1ri7bxc&quot;&gt;</td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					<td width="80%">2</td>
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>Phase: Architecture and Design</div>
-							<br />
-						
-							<div>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</div>
-							<br />
-						
-							<div>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</div>
-							<br />
-						
-							<div>Phase: Implementation</div>
-							<br />
-						
-							<div>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</div>
-							<br />
-						
-							<div>Phase: Architecture and Design</div>
-							<br />
-						
-							<div>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</div>
-							<br />
-						
-							<div>Note that this can be bypassed using XSS.</div>
-							<br />
-						
-							<div>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</div>
-							<br />
-						
-							<div>Note that this can be bypassed using XSS.</div>
-							<br />
-						
-							<div>Use the ESAPI Session Management control.</div>
-							<br />
-						
-							<div>This control includes a component for CSRF.</div>
-							<br />
-						
-							<div>Do not use the GET method for any request that triggers a state change.</div>
-							<br />
-						
-							<div>Phase: Implementation</div>
-							<br />
-						
-							<div>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%">
-							<a href="http://projects.webappsec.org/Cross-Site-Request-Forgery">http://projects.webappsec.org/Cross-Site-Request-Forgery</a>
-							<br />
-						
-							<a href="http://cwe.mitre.org/data/definitions/352.html">http://cwe.mitre.org/data/definitions/352.html</a>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%">9</td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10202/">10202</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -1540,7 +1534,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/assconseils-ressour-">https://dora.fabrique.social.gouv.fr/structures/assconseils-ressour-</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/association-pour-adu">https://dora.fabrique.social.gouv.fr/structures/association-pour-adu</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1566,7 +1560,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/bourema-houria-coach">https://dora.fabrique.social.gouv.fr/structures/bourema-houria-coach</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/centre-socio-culture">https://dora.fabrique.social.gouv.fr/structures/centre-socio-culture</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1592,7 +1586,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/centre-communal-dact">https://dora.fabrique.social.gouv.fr/structures/centre-communal-dact</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/corylus-formations-c">https://dora.fabrique.social.gouv.fr/structures/corylus-formations-c</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1618,7 +1612,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/centre-de-documentat">https://dora.fabrique.social.gouv.fr/structures/centre-de-documentat</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/la-boite-aux-lettres">https://dora.fabrique.social.gouv.fr/structures/la-boite-aux-lettres</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1644,7 +1638,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/departement-des-bouc">https://dora.fabrique.social.gouv.fr/structures/departement-des-bouc</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/lentraide-le-travail">https://dora.fabrique.social.gouv.fr/structures/lentraide-le-travail</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1670,7 +1664,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/entreprise-interim-i">https://dora.fabrique.social.gouv.fr/structures/entreprise-interim-i</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/mission-locale-de-lo">https://dora.fabrique.social.gouv.fr/structures/mission-locale-de-lo</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1696,7 +1690,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/fil-terre">https://dora.fabrique.social.gouv.fr/structures/fil-terre</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/ohe-promethee-cotes-">https://dora.fabrique.social.gouv.fr/structures/ohe-promethee-cotes-</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1772,7 +1766,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-cdf67e3f.js">https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-cdf67e3f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-8af3c7b1.js">https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-8af3c7b1.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1859,348 +1853,6 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-1"><a
-						id="10015"></a>
-						<div>Low</div></th>
-					<th class="risk-1">Incomplete or No Cache-control Header Set</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content.</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/">https://dora.fabrique.social.gouv.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/?category=ZAP&amp;city=ZAP&amp;subcategory=ZAP">https://dora.fabrique.social.gouv.fr/?category=ZAP&amp;city=ZAP&amp;subcategory=ZAP</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/contribuer">https://dora.fabrique.social.gouv.fr/contribuer</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/contribuer/saisie">https://dora.fabrique.social.gouv.fr/contribuer/saisie</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/robots.txt">https://dora.fabrique.social.gouv.fr/robots.txt</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/sitemap.xml">https://dora.fabrique.social.gouv.fr/sitemap.xml</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/centre-communal-dact">https://dora.fabrique.social.gouv.fr/structures/centre-communal-dact</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/centre-de-documentat">https://dora.fabrique.social.gouv.fr/structures/centre-de-documentat</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/entreprise-interim-i">https://dora.fabrique.social.gouv.fr/structures/entreprise-interim-i</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/fil-terre">https://dora.fabrique.social.gouv.fr/structures/fil-terre</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/tableau-de-bord/">https://dora.fabrique.social.gouv.fr/tableau-de-bord/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">public,max-age=0,must-revalidate</td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					<td width="80%">11</td>
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%">
-							<a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a>
-							<br />
-						
-							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/525.html">525</a></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%">13</td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10015/">10015</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
-		
-			<table class="results">
-				<tr height="24">
-					<th width="20%" class="risk-1"><a
 						id="10063"></a>
 						<div>Low</div></th>
 					<th class="risk-1">Permissions Policy Header Not Set</th>
@@ -2245,7 +1897,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/auth-a0991549.js">https://dora.fabrique.social.gouv.fr/_app/chunks/auth-a0991549.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/auth-dbe600b5.js">https://dora.fabrique.social.gouv.fr/_app/chunks/auth-dbe600b5.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2271,7 +1923,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/button-menu-15dc4726.js">https://dora.fabrique.social.gouv.fr/_app/chunks/button-menu-15dc4726.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/button-menu-ae7e78b3.js">https://dora.fabrique.social.gouv.fr/_app/chunks/button-menu-ae7e78b3.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2297,7 +1949,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/centered-grid-082f2742.js">https://dora.fabrique.social.gouv.fr/_app/chunks/centered-grid-082f2742.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/centered-grid-49cc1281.js">https://dora.fabrique.social.gouv.fr/_app/chunks/centered-grid-49cc1281.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2323,7 +1975,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/link-button-0ae66dd1.js">https://dora.fabrique.social.gouv.fr/_app/chunks/link-button-0ae66dd1.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/link-button-998b1312.js">https://dora.fabrique.social.gouv.fr/_app/chunks/link-button-998b1312.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2349,7 +2001,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/logger-02546c83.js">https://dora.fabrique.social.gouv.fr/_app/chunks/logger-02546c83.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/logger-085cfbe4.js">https://dora.fabrique.social.gouv.fr/_app/chunks/logger-085cfbe4.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2375,7 +2027,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/singletons-a6a7384f.js">https://dora.fabrique.social.gouv.fr/_app/chunks/singletons-a6a7384f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/singletons-d1fb5791.js">https://dora.fabrique.social.gouv.fr/_app/chunks/singletons-d1fb5791.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2401,7 +2053,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/stores-74ac20e9.js">https://dora.fabrique.social.gouv.fr/_app/chunks/stores-74ac20e9.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/stores-3536f176.js">https://dora.fabrique.social.gouv.fr/_app/chunks/stores-3536f176.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2427,7 +2079,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-cdf67e3f.js">https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-cdf67e3f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-8af3c7b1.js">https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-8af3c7b1.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2453,7 +2105,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/pages/__layout.svelte-3c172e2f.js">https://dora.fabrique.social.gouv.fr/_app/pages/__layout.svelte-3c172e2f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/pages/__layout.svelte-82273eaf.js">https://dora.fabrique.social.gouv.fr/_app/pages/__layout.svelte-82273eaf.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2479,7 +2131,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/start-3ad51d57.js">https://dora.fabrique.social.gouv.fr/_app/start-3ad51d57.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/start-c4562f40.js">https://dora.fabrique.social.gouv.fr/_app/start-c4562f40.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2622,33 +2274,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/button-menu-15dc4726.js">https://dora.fabrique.social.gouv.fr/_app/chunks/button-menu-15dc4726.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">74462339</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2674,7 +2300,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2700,7 +2326,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2726,7 +2352,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2752,7 +2378,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2778,7 +2404,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2804,7 +2430,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2830,7 +2456,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2856,7 +2482,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2882,7 +2508,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2908,7 +2534,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1fca8f4f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js">https://dora.fabrique.social.gouv.fr/_app/chunks/field-1f9ce03d.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2934,7 +2560,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/start-3ad51d57.js">https://dora.fabrique.social.gouv.fr/_app/start-3ad51d57.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/start-c4562f40.js">https://dora.fabrique.social.gouv.fr/_app/start-c4562f40.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2954,13 +2580,13 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">09956512</td>
+						<td width="80%">14436492</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/start-3ad51d57.js">https://dora.fabrique.social.gouv.fr/_app/start-3ad51d57.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/start-c4562f40.js">https://dora.fabrique.social.gouv.fr/_app/start-c4562f40.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2981,6 +2607,32 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">77200849</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/tableau-de-bord/">https://dora.fabrique.social.gouv.fr/tableau-de-bord/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">47691750</td>
 					</tr>
 				
 				<tr>
@@ -3143,7 +2795,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/assets/pages/__layout.svelte-5945d39d.css">https://dora.fabrique.social.gouv.fr/_app/assets/pages/__layout.svelte-5945d39d.css</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/assets/pages/__layout.svelte-6f9bf207.css">https://dora.fabrique.social.gouv.fr/_app/assets/pages/__layout.svelte-6f9bf207.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3221,7 +2873,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/singletons-a6a7384f.js">https://dora.fabrique.social.gouv.fr/_app/chunks/singletons-a6a7384f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/singletons-d1fb5791.js">https://dora.fabrique.social.gouv.fr/_app/chunks/singletons-d1fb5791.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3247,7 +2899,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-cdf67e3f.js">https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-cdf67e3f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-8af3c7b1.js">https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-8af3c7b1.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3273,7 +2925,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/pages/__layout.svelte-3c172e2f.js">https://dora.fabrique.social.gouv.fr/_app/pages/__layout.svelte-3c172e2f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/pages/__layout.svelte-82273eaf.js">https://dora.fabrique.social.gouv.fr/_app/pages/__layout.svelte-82273eaf.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3299,7 +2951,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/start-3ad51d57.js">https://dora.fabrique.social.gouv.fr/_app/start-3ad51d57.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/start-c4562f40.js">https://dora.fabrique.social.gouv.fr/_app/start-c4562f40.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3488,7 +3140,33 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-cdf67e3f.js">https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-cdf67e3f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/newsletter-button-a7ba725e.js">https://dora.fabrique.social.gouv.fr/_app/chunks/newsletter-button-a7ba725e.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">com/serve/MUIEAEkY4naptXBIq5NdRg5UPxP1wmwbGCinne5c1gynY-wfrZ0Dz0QP_NqkXtfyYqhdaq3AO8VFZJ9giRi9ZT0eah7Ut2U0LeKSTVIHQb_5nhvTLUMWXo9ZMeIYCHVlzmjkXGQ66S5ewcYpSADUgV--2RVZ_mrnsRJQoCNwZ8y-sWzfQsEzfKuTA7SLbZ_dWeqaigudym3EaiHT</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-8af3c7b1.js">https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-8af3c7b1.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3514,7 +3192,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/pages/__layout.svelte-3c172e2f.js">https://dora.fabrique.social.gouv.fr/_app/pages/__layout.svelte-3c172e2f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/pages/__layout.svelte-82273eaf.js">https://dora.fabrique.social.gouv.fr/_app/pages/__layout.svelte-82273eaf.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3535,32 +3213,6 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAASpAAAEqQFY9d3tAAACkUlEQVRYhc2XsWvbQBTGP7uOk6BCoF0KHZqhnUqo06VbnaUQOiVToZON5lL9B23/Aw0da+qp0MleCoYuVrd0SBxCp3RIh0KngCHGiZ1U5VOeHMk+6c5Cgf5ARpzfu+/p7undU8H3fZjQcAYVAFsANgBUE1w8AF0Abdu1eibzagNoOIMaAAfAI6NIr9gH4Nqu1cwUQMMZrAJopjytKVyVmu1aRyr7YoI4l7qXgzhkjp7MqQ9AlrwFYCUH8RDO1ZK5Y8S2QKJs5SisYtt2rXY4PglA9ryX85Or6AOohDlRihg0TcRv3irg3loJq2s3YuNHBxf4dXCOk2Pta70iWnydL1dA9uajzvPxZhnrmwupNnudMXY7I91UpM5XNExCR2f99OWiVpzQhrYGBJqFD69PWOH20uxNnnwaw5VYL0p5TYR7Pq84ZCXoq2GrGCZDEkw4FaNTHz+8cXDxXkWSb4SNkq7aTWc7RPzzuyFGw0vh3c4YL94so7xUmPFlgClUlaVYx+HO+UQ8CGjoB2NZyBRAnmQK4MGTEm7fvXLlPceyoPVihbtzP54H3Ovnr5Ymy07x6f0PfXVoV+Dwu3pvKfiwuhBcKnHC0mwSgJdmwARjUZkX+hicC15RerhUWNGOf/81DoG2hudBlwG0DQzx5f2pURC0oa0h7fA07Jk0neXlAp7ZizNJGfLn5wW+Ns5iNSKFfdu1KmESuiYenJhPp8oJjvE/Q3Hylj/Rjqg7TxPKg4anJCRHDBIuime7VnAGRetAbZ6WjILfPp3NIxrSF62ASR2QHm2ma70GYt8IsUIk3Wr9GsXr0Y54JgAJgg3jtixVXvSlHZ/5TFOWYomyoquShnjShivrzf/7caoIJP/PcwD/APUxGhwOWj+2AAAAAElFTkSuQmCC</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/pages/index.svelte-24ee6fa0.js">https://dora.fabrique.social.gouv.fr/_app/pages/index.svelte-24ee6fa0.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">com/serve/MUIEAEkY4naptXBIq5NdRg5UPxP1wmwbGCinne5c1gynY-wfrZ0Dz0QP_NqkXtfyYqhdaq3AO8VFZJ9giRi9ZT0eah7Ut2U0LeKSTVIHQb_5nhvTLUMWXo9ZMeIYCHVlzmjkXGQ66S5ewcYpSADUgV--2RVZ_mrnsRJQoCNwZ8y-sWzfQsEzfKuTA7SLbZ_dWeqaigudym3EaiHT</td>
 					</tr>
 				
 					<tr>
@@ -3618,7 +3270,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/centre-de-documentat">https://dora.fabrique.social.gouv.fr/structures/centre-de-documentat</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/corylus-formations-c">https://dora.fabrique.social.gouv.fr/structures/corylus-formations-c</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3644,7 +3296,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/fil-terre">https://dora.fabrique.social.gouv.fr/structures/fil-terre</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/lentraide-le-travail">https://dora.fabrique.social.gouv.fr/structures/lentraide-le-travail</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3801,59 +3453,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/auth-a0991549.js">https://dora.fabrique.social.gouv.fr/_app/chunks/auth-a0991549.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">user</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/logger-02546c83.js">https://dora.fabrique.social.gouv.fr/_app/chunks/logger-02546c83.js</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">from</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-cdf67e3f.js">https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-cdf67e3f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-8af3c7b1.js">https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-8af3c7b1.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3879,7 +3479,33 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-cdf67e3f.js">https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-cdf67e3f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-8af3c7b1.js">https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-8af3c7b1.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">db</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-8af3c7b1.js">https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-8af3c7b1.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3905,7 +3531,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-cdf67e3f.js">https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-cdf67e3f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-8af3c7b1.js">https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-8af3c7b1.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3931,7 +3557,33 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/pages/__layout.svelte-3c172e2f.js">https://dora.fabrique.social.gouv.fr/_app/pages/__layout.svelte-3c172e2f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-8af3c7b1.js">https://dora.fabrique.social.gouv.fr/_app/chunks/vendor-8af3c7b1.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">xxx</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/pages/__layout.svelte-82273eaf.js">https://dora.fabrique.social.gouv.fr/_app/pages/__layout.svelte-82273eaf.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3957,7 +3609,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/pages/__layout.svelte-3c172e2f.js">https://dora.fabrique.social.gouv.fr/_app/pages/__layout.svelte-3c172e2f.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/pages/__layout.svelte-82273eaf.js">https://dora.fabrique.social.gouv.fr/_app/pages/__layout.svelte-82273eaf.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3983,7 +3635,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/start-3ad51d57.js">https://dora.fabrique.social.gouv.fr/_app/start-3ad51d57.js</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/start-c4562f40.js">https://dora.fabrique.social.gouv.fr/_app/start-c4562f40.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4252,7 +3904,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/bourema-houria-coach">https://dora.fabrique.social.gouv.fr/structures/bourema-houria-coach</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/association-pour-adu">https://dora.fabrique.social.gouv.fr/structures/association-pour-adu</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4280,7 +3932,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/centre-communal-dact">https://dora.fabrique.social.gouv.fr/structures/centre-communal-dact</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/corylus-formations-c">https://dora.fabrique.social.gouv.fr/structures/corylus-formations-c</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4308,7 +3960,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/centre-de-documentat">https://dora.fabrique.social.gouv.fr/structures/centre-de-documentat</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/lentraide-le-travail">https://dora.fabrique.social.gouv.fr/structures/lentraide-le-travail</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4336,7 +3988,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/entreprise-interim-i">https://dora.fabrique.social.gouv.fr/structures/entreprise-interim-i</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/mission-locale-de-lo">https://dora.fabrique.social.gouv.fr/structures/mission-locale-de-lo</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4364,7 +4016,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/fil-terre">https://dora.fabrique.social.gouv.fr/structures/fil-terre</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/ohe-promethee-cotes-">https://dora.fabrique.social.gouv.fr/structures/ohe-promethee-cotes-</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4445,6 +4097,348 @@ td {
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/10109/">10109</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
+						id="10015"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Re-examine Cache-control Directives</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/">https://dora.fabrique.social.gouv.fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/?category=ZAP&amp;city=ZAP&amp;subcategory=ZAP">https://dora.fabrique.social.gouv.fr/?category=ZAP&amp;city=ZAP&amp;subcategory=ZAP</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/contribuer">https://dora.fabrique.social.gouv.fr/contribuer</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/contribuer/saisie">https://dora.fabrique.social.gouv.fr/contribuer/saisie</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/robots.txt">https://dora.fabrique.social.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/sitemap.xml">https://dora.fabrique.social.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/association-pour-adu">https://dora.fabrique.social.gouv.fr/structures/association-pour-adu</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/corylus-formations-c">https://dora.fabrique.social.gouv.fr/structures/corylus-formations-c</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/lentraide-le-travail">https://dora.fabrique.social.gouv.fr/structures/lentraide-le-travail</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/structures/ohe-promethee-cotes-">https://dora.fabrique.social.gouv.fr/structures/ohe-promethee-cotes-</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/tableau-de-bord/">https://dora.fabrique.social.gouv.fr/tableau-de-bord/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">public,max-age=0,must-revalidate</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">11</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Whenever possible ensure the cache-control HTTP header is set with &quot;no-cache, no-store, must-revalidate&quot;. If an asset should be cached consider setting the directives &quot;public, max-age, immutable&quot;.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a>
+							<br />
+						
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/525.html">525</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10015/">10015</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -4600,7 +4594,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/assets/pages/__layout.svelte-5945d39d.css">https://dora.fabrique.social.gouv.fr/_app/assets/pages/__layout.svelte-5945d39d.css</a></td>
+						<td width="80%"><a href="https://dora.fabrique.social.gouv.fr/_app/assets/pages/__layout.svelte-6f9bf207.css">https://dora.fabrique.social.gouv.fr/_app/assets/pages/__layout.svelte-6f9bf207.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"

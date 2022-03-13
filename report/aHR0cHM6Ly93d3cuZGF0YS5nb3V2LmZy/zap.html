@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 6 Mar 2022 06:42:01
+		Generated on Sun, 13 Mar 2022 06:22:18
 	</h3>
 
 	
@@ -152,7 +152,7 @@ td {
 					<div>Medium</div>
 				</td>
 				<td align="center">
-					<div>3</div>
+					<div>4</div>
 				</td>
 			</tr>
 			<tr>
@@ -160,7 +160,7 @@ td {
 					<div>Low</div>
 				</td>
 				<td align="center">
-					<div>10</div>
+					<div>8</div>
 				</td>
 			</tr>
 			<tr>
@@ -168,7 +168,7 @@ td {
 					<div>Informational</div>
 				</td>
 				<td align="center">
-					<div>5</div>
+					<div>6</div>
 				</td>
 			</tr>
 			<tr>
@@ -199,6 +199,11 @@ td {
 				<td align="center">1</td>
 			</tr>
 			<tr>
+				<td><a href="#10202">Absence of Anti-CSRF Tokens</a></td>
+				<td align="center" class="risk-2">Medium</td>
+				<td align="center">12</td>
+			</tr>
+			<tr>
 				<td><a href="#10038">Content Security Policy (CSP) Header Not Set</a></td>
 				<td align="center" class="risk-2">Medium</td>
 				<td align="center">12</td>
@@ -212,11 +217,6 @@ td {
 				<td><a href="#90003">Sub Resource Integrity Attribute Missing</a></td>
 				<td align="center" class="risk-2">Medium</td>
 				<td align="center">14</td>
-			</tr>
-			<tr>
-				<td><a href="#10202">Absence of Anti-CSRF Tokens</a></td>
-				<td align="center" class="risk-1">Low</td>
-				<td align="center">12</td>
 			</tr>
 			<tr>
 				<td><a href="#90022">Application Error Disclosure</a></td>
@@ -240,11 +240,6 @@ td {
 			</tr>
 			<tr>
 				<td><a href="#10017">Cross-Domain JavaScript Source File Inclusion</a></td>
-				<td align="center" class="risk-1">Low</td>
-				<td align="center">12</td>
-			</tr>
-			<tr>
-				<td><a href="#10015">Incomplete or No Cache-control Header Set</a></td>
 				<td align="center" class="risk-1">Low</td>
 				<td align="center">12</td>
 			</tr>
@@ -279,6 +274,11 @@ td {
 				<td align="center">12</td>
 			</tr>
 			<tr>
+				<td><a href="#10015">Re-examine Cache-control Directives</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">12</td>
+			</tr>
+			<tr>
 				<td><a href="#10049">Storable and Cacheable Content</a></td>
 				<td align="center" class="risk-0">Informational</td>
 				<td align="center">11</td>
@@ -286,7 +286,7 @@ td {
 			<tr>
 				<td><a href="#10031">User Controllable HTML Element Attribute (Potential XSS)</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">23</td>
+				<td align="center">25</td>
 			</tr>
 		</table>
 		<div class="spacer-lg"></div>
@@ -364,6 +364,446 @@ td {
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/10062/">10062</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-2"><a
+						id="10202"></a>
+						<div>Medium</div></th>
+					<th class="risk-2">Absence of Anti-CSRF Tokens</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>No Anti-CSRF tokens were found in a HTML submission form.</div>
+							<br />
+						
+							<div>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</div>
+							<br />
+						
+							<div>CSRF attacks are effective in a number of situations, including:</div>
+							<br />
+						
+							<div>    * The victim has an active session on the target site.</div>
+							<br />
+						
+							<div>    * The victim is authenticated via HTTP auth on the target site.</div>
+							<br />
+						
+							<div>    * The victim is on the same local network as the target site.</div>
+							<br />
+						
+							<div>CSRF has primarily been used to perform an action against a target site using the victim&#39;s privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr">https://www.data.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
+                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/en/datasets/r/09f013c5-9531-444b-ab6c-7a0e88efd77d">https://www.data.gouv.fr/en/datasets/r/09f013c5-9531-444b-ab6c-7a0e88efd77d</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
+                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/en/datasets/r/dc13282f-3c7a-4fac-b1f3-3939e39d45f6">https://www.data.gouv.fr/en/datasets/r/dc13282f-3c7a-4fac-b1f3-3939e39d45f6</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
+                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/en/tabular/preview/">https://www.data.gouv.fr/en/tabular/preview/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
+                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/es/datasets/r/09f013c5-9531-444b-ab6c-7a0e88efd77d">https://www.data.gouv.fr/es/datasets/r/09f013c5-9531-444b-ab6c-7a0e88efd77d</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
+                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/es/datasets/r/dc13282f-3c7a-4fac-b1f3-3939e39d45f6">https://www.data.gouv.fr/es/datasets/r/dc13282f-3c7a-4fac-b1f3-3939e39d45f6</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
+                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/es/tabular/preview/">https://www.data.gouv.fr/es/tabular/preview/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
+                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/">https://www.data.gouv.fr/fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
+                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/datasets/r/09f013c5-9531-444b-ab6c-7a0e88efd77d">https://www.data.gouv.fr/fr/datasets/r/09f013c5-9531-444b-ab6c-7a0e88efd77d</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
+                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/datasets/r/dc13282f-3c7a-4fac-b1f3-3939e39d45f6">https://www.data.gouv.fr/fr/datasets/r/dc13282f-3c7a-4fac-b1f3-3939e39d45f6</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
+                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/tabular/preview/">https://www.data.gouv.fr/fr/tabular/preview/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
+                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/resources">https://www.data.gouv.fr/resources</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
+                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">12</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Phase: Architecture and Design</div>
+							<br />
+						
+							<div>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</div>
+							<br />
+						
+							<div>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</div>
+							<br />
+						
+							<div>Phase: Implementation</div>
+							<br />
+						
+							<div>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</div>
+							<br />
+						
+							<div>Phase: Architecture and Design</div>
+							<br />
+						
+							<div>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</div>
+							<br />
+						
+							<div>Note that this can be bypassed using XSS.</div>
+							<br />
+						
+							<div>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</div>
+							<br />
+						
+							<div>Note that this can be bypassed using XSS.</div>
+							<br />
+						
+							<div>Use the ESAPI Session Management control.</div>
+							<br />
+						
+							<div>This control includes a component for CSRF.</div>
+							<br />
+						
+							<div>Do not use the GET method for any request that triggers a state change.</div>
+							<br />
+						
+							<div>Phase: Implementation</div>
+							<br />
+						
+							<div>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="http://projects.webappsec.org/Cross-Site-Request-Forgery">http://projects.webappsec.org/Cross-Site-Request-Forgery</a>
+							<br />
+						
+							<a href="http://cwe.mitre.org/data/definitions/352.html">http://cwe.mitre.org/data/definitions/352.html</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">9</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10202/">10202</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -519,6 +959,32 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/es/datasets/r/dc13282f-3c7a-4fac-b1f3-3939e39d45f6">https://www.data.gouv.fr/es/datasets/r/dc13282f-3c7a-4fac-b1f3-3939e39d45f6</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.data.gouv.fr/es/tabular/preview/">https://www.data.gouv.fr/es/tabular/preview/</a></td>
 					</tr>
 					<tr>
@@ -624,32 +1090,6 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.data.gouv.fr/fr/tabular/preview/">https://www.data.gouv.fr/fr/tabular/preview/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/resources">https://www.data.gouv.fr/resources</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1513,446 +1953,6 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-1"><a
-						id="10202"></a>
-						<div>Low</div></th>
-					<th class="risk-1">Absence of Anti-CSRF Tokens</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>No Anti-CSRF tokens were found in a HTML submission form.</div>
-							<br />
-						
-							<div>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</div>
-							<br />
-						
-							<div>CSRF attacks are effective in a number of situations, including:</div>
-							<br />
-						
-							<div>    * The victim has an active session on the target site.</div>
-							<br />
-						
-							<div>    * The victim is authenticated via HTTP auth on the target site.</div>
-							<br />
-						
-							<div>    * The victim is on the same local network as the target site.</div>
-							<br />
-						
-							<div>CSRF has primarily been used to perform an action against a target site using the victim&#39;s privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr">https://www.data.gouv.fr</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
-                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/en/datasets/r/09f013c5-9531-444b-ab6c-7a0e88efd77d">https://www.data.gouv.fr/en/datasets/r/09f013c5-9531-444b-ab6c-7a0e88efd77d</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
-                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/en/datasets/r/dc13282f-3c7a-4fac-b1f3-3939e39d45f6">https://www.data.gouv.fr/en/datasets/r/dc13282f-3c7a-4fac-b1f3-3939e39d45f6</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
-                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/en/tabular/preview/">https://www.data.gouv.fr/en/tabular/preview/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
-                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/es/datasets/r/09f013c5-9531-444b-ab6c-7a0e88efd77d">https://www.data.gouv.fr/es/datasets/r/09f013c5-9531-444b-ab6c-7a0e88efd77d</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
-                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/es/datasets/r/dc13282f-3c7a-4fac-b1f3-3939e39d45f6">https://www.data.gouv.fr/es/datasets/r/dc13282f-3c7a-4fac-b1f3-3939e39d45f6</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
-                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/es/tabular/preview/">https://www.data.gouv.fr/es/tabular/preview/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
-                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/">https://www.data.gouv.fr/fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
-                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/datasets/r/09f013c5-9531-444b-ab6c-7a0e88efd77d">https://www.data.gouv.fr/fr/datasets/r/09f013c5-9531-444b-ab6c-7a0e88efd77d</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
-                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/datasets/r/dc13282f-3c7a-4fac-b1f3-3939e39d45f6">https://www.data.gouv.fr/fr/datasets/r/dc13282f-3c7a-4fac-b1f3-3939e39d45f6</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
-                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/tabular/preview/">https://www.data.gouv.fr/fr/tabular/preview/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
-                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/resources">https://www.data.gouv.fr/resources</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form action=&quot;/datasets&quot; class=&quot;w-100 row-inline justify-between&quot;
-                            @focus.capture.prevent=&quot;$bus.emit(&#39;suggest.startSearch&#39;)&quot; tabindex=&quot;0&quot;&gt;</td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					<td width="80%">12</td>
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>Phase: Architecture and Design</div>
-							<br />
-						
-							<div>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</div>
-							<br />
-						
-							<div>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</div>
-							<br />
-						
-							<div>Phase: Implementation</div>
-							<br />
-						
-							<div>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</div>
-							<br />
-						
-							<div>Phase: Architecture and Design</div>
-							<br />
-						
-							<div>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</div>
-							<br />
-						
-							<div>Note that this can be bypassed using XSS.</div>
-							<br />
-						
-							<div>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</div>
-							<br />
-						
-							<div>Note that this can be bypassed using XSS.</div>
-							<br />
-						
-							<div>Use the ESAPI Session Management control.</div>
-							<br />
-						
-							<div>This control includes a component for CSRF.</div>
-							<br />
-						
-							<div>Do not use the GET method for any request that triggers a state change.</div>
-							<br />
-						
-							<div>Phase: Implementation</div>
-							<br />
-						
-							<div>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%">
-							<a href="http://projects.webappsec.org/Cross-Site-Request-Forgery">http://projects.webappsec.org/Cross-Site-Request-Forgery</a>
-							<br />
-						
-							<a href="http://cwe.mitre.org/data/definitions/352.html">http://cwe.mitre.org/data/definitions/352.html</a>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%">9</td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10202/">10202</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
-		
-			<table class="results">
-				<tr height="24">
-					<th width="20%" class="risk-1"><a
 						id="90022"></a>
 						<div>Low</div></th>
 					<th class="risk-1">Application Error Disclosure</th>
@@ -1971,7 +1971,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/datasets/?page=2046">https://www.data.gouv.fr/fr/datasets/?page=2046</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/datasets/?page=2049">https://www.data.gouv.fr/fr/datasets/?page=2049</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3483,374 +3483,6 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-1"><a
-						id="10015"></a>
-						<div>Low</div></th>
-					<th class="risk-1">Incomplete or No Cache-control Header Set</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content.</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr">https://www.data.gouv.fr</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">public</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/en/tags.csv">https://www.data.gouv.fr/en/tags.csv</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">public</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/es/tags.csv">https://www.data.gouv.fr/es/tags.csv</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">public</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/">https://www.data.gouv.fr/fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">public</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/datasets/">https://www.data.gouv.fr/fr/datasets/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">public</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">public</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">public</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/reuses/">https://www.data.gouv.fr/fr/reuses/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">public</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/tags.csv">https://www.data.gouv.fr/fr/tags.csv</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">public</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/robots.txt">https://www.data.gouv.fr/robots.txt</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">public</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/sitemap.xml">https://www.data.gouv.fr/sitemap.xml</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">public</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/tabular/preview/">https://www.data.gouv.fr/tabular/preview/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">public</td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					<td width="80%">12</td>
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%">
-							<a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a>
-							<br />
-						
-							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/525.html">525</a></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%">13</td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10015/">10015</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
-		
-			<table class="results">
-				<tr height="24">
-					<th width="20%" class="risk-1"><a
 						id="10063"></a>
 						<div>Low</div></th>
 					<th class="risk-1">Permissions Policy Header Not Set</th>
@@ -3999,6 +3631,32 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/es/datasets/r/dc13282f-3c7a-4fac-b1f3-3939e39d45f6">https://www.data.gouv.fr/es/datasets/r/dc13282f-3c7a-4fac-b1f3-3939e39d45f6</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.data.gouv.fr/es/tabular/preview/">https://www.data.gouv.fr/es/tabular/preview/</a></td>
 					</tr>
 					<tr>
@@ -4104,32 +3762,6 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.data.gouv.fr/fr/tabular/preview/">https://www.data.gouv.fr/fr/tabular/preview/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/resources">https://www.data.gouv.fr/resources</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4669,7 +4301,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">20220306</td>
+						<td width="80%">20220313</td>
 					</tr>
 				
 					<tr>
@@ -4721,7 +4353,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">20220306</td>
+						<td width="80%">20220313</td>
 					</tr>
 				
 				<tr>
@@ -4800,7 +4432,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">eyJjc3JmX3Rva2VuIjoiNzEyNDU2YjgzOWY4ZTgzZmQzYTYzMTNjNDQ0MjEzNDUyNWUwMmNjMSJ9</td>
+						<td width="80%">eyJjc3JmX3Rva2VuIjoiZWQ0ZDcwZGNiNTJiYmIzNGU2YmJkODE1YWViNGJiMzY3N2M0ZTNiNiJ9</td>
 					</tr>
 				
 					<tr>
@@ -4826,7 +4458,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiN2RiZDc4ZWVjOGIyY2U4NGE2NDllZjBhZjViYzM3MWEzNWQyNzM0ZSJ9</td>
+						<td width="80%">eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiNWVmYjM5MTBjZDIzNTNiNjM4OTRlZmFhNmUwNWJjNTkzOTdkOTU0MSJ9</td>
 					</tr>
 				
 					<tr>
@@ -4852,7 +4484,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiN2RiZDc4ZWVjOGIyY2U4NGE2NDllZjBhZjViYzM3MWEzNWQyNzM0ZSJ9</td>
+						<td width="80%">eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiNWVmYjM5MTBjZDIzNTNiNjM4OTRlZmFhNmUwNWJjNTkzOTdkOTU0MSJ9</td>
 					</tr>
 				
 					<tr>
@@ -4878,7 +4510,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiN2RiZDc4ZWVjOGIyY2U4NGE2NDllZjBhZjViYzM3MWEzNWQyNzM0ZSJ9</td>
+						<td width="80%">eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiNWVmYjM5MTBjZDIzNTNiNjM4OTRlZmFhNmUwNWJjNTkzOTdkOTU0MSJ9</td>
 					</tr>
 				
 					<tr>
@@ -4904,7 +4536,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiN2RiZDc4ZWVjOGIyY2U4NGE2NDllZjBhZjViYzM3MWEzNWQyNzM0ZSJ9</td>
+						<td width="80%">eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiNWVmYjM5MTBjZDIzNTNiNjM4OTRlZmFhNmUwNWJjNTkzOTdkOTU0MSJ9</td>
 					</tr>
 				
 					<tr>
@@ -4930,7 +4562,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiN2RiZDc4ZWVjOGIyY2U4NGE2NDllZjBhZjViYzM3MWEzNWQyNzM0ZSJ9</td>
+						<td width="80%">eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiNWVmYjM5MTBjZDIzNTNiNjM4OTRlZmFhNmUwNWJjNTkzOTdkOTU0MSJ9</td>
 					</tr>
 				
 					<tr>
@@ -4956,7 +4588,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiN2RiZDc4ZWVjOGIyY2U4NGE2NDllZjBhZjViYzM3MWEzNWQyNzM0ZSJ9</td>
+						<td width="80%">eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiNWVmYjM5MTBjZDIzNTNiNjM4OTRlZmFhNmUwNWJjNTkzOTdkOTU0MSJ9</td>
 					</tr>
 				
 					<tr>
@@ -4982,7 +4614,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">eyJjc3JmX3Rva2VuIjoiN2RiZDc4ZWVjOGIyY2U4NGE2NDllZjBhZjViYzM3MWEzNWQyNzM0ZSJ9</td>
+						<td width="80%">eyJjc3JmX3Rva2VuIjoiNWVmYjM5MTBjZDIzNTNiNjM4OTRlZmFhNmUwNWJjNTkzOTdkOTU0MSJ9</td>
 					</tr>
 				
 					<tr>
@@ -5008,7 +4640,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiN2RiZDc4ZWVjOGIyY2U4NGE2NDllZjBhZjViYzM3MWEzNWQyNzM0ZSJ9</td>
+						<td width="80%">eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiNWVmYjM5MTBjZDIzNTNiNjM4OTRlZmFhNmUwNWJjNTkzOTdkOTU0MSJ9</td>
 					</tr>
 				
 					<tr>
@@ -5034,7 +4666,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiN2RiZDc4ZWVjOGIyY2U4NGE2NDllZjBhZjViYzM3MWEzNWQyNzM0ZSJ9</td>
+						<td width="80%">eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiNWVmYjM5MTBjZDIzNTNiNjM4OTRlZmFhNmUwNWJjNTkzOTdkOTU0MSJ9</td>
 					</tr>
 				
 					<tr>
@@ -5060,7 +4692,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiN2RiZDc4ZWVjOGIyY2U4NGE2NDllZjBhZjViYzM3MWEzNWQyNzM0ZSJ9</td>
+						<td width="80%">eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiNWVmYjM5MTBjZDIzNTNiNjM4OTRlZmFhNmUwNWJjNTkzOTdkOTU0MSJ9</td>
 					</tr>
 				
 					<tr>
@@ -5086,7 +4718,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiN2RiZDc4ZWVjOGIyY2U4NGE2NDllZjBhZjViYzM3MWEzNWQyNzM0ZSJ9</td>
+						<td width="80%">eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiNWVmYjM5MTBjZDIzNTNiNjM4OTRlZmFhNmUwNWJjNTkzOTdkOTU0MSJ9</td>
 					</tr>
 				
 				<tr>
@@ -5672,6 +5304,39 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/es/datasets/r/dc13282f-3c7a-4fac-b1f3-3939e39d45f6">https://www.data.gouv.fr/es/datasets/r/dc13282f-3c7a-4fac-b1f3-3939e39d45f6</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;a href=&quot;#&quot; @click.capture.prevent=&quot;addBodyClass(&#39;mobile-menu-open&#39;)&quot;
+                            title=&quot;Open menu&quot;&gt;
+                            &lt;svg width=&quot;24&quot; height=&quot;25&quot; viewBox=&quot;0 0 24 25&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+&lt;g id=&quot;menu-2-fill&quot;&gt;
+&lt;path id=&quot;&amp;#240;&amp;#159;&amp;#142;&amp;#168; Couleur ic&amp;#195;&amp;#180;ne&quot; fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M3 4.16284H21V6.17612H3V4.16284ZM3 11.2112H15V13.2245H3V11.2112ZM3 18.2589H21V20.2722H3V18.2589Z&quot; fill=&quot;black&quot;/&gt;
+&lt;/g&gt;
+&lt;/svg&gt;
+                        &lt;/a&gt;</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.data.gouv.fr/es/tabular/preview/">https://www.data.gouv.fr/es/tabular/preview/</a></td>
 					</tr>
 					<tr>
@@ -5837,39 +5502,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/resources">https://www.data.gouv.fr/resources</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;a href=&quot;#&quot; @click.capture.prevent=&quot;addBodyClass(&#39;mobile-menu-open&#39;)&quot;
-                            title=&quot;Ouvrir le menu&quot;&gt;
-                            &lt;svg width=&quot;24&quot; height=&quot;25&quot; viewBox=&quot;0 0 24 25&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
-&lt;g id=&quot;menu-2-fill&quot;&gt;
-&lt;path id=&quot;&amp;#240;&amp;#159;&amp;#142;&amp;#168; Couleur ic&amp;#195;&amp;#180;ne&quot; fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M3 4.16284H21V6.17612H3V4.16284ZM3 11.2112H15V13.2245H3V11.2112ZM3 18.2589H21V20.2722H3V18.2589Z&quot; fill=&quot;black&quot;/&gt;
-&lt;/g&gt;
-&lt;/svg&gt;
-                        &lt;/a&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.data.gouv.fr/tabular/preview/">https://www.data.gouv.fr/tabular/preview/</a></td>
 					</tr>
 					<tr>
@@ -5920,6 +5552,374 @@ td {
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/10109/">10109</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
+						id="10015"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Re-examine Cache-control Directives</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr">https://www.data.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">public</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/en/tags.csv">https://www.data.gouv.fr/en/tags.csv</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">public</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/es/tags.csv">https://www.data.gouv.fr/es/tags.csv</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">public</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/">https://www.data.gouv.fr/fr/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">public</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/datasets/">https://www.data.gouv.fr/fr/datasets/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">public</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">public</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/organizations/">https://www.data.gouv.fr/fr/organizations/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">public</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">public</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/reuses/">https://www.data.gouv.fr/fr/reuses/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">public</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/tags.csv">https://www.data.gouv.fr/fr/tags.csv</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">public</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/robots.txt">https://www.data.gouv.fr/robots.txt</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">public</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/tabular/preview/">https://www.data.gouv.fr/tabular/preview/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">public</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">12</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Whenever possible ensure the cache-control HTTP header is set with &quot;no-cache, no-store, must-revalidate&quot;. If an asset should be cached consider setting the directives &quot;public, max-age, immutable&quot;.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a>
+							<br />
+						
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/525.html">525</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10015/">10015</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -6302,7 +6302,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6328,7 +6328,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6354,7 +6354,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6380,7 +6380,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6406,7 +6406,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6432,7 +6432,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6458,7 +6458,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6484,7 +6484,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6510,7 +6510,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6536,7 +6536,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6562,7 +6562,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6588,7 +6588,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6614,7 +6614,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6640,7 +6640,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6666,7 +6666,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6692,7 +6692,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6718,7 +6718,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6744,7 +6744,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6770,7 +6770,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6796,7 +6796,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6822,7 +6822,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6848,7 +6848,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6874,7 +6874,59 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.data.gouv.fr/fr/register?next=%2Ffr%2F">https://www.data.gouv.fr/fr/register?next=%2Ffr%2F</a></td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">next</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">next</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.data.gouv.fr/fr/login?next=%2Ffr%2F">https://www.data.gouv.fr/fr/login?next=%2Ffr%2F</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6899,7 +6951,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">23</td>
+					<td width="80%">25</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>

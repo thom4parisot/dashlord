@@ -54,7 +54,7 @@
 <h1>Scan Report<br><small>Nmap 7.91</small>
 </h1>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.demarches-simplifiees.fr</pre>
-<p class="lead">Sun Mar  6 06:47:55 2022 – Sun Mar  6 06:48:25 2022<br>1 hosts scanned.
+<p class="lead">Sun Mar 13 06:29:19 2022 – Sun Mar 13 06:29:50 2022<br>1 hosts scanned.
               1 hosts up.
               0 hosts down.
             </p>
@@ -119,7 +119,7 @@
 <tr><td colspan="7">
 <a href="https://nvd.nist.gov/vuln/search/results?form_type=Advanced&amp;cves=on&amp;cpe_version="></a><h5>fingerprint-strings</h5>
 <pre style="white-space:pre-wrap; word-wrap:break-word;">
-  DNSStatusRequestTCP, Help, RPCCheck, X11Probe: 
+  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, X11Probe: 
     HTTP/1.1 400 Bad request
     content-length: 90
     cache-control: no-cache
@@ -128,12 +128,6 @@
     &lt;html&gt;&lt;body&gt;&lt;h1&gt;400 Bad request&lt;/h1&gt;
     Your browser sent an invalid request.
     &lt;/body&gt;&lt;/html&gt;
-  DNSVersionBindReqTCP: 
-    HTTP/1.1 400 Bad request
-    content-length: 90
-    cache-control: no-cache
-    content-type: text/html
-    connection: close
   FourOhFourRequest: 
     HTTP/1.1 301 Moved Permanently
     content-length: 0

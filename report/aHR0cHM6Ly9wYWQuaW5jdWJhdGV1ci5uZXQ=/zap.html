@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 6 Mar 2022 04:43:36
+		Generated on Sun, 13 Mar 2022 04:35:13
 	</h3>
 
 	
@@ -152,7 +152,7 @@ td {
 					<div>Medium</div>
 				</td>
 				<td align="center">
-					<div>5</div>
+					<div>6</div>
 				</td>
 			</tr>
 			<tr>
@@ -160,7 +160,7 @@ td {
 					<div>Low</div>
 				</td>
 				<td align="center">
-					<div>8</div>
+					<div>6</div>
 				</td>
 			</tr>
 			<tr>
@@ -168,7 +168,7 @@ td {
 					<div>Informational</div>
 				</td>
 				<td align="center">
-					<div>5</div>
+					<div>6</div>
 				</td>
 			</tr>
 			<tr>
@@ -192,6 +192,11 @@ td {
 					align="center">Risk Level</th>
 				<th width="20%"
 					align="center">Number of Instances</th>
+			</tr>
+			<tr>
+				<td><a href="#10202">Absence of Anti-CSRF Tokens</a></td>
+				<td align="center" class="risk-2">Medium</td>
+				<td align="center">2</td>
 			</tr>
 			<tr>
 				<td><a href="#10055">CSP: Wildcard Directive</a></td>
@@ -219,19 +224,9 @@ td {
 				<td align="center">1</td>
 			</tr>
 			<tr>
-				<td><a href="#10202">Absence of Anti-CSRF Tokens</a></td>
-				<td align="center" class="risk-1">Low</td>
-				<td align="center">2</td>
-			</tr>
-			<tr>
 				<td><a href="#10110">Dangerous JS Functions</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">4</td>
-			</tr>
-			<tr>
-				<td><a href="#10015">Incomplete or No Cache-control Header Set</a></td>
-				<td align="center" class="risk-1">Low</td>
-				<td align="center">8</td>
+				<td align="center">5</td>
 			</tr>
 			<tr>
 				<td><a href="#10063">Permissions Policy Header Not Set</a></td>
@@ -251,7 +246,7 @@ td {
 			<tr>
 				<td><a href="#10096">Timestamp Disclosure - Unix</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">6</td>
+				<td align="center">3</td>
 			</tr>
 			<tr>
 				<td><a href="#10021">X-Content-Type-Options Header Missing</a></td>
@@ -279,6 +274,11 @@ td {
 				<td align="center">8</td>
 			</tr>
 			<tr>
+				<td><a href="#10015">Re-examine Cache-control Directives</a></td>
+				<td align="center" class="risk-0">Informational</td>
+				<td align="center">8</td>
+			</tr>
+			<tr>
 				<td><a href="#10049">Storable and Cacheable Content</a></td>
 				<td align="center" class="risk-0">Informational</td>
 				<td align="center">3</td>
@@ -293,20 +293,32 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-2"><a
-						id="10055"></a>
+						id="10202"></a>
 						<div>Medium</div></th>
-					<th class="risk-2">CSP: Wildcard Directive</th>
+					<th class="risk-2">Absence of Anti-CSRF Tokens</th>
 				</tr>
 				<tr>
 					<td width="20%">Description</td>
 					<td width="80%">
-							<div>The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: </div>
+							<div>No Anti-CSRF tokens were found in a HTML submission form.</div>
 							<br />
 						
-							<div>img-src, connects-src, frame-src, frame-ancestors, media-src, object-src, worker-src, form-action</div>
+							<div>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</div>
 							<br />
 						
-							<div>The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</div>
+							<div>CSRF attacks are effective in a number of situations, including:</div>
+							<br />
+						
+							<div>    * The victim has an active session on the target site.</div>
+							<br />
+						
+							<div>    * The victim is authenticated via HTTP auth on the target site.</div>
+							<br />
+						
+							<div>    * The victim is on the same local network as the target site.</div>
+							<br />
+						
+							<div>CSRF has primarily been used to perform an action against a target site using the victim&#39;s privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</div>
 							
 						</td>
 				</tr>
@@ -337,33 +349,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-ed7e3732-fef1-415d-a694-2524066ecc02&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://pad.incubateur.net">https://pad.incubateur.net</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-f2a26d8d-c822-47e9-8e89-09ffd37cc4e8&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
+						<td width="80%">&lt;form class=&quot;form-inline&quot;&gt;</td>
 					</tr>
 				
 					<tr>
@@ -389,7 +375,183 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-471b8f2f-afb1-4d56-8678-f4105deb4238&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
+						<td width="80%">&lt;form class=&quot;form-inline&quot;&gt;</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">2</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Phase: Architecture and Design</div>
+							<br />
+						
+							<div>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</div>
+							<br />
+						
+							<div>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</div>
+							<br />
+						
+							<div>Phase: Implementation</div>
+							<br />
+						
+							<div>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</div>
+							<br />
+						
+							<div>Phase: Architecture and Design</div>
+							<br />
+						
+							<div>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</div>
+							<br />
+						
+							<div>Note that this can be bypassed using XSS.</div>
+							<br />
+						
+							<div>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</div>
+							<br />
+						
+							<div>Note that this can be bypassed using XSS.</div>
+							<br />
+						
+							<div>Use the ESAPI Session Management control.</div>
+							<br />
+						
+							<div>This control includes a component for CSRF.</div>
+							<br />
+						
+							<div>Do not use the GET method for any request that triggers a state change.</div>
+							<br />
+						
+							<div>Phase: Implementation</div>
+							<br />
+						
+							<div>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="http://projects.webappsec.org/Cross-Site-Request-Forgery">http://projects.webappsec.org/Cross-Site-Request-Forgery</a>
+							<br />
+						
+							<a href="http://cwe.mitre.org/data/definitions/352.html">http://cwe.mitre.org/data/definitions/352.html</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">9</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10202/">10202</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-2"><a
+						id="10055"></a>
+						<div>Medium</div></th>
+					<th class="risk-2">CSP: Wildcard Directive</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pad.incubateur.net">https://pad.incubateur.net</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-8583cc1b-905d-48ef-b516-deb26f2bc80f&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pad.incubateur.net">https://pad.incubateur.net</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-f209258e-9b1c-4daf-9c9d-ad265a1f8e4d&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pad.incubateur.net/">https://pad.incubateur.net/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-b289ae82-0131-475b-bf77-8986e3edf879&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
 					</tr>
 				
 					<tr>
@@ -415,7 +577,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-3f1cf698-7cf8-4c82-bc8a-93f3e2e00e1f&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
+						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-e6326b7d-1286-4341-a249-b721d15960d0&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
 					</tr>
 				
 					<tr>
@@ -441,7 +603,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-20c6a1ab-514f-4169-9b08-fa1d51e8aee1&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
+						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-bb98b98d-e965-4c74-80fe-3bd4d53b0c0e&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
 					</tr>
 				
 					<tr>
@@ -467,7 +629,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-9079acc9-61cf-4517-9699-5d120bca762a&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
+						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-be1766ef-8123-49bb-b40d-3a7fed163cac&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
 					</tr>
 				
 				<tr>
@@ -530,7 +692,7 @@ td {
 				<tr>
 					<td width="20%">Description</td>
 					<td width="80%">
-							<div>style-src includes unsafe-inline.</div>
+							<div>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</div>
 							
 						</td>
 				</tr>
@@ -561,7 +723,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-ed7e3732-fef1-415d-a694-2524066ecc02&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
+						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-8583cc1b-905d-48ef-b516-deb26f2bc80f&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
 					</tr>
 				
 					<tr>
@@ -587,7 +749,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-f2a26d8d-c822-47e9-8e89-09ffd37cc4e8&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
+						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-f209258e-9b1c-4daf-9c9d-ad265a1f8e4d&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
 					</tr>
 				
 					<tr>
@@ -613,7 +775,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-471b8f2f-afb1-4d56-8678-f4105deb4238&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
+						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-b289ae82-0131-475b-bf77-8986e3edf879&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
 					</tr>
 				
 					<tr>
@@ -639,7 +801,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-3f1cf698-7cf8-4c82-bc8a-93f3e2e00e1f&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
+						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-e6326b7d-1286-4341-a249-b721d15960d0&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
 					</tr>
 				
 					<tr>
@@ -665,7 +827,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-20c6a1ab-514f-4169-9b08-fa1d51e8aee1&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
+						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-bb98b98d-e965-4c74-80fe-3bd4d53b0c0e&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
 					</tr>
 				
 					<tr>
@@ -691,7 +853,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-9079acc9-61cf-4517-9699-5d120bca762a&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
+						<td width="80%">default-src &#39;self&#39;;script-src &#39;self&#39; vimeo.com https://gist.github.com www.slideshare.net &#39;unsafe-eval&#39; https://disqus.com https://*.disqus.com https://*.disquscdn.com https://www.google-analytics.com &#39;nonce-be1766ef-8123-49bb-b40d-3a7fed163cac&#39; &#39;sha256-81acLZNZISnyGYZrSuoYhpzwDTTxi7vC1YM4uNxqWaM=&#39;;img-src *;style-src &#39;self&#39; &#39;unsafe-inline&#39; https://github.githubassets.com https://*.disquscdn.com;font-src &#39;self&#39; data: https://public.slidesharecdn.com https://*.disquscdn.com;object-src *;media-src *;child-src *;connect-src *</td>
 					</tr>
 				
 				<tr>
@@ -1160,174 +1322,6 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-1"><a
-						id="10202"></a>
-						<div>Low</div></th>
-					<th class="risk-1">Absence of Anti-CSRF Tokens</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>No Anti-CSRF tokens were found in a HTML submission form.</div>
-							<br />
-						
-							<div>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</div>
-							<br />
-						
-							<div>CSRF attacks are effective in a number of situations, including:</div>
-							<br />
-						
-							<div>    * The victim has an active session on the target site.</div>
-							<br />
-						
-							<div>    * The victim is authenticated via HTTP auth on the target site.</div>
-							<br />
-						
-							<div>    * The victim is on the same local network as the target site.</div>
-							<br />
-						
-							<div>CSRF has primarily been used to perform an action against a target site using the victim&#39;s privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://pad.incubateur.net">https://pad.incubateur.net</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form class=&quot;form-inline&quot;&gt;</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://pad.incubateur.net/">https://pad.incubateur.net/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form class=&quot;form-inline&quot;&gt;</td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					<td width="80%">2</td>
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>Phase: Architecture and Design</div>
-							<br />
-						
-							<div>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</div>
-							<br />
-						
-							<div>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</div>
-							<br />
-						
-							<div>Phase: Implementation</div>
-							<br />
-						
-							<div>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</div>
-							<br />
-						
-							<div>Phase: Architecture and Design</div>
-							<br />
-						
-							<div>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</div>
-							<br />
-						
-							<div>Note that this can be bypassed using XSS.</div>
-							<br />
-						
-							<div>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</div>
-							<br />
-						
-							<div>Note that this can be bypassed using XSS.</div>
-							<br />
-						
-							<div>Use the ESAPI Session Management control.</div>
-							<br />
-						
-							<div>This control includes a component for CSRF.</div>
-							<br />
-						
-							<div>Do not use the GET method for any request that triggers a state change.</div>
-							<br />
-						
-							<div>Phase: Implementation</div>
-							<br />
-						
-							<div>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%">
-							<a href="http://projects.webappsec.org/Cross-Site-Request-Forgery">http://projects.webappsec.org/Cross-Site-Request-Forgery</a>
-							<br />
-						
-							<a href="http://cwe.mitre.org/data/definitions/352.html">http://cwe.mitre.org/data/definitions/352.html</a>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%">9</td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10202/">10202</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
-		
-			<table class="results">
-				<tr height="24">
-					<th width="20%" class="risk-1"><a
 						id="10110"></a>
 						<div>Low</div></th>
 					<th class="risk-1">Dangerous JS Functions</th>
@@ -1447,9 +1441,35 @@ td {
 						<td width="80%">EVAL</td>
 					</tr>
 				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pad.incubateur.net/build/pretty-pack.65eec1795ce2c8e16f11.js">https://pad.incubateur.net/build/pretty-pack.65eec1795ce2c8e16f11.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">eval</td>
+					</tr>
+				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">4</td>
+					<td width="80%">5</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -1478,270 +1498,6 @@ td {
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/10110/">10110</a></td>
-				</tr>
-			</table>
-			<div class="spacer"></div>
-		
-			<table class="results">
-				<tr height="24">
-					<th width="20%" class="risk-1"><a
-						id="10015"></a>
-						<div>Low</div></th>
-					<th class="risk-1">Incomplete or No Cache-control Header Set</th>
-				</tr>
-				<tr>
-					<td width="20%">Description</td>
-					<td width="80%">
-							<div>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content.</div>
-							
-						</td>
-				</tr>
-				<TR vAlign="top">
-					<TD colspan="2"></TD>
-				</TR>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://pad.incubateur.net">https://pad.incubateur.net</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://pad.incubateur.net/">https://pad.incubateur.net/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://pad.incubateur.net/features">https://pad.incubateur.net/features</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">private</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://pad.incubateur.net/icons/site.webmanifest">https://pad.incubateur.net/icons/site.webmanifest</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">public, max-age=86400</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://pad.incubateur.net/s/release-notes">https://pad.incubateur.net/s/release-notes</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">private</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://pad.incubateur.net/s/terms-of-use">https://pad.incubateur.net/s/terms-of-use</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">private</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://pad.incubateur.net/slide-example">https://pad.incubateur.net/slide-example</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">private</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://pad.incubateur.net/yaml-metadata">https://pad.incubateur.net/yaml-metadata</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cache-Control</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">private</td>
-					</tr>
-				
-				<tr>
-					<td width="20%">Instances</td>
-					<td width="80%">8</td>
-				</tr>
-				<tr>
-					<td width="20%">Solution</td>
-					<td width="80%">
-							<div>Whenever possible ensure the cache-control HTTP header is set with no-cache, no-store, must-revalidate.</div>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">Reference</td>
-					<td width="80%">
-							<a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a>
-							<br />
-						
-							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a>
-							
-						</td>
-				</tr>
-				<tr>
-					<td width="20%">CWE Id</td>
-					<td width="80%"><a
-						href="https://cwe.mitre.org/data/definitions/525.html">525</a></td>
-				</tr>
-				<tr>
-					<td width="20%">WASC Id</td>
-					<td width="80%">13</td>
-				</tr>
-				<tr>
-					<td width="20%">Plugin Id</td>
-					<td width="80%"><a
-						href="https://www.zaproxy.org/docs/alerts/10015/">10015</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
@@ -2822,59 +2578,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">33333333</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://pad.incubateur.net/build/cover-styles-pack.98fdd9f8a0185f05e1a5.css">https://pad.incubateur.net/build/cover-styles-pack.98fdd9f8a0185f05e1a5.css</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
 						<td width="80%">42857143</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://pad.incubateur.net/build/cover-styles-pack.98fdd9f8a0185f05e1a5.css">https://pad.incubateur.net/build/cover-styles-pack.98fdd9f8a0185f05e1a5.css</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">66666667</td>
 					</tr>
 				
 					<tr>
@@ -2906,7 +2610,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://pad.incubateur.net/icons/favicon-32x32.png">https://pad.incubateur.net/icons/favicon-32x32.png</a></td>
+						<td width="80%"><a href="https://pad.incubateur.net/build/cover.9d2bc807d9062ac0ef97.css">https://pad.incubateur.net/build/cover.9d2bc807d9062ac0ef97.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2926,38 +2630,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">27673333</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://pad.incubateur.net/icons/site.webmanifest">https://pad.incubateur.net/icons/site.webmanifest</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">87622619</td>
+						<td width="80%">40114753</td>
 					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">6</td>
+					<td width="80%">3</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -3454,7 +3132,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3AWzYhI5K7HqSV1bRJngHgBvjzmZx0xXCw</td>
+						<td width="80%">3AhDixEBuBuOrtBOKgj9TpSvRx6CPrrDYt</td>
 					</tr>
 				
 					<tr>
@@ -3480,7 +3158,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3AWzYhI5K7HqSV1bRJngHgBvjzmZx0xXCw</td>
+						<td width="80%">3AhDixEBuBuOrtBOKgj9TpSvRx6CPrrDYt</td>
 					</tr>
 				
 					<tr>
@@ -3506,7 +3184,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3AWzYhI5K7HqSV1bRJngHgBvjzmZx0xXCw</td>
+						<td width="80%">3AhDixEBuBuOrtBOKgj9TpSvRx6CPrrDYt</td>
 					</tr>
 				
 					<tr>
@@ -3532,7 +3210,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3AWzYhI5K7HqSV1bRJngHgBvjzmZx0xXCw</td>
+						<td width="80%">3AhDixEBuBuOrtBOKgj9TpSvRx6CPrrDYt</td>
 					</tr>
 				
 					<tr>
@@ -3558,7 +3236,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3AWzYhI5K7HqSV1bRJngHgBvjzmZx0xXCw</td>
+						<td width="80%">3AhDixEBuBuOrtBOKgj9TpSvRx6CPrrDYt</td>
 					</tr>
 				
 					<tr>
@@ -3584,7 +3262,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">f53a-IpYxHpri4PQm7xBgCGJl8w/GSzM</td>
+						<td width="80%">f53a-R4qw3tvZbtU7D+izt5E/bnJ3TB0</td>
 					</tr>
 				
 					<tr>
@@ -3610,7 +3288,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">13d2-6MgEP+DeU34a8pd1PR3XMrzAdX8</td>
+						<td width="80%">13d2-V4CcXXF05GZSUW7WoRdqC39xjOE</td>
 					</tr>
 				
 					<tr>
@@ -3636,7 +3314,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">3AWzYhI5K7HqSV1bRJngHgBvjzmZx0xXCw</td>
+						<td width="80%">3AhDixEBuBuOrtBOKgj9TpSvRx6CPrrDYt</td>
 					</tr>
 				
 				<tr>
@@ -5320,6 +4998,270 @@ var t=n.defineLocale(&quot;zh-tw&quot;,{months:&quot;\u4E00\u6708_\u4E8C\u6708_\
 					<td width="20%">Plugin Id</td>
 					<td width="80%"><a
 						href="https://www.zaproxy.org/docs/alerts/10049/">10049</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-0"><a
+						id="10015"></a>
+						<div>Informational</div></th>
+					<th class="risk-0">Re-examine Cache-control Directives</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pad.incubateur.net">https://pad.incubateur.net</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pad.incubateur.net/">https://pad.incubateur.net/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pad.incubateur.net/features">https://pad.incubateur.net/features</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">private</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pad.incubateur.net/icons/site.webmanifest">https://pad.incubateur.net/icons/site.webmanifest</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">public, max-age=86400</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pad.incubateur.net/s/release-notes">https://pad.incubateur.net/s/release-notes</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">private</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pad.incubateur.net/s/terms-of-use">https://pad.incubateur.net/s/terms-of-use</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">private</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pad.incubateur.net/slide-example">https://pad.incubateur.net/slide-example</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">private</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://pad.incubateur.net/yaml-metadata">https://pad.incubateur.net/yaml-metadata</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Cache-Control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">private</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">8</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Whenever possible ensure the cache-control HTTP header is set with &quot;no-cache, no-store, must-revalidate&quot;. If an asset should be cached consider setting the directives &quot;public, max-age, immutable&quot;.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%">
+							<a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a>
+							<br />
+						
+							<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/525.html">525</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/10015/">10015</a></td>
 				</tr>
 			</table>
 			<div class="spacer"></div>
