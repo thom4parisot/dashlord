@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 27 Mar 2022 01:39:16
+		Generated on Sun, 3 Apr 2022 01:53:01
 	</h3>
 
 	
@@ -160,7 +160,7 @@ td {
 					<div>Low</div>
 				</td>
 				<td align="center">
-					<div>6</div>
+					<div>7</div>
 				</td>
 			</tr>
 			<tr>
@@ -209,6 +209,11 @@ td {
 				<td align="center">12</td>
 			</tr>
 			<tr>
+				<td><a href="#90022">Application Error Disclosure</a></td>
+				<td align="center" class="risk-1">Low</td>
+				<td align="center">1</td>
+			</tr>
+			<tr>
 				<td><a href="#10010">Cookie No HttpOnly Flag</a></td>
 				<td align="center" class="risk-1">Low</td>
 				<td align="center">12</td>
@@ -231,7 +236,7 @@ td {
 			<tr>
 				<td><a href="#10096">Timestamp Disclosure - Unix</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">6</td>
+				<td align="center">7</td>
 			</tr>
 			<tr>
 				<td><a href="#10021">X-Content-Type-Options Header Missing</a></td>
@@ -1060,7 +1065,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js">https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js</a></td>
+						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.484c91f0a082.css">https://acceslibre.beta.gouv.fr/static/dist/main.484c91f0a082.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1086,7 +1091,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.484c91f0a082.css">https://acceslibre.beta.gouv.fr/static/dist/main.484c91f0a082.css</a></td>
+						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js">https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1410,6 +1415,82 @@ td {
 			<table class="results">
 				<tr height="24">
 					<th width="20%" class="risk-1"><a
+						id="90022"></a>
+						<div>Low</div></th>
+					<th class="risk-1">Application Error Disclosure</th>
+				</tr>
+				<tr>
+					<td width="20%">Description</td>
+					<td width="80%">
+							<div>This page contains an error/warning message that may disclose sensitive information like the location of the file that produced the unhandled exception. This information can be used to launch further attacks against the web application. The alert could be a false positive if the error message is found inside a documentation page.</div>
+							
+						</td>
+				</tr>
+				<TR vAlign="top">
+					<TD colspan="2"></TD>
+				</TR>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/app/10-troyes/a/restaurant/erp/aria/">https://acceslibre.beta.gouv.fr/app/10-troyes/a/restaurant/erp/aria/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">HTTP/1.1 500 Internal Server Error</td>
+					</tr>
+				
+				<tr>
+					<td width="20%">Instances</td>
+					<td width="80%">1</td>
+				</tr>
+				<tr>
+					<td width="20%">Solution</td>
+					<td width="80%">
+							<div>Review the source code of this page. Implement custom error pages. Consider implementing a mechanism to provide a unique error reference/identifier to the client (browser) while logging the details on the server side and not exposing them to the user.</div>
+							
+						</td>
+				</tr>
+				<tr>
+					<td width="20%">Reference</td>
+					<td width="80%"></td>
+				</tr>
+				<tr>
+					<td width="20%">CWE Id</td>
+					<td width="80%"><a
+						href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+				</tr>
+				<tr>
+					<td width="20%">WASC Id</td>
+					<td width="80%">13</td>
+				</tr>
+				<tr>
+					<td width="20%">Plugin Id</td>
+					<td width="80%"><a
+						href="https://www.zaproxy.org/docs/alerts/90022/">90022</a></td>
+				</tr>
+			</table>
+			<div class="spacer"></div>
+		
+			<table class="results">
+				<tr height="24">
+					<th width="20%" class="risk-1"><a
 						id="10010"></a>
 						<div>Low</div></th>
 					<th class="risk-1">Cookie No HttpOnly Flag</th>
@@ -1507,6 +1588,32 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/compte/login/?next=/accessibilite">https://acceslibre.beta.gouv.fr/compte/login/?next=/accessibilite</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">csrftoken</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Set-Cookie: csrftoken</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/compte/login/?next=/communes/">https://acceslibre.beta.gouv.fr/compte/login/?next=/communes/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1688,32 +1795,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/contact/bug/">https://acceslibre.beta.gouv.fr/contact/bug/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">csrftoken</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Set-Cookie: csrftoken</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/compte/login/">https://acceslibre.beta.gouv.fr/compte/login/</a></td>
 					</tr>
 					<tr>
@@ -1869,7 +1950,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js">https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js</a></td>
+						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js">https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2299,6 +2380,32 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="https://acceslibre.beta.gouv.fr">https://acceslibre.beta.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">29897705</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/api/docs/">https://acceslibre.beta.gouv.fr/api/docs/</a></td>
 					</tr>
 					<tr>
@@ -2454,7 +2561,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">6</td>
+					<td width="80%">7</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -2508,7 +2615,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js">https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js</a></td>
+						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.484c91f0a082.css">https://acceslibre.beta.gouv.fr/static/dist/main.484c91f0a082.css</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2534,7 +2641,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.484c91f0a082.css">https://acceslibre.beta.gouv.fr/static/dist/main.484c91f0a082.css</a></td>
+						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js">https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2977,7 +3084,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">8NqtYx34Fbf96nYtHDHOgSudJ96xgMAKjtl0NrqEKp4n63eWRO158MD5VXU3Njgb</td>
+						<td width="80%">hXwlG7XPnYoyqYZdr4vztVqFw2BAHzbU9vrcnclXefS5bMzvg2W0GAeEbwxDSjhp</td>
 					</tr>
 				
 					<tr>
@@ -3029,7 +3136,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">8NqtYx34Fbf96nYtHDHOgSudJ96xgMAKjtl0NrqEKp4n63eWRO158MD5VXU3Njgb</td>
+						<td width="80%">hXwlG7XPnYoyqYZdr4vztVqFw2BAHzbU9vrcnclXefS5bMzvg2W0GAeEbwxDSjhp</td>
 					</tr>
 				
 					<tr>
@@ -3081,7 +3188,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">8NqtYx34Fbf96nYtHDHOgSudJ96xgMAKjtl0NrqEKp4n63eWRO158MD5VXU3Njgb</td>
+						<td width="80%">hXwlG7XPnYoyqYZdr4vztVqFw2BAHzbU9vrcnclXefS5bMzvg2W0GAeEbwxDSjhp</td>
 					</tr>
 				
 					<tr>
@@ -3218,7 +3325,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/app/40-narrosse/a/boulangerie-patisserie/erp/au-fournil-de-narrosse/">https://acceslibre.beta.gouv.fr/app/40-narrosse/a/boulangerie-patisserie/erp/au-fournil-de-narrosse/</a></td>
+						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/app/40-dax/a/chaussures/erp/preston/">https://acceslibre.beta.gouv.fr/app/40-dax/a/chaussures/erp/preston/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3244,7 +3351,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/app/40-narrosse/a/electricien/erp/durou-electricite/">https://acceslibre.beta.gouv.fr/app/40-narrosse/a/electricien/erp/durou-electricite/</a></td>
+						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/app/40-dax/a/loisirs-creatifs/erp/fnac-3/">https://acceslibre.beta.gouv.fr/app/40-dax/a/loisirs-creatifs/erp/fnac-3/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3270,7 +3377,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/app/69-villeurbanne/a/cafeteria/erp/etienne-coffee-shop-2/">https://acceslibre.beta.gouv.fr/app/69-villeurbanne/a/cafeteria/erp/etienne-coffee-shop-2/</a></td>
+						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/app/40-dax/a/veterinaire/erp/clinique-veterinaire-des-bords-de-l-adour/">https://acceslibre.beta.gouv.fr/app/40-dax/a/veterinaire/erp/clinique-veterinaire-des-bords-de-l-adour/</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3296,7 +3403,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js">https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js</a></td>
+						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js">https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3322,7 +3429,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js">https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js</a></td>
+						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js">https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3348,7 +3455,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js">https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js</a></td>
+						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js">https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3374,7 +3481,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js">https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js</a></td>
+						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js">https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3400,7 +3507,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js">https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js</a></td>
+						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js">https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3426,7 +3533,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js">https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js</a></td>
+						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js">https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3452,7 +3559,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js">https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js</a></td>
+						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js">https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3478,7 +3585,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js">https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js</a></td>
+						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js">https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3504,7 +3611,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js">https://acceslibre.beta.gouv.fr/static/dist/main.46a7ce196188.js</a></td>
+						<td width="80%"><a href="https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js">https://acceslibre.beta.gouv.fr/static/dist/main.db72758e21f2.js</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
