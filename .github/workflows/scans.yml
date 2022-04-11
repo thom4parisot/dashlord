@@ -171,7 +171,7 @@ jobs:
         uses: "betagouv/check-url-action@main"
         if: ${{ matrix.sites.tools.stats }}
         with:
-          url: ${{ matrix.sites.url }}
+          baseUrl: ${{ matrix.sites.url }}
           uri: stats
           output: stats.json
           minExpectedRegex: ^stat

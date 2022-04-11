@@ -52,7 +52,7 @@ Vous pouvez contribuer en remontant des issues de qualité, en améliorant la do
 
 DashLord fonctionne en deux étapes :
 
-1. **Acquisition des données** : Pour chaque URL, chaque outil est executé et génère un fichier JSON qui sera versionné dans le repository
+1. **Acquisition des données** : Pour chaque URL, chaque outil est exécuté et génère un fichier JSON qui sera versionné dans le dépôt
 2. **Génération du rapport** : À partir des données existantes, l'action [dashlord-report-action](https://github.com/SocialGouv/dashlord-report-action) aggrège, compresse les résultats et produit un rapport web statique.
 
 ### Related repos
@@ -72,3 +72,9 @@ DashLord fonctionne en deux étapes :
 
 1. Créer une action github qui produit un JSON (cf exemple ci-dessus)
 2. Ajouter le support pour ce type de données dans [dashlord-report-action repo](https://github.com/SocialGouv/dashlord-report-action)
+
+### Tester sa feature
+1. Une fois la feature développée en local, ouvrir la PR
+2. Lancer la Github Action dans l'onglet "Actions" en précisant :
+    - la branche sur laquelle lancer l'action -> il s'agit de la branche qui contient votre feature
+    - s'il s'agit de l'action "Scans", préciser l'adresse que vous souhaitez scanner : le scan de toutes les URLs du dashlord.yml est très long sinon.
