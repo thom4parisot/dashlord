@@ -128,43 +128,22 @@
               "id"           : "cipherlist_STRONG",
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "not offered"
+              "severity"     : "OK",
+              "finding"      : "offered"
           }
 ,         {
               "id"           : "cipher_order",
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "server"
-          }
-,         {
-              "id"           : "protocol_negotiated",
-              "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "Default protocol TLS1.2"
-          }
-,         {
-              "id"           : "cipher_negotiated",
-              "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "ECDHE-RSA-AES128-GCM-SHA256, 256 bit ECDH (P-256)"
+              "severity"     : "WARN",
+              "finding"      : "Could not determine server cipher order, no matching cipher in list found (pls report this): DHE-RSA-SEED-SHA:SEED-SHA:DES-CBC3-SHA:RC4-MD5:DES-CBC-SHA:RC4-SHA:AES128-SHA:AES128-SHA256:AES256-SHA:ECDHE-RSA-AES128-SHA:DHE-RSA-AES128-SHA:DHE-RSA-AES256-SHA:ECDH-RSA-DES-CBC3-SHA:ECDH-RSA-AES128-SHA:ECDH-RSA-AES256-SHA:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-SHA256:DHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:DHE-DSS-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:AES256-SHA256:ECDHE-RSA-DES-CBC3-SHA:ECDHE-RSA-AES128-SHA256:AES256-GCM-SHA384:AES128-GCM-SHA256:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-SHA256:ADH-AES256-GCM-SHA384:AECDH-AES128-SHA:ECDHE-RSA-RC4-SHA:ECDHE-ECDSA-AES128-SHA"
           }
 ,         {
               "id"           : "FS",
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "offered"
-          }
-,         {
-              "id"           : "FS_ciphers",
-              "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "DHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384"
+              "severity"     : "MEDIUM",
+              "finding"      : "No ciphers supporting Forward Secrecy offered"
           }
 ,         {
               "id"           : "TLS_extensions",
@@ -178,7 +157,7 @@
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "no -- no lifetime advertised"
+              "finding"      : "valid for 86400 seconds only (<daily)"
           }
 ,         {
               "id"           : "SSL_sessionID_support",
@@ -192,7 +171,7 @@
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "not supported"
+              "finding"      : "supported"
           }
 ,         {
               "id"           : "sessionresumption_ID",
@@ -304,7 +283,7 @@
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "request w/o SNI didn't succeed"
+              "finding"      : "peconnect.pole-emploi.fr"
           }
 ,         {
               "id"           : "cert_subjectAltName",
@@ -339,7 +318,7 @@
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
               "severity"     : "MEDIUM",
-              "finding"      : "expires < 30 days (22)"
+              "finding"      : "expires < 30 days (15)"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -527,22 +506,107 @@
               "id"           : "HTTP_status_code",
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
-              "severity"     : "WARN",
-              "finding"      : "HTTP header reply empty"
+              "severity"     : "INFO",
+              "finding"      : "200 OK ('/')"
           }
 ,         {
-              "id"           : "HTTP_status_code",
+              "id"           : "HTTP_clock_skew",
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
-              "severity"     : "WARN",
-              "finding"      : "No HTTP status code"
+              "severity"     : "INFO",
+              "finding"      : "0 seconds from localtime"
           }
 ,         {
-              "id"           : "scanProblem",
+              "id"           : "HTTP_headerTime",
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
-              "severity"     : "WARN",
-              "finding"      : "HTTP header was repeatedly zero."
+              "severity"     : "INFO",
+              "finding"      : "1649564082"
+          }
+,         {
+              "id"           : "HSTS_time",
+              "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "365 days (=31536000 seconds) > 15552000 seconds"
+          }
+,         {
+              "id"           : "HSTS_subdomains",
+              "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "includes subdomains"
+          }
+,         {
+              "id"           : "HSTS_preload",
+              "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "domain is NOT marked for preloading"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No Server banner line in header, interesting!"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 at '/'"
+          }
+,         {
+              "id"           : "X-XSS-Protection",
+              "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1; mode=block"
+          }
+,         {
+              "id"           : "Access-Control-Allow-Origin",
+              "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "*"
+          }
+,         {
+              "id"           : "Referrer-Policy",
+              "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "strict-origin-when-cross-origin"
+          }
+,         {
+              "id"           : "Cache-Control",
+              "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no-cache"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "--"
           }
 ,         {
               "id"           : "heartbleed",
@@ -584,9 +648,9 @@
               "id"           : "secure_renego",
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
-              "severity"     : "OK",
+              "severity"     : "WARN",
               "cwe"          : "CWE-310",
-              "finding"      : "supported"
+              "finding"      : "OpenSSL handshake didn't succeed"
           }
 ,         {
               "id"           : "secure_client_renego",
@@ -610,10 +674,10 @@
               "id"           : "BREACH",
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
-              "severity"     : "MEDIUM",
+              "severity"     : "WARN",
               "cve"          : "CVE-2013-3587",
               "cwe"          : "CWE-310",
-              "finding"      : "potentially VULNERABLE, gzip deflate HTTP compression detected  - only supplied '/' tested"
+              "finding"      : "Test failed as first HTTP request stalled and was terminated"
           }
 ,         {
               "id"           : "POODLE_SSL",
@@ -683,7 +747,7 @@
               "severity"     : "OK",
               "cve"          : "CVE-2015-4000",
               "cwe"          : "CWE-310",
-              "finding"      : "no DH key with <= TLS 1.2"
+              "finding"      : "--"
           }
 ,         {
               "id"           : "BEAST",
@@ -726,14 +790,14 @@
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "No connection"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_500",
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "No connection"
           }
 ,         {
               "id"           : "clientsimulation-android_60",
@@ -747,21 +811,21 @@
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "No connection"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_81",
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "No connection"
           }
 ,         {
               "id"           : "clientsimulation-android_90",
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "No connection"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "clientsimulation-android_X",
@@ -775,14 +839,14 @@
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "No connection"
           }
 ,         {
               "id"           : "clientsimulation-chrome_79_win10",
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "No connection"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "clientsimulation-firefox_66_win81",
@@ -796,7 +860,7 @@
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "No connection"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "clientsimulation-ie_6_xp",
@@ -824,14 +888,14 @@
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "No connection"
+              "finding"      : "TLSv1.2 DHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "clientsimulation-ie_11_win81",
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "No connection"
+              "finding"      : "TLSv1.2 DHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "clientsimulation-ie_11_winphone81",
@@ -866,7 +930,7 @@
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "No connection"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "clientsimulation-safari_9_ios9",
@@ -880,7 +944,7 @@
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "No connection"
           }
 ,         {
               "id"           : "clientsimulation-safari_10_osx1012",
@@ -943,7 +1007,7 @@
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "No connection"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "clientsimulation-openssl_102e",
@@ -957,7 +1021,7 @@
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+              "finding"      : "No connection"
           }
 ,         {
               "id"           : "clientsimulation-openssl_111d",
@@ -971,7 +1035,7 @@
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "No connection"
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
 ,         {
               "id"           : "rating_spec",
@@ -1040,14 +1104,21 @@
               "id"           : "overall_grade",
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "A+"
+              "severity"     : "MEDIUM",
+              "finding"      : "B"
+          }
+,         {
+              "id"           : "grade_cap_reason_1",
+              "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Grade capped to B. Forward Secrecy (FS) is not supported"
           }
 ,         {
               "id"           : "scanTime",
               "ip"           : "immersion.beta.pole-emploi.fr/213.32.73.220",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "105"
+              "finding"      : "107"
           }
 ]

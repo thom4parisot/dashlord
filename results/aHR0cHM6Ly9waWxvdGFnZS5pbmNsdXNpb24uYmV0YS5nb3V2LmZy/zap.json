@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.1",
-	"@generated": "Sun, 3 Apr 2022 05:17:08",
+	"@generated": "Sun, 10 Apr 2022 05:28:54",
 	"site":[ 
 		{
 			"@name": "https://pilotage.inclusion.beta.gouv.fr",
@@ -415,25 +415,25 @@
 							"evidence": "<script type=\"text/javascript\" src=\"//cdn.jsdelivr.net/gh/AmauriC/tarteaucitron.js@1.9.3/tarteaucitron.js\"></script>"
 						},
 						{
-							"uri": "https://pilotage.inclusion.beta.gouv.fr/tableaux-de-bord/analyse-des-publics/",
-							"method": "GET",
-							"param": "//cdn.jsdelivr.net/gh/AmauriC/tarteaucitron.js@1.9.3/tarteaucitron.js",
-							"attack": "",
-							"evidence": "<script type=\"text/javascript\" src=\"//cdn.jsdelivr.net/gh/AmauriC/tarteaucitron.js@1.9.3/tarteaucitron.js\"></script>"
-						},
-						{
-							"uri": "https://pilotage.inclusion.beta.gouv.fr/tableaux-de-bord/analyse-des-publics/",
-							"method": "GET",
-							"param": "//stats.inclusion.beta.gouv.fr/app/iframeResizer.js",
-							"attack": "",
-							"evidence": "<script src=\"//stats.inclusion.beta.gouv.fr/app/iframeResizer.js\"></script>"
-						},
-						{
 							"uri": "https://pilotage.inclusion.beta.gouv.fr/tableaux-de-bord/donner-votre-avis/",
 							"method": "GET",
 							"param": "//cdn.jsdelivr.net/gh/AmauriC/tarteaucitron.js@1.9.3/tarteaucitron.js",
 							"attack": "",
 							"evidence": "<script type=\"text/javascript\" src=\"//cdn.jsdelivr.net/gh/AmauriC/tarteaucitron.js@1.9.3/tarteaucitron.js\"></script>"
+						},
+						{
+							"uri": "https://pilotage.inclusion.beta.gouv.fr/tableaux-de-bord/etp-conventionnes/",
+							"method": "GET",
+							"param": "//cdn.jsdelivr.net/gh/AmauriC/tarteaucitron.js@1.9.3/tarteaucitron.js",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"//cdn.jsdelivr.net/gh/AmauriC/tarteaucitron.js@1.9.3/tarteaucitron.js\"></script>"
+						},
+						{
+							"uri": "https://pilotage.inclusion.beta.gouv.fr/tableaux-de-bord/etp-conventionnes/",
+							"method": "GET",
+							"param": "//stats.inclusion.beta.gouv.fr/app/iframeResizer.js",
+							"attack": "",
+							"evidence": "<script src=\"//stats.inclusion.beta.gouv.fr/app/iframeResizer.js\"></script>"
 						},
 						{
 							"uri": "https://pilotage.inclusion.beta.gouv.fr/tableaux-de-bord/prescripteurs-habilites/",
@@ -551,14 +551,14 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://pilotage.inclusion.beta.gouv.fr/tableaux-de-bord/analyse-des-publics/",
+							"uri": "https://pilotage.inclusion.beta.gouv.fr/tableaux-de-bord/donner-votre-avis/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://pilotage.inclusion.beta.gouv.fr/tableaux-de-bord/donner-votre-avis/",
+							"uri": "https://pilotage.inclusion.beta.gouv.fr/tableaux-de-bord/etp-conventionnes/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1656,14 +1656,14 @@
 							"evidence": "com/channel/UC06_yIYfzAiDOMTemH9q3OQ"
 						},
 						{
-							"uri": "https://pilotage.inclusion.beta.gouv.fr/tableaux-de-bord/analyse-des-publics/",
+							"uri": "https://pilotage.inclusion.beta.gouv.fr/tableaux-de-bord/donner-votre-avis/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "com/channel/UC06_yIYfzAiDOMTemH9q3OQ"
 						},
 						{
-							"uri": "https://pilotage.inclusion.beta.gouv.fr/tableaux-de-bord/donner-votre-avis/",
+							"uri": "https://pilotage.inclusion.beta.gouv.fr/tableaux-de-bord/etp-conventionnes/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1752,6 +1752,13 @@
 							"evidence": "user"
 						},
 						{
+							"uri": "https://pilotage.inclusion.beta.gouv.fr/tableaux-de-bord/employeurs/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user"
+						},
+						{
 							"uri": "https://pilotage.inclusion.beta.gouv.fr/tableaux-de-bord/etp-conventionnes/",
 							"method": "GET",
 							"param": "",
@@ -1760,13 +1767,6 @@
 						},
 						{
 							"uri": "https://pilotage.inclusion.beta.gouv.fr/tableaux-de-bord/prescripteurs-habilites/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "user"
-						},
-						{
-							"uri": "https://pilotage.inclusion.beta.gouv.fr/tableaux-de-bord/recrutement/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1896,7 +1896,7 @@
 						}
 					],
 					"count": "11",
-					"solution": "<p>Whenever possible ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p>",
 					"cweid": "525",

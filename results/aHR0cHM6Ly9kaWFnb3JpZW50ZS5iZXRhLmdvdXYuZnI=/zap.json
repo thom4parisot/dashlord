@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.1",
-	"@generated": "Sun, 3 Apr 2022 03:29:16",
+	"@generated": "Sun, 10 Apr 2022 03:29:54",
 	"site":[ 
 		{
 			"@name": "https://diagoriente.beta.gouv.fr",
@@ -59,7 +59,7 @@
 							"evidence": "frame-ancestors https://diagoriente.beta.gouv.fr/ app.diagoriente.beta.gouv.fr diagoriente.beta.gouv.fr"
 						},
 						{
-							"uri": "https://diagoriente.beta.gouv.fr/ressources",
+							"uri": "https://diagoriente.beta.gouv.fr/statistiques",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -99,7 +99,7 @@
 							"evidence": "frame-ancestors https://diagoriente.beta.gouv.fr/ app.diagoriente.beta.gouv.fr diagoriente.beta.gouv.fr"
 						},
 						{
-							"uri": "https://diagoriente.beta.gouv.fr/ressources",
+							"uri": "https://diagoriente.beta.gouv.fr/statistiques",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -139,7 +139,7 @@
 							"evidence": "frame-ancestors https://diagoriente.beta.gouv.fr/ app.diagoriente.beta.gouv.fr diagoriente.beta.gouv.fr"
 						},
 						{
-							"uri": "https://diagoriente.beta.gouv.fr/ressources",
+							"uri": "https://diagoriente.beta.gouv.fr/statistiques",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -186,6 +186,13 @@
 							"evidence": "<link rel=\"preconnect\" href=\"https://www.youtube.com\"/>"
 						},
 						{
+							"uri": "https://diagoriente.beta.gouv.fr/ressources/11-introduction-aux-competences",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link rel=\"preconnect\" href=\"https://www.youtube.com\"/>"
+						},
+						{
 							"uri": "https://diagoriente.beta.gouv.fr/ressources/12-presentations-croisees",
 							"method": "GET",
 							"param": "",
@@ -221,7 +228,7 @@
 							"evidence": "<link rel=\"preconnect\" href=\"https://www.youtube.com\"/>"
 						}
 					],
-					"count": "8",
+					"count": "9",
 					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en/docs/Web/Security/Subresource_Integrity</p>",
@@ -350,13 +357,6 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://diagoriente.beta.gouv.fr/apple-touch-icon.png",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
 							"uri": "https://diagoriente.beta.gouv.fr/conditions-generales",
 							"method": "GET",
 							"param": "",
@@ -365,6 +365,13 @@
 						},
 						{
 							"uri": "https://diagoriente.beta.gouv.fr/confidentialite",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://diagoriente.beta.gouv.fr/favicon-32x32.png",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -556,13 +563,6 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://diagoriente.beta.gouv.fr/apple-touch-icon.png",
-							"method": "GET",
-							"param": "X-Content-Type-Options",
-							"attack": "",
-							"evidence": ""
-						},
-						{
 							"uri": "https://diagoriente.beta.gouv.fr/conditions-generales",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
@@ -571,6 +571,13 @@
 						},
 						{
 							"uri": "https://diagoriente.beta.gouv.fr/confidentialite",
+							"method": "GET",
+							"param": "X-Content-Type-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://diagoriente.beta.gouv.fr/favicon-32x32.png",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -652,18 +659,18 @@
 							"evidence": "U6rkyyE4oxod7Z0rsxkiaprC6N_Aw6v84e1LSKEdu8E"
 						},
 						{
-							"uri": "https://diagoriente.beta.gouv.fr/_next/static/chunks/696-5526e126f75d46b7.js",
+							"uri": "https://diagoriente.beta.gouv.fr/_next/static/chunks/547-05a5cae7fc7961c6.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
 						},
 						{
-							"uri": "https://diagoriente.beta.gouv.fr/_next/static/chunks/pages/_app-76eebb352b01cd97.js",
+							"uri": "https://diagoriente.beta.gouv.fr/_next/static/chunks/pages/_app-60f3cebacfe7ef89.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "U6rkyyE4oxod7Z0rsxkiaprC6N_Aw6v84e1LSKEdu8E"
+							"evidence": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-"
 						},
 						{
 							"uri": "https://diagoriente.beta.gouv.fr/conditions-generales",
@@ -839,7 +846,7 @@
 					],
 					"count": "11",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
-					"otherinfo": "<p>The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"<script id=\"__NEXT_DATA__\" type=\"application/json\">{\"props\":{\"pageProps\":{\"totalUser\":83069,\"currentUser\":24806,\"__APOLLO_STATE_\", see evidence field for the suspicious comment/snippet.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"<script id=\"__NEXT_DATA__\" type=\"application/json\">{\"props\":{\"pageProps\":{\"totalUser\":84876,\"currentUser\":26123,\"__APOLLO_STATE_\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
@@ -1030,7 +1037,7 @@
 						}
 					],
 					"count": "11",
-					"solution": "<p>Whenever possible ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p>",
 					"cweid": "525",
@@ -1130,7 +1137,7 @@
 					"desc": "<p>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users. </p>",
 					"instances":[ 
 						{
-							"uri": "https://diagoriente.beta.gouv.fr/apple-touch-icon.png",
+							"uri": "https://diagoriente.beta.gouv.fr/favicon-32x32.png",
 							"method": "GET",
 							"param": "",
 							"attack": "",

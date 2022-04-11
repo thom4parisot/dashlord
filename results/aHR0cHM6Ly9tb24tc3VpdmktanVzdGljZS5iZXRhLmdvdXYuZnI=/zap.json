@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.1",
-	"@generated": "Sun, 3 Apr 2022 09:39:14",
+	"@generated": "Sun, 10 Apr 2022 09:51:29",
 	"site":[ 
 		{
 			"@name": "https://mon-suivi-justice.beta.gouv.fr",
@@ -128,7 +128,7 @@
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "61"
+					"sourceid": "59"
 				},
 				{
 					"pluginid": "10063",
@@ -347,14 +347,14 @@
 							"evidence": "97240414"
 						},
 						{
-							"uri": "https://mon-suivi-justice.beta.gouv.fr/packs/css/application-ccecb099.css",
+							"uri": "https://mon-suivi-justice.beta.gouv.fr/packs/css/application-e8df002f.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "23161616"
 						},
 						{
-							"uri": "https://mon-suivi-justice.beta.gouv.fr/packs/css/application-ccecb099.css",
+							"uri": "https://mon-suivi-justice.beta.gouv.fr/packs/css/application-e8df002f.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -401,9 +401,16 @@
 							"param": "",
 							"attack": "",
 							"evidence": "1643373980"
+						},
+						{
+							"uri": "https://mon-suivi-justice.beta.gouv.fr/stats",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "77153363"
 						}
 					],
-					"count": "10",
+					"count": "11",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
 					"otherinfo": "<p>97240414, which evaluates to: 1973-01-30 11:13:34</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
@@ -422,7 +429,7 @@
 					"desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>",
 					"instances":[ 
 						{
-							"uri": "https://mon-suivi-justice.beta.gouv.fr/packs/css/application-ccecb099.css",
+							"uri": "https://mon-suivi-justice.beta.gouv.fr/packs/css/application-e8df002f.css",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -512,7 +519,7 @@
 					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "59"
+					"sourceid": "61"
 				},
 				{
 					"pluginid": "10094",
@@ -529,52 +536,52 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "2BAEtU5rpQ0pjDjVNjf4aDnLjgd03DzEujBwL77DXKB"
+							"evidence": "2BRfFUEc2GWDpB6KSSf5ZmhseqyJhxUBYZkH4mD"
 						},
 						{
 							"uri": "https://mon-suivi-justice.beta.gouv.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "2BQOalVbvfpnOZFMQoubB2NU9KqPic5h"
+							"evidence": "2BUxdtK73ued9PFnk7M9ui0J4glNpTbE3eeqFQszrUcHHmnjwk0Mjg15WFDHA4ynY3vw23r6tJBVRGOC9q1EjAj6tnthWMMgOUlZ6uOzfyNR2euwvJuCoHTYhe5FOJNWwznaWo8WpyPMKR2KS1mxkI31e267mz"
 						},
 						{
 							"uri": "https://mon-suivi-justice.beta.gouv.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "2FRZKsTa8QJaedt4SZuwbKGp5oHK9NOF35onYEYZpll"
+							"evidence": "1QJe51kEJcQNobtZcw37cCkddaQSeqdXZmE5sVIMYwWj"
 						},
 						{
 							"uri": "https://mon-suivi-justice.beta.gouv.fr/comprendre_ma_peine",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "2BYmIkaFTX8B4EdvKjN2JEcYd9jC9a0voUCADmPwcMcA7ec"
+							"evidence": "2FB7DPh9DYxLg8w8XjXTM5bSAG393ET8CS8OtE9MLn2w"
 						},
 						{
 							"uri": "https://mon-suivi-justice.beta.gouv.fr/donnees_personnelles",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "FtwXW8zkf8f0cY7nJeSsHynxvFBJS83iGQqZsxWW8A6m4evEJKSB04PlgYauj1R12lDk9kin"
+							"evidence": "2FKjh8UfYlHNqA487xdNhYakgCD1u6JfsIDr9qpD2TYKPJaxvlsEeU1BDIp2dkJPBrjsu63HarRsHnzKXkFb7YX"
 						},
 						{
 							"uri": "https://mon-suivi-justice.beta.gouv.fr/investir_ma_reinsertion",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "2BqKwReVVaN7x5RvGtAnmUqkPsMSxRA20cr4HKIibPda0v57Q6yBDl"
+							"evidence": "2FFAIsTUKp064G7sWf9k4gCPYO0NgtzGHlasarkPRK0gJwLK3rnEmyCU7a7QmzTR"
 						},
 						{
 							"uri": "https://mon-suivi-justice.beta.gouv.fr/mentions_legales",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "2BGBQeokbrAXemYWFMYTADh3vp6ZZ6nSDPEnfrpzKWhcmsGD2p7"
+							"evidence": "2Fxrmp7egJXTgqBzzA7TgjlKDQtCyUR9ST4lRh5pM2GhHq54OTorKjXKdeIt6fvETXl4oWbYGysydNTEHd"
 						},
 						{
-							"uri": "https://mon-suivi-justice.beta.gouv.fr/packs/css/application-ccecb099.css",
+							"uri": "https://mon-suivi-justice.beta.gouv.fr/packs/css/application-e8df002f.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -592,26 +599,26 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "2BihAzjou8zDyHrxqVMlWqnfGPZupsWyRUDiVBDaxf"
+							"evidence": "3D--vBSQMuZxjXIW8eKZ--r190ZFmJGSmrV16DFDn0QA"
+						},
+						{
+							"uri": "https://mon-suivi-justice.beta.gouv.fr/preparer_spip92",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "MLlwzp7y4dhhKbP0JXPpoqFSU3QHxQ5zPu1Ug62xwNFmkJ5"
 						},
 						{
 							"uri": "https://mon-suivi-justice.beta.gouv.fr/qui_sommes_nous",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "xGLIRFAxzbnar5LBv4msH5itLizEk3pGEPnZLARQCWeuxij2PUl"
-						},
-						{
-							"uri": "https://mon-suivi-justice.beta.gouv.fr/sitemap.xml",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "U51sineq2kleU1KpH1FarRSrEIYRXoiwFN"
+							"evidence": "2BIjDCoaRHDUksEYm0ZLJdRrLNz92C"
 						}
 					],
 					"count": "12",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>\uFFFD\\x0010\\x0004\uFFFDNk\uFFFD\r)\uFFFD8\uFFFD67\uFFFDh9\u02CE\\x0007t\uFFFD<\u013A0p/\uFFFD\uFFFD\\\uFFFD</p>",
+					"otherinfo": "<p>\uFFFD\\x0014_\\x0015A\\x001c\uFFFDe\uFFFD\uFFFD\\x001e\uFFFDI'\uFFFDfhlz\uFFFD\uFFFD\uFFFD\\x0015\\x0001a\uFFFD\\x0007\uFFFD`</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
@@ -641,7 +648,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "61"
+					"sourceid": "59"
 				},
 				{
 					"pluginid": "10109",
@@ -917,7 +924,7 @@
 						}
 					],
 					"count": "11",
-					"solution": "<p>Whenever possible ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p>",
 					"cweid": "525",

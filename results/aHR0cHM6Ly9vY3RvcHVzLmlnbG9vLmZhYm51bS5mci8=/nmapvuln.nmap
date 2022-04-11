@@ -1,6 +1,6 @@
-# Nmap 7.91 scan initiated Sun Apr  3 08:38:44 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln octopus.igloo.fabnum.fr
+# Nmap 7.91 scan initiated Sun Apr 10 08:51:20 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln octopus.igloo.fabnum.fr
 Nmap scan report for octopus.igloo.fabnum.fr (51.159.27.6)
-Host is up (0.12s latency).
+Host is up (0.085s latency).
 rDNS record for 51.159.27.6: 51-159-27-6.lb.fr-par.scw.cloud
 Not shown: 998 closed ports
 PORT    STATE SERVICE   VERSION
@@ -17,13 +17,13 @@ PORT    STATE SERVICE   VERSION
 |     </body></html>
 |   FourOhFourRequest: 
 |     HTTP/1.0 404 Not Found
-|     date: Sun, 03 Apr 2022 08:38:53 GMT
+|     date: Sun, 10 Apr 2022 08:51:28 GMT
 |     content-length: 21
 |     content-type: text/plain; charset=utf-8
 |     default backend - 404
 |   GetRequest, HTTPOptions: 
 |     HTTP/1.0 404 Not Found
-|     date: Sun, 03 Apr 2022 08:38:52 GMT
+|     date: Sun, 10 Apr 2022 08:51:27 GMT
 |     content-length: 21
 |     content-type: text/plain; charset=utf-8
 |     default backend - 404
@@ -52,15 +52,15 @@ PORT    STATE SERVICE   VERSION
 |     <html><body><h1>400 Bad request</h1>
 |     Your browser sent an invalid request.
 |     </body></html>
-|   FourOhFourRequest: 
+|   FourOhFourRequest, HTTPOptions: 
 |     HTTP/1.0 404 Not Found
-|     date: Sun, 03 Apr 2022 08:39:00 GMT
+|     date: Sun, 10 Apr 2022 08:51:34 GMT
 |     content-length: 21
 |     content-type: text/plain; charset=utf-8
 |     default backend - 404
-|   GetRequest, HTTPOptions: 
+|   GetRequest: 
 |     HTTP/1.0 404 Not Found
-|     date: Sun, 03 Apr 2022 08:38:59 GMT
+|     date: Sun, 10 Apr 2022 08:51:33 GMT
 |     content-length: 21
 |     content-type: text/plain; charset=utf-8
 |     default backend - 404
@@ -80,71 +80,71 @@ PORT    STATE SERVICE   VERSION
 |_    Request
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.91%I=7%D=4/3%Time=62495D1C%P=x86_64-alpine-linux-musl%r(
-SF:NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\ncontent-length:\x20
-SF:110\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconn
-SF:ection:\x20close\r\n\r\n<html><body><h1>408\x20Request\x20Time-out</h1>
-SF:\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request\x20in\x
-SF:20time\.\n</body></html>\n")%r(GetRequest,91,"HTTP/1\.0\x20404\x20Not\x
-SF:20Found\r\ndate:\x20Sun,\x2003\x20Apr\x202022\x2008:38:52\x20GMT\r\ncon
-SF:tent-length:\x2021\r\ncontent-type:\x20text/plain;\x20charset=utf-8\r\n
-SF:\r\ndefault\x20backend\x20-\x20404")%r(HTTPOptions,91,"HTTP/1\.0\x20404
-SF:\x20Not\x20Found\r\ndate:\x20Sun,\x2003\x20Apr\x202022\x2008:38:52\x20G
-SF:MT\r\ncontent-length:\x2021\r\ncontent-type:\x20text/plain;\x20charset=
-SF:utf-8\r\n\r\ndefault\x20backend\x20-\x20404")%r(RTSPRequest,67,"HTTP/1\
-SF:.1\x20400\x20Bad\x20Request\r\ncontent-type:\x20text/plain;\x20charset=
-SF:utf-8\r\nconnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(X11Probe
-SF:,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\ncac
-SF:he-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x2
-SF:0close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20brows
-SF:er\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(FourOhFo
-SF:urRequest,91,"HTTP/1\.0\x20404\x20Not\x20Found\r\ndate:\x20Sun,\x2003\x
-SF:20Apr\x202022\x2008:38:53\x20GMT\r\ncontent-length:\x2021\r\ncontent-ty
-SF:pe:\x20text/plain;\x20charset=utf-8\r\n\r\ndefault\x20backend\x20-\x204
-SF:04")%r(RPCCheck,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-lengt
-SF:h:\x2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\
-SF:nconnection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>
-SF:\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>
-SF:\n")%r(DNSVersionBindReqTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nc
+SF-Port80-TCP:V=7.91%I=7%D=4/10%Time=62529A8F%P=x86_64-alpine-linux-musl%r
+SF:(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\ncontent-length:\x2
+SF:0110\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\ncon
+SF:nection:\x20close\r\n\r\n<html><body><h1>408\x20Request\x20Time-out</h1
+SF:>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request\x20in\
+SF:x20time\.\n</body></html>\n")%r(GetRequest,91,"HTTP/1\.0\x20404\x20Not\
+SF:x20Found\r\ndate:\x20Sun,\x2010\x20Apr\x202022\x2008:51:27\x20GMT\r\nco
+SF:ntent-length:\x2021\r\ncontent-type:\x20text/plain;\x20charset=utf-8\r\
+SF:n\r\ndefault\x20backend\x20-\x20404")%r(HTTPOptions,91,"HTTP/1\.0\x2040
+SF:4\x20Not\x20Found\r\ndate:\x20Sun,\x2010\x20Apr\x202022\x2008:51:27\x20
+SF:GMT\r\ncontent-length:\x2021\r\ncontent-type:\x20text/plain;\x20charset
+SF:=utf-8\r\n\r\ndefault\x20backend\x20-\x20404")%r(RTSPRequest,67,"HTTP/1
+SF:\.1\x20400\x20Bad\x20Request\r\ncontent-type:\x20text/plain;\x20charset
+SF:=utf-8\r\nconnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(X11Prob
+SF:e,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x2090\r\nca
+SF:che-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nconnection:\x
+SF:20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYour\x20brow
+SF:ser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")%r(FourOhF
+SF:ourRequest,91,"HTTP/1\.0\x20404\x20Not\x20Found\r\ndate:\x20Sun,\x2010\
+SF:x20Apr\x202022\x2008:51:28\x20GMT\r\ncontent-length:\x2021\r\ncontent-t
+SF:ype:\x20text/plain;\x20charset=utf-8\r\n\r\ndefault\x20backend\x20-\x20
+SF:404")%r(RPCCheck,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-leng
+SF:th:\x2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r
+SF:\nconnection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1
+SF:>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html
+SF:>\n")%r(DNSVersionBindReqTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\n
+SF:content-length:\x2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x2
+SF:0text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x2
+SF:0request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n<
+SF:/body></html>\n")%r(DNSStatusRequestTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20
+SF:request\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\nconte
+SF:nt-type:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>40
+SF:0\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20r
+SF:equest\.\n</body></html>\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.91%T=SSL%I=7%D=4/10%Time=62529A95%P=x86_64-alpine-linux
+SF:-musl%r(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\ncontent-len
+SF:gth:\x20110\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html
+SF:\r\nconnection:\x20close\r\n\r\n<html><body><h1>408\x20Request\x20Time-
+SF:out</h1>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request
+SF:\x20in\x20time\.\n</body></html>\n")%r(GetRequest,91,"HTTP/1\.0\x20404\
+SF:x20Not\x20Found\r\ndate:\x20Sun,\x2010\x20Apr\x202022\x2008:51:33\x20GM
+SF:T\r\ncontent-length:\x2021\r\ncontent-type:\x20text/plain;\x20charset=u
+SF:tf-8\r\n\r\ndefault\x20backend\x20-\x20404")%r(HTTPOptions,91,"HTTP/1\.
+SF:0\x20404\x20Not\x20Found\r\ndate:\x20Sun,\x2010\x20Apr\x202022\x2008:51
+SF::34\x20GMT\r\ncontent-length:\x2021\r\ncontent-type:\x20text/plain;\x20
+SF:charset=utf-8\r\n\r\ndefault\x20backend\x20-\x20404")%r(FourOhFourReque
+SF:st,91,"HTTP/1\.0\x20404\x20Not\x20Found\r\ndate:\x20Sun,\x2010\x20Apr\x
+SF:202022\x2008:51:34\x20GMT\r\ncontent-length:\x2021\r\ncontent-type:\x20
+SF:text/plain;\x20charset=utf-8\r\n\r\ndefault\x20backend\x20-\x20404")%r(
+SF:tor-versions,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\
+SF:x2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\nco
+SF:nnection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nY
+SF:our\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n"
+SF:)%r(RTSPRequest,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-type:
+SF:\x20text/plain;\x20charset=utf-8\r\nconnection:\x20close\r\n\r\n400\x20
+SF:Bad\x20Request")%r(RPCCheck,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nc
 SF:ontent-length:\x2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20
 SF:text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20
 SF:request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</
-SF:body></html>\n")%r(DNSStatusRequestTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20r
-SF:equest\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\nconten
-SF:t-type:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>400
-SF:\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20re
-SF:quest\.\n</body></html>\n");
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.91%T=SSL%I=7%D=4/3%Time=62495D22%P=x86_64-alpine-linux-
-SF:musl%r(NULL,E9,"HTTP/1\.1\x20408\x20Request\x20Time-out\r\ncontent-leng
-SF:th:\x20110\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\
-SF:r\nconnection:\x20close\r\n\r\n<html><body><h1>408\x20Request\x20Time-o
-SF:ut</h1>\nYour\x20browser\x20didn't\x20send\x20a\x20complete\x20request\
-SF:x20in\x20time\.\n</body></html>\n")%r(GetRequest,91,"HTTP/1\.0\x20404\x
-SF:20Not\x20Found\r\ndate:\x20Sun,\x2003\x20Apr\x202022\x2008:38:59\x20GMT
-SF:\r\ncontent-length:\x2021\r\ncontent-type:\x20text/plain;\x20charset=ut
-SF:f-8\r\n\r\ndefault\x20backend\x20-\x20404")%r(HTTPOptions,91,"HTTP/1\.0
-SF:\x20404\x20Not\x20Found\r\ndate:\x20Sun,\x2003\x20Apr\x202022\x2008:38:
-SF:59\x20GMT\r\ncontent-length:\x2021\r\ncontent-type:\x20text/plain;\x20c
-SF:harset=utf-8\r\n\r\ndefault\x20backend\x20-\x20404")%r(FourOhFourReques
-SF:t,91,"HTTP/1\.0\x20404\x20Not\x20Found\r\ndate:\x20Sun,\x2003\x20Apr\x2
-SF:02022\x2008:39:00\x20GMT\r\ncontent-length:\x2021\r\ncontent-type:\x20t
-SF:ext/plain;\x20charset=utf-8\r\n\r\ndefault\x20backend\x20-\x20404")%r(t
-SF:or-versions,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\ncontent-length:\x
-SF:2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20text/html\r\ncon
-SF:nection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20request</h1>\nYo
-SF:ur\x20browser\x20sent\x20an\x20invalid\x20request\.\n</body></html>\n")
-SF:%r(RTSPRequest,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\ncontent-type:\
-SF:x20text/plain;\x20charset=utf-8\r\nconnection:\x20close\r\n\r\n400\x20B
-SF:ad\x20Request")%r(RPCCheck,CF,"HTTP/1\.1\x20400\x20Bad\x20request\r\nco
-SF:ntent-length:\x2090\r\ncache-control:\x20no-cache\r\ncontent-type:\x20t
-SF:ext/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>400\x20Bad\x20r
-SF:equest</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20request\.\n</b
-SF:ody></html>\n")%r(DNSVersionBindReqTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20r
-SF:equest\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\nconten
-SF:t-type:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>400
-SF:\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20re
-SF:quest\.\n</body></html>\n");
+SF:body></html>\n")%r(DNSVersionBindReqTCP,CF,"HTTP/1\.1\x20400\x20Bad\x20
+SF:request\r\ncontent-length:\x2090\r\ncache-control:\x20no-cache\r\nconte
+SF:nt-type:\x20text/html\r\nconnection:\x20close\r\n\r\n<html><body><h1>40
+SF:0\x20Bad\x20request</h1>\nYour\x20browser\x20sent\x20an\x20invalid\x20r
+SF:equest\.\n</body></html>\n");
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Apr  3 08:39:20 2022 -- 1 IP address (1 host up) scanned in 36.98 seconds
+# Nmap done at Sun Apr 10 08:51:52 2022 -- 1 IP address (1 host up) scanned in 32.37 seconds

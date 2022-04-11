@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.1",
-	"@generated": "Sun, 3 Apr 2022 05:43:50",
+	"@generated": "Sun, 10 Apr 2022 05:53:21",
 	"site":[ 
 		{
 			"@name": "https://recosante.beta.gouv.fr",
@@ -47,14 +47,14 @@
 							"evidence": "<form class=\"SearchBar__Wrapper-sc-5o2qn6-0 hnVCdb\">"
 						},
 						{
-							"uri": "https://recosante.beta.gouv.fr/place/31555/toulouse/",
+							"uri": "https://recosante.beta.gouv.fr/place/69123/lyon/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form class=\"SearchBar__Wrapper-sc-5o2qn6-0 hnVCdb Header__StyledSearchBar-sc-owrh5-3 cqJbJO\">"
 						},
 						{
-							"uri": "https://recosante.beta.gouv.fr/place/31555/toulouse/",
+							"uri": "https://recosante.beta.gouv.fr/place/69123/lyon/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -232,13 +232,6 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://recosante.beta.gouv.fr/mentions-legales",
-							"method": "GET",
-							"param": "X-Frame-Options",
-							"attack": "",
-							"evidence": ""
-						},
-						{
 							"uri": "https://recosante.beta.gouv.fr/place/06088/nice/",
 							"method": "GET",
 							"param": "X-Frame-Options",
@@ -289,6 +282,13 @@
 						},
 						{
 							"uri": "https://recosante.beta.gouv.fr/place/75056/paris/",
+							"method": "GET",
+							"param": "X-Frame-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://recosante.beta.gouv.fr/politiquedeconfidentialite",
 							"method": "GET",
 							"param": "X-Frame-Options",
 							"attack": "",
@@ -630,49 +630,35 @@
 							"evidence": "807395231"
 						},
 						{
-							"uri": "https://recosante.beta.gouv.fr/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "1139396248"
-						},
-						{
-							"uri": "https://recosante.beta.gouv.fr/",
+							"uri": "https://recosante.beta.gouv.fr/robots.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "2145949318"
 						},
 						{
-							"uri": "https://recosante.beta.gouv.fr/",
+							"uri": "https://recosante.beta.gouv.fr/robots.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "23000091"
 						},
 						{
-							"uri": "https://recosante.beta.gouv.fr/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "807395231"
-						},
-						{
-							"uri": "https://recosante.beta.gouv.fr/robots.txt",
+							"uri": "https://recosante.beta.gouv.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "2145949318"
 						},
 						{
-							"uri": "https://recosante.beta.gouv.fr/robots.txt",
+							"uri": "https://recosante.beta.gouv.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "23000091"
 						}
 					],
-					"count": "10",
+					"count": "8",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
 					"otherinfo": "<p>1139396248, which evaluates to: 2006-02-08 10:57:28</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
@@ -699,13 +685,6 @@
 						},
 						{
 							"uri": "https://recosante.beta.gouv.fr/",
-							"method": "GET",
-							"param": "X-Content-Type-Options",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://recosante.beta.gouv.fr/mentions-legales",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -762,6 +741,13 @@
 						},
 						{
 							"uri": "https://recosante.beta.gouv.fr/place/75056/paris/",
+							"method": "GET",
+							"param": "X-Content-Type-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://recosante.beta.gouv.fr/politiquedeconfidentialite",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -883,14 +869,14 @@
 					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
 					"instances":[ 
 						{
-							"uri": "https://recosante.beta.gouv.fr/695fe2e31381bb8a0b8dd13cee919fcc7f17f630-42a596fab111231714e6.js",
+							"uri": "https://recosante.beta.gouv.fr/a8f44419da147255abd98e3e8a003c74f6050a1c-cd25c5552bba9bb831c3.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "query"
 						},
 						{
-							"uri": "https://recosante.beta.gouv.fr/app-73e9807cca54dada223b.js",
+							"uri": "https://recosante.beta.gouv.fr/app-d6f401bbce5ca3da1a3e.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -905,6 +891,13 @@
 						},
 						{
 							"uri": "https://recosante.beta.gouv.fr/component---src-pages-stats-js-79a066dbb08af8bb57da.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from"
+						},
+						{
+							"uri": "https://recosante.beta.gouv.fr/component---src-templates-article-js-40a3bb45f5022008c12f.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -932,13 +925,13 @@
 							"evidence": "username"
 						}
 					],
-					"count": "7",
+					"count": "8",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
-					"otherinfo": "<p>The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"(self.webpackChunkrecosante_site=self.webpackChunkrecosante_site||[]).push([[724],{6633:function(e,t,n){e.exports=n(2465)},3344:\", see evidence field for the suspicious comment/snippet.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"(self.webpackChunkrecosante_site=self.webpackChunkrecosante_site||[]).push([[434],{6633:function(e,t,n){e.exports=n(2465)},3344:\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "162"
+					"sourceid": "186"
 				},
 				{
 					"pluginid": "10109",
@@ -1061,13 +1054,6 @@
 							"evidence": "public, max-age=0, must-revalidate"
 						},
 						{
-							"uri": "https://recosante.beta.gouv.fr/mentions-legales",
-							"method": "GET",
-							"param": "Cache-Control",
-							"attack": "",
-							"evidence": "public, max-age=0, must-revalidate"
-						},
-						{
 							"uri": "https://recosante.beta.gouv.fr/place/06088/nice/",
 							"method": "GET",
 							"param": "Cache-Control",
@@ -1122,10 +1108,17 @@
 							"param": "Cache-Control",
 							"attack": "",
 							"evidence": "public, max-age=0, must-revalidate"
+						},
+						{
+							"uri": "https://recosante.beta.gouv.fr/politiquedeconfidentialite",
+							"method": "GET",
+							"param": "Cache-Control",
+							"attack": "",
+							"evidence": "public, max-age=0, must-revalidate"
 						}
 					],
 					"count": "11",
-					"solution": "<p>Whenever possible ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p>",
 					"cweid": "525",
@@ -1148,6 +1141,13 @@
 							"param": "",
 							"attack": "",
 							"evidence": "HIT"
+						},
+						{
+							"uri": "https://recosante.beta.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0"
 						},
 						{
 							"uri": "https://recosante.beta.gouv.fr/",
@@ -1220,13 +1220,13 @@
 							"evidence": "Age: 0"
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "1"
+					"sourceid": "7"
 				},
 				{
 					"pluginid": "10049",

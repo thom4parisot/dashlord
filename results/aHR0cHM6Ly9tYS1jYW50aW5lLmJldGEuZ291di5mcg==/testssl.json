@@ -1,1186 +1,6 @@
 [
          {
               "id"           : "service",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "HTTP"
-          }
-,         {
-              "id"           : "pre_128cipher",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No 128 cipher limit bug"
-          }
-,         {
-              "id"           : "SSLv2",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "not offered"
-          }
-,         {
-              "id"           : "SSLv3",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "not offered"
-          }
-,         {
-              "id"           : "TLS1",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "offered (deprecated)"
-          }
-,         {
-              "id"           : "TLS1_1",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "offered (deprecated)"
-          }
-,         {
-              "id"           : "TLS1_2",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "offered"
-          }
-,         {
-              "id"           : "TLS1_3",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "offered with final"
-          }
-,         {
-              "id"           : "ALPN",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not offered"
-          }
-,         {
-              "id"           : "cipherlist_NULL",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cwe"          : "CWE-327",
-              "finding"      : "not offered"
-          }
-,         {
-              "id"           : "cipherlist_aNULL",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cwe"          : "CWE-327",
-              "finding"      : "not offered"
-          }
-,         {
-              "id"           : "cipherlist_EXPORT",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cwe"          : "CWE-327",
-              "finding"      : "not offered"
-          }
-,         {
-              "id"           : "cipherlist_LOW",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cwe"          : "CWE-327",
-              "finding"      : "not offered"
-          }
-,         {
-              "id"           : "cipherlist_3DES_IDEA",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "cwe"          : "CWE-310",
-              "finding"      : "not offered"
-          }
-,         {
-              "id"           : "cipherlist_AVERAGE",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "cwe"          : "CWE-310",
-              "finding"      : "offered"
-          }
-,         {
-              "id"           : "cipherlist_GOOD",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "offered"
-          }
-,         {
-              "id"           : "cipherlist_STRONG",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "offered"
-          }
-,         {
-              "id"           : "cipherorder_TLSv1",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "ECDHE-RSA-AES128-SHA"
-          }
-,         {
-              "id"           : "cipherorder_TLSv1_1",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "ECDHE-RSA-AES128-SHA"
-          }
-,         {
-              "id"           : "cipherorder_TLSv1_2",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "cipher_order",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "server"
-          }
-,         {
-              "id"           : "protocol_negotiated",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "Default protocol TLS1.3"
-          }
-,         {
-              "id"           : "cipher_negotiated",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "TLS_AES_256_GCM_SHA384, 256 bit ECDH (P-256)"
-          }
-,         {
-              "id"           : "FS",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "offered"
-          }
-,         {
-              "id"           : "FS_ciphers",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "DHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES128-SHA256 DHE-RSA-AES128-SHA DHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES256-SHA256 DHE-RSA-AES256-SHA ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA"
-          }
-,         {
-              "id"           : "FS_ECDHE_curves",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "prime256v1"
-          }
-,         {
-              "id"           : "TLS_extensions",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "'renegotiation info/#65281' 'EC point formats/#11' 'supported versions/#43' 'key share/#51' 'max fragment length/#1' 'encrypt-then-mac/#22' 'extended master secret/#23'"
-          }
-,         {
-              "id"           : "TLS_session_ticket",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "no -- no lifetime advertised"
-          }
-,         {
-              "id"           : "SSL_sessionID_support",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "no"
-          }
-,         {
-              "id"           : "sessionresumption_ticket",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not supported"
-          }
-,         {
-              "id"           : "sessionresumption_ID",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No Session ID, no resumption"
-          }
-,         {
-              "id"           : "TLS_timestamp",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "random"
-          }
-,         {
-              "id"           : "certificate_compression",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "none"
-          }
-,         {
-              "id"           : "clientAuth",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "none"
-          }
-,         {
-              "id"           : "cert_numbers",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1"
-          }
-,         {
-              "id"           : "cert_signatureAlgorithm",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "SHA256 with RSA"
-          }
-,         {
-              "id"           : "cert_keySize",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "RSA 2048 bits (exponent is 65537)"
-          }
-,         {
-              "id"           : "cert_keyUsage",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Digital Signature, Key Encipherment"
-          }
-,         {
-              "id"           : "cert_extKeyUsage",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLS Web Server Authentication, TLS Web Client Authentication"
-          }
-,         {
-              "id"           : "cert_serialNumber",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "032D0E15BCECC2A18FD74485DF24C5B0D49E"
-          }
-,         {
-              "id"           : "cert_serialNumberLen",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "18"
-          }
-,         {
-              "id"           : "cert_fingerprintSHA1",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "EB3CADA61CBA1E293743B4653241E1316D472759"
-          }
-,         {
-              "id"           : "cert_fingerprintSHA256",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "7CE7CF33BA2769FB671892D7458A10801F9DC208B15C1E4C747471CD73C3F2DF"
-          }
-,         {
-              "id"           : "cert",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE----- MIIFMzCCBBugAwIBAgISAy0OFbzswqGP10SF3yTFsNSeMA0GCSqGSIb3DQEBCwUA MDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD EwJSMzAeFw0yMjAzMTExODEzMjJaFw0yMjA2MDkxODEzMjFaMCIxIDAeBgNVBAMT F21hLWNhbnRpbmUuYmV0YS5nb3V2LmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A MIIBCgKCAQEAzzusAiXAFU7agKvdHuRxqyOBct55M82sbVc+aAFA9lPMVj47ZulV JH/u/Gy0ydqZdWFFAp1fwSlaf6JffnndjCKxp3oETq6UZfcu+o66Kv1ENAh4NFQj 4Btkb3YUawM0LZKxOdZ47tpzd3bFO2g8VtvboPN8S1xbFdNYwy5sOYh/70BEBzrJ fgjhvKnLHhVewCOFcrTw6BJRxVCHc7ZtpzFdWMqHf7KUAVH9eBs2SJoz5Nwywuoc V+3Vhq1tB5F1ulKHpra/4++t0Z31u6xdv9Jwlk2VgxnchbU56R2gV/RfXgD0V9P/ ojPQvlQeRdjMwqE2t1qeUFsGpvNl7/kPdQIDAQABo4ICUTCCAk0wDgYDVR0PAQH/ BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E AjAAMB0GA1UdDgQWBBQwNCLk0NiKATk1An8PoAinuxbcQzAfBgNVHSMEGDAWgBQU LrMXt1hWy65QCUDmH6+dixTCxjBVBggrBgEFBQcBAQRJMEcwIQYIKwYBBQUHMAGG FWh0dHA6Ly9yMy5vLmxlbmNyLm9yZzAiBggrBgEFBQcwAoYWaHR0cDovL3IzLmku bGVuY3Iub3JnLzAiBgNVHREEGzAZghdtYS1jYW50aW5lLmJldGEuZ291di5mcjBM BgNVHSAERTBDMAgGBmeBDAECATA3BgsrBgEEAYLfEwEBATAoMCYGCCsGAQUFBwIB FhpodHRwOi8vY3BzLmxldHNlbmNyeXB0Lm9yZzCCAQMGCisGAQQB1nkCBAIEgfQE gfEA7wB2ACl5vvCeOTkh8FZzn2Old+W+V32cYAr4+U1dJlwlXceEAAABf3pmWy0A AAQDAEcwRQIhAMENpLspXL+8IPTO3Q8PKXkeN8jMlAOj6polOqKFcNG0AiBeD/4q SwDY2CsdXO4l9rT+OAbvNCbZldKYdSnq6UL0gQB1AG9Tdqwx8DEZ2JkApFEV/3cV HBHZAsEAKQaNsgiaN9kTAAABf3pmW2EAAAQDAEYwRAIgZL4Xli5o4l0ImNotdr9a vljiQxqywLEZ9y6JdnE0e88CIFVAiJVna/Thm26M2mHPRnfp+JghUL75Rbwk5can IlMPMA0GCSqGSIb3DQEBCwUAA4IBAQCFOKSQpH3gwjYldOMJEMVwE2Y+E/bVYyOQ H+o/f6nm9CBJAaTZWe8ltWt1wMzm5WrwwwmtALOMGBrhKol8YEO3nTCufTIyjejG BBNXi/+JI6e3mLC4+bnExgo5FGDegS9IbH/0P+QnTcyQKtUinj3VnLKg66OyPXKl LQT1UHH/HCWXjFfuTLtkBk8ApudFE/AGlnLNSPinUSWrh/JTuiAi4gK+sNevTgvi zrqMlkjThvda0KKuDwzUDBWGgcwyQ14k2U0o+9IYVUcVEdrKN4LbUW6efasoC39f pNZ1cXuFmpvQ7hzowa1KnnP7Wd98RCD+OQ0bdRcUQRunPqE6q2Vd -----END CERTIFICATE-----"
-          }
-,         {
-              "id"           : "cert_commonName",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "ma-cantine.beta.gouv.fr"
-          }
-,         {
-              "id"           : "cert_commonName_wo_SNI",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "lolcatho.st"
-          }
-,         {
-              "id"           : "cert_subjectAltName",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "ma-cantine.beta.gouv.fr"
-          }
-,         {
-              "id"           : "cert_trust",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "Ok via SAN and CN (SNI mandatory)"
-          }
-,         {
-              "id"           : "cert_chain_of_trust",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "passed."
-          }
-,         {
-              "id"           : "cert_certificatePolicies_EV",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "no"
-          }
-,         {
-              "id"           : "cert_expirationStatus",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "67 >= 30 days"
-          }
-,         {
-              "id"           : "cert_notBefore",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "2022-03-11 18:13"
-          }
-,         {
-              "id"           : "cert_notAfter",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "2022-06-09 18:13"
-          }
-,         {
-              "id"           : "cert_extlifeSpan",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "certificate has no extended life time according to browser forum"
-          }
-,         {
-              "id"           : "cert_eTLS",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "not present"
-          }
-,         {
-              "id"           : "cert_crlDistributionPoints",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "--"
-          }
-,         {
-              "id"           : "cert_ocspURL",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "http://r3.o.lencr.org"
-          }
-,         {
-              "id"           : "OCSP_stapling",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
-          }
-,         {
-              "id"           : "cert_mustStapleExtension",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "--"
-          }
-,         {
-              "id"           : "DNS_CAArecord",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "--"
-          }
-,         {
-              "id"           : "certificate_transparency",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "yes (certificate extension)"
-          }
-,         {
-              "id"           : "certs_countServer",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "3"
-          }
-,         {
-              "id"           : "certs_list_ordering_problem",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "no"
-          }
-,         {
-              "id"           : "cert_caIssuers",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "R3 (Let's Encrypt from US)"
-          }
-,         {
-              "id"           : "intermediate_cert <#1>",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE----- MIIFFjCCAv6gAwIBAgIRAJErCErPDBinU/bWLiWnX1owDQYJKoZIhvcNAQELBQAw TzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh cmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjAwOTA0MDAwMDAw WhcNMjUwOTE1MTYwMDAwWjAyMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNTGV0J3Mg RW5jcnlwdDELMAkGA1UEAxMCUjMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK AoIBAQC7AhUozPaglNMPEuyNVZLD+ILxmaZ6QoinXSaqtSu5xUyxr45r+XXIo9cP R5QUVTVXjJ6oojkZ9YI8QqlObvU7wy7bjcCwXPNZOOftz2nwWgsbvsCUJCWH+jdx sxPnHKzhm+/b5DtFUkWWqcFTzjTIUu61ru2P3mBw4qVUq7ZtDpelQDRrK9O8Zutm NHz6a4uPVymZ+DAXXbpyb/uBxa3Shlg9F8fnCbvxK/eG3MHacV3URuPMrSXBiLxg Z3Vms/EY96Jc5lP/Ooi2R6X/ExjqmAl3P51T+c8B5fWmcBcUr2Ok/5mzk53cU6cG /kiFHaFpriV1uxPMUgP17VGhi9sVAgMBAAGjggEIMIIBBDAOBgNVHQ8BAf8EBAMC AYYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMBIGA1UdEwEB/wQIMAYB Af8CAQAwHQYDVR0OBBYEFBQusxe3WFbLrlAJQOYfr52LFMLGMB8GA1UdIwQYMBaA FHm0WeZ7tuXkAXOACIjIGlj26ZtuMDIGCCsGAQUFBwEBBCYwJDAiBggrBgEFBQcw AoYWaHR0cDovL3gxLmkubGVuY3Iub3JnLzAnBgNVHR8EIDAeMBygGqAYhhZodHRw Oi8veDEuYy5sZW5jci5vcmcvMCIGA1UdIAQbMBkwCAYGZ4EMAQIBMA0GCysGAQQB gt8TAQEBMA0GCSqGSIb3DQEBCwUAA4ICAQCFyk5HPqP3hUSFvNVneLKYY611TR6W PTNlclQtgaDqw+34IL9fzLdwALduO/ZelN7kIJ+m74uyA+eitRY8kc607TkC53wl ikfmZW4/RvTZ8M6UK+5UzhK8jCdLuMGYL6KvzXGRSgi3yLgjewQtCPkIVz6D2QQz CkcheAmCJ8MqyJu5zlzyZMjAvnnAT45tRAxekrsu94sQ4egdRCnbWSDtY7kh+BIm lJNXoB1lBMEKIq4QDUOXoRgffuDghje1WrG9ML+Hbisq/yFOGwXD9RiX8F6sw6W4 avAuvDszue5L3sz85K+EC4Y/wFVDNvZo4TYXao6Z0f+lQKc0t8DQYzk1OXVu8rp2 yJMC6alLbBfODALZvYH7n7do1AZls4I9d1P4jnkDrQoxB3UqQ9hVl3LEKQ73xF1O yK5GhDDX8oVfGKF5u+decIsH4YaTw7mP3GFxJSqv3+0lUFJoi5Lc5da149p90Ids hCExroL1+7mryIkXPeFM5TgO9r0rvZaBFOvV2z0gp35Z0+L4WPlbuEjN/lxPFin+ HlUjr8gRsI3qfJOQFy/9rKIJR0Y/8Omwt/8oTWgy1mdeHmmjk7j1nYsvC9JSQ6Zv MldlTTKB3zhThV1+XWYp6rjd5JW1zbVWEkLNxE7GJThEUG3szgBVGP7pSWTUTsqX nLRbwHOoq7hHwg== -----END CERTIFICATE-----"
-          }
-,         {
-              "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "67ADD1166B020AE61B8F5FC96813C04C2AA589960796865572A3C7E737613DFD"
-          }
-,         {
-              "id"           : "intermediate_cert_notBefore <#1>",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "2020-09-04 00:00"
-          }
-,         {
-              "id"           : "intermediate_cert_notAfter <#1>",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "2025-09-15 16:00"
-          }
-,         {
-              "id"           : "intermediate_cert_expiration <#1>",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "ok > 40 days"
-          }
-,         {
-              "id"           : "intermediate_cert_chain <#1>",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "R3 <-- ISRG Root X1"
-          }
-,         {
-              "id"           : "intermediate_cert <#2>",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE----- MIIFYDCCBEigAwIBAgIQQAF3ITfU6UK47naqPGQKtzANBgkqhkiG9w0BAQsFADA/ MSQwIgYDVQQKExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMT DkRTVCBSb290IENBIFgzMB4XDTIxMDEyMDE5MTQwM1oXDTI0MDkzMDE4MTQwM1ow TzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh cmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwggIiMA0GCSqGSIb3DQEB AQUAA4ICDwAwggIKAoICAQCt6CRz9BQ385ueK1coHIe+3LffOJCMbjzmV6B493XC ov71am72AE8o295ohmxEk7axY/0UEmu/H9LqMZshftEzPLpI9d1537O4/xLxIZpL wYqGcWlKZmZsj348cL+tKSIG8+TA5oCu4kuPt5l+lAOf00eXfJlII1PoOK5PCm+D LtFJV4yAdLbaL9A4jXsDcCEbdfIwPPqPrt3aY6vrFk/CjhFLfs8L6P+1dy70sntK 4EwSJQxwjQMpoOFTJOwT2e4ZvxCzSow/iaNhUd6shweU9GNx7C7ib1uYgeGJXDR5 bHbvO5BieebbpJovJsXQEOEO3tkQjhb7t/eo98flAgeYjzYIlefiN5YNNnWe+w5y sR2bvAP5SQXYgd0FtCrWQemsAXaVCg/Y39W9Eh81LygXbNKYwagJZHduRze6zqxZ Xmidf3LWicUGQSk+WT7dJvUkyRGnWqNMQB9GoZm1pzpRboY7nn1ypxIFeFntPlF4 FQsDj43QLwWyPntKHEtzBRL8xurgUBN8Q5N0s8p0544fAQjQMNRbcTa0B7rBMDBc SLeCO5imfWCKoqMpgsy6vYMEG6KDA0Gh1gXxG8K28Kh8hjtGqEgqiNx2mna/H2ql PRmP6zjzZN7IKw0KKP/32+IVQtQi0Cdd4Xn+GOdwiK1O5tmLOsbdJ1Fu/7xk9TND TwIDAQABo4IBRjCCAUIwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAQYw SwYIKwYBBQUHAQEEPzA9MDsGCCsGAQUFBzAChi9odHRwOi8vYXBwcy5pZGVudHJ1 c3QuY29tL3Jvb3RzL2RzdHJvb3RjYXgzLnA3YzAfBgNVHSMEGDAWgBTEp7Gkeyxx +tvhS5B1/8QVYIWJEDBUBgNVHSAETTBLMAgGBmeBDAECATA/BgsrBgEEAYLfEwEB ATAwMC4GCCsGAQUFBwIBFiJodHRwOi8vY3BzLnJvb3QteDEubGV0c2VuY3J5cHQu b3JnMDwGA1UdHwQ1MDMwMaAvoC2GK2h0dHA6Ly9jcmwuaWRlbnRydXN0LmNvbS9E U1RST09UQ0FYM0NSTC5jcmwwHQYDVR0OBBYEFHm0WeZ7tuXkAXOACIjIGlj26Ztu MA0GCSqGSIb3DQEBCwUAA4IBAQAKcwBslm7/DlLQrt2M51oGrS+o44+/yQoDFVDC 5WxCu2+b9LRPwkSICHXM6webFGJueN7sJ7o5XPWioW5WlHAQU7G75K/QosMrAdSW 9MUgNTP52GE24HGNtLi1qoJFlcDyqSMo59ahy2cI2qBDLKobkx/J3vWraV0T9VuG WCLKTVXkcGdtwlfFRjlBz4pYg1htmf5X6DYO8A4jqv2Il9DjXA6USbW1FzXSLr9O he8Y4IWS6wY7bCkjCWDcRQJMEhg76fsO3txE+FiYruq9RUWhiF1myv4Q6W+CyBFC Dfvp7OOGAN6dEOM4+qR9sdjoSYKEBpsr6GtPAQw4dy753ec5 -----END CERTIFICATE-----"
-          }
-,         {
-              "id"           : "intermediate_cert_fingerprintSHA256 <#2>",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "6D99FB265EB1C5B3744765FCBC648F3CD8E1BFFAFDC4C2F99B9D47CF7FF1C24F"
-          }
-,         {
-              "id"           : "intermediate_cert_notBefore <#2>",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "2021-01-20 19:14"
-          }
-,         {
-              "id"           : "intermediate_cert_notAfter <#2>",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "2024-09-30 18:14"
-          }
-,         {
-              "id"           : "intermediate_cert_expiration <#2>",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "ok > 40 days"
-          }
-,         {
-              "id"           : "intermediate_cert_chain <#2>",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "ISRG Root X1 <-- DST Root CA X3"
-          }
-,         {
-              "id"           : "intermediate_cert_badOCSP",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "intermediate certificate(s) is/are ok"
-          }
-,         {
-              "id"           : "HTTP_status_code",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "200 OK ('/')"
-          }
-,         {
-              "id"           : "HTTP_clock_skew",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0 seconds from localtime"
-          }
-,         {
-              "id"           : "HTTP_headerTime",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1648959285"
-          }
-,         {
-              "id"           : "HSTS",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "finding"      : "not offered"
-          }
-,         {
-              "id"           : "HPKP",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No support for HTTP Public Key Pinning"
-          }
-,         {
-              "id"           : "banner_server",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No Server banner line in header, interesting!"
-          }
-,         {
-              "id"           : "banner_application",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No application banner found"
-          }
-,         {
-              "id"           : "cookie_count",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "1 at '/'"
-          }
-,         {
-              "id"           : "cookie_secure",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0/1 at '/' marked as secure"
-          }
-,         {
-              "id"           : "cookie_httponly",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "0/1 at '/' marked as HttpOnly"
-          }
-,         {
-              "id"           : "X-Frame-Options",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "DENY"
-          }
-,         {
-              "id"           : "X-Content-Type-Options",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "nosniff"
-          }
-,         {
-              "id"           : "Content-Security-Policy",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "frame-src 'self'; img-src 'self' cellar-c2.services.clever-cloud.com voxusagers.numerique.gouv.fr 'unsafe-inline' stats.data.gouv.fr www.w3.org data:; script-src 'self' stats.data.gouv.fr 'unsafe-inline'; font-src 'self'; object-src 'self' cellar-c2.services.clever-cloud.com; media-src 'self' cellar-c2.services.clever-cloud.com; connect-src 'self' stats.data.gouv.fr ws: api-adresse.data.gouv.fr; style-src 'self' 'unsafe-inline'; default-src 'self'"
-          }
-,         {
-              "id"           : "Referrer-Policy",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "same-origin"
-          }
-,         {
-              "id"           : "banner_reverseproxy",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "cwe"          : "CWE-200",
-              "finding"      : "--"
-          }
-,         {
-              "id"           : "heartbleed",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cve"          : "CVE-2014-0160",
-              "cwe"          : "CWE-119",
-              "finding"      : "not vulnerable, no heartbeat extension"
-          }
-,         {
-              "id"           : "CCS",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cve"          : "CVE-2014-0224",
-              "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable"
-          }
-,         {
-              "id"           : "ticketbleed",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cve"          : "CVE-2016-9244",
-              "cwe"          : "CWE-200",
-              "finding"      : "no session ticket extension"
-          }
-,         {
-              "id"           : "ROBOT",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cve"          : "CVE-2017-17382 CVE-2017-17427 CVE-2017-17428 CVE-2017-13098 CVE-2017-1000385 CVE-2017-13099 CVE-2016-6883 CVE-2012-5081 CVE-2017-6168",
-              "cwe"          : "CWE-203",
-              "finding"      : "not vulnerable"
-          }
-,         {
-              "id"           : "secure_renego",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cwe"          : "CWE-310",
-              "finding"      : "supported"
-          }
-,         {
-              "id"           : "secure_client_renego",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "HIGH",
-              "cve"          : "CVE-2011-1473",
-              "cwe"          : "CWE-310",
-              "finding"      : "VULNERABLE, DoS threat"
-          }
-,         {
-              "id"           : "CRIME_TLS",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cve"          : "CVE-2012-4929",
-              "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable"
-          }
-,         {
-              "id"           : "BREACH",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "MEDIUM",
-              "cve"          : "CVE-2013-3587",
-              "cwe"          : "CWE-310",
-              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
-          }
-,         {
-              "id"           : "POODLE_SSL",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cve"          : "CVE-2014-3566",
-              "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable, no SSLv3"
-          }
-,         {
-              "id"           : "fallback_SCSV",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "finding"      : "supported"
-          }
-,         {
-              "id"           : "SWEET32",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cve"          : "CVE-2016-2183 CVE-2016-6329",
-              "cwe"          : "CWE-327",
-              "finding"      : "not vulnerable"
-          }
-,         {
-              "id"           : "FREAK",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cve"          : "CVE-2015-0204",
-              "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable"
-          }
-,         {
-              "id"           : "DROWN",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cve"          : "CVE-2016-0800 CVE-2016-0703",
-              "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable on this host and port"
-          }
-,         {
-              "id"           : "DROWN_hint",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "cve"          : "CVE-2016-0800 CVE-2016-0703",
-              "cwe"          : "CWE-310",
-              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://censys.io/ipv4?q=7CE7CF33BA2769FB671892D7458A10801F9DC208B15C1E4C747471CD73C3F2DF"
-          }
-,         {
-              "id"           : "LOGJAM",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cve"          : "CVE-2015-4000",
-              "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable, no DH EXPORT ciphers,"
-          }
-,         {
-              "id"           : "LOGJAM-common_primes",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cve"          : "CVE-2015-4000",
-              "cwe"          : "CWE-310",
-              "finding"      : "--"
-          }
-,         {
-              "id"           : "BEAST_CBC_TLS1",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "MEDIUM",
-              "cve"          : "CVE-2011-3389",
-              "cwe"          : "CWE-20",
-              "finding"      : "ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA DHE-RSA-AES128-SHA DHE-RSA-AES256-SHA AES128-SHA AES256-SHA"
-          }
-,         {
-              "id"           : "BEAST",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "cve"          : "CVE-2011-3389",
-              "cwe"          : "CWE-20",
-              "finding"      : "VULNERABLE -- but also supports higher protocols  TLSv1.1 TLSv1.2 (likely mitigated)"
-          }
-,         {
-              "id"           : "LUCKY13",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "LOW",
-              "cve"          : "CVE-2013-0169",
-              "cwe"          : "CWE-310",
-              "finding"      : "potentially vulnerable, uses TLS CBC ciphers"
-          }
-,         {
-              "id"           : "winshock",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cve"          : "CVE-2014-6321",
-              "cwe"          : "CWE-94",
-              "finding"      : "not vulnerable"
-          }
-,         {
-              "id"           : "RC4",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "OK",
-              "cve"          : "CVE-2013-2566 CVE-2015-2808",
-              "cwe"          : "CWE-310",
-              "finding"      : "not vulnerable"
-          }
-,         {
-              "id"           : "clientsimulation-android_442",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-android_500",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-android_60",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-android_70",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
-          }
-,         {
-              "id"           : "clientsimulation-android_81",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
-          }
-,         {
-              "id"           : "clientsimulation-android_90",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-android_X",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-chrome_74_win10",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-chrome_79_win10",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-firefox_66_win81",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-firefox_71_win10",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-ie_6_xp",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No connection"
-          }
-,         {
-              "id"           : "clientsimulation-ie_8_win7",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.0 ECDHE-RSA-AES128-SHA"
-          }
-,         {
-              "id"           : "clientsimulation-ie_8_xp",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No connection"
-          }
-,         {
-              "id"           : "clientsimulation-ie_11_win7",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 DHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-ie_11_win81",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 DHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-ie_11_winphone81",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-ie_11_win10",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-edge_15_win10",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-edge_17_win10",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-opera_66_win10",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-safari_9_ios9",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-safari_9_osx1011",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-safari_10_osx1012",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-safari_121_ios_122",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-safari_130_osx_10146",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-apple_ats_9_ios9",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-java_6u45",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No connection"
-          }
-,         {
-              "id"           : "clientsimulation-java_7u25",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.0 ECDHE-RSA-AES128-SHA"
-          }
-,         {
-              "id"           : "clientsimulation-java_8u161",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-java1102",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-java1201",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-openssl_102e",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-openssl_110l",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
-          }
-,         {
-              "id"           : "clientsimulation-openssl_111d",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-thunderbird_68_3_1",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "rating_spec",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "SSL Labs's 'SSL Server Rating Guide' (version 2009q from 2020-01-30)"
-          }
-,         {
-              "id"           : "rating_doc",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide"
-          }
-,         {
-              "id"           : "protocol_support_score",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "95"
-          }
-,         {
-              "id"           : "protocol_support_score_weighted",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "28"
-          }
-,         {
-              "id"           : "key_exchange_score",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "90"
-          }
-,         {
-              "id"           : "key_exchange_score_weighted",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "27"
-          }
-,         {
-              "id"           : "cipher_strength_score",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "60"
-          }
-,         {
-              "id"           : "cipher_strength_score_weighted",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "24"
-          }
-,         {
-              "id"           : "final_score",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "79"
-          }
-,         {
-              "id"           : "overall_grade",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "B"
-          }
-,         {
-              "id"           : "grade_cap_reason_1",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Grade capped to B. TLS 1.1 offered"
-          }
-,         {
-              "id"           : "grade_cap_reason_2",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Grade capped to B. TLS 1.0 offered"
-          }
-,         {
-              "id"           : "grade_cap_reason_3",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Grade capped to A. HSTS is not offered"
-          }
-,         {
-              "id"           : "service",
               "ip"           : "ma-cantine.beta.gouv.fr/185.42.117.108",
               "port"         : "443",
               "severity"     : "INFO",
@@ -1540,7 +360,7 @@
               "ip"           : "ma-cantine.beta.gouv.fr/185.42.117.108",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "67 >= 30 days"
+              "finding"      : "60 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -1743,7 +563,7 @@
               "ip"           : "ma-cantine.beta.gouv.fr/185.42.117.108",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1648959430"
+              "finding"      : "1649564879"
           }
 ,         {
               "id"           : "HSTS",
@@ -1813,7 +633,7 @@
               "ip"           : "ma-cantine.beta.gouv.fr/185.42.117.108",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "frame-src 'self'; img-src 'self' cellar-c2.services.clever-cloud.com voxusagers.numerique.gouv.fr 'unsafe-inline' stats.data.gouv.fr www.w3.org data:; script-src 'self' stats.data.gouv.fr 'unsafe-inline'; font-src 'self'; object-src 'self' cellar-c2.services.clever-cloud.com; media-src 'self' cellar-c2.services.clever-cloud.com; connect-src 'self' stats.data.gouv.fr ws: api-adresse.data.gouv.fr; style-src 'self' 'unsafe-inline'; default-src 'self'"
+              "finding"      : "script-src 'self' stats.data.gouv.fr 'unsafe-inline'; style-src 'self' 'unsafe-inline'; default-src 'self'; object-src 'self' cellar-c2.services.clever-cloud.com; img-src 'self' cellar-c2.services.clever-cloud.com voxusagers.numerique.gouv.fr 'unsafe-inline' stats.data.gouv.fr www.w3.org data:; frame-src 'self'; font-src 'self'; connect-src 'self' stats.data.gouv.fr ws: api-adresse.data.gouv.fr; media-src 'self' cellar-c2.services.clever-cloud.com"
           }
 ,         {
               "id"           : "Referrer-Policy",
@@ -2361,6 +1181,1186 @@
           }
 ,         {
               "id"           : "service",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "HTTP"
+          }
+,         {
+              "id"           : "pre_128cipher",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No 128 cipher limit bug"
+          }
+,         {
+              "id"           : "SSLv2",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "SSLv3",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "TLS1",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "offered (deprecated)"
+          }
+,         {
+              "id"           : "TLS1_1",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "offered (deprecated)"
+          }
+,         {
+              "id"           : "TLS1_2",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "TLS1_3",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered with final"
+          }
+,         {
+              "id"           : "ALPN",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_NULL",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_aNULL",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_EXPORT",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_LOW",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-327",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_3DES_IDEA",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-310",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cipherlist_AVERAGE",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "cwe"          : "CWE-310",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipherlist_GOOD",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipherlist_STRONG",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES128-SHA"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1_1",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES128-SHA"
+          }
+,         {
+              "id"           : "cipherorder_TLSv1_2",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "cipher_order",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "server"
+          }
+,         {
+              "id"           : "protocol_negotiated",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "Default protocol TLS1.3"
+          }
+,         {
+              "id"           : "cipher_negotiated",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "TLS_AES_256_GCM_SHA384, 256 bit ECDH (P-256)"
+          }
+,         {
+              "id"           : "FS",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "offered"
+          }
+,         {
+              "id"           : "FS_ciphers",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "DHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES128-SHA256 DHE-RSA-AES128-SHA DHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES256-SHA256 DHE-RSA-AES256-SHA ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA"
+          }
+,         {
+              "id"           : "FS_ECDHE_curves",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "prime256v1"
+          }
+,         {
+              "id"           : "TLS_extensions",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "'renegotiation info/#65281' 'EC point formats/#11' 'supported versions/#43' 'key share/#51' 'max fragment length/#1' 'encrypt-then-mac/#22' 'extended master secret/#23'"
+          }
+,         {
+              "id"           : "TLS_session_ticket",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no -- no lifetime advertised"
+          }
+,         {
+              "id"           : "SSL_sessionID_support",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "sessionresumption_ticket",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not supported"
+          }
+,         {
+              "id"           : "sessionresumption_ID",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No Session ID, no resumption"
+          }
+,         {
+              "id"           : "TLS_timestamp",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "random"
+          }
+,         {
+              "id"           : "certificate_compression",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "none"
+          }
+,         {
+              "id"           : "clientAuth",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "none"
+          }
+,         {
+              "id"           : "cert_numbers",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1"
+          }
+,         {
+              "id"           : "cert_signatureAlgorithm",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "SHA256 with RSA"
+          }
+,         {
+              "id"           : "cert_keySize",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "RSA 2048 bits (exponent is 65537)"
+          }
+,         {
+              "id"           : "cert_keyUsage",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Digital Signature, Key Encipherment"
+          }
+,         {
+              "id"           : "cert_extKeyUsage",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLS Web Server Authentication, TLS Web Client Authentication"
+          }
+,         {
+              "id"           : "cert_serialNumber",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "032D0E15BCECC2A18FD74485DF24C5B0D49E"
+          }
+,         {
+              "id"           : "cert_serialNumberLen",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "18"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA1",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "EB3CADA61CBA1E293743B4653241E1316D472759"
+          }
+,         {
+              "id"           : "cert_fingerprintSHA256",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "7CE7CF33BA2769FB671892D7458A10801F9DC208B15C1E4C747471CD73C3F2DF"
+          }
+,         {
+              "id"           : "cert",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE----- MIIFMzCCBBugAwIBAgISAy0OFbzswqGP10SF3yTFsNSeMA0GCSqGSIb3DQEBCwUA MDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD EwJSMzAeFw0yMjAzMTExODEzMjJaFw0yMjA2MDkxODEzMjFaMCIxIDAeBgNVBAMT F21hLWNhbnRpbmUuYmV0YS5nb3V2LmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A MIIBCgKCAQEAzzusAiXAFU7agKvdHuRxqyOBct55M82sbVc+aAFA9lPMVj47ZulV JH/u/Gy0ydqZdWFFAp1fwSlaf6JffnndjCKxp3oETq6UZfcu+o66Kv1ENAh4NFQj 4Btkb3YUawM0LZKxOdZ47tpzd3bFO2g8VtvboPN8S1xbFdNYwy5sOYh/70BEBzrJ fgjhvKnLHhVewCOFcrTw6BJRxVCHc7ZtpzFdWMqHf7KUAVH9eBs2SJoz5Nwywuoc V+3Vhq1tB5F1ulKHpra/4++t0Z31u6xdv9Jwlk2VgxnchbU56R2gV/RfXgD0V9P/ ojPQvlQeRdjMwqE2t1qeUFsGpvNl7/kPdQIDAQABo4ICUTCCAk0wDgYDVR0PAQH/ BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8E AjAAMB0GA1UdDgQWBBQwNCLk0NiKATk1An8PoAinuxbcQzAfBgNVHSMEGDAWgBQU LrMXt1hWy65QCUDmH6+dixTCxjBVBggrBgEFBQcBAQRJMEcwIQYIKwYBBQUHMAGG FWh0dHA6Ly9yMy5vLmxlbmNyLm9yZzAiBggrBgEFBQcwAoYWaHR0cDovL3IzLmku bGVuY3Iub3JnLzAiBgNVHREEGzAZghdtYS1jYW50aW5lLmJldGEuZ291di5mcjBM BgNVHSAERTBDMAgGBmeBDAECATA3BgsrBgEEAYLfEwEBATAoMCYGCCsGAQUFBwIB FhpodHRwOi8vY3BzLmxldHNlbmNyeXB0Lm9yZzCCAQMGCisGAQQB1nkCBAIEgfQE gfEA7wB2ACl5vvCeOTkh8FZzn2Old+W+V32cYAr4+U1dJlwlXceEAAABf3pmWy0A AAQDAEcwRQIhAMENpLspXL+8IPTO3Q8PKXkeN8jMlAOj6polOqKFcNG0AiBeD/4q SwDY2CsdXO4l9rT+OAbvNCbZldKYdSnq6UL0gQB1AG9Tdqwx8DEZ2JkApFEV/3cV HBHZAsEAKQaNsgiaN9kTAAABf3pmW2EAAAQDAEYwRAIgZL4Xli5o4l0ImNotdr9a vljiQxqywLEZ9y6JdnE0e88CIFVAiJVna/Thm26M2mHPRnfp+JghUL75Rbwk5can IlMPMA0GCSqGSIb3DQEBCwUAA4IBAQCFOKSQpH3gwjYldOMJEMVwE2Y+E/bVYyOQ H+o/f6nm9CBJAaTZWe8ltWt1wMzm5WrwwwmtALOMGBrhKol8YEO3nTCufTIyjejG BBNXi/+JI6e3mLC4+bnExgo5FGDegS9IbH/0P+QnTcyQKtUinj3VnLKg66OyPXKl LQT1UHH/HCWXjFfuTLtkBk8ApudFE/AGlnLNSPinUSWrh/JTuiAi4gK+sNevTgvi zrqMlkjThvda0KKuDwzUDBWGgcwyQ14k2U0o+9IYVUcVEdrKN4LbUW6efasoC39f pNZ1cXuFmpvQ7hzowa1KnnP7Wd98RCD+OQ0bdRcUQRunPqE6q2Vd -----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "cert_commonName",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ma-cantine.beta.gouv.fr"
+          }
+,         {
+              "id"           : "cert_commonName_wo_SNI",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "lolcatho.st"
+          }
+,         {
+              "id"           : "cert_subjectAltName",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ma-cantine.beta.gouv.fr"
+          }
+,         {
+              "id"           : "cert_trust",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "Ok via SAN and CN (SNI mandatory)"
+          }
+,         {
+              "id"           : "cert_chain_of_trust",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "passed."
+          }
+,         {
+              "id"           : "cert_certificatePolicies_EV",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_expirationStatus",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "60 >= 30 days"
+          }
+,         {
+              "id"           : "cert_notBefore",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2022-03-11 18:13"
+          }
+,         {
+              "id"           : "cert_notAfter",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2022-06-09 18:13"
+          }
+,         {
+              "id"           : "cert_extlifeSpan",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "certificate has no extended life time according to browser forum"
+          }
+,         {
+              "id"           : "cert_eTLS",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "not present"
+          }
+,         {
+              "id"           : "cert_crlDistributionPoints",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "cert_ocspURL",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "http://r3.o.lencr.org"
+          }
+,         {
+              "id"           : "OCSP_stapling",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "cert_mustStapleExtension",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "DNS_CAArecord",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "certificate_transparency",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "yes (certificate extension)"
+          }
+,         {
+              "id"           : "certs_countServer",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "3"
+          }
+,         {
+              "id"           : "certs_list_ordering_problem",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "no"
+          }
+,         {
+              "id"           : "cert_caIssuers",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "R3 (Let's Encrypt from US)"
+          }
+,         {
+              "id"           : "intermediate_cert <#1>",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE----- MIIFFjCCAv6gAwIBAgIRAJErCErPDBinU/bWLiWnX1owDQYJKoZIhvcNAQELBQAw TzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh cmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjAwOTA0MDAwMDAw WhcNMjUwOTE1MTYwMDAwWjAyMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNTGV0J3Mg RW5jcnlwdDELMAkGA1UEAxMCUjMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK AoIBAQC7AhUozPaglNMPEuyNVZLD+ILxmaZ6QoinXSaqtSu5xUyxr45r+XXIo9cP R5QUVTVXjJ6oojkZ9YI8QqlObvU7wy7bjcCwXPNZOOftz2nwWgsbvsCUJCWH+jdx sxPnHKzhm+/b5DtFUkWWqcFTzjTIUu61ru2P3mBw4qVUq7ZtDpelQDRrK9O8Zutm NHz6a4uPVymZ+DAXXbpyb/uBxa3Shlg9F8fnCbvxK/eG3MHacV3URuPMrSXBiLxg Z3Vms/EY96Jc5lP/Ooi2R6X/ExjqmAl3P51T+c8B5fWmcBcUr2Ok/5mzk53cU6cG /kiFHaFpriV1uxPMUgP17VGhi9sVAgMBAAGjggEIMIIBBDAOBgNVHQ8BAf8EBAMC AYYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMBIGA1UdEwEB/wQIMAYB Af8CAQAwHQYDVR0OBBYEFBQusxe3WFbLrlAJQOYfr52LFMLGMB8GA1UdIwQYMBaA FHm0WeZ7tuXkAXOACIjIGlj26ZtuMDIGCCsGAQUFBwEBBCYwJDAiBggrBgEFBQcw AoYWaHR0cDovL3gxLmkubGVuY3Iub3JnLzAnBgNVHR8EIDAeMBygGqAYhhZodHRw Oi8veDEuYy5sZW5jci5vcmcvMCIGA1UdIAQbMBkwCAYGZ4EMAQIBMA0GCysGAQQB gt8TAQEBMA0GCSqGSIb3DQEBCwUAA4ICAQCFyk5HPqP3hUSFvNVneLKYY611TR6W PTNlclQtgaDqw+34IL9fzLdwALduO/ZelN7kIJ+m74uyA+eitRY8kc607TkC53wl ikfmZW4/RvTZ8M6UK+5UzhK8jCdLuMGYL6KvzXGRSgi3yLgjewQtCPkIVz6D2QQz CkcheAmCJ8MqyJu5zlzyZMjAvnnAT45tRAxekrsu94sQ4egdRCnbWSDtY7kh+BIm lJNXoB1lBMEKIq4QDUOXoRgffuDghje1WrG9ML+Hbisq/yFOGwXD9RiX8F6sw6W4 avAuvDszue5L3sz85K+EC4Y/wFVDNvZo4TYXao6Z0f+lQKc0t8DQYzk1OXVu8rp2 yJMC6alLbBfODALZvYH7n7do1AZls4I9d1P4jnkDrQoxB3UqQ9hVl3LEKQ73xF1O yK5GhDDX8oVfGKF5u+decIsH4YaTw7mP3GFxJSqv3+0lUFJoi5Lc5da149p90Ids hCExroL1+7mryIkXPeFM5TgO9r0rvZaBFOvV2z0gp35Z0+L4WPlbuEjN/lxPFin+ HlUjr8gRsI3qfJOQFy/9rKIJR0Y/8Omwt/8oTWgy1mdeHmmjk7j1nYsvC9JSQ6Zv MldlTTKB3zhThV1+XWYp6rjd5JW1zbVWEkLNxE7GJThEUG3szgBVGP7pSWTUTsqX nLRbwHOoq7hHwg== -----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "intermediate_cert_fingerprintSHA256 <#1>",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "67ADD1166B020AE61B8F5FC96813C04C2AA589960796865572A3C7E737613DFD"
+          }
+,         {
+              "id"           : "intermediate_cert_notBefore <#1>",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2020-09-04 00:00"
+          }
+,         {
+              "id"           : "intermediate_cert_notAfter <#1>",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2025-09-15 16:00"
+          }
+,         {
+              "id"           : "intermediate_cert_expiration <#1>",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ok > 40 days"
+          }
+,         {
+              "id"           : "intermediate_cert_chain <#1>",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "R3 <-- ISRG Root X1"
+          }
+,         {
+              "id"           : "intermediate_cert <#2>",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "-----BEGIN CERTIFICATE----- MIIFYDCCBEigAwIBAgIQQAF3ITfU6UK47naqPGQKtzANBgkqhkiG9w0BAQsFADA/ MSQwIgYDVQQKExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMT DkRTVCBSb290IENBIFgzMB4XDTIxMDEyMDE5MTQwM1oXDTI0MDkzMDE4MTQwM1ow TzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh cmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwggIiMA0GCSqGSIb3DQEB AQUAA4ICDwAwggIKAoICAQCt6CRz9BQ385ueK1coHIe+3LffOJCMbjzmV6B493XC ov71am72AE8o295ohmxEk7axY/0UEmu/H9LqMZshftEzPLpI9d1537O4/xLxIZpL wYqGcWlKZmZsj348cL+tKSIG8+TA5oCu4kuPt5l+lAOf00eXfJlII1PoOK5PCm+D LtFJV4yAdLbaL9A4jXsDcCEbdfIwPPqPrt3aY6vrFk/CjhFLfs8L6P+1dy70sntK 4EwSJQxwjQMpoOFTJOwT2e4ZvxCzSow/iaNhUd6shweU9GNx7C7ib1uYgeGJXDR5 bHbvO5BieebbpJovJsXQEOEO3tkQjhb7t/eo98flAgeYjzYIlefiN5YNNnWe+w5y sR2bvAP5SQXYgd0FtCrWQemsAXaVCg/Y39W9Eh81LygXbNKYwagJZHduRze6zqxZ Xmidf3LWicUGQSk+WT7dJvUkyRGnWqNMQB9GoZm1pzpRboY7nn1ypxIFeFntPlF4 FQsDj43QLwWyPntKHEtzBRL8xurgUBN8Q5N0s8p0544fAQjQMNRbcTa0B7rBMDBc SLeCO5imfWCKoqMpgsy6vYMEG6KDA0Gh1gXxG8K28Kh8hjtGqEgqiNx2mna/H2ql PRmP6zjzZN7IKw0KKP/32+IVQtQi0Cdd4Xn+GOdwiK1O5tmLOsbdJ1Fu/7xk9TND TwIDAQABo4IBRjCCAUIwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAQYw SwYIKwYBBQUHAQEEPzA9MDsGCCsGAQUFBzAChi9odHRwOi8vYXBwcy5pZGVudHJ1 c3QuY29tL3Jvb3RzL2RzdHJvb3RjYXgzLnA3YzAfBgNVHSMEGDAWgBTEp7Gkeyxx +tvhS5B1/8QVYIWJEDBUBgNVHSAETTBLMAgGBmeBDAECATA/BgsrBgEEAYLfEwEB ATAwMC4GCCsGAQUFBwIBFiJodHRwOi8vY3BzLnJvb3QteDEubGV0c2VuY3J5cHQu b3JnMDwGA1UdHwQ1MDMwMaAvoC2GK2h0dHA6Ly9jcmwuaWRlbnRydXN0LmNvbS9E U1RST09UQ0FYM0NSTC5jcmwwHQYDVR0OBBYEFHm0WeZ7tuXkAXOACIjIGlj26Ztu MA0GCSqGSIb3DQEBCwUAA4IBAQAKcwBslm7/DlLQrt2M51oGrS+o44+/yQoDFVDC 5WxCu2+b9LRPwkSICHXM6webFGJueN7sJ7o5XPWioW5WlHAQU7G75K/QosMrAdSW 9MUgNTP52GE24HGNtLi1qoJFlcDyqSMo59ahy2cI2qBDLKobkx/J3vWraV0T9VuG WCLKTVXkcGdtwlfFRjlBz4pYg1htmf5X6DYO8A4jqv2Il9DjXA6USbW1FzXSLr9O he8Y4IWS6wY7bCkjCWDcRQJMEhg76fsO3txE+FiYruq9RUWhiF1myv4Q6W+CyBFC Dfvp7OOGAN6dEOM4+qR9sdjoSYKEBpsr6GtPAQw4dy753ec5 -----END CERTIFICATE-----"
+          }
+,         {
+              "id"           : "intermediate_cert_fingerprintSHA256 <#2>",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "6D99FB265EB1C5B3744765FCBC648F3CD8E1BFFAFDC4C2F99B9D47CF7FF1C24F"
+          }
+,         {
+              "id"           : "intermediate_cert_notBefore <#2>",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "2021-01-20 19:14"
+          }
+,         {
+              "id"           : "intermediate_cert_notAfter <#2>",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "2024-09-30 18:14"
+          }
+,         {
+              "id"           : "intermediate_cert_expiration <#2>",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "ok > 40 days"
+          }
+,         {
+              "id"           : "intermediate_cert_chain <#2>",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "ISRG Root X1 <-- DST Root CA X3"
+          }
+,         {
+              "id"           : "intermediate_cert_badOCSP",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "intermediate certificate(s) is/are ok"
+          }
+,         {
+              "id"           : "HTTP_status_code",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "200 OK ('/')"
+          }
+,         {
+              "id"           : "HTTP_clock_skew",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0 seconds from localtime"
+          }
+,         {
+              "id"           : "HTTP_headerTime",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1649565084"
+          }
+,         {
+              "id"           : "HSTS",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "finding"      : "not offered"
+          }
+,         {
+              "id"           : "HPKP",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No support for HTTP Public Key Pinning"
+          }
+,         {
+              "id"           : "banner_server",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No Server banner line in header, interesting!"
+          }
+,         {
+              "id"           : "banner_application",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No application banner found"
+          }
+,         {
+              "id"           : "cookie_count",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "1 at '/'"
+          }
+,         {
+              "id"           : "cookie_secure",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0/1 at '/' marked as secure"
+          }
+,         {
+              "id"           : "cookie_httponly",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "0/1 at '/' marked as HttpOnly"
+          }
+,         {
+              "id"           : "X-Frame-Options",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "DENY"
+          }
+,         {
+              "id"           : "X-Content-Type-Options",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "nosniff"
+          }
+,         {
+              "id"           : "Content-Security-Policy",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "script-src 'self' stats.data.gouv.fr 'unsafe-inline'; style-src 'self' 'unsafe-inline'; default-src 'self'; object-src 'self' cellar-c2.services.clever-cloud.com; img-src 'self' cellar-c2.services.clever-cloud.com voxusagers.numerique.gouv.fr 'unsafe-inline' stats.data.gouv.fr www.w3.org data:; frame-src 'self'; font-src 'self'; connect-src 'self' stats.data.gouv.fr ws: api-adresse.data.gouv.fr; media-src 'self' cellar-c2.services.clever-cloud.com"
+          }
+,         {
+              "id"           : "Referrer-Policy",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "same-origin"
+          }
+,         {
+              "id"           : "banner_reverseproxy",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cwe"          : "CWE-200",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "heartbleed",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0160",
+              "cwe"          : "CWE-119",
+              "finding"      : "not vulnerable, no heartbeat extension"
+          }
+,         {
+              "id"           : "CCS",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-0224",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "ticketbleed",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-9244",
+              "cwe"          : "CWE-200",
+              "finding"      : "no session ticket extension"
+          }
+,         {
+              "id"           : "ROBOT",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2017-17382 CVE-2017-17427 CVE-2017-17428 CVE-2017-13098 CVE-2017-1000385 CVE-2017-13099 CVE-2016-6883 CVE-2012-5081 CVE-2017-6168",
+              "cwe"          : "CWE-203",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "secure_renego",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cwe"          : "CWE-310",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "secure_client_renego",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "HIGH",
+              "cve"          : "CVE-2011-1473",
+              "cwe"          : "CWE-310",
+              "finding"      : "VULNERABLE, DoS threat"
+          }
+,         {
+              "id"           : "CRIME_TLS",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2012-4929",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "BREACH",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "cve"          : "CVE-2013-3587",
+              "cwe"          : "CWE-310",
+              "finding"      : "potentially VULNERABLE, gzip HTTP compression detected  - only supplied '/' tested"
+          }
+,         {
+              "id"           : "POODLE_SSL",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-3566",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no SSLv3"
+          }
+,         {
+              "id"           : "fallback_SCSV",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "finding"      : "supported"
+          }
+,         {
+              "id"           : "SWEET32",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-2183 CVE-2016-6329",
+              "cwe"          : "CWE-327",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "FREAK",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-0204",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "DROWN",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable on this host and port"
+          }
+,         {
+              "id"           : "DROWN_hint",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "cve"          : "CVE-2016-0800 CVE-2016-0703",
+              "cwe"          : "CWE-310",
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://censys.io/ipv4?q=7CE7CF33BA2769FB671892D7458A10801F9DC208B15C1E4C747471CD73C3F2DF"
+          }
+,         {
+              "id"           : "LOGJAM",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable, no DH EXPORT ciphers,"
+          }
+,         {
+              "id"           : "LOGJAM-common_primes",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2015-4000",
+              "cwe"          : "CWE-310",
+              "finding"      : "--"
+          }
+,         {
+              "id"           : "BEAST_CBC_TLS1",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "cve"          : "CVE-2011-3389",
+              "cwe"          : "CWE-20",
+              "finding"      : "ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-SHA DHE-RSA-AES128-SHA DHE-RSA-AES256-SHA AES128-SHA AES256-SHA"
+          }
+,         {
+              "id"           : "BEAST",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "cve"          : "CVE-2011-3389",
+              "cwe"          : "CWE-20",
+              "finding"      : "VULNERABLE -- but also supports higher protocols  TLSv1.1 TLSv1.2 (likely mitigated)"
+          }
+,         {
+              "id"           : "LUCKY13",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "LOW",
+              "cve"          : "CVE-2013-0169",
+              "cwe"          : "CWE-310",
+              "finding"      : "potentially vulnerable, uses TLS CBC ciphers"
+          }
+,         {
+              "id"           : "winshock",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2014-6321",
+              "cwe"          : "CWE-94",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "RC4",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "OK",
+              "cve"          : "CVE-2013-2566 CVE-2015-2808",
+              "cwe"          : "CWE-310",
+              "finding"      : "not vulnerable"
+          }
+,         {
+              "id"           : "clientsimulation-android_442",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_500",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_60",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-android_70",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
+          }
+,         {
+              "id"           : "clientsimulation-android_81",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
+          }
+,         {
+              "id"           : "clientsimulation-android_90",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-android_X",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_74_win10",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-chrome_79_win10",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_66_win81",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-firefox_71_win10",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-ie_6_xp",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_win7",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.0 ECDHE-RSA-AES128-SHA"
+          }
+,         {
+              "id"           : "clientsimulation-ie_8_xp",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win7",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 DHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win81",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 DHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_winphone81",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-ie_11_win10",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-edge_15_win10",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-edge_17_win10",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-opera_66_win10",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-safari_9_ios9",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_9_osx1011",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_10_osx1012",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-safari_121_ios_122",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-safari_130_osx_10146",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-apple_ats_9_ios9",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-java_6u45",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "No connection"
+          }
+,         {
+              "id"           : "clientsimulation-java_7u25",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.0 ECDHE-RSA-AES128-SHA"
+          }
+,         {
+              "id"           : "clientsimulation-java_8u161",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-java1102",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-java1201",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_102e",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_110l",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
+          }
+,         {
+              "id"           : "clientsimulation-openssl_111d",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "clientsimulation-thunderbird_68_3_1",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
+          }
+,         {
+              "id"           : "rating_spec",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "SSL Labs's 'SSL Server Rating Guide' (version 2009q from 2020-01-30)"
+          }
+,         {
+              "id"           : "rating_doc",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide"
+          }
+,         {
+              "id"           : "protocol_support_score",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "95"
+          }
+,         {
+              "id"           : "protocol_support_score_weighted",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "28"
+          }
+,         {
+              "id"           : "key_exchange_score",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "90"
+          }
+,         {
+              "id"           : "key_exchange_score_weighted",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "27"
+          }
+,         {
+              "id"           : "cipher_strength_score",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "60"
+          }
+,         {
+              "id"           : "cipher_strength_score_weighted",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "24"
+          }
+,         {
+              "id"           : "final_score",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "79"
+          }
+,         {
+              "id"           : "overall_grade",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "MEDIUM",
+              "finding"      : "B"
+          }
+,         {
+              "id"           : "grade_cap_reason_1",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Grade capped to B. TLS 1.1 offered"
+          }
+,         {
+              "id"           : "grade_cap_reason_2",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Grade capped to B. TLS 1.0 offered"
+          }
+,         {
+              "id"           : "grade_cap_reason_3",
+              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.104",
+              "port"         : "443",
+              "severity"     : "INFO",
+              "finding"      : "Grade capped to A. HSTS is not offered"
+          }
+,         {
+              "id"           : "service",
               "ip"           : "ma-cantine.beta.gouv.fr/185.42.117.109",
               "port"         : "443",
               "severity"     : "INFO",
@@ -2720,7 +2720,7 @@
               "ip"           : "ma-cantine.beta.gouv.fr/185.42.117.109",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "67 >= 30 days"
+              "finding"      : "60 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -2923,7 +2923,7 @@
               "ip"           : "ma-cantine.beta.gouv.fr/185.42.117.109",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1648959584"
+              "finding"      : "1649565293"
           }
 ,         {
               "id"           : "HSTS",
@@ -2993,7 +2993,7 @@
               "ip"           : "ma-cantine.beta.gouv.fr/185.42.117.109",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "frame-src 'self'; img-src 'self' cellar-c2.services.clever-cloud.com voxusagers.numerique.gouv.fr 'unsafe-inline' stats.data.gouv.fr www.w3.org data:; script-src 'self' stats.data.gouv.fr 'unsafe-inline'; font-src 'self'; object-src 'self' cellar-c2.services.clever-cloud.com; media-src 'self' cellar-c2.services.clever-cloud.com; connect-src 'self' stats.data.gouv.fr ws: api-adresse.data.gouv.fr; style-src 'self' 'unsafe-inline'; default-src 'self'"
+              "finding"      : "script-src 'self' stats.data.gouv.fr 'unsafe-inline'; style-src 'self' 'unsafe-inline'; default-src 'self'; object-src 'self' cellar-c2.services.clever-cloud.com; img-src 'self' cellar-c2.services.clever-cloud.com voxusagers.numerique.gouv.fr 'unsafe-inline' stats.data.gouv.fr www.w3.org data:; frame-src 'self'; font-src 'self'; connect-src 'self' stats.data.gouv.fr ws: api-adresse.data.gouv.fr; media-src 'self' cellar-c2.services.clever-cloud.com"
           }
 ,         {
               "id"           : "Referrer-Policy",
@@ -3900,7 +3900,7 @@
               "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "67 >= 30 days"
+              "finding"      : "60 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -4103,7 +4103,7 @@
               "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1648959739"
+              "finding"      : "1649565503"
           }
 ,         {
               "id"           : "HSTS",
@@ -4173,7 +4173,7 @@
               "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "frame-src 'self'; img-src 'self' cellar-c2.services.clever-cloud.com voxusagers.numerique.gouv.fr 'unsafe-inline' stats.data.gouv.fr www.w3.org data:; script-src 'self' stats.data.gouv.fr 'unsafe-inline'; font-src 'self'; object-src 'self' cellar-c2.services.clever-cloud.com; media-src 'self' cellar-c2.services.clever-cloud.com; connect-src 'self' stats.data.gouv.fr ws: api-adresse.data.gouv.fr; style-src 'self' 'unsafe-inline'; default-src 'self'"
+              "finding"      : "script-src 'self' stats.data.gouv.fr 'unsafe-inline'; style-src 'self' 'unsafe-inline'; default-src 'self'; object-src 'self' cellar-c2.services.clever-cloud.com; img-src 'self' cellar-c2.services.clever-cloud.com voxusagers.numerique.gouv.fr 'unsafe-inline' stats.data.gouv.fr www.w3.org data:; frame-src 'self'; font-src 'self'; connect-src 'self' stats.data.gouv.fr ws: api-adresse.data.gouv.fr; media-src 'self' cellar-c2.services.clever-cloud.com"
           }
 ,         {
               "id"           : "Referrer-Policy",
@@ -4502,228 +4502,3 @@
               "severity"     : "INFO",
               "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
           }
-,         {
-              "id"           : "clientsimulation-edge_15_win10",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-edge_17_win10",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-opera_66_win10",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-safari_9_ios9",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-safari_9_osx1011",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-safari_10_osx1012",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-safari_121_ios_122",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-safari_130_osx_10146",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-apple_ats_9_ios9",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-java_6u45",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "No connection"
-          }
-,         {
-              "id"           : "clientsimulation-java_7u25",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.0 ECDHE-RSA-AES128-SHA"
-          }
-,         {
-              "id"           : "clientsimulation-java_8u161",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-java1102",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-java1201",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-openssl_102e",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-          }
-,         {
-              "id"           : "clientsimulation-openssl_110l",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
-          }
-,         {
-              "id"           : "clientsimulation-openssl_111d",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "clientsimulation-thunderbird_68_3_1",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "TLSv1.3 TLS_AES_256_GCM_SHA384"
-          }
-,         {
-              "id"           : "rating_spec",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "SSL Labs's 'SSL Server Rating Guide' (version 2009q from 2020-01-30)"
-          }
-,         {
-              "id"           : "rating_doc",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide"
-          }
-,         {
-              "id"           : "protocol_support_score",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "95"
-          }
-,         {
-              "id"           : "protocol_support_score_weighted",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "28"
-          }
-,         {
-              "id"           : "key_exchange_score",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "90"
-          }
-,         {
-              "id"           : "key_exchange_score_weighted",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "27"
-          }
-,         {
-              "id"           : "cipher_strength_score",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "60"
-          }
-,         {
-              "id"           : "cipher_strength_score_weighted",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "24"
-          }
-,         {
-              "id"           : "final_score",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "79"
-          }
-,         {
-              "id"           : "overall_grade",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "MEDIUM",
-              "finding"      : "B"
-          }
-,         {
-              "id"           : "grade_cap_reason_1",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Grade capped to B. TLS 1.1 offered"
-          }
-,         {
-              "id"           : "grade_cap_reason_2",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Grade capped to B. TLS 1.0 offered"
-          }
-,         {
-              "id"           : "grade_cap_reason_3",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "Grade capped to A. HSTS is not offered"
-          }
-,         {
-              "id"           : "scanTime",
-              "ip"           : "ma-cantine.beta.gouv.fr/46.252.181.103",
-              "port"         : "443",
-              "severity"     : "INFO",
-              "finding"      : "606"
-          }
-]

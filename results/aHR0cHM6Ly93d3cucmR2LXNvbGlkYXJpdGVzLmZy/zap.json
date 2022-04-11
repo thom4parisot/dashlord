@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.1",
-	"@generated": "Sun, 3 Apr 2022 06:31:20",
+	"@generated": "Sun, 10 Apr 2022 06:41:36",
 	"site":[ 
 		{
 			"@name": "https://www.rdv-solidarites.fr",
@@ -132,6 +132,13 @@
 							"evidence": ""
 						},
 						{
+							"uri": "https://www.rdv-solidarites.fr/users",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
 							"uri": "https://www.rdv-solidarites.fr/users/password",
 							"method": "GET",
 							"param": "",
@@ -139,13 +146,13 @@
 							"evidence": ""
 						}
 					],
-					"count": "3",
+					"count": "4",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header, to achieve optimal browser support: \"Content-Security-Policy\" for Chrome 25+, Firefox 23+ and Safari 7+, \"X-Content-Security-Policy\" for Firefox 4.0+ and Internet Explorer 10+, and \"X-WebKit-CSP\" for Chrome 14+ and Safari 6+.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "197"
+					"sourceid": "198"
 				},
 				{
 					"pluginid": "10020",
@@ -265,7 +272,7 @@
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "112"
+					"sourceid": "114"
 				},
 				{
 					"pluginid": "10063",
@@ -327,7 +334,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.rdv-solidarites.fr/organisations/new",
+							"uri": "https://www.rdv-solidarites.fr/omniauth/franceconnect",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -463,15 +470,22 @@
 							"param": "",
 							"attack": "",
 							"evidence": "94906265"
+						},
+						{
+							"uri": "https://www.rdv-solidarites.fr/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "15984121"
 						}
 					],
-					"count": "13",
+					"count": "14",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
 					"otherinfo": "<p>0134253030, which evaluates to: 1974-04-03 20:30:30</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "52"
+					"sourceid": "51"
 				},
 				{
 					"pluginid": "10021",
@@ -484,7 +498,7 @@
 					"desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.rdv-solidarites.fr/packs/css/application-7c0c8dd0.css",
+							"uri": "https://www.rdv-solidarites.fr/packs/css/application-0aa28c08.css",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -574,7 +588,7 @@
 					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "105"
+					"sourceid": "66"
 				},
 				{
 					"pluginid": "10094",
@@ -591,52 +605,52 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "dKHTO5aB5vgWyTWZWfTjn66Fmy0pSxhHk7P4"
+							"evidence": "2Bo0merEIFQSPdVkvoBHFRmLrPNjY1ctLPVUybgPeCLP3OgY7buJgFBiUIdEM9rewpYzllLa754BHafRVqa7UtVYGa8YrCp"
 						},
 						{
 							"uri": "https://www.rdv-solidarites.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "2B8pF0lw6nuLbzi3yuQ3VWLtcbXQVDfTR71"
+							"evidence": "6WrIYTbOfwaiWYP7HC88vpUIuAyOQVGO83aMraa"
 						},
 						{
 							"uri": "https://www.rdv-solidarites.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "2FtbSq8Vmo12EPExVVhQuZqOWUNIbnSOOALL5bXFE6KjQ7xQWs"
+							"evidence": "xgdFp8AZVIZJeslcOo6wkYPl5JRmfxhR"
 						},
 						{
 							"uri": "https://www.rdv-solidarites.fr/accessibility",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "2Fv2GSSI2h7FwnNIOcLGeocZao1GU43B4A4yJHNVQCLyT6RaAf3uRYjvNx7YZpMH4JbkLo1bAb"
+							"evidence": "2FpAHtzEI5KEdtHpDn5x2Zh2xdrl9ff5DesJwhh52MeKwKTIe8kOAl1d7RcBaB"
 						},
 						{
 							"uri": "https://www.rdv-solidarites.fr/accueil_mds",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "2FVtAPZFOeCcPnIIHFvfIOpJrwLWoMApMJz"
+							"evidence": "i5e11huK8uBOfNYym8FSMbhizSHwaw"
 						},
 						{
 							"uri": "https://www.rdv-solidarites.fr/contact",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "dIc0qU67Dn0aE5di4sYJVi7IFrofnM7FqSUVcWiY7YmQakHn"
+							"evidence": "qAhRlKQiEOXgDMaN76KLxz7j28qwDFz"
 						},
 						{
 							"uri": "https://www.rdv-solidarites.fr/mds",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "2Bju9MRGfbYfLFCpVJIs9k6WFTQd1ZOCwIFtqm0QTmw"
+							"evidence": "7TO1YlpSo2AbcKeCigf0nkNYsb4N4DZpaV4yR0maTkRG"
 						},
 						{
-							"uri": "https://www.rdv-solidarites.fr/packs/css/application-7c0c8dd0.css",
+							"uri": "https://www.rdv-solidarites.fr/packs/css/application-0aa28c08.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -654,26 +668,26 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "2BSAN99RAdcaYSKPNI8FUnI6h9GNGoaELNUS1edUpJRg5JtPSG"
+							"evidence": "Xmyz9Tg9uVK22zNfzlYyvJnrpJyQ9Ub0MIvqJihR"
 						},
 						{
 							"uri": "https://www.rdv-solidarites.fr/users/sign_in",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "2BcLdCgKMwaEifalOBFRjiMYxs824vYr87GfBWcSnt2Lworn39LiN1fzS3RbPAvLiz4ksvZwkOJzyuDuyW1Yfparb8qWfA"
+							"evidence": "2F0EyndiPXfSpA19NCQt8mUTouq4PlZIsDx"
 						},
 						{
 							"uri": "https://www.rdv-solidarites.fr/",
 							"method": "POST",
 							"param": "",
 							"attack": "",
-							"evidence": "AXYdQHYsOKtvcvqGBQuVNbrKxKRfAAnOLsDYUKaOnnIh3OiL1bmbkUJGpME1N45ytx21Yxk5xdFPRZ"
+							"evidence": "2BtlDrXEpOBynDvAzcgWVoD3v4ed5Qc"
 						}
 					],
 					"count": "12",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>t\uFFFD\uFFFD;\uFFFD\uFFFD\uFFFD\uFFFD\\x0016\uFFFD5\uFFFDY\uFFFD\u37EE\uFFFD\uFFFD-)K\\x0018G\uFFFD\uFFFD\uFFFD</p>",
+					"otherinfo": "<p>\uFFFD\\x001a4\uFFFD\uFFFD\uFFFD T\\x0012=\uFFFDd\uFFFD\uFFFDG\\x0015\\x0019\uFFFD\uFFFD\uFFFDccW-,\uFFFDT\u0278\\x000fx\"\uFFFD\uFFFD\uFFFD\\x0018\uFFFD\uFFFDPbP\uFFFDD3\uFFFD\uFFFD\u00963\uFFFDR\uFFFD\uFFFD\\x0001\\x001d\uFFFD\uFFFDV\uFFFD\uFFFDR\uFFFDX\\x0019\uFFFD\\x0018\uFFFD*</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
@@ -703,7 +717,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "112"
+					"sourceid": "114"
 				},
 				{
 					"pluginid": "10109",
@@ -717,13 +731,6 @@
 					"instances":[ 
 						{
 							"uri": "https://www.rdv-solidarites.fr/agents/sign_in",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<a aria-label=\"Close\" class=\"close\" data-dismiss=\"alert\" href=\"#\"><i class=\"fa fa-times\"></i></a>"
-						},
-						{
-							"uri": "https://www.rdv-solidarites.fr/organisations/new",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -751,6 +758,13 @@
 							"evidence": "<a aria-label=\"Close\" class=\"close\" data-dismiss=\"alert\" href=\"#\"><i class=\"fa fa-times\"></i></a>"
 						},
 						{
+							"uri": "https://www.rdv-solidarites.fr/users",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "<a aria-label=\"Close\" class=\"close\" data-dismiss=\"alert\" href=\"#\"><i class=\"fa fa-times\"></i></a>"
+						},
+						{
 							"uri": "https://www.rdv-solidarites.fr/users/password",
 							"method": "POST",
 							"param": "",
@@ -764,7 +778,7 @@
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "123"
+					"sourceid": "126"
 				},
 				{
 					"pluginid": "10049",
@@ -894,13 +908,6 @@
 							"evidence": "max-age=0, private, must-revalidate"
 						},
 						{
-							"uri": "https://www.rdv-solidarites.fr/organisations/new",
-							"method": "GET",
-							"param": "Cache-Control",
-							"attack": "",
-							"evidence": "max-age=0, private, must-revalidate"
-						},
-						{
 							"uri": "https://www.rdv-solidarites.fr/robots.txt",
 							"method": "GET",
 							"param": "Cache-Control",
@@ -915,6 +922,13 @@
 							"evidence": "max-age=0, private, must-revalidate"
 						},
 						{
+							"uri": "https://www.rdv-solidarites.fr/users/password/new",
+							"method": "GET",
+							"param": "Cache-Control",
+							"attack": "",
+							"evidence": "max-age=0, private, must-revalidate"
+						},
+						{
 							"uri": "https://www.rdv-solidarites.fr/users/sign_in",
 							"method": "GET",
 							"param": "Cache-Control",
@@ -923,7 +937,7 @@
 						}
 					],
 					"count": "11",
-					"solution": "<p>Whenever possible ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p>",
 					"cweid": "525",
@@ -975,7 +989,7 @@
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "59"
+					"sourceid": "58"
 				},
 				{
 					"pluginid": "10031",
@@ -987,34 +1001,6 @@
 					"riskdesc": "Informational (Low)",
 					"desc": "<p>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability.</p>",
 					"instances":[ 
-						{
-							"uri": "https://www.rdv-solidarites.fr/organisations",
-							"method": "POST",
-							"param": "organisation[agent_roles_attributes][0][agent_attributes][email]",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.rdv-solidarites.fr/organisations",
-							"method": "POST",
-							"param": "organisation[agent_roles_attributes][0][level]",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.rdv-solidarites.fr/organisations",
-							"method": "POST",
-							"param": "organisation[name]",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.rdv-solidarites.fr/organisations",
-							"method": "POST",
-							"param": "organisation[territory_attributes][departement_number]",
-							"attack": "",
-							"evidence": ""
-						},
 						{
 							"uri": "https://www.rdv-solidarites.fr/users",
 							"method": "POST",
@@ -1079,13 +1065,13 @@
 							"evidence": ""
 						}
 					],
-					"count": "13",
+					"count": "9",
 					"solution": "<p>Validate all input and sanitize output it before writing to any HTML attributes.</p>",
-					"otherinfo": "<p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p><p></p><p>https://www.rdv-solidarites.fr/organisations</p><p></p><p>appears to include user input in: </p><p></p><p>a(n) [input] tag [value] attribute </p><p></p><p>The user input found was:</p><p>organisation[agent_roles_attributes][0][agent_attributes][email]=foo-bar@example.com</p><p></p><p>The user-controlled value was:</p><p>foo-bar@example.com</p>",
+					"otherinfo": "<p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p><p></p><p>https://www.rdv-solidarites.fr/users</p><p></p><p>appears to include user input in: </p><p></p><p>a(n) [input] tag [data-disable-with] attribute </p><p></p><p>The user input found was:</p><p>commit=Je m'inscris</p><p></p><p>The user-controlled value was:</p><p>je m'inscris</p>",
 					"reference": "<p>http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</p>",
 					"cweid": "20",
 					"wascid": "20",
-					"sourceid": "195"
+					"sourceid": "204"
 				}
 			]
 		}

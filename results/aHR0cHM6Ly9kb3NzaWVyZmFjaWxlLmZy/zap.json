@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.1",
-	"@generated": "Sun, 3 Apr 2022 03:33:55",
+	"@generated": "Sun, 10 Apr 2022 03:39:33",
 	"site":[ 
 		{
 			"@name": "https://dossierfacile.fr",
@@ -233,7 +233,7 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "GgHReLdEmoc4yVVTZ4k0t1vkIezo3xXoQH48QA__etFw19imq8a3kQ=="
+							"evidence": "BaU-b5F4xi9P3P2RaZtgVNwJUIh-PhuUNsa-ae8x0ZBdcN_WLZybug=="
 						},
 						{
 							"uri": "https://dossierfacile.fr",
@@ -247,19 +247,19 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "EtxgGq-Y7v8ZLKoubxGnXyVTeJbgqfyxNqHibE0hk6C4BZELvzxHeA=="
+							"evidence": "N0YMnAKnXEwQNjTXDkwKYPp5FSncjqJwEc353DV_WIu0Rv9JshC18Q=="
 						},
 						{
 							"uri": "https://dossierfacile.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "gDrtNCiQU8TMviMtLLd1KX-zgGaVJLEMuit1Le6vlEdZ26xRv9pZxQ=="
+							"evidence": "mzeBZdfKGSboyTXc1MrFOuc-VKv9T0uwQpkynpOkOchqGhUzyvJ89g=="
 						}
 					],
 					"count": "4",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>\\x001a\\x0001\uFFFDx\uFFFDD\uFFFD\uFFFD8\uFFFDUSg\uFFFD4\uFFFD[\uFFFD!\uFFFD\uFFFD\uFFFD\\x0015\uFFFD@~<@\\x000f\uFFFDz\uFFFDp\uFFFD\u0626\uFFFD\u01B7\uFFFD</p>",
+					"otherinfo": "<p>\\x0005\uFFFD>o\uFFFDx\uFFFD/O\uFFFD\uFFFD\uFFFDi\uFFFD`T\uFFFD\tP\uFFFD~>\\x001b\uFFFD6\u01BEi\uFFFD1\u0450]p\uFFFD\uFFFD-\uFFFD\uFFFD\uFFFD</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
@@ -280,7 +280,7 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<a data-v-7db3b27a=\"\" data-v-24e72b25=\"\" href=\"\" class=\"fr-ml-1w no-shadow\"><span data-v-7db3b27a=\"\" data-v-24e72b25=\"\" aria-hidden=\"true\" class=\"fr-fi--lg fr-fi-close-line color--white\"></span></a>"
+							"evidence": "<a data-v-bb54bace=\"\" href=\"#\" title=\"r\u00E9publique fran\u00E7aise\" class=\"fr-logo\"><span data-v-bb54bace=\"\" class=\"fr-logo__title\">r\u00E9publique <br data-v-bb54bace=\"\">fran\u00E7aise</span></a>"
 						}
 					],
 					"count": "1",
@@ -310,7 +310,7 @@
 						}
 					],
 					"count": "1",
-					"solution": "<p>Whenever possible ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p>",
 					"cweid": "525",

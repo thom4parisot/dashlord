@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.1",
-	"@generated": "Sun, 3 Apr 2022 02:16:15",
+	"@generated": "Sun, 10 Apr 2022 02:15:14",
 	"site":[ 
 		{
 			"@name": "https://app.pix.fr",
@@ -178,6 +178,32 @@
 					"sourceid": "1"
 				},
 				{
+					"pluginid": "10110",
+					"alertRef": "10110",
+					"alert": "Dangerous JS Functions",
+					"name": "Dangerous JS Functions",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
+					"instances":[ 
+						{
+							"uri": "https://app.pix.fr/assets/vendor-6aac92be94376d37d248c39cd2c6b802.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Eval"
+						}
+					],
+					"count": "1",
+					"solution": "<p>See the references for security advice on the use of these functions.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://angular.io/guide/security</p>",
+					"cweid": "749",
+					"wascid": "-1",
+					"sourceid": "25"
+				},
+				{
 					"pluginid": "10063",
 					"alertRef": "10063",
 					"alert": "Permissions Policy Header Not Set",
@@ -202,7 +228,14 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://app.pix.fr/assets/mon-pix-d67765da62fb73ac6f38c3d123e2a5ed.js",
+							"uri": "https://app.pix.fr/assets/mon-pix-8b4dfc179553f8991bffff4445d8fc0c.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://app.pix.fr/assets/vendor-6aac92be94376d37d248c39cd2c6b802.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -230,7 +263,7 @@
 							"evidence": ""
 						}
 					],
-					"count": "6",
+					"count": "7",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
@@ -253,49 +286,42 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "146797734"
+							"evidence": "149929541"
 						},
 						{
 							"uri": "https://app.pix.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "193632978"
+							"evidence": "995746272"
 						},
 						{
 							"uri": "https://app.pix.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "146797738"
+							"evidence": "149929543"
 						},
 						{
 							"uri": "https://app.pix.fr/apple-touch-icon-pix_app.png",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "146133669"
+							"evidence": "66691368"
 						},
 						{
 							"uri": "https://app.pix.fr/apple-touch-icon-pix_app.png",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "146766546"
+							"evidence": "995546765"
 						},
 						{
-							"uri": "https://app.pix.fr/assets/vendor-55e333cd77a2b8337cccf6e121bb1045.css",
+							"uri": "https://app.pix.fr/apple-touch-icon-pix_app.png",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "121030566"
-						},
-						{
-							"uri": "https://app.pix.fr/assets/vendor-55e333cd77a2b8337cccf6e121bb1045.css",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "157636344"
+							"evidence": "995746276"
 						},
 						{
 							"uri": "https://app.pix.fr/assets/vendor-55e333cd77a2b8337cccf6e121bb1045.css",
@@ -305,41 +331,55 @@
 							"evidence": "315360000"
 						},
 						{
-							"uri": "https://app.pix.fr/ember-cli-matomo-tag-manager/start-matomo-event-9ad981fd3c2536928c3d223abe3c7dc4.js",
+							"uri": "https://app.pix.fr/assets/vendor-55e333cd77a2b8337cccf6e121bb1045.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "156466852"
+							"evidence": "34282212"
+						},
+						{
+							"uri": "https://app.pix.fr/assets/vendor-55e333cd77a2b8337cccf6e121bb1045.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "42371437"
 						},
 						{
 							"uri": "https://app.pix.fr/ember-cli-matomo-tag-manager/start-matomo-event-9ad981fd3c2536928c3d223abe3c7dc4.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "157636345"
+							"evidence": "41904299"
+						},
+						{
+							"uri": "https://app.pix.fr/ember-cli-matomo-tag-manager/start-matomo-event-9ad981fd3c2536928c3d223abe3c7dc4.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "42371438"
 						},
 						{
 							"uri": "https://app.pix.fr/robots.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "157636342"
+							"evidence": "42371435"
 						},
 						{
 							"uri": "https://app.pix.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "146797736"
+							"evidence": "995746274"
 						}
 					],
-					"count": "12",
+					"count": "13",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
-					"otherinfo": "<p>146797734, which evaluates to: 1974-08-27 01:08:54</p>",
+					"otherinfo": "<p>149929541, which evaluates to: 1974-10-02 07:05:41</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "7"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10094",
@@ -366,6 +406,13 @@
 							"evidence": "22PAR_pix_cac26b28c15971f8fda41f5a94b1b81647c7b5780582bb169467988b9233c757"
 						},
 						{
+							"uri": "https://app.pix.fr/assets/vendor-6aac92be94376d37d248c39cd2c6b802.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+						},
+						{
 							"uri": "https://app.pix.fr/inscription",
 							"method": "GET",
 							"param": "",
@@ -380,7 +427,7 @@
 							"evidence": "22PAR_pix_cac26b28c15971f8fda41f5a94b1b81647c7b5780582bb169467988b9233c757"
 						}
 					],
-					"count": "4",
+					"count": "5",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
 					"otherinfo": "<p>\uFFFDc\uFFFDG\uFFFDb\uFFFD\uFFFD\\x001asn\uFFFD\uFFFD\uFFFD5\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDk\uFFFD_\uFFFDxoV\uFFFD\u05EE;s\uFFFD\uFFFD\uFFFD\uFFFD9\uFFFDf\uFFFD\u05EFx\uFFFD|\uFFFDv\uFFFDw;\uFFFD</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
@@ -399,49 +446,119 @@
 					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
 					"instances":[ 
 						{
-							"uri": "https://app.pix.fr/assets/mon-pix-d67765da62fb73ac6f38c3d123e2a5ed.js",
+							"uri": "https://app.pix.fr/assets/mon-pix-8b4dfc179553f8991bffff4445d8fc0c.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "from"
 						},
 						{
-							"uri": "https://app.pix.fr/assets/mon-pix-d67765da62fb73ac6f38c3d123e2a5ed.js",
+							"uri": "https://app.pix.fr/assets/mon-pix-8b4dfc179553f8991bffff4445d8fc0c.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "later"
 						},
 						{
-							"uri": "https://app.pix.fr/assets/mon-pix-d67765da62fb73ac6f38c3d123e2a5ed.js",
+							"uri": "https://app.pix.fr/assets/mon-pix-8b4dfc179553f8991bffff4445d8fc0c.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "query"
 						},
 						{
-							"uri": "https://app.pix.fr/assets/mon-pix-d67765da62fb73ac6f38c3d123e2a5ed.js",
+							"uri": "https://app.pix.fr/assets/mon-pix-8b4dfc179553f8991bffff4445d8fc0c.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "select"
 						},
 						{
-							"uri": "https://app.pix.fr/assets/mon-pix-d67765da62fb73ac6f38c3d123e2a5ed.js",
+							"uri": "https://app.pix.fr/assets/mon-pix-8b4dfc179553f8991bffff4445d8fc0c.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "user"
 						},
 						{
-							"uri": "https://app.pix.fr/assets/mon-pix-d67765da62fb73ac6f38c3d123e2a5ed.js",
+							"uri": "https://app.pix.fr/assets/mon-pix-8b4dfc179553f8991bffff4445d8fc0c.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "username"
+						},
+						{
+							"uri": "https://app.pix.fr/assets/vendor-6aac92be94376d37d248c39cd2c6b802.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "BUG"
+						},
+						{
+							"uri": "https://app.pix.fr/assets/vendor-6aac92be94376d37d248c39cd2c6b802.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from"
+						},
+						{
+							"uri": "https://app.pix.fr/assets/vendor-6aac92be94376d37d248c39cd2c6b802.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "later"
+						},
+						{
+							"uri": "https://app.pix.fr/assets/vendor-6aac92be94376d37d248c39cd2c6b802.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query"
+						},
+						{
+							"uri": "https://app.pix.fr/assets/vendor-6aac92be94376d37d248c39cd2c6b802.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select"
+						},
+						{
+							"uri": "https://app.pix.fr/assets/vendor-6aac92be94376d37d248c39cd2c6b802.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "TODO"
+						},
+						{
+							"uri": "https://app.pix.fr/assets/vendor-6aac92be94376d37d248c39cd2c6b802.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user"
+						},
+						{
+							"uri": "https://app.pix.fr/assets/vendor-6aac92be94376d37d248c39cd2c6b802.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "username"
+						},
+						{
+							"uri": "https://app.pix.fr/assets/vendor-6aac92be94376d37d248c39cd2c6b802.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "where"
+						},
+						{
+							"uri": "https://app.pix.fr/assets/vendor-6aac92be94376d37d248c39cd2c6b802.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "XXX"
 						}
 					],
-					"count": "6",
+					"count": "16",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
 					"otherinfo": "<p>The following pattern was used: \\bFROM\\b and was detected 22 times, the first in the element starting with: \"return a(p(e=o.call.apply(o,[this].concat(n))),\"intl\",i,p(e)),b(p(e),\"checkedValues\",new Set),e}return t=f,(n=[{key:\"_hasError\",\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
@@ -474,6 +591,13 @@
 							"evidence": "<script type=\"text/javascript\" async defer src=\"https://analytics.pix.fr/js/container_fNoTNeFZ.js\"></script>"
 						},
 						{
+							"uri": "https://app.pix.fr/assets/vendor-6aac92be94376d37d248c39cd2c6b802.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a>"
+						},
+						{
 							"uri": "https://app.pix.fr/inscription",
 							"method": "GET",
 							"param": "",
@@ -488,7 +612,7 @@
 							"evidence": "<script type=\"text/javascript\" async defer src=\"https://analytics.pix.fr/js/container_fNoTNeFZ.js\"></script>"
 						}
 					],
-					"count": "4",
+					"count": "5",
 					"solution": "<p>This is an informational alert and so no changes are required.</p>",
 					"otherinfo": "<p>No links have been found while there are scripts, which is an indication that this is a modern web application.</p>",
 					"reference": "",
@@ -543,7 +667,7 @@
 						}
 					],
 					"count": "5",
-					"solution": "<p>Whenever possible ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p>",
 					"cweid": "525",
@@ -579,49 +703,49 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "Age: 64132"
+							"evidence": "Age: 38909"
 						},
 						{
-							"uri": "https://app.pix.fr/assets/mon-pix-a6d74c212a8a249d74bd613b32fa5488.css",
+							"uri": "https://app.pix.fr/assets/mon-pix-6d779270d3ea4eafe3b8f5837db29cc1.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "Age: 236176"
+							"evidence": "Age: 367292"
 						},
 						{
-							"uri": "https://app.pix.fr/assets/mon-pix-d67765da62fb73ac6f38c3d123e2a5ed.js",
+							"uri": "https://app.pix.fr/assets/mon-pix-8b4dfc179553f8991bffff4445d8fc0c.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "Age: 236177"
+							"evidence": "Age: 327901"
 						},
 						{
 							"uri": "https://app.pix.fr/assets/vendor-55e333cd77a2b8337cccf6e121bb1045.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "Age: 229897"
+							"evidence": "Age: 327776"
+						},
+						{
+							"uri": "https://app.pix.fr/assets/vendor-6aac92be94376d37d248c39cd2c6b802.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 327775"
 						},
 						{
 							"uri": "https://app.pix.fr/ember-cli-matomo-tag-manager/start-matomo-event-9ad981fd3c2536928c3d223abe3c7dc4.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "Age: 64146"
+							"evidence": "Age: 38910"
 						},
 						{
 							"uri": "https://app.pix.fr/images/interwind-5fe40c7fe159b0f34afe8360ab8ae303.gif",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "Age: 61955"
-						},
-						{
-							"uri": "https://app.pix.fr/inscription",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Age: 0"
+							"evidence": "Age: 68698"
 						},
 						{
 							"uri": "https://app.pix.fr/robots.txt",
@@ -664,14 +788,14 @@
 							"evidence": "max-age=86400"
 						},
 						{
-							"uri": "https://app.pix.fr/assets/mon-pix-a6d74c212a8a249d74bd613b32fa5488.css",
+							"uri": "https://app.pix.fr/assets/mon-pix-6d779270d3ea4eafe3b8f5837db29cc1.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "max-age=315360000"
 						},
 						{
-							"uri": "https://app.pix.fr/assets/mon-pix-d67765da62fb73ac6f38c3d123e2a5ed.js",
+							"uri": "https://app.pix.fr/assets/mon-pix-8b4dfc179553f8991bffff4445d8fc0c.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -679,6 +803,13 @@
 						},
 						{
 							"uri": "https://app.pix.fr/assets/vendor-55e333cd77a2b8337cccf6e121bb1045.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=315360000"
+						},
+						{
+							"uri": "https://app.pix.fr/assets/vendor-6aac92be94376d37d248c39cd2c6b802.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -706,13 +837,13 @@
 							"evidence": "max-age=86400"
 						}
 					],
-					"count": "7",
+					"count": "8",
 					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
 					"otherinfo": "",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "17"
+					"sourceid": "18"
 				},
 				{
 					"pluginid": "10049",
@@ -739,13 +870,6 @@
 							"evidence": "no-cache"
 						},
 						{
-							"uri": "https://app.pix.fr/inscription",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "no-cache"
-						},
-						{
 							"uri": "https://app.pix.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
@@ -753,7 +877,7 @@
 							"evidence": "no-cache"
 						}
 					],
-					"count": "4",
+					"count": "3",
 					"solution": "",
 					"otherinfo": "",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",

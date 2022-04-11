@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.1",
-	"@generated": "Sun, 3 Apr 2022 08:09:07",
+	"@generated": "Sun, 10 Apr 2022 08:20:11",
 	"site":[ 
 		{
 			"@name": "https://cassiopee.igloo.fabnum.fr",
@@ -42,32 +42,6 @@
 					"sourceid": "1"
 				},
 				{
-					"pluginid": "10110",
-					"alertRef": "10110",
-					"alert": "Dangerous JS Functions",
-					"name": "Dangerous JS Functions",
-					"riskcode": "1",
-					"confidence": "1",
-					"riskdesc": "Low (Low)",
-					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
-					"instances":[ 
-						{
-							"uri": "https://cassiopee.igloo.fabnum.fr/_nuxt/9690f2e.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "eval"
-						}
-					],
-					"count": "1",
-					"solution": "<p>See the references for security advice on the use of these functions.</p>",
-					"otherinfo": "",
-					"reference": "<p>https://angular.io/guide/security</p>",
-					"cweid": "749",
-					"wascid": "-1",
-					"sourceid": "29"
-				},
-				{
 					"pluginid": "10063",
 					"alertRef": "10063",
 					"alert": "Permissions Policy Header Not Set",
@@ -86,13 +60,6 @@
 						},
 						{
 							"uri": "https://cassiopee.igloo.fabnum.fr/_nuxt/32a7554.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://cassiopee.igloo.fabnum.fr/_nuxt/9690f2e.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -120,7 +87,7 @@
 							"evidence": ""
 						}
 					],
-					"count": "6",
+					"count": "5",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
@@ -289,7 +256,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://cassiopee.igloo.fabnum.fr/_nuxt/9690f2e.js",
+							"uri": "https://cassiopee.igloo.fabnum.fr/_nuxt/b2cc55c.js",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -364,13 +331,6 @@
 							"evidence": "fec-YrBPSzeCZ/Chj8AK53hLagZkA8Y"
 						},
 						{
-							"uri": "https://cassiopee.igloo.fabnum.fr/_nuxt/9690f2e.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA="
-						},
-						{
 							"uri": "https://cassiopee.igloo.fabnum.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
@@ -378,7 +338,7 @@
 							"evidence": "fec-YrBPSzeCZ/Chj8AK53hLagZkA8Y"
 						}
 					],
-					"count": "3",
+					"count": "2",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
 					"otherinfo": "<p>}\uFFFD>b\uFFFDOK7\uFFFDg\uFFFD\uFFFD</p><p>\uFFFDxKj\\x0006d\\x0003\uFFFD</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
@@ -404,13 +364,6 @@
 							"evidence": "query"
 						},
 						{
-							"uri": "https://cassiopee.igloo.fabnum.fr/_nuxt/9690f2e.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "bug"
-						},
-						{
 							"uri": "https://cassiopee.igloo.fabnum.fr/_nuxt/b2cc55c.js",
 							"method": "GET",
 							"param": "",
@@ -418,7 +371,7 @@
 							"evidence": "query"
 						}
 					],
-					"count": "3",
+					"count": "2",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
 					"otherinfo": "<p>The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"(window.webpackJsonp=window.webpackJsonp||[]).push([[5],[,,,,,,function(t,e,n){\"use strict\";n.r(e),function(t,n){var r=Object.fr\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
@@ -525,7 +478,7 @@
 						}
 					],
 					"count": "3",
-					"solution": "<p>Whenever possible ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p>",
 					"cweid": "525",
@@ -638,7 +591,7 @@
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "24"
+					"sourceid": "21"
 				}
 			]
 		}

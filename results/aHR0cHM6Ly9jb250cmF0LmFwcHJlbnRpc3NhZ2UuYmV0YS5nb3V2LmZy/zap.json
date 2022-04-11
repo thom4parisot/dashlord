@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.1",
-	"@generated": "Sun, 3 Apr 2022 02:56:11",
+	"@generated": "Sun, 10 Apr 2022 02:59:53",
 	"site":[ 
 		{
 			"@name": "https://contrat.apprentissage.beta.gouv.fr",
@@ -471,7 +471,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://contrat.apprentissage.beta.gouv.fr/static/js/main.8ed08f4e.chunk.js",
+							"uri": "https://contrat.apprentissage.beta.gouv.fr/static/js/9.cf55a38f.chunk.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -657,7 +657,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "17"
+					"sourceid": "28"
 				},
 				{
 					"pluginid": "10021",
@@ -726,6 +726,13 @@
 							"evidence": ""
 						},
 						{
+							"uri": "https://contrat.apprentissage.beta.gouv.fr/static/js/9.cf55a38f.chunk.js",
+							"method": "GET",
+							"param": "X-Content-Type-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
 							"uri": "https://contrat.apprentissage.beta.gouv.fr/static/js/main.8ed08f4e.chunk.js",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
@@ -734,13 +741,6 @@
 						},
 						{
 							"uri": "https://contrat.apprentissage.beta.gouv.fr/static/js/runtime-main.89f7a68c.js",
-							"method": "GET",
-							"param": "X-Content-Type-Options",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://contrat.apprentissage.beta.gouv.fr/stats",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -786,7 +786,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "39"
+					"sourceid": "36"
 				},
 				{
 					"pluginid": "10027",
@@ -819,7 +819,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "47"
+					"sourceid": "42"
 				},
 				{
 					"pluginid": "10109",
@@ -881,13 +881,6 @@
 							"evidence": "<script defer=\"defer\" data-domain=\"contrat.apprentissage.beta.gouv.fr\" src=\"https://plausible.io/js/plausible.js\"></script>"
 						},
 						{
-							"uri": "https://contrat.apprentissage.beta.gouv.fr/forgotten-password",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<script defer=\"defer\" data-domain=\"contrat.apprentissage.beta.gouv.fr\" src=\"https://plausible.io/js/plausible.js\"></script>"
-						},
-						{
 							"uri": "https://contrat.apprentissage.beta.gouv.fr/reset-password",
 							"method": "GET",
 							"param": "",
@@ -903,6 +896,13 @@
 						},
 						{
 							"uri": "https://contrat.apprentissage.beta.gouv.fr/stats",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script defer=\"defer\" data-domain=\"contrat.apprentissage.beta.gouv.fr\" src=\"https://plausible.io/js/plausible.js\"></script>"
+						},
+						{
+							"uri": "https://contrat.apprentissage.beta.gouv.fr/support",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1006,7 +1006,7 @@
 						}
 					],
 					"count": "11",
-					"solution": "<p>Whenever possible ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p>",
 					"cweid": "525",
@@ -1038,7 +1038,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://contrat.apprentissage.beta.gouv.fr/static/js/main.8ed08f4e.chunk.js",
+							"uri": "https://contrat.apprentissage.beta.gouv.fr/static/js/9.cf55a38f.chunk.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1058,7 +1058,7 @@
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "17"
+					"sourceid": "28"
 				},
 				{
 					"pluginid": "10049",
