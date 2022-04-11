@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.1",
-	"@generated": "Sun, 3 Apr 2022 09:52:35",
+	"@generated": "Sun, 10 Apr 2022 09:57:48",
 	"site":[ 
 		{
 			"@name": "https://moana.beta.gouv.fr",
@@ -185,6 +185,13 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
+							"evidence": "09457557"
+						},
+						{
+							"uri": "https://moana.beta.gouv.fr",
+							"method": "GET",
+							"param": "",
+							"attack": "",
 							"evidence": "31449600"
 						},
 						{
@@ -206,6 +213,13 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
+							"evidence": "23859482"
+						},
+						{
+							"uri": "https://moana.beta.gouv.fr/login/?next=/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
 							"evidence": "31449600"
 						},
 						{
@@ -216,9 +230,9 @@
 							"evidence": "31449600"
 						}
 					],
-					"count": "5",
+					"count": "7",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
-					"otherinfo": "<p>31449600, which evaluates to: 1970-12-31 00:00:00</p>",
+					"otherinfo": "<p>09457557, which evaluates to: 1970-04-20 11:05:57</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
@@ -239,40 +253,40 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "WG5cZtNtZdHtaLQRVqAxe4VrVdlY6DlFWf8B3yYDYdDbRHChsRcl4ISNECfGCKdy"
+							"evidence": "w4Vt3ECQKMMrqxcdycTcAuseyjgxcb8BEp3epfFxkHJbCEBrFQwdCDqet5VKJnRA"
 						},
 						{
 							"uri": "https://moana.beta.gouv.fr/login/?next=/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "IzJTtBOdHRuAtGS5Bhe51iXAMNSk71DNTT0Ztwa48JfeXeqsm7ZG0NrL8xFADokf"
+							"evidence": "bmrfma9g4ADkt1O3m9FhZc0xavLncdcSiLzOIzpCGqmD4IS8RQ6yIJGFtMEsEfDh"
 						},
 						{
 							"uri": "https://moana.beta.gouv.fr/login/?next=/robots.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "IzJTtBOdHRuAtGS5Bhe51iXAMNSk71DNTT0Ztwa48JfeXeqsm7ZG0NrL8xFADokf"
+							"evidence": "bmrfma9g4ADkt1O3m9FhZc0xavLncdcSiLzOIzpCGqmD4IS8RQ6yIJGFtMEsEfDh"
 						},
 						{
 							"uri": "https://moana.beta.gouv.fr/login/?next=/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "IzJTtBOdHRuAtGS5Bhe51iXAMNSk71DNTT0Ztwa48JfeXeqsm7ZG0NrL8xFADokf"
+							"evidence": "bmrfma9g4ADkt1O3m9FhZc0xavLncdcSiLzOIzpCGqmD4IS8RQ6yIJGFtMEsEfDh"
 						},
 						{
 							"uri": "https://moana.beta.gouv.fr/login/",
 							"method": "POST",
 							"param": "",
 							"attack": "",
-							"evidence": "IzJTtBOdHRuAtGS5Bhe51iXAMNSk71DNTT0Ztwa48JfeXeqsm7ZG0NrL8xFADokf"
+							"evidence": "bmrfma9g4ADkt1O3m9FhZc0xavLncdcSiLzOIzpCGqmD4IS8RQ6yIJGFtMEsEfDh"
 						}
 					],
 					"count": "5",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>Xn\\f\uFFFDme\uFFFD\uFFFDh\uFFFD\\x0011V\uFFFD1{\uFFFDkU\uFFFDX\uFFFD9EY\uFFFD\\x0001\uFFFD&\\x0003a\uFFFD\uFFFDDp\uFFFD\uFFFD\\x0017%\uFFFD\uFFFD\uFFFD\\x0010'\uFFFD\\x0008\uFFFDr</p>",
+					"otherinfo": "<p>\u00C5m\uFFFD@\uFFFD(\uFFFD+\uFFFD\\x0017\\x001d\uFFFD\uFFFD\uFFFD\\x0002\uFFFD\\x001e\uFFFD81q\uFFFD\\x0001\\x0012\uFFFD\u07A5\uFFFDq\uFFFDr[\\x0008@k\\x0015\\x000c\\x001d\\x0008:\uFFFD\uFFFD\uFFFDJ&t@</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
@@ -316,7 +330,7 @@
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "6"
+					"sourceid": "7"
 				},
 				{
 					"pluginid": "10015",
@@ -365,7 +379,7 @@
 						}
 					],
 					"count": "5",
-					"solution": "<p>Whenever possible ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p>",
 					"cweid": "525",

@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.1",
-	"@generated": "Sun, 3 Apr 2022 05:57:00",
+	"@generated": "Sun, 10 Apr 2022 06:09:05",
 	"site":[ 
 		{
 			"@name": "https://secretariat.incubateur.net",
@@ -209,7 +209,7 @@
 							"evidence": "Set-Cookie: connect.sid"
 						},
 						{
-							"uri": "https://secretariat.incubateur.net/login",
+							"uri": "https://secretariat.incubateur.net/login?next=/robots.txt",
 							"method": "GET",
 							"param": "connect.sid",
 							"attack": "",
@@ -555,7 +555,7 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "3AIuUzEim6LsAPSDjrsFG1zods8Zttgqrg"
+							"evidence": "3ACJ1rnXh4UICPKI31i6pJRjkSZGl2fyPs"
 						},
 						{
 							"uri": "https://secretariat.incubateur.net",
@@ -569,7 +569,7 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1106-BquLciwKjGMmsr07SfOkq/tJXq0"
+							"evidence": "104f-GEu7Gf/Lp6rimTxnmY/LbvSWR04"
 						},
 						{
 							"uri": "https://secretariat.incubateur.net/login?next=/robots.txt",
@@ -597,14 +597,14 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "3ALjuJK7Dm-DPs20s0CXj5olj_tlv6Lz-A"
+							"evidence": "3AdcemyF-4n7ri4uddjxY9Pcxzx683g3po"
 						},
 						{
 							"uri": "https://secretariat.incubateur.net/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "3AIuUzEim6LsAPSDjrsFG1zods8Zttgqrg"
+							"evidence": "3ACJ1rnXh4UICPKI31i6pJRjkSZGl2fyPs"
 						},
 						{
 							"uri": "https://secretariat.incubateur.net/static/css/main.css",
@@ -618,26 +618,26 @@
 							"method": "POST",
 							"param": "",
 							"attack": "",
-							"evidence": "3AIuUzEim6LsAPSDjrsFG1zods8Zttgqrg"
+							"evidence": "3ACJ1rnXh4UICPKI31i6pJRjkSZGl2fyPs"
 						},
 						{
 							"uri": "https://secretariat.incubateur.net/login?next=/robots.txt",
 							"method": "POST",
 							"param": "",
 							"attack": "",
-							"evidence": "3AIuUzEim6LsAPSDjrsFG1zods8Zttgqrg"
+							"evidence": "3ACJ1rnXh4UICPKI31i6pJRjkSZGl2fyPs"
 						},
 						{
 							"uri": "https://secretariat.incubateur.net/login?next=/sitemap.xml",
 							"method": "POST",
 							"param": "",
 							"attack": "",
-							"evidence": "3AIuUzEim6LsAPSDjrsFG1zods8Zttgqrg"
+							"evidence": "3ACJ1rnXh4UICPKI31i6pJRjkSZGl2fyPs"
 						}
 					],
 					"count": "12",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>\uFFFD\\x0002.S1\"\uFFFD\uFFFD\uFFFD\\x0000\uDBCC\uDFBB\\x0005\\x001b\\\uFFFDv\uFFFD\\x0019\uFFFD\uFFFD*\uFFFD</p>",
+					"otherinfo": "<p>\uFFFD\\x0000\uFFFD\u05B9\u05C7\uFFFD\\x0008\\x0008\uFFFD\uFFFDX\uFFFD\uFFFD\uFFFDc\uFFFD&F\uFFFDg\uFFFD></p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
@@ -751,7 +751,7 @@
 						}
 					],
 					"count": "7",
-					"solution": "<p>Whenever possible ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p>",
 					"cweid": "525",

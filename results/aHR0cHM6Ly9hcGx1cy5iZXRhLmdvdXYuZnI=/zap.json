@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.1",
-	"@generated": "Sun, 3 Apr 2022 02:06:13",
+	"@generated": "Sun, 10 Apr 2022 02:09:22",
 	"site":[ 
 		{
 			"@name": "https://aplus.beta.gouv.fr",
@@ -86,7 +86,7 @@
 					"reference": "<p>https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html</p>",
 					"cweid": "614",
 					"wascid": "13",
-					"sourceid": "68"
+					"sourceid": "70"
 				},
 				{
 					"pluginid": "10063",
@@ -113,7 +113,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://aplus.beta.gouv.fr/assets/generated-js/1ecf52524baced296eef080dcbdc1a2a-index.js",
+							"uri": "https://aplus.beta.gouv.fr/assets/generated-js/c8ee9718d25a57c42b8a0e9c6bac389d-index.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -121,6 +121,13 @@
 						},
 						{
 							"uri": "https://aplus.beta.gouv.fr/assets/javascripts/bc48bc5b8f6cee02ed1dc6331eeff3c3-stats.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://aplus.beta.gouv.fr/jsRoutes",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -148,7 +155,7 @@
 							"evidence": ""
 						}
 					],
-					"count": "7",
+					"count": "8",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
@@ -167,27 +174,34 @@
 					"desc": "<p>A timestamp was disclosed by the application/web server - Unix</p>",
 					"instances":[ 
 						{
-							"uri": "https://aplus.beta.gouv.fr/assets/generated-js/1ecf52524baced296eef080dcbdc1a2a-index.js",
+							"uri": "https://aplus.beta.gouv.fr/assets/generated-js/c8ee9718d25a57c42b8a0e9c6bac389d-index.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "2147483647"
+						},
+						{
+							"uri": "https://aplus.beta.gouv.fr/assets/generated-js/c8ee9718d25a57c42b8a0e9c6bac389d-index.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "62425156"
 						},
 						{
-							"uri": "https://aplus.beta.gouv.fr/assets/generated-js/1ecf52524baced296eef080dcbdc1a2a-index.js",
+							"uri": "https://aplus.beta.gouv.fr/assets/generated-js/c8ee9718d25a57c42b8a0e9c6bac389d-index.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "94906265"
 						}
 					],
-					"count": "2",
+					"count": "3",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
-					"otherinfo": "<p>62425156, which evaluates to: 1971-12-24 12:19:16</p>",
+					"otherinfo": "<p>2147483647, which evaluates to: 2038-01-19 03:14:07</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "59"
+					"sourceid": "61"
 				},
 				{
 					"pluginid": "10094",
@@ -204,14 +218,14 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6IjQwYzI0ZjJhY2I1YmRmNGRlYWFmNzRlZmY3YTY0NzJiMWQzNzIxN2YtMTY0ODk1MTU2MjQ4MC02YTQ5MWQ1MDY0MzM0MTQ3ZTBmNzRhYmUifSwiZXhwIjoxNjUxNTQzNTYyLCJuYmYiOjE2NDg5NTE1NjIsImlhdCI6MTY0ODk1MTU2Mn0"
+							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6IjM2ZmNjNDZjNmEyZmFhZTc3YTZmZDk2NjUwYzRmODIzZmRhODk2ZWItMTY0OTU1NjU1MzI1OC1iOGZmYzNmMzhmZDRkMWNkNTM3YjMyMzgifSwiZXhwIjoxNjUyMTQ4NTUzLCJuYmYiOjE2NDk1NTY1NTMsImlhdCI6MTY0OTU1NjU1M30"
 						},
 						{
 							"uri": "https://aplus.beta.gouv.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6Ijg5NGU5ZGQyMzUzNDA1ZThmY2U3NTRhZGUwMDQ1OWZkMTI1OGE0MTUtMTY0ODk1MTU2MTUyOS1jYWQ5M2MzOWJiNmE3ZTMzOWI5NjdmZDcifSwiZXhwIjoxNjUxNTQzNTYxLCJuYmYiOjE2NDg5NTE1NjEsImlhdCI6MTY0ODk1MTU2MX0"
+							"evidence": "eyJkYXRhIjp7ImNzcmZUb2tlbiI6IjdjMTBiMGE1YmZkOWYwZWFmZjI1NTliNWM3ZGRjODM5MmYwYTJhY2UtMTY0OTU1NjU1MjA5Ny1jYjM2NmFkY2VlZmFjYjFkZjdlMzQwYzkifSwiZXhwIjoxNjUyMTQ4NTUyLCJuYmYiOjE2NDk1NTY1NTIsImlhdCI6MTY0OTU1NjU1Mn0"
 						},
 						{
 							"uri": "https://aplus.beta.gouv.fr/",
@@ -239,12 +253,19 @@
 							"method": "POST",
 							"param": "",
 							"attack": "",
-							"evidence": "eyJkYXRhIjp7ImVycm9yIjoiQXVjdW4gY29tcHRlIGFjdGlmIG7igJllc3QgYXNzb2Npw6kgw6AgY2V0dGUgYWRyZXNzZSBlLW1haWwuXG5NZXJjaSBkZSB2w6lyaWZpZXIgcXXigJlpbCBz4oCZYWdpdCBiaWVuIGRlIHZvdHJlIGFkcmVzc2UgcHJvZmVzc2lvbm5lbGxlIGV0IG5vbWluYXRpdmUuIiwiZW1haWwtdmFsdWUiOiJmb28tYmFyQGV4YW1wbGUuY29tIn0sIm5iZiI6MTY0ODk1MTU2NSwiaWF0IjoxNjQ4OTUxNTY1fQ"
+							"evidence": "eyJkYXRhIjp7ImVycm9yIjoiQXVjdW4gY29tcHRlIGFjdGlmIG7igJllc3QgYXNzb2Npw6kgw6AgY2V0dGUgYWRyZXNzZSBlLW1haWwuXG5NZXJjaSBkZSB2w6lyaWZpZXIgcXXigJlpbCBz4oCZYWdpdCBiaWVuIGRlIHZvdHJlIGFkcmVzc2UgcHJvZmVzc2lvbm5lbGxlIGV0IG5vbWluYXRpdmUuIiwiZW1haWwtdmFsdWUiOiJmb28tYmFyQGV4YW1wbGUuY29tIn0sIm5iZiI6MTY0OTU1NjU1NiwiaWF0IjoxNjQ5NTU2NTU2fQ"
+						},
+						{
+							"uri": "https://aplus.beta.gouv.fr/login",
+							"method": "POST",
+							"param": "",
+							"attack": "",
+							"evidence": "eyJkYXRhIjp7ImVycm9yIjoiQXVjdW4gY29tcHRlIGFjdGlmIG7igJllc3QgYXNzb2Npw6kgw6AgY2V0dGUgYWRyZXNzZSBlLW1haWwuXG5NZXJjaSBkZSB2w6lyaWZpZXIgcXXigJlpbCBz4oCZYWdpdCBiaWVuIGRlIHZvdHJlIGFkcmVzc2UgcHJvZmVzc2lvbm5lbGxlIGV0IG5vbWluYXRpdmUuIiwiZW1haWwtdmFsdWUiOiJmb28tYmFyQGV4YW1wbGUuY29tIn0sIm5iZiI6MTY0OTU1NjU1NywiaWF0IjoxNjQ5NTU2NTU3fQ"
 						}
 					],
-					"count": "6",
+					"count": "7",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>{\"data\":{\"csrfToken\":\"40c24f2acb5bdf4deaaf74eff7a6472b1d37217f-1648951562480-6a491d5064334147e0f74abe\"},\"exp\":1651543562,\"nbf\":1648951562,\"iat\":1648951562}</p>",
+					"otherinfo": "<p>{\"data\":{\"csrfToken\":\"36fcc46c6a2faae77a6fd96650c4f823fda896eb-1649556553258-b8ffc3f38fd4d1cd537b3238\"},\"exp\":1652148553,\"nbf\":1649556553,\"iat\":1649556553}</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
@@ -261,20 +282,20 @@
 					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
 					"instances":[ 
 						{
-							"uri": "https://aplus.beta.gouv.fr/assets/generated-js/1ecf52524baced296eef080dcbdc1a2a-index.js",
+							"uri": "https://aplus.beta.gouv.fr/assets/generated-js/c8ee9718d25a57c42b8a0e9c6bac389d-index.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "admin"
+							"evidence": "query"
 						}
 					],
 					"count": "1",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
-					"otherinfo": "<p>The following pattern was used: \\bADMIN\\b and was detected in the element starting with: \"!function(){var t={5069:function(t,e,o){o(5719);var i=o(4474);t.exports=i(\"Array\",\"copyWithin\")},4686:function(t,e,o){o(3984);va\", see evidence field for the suspicious comment/snippet.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"!function(){var e={4968:function(e,t,i){\"use strict\";var n;(n=\"undefined\"!=typeof process&&\"[object process]\"==={}.toString.call\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "59"
+					"sourceid": "61"
 				},
 				{
 					"pluginid": "10109",
@@ -301,7 +322,7 @@
 							"evidence": "<noscript><p><img src=\"//stats.data.gouv.fr/piwik.php?idsite=42\" style=\"border:0;\" alt=\"\" /></p></noscript>"
 						},
 						{
-							"uri": "https://aplus.beta.gouv.fr/assets/generated-js/1ecf52524baced296eef080dcbdc1a2a-index.js",
+							"uri": "https://aplus.beta.gouv.fr/assets/generated-js/c8ee9718d25a57c42b8a0e9c6bac389d-index.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -356,7 +377,7 @@
 						}
 					],
 					"count": "3",
-					"solution": "<p>Whenever possible ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p>",
 					"cweid": "525",
@@ -388,14 +409,14 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://aplus.beta.gouv.fr/assets/images/bb24f2cd5ff2ee1dbcb59efcd02c83a8-favicon.png",
+							"uri": "https://aplus.beta.gouv.fr/assets/generated-js/62c004e15c9d828e20701f73755611ea-index.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "max-age=31536000"
 						},
 						{
-							"uri": "https://aplus.beta.gouv.fr/assets/stylesheets/2657e81ade3f64e6a03e14b4d2ade850-mdl-extensions.css",
+							"uri": "https://aplus.beta.gouv.fr/assets/images/bb24f2cd5ff2ee1dbcb59efcd02c83a8-favicon.png",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -409,7 +430,7 @@
 							"evidence": "max-age=31536000"
 						},
 						{
-							"uri": "https://aplus.beta.gouv.fr/assets/stylesheets/9c5d37c5cd2751b7069e577ab67f0337-main.css",
+							"uri": "https://aplus.beta.gouv.fr/assets/stylesheets/d2a7ce81e83bf805393f97c1e867c874-main.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",

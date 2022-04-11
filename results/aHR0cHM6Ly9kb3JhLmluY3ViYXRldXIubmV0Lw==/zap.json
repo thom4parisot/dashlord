@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.1",
-	"@generated": "Sun, 3 Apr 2022 08:48:25",
+	"@generated": "Sun, 10 Apr 2022 08:59:32",
 	"site":[ 
 		{
 			"@name": "https://dora.incubateur.net",
@@ -23,14 +23,14 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<form class=\"svelte-hy958g\">"
+							"evidence": "<form class=\"flex flex-col gap-s16 lg:flex-row\">"
 						},
 						{
 							"uri": "https://dora.incubateur.net/?category=ZAP&city=ZAP&subcategory=ZAP",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<form class=\"svelte-hy958g\">"
+							"evidence": "<form class=\"flex flex-col gap-s16 lg:flex-row\">"
 						}
 					],
 					"count": "2",
@@ -64,16 +64,9 @@
 							"param": "",
 							"attack": "",
 							"evidence": "default-src 'none';  connect-src https://api.dora.incubateur.net  https://api-adresse.data.gouv.fr/ https://plausible.io/api/event https://*.sentry.io http://*.hotjar.com:* https://*.hotjar.com:* http://*.hotjar.io https://*.hotjar.io wss://*.hotjar.com  https://client.crisp.chat/static/ wss://client.relay.crisp.chat/ https://storage.crisp.chat/users/upload/; script-src 'self' 'unsafe-inline' https://metabase.dora.fabrique.social.gouv.fr/app/iframeResizer.js https://plausible.io/js/plausible.outbound-links.js https://static.hotjar.com https://script.hotjar.com http://*.hotjar.com https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io https://client.crisp.chat/; font-src 'self' http://*.hotjar.com https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io https://client.crisp.chat/static/; img-src 'self' data: http://*.hotjar.com https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io https://*.crisp.chat/; style-src 'self' 'unsafe-inline' https://client.crisp.chat/; frame-src http://metabase.dora.fabrique.social.gouv.fr https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io"
-						},
-						{
-							"uri": "https://dora.incubateur.net/contribuer",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "default-src 'none';  connect-src https://api.dora.incubateur.net  https://api-adresse.data.gouv.fr/ https://plausible.io/api/event https://*.sentry.io http://*.hotjar.com:* https://*.hotjar.com:* http://*.hotjar.io https://*.hotjar.io wss://*.hotjar.com  https://client.crisp.chat/static/ wss://client.relay.crisp.chat/ https://storage.crisp.chat/users/upload/; script-src 'self' 'unsafe-inline' https://metabase.dora.fabrique.social.gouv.fr/app/iframeResizer.js https://plausible.io/js/plausible.outbound-links.js https://static.hotjar.com https://script.hotjar.com http://*.hotjar.com https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io https://client.crisp.chat/; font-src 'self' http://*.hotjar.com https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io https://client.crisp.chat/static/; img-src 'self' data: http://*.hotjar.com https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io https://*.crisp.chat/; style-src 'self' 'unsafe-inline' https://client.crisp.chat/; frame-src http://metabase.dora.fabrique.social.gouv.fr https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io"
 						}
 					],
-					"count": "3",
+					"count": "2",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
 					"otherinfo": "<p>The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: </p><p>frame-ancestors, form-action</p><p></p><p>The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</p>",
 					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
@@ -104,16 +97,9 @@
 							"param": "",
 							"attack": "",
 							"evidence": "default-src 'none';  connect-src https://api.dora.incubateur.net  https://api-adresse.data.gouv.fr/ https://plausible.io/api/event https://*.sentry.io http://*.hotjar.com:* https://*.hotjar.com:* http://*.hotjar.io https://*.hotjar.io wss://*.hotjar.com  https://client.crisp.chat/static/ wss://client.relay.crisp.chat/ https://storage.crisp.chat/users/upload/; script-src 'self' 'unsafe-inline' https://metabase.dora.fabrique.social.gouv.fr/app/iframeResizer.js https://plausible.io/js/plausible.outbound-links.js https://static.hotjar.com https://script.hotjar.com http://*.hotjar.com https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io https://client.crisp.chat/; font-src 'self' http://*.hotjar.com https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io https://client.crisp.chat/static/; img-src 'self' data: http://*.hotjar.com https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io https://*.crisp.chat/; style-src 'self' 'unsafe-inline' https://client.crisp.chat/; frame-src http://metabase.dora.fabrique.social.gouv.fr https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io"
-						},
-						{
-							"uri": "https://dora.incubateur.net/contribuer",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "default-src 'none';  connect-src https://api.dora.incubateur.net  https://api-adresse.data.gouv.fr/ https://plausible.io/api/event https://*.sentry.io http://*.hotjar.com:* https://*.hotjar.com:* http://*.hotjar.io https://*.hotjar.io wss://*.hotjar.com  https://client.crisp.chat/static/ wss://client.relay.crisp.chat/ https://storage.crisp.chat/users/upload/; script-src 'self' 'unsafe-inline' https://metabase.dora.fabrique.social.gouv.fr/app/iframeResizer.js https://plausible.io/js/plausible.outbound-links.js https://static.hotjar.com https://script.hotjar.com http://*.hotjar.com https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io https://client.crisp.chat/; font-src 'self' http://*.hotjar.com https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io https://client.crisp.chat/static/; img-src 'self' data: http://*.hotjar.com https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io https://*.crisp.chat/; style-src 'self' 'unsafe-inline' https://client.crisp.chat/; frame-src http://metabase.dora.fabrique.social.gouv.fr https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io"
 						}
 					],
-					"count": "3",
+					"count": "2",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
 					"otherinfo": "<p>script-src includes unsafe-inline.</p>",
 					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
@@ -144,16 +130,9 @@
 							"param": "",
 							"attack": "",
 							"evidence": "default-src 'none';  connect-src https://api.dora.incubateur.net  https://api-adresse.data.gouv.fr/ https://plausible.io/api/event https://*.sentry.io http://*.hotjar.com:* https://*.hotjar.com:* http://*.hotjar.io https://*.hotjar.io wss://*.hotjar.com  https://client.crisp.chat/static/ wss://client.relay.crisp.chat/ https://storage.crisp.chat/users/upload/; script-src 'self' 'unsafe-inline' https://metabase.dora.fabrique.social.gouv.fr/app/iframeResizer.js https://plausible.io/js/plausible.outbound-links.js https://static.hotjar.com https://script.hotjar.com http://*.hotjar.com https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io https://client.crisp.chat/; font-src 'self' http://*.hotjar.com https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io https://client.crisp.chat/static/; img-src 'self' data: http://*.hotjar.com https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io https://*.crisp.chat/; style-src 'self' 'unsafe-inline' https://client.crisp.chat/; frame-src http://metabase.dora.fabrique.social.gouv.fr https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io"
-						},
-						{
-							"uri": "https://dora.incubateur.net/contribuer",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "default-src 'none';  connect-src https://api.dora.incubateur.net  https://api-adresse.data.gouv.fr/ https://plausible.io/api/event https://*.sentry.io http://*.hotjar.com:* https://*.hotjar.com:* http://*.hotjar.io https://*.hotjar.io wss://*.hotjar.com  https://client.crisp.chat/static/ wss://client.relay.crisp.chat/ https://storage.crisp.chat/users/upload/; script-src 'self' 'unsafe-inline' https://metabase.dora.fabrique.social.gouv.fr/app/iframeResizer.js https://plausible.io/js/plausible.outbound-links.js https://static.hotjar.com https://script.hotjar.com http://*.hotjar.com https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io https://client.crisp.chat/; font-src 'self' http://*.hotjar.com https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io https://client.crisp.chat/static/; img-src 'self' data: http://*.hotjar.com https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io https://*.crisp.chat/; style-src 'self' 'unsafe-inline' https://client.crisp.chat/; frame-src http://metabase.dora.fabrique.social.gouv.fr https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io"
 						}
 					],
-					"count": "3",
+					"count": "2",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
 					"otherinfo": "<p>style-src includes unsafe-inline.</p>",
 					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
@@ -172,6 +151,13 @@
 					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
 					"instances":[ 
 						{
+							"uri": "https://dora.incubateur.net/services/creer",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
 							"uri": "https://dora.incubateur.net/sitemap.xml",
 							"method": "GET",
 							"param": "",
@@ -179,13 +165,39 @@
 							"evidence": ""
 						}
 					],
-					"count": "1",
+					"count": "2",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header, to achieve optimal browser support: \"Content-Security-Policy\" for Chrome 25+, Firefox 23+ and Safari 7+, \"X-Content-Security-Policy\" for Firefox 4.0+ and Internet Explorer 10+, and \"X-WebKit-CSP\" for Chrome 14+ and Safari 6+.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "96"
+					"sourceid": "52"
+				},
+				{
+					"pluginid": "10020",
+					"alertRef": "10020-1",
+					"alert": "Missing Anti-clickjacking Header",
+					"name": "Missing Anti-clickjacking Header",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks.</p>",
+					"instances":[ 
+						{
+							"uri": "https://dora.incubateur.net/services/creer",
+							"method": "GET",
+							"param": "X-Frame-Options",
+							"attack": "",
+							"evidence": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p><p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
+					"cweid": "1021",
+					"wascid": "15",
+					"sourceid": "52"
 				},
 				{
 					"pluginid": "90003",
@@ -212,20 +224,6 @@
 							"evidence": "<script defer data-domain=\"dora.incubateur.net\" src=\"https://plausible.io/js/plausible.outbound-links.js\" data-svelte=\"svelte-1mwuy44\"></script>"
 						},
 						{
-							"uri": "https://dora.incubateur.net/contribuer",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<script defer data-domain=\"dora.incubateur.net\" src=\"https://plausible.io/js/plausible.outbound-links.js\" data-svelte=\"svelte-1mwuy44\"></script>"
-						},
-						{
-							"uri": "https://dora.incubateur.net/contribuer/saisie",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<script defer data-domain=\"dora.incubateur.net\" src=\"https://plausible.io/js/plausible.outbound-links.js\" data-svelte=\"svelte-1mwuy44\"></script>"
-						},
-						{
 							"uri": "https://dora.incubateur.net/sitemap.xml",
 							"method": "GET",
 							"param": "",
@@ -233,7 +231,7 @@
 							"evidence": "<script defer data-domain=\"dora.incubateur.net\" src=\"https://plausible.io/js/plausible.outbound-links.js\" data-svelte=\"svelte-1mwuy44\"></script>"
 						}
 					],
-					"count": "5",
+					"count": "3",
 					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en/docs/Web/Security/Subresource_Integrity</p>",
@@ -265,7 +263,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "96"
+					"sourceid": "71"
 				},
 				{
 					"pluginid": "10017",
@@ -292,20 +290,6 @@
 							"evidence": "<script defer data-domain=\"dora.incubateur.net\" src=\"https://plausible.io/js/plausible.outbound-links.js\" data-svelte=\"svelte-1mwuy44\"></script>"
 						},
 						{
-							"uri": "https://dora.incubateur.net/contribuer",
-							"method": "GET",
-							"param": "https://plausible.io/js/plausible.outbound-links.js",
-							"attack": "",
-							"evidence": "<script defer data-domain=\"dora.incubateur.net\" src=\"https://plausible.io/js/plausible.outbound-links.js\" data-svelte=\"svelte-1mwuy44\"></script>"
-						},
-						{
-							"uri": "https://dora.incubateur.net/contribuer/saisie",
-							"method": "GET",
-							"param": "https://plausible.io/js/plausible.outbound-links.js",
-							"attack": "",
-							"evidence": "<script defer data-domain=\"dora.incubateur.net\" src=\"https://plausible.io/js/plausible.outbound-links.js\" data-svelte=\"svelte-1mwuy44\"></script>"
-						},
-						{
 							"uri": "https://dora.incubateur.net/sitemap.xml",
 							"method": "GET",
 							"param": "https://plausible.io/js/plausible.outbound-links.js",
@@ -313,7 +297,7 @@
 							"evidence": "<script defer data-domain=\"dora.incubateur.net\" src=\"https://plausible.io/js/plausible.outbound-links.js\" data-svelte=\"svelte-1mwuy44\"></script>"
 						}
 					],
-					"count": "5",
+					"count": "3",
 					"solution": "<p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p>",
 					"otherinfo": "",
 					"reference": "",
@@ -332,7 +316,7 @@
 					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
 					"instances":[ 
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/vendor-8afe3d98.js",
+							"uri": "https://dora.incubateur.net/_app/pages/__layout.svelte-f4a29541.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -352,7 +336,7 @@
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "63"
+					"sourceid": "67"
 				},
 				{
 					"pluginid": "10063",
@@ -372,35 +356,42 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/auth-c99982df.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/auth-2978dcad.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/button-menu-972380cc.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/centered-grid-3cc7a015.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/centered-grid-e5cf5c12.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/external-link-line-4dc986cb.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/link-button-4905e742.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/index-4f99e522.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/logger-46715dc3.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/index-7665bf03.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://dora.incubateur.net/_app/chunks/logger-7b94b781.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -414,35 +405,28 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/stores-72c97ada.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/stores-b13a6a84.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/utils-2e82e715.js",
+							"uri": "https://dora.incubateur.net/_app/pages/__layout.svelte-f4a29541.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/vendor-8afe3d98.js",
+							"uri": "https://dora.incubateur.net/_app/start-edab0b93.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/pages/__layout.svelte-6cabacec.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://dora.incubateur.net/_app/start-37e3578d.js",
+							"uri": "https://dora.incubateur.net/services/creer",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -455,7 +439,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "68"
+					"sourceid": "69"
 				},
 				{
 					"pluginid": "10096",
@@ -468,114 +452,121 @@
 					"desc": "<p>A timestamp was disclosed by the application/web server - Unix</p>",
 					"instances":[ 
 						{
-							"uri": "https://dora.incubateur.net/_app/assets/button-menu-3705663e.css",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "49372929"
-						},
-						{
-							"uri": "https://dora.incubateur.net/_app/assets/centered-grid-57531f47.css",
+							"uri": "https://dora.incubateur.net/_app/assets/centered-grid-e8aab67b.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "00000026"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/button-e39b512e.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/api-6e6b0b0c.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "95003859"
+							"evidence": "32138325"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/field-242d8bf3.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/field-0e4b978f.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "1073741824"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/field-242d8bf3.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/field-0e4b978f.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "134222033"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/field-242d8bf3.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/field-0e4b978f.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "16777216"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/field-242d8bf3.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/field-0e4b978f.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "268435456"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/field-242d8bf3.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/field-0e4b978f.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "33554432"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/field-242d8bf3.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/field-0e4b978f.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "536870912"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/field-242d8bf3.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/field-0e4b978f.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "536870916"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/field-242d8bf3.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/field-0e4b978f.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "536870920"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/field-242d8bf3.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/field-0e4b978f.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "69206016"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/field-242d8bf3.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/field-0e4b978f.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "805306368"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/field-242d8bf3.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/field-0e4b978f.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "805306380"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/start-37e3578d.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/stores-b13a6a84.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "29013073"
+							"evidence": "94144636"
+						},
+						{
+							"uri": "https://dora.incubateur.net/_app/start-edab0b93.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "35495614"
+						},
+						{
+							"uri": "https://dora.incubateur.net/_app/start-edab0b93.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "99376069"
 						}
 					],
-					"count": "15",
+					"count": "16",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
-					"otherinfo": "<p>49372929, which evaluates to: 1971-07-26 10:42:09</p>",
+					"otherinfo": "<p>00000026, which evaluates to: 1970-01-01 00:00:26</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
@@ -599,7 +590,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/assets/centered-grid-57531f47.css",
+							"uri": "https://dora.incubateur.net/_app/assets/centered-grid-e8aab67b.css",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -620,14 +611,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/assets/pages/__layout.svelte-a0fa86e4.css",
-							"method": "GET",
-							"param": "X-Content-Type-Options",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://dora.incubateur.net/_app/assets/pages/index.svelte-40db993a.css",
+							"uri": "https://dora.incubateur.net/_app/assets/pages/__layout.svelte-193248e1.css",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -641,7 +625,14 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/auth-c99982df.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/index-4f99e522.js",
+							"method": "GET",
+							"param": "X-Content-Type-Options",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://dora.incubateur.net/_app/chunks/index-7665bf03.js",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -655,21 +646,21 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/vendor-8afe3d98.js",
+							"uri": "https://dora.incubateur.net/_app/pages/__layout.svelte-f4a29541.js",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/pages/__layout.svelte-6cabacec.js",
+							"uri": "https://dora.incubateur.net/_app/start-edab0b93.js",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/start-37e3578d.js",
+							"uri": "https://dora.incubateur.net/services/creer",
 							"method": "GET",
 							"param": "X-Content-Type-Options",
 							"attack": "",
@@ -682,7 +673,7 @@
 					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "59"
+					"sourceid": "60"
 				},
 				{
 					"pluginid": "10094",
@@ -709,42 +700,28 @@
 							"evidence": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAASpAAAEqQFY9d3tAAACkUlEQVRYhc2XsWvbQBTGP7uOk6BCoF0KHZqhnUqo06VbnaUQOiVToZON5lL9B23/Aw0da+qp0MleCoYuVrd0SBxCp3RIh0KngCHGiZ1U5VOeHMk+6c5Cgf5ARpzfu+/p7undU8H3fZjQcAYVAFsANgBUE1w8AF0Abdu1eibzagNoOIMaAAfAI6NIr9gH4Nqu1cwUQMMZrAJopjytKVyVmu1aRyr7YoI4l7qXgzhkjp7MqQ9AlrwFYCUH8RDO1ZK5Y8S2QKJs5SisYtt2rXY4PglA9ryX85Or6AOohDlRihg0TcRv3irg3loJq2s3YuNHBxf4dXCOk2Pta70iWnydL1dA9uajzvPxZhnrmwupNnudMXY7I91UpM5XNExCR2f99OWiVpzQhrYGBJqFD69PWOH20uxNnnwaw5VYL0p5TYR7Pq84ZCXoq2GrGCZDEkw4FaNTHz+8cXDxXkWSb4SNkq7aTWc7RPzzuyFGw0vh3c4YL94so7xUmPFlgClUlaVYx+HO+UQ8CGjoB2NZyBRAnmQK4MGTEm7fvXLlPceyoPVihbtzP54H3Ovnr5Ymy07x6f0PfXVoV+Dwu3pvKfiwuhBcKnHC0mwSgJdmwARjUZkX+hicC15RerhUWNGOf/81DoG2hudBlwG0DQzx5f2pURC0oa0h7fA07Jk0neXlAp7ZizNJGfLn5wW+Ns5iNSKFfdu1KmESuiYenJhPp8oJjvE/Q3Hylj/Rjqg7TxPKg4anJCRHDBIuime7VnAGRetAbZ6WjILfPp3NIxrSF62ASR2QHm2ma70GYt8IsUIk3Wr9GsXr0Y54JgAJgg3jtixVXvSlHZ/5TFOWYomyoquShnjShivrzf/7caoIJP/PcwD/APUxGhwOWj+2AAAAAElFTkSuQmCC"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/assets/pages/index.svelte-40db993a.css",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgyNHYyNEgweiIvPjxwYXRoIHN0cm9rZT0iI2ZmZiIgZD0ibTEwIDE1LjE3MiA5LjE5Mi05LjE5MyAxLjQxNSAxLjQxNEwxMCAxOGwtNi4zNjQtNi4zNjQgMS40MTQtMS40MTR6Ii8+PC9zdmc+"
-						},
-						{
-							"uri": "https://dora.incubateur.net/_app/chunks/newsletter-button-44cd0e23.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "com/serve/MUIEAEkY4naptXBIq5NdRg5UPxP1wmwbGCinne5c1gynY-wfrZ0Dz0QP_NqkXtfyYqhdaq3AO8VFZJ9giRi9ZT0eah7Ut2U0LeKSTVIHQb_5nhvTLUMWXo9ZMeIYCHVlzmjkXGQ66S5ewcYpSADUgV--2RVZ_mrnsRJQoCNwZ8y-sWzfQsEzfKuTA7SLbZ_dWeqaigudym3EaiHT"
-						},
-						{
-							"uri": "https://dora.incubateur.net/_app/chunks/vendor-8afe3d98.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/field-0e4b978f.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "20h-2v-7H4v7H2V4h2v7h7V4h2v16zm8-12v12h-2v-9"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/pages/__layout.svelte-6cabacec.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/newsletter-button-ac3b8df7.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAASpAAAEqQFY9d3tAAACkUlEQVRYhc2XsWvbQBTGP7uOk6BCoF0KHZqhnUqo06VbnaUQOiVToZON5lL9B23/Aw0da+qp0MleCoYuVrd0SBxCp3RIh0KngCHGiZ1U5VOeHMk+6c5Cgf5ARpzfu+/p7undU8H3fZjQcAYVAFsANgBUE1w8AF0Abdu1eibzagNoOIMaAAfAI6NIr9gH4Nqu1cwUQMMZrAJopjytKVyVmu1aRyr7YoI4l7qXgzhkjp7MqQ9AlrwFYCUH8RDO1ZK5Y8S2QKJs5SisYtt2rXY4PglA9ryX85Or6AOohDlRihg0TcRv3irg3loJq2s3YuNHBxf4dXCOk2Pta70iWnydL1dA9uajzvPxZhnrmwupNnudMXY7I91UpM5XNExCR2f99OWiVpzQhrYGBJqFD69PWOH20uxNnnwaw5VYL0p5TYR7Pq84ZCXoq2GrGCZDEkw4FaNTHz+8cXDxXkWSb4SNkq7aTWc7RPzzuyFGw0vh3c4YL94so7xUmPFlgClUlaVYx+HO+UQ8CGjoB2NZyBRAnmQK4MGTEm7fvXLlPceyoPVihbtzP54H3Ovnr5Ymy07x6f0PfXVoV+Dwu3pvKfiwuhBcKnHC0mwSgJdmwARjUZkX+hicC15RerhUWNGOf/81DoG2hudBlwG0DQzx5f2pURC0oa0h7fA07Jk0neXlAp7ZizNJGfLn5wW+Ns5iNSKFfdu1KmESuiYenJhPp8oJjvE/Q3Hylj/Rjqg7TxPKg4anJCRHDBIuime7VnAGRetAbZ6WjILfPp3NIxrSF62ASR2QHm2ma70GYt8IsUIk3Wr9GsXr0Y54JgAJgg3jtixVXvSlHZ/5TFOWYomyoquShnjShivrzf/7caoIJP/PcwD/APUxGhwOWj+2AAAAAElFTkSuQmCC"
+							"evidence": "com/serve/MUIEAEkY4naptXBIq5NdRg5UPxP1wmwbGCinne5c1gynY-wfrZ0Dz0QP_NqkXtfyYqhdaq3AO8VFZJ9giRi9ZT0eah7Ut2U0LeKSTVIHQb_5nhvTLUMWXo9ZMeIYCHVlzmjkXGQ66S5ewcYpSADUgV--2RVZ_mrnsRJQoCNwZ8y-sWzfQsEzfKuTA7SLbZ_dWeqaigudym3EaiHT"
 						},
 						{
-							"uri": "https://dora.incubateur.net/contribuer",
+							"uri": "https://dora.incubateur.net/_app/chunks/utils-2b4fe4b6.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAASpAAAEqQFY9d3tAAACkUlEQVRYhc2XsWvbQBTGP7uOk6BCoF0KHZqhnUqo06VbnaUQOiVToZON5lL9B23/Aw0da+qp0MleCoYuVrd0SBxCp3RIh0KngCHGiZ1U5VOeHMk+6c5Cgf5ARpzfu+/p7undU8H3fZjQcAYVAFsANgBUE1w8AF0Abdu1eibzagNoOIMaAAfAI6NIr9gH4Nqu1cwUQMMZrAJopjytKVyVmu1aRyr7YoI4l7qXgzhkjp7MqQ9AlrwFYCUH8RDO1ZK5Y8S2QKJs5SisYtt2rXY4PglA9ryX85Or6AOohDlRihg0TcRv3irg3loJq2s3YuNHBxf4dXCOk2Pta70iWnydL1dA9uajzvPxZhnrmwupNnudMXY7I91UpM5XNExCR2f99OWiVpzQhrYGBJqFD69PWOH20uxNnnwaw5VYL0p5TYR7Pq84ZCXoq2GrGCZDEkw4FaNTHz+8cXDxXkWSb4SNkq7aTWc7RPzzuyFGw0vh3c4YL94so7xUmPFlgClUlaVYx+HO+UQ8CGjoB2NZyBRAnmQK4MGTEm7fvXLlPceyoPVihbtzP54H3Ovnr5Ymy07x6f0PfXVoV+Dwu3pvKfiwuhBcKnHC0mwSgJdmwARjUZkX+hicC15RerhUWNGOf/81DoG2hudBlwG0DQzx5f2pURC0oa0h7fA07Jk0neXlAp7ZizNJGfLn5wW+Ns5iNSKFfdu1KmESuiYenJhPp8oJjvE/Q3Hylj/Rjqg7TxPKg4anJCRHDBIuime7VnAGRetAbZ6WjILfPp3NIxrSF62ASR2QHm2ma70GYt8IsUIk3Wr9GsXr0Y54JgAJgg3jtixVXvSlHZ/5TFOWYomyoquShnjShivrzf/7caoIJP/PcwD/APUxGhwOWj+2AAAAAElFTkSuQmCC"
+							"evidence": "disableForced4SpacesIndentedSublists"
 						},
 						{
-							"uri": "https://dora.incubateur.net/contribuer/saisie",
+							"uri": "https://dora.incubateur.net/_app/pages/__layout.svelte-f4a29541.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -765,7 +742,7 @@
 							"evidence": "iVBORw0KGgoAAAANSUhEUgAAAHcAAAAeCAYAAAAWwoEYAAADl0lEQVRoge1Y0W3bQAx9CjKARlC+9GVUmqDJBHEmiDyB6wkcTxBngtgTxJ0gzgQW4C/9aYOmE6g4lTQo+k6y3Rb94QOERNQd+cjj8XiGwWAwGAwGg8FgMBgMBoPB8F8RNRXe+whEKe7c36ZCAeCRxC9Rig2PUd8kPgAsoxSfQ3YAzAA8D/HwYYCb05kBKKO0teFkmbC1jlKsAnq/Abjn+QBqAIsoRS30ttwG/HNz1wH/XIxWTicLdvtW7xTAGEAMtP685CNsBTe2d/BLydfXAG57SEnMAST0zgYZSUCPk02bCvkJduIzuJzDLfPolbY+tLKmar+/8+IRePy4qdpE03qHuH8fipFb4N2+XdA3AJ/0vaQxt7s9FvkIS2XvtqnwM0rxpOQfbnE5G2LhTCmUO2fHIngOmcv+KG3HafDchB6ntwjYqenR2PqC7sOZ3E7FXHB0vqxoFyUyLh7OEH7LOGouvhhN3eIBeKXv0n5MsufdHqXcwYR5U2EbpV35lSspVPJmQj4TcgRK7jTg5IzmPUhhwM5a2WHUFCx+NgiDucmgh7idikLovHFlL0pxQ9xzX+IIP9Y6FrJsqhjlQpZRAkFVDCjZfcCHt6bqJDmuh5ylCWx0RVnk3oumaknqTH5sqrY0fBWyULaHUIgAgxb46MxV3DbieAhxOxUxjSuljig9lMQ/Bcfoi9BTEv9aLORSndVxYOH525sUDC6u2gWxcNzBNRxPanyh3ktKinOgy3WoxPbtUM0t6RkbQnzBnFPgi9GCOEubY9UffIryz9iKRe8s/FUfEWosJJGxagp85bpUO3VywQ46lOtAWfNxKwa4JXQ+628+bpxYGXXMzp5rXH401VEyXwIdowXFaKWSMFHvMTVmGnc+P3oXV2QOiBCfgex8QtcQCbcQE/H+eoHzrkFo1KM7zVO4jVVj5s6lRiWF7zyXyfRMc97J3tzj87mYqZ7E2YjzUct9GUi4tjHLR8dVkBLjQcuHFleWvQfRNEhFR7uX7pkctOwvZXsft7sAtyldEUIN2UTeLxnEfxKYswzdi88BdbZ8hifUoSMftQvP+muRwN6+Q3DeqqRExP9QmTtcheiHh0Ot1x2i2km1bP9pbufw5zZdyWsOrh7vQae5OZWbsMv30pi7cd/CKj3coPEVaCP4Zhx4eQWhOZ1Y9MTXGyP8/iGjEyfa1T4fO/4Lea9vBoPBYDAYDAaDwWAwGAwGwz8GgF8siXCCbrSRhgAAAABJRU5ErkJggg=="
 						}
 					],
-					"count": "10",
+					"count": "8",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
 					"otherinfo": "<p>\uFFFDPNG</p><p>\\x001a</p><p>\\x0000\\x0000\\x0000\rIHDR\\x0000\\x0000\\x0000 \\x0000\\x0000\\x0000 \\x0008\\x0006\\x0000\\x0000\\x0000szz\uFFFD\\x0000\\x0000\\x0000\tpHYs\\x0000\\x0000\\x0004\uFFFD\\x0000\\x0000\\x0004\uFFFD\\x0001X\uFFFD\uFFFD\uFFFD\\x0000\\x0000\\x0002\uFFFDIDATX\uFFFD\u0357\uFFFDk\uFFFD@\\x0014\uFFFD?\uFFFD\uFFFD\uFFFD\uFFFDB\uFFFD]</p><p>\\x001d\uFFFD\uFFFD\uFFFDJ\uFFFD\u04E5[\uFFFD\uFFFD\\x0010:%S\uFFFD\uFFFD\uFFFD\uFFFDR\uFFFD\\x0007m\uFFFD\\x0003\r\\x001dk\uFFFD\uFFFD\uFFFD^</p><p>\uFFFD.V\uFFFDtH\\x001cB\uFFFDtH\uFFFDB\uFFFD\uFFFD!\u0189\uFFFDT\uFFFDS\uFFFD\\x001c\uFFFD>\uFFFD\uFFFDB\uFFFD\uFFFD@F\uFFFD\u07FB\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDS\uFFFD\uFFFD}\uFFFD\uFFFDp\\x0006\\x0015\\x0000[\\x00006\\x0000T\\x0013\\<\\x0000]\\x0000m\u06F5z&\uFFFDj\\x0003h8\uFFFD\\x001a\\x0000\\x0007\uFFFD#\uFFFDH\uFFFD\uFFFD\\x0007\uFFFD\u06AE\uFFFD\uFFFD\\x0014@\uFFFD\\x0019\uFFFD\\x0002h\uFFFD<\uFFFD)\\\uFFFD\uFFFD\uFFFDZG*\uFFFDb\uFFFD8\uFFFD\uFFFD\uFFFD\uFFFD8d\uFFFD\uFFFD\u0329\\x000f@\uFFFD\uFFFD\\x0005`%\\x0007\uFFFD\\x0010\uFFFD\u0552\uFFFDc\u0136@\uFFFDl\uFFFD(\uFFFDb\uFFFDv\uFFFDv8>\t@\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\x0003\uFFFD\uFFFD9Q\uFFFD\\x00184M\uFFFDo\uFFFD*\uFFFD\uFFFDZ\t\uFFFDk7b\uFFFDG\\x0007\\x0017\uFFFDup\uFFFD\uFFFDc\uFFFDk\uFFFD\"Z|\uFFFD/W@\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDf\\x0019\uFFFD\\x000b\uFFFD6{\uFFFD1v;#\uFFFDT\uFFFD\uFFFDW4LBGg\uFFFD\uFFFD\uFFFDV\uFFFD\u0406\uFFFD\\x0006\\x0004\uFFFD\uFFFD\\x000f\uFFFDOX\uFFFD\uFFFD\uFFFD\uFFFDM\uFFFD|\\x001a\u00D5X/JyM\uFFFD{>\uFFFD8d%\uFFFDa\uFFFD\\x0018&C\\x0012L8\\x0015\uFFFDS\\x001f?\uFFFDqp\uFFFD^E\uFFFDo\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDMg;D\uFFFD\uFFFD!F\uFFFDK\uFFFD\uFFFD\uFFFD\\x0018/\uFFFD,\uFFFD\uFFFDT\uFFFD\uFFFDe\uFFFD)T\uFFFD\uFFFDX\uFFFD\uFFFD\uFFFD\uFFFDD<\\x0008h\uFFFD\\x0007cY\uFFFD\\x0014@\uFFFDd</p><p>\uFFFD\uFFFD\uFFFD\\x0012n\u07FDr\uFFFD=\u01F2\uFFFD\uFFFDb\uFFFD\uFFFDs?\uFFFD\\x0007\uFFFD\uFFFD\u7BD6&\uFFFDN\uFFFD\uFFFD\uFFFD\\x000f}uhW\uFFFD\uFFFDzo)\uFFFD\uFFFD\uFFFD\\x0010\\*q\uFFFD\uFFFDl\\x0012\uFFFD\uFFFDf\uFFFD\\x0004cQ\uFFFD\\x0017\uFFFD\\x0018\uFFFD\\x000b^Qz\uFFFDTX\u044E\uFFFD5\\x000e\uFFFD\uFFFD\uFFFD\uFFFDA\uFFFD\\x0001\uFFFD\r\\x000c\uFFFD\uFFFD\uFFFD\uFFFDQ\\x0010\uFFFD\uFFFD\uFFFD!\uFFFD\uFFFD4\uFFFD4\uFFFD\uFFFD\uFFFD\\x0002\uFFFD\u064B3I\\x0019\uFFFD\uFFFD\uFFFD\\x0005\uFFFD6\uFFFDb5\"\uFFFD}\u06F5*a\\x0012\uFFFD&\\x001e\uFFFD\uFFFDO\uFFFD\uFFFD\t\uFFFD\uFFFD?Cq\uFFFD?\u044E\uFFFD;O\\x0013\u0283\uFFFD\uFFFD$$G\\x000c\\x0012.\uFFFDg\uFFFDVp\\x0006E\uFFFD@m\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD>\uFFFD\uFFFD#\\x001a\uFFFD\\x0017\uFFFD\uFFFDI\\x001d\uFFFD\\x001em\uFFFDk\uFFFD\\x0006b\uFFFD\\x0008\uFFFDB$\uFFFDj\uFFFD\\x001a\uFFFD\uFFFD\u044Ex&\\x0000\t\uFFFD\r\uFFFD,U^\uFFFD\uFFFD\\x001d\uFFFD\uFFFDLS\uFFFDb\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDx\u0486+\uFFFD\uFFFD\uFFFD\uFFFDq\uFFFD\\x0008$\uFFFD\uFFFDs\\x0000\uFFFD\\x0000\uFFFD1\\x001a\\x001c\\x000eZ?\uFFFD\\x0000\\x0000\\x0000\\x0000IEND\uFFFDB`\uFFFD</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
@@ -798,70 +775,70 @@
 							"evidence": "from"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/auth-c99982df.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/auth-2978dcad.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "user"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/vendor-8afe3d98.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/index-4f99e522.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from"
+						},
+						{
+							"uri": "https://dora.incubateur.net/_app/chunks/index-7665bf03.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from"
+						},
+						{
+							"uri": "https://dora.incubateur.net/_app/chunks/logger-7b94b781.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "bug"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/vendor-8afe3d98.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/logger-7b94b781.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "db"
+							"evidence": "FROM"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/vendor-8afe3d98.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "from"
-						},
-						{
-							"uri": "https://dora.incubateur.net/_app/chunks/vendor-8afe3d98.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "user"
-						},
-						{
-							"uri": "https://dora.incubateur.net/_app/chunks/vendor-8afe3d98.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "xxx"
-						},
-						{
-							"uri": "https://dora.incubateur.net/_app/pages/__layout.svelte-6cabacec.js",
+							"uri": "https://dora.incubateur.net/_app/pages/__layout.svelte-f4a29541.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "from"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/pages/__layout.svelte-6cabacec.js",
+							"uri": "https://dora.incubateur.net/_app/pages/__layout.svelte-f4a29541.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "user"
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/start-37e3578d.js",
+							"uri": "https://dora.incubateur.net/_app/start-edab0b93.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "query"
 						},
 						{
-							"uri": "https://dora.incubateur.net/contribuer",
+							"uri": "https://dora.incubateur.net/services/creer",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from"
+						},
+						{
+							"uri": "https://dora.incubateur.net/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -870,11 +847,11 @@
 					],
 					"count": "12",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
-					"otherinfo": "<p>The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"<script type=\"module\" data-hydrate=\"17mmf0x\"></p><p>\t\timport { start } from \"/_app/start-37e3578d.js\";</p><p>\t\tstart({</p><p>\t\t\ttarget: document.q\", see evidence field for the suspicious comment/snippet.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bFROM\\b and was detected in the element starting with: \"<script type=\"module\" data-hydrate=\"15ypmdy\"></p><p>\t\timport { start } from \"/_app/start-edab0b93.js\";</p><p>\t\tstart({</p><p>\t\t\ttarget: document.q\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "7"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10109",
@@ -901,18 +878,11 @@
 							"evidence": "<a class=\"flex flex-row justify-between py-s8 text-f14 lg:items-center lg:pr-s32 text-gray-text-alt2\" href=\"#\" target=\"_blank\" rel=\"noopener nofollow\" >Gestion des cookies\n  </a>"
 						},
 						{
-							"uri": "https://dora.incubateur.net/contribuer",
+							"uri": "https://dora.incubateur.net/services/creer",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<a class=\"flex flex-row justify-between py-s8 text-f14 lg:items-center lg:pr-s32 text-gray-text-alt2\" href=\"#\" target=\"_blank\" rel=\"noopener nofollow\" >Gestion des cookies\n  </a>"
-						},
-						{
-							"uri": "https://dora.incubateur.net/contribuer/saisie",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<a class=\"flex flex-row justify-between py-s8 text-f14 lg:items-center lg:pr-s32 text-gray-text-alt2\" href=\"#\" target=\"_blank\" rel=\"noopener nofollow\" >Gestion des cookies\n  </a>"
+							"evidence": "<script\n      type=\"text/javascript\"\n      src=\"/tarteaucitron-1.9.4/tarteaucitron.js\"\n    ></script>"
 						},
 						{
 							"uri": "https://dora.incubateur.net/sitemap.xml",
@@ -922,7 +892,7 @@
 							"evidence": "<a class=\"flex flex-row justify-between py-s8 text-f14 lg:items-center lg:pr-s32 text-gray-text-alt2\" href=\"#\" target=\"_blank\" rel=\"noopener nofollow\" >Gestion des cookies\n  </a>"
 						}
 					],
-					"count": "5",
+					"count": "4",
 					"solution": "<p>This is an informational alert and so no changes are required.</p>",
 					"otherinfo": "<p>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</p>",
 					"reference": "",
@@ -955,29 +925,22 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/contribuer",
-							"method": "GET",
-							"param": "Cache-Control",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://dora.incubateur.net/contribuer/saisie",
-							"method": "GET",
-							"param": "Cache-Control",
-							"attack": "",
-							"evidence": ""
-						},
-						{
 							"uri": "https://dora.incubateur.net/robots.txt",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
 							"evidence": ""
+						},
+						{
+							"uri": "https://dora.incubateur.net/services/creer",
+							"method": "GET",
+							"param": "Cache-Control",
+							"attack": "",
+							"evidence": "public,max-age=0,must-revalidate"
 						}
 					],
-					"count": "5",
-					"solution": "<p>Whenever possible ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"count": "4",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p>",
 					"cweid": "525",
@@ -1009,7 +972,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/assets/centered-grid-57531f47.css",
+							"uri": "https://dora.incubateur.net/_app/assets/centered-grid-e8aab67b.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1030,35 +993,28 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/assets/pages/__layout.svelte-a0fa86e4.css",
+							"uri": "https://dora.incubateur.net/_app/assets/pages/__layout.svelte-193248e1.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/assets/pages/index.svelte-40db993a.css",
+							"uri": "https://dora.incubateur.net/_app/chunks/index-4f99e522.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/chunks/vendor-8afe3d98.js",
+							"uri": "https://dora.incubateur.net/_app/chunks/index-7665bf03.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://dora.incubateur.net/_app/start-37e3578d.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://dora.incubateur.net/contribuer",
+							"uri": "https://dora.incubateur.net/_app/start-edab0b93.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1066,6 +1022,13 @@
 						},
 						{
 							"uri": "https://dora.incubateur.net/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://dora.incubateur.net/services/creer",
 							"method": "GET",
 							"param": "",
 							"attack": "",

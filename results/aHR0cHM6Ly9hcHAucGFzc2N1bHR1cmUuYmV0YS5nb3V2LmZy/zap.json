@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.1",
-	"@generated": "Sun, 3 Apr 2022 05:00:47",
+	"@generated": "Sun, 10 Apr 2022 05:14:49",
 	"site":[ 
 		{
 			"@name": "https://app.passculture.beta.gouv.fr",
@@ -406,12 +406,12 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "ADPycdukZXBB1boYtZFg4XtOgwprWscjlwwt4jkmL1xEhRua_kVsFZqXlaj7wLmb6vkhjb1OwV4gX-oEKLXDosIjt0nhIH0fYQ"
+							"evidence": "ADPycduXF9Fy5fG8ad0n7IOrTq9kDQKzYJnMZOR6Dp7PUkBpHeN-B1iYWGUXx3nWJs09rkB4eLaOY6ovoJir5RNxyhlsxTeG-NFe"
 						}
 					],
 					"count": "1",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>\\x00003\uFFFDq\u06E4epA\u057A\\x0018\uFFFD\uFFFD`\uFFFD{N\uFFFD</p><p>kZ\uFFFD#\uFFFD\\x000c-\uFFFD9&/\\D\uFFFD\\x001b\uFFFD\uFFFDEl\\x0015\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD!\uFFFD\uFFFDN\uFFFD^ _\uFFFD\\x0004(\uFFFD\u00E2\uFFFD#\uFFFDI\uFFFD }\\x001fa</p>",
+					"otherinfo": "<p>\\x00003\uFFFDq\u06D7\\x0017\uFFFDr\uFFFD\uFFFDi\uFFFD'\uC0EBN\uFFFDd\r\\x0002\uFFFD`\uFFFD\uFFFDd\uFFFDz\\x000e\uFFFD\uFFFDR@i\\x001d\uFFFD~\\x0007X\uFFFDXe\\x0017\uFFFDy\uFFFD&\uFFFD=\uFFFD@xx\uFFFD\uFFFDc\uFFFD/\uFFFD\uFFFD\uFFFD\uFFFD\\x0013q\uFFFD\\x0019l\uFFFD7\uFFFD\uFFFD\uFFFD^</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
@@ -462,7 +462,7 @@
 						}
 					],
 					"count": "1",
-					"solution": "<p>Whenever possible ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p>",
 					"cweid": "525",
@@ -484,7 +484,7 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "Age: 2520"
+							"evidence": "Age: 125"
 						}
 					],
 					"count": "1",

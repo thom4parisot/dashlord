@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.1",
-	"@generated": "Sun, 3 Apr 2022 08:03:56",
+	"@generated": "Sun, 10 Apr 2022 08:15:37",
 	"site":[ 
 		{
 			"@name": "https://rh-marine.chatbot.fabnum.fr",
@@ -26,14 +26,14 @@
 							"evidence": "default-src 'self'; img-src * data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' ws: wss:"
 						},
 						{
-							"uri": "https://rh-marine.chatbot.fabnum.fr/chatbot/",
+							"uri": "https://rh-marine.chatbot.fabnum.fr/robots.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "default-src 'self'; img-src * data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' ws: wss:"
 						},
 						{
-							"uri": "https://rh-marine.chatbot.fabnum.fr/robots.txt",
+							"uri": "https://rh-marine.chatbot.fabnum.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -66,14 +66,14 @@
 							"evidence": "default-src 'self'; img-src * data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' ws: wss:"
 						},
 						{
-							"uri": "https://rh-marine.chatbot.fabnum.fr/chatbot/",
+							"uri": "https://rh-marine.chatbot.fabnum.fr/robots.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "default-src 'self'; img-src * data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' ws: wss:"
 						},
 						{
-							"uri": "https://rh-marine.chatbot.fabnum.fr/robots.txt",
+							"uri": "https://rh-marine.chatbot.fabnum.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -106,14 +106,14 @@
 							"evidence": "default-src 'self'; img-src * data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' ws: wss:"
 						},
 						{
-							"uri": "https://rh-marine.chatbot.fabnum.fr/chatbot/",
+							"uri": "https://rh-marine.chatbot.fabnum.fr/robots.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "default-src 'self'; img-src * data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' ws: wss:"
 						},
 						{
-							"uri": "https://rh-marine.chatbot.fabnum.fr/robots.txt",
+							"uri": "https://rh-marine.chatbot.fabnum.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -127,32 +127,6 @@
 					"cweid": "693",
 					"wascid": "15",
 					"sourceid": "1"
-				},
-				{
-					"pluginid": "10110",
-					"alertRef": "10110",
-					"alert": "Dangerous JS Functions",
-					"name": "Dangerous JS Functions",
-					"riskcode": "1",
-					"confidence": "1",
-					"riskdesc": "Low (Low)",
-					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
-					"instances":[ 
-						{
-							"uri": "https://rh-marine.chatbot.fabnum.fr/chatbot/main.03de071a71002def71b3.js?1526100521",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "bypassSecurityTrustHtml"
-						}
-					],
-					"count": "1",
-					"solution": "<p>See the references for security advice on the use of these functions.</p>",
-					"otherinfo": "",
-					"reference": "<p>https://angular.io/guide/security</p>",
-					"cweid": "749",
-					"wascid": "-1",
-					"sourceid": "27"
 				},
 				{
 					"pluginid": "10063",
@@ -173,13 +147,6 @@
 						},
 						{
 							"uri": "https://rh-marine.chatbot.fabnum.fr/chatbot/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://rh-marine.chatbot.fabnum.fr/chatbot/main.03de071a71002def71b3.js?1526100521",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -207,7 +174,7 @@
 							"evidence": ""
 						}
 					],
-					"count": "6",
+					"count": "5",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
@@ -249,32 +216,6 @@
 					"sourceid": "1"
 				},
 				{
-					"pluginid": "10094",
-					"alertRef": "10094",
-					"alert": "Base64 Disclosure",
-					"name": "Base64 Disclosure",
-					"riskcode": "0",
-					"confidence": "2",
-					"riskdesc": "Informational (Medium)",
-					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
-					"instances":[ 
-						{
-							"uri": "https://rh-marine.chatbot.fabnum.fr/chatbot/main.03de071a71002def71b3.js?1526100521",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
-						}
-					],
-					"count": "1",
-					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>\\x0000\\x0010\uFFFD\\x0010Q\uFFFD \uFFFD\uFFFD0\u04CFA\\x0014\uFFFDQU\uFFFDa\uFFFD\uFFFDq\u05DF\uFFFD\\x0018\uFFFD\uFFFDY\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u06EF\uFFFD\\x001c\uFFFD\uFFFD]\uFFFD\u37BB\uFFFD\u07FF</p>",
-					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
-					"cweid": "200",
-					"wascid": "13",
-					"sourceid": "27"
-				},
-				{
 					"pluginid": "10027",
 					"alertRef": "10027",
 					"alert": "Information Disclosure - Suspicious Comments",
@@ -284,13 +225,6 @@
 					"riskdesc": "Informational (Low)",
 					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
 					"instances":[ 
-						{
-							"uri": "https://rh-marine.chatbot.fabnum.fr/chatbot/main.03de071a71002def71b3.js?1526100521",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "query"
-						},
 						{
 							"uri": "https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills-es5.03d9c12ecdcf79382a18.js?1526100521",
 							"method": "GET",
@@ -306,13 +240,13 @@
 							"evidence": "query"
 						}
 					],
-					"count": "3",
+					"count": "2",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
-					"otherinfo": "<p>The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"(self.webpackChunkchatbot_front=self.webpackChunkchatbot_front||[]).push([[179],{41362:function(e){function t(e){this.ms=(e=e||{\", see evidence field for the suspicious comment/snippet.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bQUERY\\b and was detected in the element starting with: \"(self.webpackChunkchatbot_front=self.webpackChunkchatbot_front||[]).push([[698,429],{52975:function(t,e,r){\"use strict\";r(51351)\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "27"
+					"sourceid": "25"
 				},
 				{
 					"pluginid": "10109",
@@ -387,7 +321,7 @@
 						}
 					],
 					"count": "2",
-					"solution": "<p>Whenever possible ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p>",
 					"cweid": "525",
@@ -426,13 +360,6 @@
 							"evidence": "max-age=86400"
 						},
 						{
-							"uri": "https://rh-marine.chatbot.fabnum.fr/chatbot/main.03de071a71002def71b3.js?1526100521",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Tue, 05 Apr 2022 08:03:52 GMT"
-						},
-						{
 							"uri": "https://rh-marine.chatbot.fabnum.fr/chatbot/manifest.webmanifest",
 							"method": "GET",
 							"param": "",
@@ -444,28 +371,28 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "Tue, 05 Apr 2022 08:03:52 GMT"
+							"evidence": "Tue, 12 Apr 2022 08:15:31 GMT"
 						},
 						{
 							"uri": "https://rh-marine.chatbot.fabnum.fr/chatbot/polyfills.83321f0c0c58627a0a91.js?1526100521",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "Tue, 05 Apr 2022 08:03:52 GMT"
+							"evidence": "Tue, 12 Apr 2022 08:15:31 GMT"
 						},
 						{
 							"uri": "https://rh-marine.chatbot.fabnum.fr/chatbot/runtime.734ca5ca4583a14f2d0d.js?1526100521",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "Tue, 05 Apr 2022 08:03:51 GMT"
+							"evidence": "Tue, 12 Apr 2022 08:15:30 GMT"
 						},
 						{
 							"uri": "https://rh-marine.chatbot.fabnum.fr/chatbot/styles.c96bc7e20db9abdff610.css?1526100521",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "Tue, 05 Apr 2022 08:03:51 GMT"
+							"evidence": "Tue, 12 Apr 2022 08:15:30 GMT"
 						},
 						{
 							"uri": "https://rh-marine.chatbot.fabnum.fr/robots.txt",
@@ -482,7 +409,7 @@
 							"evidence": "max-age=86400"
 						}
 					],
-					"count": "11",
+					"count": "10",
 					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
 					"otherinfo": "",
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",

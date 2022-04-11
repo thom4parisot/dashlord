@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.1",
-	"@generated": "Sun, 3 Apr 2022 09:53:23",
+	"@generated": "Sun, 10 Apr 2022 10:06:00",
 	"site":[ 
 		{
 			"@name": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr",
@@ -26,28 +26,28 @@
 							"evidence": "<form class=\"flex w-full flex-col space-y-6\">"
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-20=ZAP",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-33=ZAP",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form class=\"flex w-full flex-col space-y-6\">"
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-20=ZAP&text-input-text-21=ZAP",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-33=ZAP&text-input-text-34=ZAP",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form class=\"flex w-full flex-col space-y-6\">"
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-20=ZAP&text-input-text-21=ZAP&text-input-text-22=ZAP",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-33=ZAP&text-input-text-34=ZAP&text-input-text-35=ZAP",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form class=\"flex w-full flex-col space-y-6\">"
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-20=ZAP&text-input-text-21=ZAP&text-input-text-22=ZAP&text-input-text-23=ZAP",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-33=ZAP&text-input-text-34=ZAP&text-input-text-35=ZAP&text-input-text-36=ZAP",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -56,11 +56,11 @@
 					],
 					"count": "5",
 					"solution": "<p>Phase: Architecture and Design</p><p>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</p><p>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</p><p></p><p>Phase: Implementation</p><p>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</p><p></p><p>Phase: Architecture and Design</p><p>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Use the ESAPI Session Management control.</p><p>This control includes a component for CSRF.</p><p></p><p>Do not use the GET method for any request that triggers a state change.</p><p></p><p>Phase: Implementation</p><p>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</p>",
-					"otherinfo": "<p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"text-input-text-20\" ].</p>",
+					"otherinfo": "<p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"text-input-text-33\" ].</p>",
 					"reference": "<p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>http://cwe.mitre.org/data/definitions/352.html</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "69"
+					"sourceid": "53"
 				},
 				{
 					"pluginid": "10055",
@@ -77,42 +77,42 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-3IEsLBUPOMXdDIt0uXzmjg=='"
+							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-/Qe8PLiT/c2RuUv1T3ZuNA=='"
 						},
 						{
 							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-LF0gjzWn8JAf66jc+g7r0g=='"
+							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-38CqdDO1+Tlk1hfdfFmBQg=='"
 						},
 						{
 							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-GnqZuUIfwC9m5Z8NUAXtrA=='"
+							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-hnr0ybS0j31g+93ExQAIWg=='"
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/mentions-legales",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-L5/zKGsadP38+VZV+hagqQ=='"
+							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-Fu5LCFgHAqd3TatLPXZ1Og=='"
 						},
 						{
 							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/robots.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-oo4LmH/cmTsywJExOnOUrQ=='"
+							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-8SBxOrGafnnDrOybK3IBnA=='"
 						},
 						{
 							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-ODbOHdx9bL3RV0soYJ8DxA=='"
+							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-svRN095p+tfsLrXWlPqNHw=='"
 						}
 					],
 					"count": "6",
@@ -121,7 +121,7 @@
 					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "18"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10055",
@@ -138,42 +138,42 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-3IEsLBUPOMXdDIt0uXzmjg=='"
+							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-/Qe8PLiT/c2RuUv1T3ZuNA=='"
 						},
 						{
 							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-LF0gjzWn8JAf66jc+g7r0g=='"
+							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-38CqdDO1+Tlk1hfdfFmBQg=='"
 						},
 						{
 							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-GnqZuUIfwC9m5Z8NUAXtrA=='"
+							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-hnr0ybS0j31g+93ExQAIWg=='"
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/mentions-legales",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-L5/zKGsadP38+VZV+hagqQ=='"
+							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-Fu5LCFgHAqd3TatLPXZ1Og=='"
 						},
 						{
 							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/robots.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-oo4LmH/cmTsywJExOnOUrQ=='"
+							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-8SBxOrGafnnDrOybK3IBnA=='"
 						},
 						{
 							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-ODbOHdx9bL3RV0soYJ8DxA=='"
+							"evidence": "default-src 'self' *.fabrique.social.gouv.fr *.crisp.chat; connect-src 'self' wss: https: *.fabrique.social.gouv.fr localhost:* client.relay.crisp.chat; font-src 'self' data: blob: *.crisp.chat; img-src 'self' data: *.fabrique.social.gouv.fr *.crisp.chat; style-src 'self' *.crisp.chat 'unsafe-inline'; script-src 'self' *.fabrique.social.gouv.fr *.crisp.chat 'nonce-svRN095p+tfsLrXWlPqNHw=='"
 						}
 					],
 					"count": "6",
@@ -182,7 +182,7 @@
 					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "18"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10063",
@@ -223,7 +223,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/chunks/public-8b647947.js",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/chunks/public-56da044e.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -251,28 +251,28 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/pages/__error.svelte-0f0abbd7.js",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/pages/__layout.svelte-75c87d39.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/pages/__layout.svelte-b2f1c34b.js",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/pages/index.svelte-70fabca0.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/start-99dbafee.js",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/start-0933cdd7.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/chunks/public-8b647947.js",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/chunks/public-56da044e.js",
 							"method": "POST",
 							"param": "",
 							"attack": "",
@@ -298,39 +298,46 @@
 					"desc": "<p>A timestamp was disclosed by the application/web server - Unix</p>",
 					"instances":[ 
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/assets/pages/__layout.svelte-5679784e.css",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/assets/pages/__layout.svelte-264ddf08.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "00000052"
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/assets/pages/__layout.svelte-5679784e.css",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/assets/pages/__layout.svelte-264ddf08.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "17171760"
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/assets/pages/__layout.svelte-5679784e.css",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/assets/pages/__layout.svelte-264ddf08.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "23161616"
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/assets/pages/__layout.svelte-5679784e.css",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/assets/pages/__layout.svelte-264ddf08.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "23929292"
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/assets/pages/__layout.svelte-5679784e.css",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/assets/pages/__layout.svelte-264ddf08.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "83178013"
+						},
+						{
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/start-0933cdd7.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "07669726"
 						},
 						{
 							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/dsfr/favicon/favicon.ico",
@@ -340,13 +347,13 @@
 							"evidence": "444444444"
 						}
 					],
-					"count": "6",
+					"count": "7",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
 					"otherinfo": "<p>00000052, which evaluates to: 1970-01-01 00:00:52</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "76"
+					"sourceid": "78"
 				},
 				{
 					"pluginid": "10094",
@@ -373,7 +380,7 @@
 							"evidence": "/_app/chunks/openComponent-59e78641"
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/assets/pages/__layout.svelte-5679784e.css",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/assets/pages/__layout.svelte-264ddf08.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -387,14 +394,14 @@
 							"evidence": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/pages/__layout.svelte-b2f1c34b.js",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/pages/__layout.svelte-75c87d39.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "/chunks/openComponent-59e78641"
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/start-99dbafee.js",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/start-0933cdd7.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -475,7 +482,7 @@
 					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p>",
 					"cweid": "345",
 					"wascid": "12",
-					"sourceid": "64"
+					"sourceid": "70"
 				},
 				{
 					"pluginid": "10027",
@@ -537,14 +544,7 @@
 							"evidence": "XXX"
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/pages/__layout.svelte-b2f1c34b.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "user"
-						},
-						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/start-99dbafee.js",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/start-0933cdd7.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -586,13 +586,13 @@
 							"evidence": "user"
 						}
 					],
-					"count": "14",
+					"count": "13",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
-					"otherinfo": "<p>The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"module\" data-hydrate=\"tzhda7\" nonce=\"3IEsLBUPOMXdDIt0uXzmjg==\"></p><p>\t\timport { start } from \"/_app/start-99dbafee.js\";\", see evidence field for the suspicious comment/snippet.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"module\" data-hydrate=\"tzhda7\" nonce=\"/Qe8PLiT/c2RuUv1T3ZuNA==\"></p><p>\t\timport { start } from \"/_app/start-0933cdd7.js\";\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "18"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10109",
@@ -633,21 +633,21 @@
 							"evidence": "<a href=\"/\" title=\"Retour \u00E0 l\u2019accueil\" class=\"\" rel=\"\" target=\"_self\"><p class=\"fr-logo\" title=\"r\u00E9publique fran\u00E7aise\"><span slot=\"org\"><!-- HTML_TAG_START -->Minist\u00E8re<br />du Travail,<br />de l'Emploi<br />et de l'Insertion<!-- HTML_TAG_END --></span></p></a>"
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-20=ZAP",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-33=ZAP",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<a href=\"/\" title=\"Retour \u00E0 l\u2019accueil\" class=\"\" rel=\"\" target=\"_self\"><p class=\"fr-logo\" title=\"r\u00E9publique fran\u00E7aise\"><span slot=\"org\"><!-- HTML_TAG_START -->Minist\u00E8re<br />du Travail,<br />de l'Emploi<br />et de l'Insertion<!-- HTML_TAG_END --></span></p></a>"
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-20=ZAP&text-input-text-21=ZAP",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-33=ZAP&text-input-text-34=ZAP",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<a href=\"/\" title=\"Retour \u00E0 l\u2019accueil\" class=\"\" rel=\"\" target=\"_self\"><p class=\"fr-logo\" title=\"r\u00E9publique fran\u00E7aise\"><span slot=\"org\"><!-- HTML_TAG_START -->Minist\u00E8re<br />du Travail,<br />de l'Emploi<br />et de l'Insertion<!-- HTML_TAG_END --></span></p></a>"
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-20=ZAP&text-input-text-21=ZAP&text-input-text-22=ZAP",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-33=ZAP&text-input-text-34=ZAP&text-input-text-35=ZAP",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -722,28 +722,28 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-20=ZAP",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-33=ZAP",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-20=ZAP&text-input-text-21=ZAP",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-33=ZAP&text-input-text-34=ZAP",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-20=ZAP&text-input-text-21=ZAP&text-input-text-22=ZAP",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-33=ZAP&text-input-text-34=ZAP&text-input-text-35=ZAP",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-20=ZAP&text-input-text-21=ZAP&text-input-text-22=ZAP&text-input-text-23=ZAP",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login?text-input-text-33=ZAP&text-input-text-34=ZAP&text-input-text-35=ZAP&text-input-text-36=ZAP",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
@@ -765,7 +765,7 @@
 						}
 					],
 					"count": "9",
-					"solution": "<p>Whenever possible ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p>",
 					"cweid": "525",
@@ -797,7 +797,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/_app/assets/vendor-b51a3ea1.css",
+							"uri": "https://carnet-de-bord-preprod.dev.fabrique.social.gouv.fr/auth/login",
 							"method": "GET",
 							"param": "",
 							"attack": "",

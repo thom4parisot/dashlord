@@ -1,10 +1,10 @@
-# Nmap 7.91 scan initiated Sun Apr  3 04:03:21 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln immersion.beta.pole-emploi.fr
+# Nmap 7.91 scan initiated Sun Apr 10 04:15:46 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln immersion.beta.pole-emploi.fr
 Nmap scan report for immersion.beta.pole-emploi.fr (213.32.73.220)
 Host is up (0.15s latency).
 rDNS record for 213.32.73.220: ip-213-32-73.eu
 Not shown: 990 filtered ports
-PORT     STATE  SERVICE        VERSION
-22/tcp   open   ssh            OpenSSH 7.2p2 Ubuntu 4ubuntu2.10 (Ubuntu Linux; protocol 2.0)
+PORT     STATE  SERVICE  VERSION
+22/tcp   open   ssh      OpenSSH 7.2p2 Ubuntu 4ubuntu2.10 (Ubuntu Linux; protocol 2.0)
 | vulners: 
 |   cpe:/a:openbsd:openssh:7.2p2: 
 |     	2C119FFA-ECE0-5E14-A4A4-354A2C38071A	10.0	https://vulners.com/githubexploit/2C119FFA-ECE0-5E14-A4A4-354A2C38071A	*EXPLOIT*
@@ -89,7 +89,7 @@ PORT     STATE  SERVICE        VERSION
 |     	PACKETSTORM:137942	0.0	https://vulners.com/packetstorm/PACKETSTORM:137942	*EXPLOIT*
 |     	MSF:AUXILIARY/SCANNER/SSH/SSH_ENUMUSERS/	0.0	https://vulners.com/metasploit/MSF:AUXILIARY/SCANNER/SSH/SSH_ENUMUSERS/	*EXPLOIT*
 |_    	1337DAY-ID-30937	0.0	https://vulners.com/zdt/1337DAY-ID-30937	*EXPLOIT*
-23/tcp   open   ssh            OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+23/tcp   open   ssh      OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)
 | vulners: 
 |   cpe:/a:openbsd:openssh:8.2p1: 
 |     	CVE-2020-15778	6.8	https://vulners.com/cve/CVE-2020-15778
@@ -107,10 +107,57 @@ PORT     STATE  SERVICE        VERSION
 |   Hello: 
 |     220 beta.pole-emploi.fr ESMTP Haraka/2.8.27 ready
 |_    EHLO requires domain/address - see RFC-2821 4.1.1.1
-80/tcp   open   http           nginx
-110/tcp  open   pop3           Dovecot pop3d
-143/tcp  open   imap           Dovecot imapd
-443/tcp  open   ssl/tcpwrapped
+80/tcp   open   http     nginx
+110/tcp  open   pop3     Dovecot pop3d
+143/tcp  open   imap     Dovecot imapd
+443/tcp  open   ssl/ssh  OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| vulners: 
+|   cpe:/a:openbsd:openssh:7.6p1: 
+|     	2C119FFA-ECE0-5E14-A4A4-354A2C38071A	10.0	https://vulners.com/githubexploit/2C119FFA-ECE0-5E14-A4A4-354A2C38071A	*EXPLOIT*
+|     	MSF:ILITIES/UBUNTU-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/UBUNTU-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/SUSE-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/SUSE-CVE-2019-25017/	5.8	https://vulners.com/metasploit/MSF:ILITIES/SUSE-CVE-2019-25017/	*EXPLOIT*
+|     	MSF:ILITIES/REDHAT_LINUX-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/REDHAT_LINUX-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/REDHAT-OPENSHIFT-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/REDHAT-OPENSHIFT-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/ORACLE-SOLARIS-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/ORACLE-SOLARIS-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/OPENBSD-OPENSSH-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/OPENBSD-OPENSSH-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/IBM-AIX-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/IBM-AIX-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP3-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP2-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/GENTOO-LINUX-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/GENTOO-LINUX-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/F5-BIG-IP-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/DEBIAN-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/DEBIAN-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/CENTOS_LINUX-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/CENTOS_LINUX-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/AMAZON_LINUX-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/AMAZON_LINUX-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/AMAZON-LINUX-AMI-2-CVE-2019-6111/	*EXPLOIT*
+|     	MSF:ILITIES/ALPINE-LINUX-CVE-2019-6111/	5.8	https://vulners.com/metasploit/MSF:ILITIES/ALPINE-LINUX-CVE-2019-6111/	*EXPLOIT*
+|     	EXPLOITPACK:98FE96309F9524B8C84C508837551A19	5.8	https://vulners.com/exploitpack/EXPLOITPACK:98FE96309F9524B8C84C508837551A19	*EXPLOIT*
+|     	EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97	5.8	https://vulners.com/exploitpack/EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97	*EXPLOIT*
+|     	EDB-ID:46516	5.8	https://vulners.com/exploitdb/EDB-ID:46516	*EXPLOIT*
+|     	EDB-ID:46193	5.8	https://vulners.com/exploitdb/EDB-ID:46193	*EXPLOIT*
+|     	CVE-2019-6111	5.8	https://vulners.com/cve/CVE-2019-6111
+|     	1337DAY-ID-32328	5.8	https://vulners.com/zdt/1337DAY-ID-32328	*EXPLOIT*
+|     	1337DAY-ID-32009	5.8	https://vulners.com/zdt/1337DAY-ID-32009	*EXPLOIT*
+|     	SSH_ENUM	5.0	https://vulners.com/canvas/SSH_ENUM	*EXPLOIT*
+|     	PACKETSTORM:150621	5.0	https://vulners.com/packetstorm/PACKETSTORM:150621	*EXPLOIT*
+|     	MSF:AUXILIARY/SCANNER/SSH/SSH_ENUMUSERS	5.0	https://vulners.com/metasploit/MSF:AUXILIARY/SCANNER/SSH/SSH_ENUMUSERS	*EXPLOIT*
+|     	EXPLOITPACK:F957D7E8A0CC1E23C3C649B764E13FB0	5.0	https://vulners.com/exploitpack/EXPLOITPACK:F957D7E8A0CC1E23C3C649B764E13FB0	*EXPLOIT*
+|     	EXPLOITPACK:EBDBC5685E3276D648B4D14B75563283	5.0	https://vulners.com/exploitpack/EXPLOITPACK:EBDBC5685E3276D648B4D14B75563283	*EXPLOIT*
+|     	EDB-ID:45939	5.0	https://vulners.com/exploitdb/EDB-ID:45939	*EXPLOIT*
+|     	EDB-ID:45233	5.0	https://vulners.com/exploitdb/EDB-ID:45233	*EXPLOIT*
+|     	CVE-2018-15919	5.0	https://vulners.com/cve/CVE-2018-15919
+|     	CVE-2018-15473	5.0	https://vulners.com/cve/CVE-2018-15473
+|     	1337DAY-ID-31730	5.0	https://vulners.com/zdt/1337DAY-ID-31730	*EXPLOIT*
+|     	MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/OPENBSD-OPENSSH-CVE-2020-14145/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP9-CVE-2020-14145/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP8-CVE-2020-14145/	*EXPLOIT*
+|     	MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/HUAWEI-EULEROS-2_0_SP5-CVE-2020-14145/	*EXPLOIT*
+|     	MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/	4.3	https://vulners.com/metasploit/MSF:ILITIES/F5-BIG-IP-CVE-2020-14145/	*EXPLOIT*
+|     	PACKETSTORM:151227	0.0	https://vulners.com/packetstorm/PACKETSTORM:151227	*EXPLOIT*
+|     	MSF:AUXILIARY/SCANNER/SSH/SSH_ENUMUSERS/	0.0	https://vulners.com/metasploit/MSF:AUXILIARY/SCANNER/SSH/SSH_ENUMUSERS/	*EXPLOIT*
+|_    	1337DAY-ID-30937	0.0	https://vulners.com/zdt/1337DAY-ID-30937	*EXPLOIT*
 465/tcp  open   ssl/smtp
 | fingerprint-strings: 
 |   GenericLines, GetRequest: 
@@ -142,35 +189,35 @@ PORT     STATE  SERVICE        VERSION
 5666/tcp closed nrpe
 3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port25-TCP:V=7.91%I=7%D=4/3%Time=62491C9F%P=x86_64-alpine-linux-musl%r(
-SF:Hello,6C,"220\x20beta\.pole-emploi\.fr\x20ESMTP\x20Haraka/2\.8\.27\x20r
-SF:eady\r\n501\x20EHLO\x20requires\x20domain/address\x20-\x20see\x20RFC-28
-SF:21\x204\.1\.1\.1\r\n");
+SF-Port25-TCP:V=7.91%I=7%D=4/10%Time=62525A08%P=x86_64-alpine-linux-musl%r
+SF:(Hello,6C,"220\x20beta\.pole-emploi\.fr\x20ESMTP\x20Haraka/2\.8\.27\x20
+SF:ready\r\n501\x20EHLO\x20requires\x20domain/address\x20-\x20see\x20RFC-2
+SF:821\x204\.1\.1\.1\r\n");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port465-TCP:V=7.91%T=SSL%I=7%D=4/3%Time=62491C9E%P=x86_64-alpine-linux-
-SF:musl%r(NULL,33,"220\x20beta\.pole-emploi\.fr\x20ESMTP\x20Haraka/2\.8\.2
-SF:7\x20ready\r\n")%r(Hello,6C,"220\x20beta\.pole-emploi\.fr\x20ESMTP\x20H
-SF:araka/2\.8\.27\x20ready\r\n501\x20EHLO\x20requires\x20domain/address\x2
-SF:0-\x20see\x20RFC-2821\x204\.1\.1\.1\r\n")%r(Help,48,"220\x20beta\.pole-
-SF:emploi\.fr\x20ESMTP\x20Haraka/2\.8\.27\x20ready\r\n250\x20Not\x20implem
-SF:ented\r\n")%r(GenericLines,67,"220\x20beta\.pole-emploi\.fr\x20ESMTP\x2
+SF-Port465-TCP:V=7.91%T=SSL%I=7%D=4/10%Time=62525A07%P=x86_64-alpine-linux
+SF:-musl%r(NULL,33,"220\x20beta\.pole-emploi\.fr\x20ESMTP\x20Haraka/2\.8\.
+SF:27\x20ready\r\n")%r(Hello,6C,"220\x20beta\.pole-emploi\.fr\x20ESMTP\x20
+SF:Haraka/2\.8\.27\x20ready\r\n501\x20EHLO\x20requires\x20domain/address\x
+SF:20-\x20see\x20RFC-2821\x204\.1\.1\.1\r\n")%r(Help,48,"220\x20beta\.pole
+SF:-emploi\.fr\x20ESMTP\x20Haraka/2\.8\.27\x20ready\r\n250\x20Not\x20imple
+SF:mented\r\n")%r(GenericLines,67,"220\x20beta\.pole-emploi\.fr\x20ESMTP\x
+SF:20Haraka/2\.8\.27\x20ready\r\n500\x20Unrecognized\x20command\r\n500\x20
+SF:Unrecognized\x20command\r\n")%r(GetRequest,67,"220\x20beta\.pole-emploi
+SF:\.fr\x20ESMTP\x20Haraka/2\.8\.27\x20ready\r\n500\x20Unrecognized\x20com
+SF:mand\r\n500\x20Unrecognized\x20command\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port587-TCP:V=7.91%I=7%D=4/10%Time=62525A00%P=x86_64-alpine-linux-musl%
+SF:r(NULL,33,"220\x20beta\.pole-emploi\.fr\x20ESMTP\x20Haraka/2\.8\.27\x20
+SF:ready\r\n")%r(GenericLines,67,"220\x20beta\.pole-emploi\.fr\x20ESMTP\x2
 SF:0Haraka/2\.8\.27\x20ready\r\n500\x20Unrecognized\x20command\r\n500\x20U
-SF:nrecognized\x20command\r\n")%r(GetRequest,67,"220\x20beta\.pole-emploi\
-SF:.fr\x20ESMTP\x20Haraka/2\.8\.27\x20ready\r\n500\x20Unrecognized\x20comm
-SF:and\r\n500\x20Unrecognized\x20command\r\n");
-==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port587-TCP:V=7.91%I=7%D=4/3%Time=62491C97%P=x86_64-alpine-linux-musl%r
-SF:(NULL,33,"220\x20beta\.pole-emploi\.fr\x20ESMTP\x20Haraka/2\.8\.27\x20r
-SF:eady\r\n")%r(GenericLines,67,"220\x20beta\.pole-emploi\.fr\x20ESMTP\x20
-SF:Haraka/2\.8\.27\x20ready\r\n500\x20Unrecognized\x20command\r\n500\x20Un
-SF:recognized\x20command\r\n")%r(Hello,6C,"220\x20beta\.pole-emploi\.fr\x2
-SF:0ESMTP\x20Haraka/2\.8\.27\x20ready\r\n501\x20EHLO\x20requires\x20domain
-SF:/address\x20-\x20see\x20RFC-2821\x204\.1\.1\.1\r\n")%r(Help,48,"220\x20
-SF:beta\.pole-emploi\.fr\x20ESMTP\x20Haraka/2\.8\.27\x20ready\r\n250\x20No
-SF:t\x20implemented\r\n")%r(GetRequest,67,"220\x20beta\.pole-emploi\.fr\x2
-SF:0ESMTP\x20Haraka/2\.8\.27\x20ready\r\n500\x20Unrecognized\x20command\r\
-SF:n500\x20Unrecognized\x20command\r\n");
+SF:nrecognized\x20command\r\n")%r(Hello,6C,"220\x20beta\.pole-emploi\.fr\x
+SF:20ESMTP\x20Haraka/2\.8\.27\x20ready\r\n501\x20EHLO\x20requires\x20domai
+SF:n/address\x20-\x20see\x20RFC-2821\x204\.1\.1\.1\r\n")%r(Help,48,"220\x2
+SF:0beta\.pole-emploi\.fr\x20ESMTP\x20Haraka/2\.8\.27\x20ready\r\n250\x20N
+SF:ot\x20implemented\r\n")%r(GetRequest,67,"220\x20beta\.pole-emploi\.fr\x
+SF:20ESMTP\x20Haraka/2\.8\.27\x20ready\r\n500\x20Unrecognized\x20command\r
+SF:\n500\x20Unrecognized\x20command\r\n");
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Apr  3 04:04:11 2022 -- 1 IP address (1 host up) scanned in 50.21 seconds
+# Nmap done at Sun Apr 10 04:16:37 2022 -- 1 IP address (1 host up) scanned in 51.27 seconds
