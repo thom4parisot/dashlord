@@ -21,17 +21,17 @@
 ###########################################################</span>
 
  Using &quot;OpenSSL 1.0.2-chacha (1.0.2k-dev)&quot; [~183 ciphers]
- on fv-az290-959:/home/testssl/bin/openssl.Linux.x86_64
+ on fv-az292-76:/home/testssl/bin/openssl.Linux.x86_64
  (built: &quot;Jan 18 17:12:17 2019&quot;, platform: &quot;linux-x86_64&quot;)
 
 
 <span style="font-weight:bold;">Testing all IPv4 addresses (port 443): </span>185.199.111.153 185.199.110.153 185.199.109.153 185.199.108.153
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2022-04-17 06:12:32        --&gt;&gt; 185.199.111.153:443 (pilotage.inclusion.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2022-04-24 06:16:03        --&gt;&gt; 185.199.111.153:443 (pilotage.inclusion.beta.gouv.fr) &lt;&lt;--</span>
 
  Further IP addresses:   185.199.110.153 185.199.109.153 185.199.108.153
-                         2606:50c0:8003::153 2606:50c0:8002::153
-                         2606:50c0:8001::153 2606:50c0:8000::153 
+                         2606:50c0:8001::153 2606:50c0:8003::153
+                         2606:50c0:8002::153 2606:50c0:8000::153 
  rDNS (185.199.111.153): cdn-185-199-111-153.github.com.
  Service detected:       HTTP
 
@@ -93,8 +93,8 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="font-weight:bold;"> TLS extensions (standard)    </span>&quot;renegotiation info/#65281&quot; &quot;server name/#0&quot;
                               &quot;EC point formats/#11&quot; &quot;session ticket/#35&quot;
-                              &quot;supported versions/#43&quot; &quot;key share/#51&quot;
-                              &quot;max fragment length/#1&quot;
+                              &quot;status request/#5&quot; &quot;supported versions/#43&quot;
+                              &quot;key share/#51&quot; &quot;max fragment length/#1&quot;
                               &quot;application layer protocol negotiation/#16&quot;
                               &quot;encrypt-then-mac/#22&quot;
                               &quot;extended master secret/#23&quot;
@@ -116,11 +116,11 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">37 &gt;= 30 days</span> (2022-02-23 14:59 --&gt; 2022-05-24 14:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">30 &gt;= 30 days</span> (2022-02-23 14:59 --&gt; 2022-05-24 14:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
-<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#a86437;">not offered</span>
+<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#008817;">offered</span>, <span style="color:#008817;">not revoked</span>
 <span style="font-weight:bold;"> OCSP must staple extension   </span>--
 <span style="font-weight:bold;"> DNS CAA RR</span> (experimental)    <span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Certificate Transparency     </span><span style="color:#008817;">yes</span> (certificate extension)
@@ -134,15 +134,15 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
-<span style="font-weight:bold;"> HTTP clock skew              </span>+110 sec from localtime
-<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          110
+<span style="font-weight:bold;"> HTTP clock skew              </span>+111 sec from localtime
+<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          111
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>GitHub.com
 <span style="font-weight:bold;"> Application banner           </span>--
 <span style="font-weight:bold;"> Cookie(s)                    </span>(none issued at &quot;/&quot;)
 <span style="font-weight:bold;"> Security headers             </span>Access-Control-Allow-Origin: *
-                              X-Served-By: cache-dfw18643-DFW
+                              X-Served-By: cache-dfw18658-DFW
                               Cache-Control: max-age=600
 <span style="font-weight:bold;"> Reverse Proxy banner         </span><span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> varnish
                               <span style="color:#8a7237;font-weight:bold;">X-Cache</span>: HIT
@@ -227,14 +227,14 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A</span>
 <span style="font-weight:bold;"> Grade cap reasons            </span>Grade capped to A. HSTS is not offered
 
-<span style="color:white;background-color:black;"> Done 2022-04-17 06:14:00 [  90s] --&gt;&gt; 185.199.111.153:443 (pilotage.inclusion.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2022-04-24 06:17:36 [  95s] --&gt;&gt; 185.199.111.153:443 (pilotage.inclusion.beta.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2022-04-17 06:14:00        --&gt;&gt; 185.199.110.153:443 (pilotage.inclusion.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2022-04-24 06:17:36        --&gt;&gt; 185.199.110.153:443 (pilotage.inclusion.beta.gouv.fr) &lt;&lt;--</span>
 
  Further IP addresses:   185.199.111.153 185.199.109.153 185.199.108.153
-                         2606:50c0:8003::153 2606:50c0:8002::153
-                         2606:50c0:8001::153 2606:50c0:8000::153 
+                         2606:50c0:8001::153 2606:50c0:8003::153
+                         2606:50c0:8002::153 2606:50c0:8000::153 
  rDNS (185.199.110.153): cdn-185-199-110-153.github.com.
  Service detected:       HTTP
 
@@ -296,8 +296,8 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="font-weight:bold;"> TLS extensions (standard)    </span>&quot;renegotiation info/#65281&quot; &quot;server name/#0&quot;
                               &quot;EC point formats/#11&quot; &quot;session ticket/#35&quot;
-                              &quot;supported versions/#43&quot; &quot;key share/#51&quot;
-                              &quot;max fragment length/#1&quot;
+                              &quot;status request/#5&quot; &quot;supported versions/#43&quot;
+                              &quot;key share/#51&quot; &quot;max fragment length/#1&quot;
                               &quot;application layer protocol negotiation/#16&quot;
                               &quot;encrypt-then-mac/#22&quot;
                               &quot;extended master secret/#23&quot;
@@ -319,11 +319,11 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">37 &gt;= 30 days</span> (2022-02-23 14:59 --&gt; 2022-05-24 14:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">30 &gt;= 30 days</span> (2022-02-23 14:59 --&gt; 2022-05-24 14:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
-<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#a86437;">not offered</span>
+<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#008817;">offered</span>, <span style="color:#008817;">not revoked</span>
 <span style="font-weight:bold;"> OCSP must staple extension   </span>--
 <span style="font-weight:bold;"> DNS CAA RR</span> (experimental)    <span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Certificate Transparency     </span><span style="color:#008817;">yes</span> (certificate extension)
@@ -337,15 +337,15 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
-<span style="font-weight:bold;"> HTTP clock skew              </span>+200 sec from localtime
-<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          200
+<span style="font-weight:bold;"> HTTP clock skew              </span>+203 sec from localtime
+<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          203
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>GitHub.com
 <span style="font-weight:bold;"> Application banner           </span>--
 <span style="font-weight:bold;"> Cookie(s)                    </span>(none issued at &quot;/&quot;)
 <span style="font-weight:bold;"> Security headers             </span>Access-Control-Allow-Origin: *
-                              X-Served-By: cache-dfw18674-DFW
+                              X-Served-By: cache-dfw18655-DFW
                               Cache-Control: max-age=600
 <span style="font-weight:bold;"> Reverse Proxy banner         </span><span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> varnish
                               <span style="color:#8a7237;font-weight:bold;">X-Cache</span>: HIT
@@ -430,14 +430,14 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A</span>
 <span style="font-weight:bold;"> Grade cap reasons            </span>Grade capped to A. HSTS is not offered
 
-<span style="color:white;background-color:black;"> Done 2022-04-17 06:15:29 [ 179s] --&gt;&gt; 185.199.110.153:443 (pilotage.inclusion.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2022-04-24 06:19:09 [ 188s] --&gt;&gt; 185.199.110.153:443 (pilotage.inclusion.beta.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2022-04-17 06:15:29        --&gt;&gt; 185.199.109.153:443 (pilotage.inclusion.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2022-04-24 06:19:09        --&gt;&gt; 185.199.109.153:443 (pilotage.inclusion.beta.gouv.fr) &lt;&lt;--</span>
 
  Further IP addresses:   185.199.111.153 185.199.110.153 185.199.108.153
-                         2606:50c0:8003::153 2606:50c0:8002::153
-                         2606:50c0:8001::153 2606:50c0:8000::153 
+                         2606:50c0:8001::153 2606:50c0:8003::153
+                         2606:50c0:8002::153 2606:50c0:8000::153 
  rDNS (185.199.109.153): cdn-185-199-109-153.github.com.
  Service detected:       HTTP
 
@@ -499,8 +499,8 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="font-weight:bold;"> TLS extensions (standard)    </span>&quot;renegotiation info/#65281&quot; &quot;server name/#0&quot;
                               &quot;EC point formats/#11&quot; &quot;session ticket/#35&quot;
-                              &quot;supported versions/#43&quot; &quot;key share/#51&quot;
-                              &quot;max fragment length/#1&quot;
+                              &quot;status request/#5&quot; &quot;supported versions/#43&quot;
+                              &quot;key share/#51&quot; &quot;max fragment length/#1&quot;
                               &quot;application layer protocol negotiation/#16&quot;
                               &quot;encrypt-then-mac/#22&quot;
                               &quot;extended master secret/#23&quot;
@@ -522,11 +522,11 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">37 &gt;= 30 days</span> (2022-02-23 14:59 --&gt; 2022-05-24 14:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">30 &gt;= 30 days</span> (2022-02-23 14:59 --&gt; 2022-05-24 14:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
-<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#a86437;">not offered</span>
+<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#008817;">offered</span>, <span style="color:#008817;">not revoked</span>
 <span style="font-weight:bold;"> OCSP must staple extension   </span>--
 <span style="font-weight:bold;"> DNS CAA RR</span> (experimental)    <span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Certificate Transparency     </span><span style="color:#008817;">yes</span> (certificate extension)
@@ -540,19 +540,19 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
-<span style="font-weight:bold;"> HTTP clock skew              </span>+287 sec from localtime
-<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          287
+<span style="font-weight:bold;"> HTTP clock skew              </span>+298 sec from localtime
+<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          298
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>GitHub.com
 <span style="font-weight:bold;"> Application banner           </span>--
 <span style="font-weight:bold;"> Cookie(s)                    </span>(none issued at &quot;/&quot;)
 <span style="font-weight:bold;"> Security headers             </span>Access-Control-Allow-Origin: *
-                              X-Served-By: cache-dfw18650-DFW
+                              X-Served-By: cache-dfw18660-DFW
                               Cache-Control: max-age=600
 <span style="font-weight:bold;"> Reverse Proxy banner         </span><span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> varnish
                               <span style="color:#8a7237;font-weight:bold;">X-Cache</span>: HIT
-                              <span style="color:#8a7237;font-weight:bold;">X-Cache</span>-Hits: <span style="color:#8a7237;">3</span>
+                              <span style="color:#8a7237;font-weight:bold;">X-Cache</span>-Hits: <span style="color:#8a7237;">2</span>
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing vulnerabilities </span>
@@ -633,14 +633,14 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A</span>
 <span style="font-weight:bold;"> Grade cap reasons            </span>Grade capped to A. HSTS is not offered
 
-<span style="color:white;background-color:black;"> Done 2022-04-17 06:16:56 [ 266s] --&gt;&gt; 185.199.109.153:443 (pilotage.inclusion.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2022-04-24 06:20:51 [ 290s] --&gt;&gt; 185.199.109.153:443 (pilotage.inclusion.beta.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2022-04-17 06:16:57        --&gt;&gt; 185.199.108.153:443 (pilotage.inclusion.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2022-04-24 06:20:51        --&gt;&gt; 185.199.108.153:443 (pilotage.inclusion.beta.gouv.fr) &lt;&lt;--</span>
 
  Further IP addresses:   185.199.111.153 185.199.110.153 185.199.109.153
-                         2606:50c0:8003::153 2606:50c0:8002::153
-                         2606:50c0:8001::153 2606:50c0:8000::153 
+                         2606:50c0:8001::153 2606:50c0:8003::153
+                         2606:50c0:8002::153 2606:50c0:8000::153 
  rDNS (185.199.108.153): cdn-185-199-108-153.github.com.
  Service detected:       HTTP
 
@@ -702,8 +702,8 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="font-weight:bold;"> TLS extensions (standard)    </span>&quot;renegotiation info/#65281&quot; &quot;server name/#0&quot;
                               &quot;EC point formats/#11&quot; &quot;session ticket/#35&quot;
-                              &quot;supported versions/#43&quot; &quot;key share/#51&quot;
-                              &quot;max fragment length/#1&quot;
+                              &quot;status request/#5&quot; &quot;supported versions/#43&quot;
+                              &quot;key share/#51&quot; &quot;max fragment length/#1&quot;
                               &quot;application layer protocol negotiation/#16&quot;
                               &quot;encrypt-then-mac/#22&quot;
                               &quot;extended master secret/#23&quot;
@@ -725,11 +725,11 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">37 &gt;= 30 days</span> (2022-02-23 14:59 --&gt; 2022-05-24 14:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">30 &gt;= 30 days</span> (2022-02-23 14:59 --&gt; 2022-05-24 14:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
-<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#a86437;">not offered</span>
+<span style="font-weight:bold;"> OCSP stapling                </span><span style="color:#008817;">offered</span>, <span style="color:#008817;">not revoked</span>
 <span style="font-weight:bold;"> OCSP must staple extension   </span>--
 <span style="font-weight:bold;"> DNS CAA RR</span> (experimental)    <span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Certificate Transparency     </span><span style="color:#008817;">yes</span> (certificate extension)
@@ -743,19 +743,19 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  200 OK
-<span style="font-weight:bold;"> HTTP clock skew              </span>+375 sec from localtime
-<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          375
+<span style="font-weight:bold;"> HTTP clock skew              </span>+398 sec from localtime
+<span style="font-weight:bold;"> HTTP Age</span> (RFC 7234)          398
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#a86437;">not offered</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
 <span style="font-weight:bold;"> Server banner                </span>GitHub.com
 <span style="font-weight:bold;"> Application banner           </span>--
 <span style="font-weight:bold;"> Cookie(s)                    </span>(none issued at &quot;/&quot;)
 <span style="font-weight:bold;"> Security headers             </span>Access-Control-Allow-Origin: *
-                              X-Served-By: cache-dfw18652-DFW
+                              X-Served-By: cache-dfw18620-DFW
                               Cache-Control: max-age=600
 <span style="font-weight:bold;"> Reverse Proxy banner         </span><span style="color:#8a7237;font-weight:bold;">Via</span>: <span style="color:#8a7237;">1</span>.<span style="color:#8a7237;">1</span> varnish
                               <span style="color:#8a7237;font-weight:bold;">X-Cache</span>: HIT
-                              <span style="color:#8a7237;font-weight:bold;">X-Cache</span>-Hits: <span style="color:#8a7237;">3</span>
+                              <span style="color:#8a7237;font-weight:bold;">X-Cache</span>-Hits: <span style="color:#8a7237;">1</span>
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing vulnerabilities </span>
@@ -836,7 +836,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A</span>
 <span style="font-weight:bold;"> Grade cap reasons            </span>Grade capped to A. HSTS is not offered
 
-<span style="color:white;background-color:black;"> Done 2022-04-17 06:18:27 [ 357s] --&gt;&gt; 185.199.108.153:443 (pilotage.inclusion.beta.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2022-04-24 06:22:22 [ 381s] --&gt;&gt; 185.199.108.153:443 (pilotage.inclusion.beta.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
 <span style="font-weight:bold;">Done testing now all IP addresses (on port 443): </span>185.199.111.153 185.199.110.153 185.199.109.153 185.199.108.153

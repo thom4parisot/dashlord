@@ -21,14 +21,14 @@
 ###########################################################</span>
 
  Using &quot;OpenSSL 1.0.2-chacha (1.0.2k-dev)&quot; [~183 ciphers]
- on fv-az397-791:/home/testssl/bin/openssl.Linux.x86_64
+ on fv-az204-865:/home/testssl/bin/openssl.Linux.x86_64
  (built: &quot;Jan 18 17:12:17 2019&quot;, platform: &quot;linux-x86_64&quot;)
 
 
-<span style="color:white;background-color:black;"> Start 2022-04-17 04:38:19        --&gt;&gt; 213.32.73.220:443 (immersion.beta.pole-emploi.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2022-04-24 04:52:13        --&gt;&gt; 213.32.73.220:443 (immersion.beta.pole-emploi.fr) &lt;&lt;--</span>
 
  rDNS (213.32.73.220):   ip-213-32-73.eu.
- Service detected:       HTTP
+ Service detected:       Couldn&apos;t determine what&apos;s running on port 443, assuming no HTTP service =&gt; skipping all HTTP checks
 
  Pre-test: <span style="color:#c05600;">128 cipher limit bug</span>
 
@@ -40,7 +40,7 @@
 <span style="font-weight:bold;"> TLS 1.1    </span>not offered
 <span style="font-weight:bold;"> TLS 1.2    </span><span style="color:#008817;font-weight:bold;">offered (OK)</span>
 <span style="font-weight:bold;"> TLS 1.3    </span>not offered and downgraded to a weaker protocol
-<span style="font-weight:bold;"> ALPN/HTTP2 </span>http/1.1 (offered)
+<span style="font-weight:bold;"> ALPN/HTTP2 </span><span style="color:#008817;">h2</span>, http/1.1 (offered)
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing cipher categories </span>
 
@@ -51,7 +51,7 @@
 <span style="font-weight:bold;"> Triple DES Ciphers / IDEA                         </span>not offered
 <span style="font-weight:bold;"> Obsoleted CBC ciphers (AES, ARIA etc.)            </span>not offered
 <span style="font-weight:bold;"> Strong encryption (AEAD ciphers) with no FS       </span>not offered
-<span style="font-weight:bold;"> Forward Secrecy strong encryption (AEAD ciphers)  </span><span style="color:#c05600;">not offered</span>
+<span style="font-weight:bold;"> Forward Secrecy strong encryption (AEAD ciphers)  </span><span style="color:#008817;font-weight:bold;">offered (OK)</span>
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing server&apos;s cipher preferences </span>
@@ -61,7 +61,7 @@
 <span style="text-decoration:underline;font-weight:bold;"> Testing robust forward secrecy (FS)</span><u> -- omitting Null Authentication/Encryption, 3DES, RC4 </u>
 
 
-<span style="color:#c05600;"> No ciphers supporting Forward Secrecy (FS) offered</span>
+<span style="color:#008817;"> FS is offered (OK) </span>          
 
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing server defaults (Server Hello) </span>
@@ -71,7 +71,7 @@
                               &quot;next protocol/#13172&quot;
 <span style="font-weight:bold;"> Session Ticket RFC 5077 hint </span>no -- no lifetime advertised
 <span style="font-weight:bold;"> SSL Session ID support       </span>yes
-<span style="font-weight:bold;"> Session Resumption           </span>Tickets no, ID: yes
+<span style="font-weight:bold;"> Session Resumption           </span>Tickets no, <span style="color:#cd00cd;">ID resumption test failed</span>
 <span style="font-weight:bold;"> TLS clock skew</span>               Random values, no fingerprinting possible 
 <span style="font-weight:bold;"> Client Authentication        </span>none
 <span style="font-weight:bold;"> Signature Algorithm          </span><span style="color:#008817;">SHA256 with RSA</span>
@@ -81,12 +81,12 @@
 <span style="font-weight:bold;"> Serial                       </span>035DCD1CF44FB46E56521A16BBB3CA8A68D1 (OK: length 18)
 <span style="font-weight:bold;"> Fingerprints                 </span>SHA1 4E769073989B1AE1FD29169FCEE5F6EA6E5F47AB
                               SHA256 37219CECBAC8B39CA1E5F2734202052EFCB8EB7B68EDA7D3FA9D614BD832C113
-<span style="font-weight:bold;"> Common Name (CN)             </span><i>*.beta.pole-emploi.fr </i> (CN in response to request w/o SNI: <i>peconnect.pole-emploi.fr </i>)
+<span style="font-weight:bold;"> Common Name (CN)             </span><i>*.beta.pole-emploi.fr </i> (request w/o SNI didn&apos;t succeed)
 <span style="font-weight:bold;"> subjectAltName (SAN)         </span><i>*.beta.pole-emploi.fr </i>
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN wildcard and CN wildcard</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">88 &gt;= 30 days</span> (2022-04-15 07:48 --&gt; 2022-07-14 07:48)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">81 &gt;= 30 days</span> (2022-04-15 07:48 --&gt; 2022-07-14 07:48)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>--
 <span style="font-weight:bold;"> OCSP URI                     </span>http://r3.o.lencr.org
@@ -101,23 +101,16 @@
 <span style="font-weight:bold;"> Intermediate Bad OCSP</span> (exp.) <span style="color:#008817;">Ok</span>
 
 
-<span style="text-decoration:underline;font-weight:bold;"> Testing HTTP header response @ &quot;/&quot; </span>
-
-<span style="font-weight:bold;"> HTTP Status Code           </span><span style="color:#cd00cd;">HTTP header reply empty. </span><span style="color:#cd00cd;">No HTTP status code.</span>
-<span style="font-weight:bold;"> HTTP Status Code           </span><span style="color:#be32d0;font-weight:bold;">HTTP header was repeatedly zero.</span>
-Skipping complete HTTP header section.
-
-
 <span style="text-decoration:underline;font-weight:bold;"> Testing vulnerabilities </span>
 
 <span style="font-weight:bold;"> Heartbleed</span> (CVE-2014-0160)                <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>, no heartbeat extension
 <span style="font-weight:bold;"> CCS</span> (CVE-2014-0224)                       <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
-<span style="font-weight:bold;"> Ticketbleed</span> (CVE-2016-9244), experiment.  <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>, no session tickets
+<span style="font-weight:bold;"> Ticketbleed</span> (CVE-2016-9244), experiment.  --   (applicable only for HTTPS)
 <span style="font-weight:bold;"> ROBOT                                     </span><span style="color:#008817;font-weight:bold;">Server does not support any cipher suites that use RSA key transport</span>
 <span style="font-weight:bold;"> Secure Renegotiation (RFC 5746)           </span><span style="color:#008817;font-weight:bold;">supported (OK)</span>
 <span style="font-weight:bold;"> Secure Client-Initiated Renegotiation     </span><span style="color:#008817;">not vulnerable (OK)</span>
-<span style="font-weight:bold;"> CRIME, TLS </span>(CVE-2012-4929)                <span style="color:#008817;">not vulnerable (OK)</span>
-<span style="font-weight:bold;"> BREACH</span> (CVE-2013-3587)                    <span style="color:#cd00cd;">First request failed (HTTP header request stalled and was terminated)</span><span style="font-weight:bold;"> POODLE, SSL</span> (CVE-2014-3566)               <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>, no SSLv3 support
+<span style="font-weight:bold;"> CRIME, TLS </span>(CVE-2012-4929)                <span style="color:#008817;">not vulnerable (OK)</span> (not using HTTP anyway)
+<span style="font-weight:bold;"> POODLE, SSL</span> (CVE-2014-3566)               <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>, no SSLv3 support
 <span style="font-weight:bold;"> TLS_FALLBACK_SCSV</span> (RFC 7507)              <span style="color:#008817;">No fallback possible (OK)</span>, no protocol below TLS 1.2 offered
 <span style="font-weight:bold;"> SWEET32</span> (CVE-2016-2183, CVE-2016-6329)    <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> FREAK</span> (CVE-2015-0204)                     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
@@ -127,49 +120,50 @@ Skipping complete HTTP header section.
 <span style="font-weight:bold;"> LOGJAM</span> (CVE-2015-4000), experimental      <span style="color:#008817;">not vulnerable (OK):</span> no DH EXPORT ciphers, no common prime detected
 <span style="font-weight:bold;"> BEAST</span> (CVE-2011-3389)                     <span style="color:#008817;">not vulnerable (OK)</span>, no SSL3 or TLS1
 <span style="font-weight:bold;"> LUCKY13</span> (CVE-2013-0169), experimental     <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
-<span style="font-weight:bold;"> Winshock</span> (CVE-2014-6321), experimental    <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span> - CAMELLIA or ECDHE_RSA GCM ciphers found
+<span style="font-weight:bold;"> Winshock</span> (CVE-2014-6321), experimental    <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span> - ARIA, CHACHA or CCM ciphers found
 <span style="font-weight:bold;"> RC4</span> (CVE-2013-2566, CVE-2015-2808)        <span style="color:#008817;">no RC4 ciphers detected (OK)</span>
 
+Could not determine the protocol, only simulating generic clients.
 
-<span style="text-decoration:underline;font-weight:bold;"> Running client simulations </span><span style="text-decoration:underline;font-weight:bold;">(HTTP) </span><span style="text-decoration:underline;font-weight:bold;">via sockets </span>
+<span style="text-decoration:underline;font-weight:bold;"> Running client simulations </span><span style="text-decoration:underline;font-weight:bold;">via sockets </span>
 
  Browser                      Protocol  Cipher Suite Name (OpenSSL)       Forward Secrecy
 ------------------------------------------------------------------------------------------------
  Android 4.4.2                TLSv1.2   ECDHE-RSA-AES128-GCM-SHA256       <span style="color:#008817;">256 bit ECDH (P-256)</span>
- Android 5.0.0                No connection
- Android 6.0                  TLSv1.2   ECDHE-RSA-AES128-GCM-SHA256       <span style="color:#008817;">256 bit ECDH (P-256)</span>
- Android 7.0 (native)         No connection
+ Android 5.0.0                TLSv1.2   ECDHE-RSA-AES128-GCM-SHA256       <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ Android 6.0                  No connection
+ Android 7.0 (native)         TLSv1.2   ECDHE-RSA-AES128-GCM-SHA256       <span style="color:#008817;">256 bit ECDH (P-256)</span>
  Android 8.1 (native)         TLSv1.2   ECDHE-RSA-AES128-GCM-SHA256       <span style="color:#008817;">253 bit ECDH (X25519)</span>
- Android 9.0 (native)         TLSv1.2   ECDHE-RSA-AES128-GCM-SHA256       <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ Android 9.0 (native)         No connection
  Android 10.0 (native)        No connection
  Chrome 74 (Win 10)           TLSv1.2   ECDHE-RSA-AES128-GCM-SHA256       <span style="color:#008817;">253 bit ECDH (X25519)</span>
  Chrome 79 (Win 10)           No connection
- Firefox 66 (Win 8.1/10)      No connection
+ Firefox 66 (Win 8.1/10)      TLSv1.2   ECDHE-RSA-AES128-GCM-SHA256       <span style="color:#008817;">253 bit ECDH (X25519)</span>
  Firefox 71 (Win 10)          TLSv1.2   ECDHE-RSA-AES128-GCM-SHA256       <span style="color:#008817;">253 bit ECDH (X25519)</span>
  IE 6 XP                      No connection
  IE 8 Win 7                   No connection
  IE 8 XP                      No connection
- IE 11 Win 7                  TLSv1.2   DHE-RSA-AES128-GCM-SHA256         <span style="color:#008817;">4096 bit DH  </span>
- IE 11 Win 8.1                No connection
+ IE 11 Win 7                  No connection
+ IE 11 Win 8.1                TLSv1.2   DHE-RSA-AES128-GCM-SHA256         <span style="color:#008817;">4096 bit DH  </span>
  IE 11 Win Phone 8.1          No connection
  IE 11 Win 10                 No connection
- Edge 15 Win 10               TLSv1.2   ECDHE-RSA-AES128-GCM-SHA256       <span style="color:#008817;">253 bit ECDH (X25519)</span>
- Edge 17 (Win 10)             No connection
+ Edge 15 Win 10               No connection
+ Edge 17 (Win 10)             TLSv1.2   ECDHE-RSA-AES128-GCM-SHA256       <span style="color:#008817;">253 bit ECDH (X25519)</span>
  Opera 66 (Win 10)            No connection
  Safari 9 iOS 9               TLSv1.2   ECDHE-RSA-AES128-GCM-SHA256       <span style="color:#008817;">256 bit ECDH (P-256)</span>
- Safari 9 OS X 10.11          No connection
+ Safari 9 OS X 10.11          TLSv1.2   ECDHE-RSA-AES128-GCM-SHA256       <span style="color:#008817;">256 bit ECDH (P-256)</span>
  Safari 10 OS X 10.12         No connection
  Safari 12.1 (iOS 12.2)       No connection
- Safari 13.0 (macOS 10.14.6)  No connection
- Apple ATS 9 iOS 9            TLSv1.2   ECDHE-RSA-AES128-GCM-SHA256       <span style="color:#008817;">256 bit ECDH (P-256)</span>
+ Safari 13.0 (macOS 10.14.6)  TLSv1.2   ECDHE-RSA-AES128-GCM-SHA256       <span style="color:#008817;">253 bit ECDH (X25519)</span>
+ Apple ATS 9 iOS 9            No connection
  Java 6u45                    No connection
  Java 7u25                    No connection
- Java 8u161                   TLSv1.2   ECDHE-RSA-AES128-GCM-SHA256       <span style="color:#008817;">256 bit ECDH (P-256)</span>
- Java 11.0.2 (OpenJDK)        No connection
+ Java 8u161                   No connection
+ Java 11.0.2 (OpenJDK)        TLSv1.2   ECDHE-RSA-AES128-GCM-SHA256       <span style="color:#008817;">256 bit ECDH (P-256)</span>
  Java 12.0.1 (OpenJDK)        No connection
  OpenSSL 1.0.2e               No connection
  OpenSSL 1.1.0l (Debian)      No connection
- OpenSSL 1.1.1d (Debian)      No connection
+ OpenSSL 1.1.1d (Debian)      TLSv1.2   ECDHE-RSA-AES128-GCM-SHA256       <span style="color:#008817;">253 bit ECDH (X25519)</span>
  Thunderbird (68.3)           No connection
 
 
@@ -181,10 +175,9 @@ Skipping complete HTTP header section.
 <span style="font-weight:bold;"> Key Exchange </span>    (weighted)  90 (27)
 <span style="font-weight:bold;"> Cipher Strength </span> (weighted)  60 (24)
 <span style="font-weight:bold;"> Final Score                  </span>81
-<span style="font-weight:bold;"> Overall Grade                </span><span style="color:#c05600;">B</span>
-<span style="font-weight:bold;"> Grade cap reasons            </span>Grade capped to B. Forward Secrecy (FS) is not supported
+<span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2022-04-17 04:40:00 [ 104s] --&gt;&gt; 213.32.73.220:443 (immersion.beta.pole-emploi.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2022-04-24 04:53:15 [  64s] --&gt;&gt; 213.32.73.220:443 (immersion.beta.pole-emploi.fr) &lt;&lt;--</span>
 
 
 </pre>
